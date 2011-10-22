@@ -41,4 +41,3 @@ func ReadTypeMap(r io.Reader) (TypeMap, os.Error) {
 	}
 	return tm, nil
 }
-

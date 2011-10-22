@@ -18,5 +18,3 @@ gen31:
 
 gen31c:
 	gogl -version=3.1 -out=gl31c/gl.go
-
-	

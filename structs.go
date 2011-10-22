@@ -54,4 +54,3 @@ type Enums map[string][]Enum
 // Type maps
 
 type TypeMap map[string]string
-

@@ -112,4 +112,3 @@ func (fg FunctionCategory) WriteGetProcAddrs(w io.Writer) {
 	fmt.Fprintf(w, "//\treturn 1;\n")
 	fmt.Fprintf(w, "// }\n")
 }*/
-

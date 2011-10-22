@@ -47,4 +47,3 @@ func ReadFunctions(r io.Reader) (Functions, os.Error) {
 
 	return functions, nil
 }
-

@@ -60,4 +60,3 @@ func main() {
 
 	Generate(*outGLFile, enums, functions, typeMap, enumFilter, functionFilter)
 }
-

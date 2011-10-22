@@ -9,7 +9,7 @@ import (
 
 const (
 	RegistryBaseURL       = "http://www.opengl.org/registry/api"
-	OpenGLEnumSpecFile    = "enum.spec"
+//	OpenGLEnumSpecFile    = "enum.spec"
 	OpenGLEnumExtSpecFile = "enumext.spec"
 	OpenGLSpecFile        = "gl.spec"
 	OpenGLTypeMapFile     = "gl.tm"
@@ -39,11 +39,10 @@ func DownloadFile(baseURL, fileName string) os.Error {
 }
 
 func DownloadOpenGLSpecs() {
-	// DownloadFile(RegistryBaseURL, OpenGLEnumSpecFile)
+//	DownloadFile(RegistryBaseURL, OpenGLEnumSpecFile)
 	DownloadFile(RegistryBaseURL, OpenGLEnumExtSpecFile)
 	DownloadFile(RegistryBaseURL, OpenGLSpecFile)
 	DownloadFile(RegistryBaseURL, OpenGLTypeMapFile)
 }
 
 // TODO: download wgl, glx specs ...
-
