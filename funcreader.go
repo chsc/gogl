@@ -42,7 +42,7 @@ func ReadFunctions(r io.Reader) (Functions, os.Error) {
 			continue
 		}
 		// TODO: implement regexp for return, param, version, category, ...
-		fmt.Fprintf(os.Stderr, "Unable to parse line: " + line)
+		fmt.Fprintf(os.Stderr, "Unable to parse line: "+line)
 	}
 
 	return functions, nil

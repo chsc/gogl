@@ -21,7 +21,7 @@ func (v *Version) Compare(v2 *Version) int {
 }
 
 func (v *Version) Valid() bool {
-	return v.Major == 0 && v.Minor == 0;
+	return v.Major == 0 && v.Minor == 0
 }
 
 // Functions
@@ -45,8 +45,8 @@ type Functions map[string][]Function
 // Enums
 
 type Enum struct {
-	Name    string
-	Value   string
+	Name  string
+	Value string
 }
 
 type Enums map[string][]Enum

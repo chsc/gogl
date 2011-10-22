@@ -9,8 +9,8 @@ import (
 )
 
 var (
-	tmEmptyRE = regexp.MustCompile("^\n")
-	tmCommentRE = regexp.MustCompile("^#.*")
+	tmEmptyRE    = regexp.MustCompile("^\n")
+	tmCommentRE  = regexp.MustCompile("^#.*")
 	tmTypePairRE = regexp.MustCompile("^(.+),\\*,\\*,[\\t ]*(.+),\\*,\\*")
 )
 
@@ -37,7 +37,7 @@ func ReadTypeMap(r io.Reader) (TypeMap, os.Error) {
 			tm[typePair[1]] = typePair[2]
 			continue
 		}
-		fmt.Fprintf(os.Stderr, "Unable to parse line: " + line)
+		fmt.Fprintf(os.Stderr, "Unable to parse line: "+line)
 	}
 	return tm, nil
 }

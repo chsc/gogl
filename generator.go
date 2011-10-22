@@ -6,7 +6,7 @@ import (
 	"fmt"
 )
 
-type FilterEnum     func(category string, enum *Enum) bool
+type FilterEnum func(category string, enum *Enum) bool
 type FilterFunction func(category string, function *Function) bool
 
 func Generate(fname string, enums Enums, functions Functions, typeMap TypeMap, fenum FilterEnum, ffunctions FilterFunction) os.Error {
@@ -18,7 +18,7 @@ func Generate(fname string, enums Enums, functions Functions, typeMap TypeMap, f
 
 	fmt.Fprintf(w, "// OpenGL\n")
 	fmt.Fprintf(w, "package gl\n")
-	
+
 	// TODO: writeCFuncPtrDefinitions
 	writeCFunctionDefinitions(functions, ffunctions, w)
 	fmt.Fprintf(w, "import \"C\"\n\n")
@@ -33,10 +33,10 @@ func Generate(fname string, enums Enums, functions Functions, typeMap TypeMap, f
 
 func writeGoEnumDefinitions(enums Enums, fenum FilterEnum, w io.Writer) {
 	fmt.Fprintf(w, "const (\n")
-	for name, enums := range(enums) {
+	for name, enums := range enums {
 		if fenum(name, nil) {
 			fmt.Fprintf(w, "\t// %s:\n", name)
-			for _, e := range(enums) {
+			for _, e := range enums {
 				fmt.Fprintf(w, "\t%s = %s\n", e.Name, e.Value)
 			}
 		}
@@ -45,12 +45,12 @@ func writeGoEnumDefinitions(enums Enums, fenum FilterEnum, w io.Writer) {
 }
 
 func writeGoFunctionDefinitions(functions Functions, ffunctions FilterFunction, w io.Writer) {
-	for cat, fs := range(functions) {
+	for cat, fs := range functions {
 		fmt.Fprintf(w, "// %s\n", cat)
-		for _, f := range(fs) {
+		for _, f := range fs {
 			fmt.Fprintf(w, "func %s(", f.Name)
 			for p := 0; p < len(f.Parameters); p++ {
-				if p == len(f.Parameters) - 1 {
+				if p == len(f.Parameters)-1 {
 					fmt.Fprintf(w, "%s %s", f.Parameters[p].Name, f.Parameters[p].Type)
 				} else {
 					fmt.Fprintf(w, "%s %s, ", f.Parameters[p].Name, f.Parameters[p].Type)
@@ -59,7 +59,7 @@ func writeGoFunctionDefinitions(functions Functions, ffunctions FilterFunction, 
 			fmt.Fprintf(w, ") {\n")
 			fmt.Fprintf(w, "\tC.gogl%s(", f.Name)
 			for p := 0; p < len(f.Parameters); p++ {
-				if p == len(f.Parameters) - 1 {
+				if p == len(f.Parameters)-1 {
 					fmt.Fprintf(w, "%s", f.Parameters[p].Name)
 				} else {
 					fmt.Fprintf(w, "%s, ", f.Parameters[p].Name)
@@ -71,12 +71,12 @@ func writeGoFunctionDefinitions(functions Functions, ffunctions FilterFunction, 
 }
 
 func writeCFunctionDefinitions(functions Functions, ffunctions FilterFunction, w io.Writer) {
-	for cat, fs := range(functions) {
+	for cat, fs := range functions {
 		fmt.Fprintf(w, "// /* %s */  \n", cat)
-		for _, f := range(fs) {
+		for _, f := range fs {
 			fmt.Fprintf(w, "// %s gogl%s(", f.Return, f.Name)
 			for p := 0; p < len(f.Parameters); p++ {
-				if p == len(f.Parameters) - 1 {
+				if p == len(f.Parameters)-1 {
 					fmt.Fprintf(w, "%s %s", f.Parameters[p].Type, f.Parameters[p].Name)
 				} else {
 					fmt.Fprintf(w, "%s %s, ", f.Parameters[p].Type, f.Parameters[p].Name)
@@ -85,7 +85,7 @@ func writeCFunctionDefinitions(functions Functions, ffunctions FilterFunction, w
 			fmt.Fprintf(w, ") {\n")
 			fmt.Fprintf(w, "// \timpptr_gogl%s(", f.Name)
 			for p := 0; p < len(f.Parameters); p++ {
-				if p == len(f.Parameters) - 1 {
+				if p == len(f.Parameters)-1 {
 					fmt.Fprintf(w, "%s", f.Parameters[p].Name)
 				} else {
 					fmt.Fprintf(w, "%s, ", f.Parameters[p].Name)
