@@ -39,12 +39,11 @@ func main() {
 		panic(err.String())
 	}
 
-	// TODO: read typemap...
-	//fmt.Printf("Parsing type map file ...\n")
-	//typeMap, err := ReadTypeMapFromFile(OpenGLTypeMapFile)
-	//if err != nil {
-	//	panic(err.String())
-	//}
+	fmt.Printf("Parsing type map file ...\n")
+	typeMap, err := ReadTypeMapFromFile(OpenGLTypeMapFile)
+	if err != nil {
+		panic(err.String())
+	}
 
 	fmt.Printf("Parsing gl.spec file ...\n")
 	functions, err := ReadFunctionsFromFile(OpenGLSpecFile)
@@ -59,6 +58,6 @@ func main() {
 		Function{Name:"Foo3", Parameters:[]Parameter{Parameter{"p1", "int"}, Parameter{"p2", "int"}, Parameter{"p3", "float"}}, Return:"void"},
 	}
 
-	Generate(*outGLFile, enums, functions, nil, enumFilter, functionFilter)
+	Generate(*outGLFile, enums, functions, typeMap, enumFilter, functionFilter)
 }
 
