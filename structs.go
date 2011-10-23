@@ -29,6 +29,7 @@ func (v *Version) Valid() bool {
 type Parameter struct {
 	Name string
 	Type string
+	InArray bool
 }
 
 type Function struct {
@@ -40,7 +41,7 @@ type Function struct {
 	Category          string
 }
 
-type Functions map[string][]Function
+type Functions map[string][]*Function
 
 // Enums
 
@@ -49,7 +50,8 @@ type Enum struct {
 	Value string
 }
 
-type Enums map[string][]Enum
+type EnumCategories map[string]Enums
+type Enums map[string]Enum
 
 // Type maps
 

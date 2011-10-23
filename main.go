@@ -34,12 +34,12 @@ func main() {
 	}
 
 	fmt.Printf("Parsing enumext.spec file...\n")
-	enums, err := ReadEnumsFromFile(OpenGLEnumExtSpecFile)
+	enumCategories, err := ReadEnumsFromFile(OpenGLEnumExtSpecFile)
 	if err != nil {
 		panic(err.String())
 	}
 
-	fmt.Printf("Parsing type map file ...\n")
+	fmt.Printf("Parsing gl.tm file ...\n")
 	typeMap, err := ReadTypeMapFromFile(OpenGLTypeMapFile)
 	if err != nil {
 		panic(err.String())
@@ -50,13 +50,33 @@ func main() {
 	if err != nil {
 		panic(err.String())
 	}
-
-	// TODO: just a test, do real unit testing
-	functions["Cat1"] = []Function{
-		Function{Name: "Foo1", Parameters: []Parameter{Parameter{"p1", "int"}, Parameter{"p2", "int"}}, Return: "void"},
-		Function{Name: "Foo2", Parameters: []Parameter{Parameter{"p1", "int"}, Parameter{"p2", "int"}, Parameter{"p3", "float"}}, Return: "void"},
-		Function{Name: "Foo3", Parameters: []Parameter{Parameter{"p1", "int"}, Parameter{"p2", "int"}, Parameter{"p3", "float"}}, Return: "void"},
+	
+	// TODO: This output is temporary
+	fmt.Println("Enums:")
+	for category, enums := range enumCategories {
+		fmt.Printf("  %v\n", category)
+		for _, enum := range enums {
+			fmt.Printf("    %v = %v\n", enum.Name, enum.Value)
+		}
+	}
+	fmt.Println("Types:")
+	for abstractType, cType := range typeMap {
+		fmt.Printf("  %v -> %v\n", abstractType, cType)
+	}
+	fmt.Println("Functions:")
+	for category, functions := range functions {
+		fmt.Printf("  %v\n", category)
+		for _, function := range functions {
+			fmt.Printf("    %v\n", function.Name)
+		}
 	}
 
-	Generate(*outGLFile, enums, functions, typeMap, enumFilter, functionFilter)
+	// TODO: just a test, do real unit testing
+	//functions["Cat1"] = []Function{
+		//Function{Name: "Foo1", Parameters: []Parameter{Parameter{"p1", "int"}, Parameter{"p2", "int"}}, Return: "void"},
+		//Function{Name: "Foo2", Parameters: []Parameter{Parameter{"p1", "int"}, Parameter{"p2", "int"}, Parameter{"p3", "float"}}, Return: "void"},
+		//Function{Name: "Foo3", Parameters: []Parameter{Parameter{"p1", "int"}, Parameter{"p2", "int"}, Parameter{"p3", "float"}}, Return: "void"},
+	//}
+
+	//Generate(*outGLFile, enums, functions, typeMap, enumFilter, functionFilter)
 }

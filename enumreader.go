@@ -19,7 +19,7 @@ var (
 	enumVersionDepRE = regexp.MustCompile("^VERSION_([0-9]+)_([0-9]+)_DEPRECATED$")
 )
 
-func ReadEnumsFromFile(name string) (Enums, os.Error) {
+func ReadEnumsFromFile(name string) (EnumCategories, os.Error) {
 	file, err := os.Open(name)
 	if err != nil {
 		return nil, err
@@ -28,8 +28,8 @@ func ReadEnumsFromFile(name string) (Enums, os.Error) {
 	return ReadEnums(file)
 }
 
-func ReadEnums(r io.Reader) (Enums, os.Error) {
-	enums := make(Enums)
+func ReadEnums(r io.Reader) (EnumCategories, os.Error) {
+	categories := make(EnumCategories)
 	br := bufio.NewReader(r)
 	currentCategory := ""
 	for line, rerr := br.ReadString('\n'); rerr == nil || rerr == os.EOF; line, rerr = br.ReadString('\n') {
@@ -41,13 +41,13 @@ func ReadEnums(r io.Reader) (Enums, os.Error) {
 			if category := enumCategoryRE.FindStringSubmatch(line); category != nil {
 				//fmt.Printf("%v\n", category[1])
 				currentCategory = category[1]
-				enums[currentCategory] = make([]Enum, 0, 4)
+				categories[currentCategory] = make(Enums)
 			} else if enum := enumRE.FindStringSubmatch(line); enum != nil {
 				//fmt.Printf("%v %v\n", enum[1], enum[2])
-				enums[currentCategory] = append(enums[currentCategory], Enum{enum[1], enum[2]})
+				categories[currentCategory][enum[1]] = Enum{enum[1], enum[2]}
 			} else if use := enumUseRE.FindStringSubmatch(line); use != nil {
 				//fmt.Printf("%v %v\n", use[1], use[2])
-				enums[currentCategory] = append(enums[currentCategory], Enum{use[2], use[1]})
+				categories[currentCategory][use[2]] = categories[use[1]][use[2]]
 			} else {
 				//return os.NewError("Unable to parse line: '" + line + "'")
 				fmt.Fprintf(os.Stderr, "Unable to parse line: "+line)
@@ -58,5 +58,5 @@ func ReadEnums(r io.Reader) (Enums, os.Error) {
 		}
 	}
 	// TODO: update reused enums
-	return enums, nil
+	return categories, nil
 }
