@@ -51,7 +51,7 @@ func main() {
 		panic(err.String())
 	}
 
-	// TODO: This output is temporary
+	// TODO: This output is temporary for debugging
 	fmt.Println("Enums:")
 	for category, enums := range enumCategories {
 		fmt.Printf("  %v\n", category)
@@ -68,6 +68,25 @@ func main() {
 		fmt.Printf("  %v\n", category)
 		for _, function := range functions {
 			fmt.Printf("    %v\n", function.Name)
+			if (function.Version.Major != 0) {
+				fmt.Printf("      Version: %v.%v\n", function.Version.Major, function.Version.Minor)
+			}
+			if (function.DeprecatedVersion.Major != 0) {
+				fmt.Printf("      Deprecated Version: %v.%v\n", function.DeprecatedVersion.Major, function.DeprecatedVersion.Minor)
+			}
+			fmt.Printf("      Return Type: %v\n", function.Return)
+			if len(function.Parameters) > 0 {
+				fmt.Printf("      Parameters:\n")
+				for _, param := range function.Parameters {
+					if param.InArray {
+						fmt.Printf("        %v %v in array\n", param.Name, param.Type)
+					} else {
+						fmt.Printf("        %v %v\n", param.Name, param.Type)
+					}
+				}
+			} else {
+				fmt.Printf("      0 Parameters\n")
+			}
 		}
 	}
 
