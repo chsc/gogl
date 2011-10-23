@@ -1,13 +1,13 @@
 GoGL 
 ====
 
-GoGl is a OpenGL binding generator for Go.
+GoGL is a OpenGL binding generator for Go.
 It's in a very early stage of development and not functional yet.
 
 Goals
 -----
 
-* Lightweight (use only extensions you really need)
+* Lightweight (use only the extensions you really need)
 * No external dependencies like GLEW
 
 TODO
@@ -21,10 +21,10 @@ TODO
 Usage examples
 --------------
 
-Download latest spec files, generate OpenGL 3.1 interface, exclude all deprecated functions:
+Download latest spec files, generate an OpenGL 3.1 interface, exclude all deprecated functions:
 
 	gogl -download -version=3.1 -deprecation=true
 
-Read spec files from current folder, generate OpenGL compatible interface:
+Read spec files from current folder, generate an OpenGL 2.1 compatible interface:
 
-	gogl -version=1.1
+	gogl -version=2.1
