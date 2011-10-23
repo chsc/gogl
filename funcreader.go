@@ -32,12 +32,12 @@ func ReadFunctionsFromFile(name string) (Functions, os.Error) {
 func ReadFunctions(r io.Reader) (Functions, os.Error) {
 	functions := make(Functions)
 	br := bufio.NewReader(r)
+	var currentFunction *Function = nil
 	for line, rerr := br.ReadString('\n'); rerr == nil || rerr == os.EOF; line, rerr = br.ReadString('\n') {
 		if rerr == os.EOF {
 			line += "\n"
 		}
-		//fmt.Printf("-%v-\n", line)
-		var currentFunction *Function = nil
+		//fmt.Printf(line)
 		if !funcEmptyLineRE.MatchString(line) {
 			if f := funcRE.FindStringSubmatch(line); f != nil {
 				currentFunction = new(Function)
@@ -60,11 +60,11 @@ func ReadFunctions(r io.Reader) (Functions, os.Error) {
 				minor, _ := strconv.Atoi(version[2])
 				currentFunction.Version = Version{major, minor}
 			} else if deprecated := funcDeprecatedRE.FindStringSubmatch(line); deprecated != nil {
-				major, _ := strconv.Atoi(version[1])
-				minor, _ := strconv.Atoi(version[2])
+				major, _ := strconv.Atoi(deprecated[1])
+				minor, _ := strconv.Atoi(deprecated[2])
 				currentFunction.DeprecatedVersion = Version{major, minor}
 			} else {
-			//return os.NewError("Unable to parse line: '" + line + "'")
+				//return os.NewError("Unable to parse line: '" + line + "'")
 				fmt.Fprintf(os.Stderr, "Unable to parse line: "+line)
 			}
 		}

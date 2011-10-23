@@ -31,7 +31,10 @@ func ReadEnumsFromFile(name string) (EnumCategories, os.Error) {
 func ReadEnums(r io.Reader) (EnumCategories, os.Error) {
 	categories := make(EnumCategories)
 	br := bufio.NewReader(r)
+
 	currentCategory := ""
+	deferredUseEnums := make(map[string]map[string]string)
+
 	for line, rerr := br.ReadString('\n'); rerr == nil || rerr == os.EOF; line, rerr = br.ReadString('\n') {
 		if rerr == os.EOF {
 			line += "\n"
@@ -47,7 +50,10 @@ func ReadEnums(r io.Reader) (EnumCategories, os.Error) {
 				categories[currentCategory][enum[1]] = Enum{enum[1], enum[2]}
 			} else if use := enumUseRE.FindStringSubmatch(line); use != nil {
 				//fmt.Printf("%v %v\n", use[1], use[2])
-				categories[currentCategory][use[2]] = categories[use[1]][use[2]]
+				if deferredUseEnums[currentCategory] == nil {
+					deferredUseEnums[currentCategory] = make(map[string]string)
+				}
+				deferredUseEnums[currentCategory][use[2]] = use[1]
 			} else {
 				//return os.NewError("Unable to parse line: '" + line + "'")
 				fmt.Fprintf(os.Stderr, "Unable to parse line: "+line)
@@ -57,6 +63,16 @@ func ReadEnums(r io.Reader) (EnumCategories, os.Error) {
 			break
 		}
 	}
-	// TODO: update reused enums
+	for category, enums := range deferredUseEnums {
+		for name, referencedCategory := range enums {
+			if dereference, ok := categories[referencedCategory][name]; ok {
+				categories[category][name] = dereference
+			} else if dereference, ok := categories[referencedCategory+"_DEPRECATED"][name]; ok {
+				categories[category][name] = dereference
+			} else {
+				fmt.Printf("WARNING: Failed to dereference %v: \"use %v %v\"\n", category, referencedCategory, name)
+			}
+		}
+	}
 	return categories, nil
 }

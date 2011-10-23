@@ -50,7 +50,7 @@ func main() {
 	if err != nil {
 		panic(err.String())
 	}
-	
+
 	// TODO: This output is temporary
 	fmt.Println("Enums:")
 	for category, enums := range enumCategories {
@@ -73,9 +73,9 @@ func main() {
 
 	// TODO: just a test, do real unit testing
 	//functions["Cat1"] = []Function{
-		//Function{Name: "Foo1", Parameters: []Parameter{Parameter{"p1", "int"}, Parameter{"p2", "int"}}, Return: "void"},
-		//Function{Name: "Foo2", Parameters: []Parameter{Parameter{"p1", "int"}, Parameter{"p2", "int"}, Parameter{"p3", "float"}}, Return: "void"},
-		//Function{Name: "Foo3", Parameters: []Parameter{Parameter{"p1", "int"}, Parameter{"p2", "int"}, Parameter{"p3", "float"}}, Return: "void"},
+	//Function{Name: "Foo1", Parameters: []Parameter{Parameter{"p1", "int"}, Parameter{"p2", "int"}}, Return: "void"},
+	//Function{Name: "Foo2", Parameters: []Parameter{Parameter{"p1", "int"}, Parameter{"p2", "int"}, Parameter{"p3", "float"}}, Return: "void"},
+	//Function{Name: "Foo3", Parameters: []Parameter{Parameter{"p1", "int"}, Parameter{"p2", "int"}, Parameter{"p3", "float"}}, Return: "void"},
 	//}
 
 	//Generate(*outGLFile, enums, functions, typeMap, enumFilter, functionFilter)

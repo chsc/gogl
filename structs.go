@@ -27,8 +27,8 @@ func (v *Version) Valid() bool {
 // Functions
 
 type Parameter struct {
-	Name string
-	Type string
+	Name    string
+	Type    string
 	InArray bool
 }
 
