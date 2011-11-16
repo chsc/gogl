@@ -21,7 +21,7 @@ var (
 	funcAllVersionsRE  = regexp.MustCompile("^version:[ \\t]*([0-9\\. ]+)")
 )
 
-func ReadFunctionsFromFile(name string) (Functions, []Version, os.Error) {
+func ReadFunctionsFromFile(name string) (FunctionCategories, []Version, os.Error) {
 	file, err := os.Open(name)
 	if err != nil {
 		return nil, nil, err
@@ -30,8 +30,8 @@ func ReadFunctionsFromFile(name string) (Functions, []Version, os.Error) {
 	return ReadFunctions(file)
 }
 
-func ReadFunctions(r io.Reader) (Functions, []Version, os.Error) {
-	functions := make(Functions)
+func ReadFunctions(r io.Reader) (FunctionCategories, []Version, os.Error) {
+	functions := make(FunctionCategories)
 	versions := make([]Version, 0, 8)
 	br := bufio.NewReader(r)
 	var currentFunction *Function = nil

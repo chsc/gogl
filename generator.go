@@ -6,10 +6,7 @@ import (
 	"fmt"
 )
 
-type FilterEnum func(category string, enum *Enum) bool
-type FilterFunction func(category string, function *Function) bool
-
-func Generate(fname string, enums EnumCategories, functions Functions, typeMap TypeMap, fenum FilterEnum, ffunctions FilterFunction) os.Error {
+func Generate(fname string, enums EnumCategories, functions FunctionCategories, typeMap TypeMap) os.Error {
 	w, err := os.Create(fname)
 	if err != nil {
 		return err
@@ -26,33 +23,30 @@ func Generate(fname string, enums EnumCategories, functions Functions, typeMap T
 	fmt.Fprintf(w, "// #else\n")
 	fmt.Fprintf(w, "// # include <GL/gl.h>\n")
 	fmt.Fprintf(w, "// #endif\n")
-	writeCFuncPtrDefinitions(functions, ffunctions, w)
-	writeCFunctionDeclarations(functions, ffunctions, w)
+	writeCFuncPtrDefinitions(functions, w)
+	writeCFunctionDeclarations(functions, w)
 	writeGetProcAddrsDeclarations(functions, w)
 	fmt.Fprintf(w, "import \"C\"\n\n")
 
-	//writeGoEnumDefinitions(enums, fenum, w)
-	//writeGoFunctionDefinitions(functions, ffunctions, w)
+	//writeGoEnumDefinitions(enums, w)
+	//writeGoFunctionDefinitions(functions, w)
 
 	fmt.Fprintf(w, "// EOF\n")
 	return nil
 }
 
-
-func writeGoEnumDefinitions(enums EnumCategories, fenum FilterEnum, w io.Writer) {
+func writeGoEnumDefinitions(enums EnumCategories, w io.Writer) {
 	fmt.Fprintf(w, "const (\n")
 	for name, enums := range enums {
-		if fenum(name, nil) {
-			fmt.Fprintf(w, "\t// %s:\n", name)
-			for _, e := range enums {
-				fmt.Fprintf(w, "\t%s = %s\n", e.Name, e.Value)
-			}
+		fmt.Fprintf(w, "\t// %s:\n", name)
+		for _, e := range enums {
+			fmt.Fprintf(w, "\t%s = %s\n", e.Name, e.Value)
 		}
 	}
 	fmt.Fprintf(w, ")\n")
 }
 
-func writeGoFunctionDefinitions(functions Functions, ffunctions FilterFunction, w io.Writer) {
+func writeGoFunctionDefinitions(functions FunctionCategories, w io.Writer) {
 	for cat, fs := range functions {
 		fmt.Fprintf(w, "// %s\n", cat)
 		for _, f := range fs {
@@ -78,7 +72,7 @@ func writeGoFunctionDefinitions(functions Functions, ffunctions FilterFunction, 
 	}
 }
 
-func writeCFuncPtrDefinitions(functions Functions, ffunctions FilterFunction, w io.Writer) {
+func writeCFuncPtrDefinitions(functions FunctionCategories, w io.Writer) {
 	fmt.Fprintf(w, "// /* function pointers: */\n")
 	for cat, fs := range functions {
 		fmt.Fprintf(w, "// /* %s */  \n", cat)
@@ -97,7 +91,7 @@ func writeCFuncPtrDefinitions(functions Functions, ffunctions FilterFunction, w 
 	fmt.Fprintf(w, "// \n")
 }
 
-func writeCFunctionDeclarations(functions Functions, ffunctions FilterFunction, w io.Writer) {
+func writeCFunctionDeclarations(functions FunctionCategories, w io.Writer) {
 	fmt.Fprintf(w, "// /* function declarations */\n")
 	for cat, fs := range functions {
 		fmt.Fprintf(w, "// /* %s */  \n", cat)
@@ -124,7 +118,7 @@ func writeCFunctionDeclarations(functions Functions, ffunctions FilterFunction, 
 	}
 }
 
-func writeGetProcAddrsDeclarations(functions Functions, w io.Writer) {
+func writeGetProcAddrsDeclarations(functions FunctionCategories, w io.Writer) {
 	fmt.Fprintf(w, "// /* extension loading */\n")
 	fmt.Fprintf(w, "// void* goglGetProcAddress(const char* name) { \n")
 	fmt.Fprintf(w, "// #ifdef __APPLE__\n")
@@ -145,4 +139,3 @@ func writeGetProcAddrsDeclarations(functions Functions, w io.Writer) {
 		fmt.Fprintf(w, "// }\n")
 	}
 }
-

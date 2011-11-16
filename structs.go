@@ -72,7 +72,8 @@ type Function struct {
 	Category          string
 }
 
-type Functions map[string][]*Function
+type Functions []*Function
+type FunctionCategories map[string]Functions
 
 // Enums
 
@@ -81,8 +82,8 @@ type Enum struct {
 	Value string
 }
 
-type EnumCategories map[string]Enums
 type Enums map[string]Enum
+type EnumCategories map[string]Enums
 
 // Type maps
 
