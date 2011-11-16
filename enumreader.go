@@ -70,7 +70,7 @@ func ReadEnums(r io.Reader) (EnumCategories, os.Error) {
 			} else if dereference, ok := categories[referencedCategory+"_DEPRECATED"][name]; ok {
 				categories[category][name] = dereference
 			} else {
-				fmt.Printf("WARNING: Failed to dereference %v: \"use %v %v\"\n", category, referencedCategory, name)
+				fmt.Fprintf(os.Stderr, "WARNING: Failed to dereference %v: \"use %v %v\"\n", category, referencedCategory, name)
 			}
 		}
 	}

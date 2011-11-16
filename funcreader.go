@@ -6,7 +6,7 @@ import (
 	"io"
 	"os"
 	"regexp"
-	"strconv"
+	"strings"
 )
 
 var (
@@ -18,19 +18,21 @@ var (
 	funcCategoryRE     = regexp.MustCompile("^[ \\t]*category[ \\t]+([^ \\t#\\n]+)")
 	funcVersionRE      = regexp.MustCompile("^[ \\t]*version[ \\t]+([0-9]+)\\.([0-9]+)")
 	funcDeprecatedRE   = regexp.MustCompile("^[ \\t]*deprecated[ \\t]+([0-9]+)\\.([0-9]+)")
+	funcAllVersionsRE  = regexp.MustCompile("^version:[ \\t]*([0-9\\. ]+)")
 )
 
-func ReadFunctionsFromFile(name string) (Functions, os.Error) {
+func ReadFunctionsFromFile(name string) (Functions, []Version, os.Error) {
 	file, err := os.Open(name)
 	if err != nil {
-		return nil, err
+		return nil, nil, err
 	}
 	defer file.Close()
 	return ReadFunctions(file)
 }
 
-func ReadFunctions(r io.Reader) (Functions, os.Error) {
+func ReadFunctions(r io.Reader) (Functions, []Version, os.Error) {
 	functions := make(Functions)
+	versions := make([]Version, 0, 8)
 	br := bufio.NewReader(r)
 	var currentFunction *Function = nil
 	for line, rerr := br.ReadString('\n'); rerr == nil || rerr == os.EOF; line, rerr = br.ReadString('\n') {
@@ -56,16 +58,28 @@ func ReadFunctions(r io.Reader) (Functions, os.Error) {
 				}
 				functions[category[1]] = append(functions[category[1]], currentFunction)
 			} else if version := funcVersionRE.FindStringSubmatch(line); version != nil {
-				major, _ := strconv.Atoi(version[1])
-				minor, _ := strconv.Atoi(version[2])
-				currentFunction.Version = Version{major, minor}
+				v, err := MakeVersionFromMinorMajorString(version[1], version[2])
+				if err != nil {
+					return functions, versions, os.NewError("Unable to parse version: " + line)
+				}
+				currentFunction.Version = v
 			} else if deprecated := funcDeprecatedRE.FindStringSubmatch(line); deprecated != nil {
-				major, _ := strconv.Atoi(deprecated[1])
-				minor, _ := strconv.Atoi(deprecated[2])
-				currentFunction.DeprecatedVersion = Version{major, minor}
+				v, err := MakeVersionFromMinorMajorString(deprecated[1], deprecated[2])
+				if err != nil {
+					return functions, versions, os.NewError("Unable to parse version: " + line)
+				}
+				currentFunction.DeprecatedVersion = v
+			} else if allVersions := funcAllVersionsRE.FindStringSubmatch(line); allVersions != nil {
+				split := strings.Split(allVersions[1], " ")
+				for _, verString := range split {
+					v, err := MakeVersionFromString(verString)
+					if err != nil {
+						return functions, versions, os.NewError("Unable to parse version: " + line)
+					}
+					versions = append(versions, v)
+				}
 			} else {
-				//return os.NewError("Unable to parse line: '" + line + "'")
-				fmt.Fprintf(os.Stderr, "Unable to parse line: "+line)
+				fmt.Fprintf(os.Stderr, "Unable to parse line: " + line)
 			}
 		}
 		if rerr == os.EOF {
@@ -73,5 +87,5 @@ func ReadFunctions(r io.Reader) (Functions, os.Error) {
 		}
 	}
 
-	return functions, nil
+	return functions, versions, nil
 }

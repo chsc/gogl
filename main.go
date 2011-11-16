@@ -46,12 +46,15 @@ func main() {
 	}
 
 	fmt.Printf("Parsing gl.spec file ...\n")
-	functions, err := ReadFunctionsFromFile(OpenGLSpecFile)
+	functions, supportedVersions, err := ReadFunctionsFromFile(OpenGLSpecFile)
 	if err != nil {
 		panic(err.String())
 	}
 
 	// TODO: This output is temporary for debugging
+	fmt.Println("Supported versions:")
+	fmt.Println(supportedVersions)
+
 	fmt.Println("Enums:")
 	for category, enums := range enumCategories {
 		fmt.Printf("  %v\n", category)
@@ -68,11 +71,11 @@ func main() {
 		fmt.Printf("  %v\n", category)
 		for _, function := range functions {
 			fmt.Printf("    %v\n", function.Name)
-			if (function.Version.Major != 0) {
-				fmt.Printf("      Version: %v.%v\n", function.Version.Major, function.Version.Minor)
+			if function.Version.Valid() {
+				fmt.Printf("      Version: %v\n", function.Version)
 			}
-			if (function.DeprecatedVersion.Major != 0) {
-				fmt.Printf("      Deprecated Version: %v.%v\n", function.DeprecatedVersion.Major, function.DeprecatedVersion.Minor)
+			if function.DeprecatedVersion.Valid() {
+				fmt.Printf("      Deprecated Version: %v\n", function.DeprecatedVersion)
 			}
 			fmt.Printf("      Return Type: %v\n", function.Return)
 			if len(function.Parameters) > 0 {
@@ -97,5 +100,5 @@ func main() {
 	//Function{Name: "Foo3", Parameters: []Parameter{Parameter{"p1", "int"}, Parameter{"p2", "int"}, Parameter{"p3", "float"}}, Return: "void"},
 	//}
 
-	//Generate(*outGLFile, enums, functions, typeMap, enumFilter, functionFilter)
+	//Generate(*outGLFile, enumCategories, functions, typeMap, enumFilter, functionFilter)
 }
