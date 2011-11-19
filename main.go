@@ -1,52 +1,40 @@
-// OpenGL Binding generator
-
 package main
 
 import (
 	"fmt"
 	"flag"
+	"path/filepath"
 )
 
 var (
-	download    *bool   = flag.Bool("download", false, "Download spec files from Khronos registry first.")
-	version     *string = flag.String("version", "2.1", "OpenGL version")
-	deprecation *bool   = flag.Bool("deprecate", false, "Exclude all deprecated features.")
-	outGLFile   *string = flag.String("outgl", "gl.go", "Output file name")
-	// TODO: add flags for additional extensions
+	download *bool   = flag.Bool("download", false, "Download spec files from Khronos registry first.")
+	specUrl  *string = flag.String("url", KhronosRegistryBaseURL, "OpenGL specification location.")
+	specDir  *string = flag.String("dir", "khronos_specs", "OpenGL specification directory.")
+	// TODO: add additional flags ...
 )
 
-func enumFilter(category string, enum *Enum) bool {
-	// TODO: filter by version/extension use flags
-	return true
-}
-
-func functionFilter(category string, function *Function) bool {
-	// TODO: filter by version/extension use flags
-	return true
-}
-
 func main() {
-	fmt.Printf("OpenGL binding generator for Go. Copyright (c) 2011 by Christoph Schunk\n")
+	fmt.Printf("OpenGL binding generator for Go. Copyright (c) 2011 by Christoph Schunk.\n")
 	flag.Parse()
 
 	if *download {
-		DownloadOpenGLSpecs()
+		DownloadOpenGLSpecs(*specUrl, *specDir)
 	}
 
 	fmt.Printf("Parsing enumext.spec file...\n")
-	enumCategories, err := ReadEnumsFromFile(OpenGLEnumExtSpecFile)
+	enumCategories, err := ReadEnumsFromFile(filepath.Join(*specDir, OpenGLEnumExtSpecFile))
 	if err != nil {
 		panic(err.String())
 	}
 
 	fmt.Printf("Parsing gl.tm file ...\n")
-	typeMap, err := ReadTypeMapFromFile(OpenGLTypeMapFile)
+	typeMap, err := ReadTypeMapFromFile(filepath.Join(*specDir, OpenGLTypeMapFile))
 	if err != nil {
 		panic(err.String())
 	}
 
 	fmt.Printf("Parsing gl.spec file ...\n")
-	functions, supportedVersions, err := ReadFunctionsFromFile(OpenGLSpecFile)
+	functions, supportedVersions, err := ReadFunctionsFromFile(filepath.Join(*specDir, OpenGLSpecFile))
 	if err != nil {
 		panic(err.String())
 	}

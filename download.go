@@ -2,24 +2,25 @@ package main
 
 import (
 	"fmt"
-	"os"
 	"http"
 	"io/ioutil"
+	"os"
+	"path/filepath"
 )
 
 const (
-	RegistryBaseURL = "http://www.opengl.org/registry/api"
-	//OpenGLEnumSpecFile    = "enum.spec"
-	OpenGLEnumExtSpecFile = "enumext.spec"
-	OpenGLSpecFile        = "gl.spec"
-	OpenGLTypeMapFile     = "gl.tm"
+	KhronosRegistryBaseURL = "http://www.opengl.org/registry/api"
+	OpenGLEnumSpecFile     = "enum.spec"
+	OpenGLEnumExtSpecFile  = "enumext.spec"
+	OpenGLSpecFile         = "gl.spec"
+	OpenGLTypeMapFile      = "gl.tm"
 )
 
 func makeURL(base, file string) string {
 	return fmt.Sprintf("%s/%s", base, file)
 }
 
-func DownloadFile(baseURL, fileName string) os.Error {
+func DownloadFile(baseURL, fileName, outDir string) os.Error {
 	fullURL := makeURL(baseURL, fileName)
 	fmt.Printf("Downloading %s ...\n", fullURL)
 	r, err := http.Get(fullURL)
@@ -31,18 +32,25 @@ func DownloadFile(baseURL, fileName string) os.Error {
 	if err != nil {
 		return err
 	}
-	err = ioutil.WriteFile(fileName, data, 0666)
+	absPath, err := filepath.Abs(outDir)
+	if err != nil {
+		return err
+	}
+	err = os.MkdirAll(absPath, 0666)
+	if err != nil {
+		return err
+	}
+	err = ioutil.WriteFile(filepath.Join(absPath, fileName), data, 0666)
 	if err != nil {
 		return err
 	}
 	return nil
 }
 
-func DownloadOpenGLSpecs() {
-	//DownloadFile(RegistryBaseURL, OpenGLEnumSpecFile)
-	DownloadFile(RegistryBaseURL, OpenGLEnumExtSpecFile)
-	DownloadFile(RegistryBaseURL, OpenGLSpecFile)
-	DownloadFile(RegistryBaseURL, OpenGLTypeMapFile)
+func DownloadOpenGLSpecs(baseURL, outDir string) {
+	DownloadFile(baseURL, OpenGLEnumExtSpecFile, outDir)
+	DownloadFile(baseURL, OpenGLSpecFile, outDir)
+	DownloadFile(baseURL, OpenGLTypeMapFile, outDir)
 }
 
 // TODO: download wgl, glx specs ...
