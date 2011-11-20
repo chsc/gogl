@@ -60,7 +60,7 @@ func ReadEnums(r io.Reader) (EnumCategories, os.Error) {
 			}
 			deferredUseEnums[currentCategory][use[2]] = use[1]
 		} else {
-			fmt.Fprintf(os.Stderr, "WARNING: Unable to parse line: "+line)
+			fmt.Fprintf(os.Stderr, "WARNING: Unable to parse line: %v\n", line)
 		}
 	}
 
