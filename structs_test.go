@@ -32,7 +32,7 @@ func TestVersion(t *testing.T) {
 			t.Errorf("Input and output must be valid or invalid: %v", test)
 		}
 		if v.Compare(test.Out) != 0 {
-			t.Errorf("Converison failed. Input != output %v", test)
+			t.Errorf("Input != output %v", test)
 		}
 	}
 }
