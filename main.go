@@ -7,7 +7,7 @@ import (
 )
 
 var (
-	download *bool   = flag.Bool("download", false, "Download spec files from Khronos registry first.")
+	download *bool   = flag.Bool("download", false, "Just download spec files from url.")
 	specUrl  *string = flag.String("url", KhronosRegistryBaseURL, "OpenGL specification location.")
 	specDir  *string = flag.String("dir", "khronos_specs", "OpenGL specification directory.")
 	// TODO: add additional flags ...
@@ -19,6 +19,7 @@ func main() {
 
 	if *download {
 		DownloadOpenGLSpecs(*specUrl, *specDir)
+		return
 	}
 
 	fmt.Printf("Parsing enumext.spec file...\n")

@@ -2,7 +2,7 @@ GoGL
 ====
 
 GoGL is a OpenGL binding generator for Go.
-It's in a very early stage of development and not functional yet.
+It's in a very early stage of development and not functional yet!
 
 Goals
 -----
@@ -10,21 +10,54 @@ Goals
 * Lightweight (use only the extensions you really need)
 * No external dependencies like GLEW
 
+Spec files
+----------
+
+The original spec files from Khronos have errors in them.
+Jason McKesson maintains corrected spec files in his bitbucket repository.
+You can find them here: [GL XML Specs](https://bitbucket.org/alfonse/gl-xml-specs).
+
+Build & Install
+---------------
+
+Clone the repository:
+
+	git clone http://github.com/chsc/GoGL.git
+
+and build it with:
+
+	gomake
+	
+GoGL is also goinstallable:
+
+	goinstall github.com/chsc/GoGL
+
+Usage examples
+--------------
+
+If you want to download the latest spec files from Khronos (this is the default behavior), type
+
+	GoGL -download
+
+to your command prompt.
+To generate the bindings, simply type:
+	
+	GoGL
+
+Or with gomake:
+
+	gomake download_khronos
+	gomake gen_khronos
+
+If you want to use Jason McKesson corrected spec files (recommended), type the following to your command line:
+
+	gomake download_alfonse
+	gomake gen_alfonse
+
 TODO
 ----
 
 * Complete spec parser
 * Linux, MacOS, Windows support
-* Filter by Category, extension
+* Filter by category, vendor, extension
 * ...
-	
-Usage examples
---------------
-
-Download latest spec files, generate an OpenGL 3.1 interface, exclude all deprecated functions:
-
-	gogl -download -version=3.1 -deprecation=true
-
-Read spec files from current folder, generate an OpenGL 2.1 compatible interface:
-
-	gogl -version=2.1
