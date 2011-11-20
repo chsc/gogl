@@ -73,6 +73,16 @@ type Function struct {
 }
 
 type Functions []*Function
+
+func (fs Functions) Find(name string) *Function {
+	for _, f := range fs {
+		if f.Name == name {
+			return f
+		}
+	}
+	return nil
+}
+
 type FunctionCategories map[string]Functions
 
 // Enums

@@ -5,7 +5,7 @@ import (
 	"strings"
 )
 
-var testStr = 
+var testEnumsStr = 
 	"###########\n" +
 	"\n" +
 	"# comment 1\n" +
@@ -34,7 +34,7 @@ func checkEnum(cat, en, value string, ecats EnumCategories, t *testing.T) {
 				t.Logf("Enum found: %v::%v = %v", cat, en, value)
 				return
 			}
-			t.Errorf("Enum not found: %v::%v", cat, en)
+			t.Errorf("Enums not equal: %v: %v != %v", cat, value, e.Value)
 			return
 		}
 		t.Errorf("Enum not found: %v::%v", cat, en)
@@ -44,15 +44,15 @@ func checkEnum(cat, en, value string, ecats EnumCategories, t *testing.T) {
 }
 
 func TestReadEnums(t *testing.T) {
-	r := strings.NewReader(testStr)
+	r := strings.NewReader(testEnumsStr)
 	e, err := ReadEnums(r)
 	if err != nil {
-		t.Errorf("Read enums failed: %v", err)
+		t.Fatalf("Read enums failed: %v", err)
 	}
 	t.Logf("%v", e)
 
 	if len(e) != 3 {
-		t.Errorf("wrong length")
+		t.Errorf("Wrong number of categories.")
 	}
 
 	checkEnum("cat_1", "enum1", "0x00000100", e, t)

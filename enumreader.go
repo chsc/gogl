@@ -16,8 +16,6 @@ var (
 	enumRE           = regexp.MustCompile("^[ \\t]*([_0-9A-Za-z]+)[ \\t]*=[ \\t]*([^ \\t#\\n]*)")
 	enumPassthruRE   = regexp.MustCompile("^[ \\t]*passthru:")
 	enumUseRE        = regexp.MustCompile("^[ \\t]*use[ \\t]+([_0-9A-Za-z]+)[ \\t]+([_0-9A-Za-z]+)")
-	enumVersionRE    = regexp.MustCompile("^VERSION_([0-9]+)_([0-9]+)$")
-	enumVersionDepRE = regexp.MustCompile("^VERSION_([0-9]+)_([0-9]+)_DEPRECATED$")
 )
 
 func ReadEnumsFromFile(name string) (EnumCategories, os.Error) {
