@@ -3,6 +3,7 @@ package main
 import (
 	"os"
 	"regexp"
+	"strings"
 )
 
 var (
@@ -44,4 +45,22 @@ func ParseCategoryString(category string) (ParsedCategoryString, os.Error) {
 		return ParsedCategoryString{CategoryExtension, Version{0, 0}, extension[1], extension[2]}, nil
 	}
 	return ParsedCategoryString{CategoryInvalid, Version{0, 0}, "", ""}, os.NewError("Unable to parse category.")
+}
+
+// Converts strings with underscores to Go-like names. e.g.: bla_blub_foo -> BlaBlubFoo
+func GoName(n string) string {
+	prev := '_'
+	return strings.Map(func (r int) int {
+		if r == '_' {
+			prev = r
+			return -1
+		}
+		if prev == '_' {
+			prev = r
+			return unicode.ToTitle(r)
+		}
+		prev = r
+		return r
+	},
+	n)
 }
