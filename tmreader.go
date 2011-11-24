@@ -26,7 +26,7 @@ func ReadTypeMapFromFile(name string) (TypeMap, os.Error) {
 func ReadTypeMap(r io.Reader) (TypeMap, os.Error) {
 	tm := make(TypeMap)
 	br := bufio.NewReader(r)
-	
+
 	for {
 		line, err := br.ReadString('\n')
 		if err == os.EOF {
@@ -37,7 +37,7 @@ func ReadTypeMap(r io.Reader) (TypeMap, os.Error) {
 		}
 		line = strings.TrimRight(line, "\n")
 		//fmt.Println(line)
-		
+
 		if tmEmptyOrCommentRE.MatchString(line) {
 			// skip
 		} else if typePair := tmTypePairRE.FindStringSubmatch(line); typePair != nil {
@@ -46,6 +46,6 @@ func ReadTypeMap(r io.Reader) (TypeMap, os.Error) {
 			fmt.Fprintf(os.Stderr, "Unable to parse line: %v", line)
 		}
 	}
-	
+
 	return tm, nil
 }

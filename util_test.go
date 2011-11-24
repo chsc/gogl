@@ -22,7 +22,6 @@ var allTestCategories = []testCategories{
 	{"GL_EXT_12345678", ParsedCategoryString{CategoryExtension, Version{0, 0}, "EXT", "12345678"}},
 }
 
-
 var allTestGoName = []testGoName{
 	{"", ""},
 	{"_", ""},

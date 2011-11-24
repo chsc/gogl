@@ -5,20 +5,20 @@ import (
 )
 
 type versionTest struct {
-	In    string
-	Out   Version
-	Err   bool
+	In  string
+	Out Version
+	Err bool
 }
 
-var versionTests = []versionTest {
+var versionTests = []versionTest{
 	{"0.0", Version{0, 0}, false},
 	{"0.1", Version{0, 1}, false},
 	{"1.0", Version{1, 0}, false},
 	{"5.6", Version{5, 6}, false},
-	{"0.",  Version{0, 0}, true},
-	{"",    Version{0, 0}, true},
-	{".",   Version{0, 0}, true},
-	{"a",   Version{0, 0}, true},
+	{"0.", Version{0, 0}, true},
+	{"", Version{0, 0}, true},
+	{".", Version{0, 0}, true},
+	{"a", Version{0, 0}, true},
 }
 
 func TestVersion(t *testing.T) {
@@ -36,4 +36,3 @@ func TestVersion(t *testing.T) {
 		}
 	}
 }
-

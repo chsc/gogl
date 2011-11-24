@@ -5,8 +5,7 @@ import (
 	"strings"
 )
 
-var testTypeMapStr = 
-	"Test1,*,*,	    GLType1,*,*\n" +
+var testTypeMapStr = "Test1,*,*,	    GLType1,*,*\n" +
 	"Test2,*,*,	    GLType2,*,*\n" +
 	"Test3,*,*,	    GLType3,*,*\n"
 
@@ -33,7 +32,7 @@ func TestTypeMapReader(t *testing.T) {
 	if len(tm) != 3 {
 		t.Errorf("Wrong number of types.")
 	}
-	
+
 	checkType("Test1", "GLType1", tm, t)
 	checkType("Test2", "GLType2", tm, t)
 	checkType("Test3", "GLType3", tm, t)

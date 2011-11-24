@@ -11,11 +11,11 @@ import (
 
 // TODO: better regexps
 var (
-	enumEmptyLineRE  = regexp.MustCompile("^[ \\t]*(#.*)?$")
-	enumCategoryRE   = regexp.MustCompile("^[ \\t]*([_0-9A-Za-z]+)[ \\t]+enum:")
-	enumRE           = regexp.MustCompile("^[ \\t]*([_0-9A-Za-z]+)[ \\t]*=[ \\t]*([^ \\t#\\n]*)")
-	enumPassthruRE   = regexp.MustCompile("^[ \\t]*passthru:")
-	enumUseRE        = regexp.MustCompile("^[ \\t]*use[ \\t]+([_0-9A-Za-z]+)[ \\t]+([_0-9A-Za-z]+)")
+	enumEmptyLineRE = regexp.MustCompile("^[ \\t]*(#.*)?$")
+	enumCategoryRE  = regexp.MustCompile("^[ \\t]*([_0-9A-Za-z]+)[ \\t]+enum:")
+	enumRE          = regexp.MustCompile("^[ \\t]*([_0-9A-Za-z]+)[ \\t]*=[ \\t]*([^ \\t#\\n]*)")
+	enumPassthruRE  = regexp.MustCompile("^[ \\t]*passthru:")
+	enumUseRE       = regexp.MustCompile("^[ \\t]*use[ \\t]+([_0-9A-Za-z]+)[ \\t]+([_0-9A-Za-z]+)")
 )
 
 func ReadEnumsFromFile(name string) (EnumCategories, os.Error) {

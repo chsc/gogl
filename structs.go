@@ -99,7 +99,6 @@ type EnumCategories map[string]Enums
 
 type TypeMap map[string]string
 
-
 // Packages
 
 type Package struct {

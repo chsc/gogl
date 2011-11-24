@@ -91,4 +91,3 @@ func ReadFunctions(r io.Reader) (FunctionCategories, []Version, os.Error) {
 	}
 	return functions, versions, nil
 }
-

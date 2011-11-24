@@ -5,8 +5,7 @@ import (
 	"strings"
 )
 
-var testEnumsStr = 
-	"###########\n" +
+var testEnumsStr = "###########\n" +
 	"\n" +
 	"# comment 1\n" +
 	" ### comment 2\n" +
@@ -15,13 +14,13 @@ var testEnumsStr =
 	"# comment\n" +
 	"enum1	 = 0x00000100 	\n" +
 	"enum2	 = 0x00000200	# comment 2\n" +
-	"passthru: /* passthru comment */\n" + 
+	"passthru: /* passthru comment */\n" +
 	"enum3	 = 6	# comment 3\n" +
 	"cat_2 enum:\n" +
 	"# comment\n" +
 	"enum1	 = 0x00000600	# comment 1\n" +
 	"enum2		  = 0x00000800\n" +
-	"passthru: /* passthru comment */\n" + 
+	"passthru: /* passthru comment */\n" +
 	"enum3	 	= 2	# comment 2\n" +
 	"cat_3 enum:\n" +
 	"# comment\n" +
@@ -61,6 +60,5 @@ func TestReadEnums(t *testing.T) {
 	checkEnum("cat_2", "enum1", "0x00000600", e, t)
 	checkEnum("cat_2", "enum2", "0x00000800", e, t)
 	checkEnum("cat_2", "enum3", "2", e, t)
-	checkEnum("cat_3", "enum2", "0x00000800", e, t)		
+	checkEnum("cat_3", "enum2", "0x00000800", e, t)
 }
-

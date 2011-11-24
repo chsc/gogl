@@ -6,8 +6,7 @@ import (
 	"reflect"
 )
 
-var testFuntionsStr = 
-	"###########\n" +
+var testFuntionsStr = "###########\n" +
 	"\n" +
 	"# comment 1\n" +
 	" ### comment 2\n" +
@@ -60,8 +59,7 @@ func TestReadFunctions(t *testing.T) {
 		t.Errorf("Wrong number of categories.")
 	}
 
-	checkFunc(&Function{"Foo1", []Parameter{{"p1", "type1", false}, {"p2", "type2", false}}, "void", Version{1, 0} , Version{0, 0}, "cat_1"}, f, t)
-	checkFunc(&Function{"Foo2", []Parameter{{"p1", "type3", false}}, "void", Version{2, 1} , Version{0, 0}, "cat_2"}, f, t)
+	checkFunc(&Function{"Foo1", []Parameter{{"p1", "type1", false}, {"p2", "type2", false}}, "void", Version{1, 0}, Version{0, 0}, "cat_1"}, f, t)
+	checkFunc(&Function{"Foo2", []Parameter{{"p1", "type3", false}}, "void", Version{2, 1}, Version{0, 0}, "cat_2"}, f, t)
 	// TODO: add more tests: in array, out array, glxflags, offset, ...	
 }
-
