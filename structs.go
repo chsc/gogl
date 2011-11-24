@@ -98,3 +98,15 @@ type EnumCategories map[string]Enums
 // Type maps
 
 type TypeMap map[string]string
+
+
+// Packages
+
+type Package struct {
+	Enums     EnumCategories
+	Functions FunctionCategories
+}
+
+type Packages map[string]*Package
+
+type PackageSortFunc func(category string) (packageNames []string)
