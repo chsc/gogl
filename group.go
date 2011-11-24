@@ -1,6 +1,8 @@
 package main
 
-func GroupEnumsAndFunctions(enums EnumCategories, functions FunctionCategories, sortFunc PackageSortFunc) (packages Packages) {
+type PackageGroupFunc func(category string) (packageNames []string)
+
+func GroupEnumsAndFunctions(enums EnumCategories, functions FunctionCategories, sortFunc PackageGroupFunc) (packages Packages) {
 	packages = make(Packages)
 	for category, catEnums := range enums {
 		if packageNames := sortFunc(category); packageNames != nil {

@@ -107,5 +107,3 @@ type Package struct {
 }
 
 type Packages map[string]*Package
-
-type PackageSortFunc func(category string) (packageNames []string)
