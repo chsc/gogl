@@ -1,7 +1,16 @@
 include $(GOROOT)/src/Make.inc
  
 TARG=GoGL
-GOFILES=main.go download.go structs.go enumreader.go funcreader.go tmreader.go group.go generator.go util.go
+GOFILES=\
+	main.go\
+	download.go\
+	structs.go\
+	enumreader.go\
+	funcreader.go\
+	tmreader.go\
+	group.go\
+	generator.go\
+	util.go
  
 include $(GOROOT)/src/Make.cmd
 
