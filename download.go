@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
-	"http"
 	"io/ioutil"
+	"net/http"
 	"os"
 	"path/filepath"
 )
@@ -20,7 +20,7 @@ func makeURL(base, file string) string {
 	return fmt.Sprintf("%s/%s", base, file)
 }
 
-func DownloadFile(baseURL, fileName, outDir string) os.Error {
+func DownloadFile(baseURL, fileName, outDir string) error {
 	fullURL := makeURL(baseURL, fileName)
 	fmt.Printf("Downloading %s ...\n", fullURL)
 	r, err := http.Get(fullURL)

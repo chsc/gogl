@@ -1,10 +1,10 @@
 package main
 
 import (
-	"fmt"
-	"os"
-	"io"
 	"bufio"
+	"fmt"
+	"io"
+	"os"
 	"regexp"
 	"strings"
 )
@@ -18,7 +18,7 @@ var (
 	enumUseRE       = regexp.MustCompile("^[ \\t]*use[ \\t]+([_0-9A-Za-z]+)[ \\t]+([_0-9A-Za-z]+)")
 )
 
-func ReadEnumsFromFile(name string) (EnumCategories, os.Error) {
+func ReadEnumsFromFile(name string) (EnumCategories, error) {
 	file, err := os.Open(name)
 	if err != nil {
 		return nil, err
@@ -27,7 +27,7 @@ func ReadEnumsFromFile(name string) (EnumCategories, os.Error) {
 	return ReadEnums(file)
 }
 
-func ReadEnums(r io.Reader) (EnumCategories, os.Error) {
+func ReadEnums(r io.Reader) (EnumCategories, error) {
 	categories := make(EnumCategories)
 	deferredUseEnums := make(map[string]map[string]string)
 	currentCategory := ""
@@ -35,7 +35,7 @@ func ReadEnums(r io.Reader) (EnumCategories, os.Error) {
 
 	for {
 		line, err := br.ReadString('\n')
-		if err == os.EOF {
+		if err == io.EOF {
 			break
 		} else if err != nil {
 			return nil, err

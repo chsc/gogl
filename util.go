@@ -1,7 +1,7 @@
 package main
 
 import (
-	"os"
+	"errors"
 	"regexp"
 	"strings"
 	"unicode"
@@ -29,7 +29,7 @@ type ParsedCategoryString struct {
 	Name         string
 }
 
-func ParseCategoryString(category string) (ParsedCategoryString, os.Error) {
+func ParseCategoryString(category string) (ParsedCategoryString, error) {
 	if versionDep := versionDepRE.FindStringSubmatch(category); versionDep != nil {
 		v, err := MakeVersionFromMinorMajorString(versionDep[1], versionDep[2])
 		if err != nil {
@@ -45,7 +45,7 @@ func ParseCategoryString(category string) (ParsedCategoryString, os.Error) {
 	} else if extension := extensionRE.FindStringSubmatch(category); extension != nil {
 		return ParsedCategoryString{CategoryExtension, Version{0, 0}, extension[1], extension[2]}, nil
 	}
-	return ParsedCategoryString{CategoryInvalid, Version{0, 0}, "", ""}, os.NewError("Unable to parse category.")
+	return ParsedCategoryString{CategoryInvalid, Version{0, 0}, "", ""}, errors.New("Unable to parse category.")
 }
 
 // Converts strings with underscores to Go-like names. e.g.: bla_blub_foo -> BlaBlubFoo

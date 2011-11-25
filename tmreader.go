@@ -1,12 +1,12 @@
 package main
 
 import (
-	"os"
-	"io"
 	"bufio"
+	"fmt"
+	"io"
+	"os"
 	"regexp"
 	"strings"
-	"fmt"
 )
 
 var (
@@ -14,7 +14,7 @@ var (
 	tmTypePairRE       = regexp.MustCompile("^([A-Za-z0-9]+),\\*,\\*,[\\t ]*([A-Za-z0-9]+),\\*,\\*")
 )
 
-func ReadTypeMapFromFile(name string) (TypeMap, os.Error) {
+func ReadTypeMapFromFile(name string) (TypeMap, error) {
 	file, err := os.Open(name)
 	if err != nil {
 		return nil, err
@@ -23,13 +23,13 @@ func ReadTypeMapFromFile(name string) (TypeMap, os.Error) {
 	return ReadTypeMap(file)
 }
 
-func ReadTypeMap(r io.Reader) (TypeMap, os.Error) {
+func ReadTypeMap(r io.Reader) (TypeMap, error) {
 	tm := make(TypeMap)
 	br := bufio.NewReader(r)
 
 	for {
 		line, err := br.ReadString('\n')
-		if err == os.EOF {
+		if err == io.EOF {
 			break
 		}
 		if err != nil {

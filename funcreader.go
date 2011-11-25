@@ -2,6 +2,7 @@ package main
 
 import (
 	"bufio"
+	"errors"
 	"fmt"
 	"io"
 	"os"
@@ -21,7 +22,7 @@ var (
 	funcAllVersionsRE  = regexp.MustCompile("^version:[ \\t]*([0-9\\. ]+)")
 )
 
-func ReadFunctionsFromFile(name string) (FunctionCategories, []Version, os.Error) {
+func ReadFunctionsFromFile(name string) (FunctionCategories, []Version, error) {
 	file, err := os.Open(name)
 	if err != nil {
 		return nil, nil, err
@@ -30,7 +31,7 @@ func ReadFunctionsFromFile(name string) (FunctionCategories, []Version, os.Error
 	return ReadFunctions(file)
 }
 
-func ReadFunctions(r io.Reader) (FunctionCategories, []Version, os.Error) {
+func ReadFunctions(r io.Reader) (FunctionCategories, []Version, error) {
 	functions := make(FunctionCategories)
 	versions := make([]Version, 0, 8)
 	br := bufio.NewReader(r)
@@ -38,7 +39,7 @@ func ReadFunctions(r io.Reader) (FunctionCategories, []Version, os.Error) {
 
 	for {
 		line, err := br.ReadString('\n')
-		if err == os.EOF {
+		if err == io.EOF {
 			break
 		} else if err != nil {
 			return nil, nil, err
@@ -67,13 +68,13 @@ func ReadFunctions(r io.Reader) (FunctionCategories, []Version, os.Error) {
 		} else if version := funcVersionRE.FindStringSubmatch(line); version != nil {
 			v, err := MakeVersionFromMinorMajorString(version[1], version[2])
 			if err != nil {
-				return functions, versions, os.NewError("Unable to parse version: " + line)
+				return functions, versions, errors.New("Unable to parse version: " + line)
 			}
 			currentFunction.Version = v
 		} else if deprecated := funcDeprecatedRE.FindStringSubmatch(line); deprecated != nil {
 			v, err := MakeVersionFromMinorMajorString(deprecated[1], deprecated[2])
 			if err != nil {
-				return functions, versions, os.NewError("Unable to parse version: " + line)
+				return functions, versions, errors.New("Unable to parse version: " + line)
 			}
 			currentFunction.DeprecatedVersion = v
 		} else if allVersions := funcAllVersionsRE.FindStringSubmatch(line); allVersions != nil {
@@ -81,7 +82,7 @@ func ReadFunctions(r io.Reader) (FunctionCategories, []Version, os.Error) {
 			for _, verString := range split {
 				v, err := MakeVersionFromString(verString)
 				if err != nil {
-					return functions, versions, os.NewError("Unable to parse version: " + line)
+					return functions, versions, errors.New("Unable to parse version: " + line)
 				}
 				versions = append(versions, v)
 			}

@@ -25,19 +25,19 @@ func main() {
 	fmt.Printf("Parsing enumext.spec file...\n")
 	enumCategories, err := ReadEnumsFromFile(filepath.Join(*specDir, OpenGLEnumExtSpecFile))
 	if err != nil {
-		panic(err.String())
+		panic(err.Error())
 	}
 
 	fmt.Printf("Parsing gl.tm file ...\n")
 	typeMap, err := ReadTypeMapFromFile(filepath.Join(*specDir, OpenGLTypeMapFile))
 	if err != nil {
-		panic(err.String())
+		panic(err.Error())
 	}
 
 	fmt.Printf("Parsing gl.spec file ...\n")
 	functions, supportedVersions, err := ReadFunctionsFromFile(filepath.Join(*specDir, OpenGLSpecFile))
 	if err != nil {
-		panic(err.String())
+		panic(err.Error())
 	}
 
 	// TODO: This output is temporary for debugging

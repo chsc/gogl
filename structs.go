@@ -1,8 +1,9 @@
 package main
 
 import (
+	"errors"
 	"fmt"
-	"os"
+
 	"strconv"
 	"strings"
 )
@@ -14,22 +15,22 @@ type Version struct {
 	Minor int
 }
 
-func MakeVersionFromString(version string) (Version, os.Error) {
+func MakeVersionFromString(version string) (Version, error) {
 	split := strings.Split(version, ".")
 	if len(split) != 2 {
-		return Version{0, 0}, os.NewError("Invalid version string.")
+		return Version{0, 0}, errors.New("Invalid version string.")
 	}
 	return MakeVersionFromMinorMajorString(split[0], split[1])
 }
 
-func MakeVersionFromMinorMajorString(minor, major string) (Version, os.Error) {
+func MakeVersionFromMinorMajorString(minor, major string) (Version, error) {
 	majorNumber, err := strconv.Atoi(minor)
 	if err != nil {
-		return Version{0, 0}, os.NewError("Invalid major version number.")
+		return Version{0, 0}, errors.New("Invalid major version number.")
 	}
 	minorNumber, err := strconv.Atoi(major)
 	if err != nil {
-		return Version{0, 0}, os.NewError("Invalid minor version number.")
+		return Version{0, 0}, errors.New("Invalid minor version number.")
 	}
 	return Version{majorNumber, minorNumber}, nil
 }

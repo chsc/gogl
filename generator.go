@@ -1,12 +1,12 @@
 package main
 
 import (
-	"os"
-	"io"
 	"fmt"
+	"io"
+	"os"
 )
 
-func Generate(fname string, enums EnumCategories, functions FunctionCategories, typeMap TypeMap) os.Error {
+func Generate(fname string, enums EnumCategories, functions FunctionCategories, typeMap TypeMap) error {
 	w, err := os.Create(fname)
 	if err != nil {
 		return err
