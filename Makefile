@@ -14,6 +14,9 @@ GOFILES=\
  
 include $(GOROOT)/src/Make.cmd
 
+test:
+	gotest
+
 format:
 	gofmt -w *.go
 

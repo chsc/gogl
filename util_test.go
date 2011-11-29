@@ -35,7 +35,7 @@ func TestParsedCategoryString(t *testing.T) {
 		te := &allTestCategories[i]
 		pc, err := ParseCategoryString(te.in)
 		if err != nil {
-			t.Fatalf(err.String())
+			t.Fatalf(err.Error())
 		}
 		t.Logf("%v", te)
 		if !reflect.DeepEqual(pc, te.out) {
