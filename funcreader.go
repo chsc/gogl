@@ -8,6 +8,7 @@ import (
 	"os"
 	"regexp"
 	"strings"
+	"strconv"
 )
 
 var (
@@ -19,6 +20,8 @@ var (
 	funcCategoryRE     = regexp.MustCompile("^[ \\t]*category[ \\t]+([^ \\t#\\n]+)")
 	funcVersionRE      = regexp.MustCompile("^[ \\t]*version[ \\t]+([0-9]+)\\.([0-9]+)")
 	funcDeprecatedRE   = regexp.MustCompile("^[ \\t]*deprecated[ \\t]+([0-9]+)\\.([0-9]+)")
+	funcOffsetRE       = regexp.MustCompile("^[ \\t]*offset[ \\t]+([0-9]+)")
+	funcGlxRopCodeRE   = regexp.MustCompile("^[ \\t]*glxropcode[ \\t]+([0-9]+)")
 	funcAllVersionsRE  = regexp.MustCompile("^version:[ \\t]*([0-9\\. ]+)")
 )
 
@@ -77,6 +80,18 @@ func ReadFunctions(r io.Reader) (FunctionCategories, []Version, error) {
 				return functions, versions, errors.New("Unable to parse version: " + line)
 			}
 			currentFunction.DeprecatedVersion = v
+		} else if offset := funcOffsetRE.FindStringSubmatch(line); offset != nil {
+			v, err := strconv.Atoi(offset[1])
+			if err != nil {
+				return functions, versions, errors.New("Unable to parse offset: " + line)
+			}
+			currentFunction.Offset = v
+		} else if glxropcode := funcGlxRopCodeRE.FindStringSubmatch(line); glxropcode != nil {
+			v, err := strconv.Atoi(glxropcode[1])
+			if err != nil {
+				return functions, versions, errors.New("Unable to parse glxropcode: " + line)
+			}
+			currentFunction.GlxRopCode = v
 		} else if allVersions := funcAllVersionsRE.FindStringSubmatch(line); allVersions != nil {
 			split := strings.Split(allVersions[1], " ")
 			for _, verString := range split {

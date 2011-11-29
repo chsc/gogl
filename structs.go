@@ -71,6 +71,8 @@ type Function struct {
 	Version           Version
 	DeprecatedVersion Version
 	Category          string
+	Offset            int
+	GlxRopCode        int
 }
 
 type Functions []*Function
