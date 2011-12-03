@@ -43,7 +43,7 @@ func GroupEnumsAndFunctions(enums EnumCategories, functions FunctionCategories, 
 }
 
 // Default grouping function:
-func GroupPackagesByVendorFunc(category string, supportedVersions []Version) (packageNames []string) {
+func GroupPackagesByVendorFunc(category string, supportedVersions []Version, deprecatedVersions []Version) (packageNames []string) {
 	pc, err := ParseCategoryString(category)
 	if err != nil {
 		return nil
