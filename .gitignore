@@ -1,0 +1,8 @@
+GoGL
+*.[568]
+*.out
+_testmain.go
+_obj
+_test
+alfonse_specs/
+khronos_specs/
