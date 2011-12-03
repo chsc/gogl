@@ -1,3 +1,7 @@
+// Copyright 2011 The GoGL Authors. All rights reserved.
+// Use of this source code is governed by a BSD-style
+// license that can be found in the LICENSE.mkd file.
+
 package main
 
 import (
