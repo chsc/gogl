@@ -36,7 +36,7 @@ var testFuntionsStr = "###########\n" +
 
 func checkFunc(f *Function, fcats FunctionCategories, t *testing.T) {
 	if functions, ok := fcats[f.Category]; ok {
-		if foo := functions.Find(f.Name); f != nil {
+		if foo := functions.Find(f.Name); foo != nil {
 			if reflect.DeepEqual(foo, f) {
 				t.Logf("Enum found: %v::%v = %v", f.Category, f.Name, f)
 				return
