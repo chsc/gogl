@@ -42,7 +42,8 @@ func GroupEnumsAndFunctions(enums EnumCategories, functions FunctionCategories, 
 	return
 }
 
-// Default grouping function:
+// Default grouping function.
+// Currently only one deprecation level supported.
 func GroupPackagesByVendorFunc(category string, supportedVersions []Version, deprecatedVersions []Version) (packageNames []string) {
 	pc, err := ParseCategoryString(category)
 	if err != nil {
@@ -54,17 +55,21 @@ func GroupPackagesByVendorFunc(category string, supportedVersions []Version, dep
 			packages = append(packages, strings.ToLower(pc.Vendor))
 		case CategoryVersion:
 			for _, ver := range supportedVersions {
-				if pc.Version.Compare(ver) <= 0 {
-					packages = append(packages, 
-						fmt.Sprintf("gl%d%d", ver.Major, ver.Minor),
-						fmt.Sprintf("gl%d%dd", ver.Major, ver.Minor))
+				if ver.Compare(pc.Version) >= 0 {
+					packages = append(packages, fmt.Sprintf("gl%d%d", ver.Major, ver.Minor))
+					if ver.Compare(deprecatedVersions[0]) >= 0 {
+						packages = append(packages, fmt.Sprintf("gl%d%dc", ver.Major, ver.Minor))
+					}
 				}
 			}
 		case CategoryDeprecatedVersion:
 			for _, ver := range supportedVersions {
-				if pc.Version.Compare(ver) <= 0 {
-					packages = append(packages,
-						fmt.Sprintf("gl%d%dd", ver.Major, ver.Minor))
+				if ver.Compare(pc.Version) >= 0 {
+					if ver.Compare(deprecatedVersions[0]) < 0 {
+						packages = append(packages,	fmt.Sprintf("gl%d%d", ver.Major, ver.Minor))
+					} else {
+						packages = append(packages,	fmt.Sprintf("gl%d%dc", ver.Major, ver.Minor))
+					}
 				}
 			}
 	}
