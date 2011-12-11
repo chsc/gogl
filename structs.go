@@ -62,6 +62,12 @@ func (v Version) String() string {
 
 // Functions
 
+type FunctionsInfo struct {
+	Versions           []Version
+	DeprecatedVersions []Version
+	Passthru           string
+}
+
 type Parameter struct {
 	Name    string
 	Type    string

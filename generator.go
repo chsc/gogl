@@ -8,9 +8,33 @@ import (
 	"fmt"
 	"io"
 	"os"
+	"path/filepath"
 )
 
-func Generate(fname string, enums EnumCategories, functions FunctionCategories, typeMap TypeMap) error {
+func GeneratePackages(packages Packages, typeMap TypeMap) error {
+	for packageName, pak := range packages {
+		fmt.Printf("Generating %s ...\n",  packageName);
+		if err := generatePackage(packageName, pak, typeMap); err != nil {
+			return err
+		}
+	}
+	return nil
+}
+
+func generatePackage(packageName string, pak *Package, typeMap TypeMap) error {
+	absPath, err := filepath.Abs(packageName)
+	if err != nil {
+		return err
+	}
+	err = os.MkdirAll(absPath, 0666)
+	if err != nil {
+		return err
+	}
+	
+	return nil;
+}
+
+func generate(fname string, enums EnumCategories, functions FunctionCategories, typeMap TypeMap) error {
 	w, err := os.Create(fname)
 	if err != nil {
 		return err

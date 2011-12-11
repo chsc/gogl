@@ -46,24 +46,24 @@ func TestPackageGrouping(t *testing.T) {
 	e := make(EnumCategories)
 	f := make(FunctionCategories)
 
-	e["GL_VERSION_1_3"] = Enums{}
-	e["GL_VERSION_1_3_DEPRECATED"] = Enums{}
+	e["VERSION_1_3"] = Enums{}
+	e["VERSION_1_3_DEPRECATED"] = Enums{}
 
-	e["GL_VERSION_2_1"] = Enums{}	
-	e["GL_VERSION_2_1_DEPRECATED"] = Enums{}
+	e["VERSION_2_1"] = Enums{}	
+	e["VERSION_2_1_DEPRECATED"] = Enums{}
 
-	e["GL_VERSION_2_3"] = Enums{}	
-	e["GL_VERSION_2_3_DEPRECATED"] = Enums{}
+	e["VERSION_2_3"] = Enums{}	
+	e["VERSION_2_3_DEPRECATED"] = Enums{}
 
-	e["GL_VERSION_3_1"] = Enums{}	
+	e["VERSION_3_1"] = Enums{}	
 
-	e["GL_EXT_1"] = Enums{}
-	e["GL_NV_1"] = Enums{}
-	e["GL_ATI_1"] = Enums{}
+	e["EXT_1"] = Enums{}
+	e["NV_1"] = Enums{}
+	e["ATI_1"] = Enums{}
 
-	f["GL_EXT_1"] = []*Function{}
-	f["GL_NV_1"] = []*Function{}
-	f["GL_ATI_1"] = []*Function{}
+	f["EXT_1"] = []*Function{}
+	f["NV_1"] = []*Function{}
+	f["ATI_1"] = []*Function{}
 	
 	suppV := []Version{{1,3}, {2,1}, {2,3}, {3,1}}
 	deprV := []Version{{3,1}}
@@ -81,29 +81,29 @@ func TestPackageGrouping(t *testing.T) {
 		t.Errorf("Wrong number of categories.")
 	}
 	
-	checkEnumCats(p, t, "nv", "GL_NV_1")
-	checkEnumCats(p, t, "ati", "GL_ATI_1")
-	checkEnumCats(p, t, "ext", "GL_EXT_1")
-	checkEnumCats(p, t, "gl13", "GL_VERSION_1_3", "GL_VERSION_1_3_DEPRECATED")
+	checkEnumCats(p, t, "nv", "NV_1")
+	checkEnumCats(p, t, "ati", "ATI_1")
+	checkEnumCats(p, t, "ext", "EXT_1")
+	checkEnumCats(p, t, "gl13", "VERSION_1_3", "VERSION_1_3_DEPRECATED")
 	checkEnumCats(p, t, "gl21",
-		"GL_VERSION_1_3", "GL_VERSION_1_3_DEPRECATED", 
-		"GL_VERSION_2_1", "GL_VERSION_2_1_DEPRECATED")
+		"VERSION_1_3", "VERSION_1_3_DEPRECATED", 
+		"VERSION_2_1", "VERSION_2_1_DEPRECATED")
 	checkEnumCats(p, t, "gl23",
-		"GL_VERSION_1_3", "GL_VERSION_1_3_DEPRECATED", 
-		"GL_VERSION_2_1", "GL_VERSION_2_1_DEPRECATED",
-		"GL_VERSION_2_3", "GL_VERSION_2_3_DEPRECATED")
+		"VERSION_1_3", "VERSION_1_3_DEPRECATED", 
+		"VERSION_2_1", "VERSION_2_1_DEPRECATED",
+		"VERSION_2_3", "VERSION_2_3_DEPRECATED")
 	checkEnumCats(p, t, "gl31",
-		"GL_VERSION_1_3", 
-		"GL_VERSION_2_1",
-		"GL_VERSION_2_3",
-		"GL_VERSION_3_1")
+		"VERSION_1_3", 
+		"VERSION_2_1",
+		"VERSION_2_3",
+		"VERSION_3_1")
 	checkEnumCats(p, t, "gl31c",
-		"GL_VERSION_1_3", "GL_VERSION_1_3_DEPRECATED", 
-		"GL_VERSION_2_1", "GL_VERSION_2_1_DEPRECATED",
-		"GL_VERSION_2_3", "GL_VERSION_2_3_DEPRECATED",
-		"GL_VERSION_3_1")
+		"VERSION_1_3", "VERSION_1_3_DEPRECATED", 
+		"VERSION_2_1", "VERSION_2_1_DEPRECATED",
+		"VERSION_2_3", "VERSION_2_3_DEPRECATED",
+		"VERSION_3_1")
 	
-	checkFuncCats(p, t, "nv", "GL_NV_1")
-	checkFuncCats(p, t, "ati", "GL_ATI_1")
-	checkFuncCats(p, t, "ext", "GL_EXT_1")
+	checkFuncCats(p, t, "nv", "NV_1")
+	checkFuncCats(p, t, "ati", "ATI_1")
+	checkFuncCats(p, t, "ext", "EXT_1")
 }

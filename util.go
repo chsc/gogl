@@ -12,9 +12,9 @@ import (
 )
 
 var (
-	versionRE    = regexp.MustCompile("^GL_VERSION_([0-9]+)_([0-9]+)$")
-	versionDepRE = regexp.MustCompile("^GL_VERSION_([0-9]+)_([0-9]+)_DEPRECATED$")
-	extensionRE  = regexp.MustCompile("^GL_([A-Za-z0-9]+)_([A-Za-z0-9_]+)$")
+	versionRE    = regexp.MustCompile("^VERSION_([0-9]+)_([0-9]+)$")
+	versionDepRE = regexp.MustCompile("^VERSION_([0-9]+)_([0-9]+)_DEPRECATED$")
+	extensionRE  = regexp.MustCompile("^([A-Za-z0-9]+)_([A-Za-z0-9_]+)$")
 )
 
 type CategoryType int32

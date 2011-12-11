@@ -11,25 +11,26 @@ import (
 	"io"
 	"os"
 	"regexp"
-	"strings"
 	"strconv"
+	"strings"
 )
 
 var (
-	funcEmptyLineRE    = regexp.MustCompile("^[ \\t]*(#.*)?$")
-	funcRE             = regexp.MustCompile("^[ \\t]*([_0-9A-Za-z]+)\\([0-9a-z, ]*\\)")
-	funcReturnRE       = regexp.MustCompile("^[ \\t]*return[ \\t]+([^ \\t#\\n]+)")
-	funcParamInValueRE = regexp.MustCompile("^[ \\t]*param[ \\t]+([^ \\t]+)[ \\t]+([^ \\t]+)[ \\t]+in[ \\t]+value")
-	funcParamInArrayRE = regexp.MustCompile("^[ \\t]*param[ \\t]+([^ \\t]+)[ \\t]+([^ \\t]+)[ \\t]+in[ \\t]+array")
-	funcCategoryRE     = regexp.MustCompile("^[ \\t]*category[ \\t]+([^ \\t#\\n]+)")
-	funcVersionRE      = regexp.MustCompile("^[ \\t]*version[ \\t]+([0-9]+)\\.([0-9]+)")
-	funcDeprecatedRE   = regexp.MustCompile("^[ \\t]*deprecated[ \\t]+([0-9]+)\\.([0-9]+)")
-	funcOffsetRE       = regexp.MustCompile("^[ \\t]*offset[ \\t]+([0-9]+)")
-	funcGlxRopCodeRE   = regexp.MustCompile("^[ \\t]*glxropcode[ \\t]+([0-9]+)")
-	funcAllVersionsRE  = regexp.MustCompile("^version:[ \\t]*([0-9\\. ]+)")
+	funcEmptyLineRE       = regexp.MustCompile("^[ \\t]*(#.*)?$")
+	funcRE                = regexp.MustCompile("^[ \\t]*([_0-9A-Za-z]+)\\([0-9a-z, ]*\\)")
+	funcReturnRE          = regexp.MustCompile("^[ \\t]*return[ \\t]+([^ \\t#\\n]+)")
+	funcParamInValueRE    = regexp.MustCompile("^[ \\t]*param[ \\t]+([^ \\t]+)[ \\t]+([^ \\t]+)[ \\t]+in[ \\t]+value")
+	funcParamInArrayRE    = regexp.MustCompile("^[ \\t]*param[ \\t]+([^ \\t]+)[ \\t]+([^ \\t]+)[ \\t]+in[ \\t]+array")
+	funcCategoryRE        = regexp.MustCompile("^[ \\t]*category[ \\t]+([^ \\t#\\n]+)")
+	funcVersionRE         = regexp.MustCompile("^[ \\t]*version[ \\t]+([0-9]+)\\.([0-9]+)")
+	funcDeprecatedRE      = regexp.MustCompile("^[ \\t]*deprecated[ \\t]+([0-9]+)\\.([0-9]+)")
+	funcOffsetRE          = regexp.MustCompile("^[ \\t]*offset[ \\t]+([0-9]+)")
+	funcGlxRopCodeRE      = regexp.MustCompile("^[ \\t]*glxropcode[ \\t]+([0-9]+)")
+	funcAllVersionsRE     = regexp.MustCompile("^version:[ \\t]*([0-9\\. ]+)")
+	funcAllDeprVersionsRE = regexp.MustCompile("^deprecated:[ \\t]*([0-9\\. ]+)")
 )
 
-func ReadFunctionsFromFile(name string) (FunctionCategories, []Version, error) {
+func ReadFunctionsFromFile(name string) (FunctionCategories, *FunctionsInfo, error) {
 	file, err := os.Open(name)
 	if err != nil {
 		return nil, nil, err
@@ -38,11 +39,12 @@ func ReadFunctionsFromFile(name string) (FunctionCategories, []Version, error) {
 	return ReadFunctions(file)
 }
 
-func ReadFunctions(r io.Reader) (FunctionCategories, []Version, error) {
-	functions := make(FunctionCategories)
-	versions := make([]Version, 0, 8)
-	br := bufio.NewReader(r)
+func ReadFunctions(r io.Reader) (FunctionCategories, *FunctionsInfo, error) {
 	var currentFunction *Function = nil
+	functions := make(FunctionCategories)
+	finfo := &FunctionsInfo{make([]Version, 0, 8), make([]Version, 0, 8), ""}
+
+	br := bufio.NewReader(r)
 
 	for {
 		line, err := br.ReadString('\n')
@@ -75,25 +77,25 @@ func ReadFunctions(r io.Reader) (FunctionCategories, []Version, error) {
 		} else if version := funcVersionRE.FindStringSubmatch(line); version != nil {
 			v, err := MakeVersionFromMinorMajorString(version[1], version[2])
 			if err != nil {
-				return functions, versions, errors.New("Unable to parse version: " + line)
+				return functions, finfo, errors.New("Unable to parse version: " + line)
 			}
 			currentFunction.Version = v
 		} else if deprecated := funcDeprecatedRE.FindStringSubmatch(line); deprecated != nil {
 			v, err := MakeVersionFromMinorMajorString(deprecated[1], deprecated[2])
 			if err != nil {
-				return functions, versions, errors.New("Unable to parse version: " + line)
+				return functions, finfo, errors.New("Unable to parse version: " + line)
 			}
 			currentFunction.DeprecatedVersion = v
 		} else if offset := funcOffsetRE.FindStringSubmatch(line); offset != nil {
 			v, err := strconv.Atoi(offset[1])
 			if err != nil {
-				return functions, versions, errors.New("Unable to parse offset: " + line)
+				return functions, finfo, errors.New("Unable to parse offset: " + line)
 			}
 			currentFunction.Offset = v
 		} else if glxropcode := funcGlxRopCodeRE.FindStringSubmatch(line); glxropcode != nil {
 			v, err := strconv.Atoi(glxropcode[1])
 			if err != nil {
-				return functions, versions, errors.New("Unable to parse glxropcode: " + line)
+				return functions, finfo, errors.New("Unable to parse glxropcode: " + line)
 			}
 			currentFunction.GlxRopCode = v
 		} else if allVersions := funcAllVersionsRE.FindStringSubmatch(line); allVersions != nil {
@@ -101,13 +103,22 @@ func ReadFunctions(r io.Reader) (FunctionCategories, []Version, error) {
 			for _, verString := range split {
 				v, err := MakeVersionFromString(verString)
 				if err != nil {
-					return functions, versions, errors.New("Unable to parse version: " + line)
+					return functions, finfo, errors.New("Unable to parse version: " + line)
 				}
-				versions = append(versions, v)
+				finfo.Versions = append(finfo.Versions, v)
+			}
+		} else if allDeprVersions := funcAllDeprVersionsRE.FindStringSubmatch(line); allDeprVersions != nil {
+			split := strings.Split(allDeprVersions[1], " ")
+			for _, verString := range split {
+				v, err := MakeVersionFromString(verString)
+				if err != nil {
+					return functions, finfo, errors.New("Unable to parse version: " + line)
+				}
+				finfo.DeprecatedVersions = append(finfo.DeprecatedVersions, v)
 			}
 		} else {
 			fmt.Fprintf(os.Stderr, "WARNING: Unable to parse line: %v\n", line)
 		}
 	}
-	return functions, versions, nil
+	return functions, finfo, nil
 }
