@@ -11,9 +11,13 @@ import (
 	"path/filepath"
 )
 
+func MakeSpecDocUrl(vendor, extension string) string {
+	return fmt.Sprintf("http://www.opengl.org/registry/specs/%s/%s.txt", vendor, extension)
+}
+
 func GeneratePackages(packages Packages, typeMap TypeMap) error {
 	for packageName, pak := range packages {
-		fmt.Printf("Generating %s ...\n",  packageName);
+		//fmt.Printf("Generating %s ...\n",  packageName);
 		if err := generatePackage(packageName, pak, typeMap); err != nil {
 			return err
 		}
@@ -26,12 +30,68 @@ func generatePackage(packageName string, pak *Package, typeMap TypeMap) error {
 	if err != nil {
 		return err
 	}
-	err = os.MkdirAll(absPath, 0666)
+	err = os.MkdirAll(absPath, 0755)
 	if err != nil {
 		return err
 	}
+	w, err := os.Create(filepath.Join(absPath, fmt.Sprintf("%s.go", packageName)))
+	if err != nil {
+		return err
+	}
+	defer w.Close()
+	return writePackage(w, packageName, pak, typeMap);
+}
+
+func writePackage(w io.Writer, packageName string, pak *Package, typeMap TypeMap) error {
+	fmt.Fprintf(w, "// OpenGL.\n")
+	fmt.Fprintf(w, "// \n")
+	fmt.Fprintf(w, "//  %s \n", MakeSpecDocUrl("ARB", "multisample"))	
+	fmt.Fprintf(w, "package %s\n", packageName)
+
+	fmt.Fprintf(w, "\n/*\n")
+	fmt.Fprintf(w, "#cgo darwin  LDFLAGS: -framework OpenGL\n")
+	fmt.Fprintf(w, "#cgo linux   LDFLAGS: -lGL\n")
+	fmt.Fprintf(w, "#cgo windows LDFLAGS: -lopengl32\n")
+	fmt.Fprintf(w, "\n")
+	fmt.Fprintf(w, "#if defined(_WIN32) && !defined(APIENTRY) && !defined(__CYGWIN__) && !defined(__SCITECH_SNAP__)\n")
+	fmt.Fprintf(w, "#define WIN32_LEAN_AND_MEAN 1\n")
+	fmt.Fprintf(w, "#include <windows.h>\n")
+	fmt.Fprintf(w, "#endif\n")
+	fmt.Fprintf(w, "#ifndef APIENTRY\n")
+	fmt.Fprintf(w, "#define APIENTRY\n")
+	fmt.Fprintf(w, "#endif\n")
+	fmt.Fprintf(w, "#ifndef APIENTRYP\n")
+	fmt.Fprintf(w, "#define APIENTRYP APIENTRY *\n")
+	fmt.Fprintf(w, "#endif\n")
+	fmt.Fprintf(w, "#ifndef GLAPI\n")
+	fmt.Fprintf(w, "#define GLAPI extern\n")
+	fmt.Fprintf(w, "#endif\n\n")
 	
-	return nil;
+	fmt.Fprintf(w, "typedef unsigned int GLenum;\n")
+	fmt.Fprintf(w, "typedef unsigned char GLboolean;\n")
+	fmt.Fprintf(w, "typedef unsigned int GLbitfield;\n")
+	fmt.Fprintf(w, "typedef signed char GLbyte;\n")
+	fmt.Fprintf(w, "typedef short GLshort;\n")
+	fmt.Fprintf(w, "typedef int GLint;\n")
+	fmt.Fprintf(w, "typedef int GLsizei;\n")
+	fmt.Fprintf(w, "typedef unsigned char GLubyte;\n")
+	fmt.Fprintf(w, "typedef unsigned short GLushort;\n")
+	fmt.Fprintf(w, "typedef unsigned int GLuint;\n")
+	fmt.Fprintf(w, "typedef unsigned short GLhalf;\n")
+	fmt.Fprintf(w, "typedef float GLfloat;\n")
+	fmt.Fprintf(w, "typedef float GLclampf;\n")
+	fmt.Fprintf(w, "typedef double GLdouble;\n")
+	fmt.Fprintf(w, "typedef double GLclampd;\n")
+	fmt.Fprintf(w, "typedef void GLvoid;\n\n")
+
+	//write
+
+	fmt.Fprintf(w, "*/\n")
+	fmt.Fprintf(w, "import \"C\"\n")
+
+	// write passthru
+
+	return nil
 }
 
 func generate(fname string, enums EnumCategories, functions FunctionCategories, typeMap TypeMap) error {
@@ -41,16 +101,6 @@ func generate(fname string, enums EnumCategories, functions FunctionCategories, 
 	}
 	defer w.Close()
 
-	fmt.Fprintf(w, "package gl\n")
-
-	fmt.Fprintf(w, "// #cgo darwin  LDFLAGS: -framework OpenGL\n")
-	fmt.Fprintf(w, "// #cgo linux   LDFLAGS: -lGL\n")
-	fmt.Fprintf(w, "// #cgo windows LDFLAGS: -lopengl32\n")
-	fmt.Fprintf(w, "// #ifdef __APPLE__\n")
-	fmt.Fprintf(w, "// # include <OpenGL/gl.h>\n")
-	fmt.Fprintf(w, "// #else\n")
-	fmt.Fprintf(w, "// # include <GL/gl.h>\n")
-	fmt.Fprintf(w, "// #endif\n")
 	writeCFuncPtrDefinitions(functions, w)
 	writeCFunctionDeclarations(functions, w)
 	writeGetProcAddrsDeclarations(functions, w)
