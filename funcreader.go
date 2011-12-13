@@ -17,7 +17,7 @@ import (
 
 var (
 	funcEmptyLineRE       = regexp.MustCompile("^[ \\t]*(#.*)?$")
-	funcRE                = regexp.MustCompile("^[ \\t]*([_0-9A-Za-z]+)\\([0-9a-z, ]*\\)")
+	funcRE                = regexp.MustCompile("^[ \\t]*([_0-9A-Za-z]+)\\([0-9A-Za-z, ]*\\)")
 	funcReturnRE          = regexp.MustCompile("^[ \\t]*return[ \\t]+([^ \\t#\\n]+)")
 	funcParamInValueRE    = regexp.MustCompile("^[ \\t]*param[ \\t]+([^ \\t]+)[ \\t]+([^ \\t]+)[ \\t]+in[ \\t]+value")
 	funcParamInArrayRE    = regexp.MustCompile("^[ \\t]*param[ \\t]+([^ \\t]+)[ \\t]+([^ \\t]+)[ \\t]+in[ \\t]+array")
