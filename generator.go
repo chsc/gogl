@@ -44,19 +44,24 @@ func generatePackage(packageName string, pak *Package, typeMap TypeMap) error {
 
 func writePackage(w io.Writer, packageName string, pak *Package, typeMap TypeMap) error {
 	fmt.Fprintf(w, "// OpenGL.\n")
-	fmt.Fprintf(w, "// \n")
-	fmt.Fprintf(w, "//  %s \n", MakeSpecDocUrl("ARB", "multisample"))	
 	fmt.Fprintf(w, "package %s\n", packageName)
 
 	fmt.Fprintf(w, "\n/*\n")
+
 	fmt.Fprintf(w, "#cgo darwin  LDFLAGS: -framework OpenGL\n")
 	fmt.Fprintf(w, "#cgo linux   LDFLAGS: -lGL\n")
-	fmt.Fprintf(w, "#cgo windows LDFLAGS: -lopengl32\n")
-	fmt.Fprintf(w, "\n")
-	fmt.Fprintf(w, "#if defined(_WIN32) && !defined(APIENTRY) && !defined(__CYGWIN__) && !defined(__SCITECH_SNAP__)\n")
+	fmt.Fprintf(w, "#cgo windows LDFLAGS: -lopengl32\n\n")
+
+	fmt.Fprintf(w, "#ifdef __APPLE__\n")
+	fmt.Fprintf(w, "// TODO: add context header\n")
+	fmt.Fprintf(w, "#elif defined(_WIN32) && !defined(APIENTRY) && !defined(__CYGWIN__) && !defined(__SCITECH_SNAP__)\n")
 	fmt.Fprintf(w, "#define WIN32_LEAN_AND_MEAN 1\n")
-	fmt.Fprintf(w, "#include <windows.h>\n")
-	fmt.Fprintf(w, "#endif\n")
+	fmt.Fprintf(w, "#include <windows.h> // for wglGetProcAddress\n")
+	fmt.Fprintf(w, "#else\n")
+	fmt.Fprintf(w, "#include <X11/Xlib.h> // for glXGetProcAddress\n")
+	fmt.Fprintf(w, "#include <GL/glx.h> \n")
+	fmt.Fprintf(w, "#endif\n\n")
+
 	fmt.Fprintf(w, "#ifndef APIENTRY\n")
 	fmt.Fprintf(w, "#define APIENTRY\n")
 	fmt.Fprintf(w, "#endif\n")
@@ -84,34 +89,62 @@ func writePackage(w io.Writer, packageName string, pak *Package, typeMap TypeMap
 	fmt.Fprintf(w, "typedef double GLclampd;\n")
 	fmt.Fprintf(w, "typedef void GLvoid;\n\n")
 
-	//write
+	// TODO: Write passthru defs from gl.spec
+
+	fmt.Fprintf(w, "void* goglGetProcAddress(const char* name) { \n")
+	fmt.Fprintf(w, "#ifdef __APPLE__\n")
+	fmt.Fprintf(w, "	return NULL; // TODO: Add get proc addr for Mac.\n")
+	fmt.Fprintf(w, "#elif _WIN32\n")
+	fmt.Fprintf(w, "	return wglGetProcAddress((LPCSTR)name); // TODO: Not tested\n")
+	fmt.Fprintf(w, "#else\n")
+	fmt.Fprintf(w, "	return glXGetProcAddress((const GLubyte*)name);\n")
+	fmt.Fprintf(w, "#endif\n")
+	fmt.Fprintf(w, "}\n\n")
+
+	writeCFuncTypeDefs(w, pak.Functions, typeMap)
 
 	fmt.Fprintf(w, "*/\n")
-	fmt.Fprintf(w, "import \"C\"\n")
-
-	// write passthru
-
-	return nil
-}
-
-func generate(fname string, enums EnumCategories, functions FunctionCategories, typeMap TypeMap) error {
-	w, err := os.Create(fname)
-	if err != nil {
-		return err
-	}
-	defer w.Close()
-
-	writeCFuncPtrDefinitions(functions, w)
-	writeCFunctionDeclarations(functions, w)
-	writeGetProcAddrsDeclarations(functions, w)
 	fmt.Fprintf(w, "import \"C\"\n\n")
 
-	//writeGoEnumDefinitions(enums, w)
-	//writeGoFunctionDefinitions(functions, w)
 
-	fmt.Fprintf(w, "// EOF\n")
+	fmt.Fprintf(w, "// EOF")
 	return nil
 }
+
+func writeCFuncTypeDefs(w io.Writer, functions FunctionCategories, typeMap TypeMap) {
+	for cat, fs := range functions {
+		fmt.Fprintf(w, "//  %s\n", cat)
+		for _, f := range fs {
+			if f.Return == "void" {
+				fmt.Fprintf(w, "typedef void (APIENTRYP ptrgogl%s)(", f.Name)
+			} else {
+				fmt.Fprintf(w, "typedef %s (APIENTRYP ptrgogl%s)(", typeMap[f.Return], f.Name)
+			}
+			for p := 0; p < len(f.Parameters); p++ {
+				if f.Parameters[p].InArray {
+					fmt.Fprintf(w, "%s *%s", typeMap[f.Parameters[p].Type], f.Parameters[p].Name)
+				} else {
+					fmt.Fprintf(w, "%s %s", typeMap[f.Parameters[p].Type], f.Parameters[p].Name)
+				}
+				if p < len(f.Parameters)-1 {
+					fmt.Fprintf(w, ", ")
+				}
+			}
+			fmt.Fprintf(w, ");\n")
+		}
+	}
+	fmt.Fprintf(w, "\n")
+}
+
+
+
+
+
+
+
+
+
+
 
 func writeGoEnumDefinitions(enums EnumCategories, w io.Writer) {
 	fmt.Fprintf(w, "const (\n")
@@ -150,24 +183,6 @@ func writeGoFunctionDefinitions(functions FunctionCategories, w io.Writer) {
 	}
 }
 
-func writeCFuncPtrDefinitions(functions FunctionCategories, w io.Writer) {
-	fmt.Fprintf(w, "// /* function pointers: */\n")
-	for cat, fs := range functions {
-		fmt.Fprintf(w, "// /* %s */  \n", cat)
-		for _, f := range fs {
-			fmt.Fprintf(w, "// %s (*ptrgogl%s)(", f.Return, f.Name)
-			for p := 0; p < len(f.Parameters); p++ {
-				if p == len(f.Parameters)-1 {
-					fmt.Fprintf(w, "%s %s", f.Parameters[p].Type, f.Parameters[p].Name)
-				} else {
-					fmt.Fprintf(w, "%s %s, ", f.Parameters[p].Type, f.Parameters[p].Name)
-				}
-			}
-			fmt.Fprintf(w, ");\n")
-		}
-	}
-	fmt.Fprintf(w, "// \n")
-}
 
 func writeCFunctionDeclarations(functions FunctionCategories, w io.Writer) {
 	fmt.Fprintf(w, "// /* function declarations */\n")
@@ -197,16 +212,7 @@ func writeCFunctionDeclarations(functions FunctionCategories, w io.Writer) {
 }
 
 func writeGetProcAddrsDeclarations(functions FunctionCategories, w io.Writer) {
-	fmt.Fprintf(w, "// /* extension loading */\n")
-	fmt.Fprintf(w, "// void* goglGetProcAddress(const char* name) { \n")
-	fmt.Fprintf(w, "// #ifdef __APPLE__\n")
-	fmt.Fprintf(w, "// \treturn NULL;\n")
-	fmt.Fprintf(w, "// #elif WIN32\n")
-	fmt.Fprintf(w, "// \treturn wglGetProcAddress((LPCSTR)name);\n")
-	fmt.Fprintf(w, "// #else\n")
-	fmt.Fprintf(w, "// \treturn glXGetProcddress((const GLubyte*)name);\n")
-	fmt.Fprintf(w, "// #endif\n")
-	fmt.Fprintf(w, "// }\n")
+	
 	for cat, fs := range functions {
 		fmt.Fprintf(w, "// int init_%s() {\n", cat)
 		for _, f := range fs {
