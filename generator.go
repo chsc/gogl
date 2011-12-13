@@ -101,7 +101,9 @@ func writePackage(w io.Writer, packageName string, pak *Package, typeMap TypeMap
 	fmt.Fprintf(w, "#endif\n")
 	fmt.Fprintf(w, "}\n\n")
 
-	writeCFuncTypeDefs(w, pak.Functions, typeMap)
+	if err := writeCFuncTypeDefs(w, pak.Functions, typeMap); err != nil {
+		return err
+	}
 
 	fmt.Fprintf(w, "*/\n")
 	fmt.Fprintf(w, "import \"C\"\n\n")
@@ -110,14 +112,20 @@ func writePackage(w io.Writer, packageName string, pak *Package, typeMap TypeMap
 	return nil
 }
 
-func writeCFuncTypeDefs(w io.Writer, functions FunctionCategories, typeMap TypeMap) {
+func writeCFuncTypeDefs(w io.Writer, functions FunctionCategories, typeMap TypeMap) error {
 	for cat, fs := range functions {
 		fmt.Fprintf(w, "//  %s\n", cat)
 		for _, f := range fs {
-			rtype, _ := typeMap.Resolve(f.Return)
+			rtype, err := typeMap.Resolve(f.Return)
+			if err != nil {
+				return err
+			}
 			fmt.Fprintf(w, "typedef %s (APIENTRYP ptrgogl%s)(", rtype, f.Name)
 			for p := 0; p < len(f.Parameters); p++ {
-				ptype, _ := typeMap.Resolve(f.Parameters[p].Type)
+				ptype, err := typeMap.Resolve(f.Parameters[p].Type)
+				if err != nil {
+					return err
+				}
 				if f.Parameters[p].InArray {
 					fmt.Fprintf(w, "%s *%s", ptype, f.Parameters[p].Name)
 				} else {
@@ -131,6 +139,7 @@ func writeCFuncTypeDefs(w io.Writer, functions FunctionCategories, typeMap TypeM
 		}
 	}
 	fmt.Fprintf(w, "\n")
+	return nil
 }
 
 func writeGoEnumDefinitions(enums EnumCategories, w io.Writer) {

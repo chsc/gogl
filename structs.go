@@ -111,14 +111,14 @@ type EnumCategories map[string]Enums
 
 type TypeMap map[string]string
 
-func (tm *TypeMap) Resolve(t string) (string, error) {
+func (tm TypeMap) Resolve(t string) (string, error) {
 	if t == "void" {
 		return t, nil
 	}
 	if rt, ok := tm[t]; ok {
 		return rt, nil
 	}
-	return t, errors.New("Unable to resolve type.")
+	return t, fmt.Errorf("Unable to resolve type: %s.", t)
 }
 
 // Packages

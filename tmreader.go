@@ -15,7 +15,7 @@ import (
 
 var (
 	tmEmptyOrCommentRE = regexp.MustCompile("^[ \\t]*(#.*)?$")
-	tmTypePairRE       = regexp.MustCompile("^([A-Za-z0-9]+),\\*,\\*,[\\t ]*([A-Za-z0-9]+),\\*,\\*")
+	tmTypePairRE       = regexp.MustCompile("^([_A-Za-z0-9]+),\\*,\\*,[\\t ]*([A-Za-z0-9\\*_ ]+),\\*,\\*")
 )
 
 func ReadTypeMapFromFile(name string) (TypeMap, error) {
@@ -47,7 +47,7 @@ func ReadTypeMap(r io.Reader) (TypeMap, error) {
 		} else if typePair := tmTypePairRE.FindStringSubmatch(line); typePair != nil {
 			tm[typePair[1]] = typePair[2]
 		} else {
-			fmt.Fprintf(os.Stderr, "Unable to parse line: %v", line)
+			fmt.Fprintf(os.Stderr, "WARNING: Unable to parse line: %v\n", line)
 		}
 	}
 
