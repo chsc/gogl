@@ -7,7 +7,6 @@ package main
 import (
 	"errors"
 	"fmt"
-
 	"strconv"
 	"strings"
 )
@@ -87,6 +86,8 @@ type Function struct {
 
 type Functions []*Function
 
+type FunctionCategories map[string]Functions
+
 func (fs Functions) Find(name string) *Function {
 	for _, f := range fs {
 		if f.Name == name {
@@ -95,8 +96,6 @@ func (fs Functions) Find(name string) *Function {
 	}
 	return nil
 }
-
-type FunctionCategories map[string]Functions
 
 // Enums
 
@@ -111,6 +110,16 @@ type EnumCategories map[string]Enums
 // Type maps
 
 type TypeMap map[string]string
+
+func (tm *TypeMap) Resolve(t string) (string, error) {
+	if t == "void" {
+		return t, nil
+	}
+	if rt, ok := tm[t]; ok {
+		return rt, nil
+	}
+	return t, errors.New("Unable to resolve type.")
+}
 
 // Packages
 

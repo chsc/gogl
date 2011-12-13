@@ -115,16 +115,14 @@ func writeCFuncTypeDefs(w io.Writer, functions FunctionCategories, typeMap TypeM
 	for cat, fs := range functions {
 		fmt.Fprintf(w, "//  %s\n", cat)
 		for _, f := range fs {
-			if f.Return == "void" {
-				fmt.Fprintf(w, "typedef void (APIENTRYP ptrgogl%s)(", f.Name)
-			} else {
-				fmt.Fprintf(w, "typedef %s (APIENTRYP ptrgogl%s)(", typeMap[f.Return], f.Name)
-			}
+			rtype, _ = tm.Resolve(f.Return)
+			fmt.Fprintf(w, "typedef %s (APIENTRYP ptrgogl%s)(", rtype, f.Name)
 			for p := 0; p < len(f.Parameters); p++ {
+				rtype, _ = tm.Resolve(f.Parameters[p].Type)
 				if f.Parameters[p].InArray {
-					fmt.Fprintf(w, "%s *%s", typeMap[f.Parameters[p].Type], f.Parameters[p].Name)
+					fmt.Fprintf(w, "%s *%s", rtype, f.Parameters[p].Name)
 				} else {
-					fmt.Fprintf(w, "%s %s", typeMap[f.Parameters[p].Type], f.Parameters[p].Name)
+					fmt.Fprintf(w, "%s %s", rtype, f.Parameters[p].Name)
 				}
 				if p < len(f.Parameters)-1 {
 					fmt.Fprintf(w, ", ")
