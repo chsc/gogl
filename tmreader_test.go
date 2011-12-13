@@ -11,7 +11,8 @@ import (
 
 var testTypeMapStr = "Test1,*,*,	    GLType1,*,*\n" +
 	"Test2,*,*,	    GLType2,*,*\n" +
-	"Test3,*,*,	    GLType3,*,*\n"
+	"Test3,*,*,	    GLType3,*,*\n" +
+	"Test_4,*,*,	    G L Type_3 *,*,*\n"
 
 func checkType(tn, gltype string, tm TypeMap, t *testing.T) {
 	if ty, ok := tm[tn]; ok {
@@ -33,11 +34,12 @@ func TestTypeMapReader(t *testing.T) {
 	}
 	t.Logf("%v", tm)
 
-	if len(tm) != 3 {
+	if len(tm) != 4 {
 		t.Errorf("Wrong number of types.")
 	}
 
 	checkType("Test1", "GLType1", tm, t)
 	checkType("Test2", "GLType2", tm, t)
 	checkType("Test3", "GLType3", tm, t)
+	checkType("Test_4", "G L Type_3 *", tm, t)
 }
