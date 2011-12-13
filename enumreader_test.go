@@ -5,8 +5,8 @@
 package main
 
 import (
-	"testing"
 	"strings"
+	"testing"
 )
 
 var testEnumsStr = "###########\n" +

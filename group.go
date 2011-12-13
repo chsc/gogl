@@ -5,8 +5,8 @@
 package main
 
 import (
-	"strings"
 	"fmt"
+	"strings"
 )
 
 type PackageGroupFunc func(category string) (packageNames []string)
@@ -51,28 +51,27 @@ func GroupPackagesByVendorFunc(category string, supportedVersions []Version, dep
 	}
 	packages := make([]string, 0, 8)
 	switch pc.CategoryType {
-		case CategoryExtension:
-			packages = append(packages, strings.ToLower(pc.Vendor))
-		case CategoryVersion:
-			for _, ver := range supportedVersions {
-				if ver.Compare(pc.Version) >= 0 {
+	case CategoryExtension:
+		packages = append(packages, strings.ToLower(pc.Vendor))
+	case CategoryVersion:
+		for _, ver := range supportedVersions {
+			if ver.Compare(pc.Version) >= 0 {
+				packages = append(packages, fmt.Sprintf("gl%d%d", ver.Major, ver.Minor))
+				if ver.Compare(deprecatedVersions[0]) >= 0 {
+					packages = append(packages, fmt.Sprintf("gl%d%dc", ver.Major, ver.Minor))
+				}
+			}
+		}
+	case CategoryDeprecatedVersion:
+		for _, ver := range supportedVersions {
+			if ver.Compare(pc.Version) >= 0 {
+				if ver.Compare(deprecatedVersions[0]) < 0 {
 					packages = append(packages, fmt.Sprintf("gl%d%d", ver.Major, ver.Minor))
-					if ver.Compare(deprecatedVersions[0]) >= 0 {
-						packages = append(packages, fmt.Sprintf("gl%d%dc", ver.Major, ver.Minor))
-					}
+				} else {
+					packages = append(packages, fmt.Sprintf("gl%d%dc", ver.Major, ver.Minor))
 				}
 			}
-		case CategoryDeprecatedVersion:
-			for _, ver := range supportedVersions {
-				if ver.Compare(pc.Version) >= 0 {
-					if ver.Compare(deprecatedVersions[0]) < 0 {
-						packages = append(packages,	fmt.Sprintf("gl%d%d", ver.Major, ver.Minor))
-					} else {
-						packages = append(packages,	fmt.Sprintf("gl%d%dc", ver.Major, ver.Minor))
-					}
-				}
-			}
+		}
 	}
 	return packages
 }
-

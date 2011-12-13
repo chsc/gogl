@@ -39,7 +39,7 @@ func generatePackage(packageName string, pak *Package, typeMap TypeMap) error {
 		return err
 	}
 	defer w.Close()
-	return writePackage(w, packageName, pak, typeMap);
+	return writePackage(w, packageName, pak, typeMap)
 }
 
 func writePackage(w io.Writer, packageName string, pak *Package, typeMap TypeMap) error {
@@ -71,7 +71,7 @@ func writePackage(w io.Writer, packageName string, pak *Package, typeMap TypeMap
 	fmt.Fprintf(w, "#ifndef GLAPI\n")
 	fmt.Fprintf(w, "#define GLAPI extern\n")
 	fmt.Fprintf(w, "#endif\n\n")
-	
+
 	fmt.Fprintf(w, "typedef unsigned int GLenum;\n")
 	fmt.Fprintf(w, "typedef unsigned char GLboolean;\n")
 	fmt.Fprintf(w, "typedef unsigned int GLbitfield;\n")
@@ -106,7 +106,6 @@ func writePackage(w io.Writer, packageName string, pak *Package, typeMap TypeMap
 	fmt.Fprintf(w, "*/\n")
 	fmt.Fprintf(w, "import \"C\"\n\n")
 
-
 	fmt.Fprintf(w, "// EOF")
 	return nil
 }
@@ -115,14 +114,14 @@ func writeCFuncTypeDefs(w io.Writer, functions FunctionCategories, typeMap TypeM
 	for cat, fs := range functions {
 		fmt.Fprintf(w, "//  %s\n", cat)
 		for _, f := range fs {
-			rtype, _ = tm.Resolve(f.Return)
+			rtype, _ := typeMap.Resolve(f.Return)
 			fmt.Fprintf(w, "typedef %s (APIENTRYP ptrgogl%s)(", rtype, f.Name)
 			for p := 0; p < len(f.Parameters); p++ {
-				rtype, _ = tm.Resolve(f.Parameters[p].Type)
+				ptype, _ := typeMap.Resolve(f.Parameters[p].Type)
 				if f.Parameters[p].InArray {
-					fmt.Fprintf(w, "%s *%s", rtype, f.Parameters[p].Name)
+					fmt.Fprintf(w, "%s *%s", ptype, f.Parameters[p].Name)
 				} else {
-					fmt.Fprintf(w, "%s %s", rtype, f.Parameters[p].Name)
+					fmt.Fprintf(w, "%s %s", ptype, f.Parameters[p].Name)
 				}
 				if p < len(f.Parameters)-1 {
 					fmt.Fprintf(w, ", ")
@@ -133,16 +132,6 @@ func writeCFuncTypeDefs(w io.Writer, functions FunctionCategories, typeMap TypeM
 	}
 	fmt.Fprintf(w, "\n")
 }
-
-
-
-
-
-
-
-
-
-
 
 func writeGoEnumDefinitions(enums EnumCategories, w io.Writer) {
 	fmt.Fprintf(w, "const (\n")
@@ -181,7 +170,6 @@ func writeGoFunctionDefinitions(functions FunctionCategories, w io.Writer) {
 	}
 }
 
-
 func writeCFunctionDeclarations(functions FunctionCategories, w io.Writer) {
 	fmt.Fprintf(w, "// /* function declarations */\n")
 	for cat, fs := range functions {
@@ -210,7 +198,7 @@ func writeCFunctionDeclarations(functions FunctionCategories, w io.Writer) {
 }
 
 func writeGetProcAddrsDeclarations(functions FunctionCategories, w io.Writer) {
-	
+
 	for cat, fs := range functions {
 		fmt.Fprintf(w, "// int init_%s() {\n", cat)
 		for _, f := range fs {
