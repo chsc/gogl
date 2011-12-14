@@ -40,14 +40,15 @@ func ReadTypeMap(r io.Reader) (TypeMap, error) {
 			return nil, err
 		}
 		line = strings.TrimRight(line, "\n")
-		//fmt.Println(line)
 
 		if tmEmptyOrCommentRE.MatchString(line) {
-			// skip
-		} else if typePair := tmTypePairRE.FindStringSubmatch(line); typePair != nil {
+			continue
+		}
+
+		if typePair := tmTypePairRE.FindStringSubmatch(line); typePair != nil {
 			tm[typePair[1]] = typePair[2]
 		} else {
-			fmt.Fprintf(os.Stderr, "WARNING: Unable to parse line: %v\n", line)
+			return tm, fmt.Errorf("Unable to parse line: '%v'", line)
 		}
 	}
 
