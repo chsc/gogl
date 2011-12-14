@@ -101,7 +101,15 @@ func writePackage(w io.Writer, packageName string, pak *Package, typeMap TypeMap
 	fmt.Fprintf(w, "#endif\n")
 	fmt.Fprintf(w, "}\n\n")
 
-	if err := writeCFuncTypeDefs(w, pak.Functions, typeMap); err != nil {
+	if err := writeCFuncDefs(w, pak.Functions, typeMap); err != nil {
+		return err
+	}
+
+	if err := writeCFuncDecls(w, pak.Functions, typeMap); err != nil {
+		return err
+	}
+
+	if err := writeCFuncGetprocAddrs(w, pak.Functions); err != nil {
 		return err
 	}
 
@@ -112,7 +120,7 @@ func writePackage(w io.Writer, packageName string, pak *Package, typeMap TypeMap
 	return nil
 }
 
-func writeCFuncTypeDefs(w io.Writer, functions FunctionCategories, typeMap TypeMap) error {
+func writeCFuncDefs(w io.Writer, functions FunctionCategories, typeMap TypeMap) error {
 	for cat, fs := range functions {
 		fmt.Fprintf(w, "//  %s\n", cat)
 		for _, f := range fs {
@@ -120,7 +128,7 @@ func writeCFuncTypeDefs(w io.Writer, functions FunctionCategories, typeMap TypeM
 			if err != nil {
 				return err
 			}
-			fmt.Fprintf(w, "typedef %s (APIENTRYP ptrgogl%s)(", rtype, f.Name)
+			fmt.Fprintf(w, "%s (APIENTRYP ptrgogl%s)(", rtype, f.Name)
 			for p := 0; p < len(f.Parameters); p++ {
 				ptype, err := typeMap.Resolve(f.Parameters[p].Type)
 				if err != nil {
@@ -137,6 +145,62 @@ func writeCFuncTypeDefs(w io.Writer, functions FunctionCategories, typeMap TypeM
 			}
 			fmt.Fprintf(w, ");\n")
 		}
+	}
+	fmt.Fprintf(w, "\n")
+	return nil
+}
+
+func writeCFuncDecls(w io.Writer, functions FunctionCategories, typeMap TypeMap) error {
+	for cat, fs := range functions {
+		fmt.Fprintf(w, "//  %s\n", cat)
+		for _, f := range fs {
+			rtype, err := typeMap.Resolve(f.Return)
+			if err != nil {
+				return err
+			}
+			fmt.Fprintf(w, "%s gogl%s(", rtype, f.Name)
+			for p := 0; p < len(f.Parameters); p++ {
+				ptype, err := typeMap.Resolve(f.Parameters[p].Type)
+				if err != nil {
+					return err
+				}
+				if f.Parameters[p].InArray {
+					fmt.Fprintf(w, "%s *%s", ptype, f.Parameters[p].Name)
+				} else {
+					fmt.Fprintf(w, "%s %s", ptype, f.Parameters[p].Name)
+				}
+				if p < len(f.Parameters)-1 {
+					fmt.Fprintf(w, ", ")
+				}
+			}
+			fmt.Fprintf(w, ") {\n")
+			if rtype == "void" {
+				fmt.Fprintf(w, "	(*ptrgogl%s)(", f.Name)
+			} else {
+				fmt.Fprintf(w, "	return (*ptrgogl%s)(", f.Name)
+			}
+			for p := 0; p < len(f.Parameters); p++ {
+				fmt.Fprintf(w, "%s", f.Parameters[p].Name)
+				if p < len(f.Parameters)-1 {
+					fmt.Fprintf(w, ", ")
+				}
+			}
+			fmt.Fprintf(w, ");\n}\n")
+		}
+	}
+	fmt.Fprintf(w, "\n")
+	return nil
+}
+
+func writeCFuncGetprocAddrs(w io.Writer, functions FunctionCategories) error {
+	for cat, fs := range functions {
+		fmt.Fprintf(w, "int init_%s() {\n", cat)
+		for _, f := range fs {
+			fmt.Fprintf(w, "	ptrgogl%s = goglGetProcAddress(\"gl%s\");\n", f.Name, f.Name)
+			fmt.Fprintf(w, "	if(ptrgogl%s == NULL) return 1;\n", f.Name)
+		}
+		fmt.Fprintf(w, "\treturn 0;\n")
+		fmt.Fprintf(w, "}\n")
 	}
 	fmt.Fprintf(w, "\n")
 	return nil
@@ -179,42 +243,4 @@ func writeGoFunctionDefinitions(functions FunctionCategories, w io.Writer) {
 	}
 }
 
-func writeCFunctionDeclarations(functions FunctionCategories, w io.Writer) {
-	fmt.Fprintf(w, "// /* function declarations */\n")
-	for cat, fs := range functions {
-		fmt.Fprintf(w, "// /* %s */  \n", cat)
-		for _, f := range fs {
-			fmt.Fprintf(w, "// %s gogl%s(", f.Return, f.Name)
-			for p := 0; p < len(f.Parameters); p++ {
-				if p == len(f.Parameters)-1 {
-					fmt.Fprintf(w, "%s %s", f.Parameters[p].Type, f.Parameters[p].Name)
-				} else {
-					fmt.Fprintf(w, "%s %s, ", f.Parameters[p].Type, f.Parameters[p].Name)
-				}
-			}
-			fmt.Fprintf(w, ") {\n")
-			fmt.Fprintf(w, "// \tptrgogl%s(", f.Name)
-			for p := 0; p < len(f.Parameters); p++ {
-				if p == len(f.Parameters)-1 {
-					fmt.Fprintf(w, "%s", f.Parameters[p].Name)
-				} else {
-					fmt.Fprintf(w, "%s, ", f.Parameters[p].Name)
-				}
-			}
-			fmt.Fprintf(w, ")\n// }\n")
-		}
-	}
-}
 
-func writeGetProcAddrsDeclarations(functions FunctionCategories, w io.Writer) {
-
-	for cat, fs := range functions {
-		fmt.Fprintf(w, "// int init_%s() {\n", cat)
-		for _, f := range fs {
-			// TODO: Windows, Linux, ...
-			fmt.Fprintf(w, "//\tptrgogl%s = goglGetProcAddress(\"gl%s\");\n", f.Name, f.Name)
-		}
-		fmt.Fprintf(w, "//\treturn 1;\n")
-		fmt.Fprintf(w, "// }\n")
-	}
-}
