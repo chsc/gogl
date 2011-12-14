@@ -80,8 +80,14 @@ type Function struct {
 	Version           Version
 	DeprecatedVersion Version
 	Category          string
-	Offset            int
-	GlxRopCode        int
+	Offset            string
+	GlxRopCode        string
+	GlxSingle         string
+	WglFlags          string
+	GlxFlags          string
+	DlFlags           string
+	GlfFlags          string
+	Extension         string
 }
 
 type Functions []*Function
