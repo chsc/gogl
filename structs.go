@@ -23,15 +23,15 @@ func MakeVersionFromString(version string) (Version, error) {
 	if len(split) != 2 {
 		return Version{0, 0}, errors.New("Invalid version string.")
 	}
-	return MakeVersionFromMinorMajorString(split[0], split[1])
+	return MakeVersionFromMajorMinorString(split[0], split[1])
 }
 
-func MakeVersionFromMinorMajorString(minor, major string) (Version, error) {
-	majorNumber, err := strconv.Atoi(minor)
+func MakeVersionFromMajorMinorString(major, minor string) (Version, error) {
+	majorNumber, err := strconv.Atoi(major)
 	if err != nil {
 		return Version{0, 0}, errors.New("Invalid major version number.")
 	}
-	minorNumber, err := strconv.Atoi(major)
+	minorNumber, err := strconv.Atoi(minor)
 	if err != nil {
 		return Version{0, 0}, errors.New("Invalid minor version number.")
 	}
@@ -73,6 +73,7 @@ type Parameter struct {
 	Type    string
 	Out     bool
 	Array   bool
+	// TODO: reference?
 }
 
 type Function struct {

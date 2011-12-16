@@ -35,13 +35,13 @@ type ParsedCategoryString struct {
 
 func ParseCategoryString(category string) (ParsedCategoryString, error) {
 	if versionDep := versionDepRE.FindStringSubmatch(category); versionDep != nil {
-		v, err := MakeVersionFromMinorMajorString(versionDep[1], versionDep[2])
+		v, err := MakeVersionFromMajorMinorString(versionDep[1], versionDep[2])
 		if err != nil {
 			return ParsedCategoryString{CategoryInvalid, Version{0, 0}, "", ""}, err
 		}
 		return ParsedCategoryString{CategoryDeprecatedVersion, v, "", ""}, nil
 	} else if version := versionRE.FindStringSubmatch(category); version != nil {
-		v, err := MakeVersionFromMinorMajorString(version[1], version[2])
+		v, err := MakeVersionFromMajorMinorString(version[1], version[2])
 		if err != nil {
 			return ParsedCategoryString{CategoryInvalid, Version{0, 0}, "", ""}, err
 		}

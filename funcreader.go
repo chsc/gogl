@@ -98,13 +98,13 @@ func ReadFunctions(r io.Reader) (FunctionCategories, *FunctionsInfo, error) {
 		} else if subcategory := funcSubCategoryRE.FindStringSubmatch(line); subcategory != nil {
 			currentFunction.Category = subcategory[1]
 		} else if version := funcVersionRE.FindStringSubmatch(line); version != nil {
-			v, err := MakeVersionFromMinorMajorString(version[1], version[2])
+			v, err := MakeVersionFromMajorMinorString(version[1], version[2])
 			if err != nil {
 				return functions, finfo, fmt.Errorf("Unable to parse version: '%s'", line)
 			}
 			currentFunction.Version = v
 		} else if deprecated := funcDeprecatedRE.FindStringSubmatch(line); deprecated != nil {
-			v, err := MakeVersionFromMinorMajorString(deprecated[1], deprecated[2])
+			v, err := MakeVersionFromMajorMinorString(deprecated[1], deprecated[2])
 			if err != nil {
 				return functions, finfo, fmt.Errorf("Unable to parse version: '%s'", line)
 			}
