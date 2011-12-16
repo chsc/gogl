@@ -64,13 +64,15 @@ func (v Version) String() string {
 type FunctionsInfo struct {
 	Versions           []Version
 	DeprecatedVersions []Version
+	Categories         []string
 	Passthru           string
 }
 
 type Parameter struct {
 	Name    string
 	Type    string
-	InArray bool
+	Out     bool
+	Array   bool
 }
 
 type Function struct {
@@ -80,6 +82,7 @@ type Function struct {
 	Version           Version
 	DeprecatedVersion Version
 	Category          string
+	SubCategory       string
 	Offset            string
 	GlxRopCode        string
 	GlxSingle         string
@@ -87,7 +90,13 @@ type Function struct {
 	GlxFlags          string
 	DlFlags           string
 	GlfFlags          string
+	GlxVendorPriv     string
+	GlextMask         string
 	Extension         string
+	VectorEquiv       string
+	GlxVectorEquiv    string
+	Alias             string
+	BeginEnd          string
 }
 
 type Functions []*Function

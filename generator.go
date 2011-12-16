@@ -17,7 +17,6 @@ func MakeSpecDocUrl(vendor, extension string) string {
 
 func GeneratePackages(packages Packages, typeMap TypeMap) error {
 	for packageName, pak := range packages {
-		//fmt.Printf("Generating %s ...\n",  packageName);
 		if err := generatePackage(packageName, pak, typeMap); err != nil {
 			return err
 		}
@@ -134,11 +133,14 @@ func writeCFuncDefs(w io.Writer, functions FunctionCategories, typeMap TypeMap) 
 				if err != nil {
 					return err
 				}
-				if f.Parameters[p].InArray {
-					fmt.Fprintf(w, "%s *%s", ptype, f.Parameters[p].Name)
-				} else {
-					fmt.Fprintf(w, "%s %s", ptype, f.Parameters[p].Name)
+				fmt.Fprintf(w, "%s ", ptype)
+				if f.Parameters[p].Out && !f.Parameters[p].Array {
+					fmt.Fprint(w, "*")
 				}
+				if f.Parameters[p].Array {
+					fmt.Fprintf(w, "*")
+				}
+				fmt.Fprintf(w, "%s", f.Parameters[p].Name)
 				if p < len(f.Parameters)-1 {
 					fmt.Fprintf(w, ", ")
 				}
@@ -164,11 +166,14 @@ func writeCFuncDecls(w io.Writer, functions FunctionCategories, typeMap TypeMap)
 				if err != nil {
 					return err
 				}
-				if f.Parameters[p].InArray {
-					fmt.Fprintf(w, "%s *%s", ptype, f.Parameters[p].Name)
-				} else {
-					fmt.Fprintf(w, "%s %s", ptype, f.Parameters[p].Name)
+				fmt.Fprintf(w, "%s ", ptype)
+				if f.Parameters[p].Out && !f.Parameters[p].Array {
+					fmt.Fprint(w, "*")
 				}
+				if f.Parameters[p].Array {
+					fmt.Fprintf(w, "*")
+				}
+				fmt.Fprintf(w, "%s", f.Parameters[p].Name)
 				if p < len(f.Parameters)-1 {
 					fmt.Fprintf(w, ", ")
 				}

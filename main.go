@@ -54,7 +54,7 @@ func main() {
 			return GroupPackagesByVendorFunc(category, funcInfo.Versions, funcInfo.DeprecatedVersions)
 		})
 
-	if true {
+	if false {
 		// TODO: This output is temporary for debugging
 		fmt.Println("Supported versions:")
 		fmt.Println(funcInfo.Versions)
@@ -87,10 +87,16 @@ func main() {
 				if len(function.Parameters) > 0 {
 					fmt.Printf("      Parameters:\n")
 					for _, param := range function.Parameters {
-						if param.InArray {
-							fmt.Printf("        %v %v in array\n", param.Name, param.Type)
+						fmt.Printf("        %v %v ", param.Name, param.Type)
+						if param.Out {
+							fmt.Print("out ")
 						} else {
-							fmt.Printf("        %v %v\n", param.Name, param.Type)
+							fmt.Printf("in ")
+						}
+						if param.Array {
+							fmt.Printf("array\n", param.Name, param.Type)
+						} else {
+							fmt.Printf("value\n", param.Name, param.Type)
 						}
 					}
 				} else {

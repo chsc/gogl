@@ -20,7 +20,7 @@ var testFuntionsStr = "###########\n" +
 	"Foo1(p1, p2)\n" +
 	"	return		void\n" +
 	"	param		p1		type1 in value\n" +
-	"	param		p2		type2 in value\n" +
+	"	param		p2		type2 in array\n" +
 	"	category	cat_1		   # comment\n" +
 	"	version		1.0\n" +
 	"	glxropcode	85\n" +
@@ -28,7 +28,8 @@ var testFuntionsStr = "###########\n" +
 	"\n" +
 	"Foo2(p1)\n" +
 	"	return		void\n" +
-	"	param		p1		type3 in value\n" +
+	"	param		p1		type3 out value\n" +
+	"	param		p2		type4 out array\n" +
 	"	category	cat_2		   # comment\n" +
 	"	version		2.1\n" +
 	"	glxropcode	95\n" +
@@ -38,10 +39,10 @@ func checkFunc(f *Function, fcats FunctionCategories, t *testing.T) {
 	if functions, ok := fcats[f.Category]; ok {
 		if foo := functions.Find(f.Name); foo != nil {
 			if reflect.DeepEqual(foo, f) {
-				t.Logf("Enum found: %v::%v = %v", f.Category, f.Name, f)
+				t.Logf("Function equal: %v::%v = %v", f.Category, f.Name, f)
 				return
 			}
-			t.Errorf("Functions not equal: %v: %v != %v", f.Category, foo, f)
+			t.Errorf("Functions not equal: %v: \n%v\n!=\n%v", f.Category, foo, f)
 			return
 		}
 		t.Errorf("Function not found: %v::%v", f.Category, f.Name)
@@ -63,7 +64,27 @@ func TestReadFunctions(t *testing.T) {
 		t.Errorf("Wrong number of categories.")
 	}
 
-	checkFunc(&Function{"Foo1", []Parameter{{"p1", "type1", false}, {"p2", "type2", false}}, "void", Version{1, 0}, Version{0, 0}, "cat_1", 158, 85}, f, t)
-	checkFunc(&Function{"Foo2", []Parameter{{"p1", "type3", false}}, "void", Version{2, 1}, Version{0, 0}, "cat_2", 168, 95}, f, t)
-	// TODO: add more tests: in array, out array, glxflags, offset, ...	
+	f1 := new(Function)
+	f1.Name = "Foo1"
+	f1.Parameters = []Parameter{{"p1", "type1", false, false}, {"p2", "type2", false, true}}
+	f1.Return = "void"
+	f1.Version =  Version{1, 0}
+	f1.DeprecatedVersion = Version{0, 0}
+	f1.Category = "cat_1"
+	f1.GlxRopCode = "85"
+	f1.Offset = "158"
+	checkFunc(f1, f, t)
+
+	f2 := new(Function)
+	f2.Name = "Foo2"
+	f2.Parameters = []Parameter{{"p1", "type3", true, false}, {"p2", "type4", true, true}}
+	f2.Return = "void"
+	f2.Version =  Version{2, 1}
+	f2.DeprecatedVersion = Version{0, 0}
+	f2.Category = "cat_2"
+	f2.GlxRopCode = "95"
+	f2.Offset = "168"
+	checkFunc(f2, f, t)
+	
+	// TODO: add more tests: flags, categories ...	
 }
