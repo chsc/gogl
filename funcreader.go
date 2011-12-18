@@ -56,7 +56,7 @@ func ReadFunctionsFromFile(name string) (FunctionCategories, *FunctionsInfo, err
 func ReadFunctions(r io.Reader) (FunctionCategories, *FunctionsInfo, error) {
 	var currentFunction *Function = nil
 	functions := make(FunctionCategories)
-	finfo := &FunctionsInfo{make([]Version, 0, 8), make([]Version, 0, 8), make([]string, 0, 8), ""}
+	finfo := &FunctionsInfo{make([]Version, 0, 8), make([]Version, 0, 8), make([]string, 0, 8), make([]string, 0, 16)}
 
 	br := bufio.NewReader(r)
 
@@ -158,7 +158,7 @@ func ReadFunctions(r io.Reader) (FunctionCategories, *FunctionsInfo, error) {
 		} else if allCategories := funcAllCategoriesRE.FindStringSubmatch(line); allCategories != nil {
 			finfo.Categories = strings.Split(allCategories[1], " ")
 		} else if passthru := funcPassthruRE.FindStringSubmatch(line); passthru != nil{
-			finfo.Passthru += passthru[1] + "\n"
+			finfo.Passthru = append(finfo.Passthru, passthru[1])
 		} else if newcategory := funcNewCategoryRE.FindStringSubmatch(line); newcategory != nil {
 			functions[newcategory[1]] = make([]*Function, 0)
 		} else if funcIgnoreRE.MatchString(line) {

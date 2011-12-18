@@ -107,7 +107,7 @@ func main() {
 	}
 
 	fmt.Printf("Generating packages ...\n")
-	if err := GeneratePackages(packages, typeMap); err != nil {
+	if err := GeneratePackages(packages, funcInfo, typeMap); err != nil {
 		fmt.Fprintln(os.Stderr, err.Error())
 		return
 	}

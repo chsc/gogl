@@ -65,7 +65,7 @@ type FunctionsInfo struct {
 	Versions           []Version
 	DeprecatedVersions []Version
 	Categories         []string
-	Passthru           string
+	Passthru           []string
 }
 
 type Parameter struct {

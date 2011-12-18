@@ -6,6 +6,7 @@ package main
 
 import (
 	"errors"
+	"fmt"
 	"regexp"
 	"strings"
 	"unicode"
@@ -68,4 +69,20 @@ func GoName(n string) string {
 		return r
 	},
 	n)
+}
+
+func RenameReservedWord(word string) string {
+	switch word {
+	case "func", "type", "struct", "range", "map":
+		return fmt.Sprintf("%s_", word)
+	}
+	return word
+}
+
+func MakeExtensionSpecDocUrl(vendor, extension string) string {
+	return fmt.Sprintf("http://www.opengl.org/registry/specs/%s/%s.txt", vendor, extension)
+}
+
+func MakeFuncDocUrl(majorVersion int, fName string) string {
+	return fmt.Sprintf("http://www.opengl.org/sdk/docs/man%d/xhtml/gl%s.xml", majorVersion, fName)
 }
