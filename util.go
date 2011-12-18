@@ -55,7 +55,7 @@ func ParseCategoryString(category string) (ParsedCategoryString, error) {
 // Converts strings with underscores to Go-like names. e.g.: bla_blub_foo -> BlaBlubFoo
 func GoName(n string) string {
 	prev := '_'
-	return strings.Map(func(r int) int {
+	return strings.Map(func(r rune) rune {
 		if r == '_' {
 			prev = r
 			return -1
@@ -67,5 +67,5 @@ func GoName(n string) string {
 		prev = r
 		return r
 	},
-		n)
+	n)
 }
