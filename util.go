@@ -79,6 +79,39 @@ func RenameReservedWord(word string) string {
 	return word
 }
 
+func GLTypeToGoType(glType string, out, array bool) (ret string, err error) {
+	// TODO: eval out, array...
+	switch glType {
+	case "void":
+		ret = ""
+	case "GLenum", "GLbitfield", "GLuint":
+		ret = "uint32"
+	case "GLsizei", "GLint":
+		ret = "int32"
+	case "GLushort", "GLhalf":
+		ret = "uint16"
+	case "GLshort":
+		ret = "int16"
+	case "GLboolean", "GLubyte":
+		ret = "uint8"
+	case "GLbyte":
+		ret = "int8"
+	case "GLchar":
+		ret = "byte"
+	case "GLfloat", "GLclampf":
+		ret = "float32"
+	case "GLdouble", "GLclampd":
+		ret = "float64"
+	case "GLintptr", "GLsizeiptr":
+		ret = "int"
+	case "GLvoid*":
+		ret = "unsafe.Pointer"
+	default:
+		err = errors.New("Unknown GL type: " + glType)
+	}
+	return
+}
+
 func MakeExtensionSpecDocUrl(vendor, extension string) string {
 	return fmt.Sprintf("http://www.opengl.org/registry/specs/%s/%s.txt", vendor, extension)
 }

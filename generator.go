@@ -13,6 +13,7 @@ import (
 
 func GeneratePackages(packages Packages, functsInfo *FunctionsInfo, typeMap TypeMap) error {
 	for packageName, pak := range packages {
+		fmt.Printf("Generating %s\n", packageName)
 		if err := generatePackage(packageName, pak, functsInfo, typeMap); err != nil {
 			return err
 		}
@@ -265,24 +266,43 @@ func writeGoFunctionDefinitions(w io.Writer, functions FunctionCategories, typeM
 				if err != nil {
 					return err
 				}
+				goptype, err := GLTypeToGoType(ptype, f.Parameters[p].Out, f.Parameters[p].Array)
+				if err != nil {
+					return err
+				}
 				if f.Parameters[p].Out && !f.Parameters[p].Array {
 					fmt.Fprint(w, "*")
 				}
 				if f.Parameters[p].Array {
 					fmt.Fprintf(w, "*")
 				}
-				fmt.Fprintf(w, "%s", ptype)
+				fmt.Fprintf(w, "%s", goptype)
 				if p < len(f.Parameters)-1 {
 					fmt.Fprintf(w, ", ")
 				}
 			}
-			fmt.Fprintf(w, ") {\n")
-			fmt.Fprintf(w, "\tC.gogl%s(", f.Name)
+			rtype, err := typeMap.Resolve(f.Return)
+			if err != nil {
+				return err
+			}
+			gortype, err := GLTypeToGoType(rtype, false, false)
+			if err != nil {
+				return err
+			}
+			fmt.Fprintf(w, ") %s {\n", gortype)
+			if rtype == "void" {
+				fmt.Fprintf(w, "	C.gogl%s(", f.Name)
+			} else {
+				fmt.Fprintf(w, "	return C.gogl%s(", f.Name)
+			}
 			for p := 0; p < len(f.Parameters); p++ {
-				if p == len(f.Parameters)-1 {
-					fmt.Fprintf(w, "%s", RenameReservedWord(f.Parameters[p].Name))
-				} else {
-					fmt.Fprintf(w, "%s, ", RenameReservedWord(f.Parameters[p].Name))
+				ptype, err := typeMap.Resolve(f.Parameters[p].Type)
+				if err != nil {
+					return err
+				}
+				fmt.Fprintf(w, "C.%s(%s)", ptype, RenameReservedWord(f.Parameters[p].Name))
+				if p < len(f.Parameters)-1 {
+					fmt.Fprintf(w, ", ")
 				}
 			}
 			fmt.Fprintf(w, ")\n}\n")
