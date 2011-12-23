@@ -7,15 +7,15 @@ package main
 import (
 	"errors"
 	"fmt"
-	"regexp"
 	"strings"
 	"unicode"
 )
 
 var (
-	versionRE    = regexp.MustCompile("^VERSION_([0-9]+)_([0-9]+)$")
-	versionDepRE = regexp.MustCompile("^VERSION_([0-9]+)_([0-9]+)_DEPRECATED$")
-	extensionRE  = regexp.MustCompile("^([A-Za-z0-9]+)_([A-Za-z0-9_]+)$")
+	versionPrefix    = "VERSION_"
+	depVersionSuffix = "_DEPRECATED"
+	verPrefixLen     = len(versionPrefix)
+	depVerSuffixLen  = len(depVersionSuffix)
 )
 
 type CategoryType int32
@@ -23,34 +23,49 @@ type CategoryType int32
 const (
 	CategoryInvalid CategoryType = iota
 	CategoryVersion
-	CategoryDeprecatedVersion
+	CategoryDepVersion
 	CategoryExtension
 )
 
-type ParsedCategoryString struct {
-	CategoryType CategoryType
-	Version      Version
-	Vendor       string
-	Name         string
+type ParsedCategory struct {
+	Type     CategoryType
+	Version  Version
+	Vendor   string
+	Name     string
 }
 
-func ParseCategoryString(category string) (ParsedCategoryString, error) {
-	if versionDep := versionDepRE.FindStringSubmatch(category); versionDep != nil {
-		v, err := MakeVersionFromMajorMinorString(versionDep[1], versionDep[2])
-		if err != nil {
-			return ParsedCategoryString{CategoryInvalid, Version{0, 0}, "", ""}, err
-		}
-		return ParsedCategoryString{CategoryDeprecatedVersion, v, "", ""}, nil
-	} else if version := versionRE.FindStringSubmatch(category); version != nil {
-		v, err := MakeVersionFromMajorMinorString(version[1], version[2])
-		if err != nil {
-			return ParsedCategoryString{CategoryInvalid, Version{0, 0}, "", ""}, err
-		}
-		return ParsedCategoryString{CategoryVersion, v, "", ""}, nil
-	} else if extension := extensionRE.FindStringSubmatch(category); extension != nil {
-		return ParsedCategoryString{CategoryExtension, Version{0, 0}, extension[1], extension[2]}, nil
+func (pc ParsedCategory) String() string {
+	switch pc.Type {
+	case CategoryExtension:
+		return fmt.Sprintf("Extension: vendor: %s, name: %s", pc.Vendor, pc.Name)
+	case CategoryVersion:
+		return fmt.Sprintf("Version: %v %s", pc.Version, pc.Vendor)
+	case CategoryDepVersion:
+		return fmt.Sprintf("Deprecated version: %v %s", pc.Version, pc.Vendor)
 	}
-	return ParsedCategoryString{CategoryInvalid, Version{0, 0}, "", ""}, errors.New("Unable to parse category.")
+	return "Invalid category"
+}
+
+func ParseCategoryString(category string) (ParsedCategory, error) {
+	if strings.HasPrefix(category, versionPrefix) {
+		ver := category[verPrefixLen:]
+		ctype := CategoryVersion
+		if strings.HasSuffix(ver, depVersionSuffix) {
+			ver = ver[:len(ver)-depVerSuffixLen]
+			ctype = CategoryDepVersion
+		}
+		if splitVer := strings.Split(ver, "_"); len(splitVer) == 2 {
+			version, err := MakeVersionFromMajorMinorString(splitVer[0], splitVer[1])
+			if err != nil {
+				return ParsedCategory{}, errors.New("Invalid category string.")
+			}
+			return ParsedCategory{ctype, version, "", ""}, nil
+		}
+		return ParsedCategory{}, errors.New("Invalid category string.")
+	} else if splitCat := strings.SplitN(category, "_", 2); len(splitCat) == 2 {
+		return ParsedCategory{CategoryExtension, Version{}, splitCat[0], splitCat[1]}, nil
+	}
+	return ParsedCategory{}, errors.New("Invalid category string.")
 }
 
 // Converts strings with underscores to Go-like names. e.g.: bla_blub_foo -> BlaBlubFoo

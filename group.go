@@ -50,7 +50,7 @@ func GroupPackagesByVendorFunc(category string, supportedVersions []Version, dep
 		return nil
 	}
 	packages := make([]string, 0, 8)
-	switch pc.CategoryType {
+	switch pc.Type {
 	case CategoryExtension:
 		packages = append(packages, strings.ToLower(pc.Vendor))
 	case CategoryVersion:
@@ -62,7 +62,7 @@ func GroupPackagesByVendorFunc(category string, supportedVersions []Version, dep
 				}
 			}
 		}
-	case CategoryDeprecatedVersion:
+	case CategoryDepVersion:
 		for _, ver := range supportedVersions {
 			if ver.Compare(pc.Version) >= 0 {
 				if ver.Compare(deprecatedVersions[0]) < 0 {

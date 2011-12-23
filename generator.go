@@ -43,12 +43,12 @@ func writePackage(w io.Writer, packageName string, pak *Package, functsInfo *Fun
 	fmt.Fprintf(w, "// Categories in this package: \n// \n")
 	for cat, _ := range pak.Functions {
 		pc, _ := ParseCategoryString(cat)
-		switch pc.CategoryType {
+		switch pc.Type {
 		case CategoryExtension:
 			fmt.Fprintf(w, "// %s: %s\n// \n", cat, MakeExtensionSpecDocUrl(pc.Vendor, pc.Name))
 		case CategoryVersion:
 			fmt.Fprintf(w, "// %s\n// \n", cat)
-		case CategoryDeprecatedVersion:
+		case CategoryDepVersion:
 			fmt.Fprintf(w, "// %s\n// \n", cat)
 		}
 	}

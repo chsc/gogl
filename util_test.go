@@ -11,7 +11,7 @@ import (
 
 type testCategories struct {
 	in  string
-	out ParsedCategoryString
+	out ParsedCategory
 }
 
 type testGoName struct {
@@ -20,10 +20,12 @@ type testGoName struct {
 }
 
 var allTestCategories = []testCategories{
-	{"VERSION_1_4", ParsedCategoryString{CategoryVersion, Version{1, 4}, "", ""}},
-	{"VERSION_2_0_DEPRECATED", ParsedCategoryString{CategoryDeprecatedVersion, Version{2, 0}, "", ""}},
-	{"ARB_multisample", ParsedCategoryString{CategoryExtension, Version{0, 0}, "ARB", "multisample"}},
-	{"EXT_12345678", ParsedCategoryString{CategoryExtension, Version{0, 0}, "EXT", "12345678"}},
+	{"VERSION_1_4", ParsedCategory{CategoryVersion, Version{1, 4}, "", ""}},
+	{"VERSION_2_0_DEPRECATED", ParsedCategory{CategoryDepVersion, Version{2, 0}, "", ""}},
+	{"ARB_multisample", ParsedCategory{CategoryExtension, Version{0, 0}, "ARB", "multisample"}},
+	{"EXT_12345678", ParsedCategory{CategoryExtension, Version{0, 0}, "EXT", "12345678"}},
+	{"ABC123_a_b_", ParsedCategory{CategoryExtension, Version{0, 0}, "ABC123", "a_b_"}},
+	{"A_", ParsedCategory{CategoryExtension, Version{0, 0}, "A", ""}},
 }
 
 var allTestGoName = []testGoName{
@@ -34,16 +36,16 @@ var allTestGoName = []testGoName{
 	{"a_b_c_", "ABC"},
 }
 
-func TestParsedCategoryString(t *testing.T) {
+func TestParsedCategory(t *testing.T) {
 	for i := range allTestCategories {
 		te := &allTestCategories[i]
 		pc, err := ParseCategoryString(te.in)
 		if err != nil {
 			t.Fatalf(err.Error())
 		}
-		t.Logf("%v", te)
+		t.Logf("%s -> %v", te.in, te.out)
 		if !reflect.DeepEqual(pc, te.out) {
-			t.Errorf("not equal")
+			t.Errorf("not equal: out = %v", pc)
 		}
 	}
 }
