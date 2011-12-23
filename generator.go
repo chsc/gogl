@@ -121,25 +121,28 @@ func writePackage(w io.Writer, packageName string, pak *Package, functsInfo *Fun
 		return err
 	}
 
-	fmt.Fprintf(w, "import \"C\"\n\n")
+	fmt.Fprintf(w, "import \"C\"\n")
+	fmt.Fprintf(w, "import \"unsafe\"\n\n")
 
-	// TODO: Emit type defs or native Go types?
-	//fmt.Fprintf(w, "// type  GLEnum\n")
-/*	fmt.Fprintf(w, "// typedef unsigned char GLboolean;\n")
-	fmt.Fprintf(w, "// typedef unsigned int GLbitfield;\n")
-	fmt.Fprintf(w, "// typedef signed char GLbyte;\n")
-	fmt.Fprintf(w, "// typedef short GLshort;\n")
-	fmt.Fprintf(w, "// typedef int GLint;\n")
-	fmt.Fprintf(w, "// typedef int GLsizei;\n")
-	fmt.Fprintf(w, "// typedef unsigned char GLubyte;\n")
-	fmt.Fprintf(w, "// typedef unsigned short GLushort;\n")
-	fmt.Fprintf(w, "// typedef unsigned int GLuint;\n")
-	fmt.Fprintf(w, "// typedef unsigned short GLhalf;\n")
-	fmt.Fprintf(w, "// typedef float GLfloat;\n")
-	fmt.Fprintf(w, "// typedef float GLclampf;\n")
-	fmt.Fprintf(w, "// typedef double GLdouble;\n")
-	fmt.Fprintf(w, "// typedef double GLclampd;\n")
-	fmt.Fprintf(w, "// typedef void GLvoid;\n// \n")*/
+	fmt.Fprintf(w, "type (\n")
+	fmt.Fprintf(w, "	Enum     C.GLenum\n")
+	fmt.Fprintf(w, "	Boolean  C.GLboolean\n")
+	fmt.Fprintf(w, "	Bitfield C.GLBitfield\n")
+	fmt.Fprintf(w, "	Byte     C.GLbyte\n")
+	fmt.Fprintf(w, "	Short    C.GLshort\n")
+	fmt.Fprintf(w, "	Int      C.GLint\n")
+	fmt.Fprintf(w, "	Sizei    C.GLsizei\n")
+	fmt.Fprintf(w, "	Ubyte    C.GLubyte\n")
+	fmt.Fprintf(w, "	Ushort   C.GLushort\n")
+	fmt.Fprintf(w, "	Uint     C.GLuint\n")
+	fmt.Fprintf(w, "	Half     C.GLhalf\n")
+	fmt.Fprintf(w, "	Float    C.GLfloat\n")
+	fmt.Fprintf(w, "	Clampf   C.GLclampf\n")
+	fmt.Fprintf(w, "	Double   C.GLdouble\n")
+	fmt.Fprintf(w, "	Clampd   C.GLclampd\n")
+	fmt.Fprintf(w, "	Char     C.GLchar\n")
+	fmt.Fprintf(w, "	Pointer  unsafe.Pointer\n")
+	fmt.Fprintf(w, ")\n\n")
 
 	writeGoEnumDefinitions(w, pak.Enums)
 

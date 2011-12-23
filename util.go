@@ -96,10 +96,12 @@ func RenameReservedWord(word string) string {
 
 func GLTypeToGoType(glType string, out, array bool) (ret string, err error) {
 	// TODO: eval out, array...
-	switch glType {
+/*	switch glType {
 	case "void":
 		ret = ""
-	case "GLenum", "GLbitfield", "GLuint":
+	case "GLenum":
+		
+	case "GLbitfield", "GLuint":
 		ret = "uint32"
 	case "GLsizei", "GLint":
 		ret = "int32"
@@ -123,8 +125,8 @@ func GLTypeToGoType(glType string, out, array bool) (ret string, err error) {
 		ret = "unsafe.Pointer"
 	default:
 		err = errors.New("Unknown GL type: " + glType)
-	}
-	return
+	}*/
+	return glType
 }
 
 func MakeExtensionSpecDocUrl(vendor, extension string) string {
