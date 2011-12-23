@@ -5,6 +5,7 @@
 package main
 
 import (
+	"bytes"
 	"errors"
 	"fmt"
 	"strconv"
@@ -69,10 +70,10 @@ type FunctionsInfo struct {
 }
 
 type Parameter struct {
-	Name    string
-	Type    string
-	Out     bool
-	Array   bool
+	Name  string
+	Type  string
+	Out   bool
+	Array bool
 	// TODO: reference?
 }
 
@@ -101,8 +102,33 @@ type Function struct {
 }
 
 type Functions []*Function
-
 type FunctionCategories map[string]Functions
+
+func (p *Parameter) String() string {
+	out := ""
+	array := ""
+	if p.Out {
+		out = "out "
+	}
+	if p.Array {
+		array = "[]"
+	}
+	return fmt.Sprintf("%s %s%s%s", p.Type, out, array, p.Name)
+}
+
+func (f *Function) String() string {
+	s := bytes.NewBufferString("")
+	fmt.Fprintf(s, "%s %s(", f.Return, f.Name)
+	for i, _ := range f.Parameters {
+		p := &f.Parameters[i]
+		fmt.Fprint(s, p)
+		if i < len(f.Parameters)-1 {
+			fmt.Fprint(s, ", ")
+		}
+	}
+	fmt.Fprintf(s, ") (v%v, d%v)", f.Version, f.DeprecatedVersion)
+	return string(s.Bytes())
+}
 
 func (fs Functions) Find(name string) *Function {
 	for _, f := range fs {
@@ -122,6 +148,10 @@ type Enum struct {
 
 type Enums map[string]Enum
 type EnumCategories map[string]Enums
+
+func (e Enum) String() string {
+	return fmt.Sprintf("%s = %s", e.Name, e.Value)
+}
 
 // Type maps
 

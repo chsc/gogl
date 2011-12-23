@@ -54,7 +54,7 @@ func main() {
 			return GroupPackagesByVendorFunc(category, funcInfo.Versions, funcInfo.DeprecatedVersions)
 		})
 
-	if false {
+	if true {
 		// TODO: This output is temporary for debugging
 		fmt.Println("Supported versions:")
 		fmt.Println(funcInfo.Versions)
@@ -65,7 +65,7 @@ func main() {
 		for category, enums := range enumCategories {
 			fmt.Printf("  %v\n", category)
 			for _, enum := range enums {
-				fmt.Printf("    %v = %v\n", enum.Name, enum.Value)
+				fmt.Printf("    %v\n", enum)
 			}
 		}
 		fmt.Println("Types:")
@@ -76,32 +76,7 @@ func main() {
 		for category, functions := range funcCategories {
 			fmt.Printf("  %v\n", category)
 			for _, function := range functions {
-				fmt.Printf("    %v\n", function.Name)
-				if function.Version.Valid() {
-					fmt.Printf("      Version: %v\n", function.Version)
-				}
-				if function.DeprecatedVersion.Valid() {
-					fmt.Printf("      Deprecated Version: %v\n", function.DeprecatedVersion)
-				}
-				fmt.Printf("      Return Type: %v\n", function.Return)
-				if len(function.Parameters) > 0 {
-					fmt.Printf("      Parameters:\n")
-					for _, param := range function.Parameters {
-						fmt.Printf("        %v %v ", param.Name, param.Type)
-						if param.Out {
-							fmt.Print("out ")
-						} else {
-							fmt.Printf("in ")
-						}
-						if param.Array {
-							fmt.Printf("array\n", param.Name, param.Type)
-						} else {
-							fmt.Printf("value\n", param.Name, param.Type)
-						}
-					}
-				} else {
-					fmt.Printf("      0 Parameters\n")
-				}
+				fmt.Printf("    %v\n", function)
 			}
 		}
 	}
