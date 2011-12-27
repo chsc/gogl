@@ -142,6 +142,8 @@ func writePackage(w io.Writer, packageName string, pak *Package, functsInfo *Fun
 	fmt.Fprintf(w, "	Clampd   C.GLclampd\n")
 	fmt.Fprintf(w, "	Char     C.GLchar\n")
 	fmt.Fprintf(w, "	Pointer  unsafe.Pointer\n")
+	fmt.Fprintf(w, "	Int64    C.GLint64\n")
+	fmt.Fprintf(w, "	Uint64   C.GLuint64\n")
 	fmt.Fprintf(w, ")\n\n")
 
 	writeGoEnumDefinitions(w, pak.Enums)
@@ -269,15 +271,9 @@ func writeGoFunctionDefinitions(w io.Writer, functions FunctionCategories, typeM
 				if err != nil {
 					return err
 				}
-				goptype, err := GLTypeToGoType(ptype, f.Parameters[p].Out, f.Parameters[p].Array)
+				goptype, err := CTypeToGoType(ptype, f.Parameters[p].Out, f.Parameters[p].Array)
 				if err != nil {
 					return err
-				}
-				if f.Parameters[p].Out && !f.Parameters[p].Array {
-					fmt.Fprint(w, "*")
-				}
-				if f.Parameters[p].Array {
-					fmt.Fprintf(w, "*")
 				}
 				fmt.Fprintf(w, "%s", goptype)
 				if p < len(f.Parameters)-1 {
@@ -288,7 +284,7 @@ func writeGoFunctionDefinitions(w io.Writer, functions FunctionCategories, typeM
 			if err != nil {
 				return err
 			}
-			gortype, err := GLTypeToGoType(rtype, false, false)
+			gortype, err := CTypeToGoType(rtype, false, false)
 			if err != nil {
 				return err
 			}
@@ -299,11 +295,12 @@ func writeGoFunctionDefinitions(w io.Writer, functions FunctionCategories, typeM
 				fmt.Fprintf(w, "	return C.gogl%s(", f.Name)
 			}
 			for p := 0; p < len(f.Parameters); p++ {
-				ptype, err := typeMap.Resolve(f.Parameters[p].Type)
-				if err != nil {
-					return err
-				}
-				fmt.Fprintf(w, "C.%s(%s)", ptype, RenameReservedWord(f.Parameters[p].Name))
+				//ptype, err := typeMap.Resolve(f.Parameters[p].Type)
+				//if err != nil {
+				//	return err
+				//}
+				//fmt.Fprintf(w, "C.%s(%s)", ptype, RenameReservedWord(f.Parameters[p].Name))
+				fmt.Fprintf(w, "%s", RenameReservedWord(f.Parameters[p].Name))
 				if p < len(f.Parameters)-1 {
 					fmt.Fprintf(w, ", ")
 				}

@@ -93,40 +93,139 @@ func RenameReservedWord(word string) string {
 	}
 	return word
 }
-
-func GLTypeToGoType(glType string, out, array bool) (ret string, err error) {
-	// TODO: eval out, array...
-/*	switch glType {
+// Converts C types to Go types.
+func CTypeToGoType(glType string, out, array bool) (ret string, err error) {
+	// special cases:
+	switch glType{
 	case "void":
 		ret = ""
+		if array {
+			ret = "Pointer"
+		}
+		if out {
+			err = errors.New("Unsupported void type.")
+		}
+		return
+	case "GLvoid":
+		ret = "Pointer"
+		return
+	case "GLvoid*", "GLvoid* const":
+		ret = "Pointer"
+		if array {
+			ret = "*" + ret
+		}
+		// out can be ignored
+		return
+	case "const GLubyte *":
+		ret = "*Ubyte"
+		if array {
+			ret = "*" + ret
+		}
+		if out {
+			err = errors.New("Unsopported out parameter.")
+		}
+		return
+	case "GLchar*", "GLcharARB*":
+		ret = "*Char"
+		if array {
+			ret = "*" + ret
+		}
+		return
+	case "GLboolean*":
+		ret = "*Boolean"
+		if array {
+			ret = "*" + ret
+		}
+		return
+	case "GLhandleARB":
+		ret = "Uint" // handle is uint
+		if array {
+			ret = "*" + ret
+		}
+		return
+	case "GLDEBUGPROCARB", "GLDEBUGPROCAMD":
+		ret = "Pointer" // TODO: Debug callback support?
+		if array || out {
+			err = errors.New("Unsupported type.")
+		}
+		return
+	case "GLvdpauSurfaceNV":
+		ret = "Pointer" // TODO: Debug callback support?
+		if array {
+			ret = "*" + ret
+		}
+		return
+	case "GLsync":
+		ret = "Pointer"
+		if array || out {
+			err = errors.New("Unsupported type.")
+		}
+		return
+	case "struct _cl_context *", "struct _cl_event *":
+		ret = "Pointer" // TODO: OpenCL context, event support?
+		if array || out {
+			err = errors.New("Unsupported type.")
+		}
+		return
+	}
+	// standard cases for primitive data types:
+	switch glType {
+	// base types
 	case "GLenum":
-		
-	case "GLbitfield", "GLuint":
-		ret = "uint32"
-	case "GLsizei", "GLint":
-		ret = "int32"
-	case "GLushort", "GLhalf":
-		ret = "uint16"
-	case "GLshort":
-		ret = "int16"
-	case "GLboolean", "GLubyte":
-		ret = "uint8"
+		ret = "Enum"
+	case "GLboolean":
+		ret = "Boolean"
+	case "GLbitfield":
+		ret = "Bitfield"
 	case "GLbyte":
-		ret = "int8"
-	case "GLchar":
-		ret = "byte"
-	case "GLfloat", "GLclampf":
-		ret = "float32"
-	case "GLdouble", "GLclampd":
-		ret = "float64"
-	case "GLintptr", "GLsizeiptr":
-		ret = "int"
-	case "GLvoid*":
-		ret = "unsafe.Pointer"
+		ret = "Byte"
+	case "GLshort":
+		ret = "Short"
+	case "GLint":
+		ret = "Int"
+	case "GLsizei":
+		ret = "Sizei"
+	case "GLubyte":
+		ret = "Ubyte"
+	case "GLushort":
+		ret = "Ushort"
+	case "GLuint":
+		ret = "Uint"
+	case "GLhalf", "GLhalfNV":
+		ret = "Half"
+	case "GLfloat":
+		ret = "Float"
+	case "GLclampf":
+		ret = "Clampf"
+	case "GLdouble":
+		ret = "Double"
+	case "GLclampd":
+		ret = "Clampd"
+	//  
+	case "GLchar", "GLcharARB":
+		ret = "Char"
+	// 
+	case "GLintptr", "GLintptrARB":
+		ret = "Intptr"
+	case "GLsizeiptr", "GLsizeiptrARB":
+		ret = "Sizeiptr"
+	// 
+	case "GLint64", "GLint64EXT":
+		ret = "Int64"
+	case "GLuint64", "GLuint64EXT":
+		ret = "Uint64"
+
 	default:
 		err = errors.New("Unknown GL type: " + glType)
-	}*/
-	return glType
+		return
+	}
+	if array {
+		ret = "*" + ret
+	}
+	if out && !array {
+		ret = "*" + ret
+	}
+	return
 }
 
 func MakeExtensionSpecDocUrl(vendor, extension string) string {
