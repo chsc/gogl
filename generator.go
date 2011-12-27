@@ -127,7 +127,7 @@ func writePackage(w io.Writer, packageName string, pak *Package, functsInfo *Fun
 	fmt.Fprintf(w, "type (\n")
 	fmt.Fprintf(w, "	Enum     C.GLenum\n")
 	fmt.Fprintf(w, "	Boolean  C.GLboolean\n")
-	fmt.Fprintf(w, "	Bitfield C.GLBitfield\n")
+	fmt.Fprintf(w, "	Bitfield C.GLbitfield\n")
 	fmt.Fprintf(w, "	Byte     C.GLbyte\n")
 	fmt.Fprintf(w, "	Short    C.GLshort\n")
 	fmt.Fprintf(w, "	Int      C.GLint\n")
@@ -254,7 +254,7 @@ func writeGoEnumDefinitions(w io.Writer, enums EnumCategories) {
 		fmt.Fprintf(w, "// %s\n", cat)
 		fmt.Fprintf(w, "const (\n")
 		for _, e := range enums {
-			fmt.Fprintf(w, "	%s = %s\n", e.Name, e.Value)
+			fmt.Fprintf(w, "	%s = %s\n", CleanEnumName(e.Name), e.Value)
 		}
 		fmt.Fprintf(w, ")\n")
 	}

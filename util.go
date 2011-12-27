@@ -93,6 +93,15 @@ func RenameReservedWord(word string) string {
 	}
 	return word
 }
+
+// append X suffix if enum name starts with digit
+func CleanEnumName(enum string) string {
+	if strings.IndexAny(enum, "0123456789") == 0 {
+		return fmt.Sprintf("X%s", enum)
+	}
+	return enum
+}
+
 // Converts C types to Go types.
 func CTypeToGoType(glType string, out, array bool) (ret string, err error) {
 	// special cases:
