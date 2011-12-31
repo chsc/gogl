@@ -54,7 +54,7 @@ func main() {
 			return GroupPackagesByVendorFunc(category, funcInfo.Versions, funcInfo.DeprecatedVersions)
 		})
 
-	if true {
+	if false {
 		// TODO: This output is temporary for debugging
 		fmt.Println("Supported versions:")
 		fmt.Println(funcInfo.Versions)

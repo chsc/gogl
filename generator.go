@@ -9,11 +9,12 @@ import (
 	"io"
 	"os"
 	"path/filepath"
+	"strings"
 )
 
 func GeneratePackages(packages Packages, functsInfo *FunctionsInfo, typeMap TypeMap) error {
 	for packageName, pak := range packages {
-		fmt.Printf("Generating %s\n", packageName)
+		fmt.Printf("Generating package %s ...\n", packageName)
 		if err := generatePackage(packageName, pak, functsInfo, typeMap); err != nil {
 			return err
 		}
@@ -65,7 +66,7 @@ func writePackage(w io.Writer, packageName string, pak *Package, functsInfo *Fun
 	fmt.Fprintf(w, "// #include <windows.h> // for wglGetProcAddress\n")
 	fmt.Fprintf(w, "// #else\n")
 	fmt.Fprintf(w, "// #include <X11/Xlib.h> // for glXGetProcAddress\n")
-	fmt.Fprintf(w, "// #include <GL/glx.h> \n")
+	fmt.Fprintf(w, "// #include <GL/glx.h>\n")
 	fmt.Fprintf(w, "// #endif\n// \n")
 
 	fmt.Fprintf(w, "// #ifndef APIENTRY\n")
@@ -144,6 +145,8 @@ func writePackage(w io.Writer, packageName string, pak *Package, functsInfo *Fun
 	fmt.Fprintf(w, "	Pointer  unsafe.Pointer\n")
 	fmt.Fprintf(w, "	Int64    C.GLint64\n")
 	fmt.Fprintf(w, "	Uint64   C.GLuint64\n")
+	fmt.Fprintf(w, "	Intptr   C.GLintptr\n")
+	fmt.Fprintf(w, "	Sizeiptr C.GLsizeiptr\n")
 	fmt.Fprintf(w, ")\n\n")
 
 	writeGoEnumDefinitions(w, pak.Enums)
@@ -171,14 +174,11 @@ func writeCFuncDefs(w io.Writer, functions FunctionCategories, typeMap TypeMap) 
 				if err != nil {
 					return err
 				}
-				fmt.Fprintf(w, "%s ", ptype)
-				if f.Parameters[p].Out && !f.Parameters[p].Array {
+				fmt.Fprintf(w, "%s", ptype)
+				if f.Parameters[p].Out || f.Parameters[p].Array {
 					fmt.Fprint(w, "*")
 				}
-				if f.Parameters[p].Array {
-					fmt.Fprintf(w, " *")
-				}
-				fmt.Fprintf(w, "%s", f.Parameters[p].Name)
+				fmt.Fprintf(w, " %s", f.Parameters[p].Name)
 				if p < len(f.Parameters)-1 {
 					fmt.Fprintf(w, ", ")
 				}
@@ -204,14 +204,11 @@ func writeCFuncDecls(w io.Writer, functions FunctionCategories, typeMap TypeMap)
 				if err != nil {
 					return err
 				}
-				fmt.Fprintf(w, "%s ", ptype)
-				if f.Parameters[p].Out && !f.Parameters[p].Array {
+				fmt.Fprintf(w, "%s", ptype)
+				if f.Parameters[p].Out || f.Parameters[p].Array {
 					fmt.Fprint(w, "*")
 				}
-				if f.Parameters[p].Array {
-					fmt.Fprintf(w, "*")
-				}
-				fmt.Fprintf(w, "%s", f.Parameters[p].Name)
+				fmt.Fprintf(w, " %s", f.Parameters[p].Name)
 				if p < len(f.Parameters)-1 {
 					fmt.Fprintf(w, ", ")
 				}
@@ -266,16 +263,16 @@ func writeGoFunctionDefinitions(w io.Writer, functions FunctionCategories, typeM
 		for _, f := range fs {
 			fmt.Fprintf(w, "func %s(", f.Name)
 			for p := 0; p < len(f.Parameters); p++ {
-				fmt.Fprintf(w, "%s ", RenameReservedWord(f.Parameters[p].Name))
+				fmt.Fprintf(w, "%s ", RenameIfReservedWord(f.Parameters[p].Name))
 				ptype, err := typeMap.Resolve(f.Parameters[p].Type)
 				if err != nil {
 					return err
 				}
-				goptype, err := CTypeToGoType(ptype, f.Parameters[p].Out, f.Parameters[p].Array)
+				goType, _, err := CTypeToGoType(ptype, f.Parameters[p].Out, f.Parameters[p].Array)
 				if err != nil {
 					return err
 				}
-				fmt.Fprintf(w, "%s", goptype)
+				fmt.Fprintf(w, "%s", goType)
 				if p < len(f.Parameters)-1 {
 					fmt.Fprintf(w, ", ")
 				}
@@ -284,28 +281,40 @@ func writeGoFunctionDefinitions(w io.Writer, functions FunctionCategories, typeM
 			if err != nil {
 				return err
 			}
-			gortype, err := CTypeToGoType(rtype, false, false)
+			goType, _, err := CTypeToGoType(rtype, false, false)
 			if err != nil {
 				return err
 			}
-			fmt.Fprintf(w, ") %s {\n", gortype)
+			fmt.Fprintf(w, ") %s {\n", goType)
 			if rtype == "void" {
 				fmt.Fprintf(w, "	C.gogl%s(", f.Name)
 			} else {
-				fmt.Fprintf(w, "	return C.gogl%s(", f.Name)
+				fmt.Fprintf(w, "	return (%s)(C.gogl%s(", goType, f.Name)
 			}
 			for p := 0; p < len(f.Parameters); p++ {
-				//ptype, err := typeMap.Resolve(f.Parameters[p].Type)
-				//if err != nil {
-				//	return err
-				//}
-				//fmt.Fprintf(w, "C.%s(%s)", ptype, RenameReservedWord(f.Parameters[p].Name))
-				fmt.Fprintf(w, "%s", RenameReservedWord(f.Parameters[p].Name))
+				ptype, err := typeMap.Resolve(f.Parameters[p].Type)
+				if err != nil {
+					return err
+				}
+				_, cgoType, err := CTypeToGoType(ptype, f.Parameters[p].Out, f.Parameters[p].Array)
+				if err != nil {
+					return err
+				}
+				// HACK: handling pointers to pointers is tricky. We use unsafe.Pointer. Any better solution?
+				if strings.HasPrefix(cgoType, "**") {
+					fmt.Fprintf(w, "(%s)(unsafe.Pointer(%s))", cgoType, RenameIfReservedWord(f.Parameters[p].Name))
+				} else {
+					fmt.Fprintf(w, "(%s)(%s)", cgoType, RenameIfReservedWord(f.Parameters[p].Name))
+				}
 				if p < len(f.Parameters)-1 {
 					fmt.Fprintf(w, ", ")
 				}
 			}
-			fmt.Fprintf(w, ")\n}\n")
+			if rtype == "void" {
+				fmt.Fprintf(w, ")\n}\n")
+			} else {
+				fmt.Fprintf(w, "))\n}\n")
+			}
 		}
 	}
 	return nil

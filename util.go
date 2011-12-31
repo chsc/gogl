@@ -86,9 +86,9 @@ func GoName(n string) string {
 	n)
 }
 
-func RenameReservedWord(word string) string {
+func RenameIfReservedWord(word string) string {
 	switch word {
-	case "func", "type", "struct", "range", "map":
+	case "func", "type", "struct", "range", "map", "string":
 		return fmt.Sprintf("%s_", word)
 	}
 	return word
@@ -103,136 +103,176 @@ func CleanEnumName(enum string) string {
 }
 
 // Converts C types to Go types.
-func CTypeToGoType(glType string, out, array bool) (ret string, err error) {
+func CTypeToGoType(cType string, out, array bool) (goType, cgoType string, err error) {
 	// special cases:
-	switch glType{
+	switch cType{
 	case "void":
-		ret = ""
+		goType = ""
+		cgoType = ""
 		if array {
-			ret = "Pointer"
+			goType = "Pointer"
+			cgoType = "unsafe.Pointer"
 		}
 		if out {
 			err = errors.New("Unsupported void type.")
 		}
 		return
 	case "GLvoid":
-		ret = "Pointer"
+		if array || out {
+			goType = "Pointer"
+			cgoType = "unsafe.Pointer"
+		} else {
+			err = errors.New("Unsupported void type.")
+		}
 		return
 	case "GLvoid*", "GLvoid* const":
-		ret = "Pointer"
+		goType = "Pointer"
+		cgoType = "unsafe.Pointer"
 		if array {
-			ret = "*" + ret
+			goType = "*" + goType
+			cgoType = "*" + cgoType
 		}
 		// out can be ignored
 		return
 	case "const GLubyte *":
-		ret = "*Ubyte"
+		goType = "*Ubyte"
+		cgoType = "*C.GLubyte"
 		if array {
-			ret = "*" + ret
+			goType = "*" + goType
+			cgoType = "*" + cgoType
 		}
 		if out {
-			err = errors.New("Unsopported out parameter.")
+			err = errors.New("Unsupported out parameter.")
 		}
 		return
 	case "GLchar*", "GLcharARB*":
-		ret = "*Char"
+		goType = "*Char"
+		cgoType = "*C.GLchar"
 		if array {
-			ret = "*" + ret
+			goType = "*" + goType
+			cgoType = "*" + cgoType
 		}
 		return
 	case "GLboolean*":
-		ret = "*Boolean"
+		goType = "*Boolean"
+		cgoType = "*C.GLboolean"
 		if array {
-			ret = "*" + ret
+			goType = "*" + goType
+			cgoType = "*" + cgoType
 		}
 		return
 	case "GLhandleARB":
-		ret = "Uint" // handle is uint
+		goType = "Uint"      // handle is uint
+		cgoType = "C.GLuint"
 		if array {
-			ret = "*" + ret
+			goType = "*" + goType
+			cgoType = "*" + cgoType
 		}
 		return
 	case "GLDEBUGPROCARB", "GLDEBUGPROCAMD":
-		ret = "Pointer" // TODO: Debug callback support?
+		goType = "Pointer" // TODO: Debug callback support?
+		cgoType = "unsafe.Pointer"
 		if array || out {
 			err = errors.New("Unsupported type.")
 		}
 		return
 	case "GLvdpauSurfaceNV":
-		ret = "Pointer" // TODO: Debug callback support?
+		goType = "Pointer" // TODO: vdpau support?
+		cgoType = "unsafe.Pointer"
 		if array {
-			ret = "*" + ret
+			goType = "*" + goType
+			cgoType = "*" + goType
 		}
 		return
 	case "GLsync":
-		ret = "Pointer"
+		goType = "Pointer"
+		cgoType = "unsafe.Pointer"
 		if array || out {
 			err = errors.New("Unsupported type.")
 		}
 		return
 	case "struct _cl_context *", "struct _cl_event *":
-		ret = "Pointer" // TODO: OpenCL context, event support?
+		goType = "Pointer" // TODO: OpenCL context, event support?
+		cgoType = "unsafe.Pointer"
 		if array || out {
 			err = errors.New("Unsupported type.")
 		}
 		return
 	}
 	// standard cases for primitive data types:
-	switch glType {
+	switch cType {
 	// base types
 	case "GLenum":
-		ret = "Enum"
+		goType = "Enum"
+		cgoType = "C.GLenum"
 	case "GLboolean":
-		ret = "Boolean"
+		goType = "Boolean"
+		cgoType = "C.GLboolean"
 	case "GLbitfield":
-		ret = "Bitfield"
+		goType = "Bitfield"
+		cgoType = "C.GLbitfield"
 	case "GLbyte":
-		ret = "Byte"
+		goType = "Byte"
+		cgoType = "C.GLbyte"
 	case "GLshort":
-		ret = "Short"
+		goType = "Short"
+		cgoType = "C.GLshort"
 	case "GLint":
-		ret = "Int"
+		goType = "Int"
+		cgoType = "C.GLint"
 	case "GLsizei":
-		ret = "Sizei"
+		goType = "Sizei"
+		cgoType = "C.GLsizei"
 	case "GLubyte":
-		ret = "Ubyte"
+		goType = "Ubyte"
+		cgoType = "C.GLubyte"
 	case "GLushort":
-		ret = "Ushort"
+		goType = "Ushort"
+		cgoType = "C.GLushort"
 	case "GLuint":
-		ret = "Uint"
+		goType = "Uint"
+		cgoType = "C.GLuint"
 	case "GLhalf", "GLhalfNV":
-		ret = "Half"
+		goType = "Half"
+		cgoType = "C.GLhalf"
 	case "GLfloat":
-		ret = "Float"
+		goType = "Float"
+		cgoType = "C.GLfloat"
 	case "GLclampf":
-		ret = "Clampf"
+		goType = "Clampf"
+		cgoType = "C.GLclampf"
 	case "GLdouble":
-		ret = "Double"
+		goType = "Double"
+		cgoType = "C.GLdouble"
 	case "GLclampd":
-		ret = "Clampd"
+		goType = "Clampd"
+		cgoType = "C.GLclampd"
 	//  
 	case "GLchar", "GLcharARB":
-		ret = "Char"
+		goType = "Char"
+		cgoType = "C.GLchar"
 	// 
 	case "GLintptr", "GLintptrARB":
-		ret = "Intptr"
+		goType = "Intptr"
+		cgoType = "C.GLintptr" // is uintptr better ?
 	case "GLsizeiptr", "GLsizeiptrARB":
-		ret = "Sizeiptr"
+		goType = "Sizeiptr"
+		cgoType = "C.GLsizeiptr" // is intptr better ?
 	// 
 	case "GLint64", "GLint64EXT":
-		ret = "Int64"
+		goType = "Int64"
+		cgoType = "C.GLint64"
 	case "GLuint64", "GLuint64EXT":
-		ret = "Uint64"
+		goType = "Uint64"
+		cgoType = "C.GLuint64"
 
 	default:
-		err = errors.New("Unknown GL type: " + glType)
+		err = errors.New("Unknown GL type: " + cType)
 		return
 	}
-	if array {
-		ret = "*" + ret
-	}
-	if out && !array {
-		ret = "*" + ret
+	if array || out {
+		goType = "*" + goType
+		cgoType = "*" + cgoType
 	}
 	return
 }
