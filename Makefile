@@ -1,6 +1,6 @@
 include $(GOROOT)/src/Make.inc
  
-TARG=GoGL
+TARG=gogl
 GOFILES=\
 	main.go\
 	download.go\
@@ -18,14 +18,14 @@ format:
 	gofmt -w *.go
 
 download_khronos:
-	./GoGL -download
+	./gogl -download
 
 # TODO: Get rid of revision number. How to get the newest revision from bitbucket? 
 download_alfonse:
-	./GoGL -download -url=https://bitbucket.org/alfonse/gl-xml-specs/raw/5f8ea57530c2/glspecs -dir=alfonse_specs 
+	./gogl -download -url=https://bitbucket.org/alfonse/gl-xml-specs/raw/5f8ea57530c2/glspecs -dir=alfonse_specs 
 
 gen_khronos:
-	./GoGL
+	./gogl
 
 gen_alfonse: 
-	./GoGL -dir=alfonse_specs
+	./gogl -dir=alfonse_specs

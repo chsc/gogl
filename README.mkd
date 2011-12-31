@@ -22,7 +22,7 @@ Build & Install
 
 Clone the repository:
 
-	git clone http://github.com/chsc/GoGL.git
+	git clone http://github.com/chsc/gogl.git
 
 and build it with:
 
@@ -30,19 +30,19 @@ and build it with:
 	
 GoGL is also goinstallable:
 
-	goinstall github.com/chsc/GoGL
+	goinstall github.com/chsc/gogl
 
 Usage examples
 --------------
 
 If you want to download the latest spec files from Khronos (this is the default behavior), type
 
-	GoGL -download
+	gogl -download
 
 to your command prompt.
 To generate the bindings, simply type:
 	
-	GoGL
+	gogl
 
 Or with gomake:
 
