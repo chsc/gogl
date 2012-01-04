@@ -84,11 +84,13 @@ func ReadFunctions(r io.Reader) (FunctionCategories, *FunctionsInfo, error) {
 			if param[3] == "out" {
 				out = true
 			}
-			array := false
+			modifier := ParamModifierValue
 			if param[4] == "array" {
-				array = true
-			} // TODO: reference as value?
-			currentFunction.Parameters = append(currentFunction.Parameters, Parameter{param[1], param[2], out, array})
+				modifier = ParamModifierArray
+			} else if param[4] == "reference" {
+				modifier = ParamModifierReference
+			}
+			currentFunction.Parameters = append(currentFunction.Parameters, Parameter{param[1], param[2], out, modifier})
 		} else if category := funcCategoryRE.FindStringSubmatch(line); category != nil {
 			currentFunction.Category = category[1]
 			if functions[category[1]] == nil {

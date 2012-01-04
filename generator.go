@@ -169,17 +169,18 @@ func writeCFuncDefs(w io.Writer, functions FunctionCategories, typeMap TypeMap) 
 				return err
 			}
 			fmt.Fprintf(w, "// %s (APIENTRYP ptrgogl%s)(", rtype, f.Name)
-			for p := 0; p < len(f.Parameters); p++ {
-				ptype, err := typeMap.Resolve(f.Parameters[p].Type)
+			for i, _  := range f.Parameters {
+				p := &f.Parameters[i]
+				ptype, err := typeMap.Resolve(p.Type)
 				if err != nil {
 					return err
 				}
 				fmt.Fprintf(w, "%s", ptype)
-				if f.Parameters[p].Out || f.Parameters[p].Array {
+				if p.Out || (p.Modifier == ParamModifierReference || p.Modifier == ParamModifierArray) {
 					fmt.Fprint(w, "*")
 				}
-				fmt.Fprintf(w, " %s", f.Parameters[p].Name)
-				if p < len(f.Parameters)-1 {
+				fmt.Fprintf(w, " %s", p.Name)
+				if i < len(f.Parameters)-1 {
 					fmt.Fprintf(w, ", ")
 				}
 			}
@@ -199,17 +200,18 @@ func writeCFuncDecls(w io.Writer, functions FunctionCategories, typeMap TypeMap)
 				return err
 			}
 			fmt.Fprintf(w, "// %s gogl%s(", rtype, f.Name)
-			for p := 0; p < len(f.Parameters); p++ {
-				ptype, err := typeMap.Resolve(f.Parameters[p].Type)
+			for i, _ := range f.Parameters {
+				p := &f.Parameters[i]
+				ptype, err := typeMap.Resolve(p.Type)
 				if err != nil {
 					return err
 				}
 				fmt.Fprintf(w, "%s", ptype)
-				if f.Parameters[p].Out || f.Parameters[p].Array {
+				if p.Out || (p.Modifier == ParamModifierReference || p.Modifier == ParamModifierArray) {
 					fmt.Fprint(w, "*")
 				}
-				fmt.Fprintf(w, " %s", f.Parameters[p].Name)
-				if p < len(f.Parameters)-1 {
+				fmt.Fprintf(w, " %s", p.Name)
+				if i < len(f.Parameters)-1 {
 					fmt.Fprintf(w, ", ")
 				}
 			}
@@ -219,9 +221,10 @@ func writeCFuncDecls(w io.Writer, functions FunctionCategories, typeMap TypeMap)
 			} else {
 				fmt.Fprintf(w, "// 	return (*ptrgogl%s)(", f.Name)
 			}
-			for p := 0; p < len(f.Parameters); p++ {
-				fmt.Fprintf(w, "%s", f.Parameters[p].Name)
-				if p < len(f.Parameters)-1 {
+			for i, _ := range f.Parameters {
+				p := &f.Parameters[i]
+				fmt.Fprintf(w, "%s", p.Name)
+				if i < len(f.Parameters)-1 {
 					fmt.Fprintf(w, ", ")
 				}
 			}
@@ -262,18 +265,19 @@ func writeGoFunctionDefinitions(w io.Writer, functions FunctionCategories, typeM
 		fmt.Fprintf(w, "// %s\n", cat)
 		for _, f := range fs {
 			fmt.Fprintf(w, "func %s(", f.Name)
-			for p := 0; p < len(f.Parameters); p++ {
-				fmt.Fprintf(w, "%s ", RenameIfReservedWord(f.Parameters[p].Name))
-				ptype, err := typeMap.Resolve(f.Parameters[p].Type)
+			for i, _ := range f.Parameters {
+				p := &f.Parameters[i]
+				fmt.Fprintf(w, "%s ", RenameIfReservedWord(p.Name))
+				ptype, err := typeMap.Resolve(p.Type)
 				if err != nil {
 					return err
 				}
-				goType, _, err := CTypeToGoType(ptype, f.Parameters[p].Out, f.Parameters[p].Array)
+				goType, _, err := CTypeToGoType(ptype, p.Out, p.Modifier)
 				if err != nil {
 					return err
 				}
 				fmt.Fprintf(w, "%s", goType)
-				if p < len(f.Parameters)-1 {
+				if i < len(f.Parameters)-1 {
 					fmt.Fprintf(w, ", ")
 				}
 			}
@@ -281,7 +285,7 @@ func writeGoFunctionDefinitions(w io.Writer, functions FunctionCategories, typeM
 			if err != nil {
 				return err
 			}
-			goType, _, err := CTypeToGoType(rtype, false, false)
+			goType, _, err := CTypeToGoType(rtype, false, ParamModifierValue)
 			if err != nil {
 				return err
 			}
@@ -291,22 +295,23 @@ func writeGoFunctionDefinitions(w io.Writer, functions FunctionCategories, typeM
 			} else {
 				fmt.Fprintf(w, "	return (%s)(C.gogl%s(", goType, f.Name)
 			}
-			for p := 0; p < len(f.Parameters); p++ {
-				ptype, err := typeMap.Resolve(f.Parameters[p].Type)
+			for i, _ := range f.Parameters {
+				p := &f.Parameters[i]
+				ptype, err := typeMap.Resolve(p.Type)
 				if err != nil {
 					return err
 				}
-				_, cgoType, err := CTypeToGoType(ptype, f.Parameters[p].Out, f.Parameters[p].Array)
+				_, cgoType, err := CTypeToGoType(ptype, p.Out, p.Modifier)
 				if err != nil {
 					return err
 				}
 				// HACK: handling pointers to pointers is tricky. We use unsafe.Pointer. Any better solution?
 				if strings.HasPrefix(cgoType, "**") {
-					fmt.Fprintf(w, "(%s)(unsafe.Pointer(%s))", cgoType, RenameIfReservedWord(f.Parameters[p].Name))
+					fmt.Fprintf(w, "(%s)(unsafe.Pointer(%s))", cgoType, RenameIfReservedWord(p.Name))
 				} else {
-					fmt.Fprintf(w, "(%s)(%s)", cgoType, RenameIfReservedWord(f.Parameters[p].Name))
+					fmt.Fprintf(w, "(%s)(%s)", cgoType, RenameIfReservedWord(p.Name))
 				}
-				if p < len(f.Parameters)-1 {
+				if i < len(f.Parameters)-1 {
 					fmt.Fprintf(w, ", ")
 				}
 			}

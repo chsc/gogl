@@ -62,6 +62,14 @@ func (v Version) String() string {
 
 // Functions
 
+type ParamModifier int
+
+const (
+	ParamModifierValue ParamModifier = iota
+	ParamModifierArray
+	ParamModifierReference
+)
+
 type FunctionsInfo struct {
 	Versions           []Version
 	DeprecatedVersions []Version
@@ -70,11 +78,10 @@ type FunctionsInfo struct {
 }
 
 type Parameter struct {
-	Name  string
-	Type  string
-	Out   bool
-	Array bool
-	// TODO: reference?
+	Name     string
+	Type     string
+	Out      bool
+	Modifier ParamModifier
 }
 
 type Function struct {
@@ -106,14 +113,17 @@ type FunctionCategories map[string]Functions
 
 func (p *Parameter) String() string {
 	out := ""
-	array := ""
+	modifier := ""
 	if p.Out {
 		out = "out "
 	}
-	if p.Array {
-		array = "[]"
+	switch p.Modifier {
+	case ParamModifierArray:
+		modifier = "[]"
+	case ParamModifierReference:
+		modifier = "&"
 	}
-	return fmt.Sprintf("%s %s%s%s", p.Type, out, array, p.Name)
+	return fmt.Sprintf("%s %s%s%s", p.Type, out, modifier, p.Name)
 }
 
 func (f *Function) String() string {

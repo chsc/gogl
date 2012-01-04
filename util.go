@@ -94,7 +94,7 @@ func RenameIfReservedWord(word string) string {
 	return word
 }
 
-// append X suffix if enum name starts with digit
+// append X suffix if enum name starts with a digit
 func CleanEnumName(enum string) string {
 	if strings.IndexAny(enum, "0123456789") == 0 {
 		return fmt.Sprintf("X%s", enum)
@@ -103,13 +103,13 @@ func CleanEnumName(enum string) string {
 }
 
 // Converts C types to Go types.
-func CTypeToGoType(cType string, out, array bool) (goType, cgoType string, err error) {
+func CTypeToGoType(cType string, out bool, mod ParamModifier) (goType, cgoType string, err error) {
 	// special cases:
 	switch cType{
 	case "void":
 		goType = ""
 		cgoType = ""
-		if array {
+		if mod == ParamModifierArray || mod == ParamModifierReference {
 			goType = "Pointer"
 			cgoType = "unsafe.Pointer"
 		}
@@ -118,17 +118,17 @@ func CTypeToGoType(cType string, out, array bool) (goType, cgoType string, err e
 		}
 		return
 	case "GLvoid":
-		if array || out {
+		if mod == ParamModifierArray || mod == ParamModifierReference || out {
 			goType = "Pointer"
 			cgoType = "unsafe.Pointer"
 		} else {
-			err = errors.New("Unsupported void type.")
+			err = errors.New("Unsupported GLvoid type.")
 		}
 		return
 	case "GLvoid*", "GLvoid* const":
 		goType = "Pointer"
 		cgoType = "unsafe.Pointer"
-		if array {
+		if mod == ParamModifierArray || mod == ParamModifierReference {
 			goType = "*" + goType
 			cgoType = "*" + cgoType
 		}
@@ -137,7 +137,7 @@ func CTypeToGoType(cType string, out, array bool) (goType, cgoType string, err e
 	case "const GLubyte *":
 		goType = "*Ubyte"
 		cgoType = "*C.GLubyte"
-		if array {
+		if mod == ParamModifierArray || mod == ParamModifierReference {
 			goType = "*" + goType
 			cgoType = "*" + cgoType
 		}
@@ -148,7 +148,7 @@ func CTypeToGoType(cType string, out, array bool) (goType, cgoType string, err e
 	case "GLchar*", "GLcharARB*":
 		goType = "*Char"
 		cgoType = "*C.GLchar"
-		if array {
+		if mod == ParamModifierArray || mod == ParamModifierReference {
 			goType = "*" + goType
 			cgoType = "*" + cgoType
 		}
@@ -156,7 +156,7 @@ func CTypeToGoType(cType string, out, array bool) (goType, cgoType string, err e
 	case "GLboolean*":
 		goType = "*Boolean"
 		cgoType = "*C.GLboolean"
-		if array {
+		if mod == ParamModifierArray || mod == ParamModifierReference {
 			goType = "*" + goType
 			cgoType = "*" + cgoType
 		}
@@ -164,7 +164,7 @@ func CTypeToGoType(cType string, out, array bool) (goType, cgoType string, err e
 	case "GLhandleARB":
 		goType = "Uint"      // handle is uint
 		cgoType = "C.GLuint"
-		if array {
+		if mod == ParamModifierArray || mod == ParamModifierReference {
 			goType = "*" + goType
 			cgoType = "*" + cgoType
 		}
@@ -172,14 +172,14 @@ func CTypeToGoType(cType string, out, array bool) (goType, cgoType string, err e
 	case "GLDEBUGPROCARB", "GLDEBUGPROCAMD":
 		goType = "Pointer" // TODO: Debug callback support?
 		cgoType = "unsafe.Pointer"
-		if array || out {
+		if mod == ParamModifierArray || mod == ParamModifierReference || out {
 			err = errors.New("Unsupported type.")
 		}
 		return
 	case "GLvdpauSurfaceNV":
 		goType = "Pointer" // TODO: vdpau support?
 		cgoType = "unsafe.Pointer"
-		if array {
+		if mod == ParamModifierArray || mod == ParamModifierReference {
 			goType = "*" + goType
 			cgoType = "*" + goType
 		}
@@ -187,14 +187,14 @@ func CTypeToGoType(cType string, out, array bool) (goType, cgoType string, err e
 	case "GLsync":
 		goType = "Pointer"
 		cgoType = "unsafe.Pointer"
-		if array || out {
+		if mod == ParamModifierArray || mod == ParamModifierReference || out {
 			err = errors.New("Unsupported type.")
 		}
 		return
 	case "struct _cl_context *", "struct _cl_event *":
 		goType = "Pointer" // TODO: OpenCL context, event support?
 		cgoType = "unsafe.Pointer"
-		if array || out {
+		if mod == ParamModifierArray || mod == ParamModifierReference || out {
 			err = errors.New("Unsupported type.")
 		}
 		return
@@ -270,7 +270,7 @@ func CTypeToGoType(cType string, out, array bool) (goType, cgoType string, err e
 		err = errors.New("Unknown GL type: " + cType)
 		return
 	}
-	if array || out {
+	if mod == ParamModifierArray || mod == ParamModifierReference || out {
 		goType = "*" + goType
 		cgoType = "*" + cgoType
 	}
