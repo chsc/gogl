@@ -1,26 +1,33 @@
 GoGL 
 ====
 
-GoGL is a OpenGL binding generator for Go.
-It's in a very early stage of development and not functional yet!
+GoGL is an OpenGL binding generator for Go.
+No external dependencies like GLEW are needed.
 
-Goals
------
+Install OpenGL bindings
+-----------------------
 
-* Lightweight (use only the extensions you really need)
-* No external dependencies like GLEW
+For example, OpenGL 2.1 bindings can be installed using goinstall:
 
-Spec files
-----------
+	goinstall github.com/chsc/gogl/gl21
 
-The original spec files from Khronos have errors in them.
-Jason McKesson maintains corrected spec files in his bitbucket repository.
-You can find them here: [GL XML Specs](https://bitbucket.org/alfonse/gl-xml-specs).
+The new 'go install' should also work.
 
-Build & Install
----------------
+Examples
+--------
 
-Clone the repository:
+To test the package, build and install the "spinning gopher" example:
+
+	goinstall github.com/chsc/gogl/examples/gopher
+
+and run it from your command line.
+
+Build & install the binding generator
+-------------------------------------
+
+If you want to create your own bindings:
+
+clone the repository:
 
 	git clone http://github.com/chsc/gogl.git
 
@@ -28,9 +35,16 @@ and build it with:
 
 	gomake
 	
-GoGL is also goinstallable:
+GoGL is also goinstall-able:
 
 	goinstall github.com/chsc/gogl
+
+Spec files
+----------
+
+The original spec files from Khronos have errors in them.
+Jason McKesson maintains corrected spec files in his bitbucket repository.
+You can find them here: [GL XML Specs](https://bitbucket.org/alfonse/gl-xml-specs).
 
 Usage examples
 --------------
@@ -58,6 +72,5 @@ TODO
 ----
 
 * Complete spec parser
-* Linux, MacOS, Windows support
-* Filter by category, vendor, extension
+* MacOS, Windows support
 * ...
