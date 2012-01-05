@@ -123,7 +123,8 @@ func writePackage(w io.Writer, packageName string, pak *Package, functsInfo *Fun
 	}
 
 	fmt.Fprintf(w, "import \"C\"\n")
-	fmt.Fprintf(w, "import \"unsafe\"\n\n")
+	fmt.Fprintf(w, "import \"unsafe\"\n")
+	fmt.Fprintf(w, "import \"errors\"\n\n")
 
 	fmt.Fprintf(w, "type (\n")
 	fmt.Fprintf(w, "	Enum     C.GLenum\n")
@@ -154,6 +155,8 @@ func writePackage(w io.Writer, packageName string, pak *Package, functsInfo *Fun
 	if err := writeGoFunctionDefinitions(w, pak.Functions, typeMap); err != nil {
 		return err
 	}
+
+	writeGoInitDefinitions(w, pak.Functions)
 
 	fmt.Fprintf(w, "// EOF")
 
@@ -322,5 +325,27 @@ func writeGoFunctionDefinitions(w io.Writer, functions FunctionCategories, typeM
 			}
 		}
 	}
+	return nil
+}
+
+func writeGoInitDefinitions(w io.Writer, functions FunctionCategories) error {
+	for cat, _ := range functions {
+		fmt.Fprintf(w, "func Init%s() error {\n", GoName(cat))
+		fmt.Fprintf(w, "\tvar ret C.int\n")
+		fmt.Fprintf(w, "\tif ret = C.init_%s(); ret != 0 {\n", cat)
+		fmt.Fprintf(w, "\t\treturn errors.New(\"unable to initialize %s\")\n", cat)
+		fmt.Fprintf(w, "\t}\n")
+		fmt.Fprintf(w, "\treturn nil\n")
+		fmt.Fprintf(w, "}\n")
+	}
+	fmt.Fprintf(w, "func Init() error {\n")
+	fmt.Fprintf(w, "\tvar err error\n")
+	for cat, _ := range functions {
+		fmt.Fprintf(w, "\tif err = Init%s(); err != nil {\n", GoName(cat))
+		fmt.Fprintf(w, "\t\treturn err\n")
+		fmt.Fprintf(w, "\t}\n")
+	}
+	fmt.Fprintf(w, "\treturn nil\n")
+	fmt.Fprintf(w, "}\n")
 	return nil
 }
