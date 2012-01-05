@@ -13,6 +13,17 @@ For example, OpenGL 2.1 bindings can be installed using goinstall:
 
 The new 'go install' should also work.
 
+Documentation
+-------------
+
+Khronos documentation:
+
+* [OpenGL 2.1](http://www.opengl.org/sdk/docs/man)
+
+Package documentation:
+
+* [OpenGL 2.1](http://gopkgdoc.appspot.com/pkg/github.com/chsc/gogl/gl21)
+
 Examples
 --------
 
