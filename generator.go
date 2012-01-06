@@ -40,6 +40,8 @@ func generatePackage(packageName string, pak *Package, functsInfo *FunctionsInfo
 }
 
 func writePackage(w io.Writer, packageName string, pak *Package, functsInfo *FunctionsInfo, typeMap TypeMap) error {
+	highestMajorVersion := -1
+
 	fmt.Fprintf(w, "// Automatically generated OpenGL binding.\n// \n")
 	fmt.Fprintf(w, "// Categories in this package: \n// \n")
 	for cat, _ := range pak.Functions {
@@ -49,9 +51,15 @@ func writePackage(w io.Writer, packageName string, pak *Package, functsInfo *Fun
 			fmt.Fprintf(w, "// %s: %s\n// \n", cat, MakeExtensionSpecDocUrl(pc.Vendor, pc.Name))
 		case CategoryVersion:
 			fmt.Fprintf(w, "// %s\n// \n", cat)
+			if pc.Version.Major > highestMajorVersion {
+				highestMajorVersion = pc.Version.Major
+			}
 		case CategoryDepVersion:
 			fmt.Fprintf(w, "// %s\n// \n", cat)
 		}
+	}
+	if highestMajorVersion > 0 {
+		fmt.Fprintf(w, "// %s\n// \n", MakeGLDocUrl(highestMajorVersion))
 	}
 	fmt.Fprintf(w, "package %s\n\n", packageName)
 
@@ -152,7 +160,7 @@ func writePackage(w io.Writer, packageName string, pak *Package, functsInfo *Fun
 
 	writeGoEnumDefinitions(w, pak.Enums)
 
-	if err := writeGoFunctionDefinitions(w, pak.Functions, typeMap); err != nil {
+	if err := writeGoFunctionDefinitions(w, pak.Functions, typeMap, highestMajorVersion); err != nil {
 		return err
 	}
 
@@ -265,10 +273,13 @@ func writeGoEnumDefinitions(w io.Writer, enumCats EnumCategories) {
 	}
 }
 
-func writeGoFunctionDefinitions(w io.Writer, functions FunctionCategories, typeMap TypeMap) error {
+func writeGoFunctionDefinitions(w io.Writer, functions FunctionCategories, typeMap TypeMap, majorVersion int) error {
 	for cat, fs := range functions {
-		fmt.Fprintf(w, "// %s\n", cat)
+		fmt.Fprintf(w, "// %s\n\n", cat)
 		for _, f := range fs {
+			if majorVersion > 0 {
+				fmt.Fprintf(w, "// %s\n", MakeFuncDocUrl(majorVersion, f.Name))
+			}
 			fmt.Fprintf(w, "func %s(", f.Name)
 			for i, _ := range f.Parameters {
 				p := &f.Parameters[i]

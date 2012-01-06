@@ -2,6 +2,8 @@
 // 
 // Categories in this package: 
 // 
+// VERSION_1_2_DEPRECATED
+// 
 // VERSION_2_1
 // 
 // VERSION_2_0
@@ -26,7 +28,7 @@
 // 
 // VERSION_1_0_DEPRECATED
 // 
-// VERSION_1_2_DEPRECATED
+// http://www.opengl.org/sdk/docs/man
 // 
 package gl21
 
@@ -836,6 +838,103 @@ package gl21
 // void (APIENTRYP ptrgoglResetHistogram)(GLenum target);
 // void (APIENTRYP ptrgoglResetMinmax)(GLenum target);
 // 
+// //  VERSION_1_2_DEPRECATED
+// void goglColorTable(GLenum target, GLenum internalformat, GLsizei width, GLenum format, GLenum type, GLvoid* table) {
+// 	(*ptrgoglColorTable)(target, internalformat, width, format, type, table);
+// }
+// void goglColorTableParameterfv(GLenum target, GLenum pname, GLfloat* params) {
+// 	(*ptrgoglColorTableParameterfv)(target, pname, params);
+// }
+// void goglColorTableParameteriv(GLenum target, GLenum pname, GLint* params) {
+// 	(*ptrgoglColorTableParameteriv)(target, pname, params);
+// }
+// void goglCopyColorTable(GLenum target, GLenum internalformat, GLint x, GLint y, GLsizei width) {
+// 	(*ptrgoglCopyColorTable)(target, internalformat, x, y, width);
+// }
+// void goglGetColorTable(GLenum target, GLenum format, GLenum type, GLvoid* table) {
+// 	(*ptrgoglGetColorTable)(target, format, type, table);
+// }
+// void goglGetColorTableParameterfv(GLenum target, GLenum pname, GLfloat* params) {
+// 	(*ptrgoglGetColorTableParameterfv)(target, pname, params);
+// }
+// void goglGetColorTableParameteriv(GLenum target, GLenum pname, GLint* params) {
+// 	(*ptrgoglGetColorTableParameteriv)(target, pname, params);
+// }
+// void goglColorSubTable(GLenum target, GLsizei start, GLsizei count, GLenum format, GLenum type, GLvoid* data) {
+// 	(*ptrgoglColorSubTable)(target, start, count, format, type, data);
+// }
+// void goglCopyColorSubTable(GLenum target, GLsizei start, GLint x, GLint y, GLsizei width) {
+// 	(*ptrgoglCopyColorSubTable)(target, start, x, y, width);
+// }
+// void goglConvolutionFilter1D(GLenum target, GLenum internalformat, GLsizei width, GLenum format, GLenum type, GLvoid* image) {
+// 	(*ptrgoglConvolutionFilter1D)(target, internalformat, width, format, type, image);
+// }
+// void goglConvolutionFilter2D(GLenum target, GLenum internalformat, GLsizei width, GLsizei height, GLenum format, GLenum type, GLvoid* image) {
+// 	(*ptrgoglConvolutionFilter2D)(target, internalformat, width, height, format, type, image);
+// }
+// void goglConvolutionParameterf(GLenum target, GLenum pname, GLfloat params) {
+// 	(*ptrgoglConvolutionParameterf)(target, pname, params);
+// }
+// void goglConvolutionParameterfv(GLenum target, GLenum pname, GLfloat* params) {
+// 	(*ptrgoglConvolutionParameterfv)(target, pname, params);
+// }
+// void goglConvolutionParameteri(GLenum target, GLenum pname, GLint params) {
+// 	(*ptrgoglConvolutionParameteri)(target, pname, params);
+// }
+// void goglConvolutionParameteriv(GLenum target, GLenum pname, GLint* params) {
+// 	(*ptrgoglConvolutionParameteriv)(target, pname, params);
+// }
+// void goglCopyConvolutionFilter1D(GLenum target, GLenum internalformat, GLint x, GLint y, GLsizei width) {
+// 	(*ptrgoglCopyConvolutionFilter1D)(target, internalformat, x, y, width);
+// }
+// void goglCopyConvolutionFilter2D(GLenum target, GLenum internalformat, GLint x, GLint y, GLsizei width, GLsizei height) {
+// 	(*ptrgoglCopyConvolutionFilter2D)(target, internalformat, x, y, width, height);
+// }
+// void goglGetConvolutionFilter(GLenum target, GLenum format, GLenum type, GLvoid* image) {
+// 	(*ptrgoglGetConvolutionFilter)(target, format, type, image);
+// }
+// void goglGetConvolutionParameterfv(GLenum target, GLenum pname, GLfloat* params) {
+// 	(*ptrgoglGetConvolutionParameterfv)(target, pname, params);
+// }
+// void goglGetConvolutionParameteriv(GLenum target, GLenum pname, GLint* params) {
+// 	(*ptrgoglGetConvolutionParameteriv)(target, pname, params);
+// }
+// void goglGetSeparableFilter(GLenum target, GLenum format, GLenum type, GLvoid* row, GLvoid* column, GLvoid* span) {
+// 	(*ptrgoglGetSeparableFilter)(target, format, type, row, column, span);
+// }
+// void goglSeparableFilter2D(GLenum target, GLenum internalformat, GLsizei width, GLsizei height, GLenum format, GLenum type, GLvoid* row, GLvoid* column) {
+// 	(*ptrgoglSeparableFilter2D)(target, internalformat, width, height, format, type, row, column);
+// }
+// void goglGetHistogram(GLenum target, GLboolean reset, GLenum format, GLenum type, GLvoid* values) {
+// 	(*ptrgoglGetHistogram)(target, reset, format, type, values);
+// }
+// void goglGetHistogramParameterfv(GLenum target, GLenum pname, GLfloat* params) {
+// 	(*ptrgoglGetHistogramParameterfv)(target, pname, params);
+// }
+// void goglGetHistogramParameteriv(GLenum target, GLenum pname, GLint* params) {
+// 	(*ptrgoglGetHistogramParameteriv)(target, pname, params);
+// }
+// void goglGetMinmax(GLenum target, GLboolean reset, GLenum format, GLenum type, GLvoid* values) {
+// 	(*ptrgoglGetMinmax)(target, reset, format, type, values);
+// }
+// void goglGetMinmaxParameterfv(GLenum target, GLenum pname, GLfloat* params) {
+// 	(*ptrgoglGetMinmaxParameterfv)(target, pname, params);
+// }
+// void goglGetMinmaxParameteriv(GLenum target, GLenum pname, GLint* params) {
+// 	(*ptrgoglGetMinmaxParameteriv)(target, pname, params);
+// }
+// void goglHistogram(GLenum target, GLsizei width, GLenum internalformat, GLboolean sink) {
+// 	(*ptrgoglHistogram)(target, width, internalformat, sink);
+// }
+// void goglMinmax(GLenum target, GLenum internalformat, GLboolean sink) {
+// 	(*ptrgoglMinmax)(target, internalformat, sink);
+// }
+// void goglResetHistogram(GLenum target) {
+// 	(*ptrgoglResetHistogram)(target);
+// }
+// void goglResetMinmax(GLenum target) {
+// 	(*ptrgoglResetMinmax)(target);
+// }
 // //  VERSION_2_1
 // void goglUniformMatrix2x3fv(GLint location, GLsizei count, GLboolean transpose, GLfloat* value) {
 // 	(*ptrgoglUniformMatrix2x3fv)(location, count, transpose, value);
@@ -2501,103 +2600,6 @@ package gl21
 // void goglTranslatef(GLfloat x, GLfloat y, GLfloat z) {
 // 	(*ptrgoglTranslatef)(x, y, z);
 // }
-// //  VERSION_1_2_DEPRECATED
-// void goglColorTable(GLenum target, GLenum internalformat, GLsizei width, GLenum format, GLenum type, GLvoid* table) {
-// 	(*ptrgoglColorTable)(target, internalformat, width, format, type, table);
-// }
-// void goglColorTableParameterfv(GLenum target, GLenum pname, GLfloat* params) {
-// 	(*ptrgoglColorTableParameterfv)(target, pname, params);
-// }
-// void goglColorTableParameteriv(GLenum target, GLenum pname, GLint* params) {
-// 	(*ptrgoglColorTableParameteriv)(target, pname, params);
-// }
-// void goglCopyColorTable(GLenum target, GLenum internalformat, GLint x, GLint y, GLsizei width) {
-// 	(*ptrgoglCopyColorTable)(target, internalformat, x, y, width);
-// }
-// void goglGetColorTable(GLenum target, GLenum format, GLenum type, GLvoid* table) {
-// 	(*ptrgoglGetColorTable)(target, format, type, table);
-// }
-// void goglGetColorTableParameterfv(GLenum target, GLenum pname, GLfloat* params) {
-// 	(*ptrgoglGetColorTableParameterfv)(target, pname, params);
-// }
-// void goglGetColorTableParameteriv(GLenum target, GLenum pname, GLint* params) {
-// 	(*ptrgoglGetColorTableParameteriv)(target, pname, params);
-// }
-// void goglColorSubTable(GLenum target, GLsizei start, GLsizei count, GLenum format, GLenum type, GLvoid* data) {
-// 	(*ptrgoglColorSubTable)(target, start, count, format, type, data);
-// }
-// void goglCopyColorSubTable(GLenum target, GLsizei start, GLint x, GLint y, GLsizei width) {
-// 	(*ptrgoglCopyColorSubTable)(target, start, x, y, width);
-// }
-// void goglConvolutionFilter1D(GLenum target, GLenum internalformat, GLsizei width, GLenum format, GLenum type, GLvoid* image) {
-// 	(*ptrgoglConvolutionFilter1D)(target, internalformat, width, format, type, image);
-// }
-// void goglConvolutionFilter2D(GLenum target, GLenum internalformat, GLsizei width, GLsizei height, GLenum format, GLenum type, GLvoid* image) {
-// 	(*ptrgoglConvolutionFilter2D)(target, internalformat, width, height, format, type, image);
-// }
-// void goglConvolutionParameterf(GLenum target, GLenum pname, GLfloat params) {
-// 	(*ptrgoglConvolutionParameterf)(target, pname, params);
-// }
-// void goglConvolutionParameterfv(GLenum target, GLenum pname, GLfloat* params) {
-// 	(*ptrgoglConvolutionParameterfv)(target, pname, params);
-// }
-// void goglConvolutionParameteri(GLenum target, GLenum pname, GLint params) {
-// 	(*ptrgoglConvolutionParameteri)(target, pname, params);
-// }
-// void goglConvolutionParameteriv(GLenum target, GLenum pname, GLint* params) {
-// 	(*ptrgoglConvolutionParameteriv)(target, pname, params);
-// }
-// void goglCopyConvolutionFilter1D(GLenum target, GLenum internalformat, GLint x, GLint y, GLsizei width) {
-// 	(*ptrgoglCopyConvolutionFilter1D)(target, internalformat, x, y, width);
-// }
-// void goglCopyConvolutionFilter2D(GLenum target, GLenum internalformat, GLint x, GLint y, GLsizei width, GLsizei height) {
-// 	(*ptrgoglCopyConvolutionFilter2D)(target, internalformat, x, y, width, height);
-// }
-// void goglGetConvolutionFilter(GLenum target, GLenum format, GLenum type, GLvoid* image) {
-// 	(*ptrgoglGetConvolutionFilter)(target, format, type, image);
-// }
-// void goglGetConvolutionParameterfv(GLenum target, GLenum pname, GLfloat* params) {
-// 	(*ptrgoglGetConvolutionParameterfv)(target, pname, params);
-// }
-// void goglGetConvolutionParameteriv(GLenum target, GLenum pname, GLint* params) {
-// 	(*ptrgoglGetConvolutionParameteriv)(target, pname, params);
-// }
-// void goglGetSeparableFilter(GLenum target, GLenum format, GLenum type, GLvoid* row, GLvoid* column, GLvoid* span) {
-// 	(*ptrgoglGetSeparableFilter)(target, format, type, row, column, span);
-// }
-// void goglSeparableFilter2D(GLenum target, GLenum internalformat, GLsizei width, GLsizei height, GLenum format, GLenum type, GLvoid* row, GLvoid* column) {
-// 	(*ptrgoglSeparableFilter2D)(target, internalformat, width, height, format, type, row, column);
-// }
-// void goglGetHistogram(GLenum target, GLboolean reset, GLenum format, GLenum type, GLvoid* values) {
-// 	(*ptrgoglGetHistogram)(target, reset, format, type, values);
-// }
-// void goglGetHistogramParameterfv(GLenum target, GLenum pname, GLfloat* params) {
-// 	(*ptrgoglGetHistogramParameterfv)(target, pname, params);
-// }
-// void goglGetHistogramParameteriv(GLenum target, GLenum pname, GLint* params) {
-// 	(*ptrgoglGetHistogramParameteriv)(target, pname, params);
-// }
-// void goglGetMinmax(GLenum target, GLboolean reset, GLenum format, GLenum type, GLvoid* values) {
-// 	(*ptrgoglGetMinmax)(target, reset, format, type, values);
-// }
-// void goglGetMinmaxParameterfv(GLenum target, GLenum pname, GLfloat* params) {
-// 	(*ptrgoglGetMinmaxParameterfv)(target, pname, params);
-// }
-// void goglGetMinmaxParameteriv(GLenum target, GLenum pname, GLint* params) {
-// 	(*ptrgoglGetMinmaxParameteriv)(target, pname, params);
-// }
-// void goglHistogram(GLenum target, GLsizei width, GLenum internalformat, GLboolean sink) {
-// 	(*ptrgoglHistogram)(target, width, internalformat, sink);
-// }
-// void goglMinmax(GLenum target, GLenum internalformat, GLboolean sink) {
-// 	(*ptrgoglMinmax)(target, internalformat, sink);
-// }
-// void goglResetHistogram(GLenum target) {
-// 	(*ptrgoglResetHistogram)(target);
-// }
-// void goglResetMinmax(GLenum target) {
-// 	(*ptrgoglResetMinmax)(target);
-// }
 // 
 // int init_VERSION_2_1() {
 // 	ptrgoglUniformMatrix2x3fv = goglGetProcAddress("glUniformMatrix2x3fv");
@@ -3833,127 +3835,8 @@ type (
 	Sizeiptr C.GLsizeiptr
 )
 
-// VERSION_2_1
-const (
-	COMPRESSED_SRGB = 0x8C48
-	SRGB = 0x8C40
-	SRGB_ALPHA = 0x8C42
-	FLOAT_MAT2x4 = 0x8B66
-	FLOAT_MAT2x3 = 0x8B65
-	PIXEL_UNPACK_BUFFER = 0x88EC
-	PIXEL_PACK_BUFFER = 0x88EB
-	SRGB8_ALPHA8 = 0x8C43
-	PIXEL_PACK_BUFFER_BINDING = 0x88ED
-	SRGB8 = 0x8C41
-	PIXEL_UNPACK_BUFFER_BINDING = 0x88EF
-	COMPRESSED_SRGB_ALPHA = 0x8C49
-	FLOAT_MAT4x2 = 0x8B69
-	FLOAT_MAT4x3 = 0x8B6A
-	FLOAT_MAT3x4 = 0x8B68
-	FLOAT_MAT3x2 = 0x8B67
-)
-// VERSION_2_0
-const (
-	FLOAT_MAT4 = 0x8B5C
-	COMPILE_STATUS = 0x8B81
-	FLOAT_MAT2 = 0x8B5A
-	SAMPLER_3D = 0x8B5F
-	FLOAT_MAT3 = 0x8B5B
-	SHADER_TYPE = 0x8B4F
-	MAX_VERTEX_ATTRIBS = 0x8869
-	SAMPLER_1D = 0x8B5D
-	SAMPLER_2D_SHADOW = 0x8B62
-	SAMPLER_CUBE = 0x8B60
-	STENCIL_BACK_PASS_DEPTH_FAIL = 0x8802
-	BOOL_VEC2 = 0x8B57
-	BOOL_VEC3 = 0x8B58
-	BOOL_VEC4 = 0x8B59
-	FRAGMENT_SHADER = 0x8B30
-	STENCIL_BACK_FUNC = 0x8800
-	FRAGMENT_SHADER_DERIVATIVE_HINT = 0x8B8B
-	BOOL = 0x8B56
-	VERTEX_PROGRAM_POINT_SIZE = 0x8642
-	UPPER_LEFT = 0x8CA2
-	VERTEX_ATTRIB_ARRAY_STRIDE = 0x8624
-	SHADER_SOURCE_LENGTH = 0x8B88
-	ACTIVE_UNIFORM_MAX_LENGTH = 0x8B87
-	SAMPLER_2D = 0x8B5E
-	POINT_SPRITE_COORD_ORIGIN = 0x8CA0
-	ACTIVE_ATTRIBUTES = 0x8B89
-	DRAW_BUFFER2 = 0x8827
-	DRAW_BUFFER3 = 0x8828
-	DRAW_BUFFER0 = 0x8825
-	DRAW_BUFFER1 = 0x8826
-	DRAW_BUFFER6 = 0x882B
-	DRAW_BUFFER7 = 0x882C
-	DRAW_BUFFER4 = 0x8829
-	DRAW_BUFFER5 = 0x882A
-	DRAW_BUFFER8 = 0x882D
-	DRAW_BUFFER9 = 0x882E
-	BLEND_EQUATION_ALPHA = 0x883D
-	BLEND_EQUATION_RGB = 0x8009
-	STENCIL_BACK_VALUE_MASK = 0x8CA4
-	VERTEX_ATTRIB_ARRAY_SIZE = 0x8623
-	STENCIL_BACK_PASS_DEPTH_PASS = 0x8803
-	VERTEX_SHADER = 0x8B31
-	VERTEX_ATTRIB_ARRAY_TYPE = 0x8625
-	INT_VEC4 = 0x8B55
-	INT_VEC3 = 0x8B54
-	INT_VEC2 = 0x8B53
-	MAX_FRAGMENT_UNIFORM_COMPONENTS = 0x8B49
-	MAX_DRAW_BUFFERS = 0x8824
-	VERTEX_ATTRIB_ARRAY_NORMALIZED = 0x886A
-	INFO_LOG_LENGTH = 0x8B84
-	DELETE_STATUS = 0x8B80
-	FLOAT_VEC4 = 0x8B52
-	FLOAT_VEC2 = 0x8B50
-	FLOAT_VEC3 = 0x8B51
-	STENCIL_BACK_REF = 0x8CA3
-	ACTIVE_ATTRIBUTE_MAX_LENGTH = 0x8B8A
-	SHADING_LANGUAGE_VERSION = 0x8B8C
-	MAX_COMBINED_TEXTURE_IMAGE_UNITS = 0x8B4D
-	ACTIVE_UNIFORMS = 0x8B86
-	ATTACHED_SHADERS = 0x8B85
-	VERTEX_ATTRIB_ARRAY_ENABLED = 0x8622
-	MAX_VERTEX_UNIFORM_COMPONENTS = 0x8B4A
-	MAX_TEXTURE_IMAGE_UNITS = 0x8872
-	STENCIL_BACK_FAIL = 0x8801
-	VERTEX_ATTRIB_ARRAY_POINTER = 0x8645
-	MAX_VARYING_FLOATS = 0x8B4B
-	CURRENT_VERTEX_ATTRIB = 0x8626
-	SAMPLER_1D_SHADOW = 0x8B61
-	DRAW_BUFFER15 = 0x8834
-	DRAW_BUFFER14 = 0x8833
-	DRAW_BUFFER11 = 0x8830
-	DRAW_BUFFER10 = 0x882F
-	DRAW_BUFFER13 = 0x8832
-	DRAW_BUFFER12 = 0x8831
-	LINK_STATUS = 0x8B82
-	CURRENT_PROGRAM = 0x8B8D
-	LOWER_LEFT = 0x8CA1
-	MAX_VERTEX_TEXTURE_IMAGE_UNITS = 0x8B4C
-	VALIDATE_STATUS = 0x8B83
-	STENCIL_BACK_WRITEMASK = 0x8CA5
-)
 // VERSION_1_3_DEPRECATED
 const (
-	COMPRESSED_LUMINANCE = 0x84EA
-	DOT3_RGBA = 0x86AF
-	OPERAND0_RGB = 0x8590
-	DOT3_RGB = 0x86AE
-	CLIENT_ACTIVE_TEXTURE = 0x84E1
-	COMBINE = 0x8570
-	TRANSPOSE_MODELVIEW_MATRIX = 0x84E3
-	SOURCE1_RGB = 0x8581
-	INTERPOLATE = 0x8575
-	RGB_SCALE = 0x8573
-	COMBINE_ALPHA = 0x8572
-	TRANSPOSE_TEXTURE_MATRIX = 0x84E5
-	OPERAND1_ALPHA = 0x8599
-	TRANSPOSE_COLOR_MATRIX = 0x84E6
-	OPERAND1_RGB = 0x8591
-	PREVIOUS = 0x8578
-	OPERAND2_RGB = 0x8592
 	CONSTANT = 0x8576
 	SOURCE2_RGB = 0x8582
 	MAX_TEXTURE_UNITS = 0x84E2
@@ -3974,6 +3857,23 @@ const (
 	COMPRESSED_ALPHA = 0x84E9
 	PRIMARY_COLOR = 0x8577
 	COMBINE_RGB = 0x8571
+	COMPRESSED_LUMINANCE = 0x84EA
+	DOT3_RGBA = 0x86AF
+	OPERAND0_RGB = 0x8590
+	DOT3_RGB = 0x86AE
+	CLIENT_ACTIVE_TEXTURE = 0x84E1
+	COMBINE = 0x8570
+	TRANSPOSE_MODELVIEW_MATRIX = 0x84E3
+	SOURCE1_RGB = 0x8581
+	INTERPOLATE = 0x8575
+	RGB_SCALE = 0x8573
+	COMBINE_ALPHA = 0x8572
+	TRANSPOSE_TEXTURE_MATRIX = 0x84E5
+	OPERAND1_ALPHA = 0x8599
+	TRANSPOSE_COLOR_MATRIX = 0x84E6
+	OPERAND1_RGB = 0x8591
+	PREVIOUS = 0x8578
+	OPERAND2_RGB = 0x8592
 )
 // VERSION_2_1_DEPRECATED
 const (
@@ -4013,8 +3913,6 @@ const (
 )
 // VERSION_1_4
 const (
-	BLEND_DST_ALPHA = 0x80CA
-	POINT_FADE_THRESHOLD_SIZE = 0x8128
 	INCR_WRAP = 0x8507
 	TEXTURE_LOD_BIAS = 0x8501
 	BLEND_SRC_ALPHA = 0x80CB
@@ -4029,9 +3927,17 @@ const (
 	TEXTURE_COMPARE_MODE = 0x884C
 	MAX_TEXTURE_LOD_BIAS = 0x84FD
 	TEXTURE_DEPTH_SIZE = 0x884A
+	BLEND_DST_ALPHA = 0x80CA
+	POINT_FADE_THRESHOLD_SIZE = 0x8128
 )
 // VERSION_1_5
 const (
+	QUERY_RESULT = 0x8866
+	VERTEX_ATTRIB_ARRAY_BUFFER_BINDING = 0x889F
+	BUFFER_MAPPED = 0x88BC
+	STREAM_READ = 0x88E1
+	BUFFER_USAGE = 0x8765
+	STATIC_READ = 0x88E5
 	ARRAY_BUFFER_BINDING = 0x8894
 	STATIC_COPY = 0x88E6
 	BUFFER_ACCESS = 0x88BB
@@ -4053,42 +3959,9 @@ const (
 	STREAM_DRAW = 0x88E0
 	SAMPLES_PASSED = 0x8914
 	WRITE_ONLY = 0x88B9
-	QUERY_RESULT = 0x8866
-	VERTEX_ATTRIB_ARRAY_BUFFER_BINDING = 0x889F
-	BUFFER_MAPPED = 0x88BC
-	STREAM_READ = 0x88E1
-	BUFFER_USAGE = 0x8765
-	STATIC_READ = 0x88E5
 )
 // VERSION_1_1
 const (
-	XOR = 0x1506
-	STENCIL_WRITEMASK = 0x0B98
-	POLYGON_OFFSET_POINT = 0x2A01
-	OR = 0x1507
-	DST_ALPHA = 0x0304
-	CULL_FACE = 0x0B44
-	LINE_WIDTH_RANGE = 0x0B22
-	FLOAT = 0x1406
-	NOTEQUAL = 0x0205
-	DEPTH_COMPONENT = 0x1902
-	ZERO = 0
-	COPY = 0x1503
-	TEXTURE = 0x1702
-	RGBA = 0x1908
-	PACK_SKIP_ROWS = 0x0D03
-	LINE_LOOP = 0x0002
-	RGB = 0x1907
-	SUBPIXEL_BITS = 0x0D50
-	NO_ERROR = 0
-	BLEND_SRC = 0x0BE1
-	LINE_WIDTH = 0x0B21
-	STENCIL_PASS_DEPTH_FAIL = 0x0B95
-	LESS = 0x0201
-	TEXTURE_WRAP_T = 0x2803
-	PACK_ALIGNMENT = 0x0D05
-	TEXTURE_WRAP_S = 0x2802
-	UNPACK_ROW_LENGTH = 0x0CF2
 	LINE_SMOOTH = 0x0B20
 	POLYGON_SMOOTH_HINT = 0x0C53
 	LINE_STRIP = 0x0003
@@ -4261,9 +4134,43 @@ const (
 	DST_COLOR = 0x0306
 	NEAREST_MIPMAP_NEAREST = 0x2700
 	SRC_COLOR = 0x0300
+	XOR = 0x1506
+	STENCIL_WRITEMASK = 0x0B98
+	POLYGON_OFFSET_POINT = 0x2A01
+	OR = 0x1507
+	DST_ALPHA = 0x0304
+	CULL_FACE = 0x0B44
+	LINE_WIDTH_RANGE = 0x0B22
+	FLOAT = 0x1406
+	NOTEQUAL = 0x0205
+	DEPTH_COMPONENT = 0x1902
+	ZERO = 0
+	COPY = 0x1503
+	TEXTURE = 0x1702
+	RGBA = 0x1908
+	PACK_SKIP_ROWS = 0x0D03
+	LINE_LOOP = 0x0002
+	RGB = 0x1907
+	SUBPIXEL_BITS = 0x0D50
+	NO_ERROR = 0
+	BLEND_SRC = 0x0BE1
+	LINE_WIDTH = 0x0B21
+	STENCIL_PASS_DEPTH_FAIL = 0x0B95
+	LESS = 0x0201
+	TEXTURE_WRAP_T = 0x2803
+	PACK_ALIGNMENT = 0x0D05
+	TEXTURE_WRAP_S = 0x2802
+	UNPACK_ROW_LENGTH = 0x0CF2
 )
 // VERSION_1_4_DEPRECATED
 const (
+	FOG_COORDINATE_ARRAY_TYPE = 0x8454
+	CURRENT_FOG_COORDINATE = 0x8453
+	FRAGMENT_DEPTH = 0x8452
+	SECONDARY_COLOR_ARRAY = 0x845E
+	GENERATE_MIPMAP = 0x8191
+	COMPARE_R_TO_TEXTURE = 0x884E
+	POINT_DISTANCE_ATTENUATION = 0x8129
 	FOG_COORDINATE = 0x8451
 	POINT_SIZE_MAX = 0x8127
 	FOG_COORDINATE_ARRAY_STRIDE = 0x8455
@@ -4280,16 +4187,16 @@ const (
 	SECONDARY_COLOR_ARRAY_TYPE = 0x845B
 	FOG_COORDINATE_ARRAY = 0x8457
 	POINT_SIZE_MIN = 0x8126
-	FOG_COORDINATE_ARRAY_TYPE = 0x8454
-	CURRENT_FOG_COORDINATE = 0x8453
-	FRAGMENT_DEPTH = 0x8452
-	SECONDARY_COLOR_ARRAY = 0x845E
-	GENERATE_MIPMAP = 0x8191
-	COMPARE_R_TO_TEXTURE = 0x884E
-	POINT_DISTANCE_ATTENUATION = 0x8129
 )
 // VERSION_1_2
 const (
+	UNSIGNED_SHORT_5_6_5 = 0x8363
+	TEXTURE_BASE_LEVEL = 0x813C
+	SMOOTH_LINE_WIDTH_GRANULARITY = 0x0B23
+	TEXTURE_WRAP_R = 0x8072
+	UNPACK_SKIP_IMAGES = 0x806D
+	PACK_IMAGE_HEIGHT = 0x806C
+	TEXTURE_MIN_LOD = 0x813A
 	BGR = 0x80E0
 	UNSIGNED_INT_10_10_10_2 = 0x8036
 	SMOOTH_LINE_WIDTH_RANGE = 0x0B22
@@ -4319,16 +4226,20 @@ const (
 	UNSIGNED_BYTE_2_3_3_REV = 0x8362
 	UNSIGNED_SHORT_4_4_4_4_REV = 0x8365
 	UNSIGNED_INT_8_8_8_8 = 0x8035
-	UNSIGNED_SHORT_5_6_5 = 0x8363
-	TEXTURE_BASE_LEVEL = 0x813C
-	SMOOTH_LINE_WIDTH_GRANULARITY = 0x0B23
-	TEXTURE_WRAP_R = 0x8072
-	UNPACK_SKIP_IMAGES = 0x806D
-	PACK_IMAGE_HEIGHT = 0x806C
-	TEXTURE_MIN_LOD = 0x813A
 )
 // VERSION_1_3
 const (
+	COMPRESSED_RGBA = 0x84EE
+	MAX_CUBE_MAP_TEXTURE_SIZE = 0x851C
+	SAMPLE_COVERAGE_INVERT = 0x80AB
+	TEXTURE4 = 0x84C4
+	TEXTURE5 = 0x84C5
+	TEXTURE6 = 0x84C6
+	TEXTURE7 = 0x84C7
+	TEXTURE0 = 0x84C0
+	TEXTURE1 = 0x84C1
+	TEXTURE2 = 0x84C2
+	TEXTURE3 = 0x84C3
 	TEXTURE8 = 0x84C8
 	TEXTURE9 = 0x84C9
 	SAMPLE_COVERAGE_VALUE = 0x80AA
@@ -4377,120 +4288,9 @@ const (
 	CLAMP_TO_BORDER = 0x812D
 	TEXTURE_BINDING_CUBE_MAP = 0x8514
 	SAMPLE_ALPHA_TO_ONE = 0x809F
-	COMPRESSED_RGBA = 0x84EE
-	MAX_CUBE_MAP_TEXTURE_SIZE = 0x851C
-	SAMPLE_COVERAGE_INVERT = 0x80AB
-	TEXTURE4 = 0x84C4
-	TEXTURE5 = 0x84C5
-	TEXTURE6 = 0x84C6
-	TEXTURE7 = 0x84C7
-	TEXTURE0 = 0x84C0
-	TEXTURE1 = 0x84C1
-	TEXTURE2 = 0x84C2
-	TEXTURE3 = 0x84C3
 )
 // VERSION_1_1_DEPRECATED
 const (
-	QUADRATIC_ATTENUATION = 0x1209
-	ACCUM_BUFFER_BIT = 0x00000200
-	TEXTURE_GEN_MODE = 0x2500
-	ALPHA_SCALE = 0x0D1C
-	CLIENT_ALL_ATTRIB_BITS = 0xFFFFFFFF
-	T4F_C4F_N3F_V4F = 0x2A2D
-	TEXTURE_STACK_DEPTH = 0x0BA5
-	INTENSITY12 = 0x804C
-	FEEDBACK_BUFFER_SIZE = 0x0DF1
-	FOG_BIT = 0x00000080
-	Q = 0x2003
-	PIXEL_MAP_G_TO_G = 0x0C77
-	TEXTURE_MATRIX = 0x0BA8
-	INTENSITY16 = 0x804D
-	S = 0x2000
-	TEXTURE_ENV_COLOR = 0x2201
-	R = 0x2002
-	T2F_C3F_V3F = 0x2A2A
-	T = 0x2001
-	PIXEL_MAP_I_TO_B_SIZE = 0x0CB4
-	MAP_COLOR = 0x0D10
-	PROJECTION = 0x1701
-	EDGE_FLAG_ARRAY_POINTER = 0x8093
-	VERTEX_ARRAY_POINTER = 0x808E
-	CURRENT_INDEX = 0x0B01
-	LIST_MODE = 0x0B30
-	LINE_STIPPLE_PATTERN = 0x0B25
-	NORMALIZE = 0x0BA1
-	DEPTH_BITS = 0x0D56
-	ATTRIB_STACK_DEPTH = 0x0BB0
-	SPOT_EXPONENT = 0x1205
-	PROJECTION_MATRIX = 0x0BA7
-	TEXTURE_GEN_T = 0x0C61
-	EYE_LINEAR = 0x2400
-	NORMAL_ARRAY_STRIDE = 0x807F
-	ACCUM_CLEAR_VALUE = 0x0B80
-	TEXTURE_GEN_R = 0x0C62
-	ORDER = 0x0A01
-	TEXTURE_GEN_S = 0x0C60
-	TEXTURE_GEN_Q = 0x0C63
-	LIGHTING_BIT = 0x00000040
-	BLUE_BIAS = 0x0D1B
-	COLOR_ARRAY_STRIDE = 0x8083
-	PIXEL_MAP_A_TO_A = 0x0C79
-	BITMAP = 0x1A00
-	V2F = 0x2A20
-	FOG_END = 0x0B64
-	LUMINANCE8 = 0x8040
-	C4UB_V2F = 0x2A22
-	TEXTURE_COORD_ARRAY_TYPE = 0x8089
-	MAP2_GRID_DOMAIN = 0x0DD2
-	EXP2 = 0x0801
-	COLOR_MATERIAL_PARAMETER = 0x0B56
-	INDEX_ARRAY_STRIDE = 0x8086
-	VERTEX_ARRAY = 0x8074
-	EYE_PLANE = 0x2502
-	LUMINANCE4 = 0x803F
-	MAX_LIST_NESTING = 0x0B31
-	MAP_STENCIL = 0x0D11
-	LIGHTING = 0x0B50
-	ALPHA_BIAS = 0x0D1D
-	PERSPECTIVE_CORRECTION_HINT = 0x0C50
-	RED_SCALE = 0x0D14
-	INDEX_LOGIC_OP = 0x0BF1
-	DOMAIN = 0x0A02
-	PIXEL_MAP_G_TO_G_SIZE = 0x0CB7
-	X4D_COLOR_TEXTURE = 0x0604
-	MAX_MODELVIEW_STACK_DEPTH = 0x0D36
-	POINT_BIT = 0x00000002
-	COEFF = 0x0A00
-	ACCUM_BLUE_BITS = 0x0D5A
-	INDEX_BITS = 0x0D51
-	LUMINANCE12_ALPHA4 = 0x8046
-	SMOOTH = 0x1D01
-	RENDER_MODE = 0x0C40
-	ACCUM_GREEN_BITS = 0x0D59
-	MAP1_INDEX = 0x0D91
-	X3_BYTES = 0x1408
-	OBJECT_PLANE = 0x2501
-	MAP1_GRID_SEGMENTS = 0x0DD1
-	MAX_LIGHTS = 0x0D31
-	C3F_V3F = 0x2A24
-	POLYGON_BIT = 0x00000008
-	TEXTURE_INTENSITY_SIZE = 0x8061
-	PIXEL_MAP_R_TO_R_SIZE = 0x0CB6
-	FLAT = 0x1D00
-	INDEX_WRITEMASK = 0x0C21
-	PIXEL_MAP_B_TO_B_SIZE = 0x0CB8
-	LUMINANCE_ALPHA = 0x190A
-	LIGHT_MODEL_AMBIENT = 0x0B53
-	MAP1_GRID_DOMAIN = 0x0DD0
-	LIST_BASE = 0x0B32
-	COLOR_INDEXES = 0x1603
-	V3F = 0x2A21
-	BLUE_BITS = 0x0D54
-	SPECULAR = 0x1202
-	TEXTURE_BIT = 0x00040000
-	MATRIX_MODE = 0x0BA0
-	COPY_PIXEL_TOKEN = 0x0706
-	MAX_CLIP_PLANES = 0x0D32
 	PROJECTION_STACK_DEPTH = 0x0BA4
 	FOG_START = 0x0B63
 	FEEDBACK_BUFFER_TYPE = 0x0DF2
@@ -4720,14 +4520,114 @@ const (
 	EDGE_FLAG_ARRAY_STRIDE = 0x808C
 	CURRENT_BIT = 0x00000001
 	FOG_INDEX = 0x0B61
+	QUADRATIC_ATTENUATION = 0x1209
+	ACCUM_BUFFER_BIT = 0x00000200
+	TEXTURE_GEN_MODE = 0x2500
+	ALPHA_SCALE = 0x0D1C
+	CLIENT_ALL_ATTRIB_BITS = 0xFFFFFFFF
+	T4F_C4F_N3F_V4F = 0x2A2D
+	TEXTURE_STACK_DEPTH = 0x0BA5
+	INTENSITY12 = 0x804C
+	FEEDBACK_BUFFER_SIZE = 0x0DF1
+	FOG_BIT = 0x00000080
+	Q = 0x2003
+	PIXEL_MAP_G_TO_G = 0x0C77
+	TEXTURE_MATRIX = 0x0BA8
+	INTENSITY16 = 0x804D
+	S = 0x2000
+	TEXTURE_ENV_COLOR = 0x2201
+	R = 0x2002
+	T2F_C3F_V3F = 0x2A2A
+	T = 0x2001
+	PIXEL_MAP_I_TO_B_SIZE = 0x0CB4
+	MAP_COLOR = 0x0D10
+	PROJECTION = 0x1701
+	EDGE_FLAG_ARRAY_POINTER = 0x8093
+	VERTEX_ARRAY_POINTER = 0x808E
+	CURRENT_INDEX = 0x0B01
+	LIST_MODE = 0x0B30
+	LINE_STIPPLE_PATTERN = 0x0B25
+	NORMALIZE = 0x0BA1
+	DEPTH_BITS = 0x0D56
+	ATTRIB_STACK_DEPTH = 0x0BB0
+	SPOT_EXPONENT = 0x1205
+	PROJECTION_MATRIX = 0x0BA7
+	TEXTURE_GEN_T = 0x0C61
+	EYE_LINEAR = 0x2400
+	NORMAL_ARRAY_STRIDE = 0x807F
+	ACCUM_CLEAR_VALUE = 0x0B80
+	TEXTURE_GEN_R = 0x0C62
+	ORDER = 0x0A01
+	TEXTURE_GEN_S = 0x0C60
+	TEXTURE_GEN_Q = 0x0C63
+	LIGHTING_BIT = 0x00000040
+	BLUE_BIAS = 0x0D1B
+	COLOR_ARRAY_STRIDE = 0x8083
+	PIXEL_MAP_A_TO_A = 0x0C79
+	BITMAP = 0x1A00
+	V2F = 0x2A20
+	FOG_END = 0x0B64
+	LUMINANCE8 = 0x8040
+	C4UB_V2F = 0x2A22
+	TEXTURE_COORD_ARRAY_TYPE = 0x8089
+	MAP2_GRID_DOMAIN = 0x0DD2
+	EXP2 = 0x0801
+	COLOR_MATERIAL_PARAMETER = 0x0B56
+	INDEX_ARRAY_STRIDE = 0x8086
+	VERTEX_ARRAY = 0x8074
+	EYE_PLANE = 0x2502
+	LUMINANCE4 = 0x803F
+	MAX_LIST_NESTING = 0x0B31
+	MAP_STENCIL = 0x0D11
+	LIGHTING = 0x0B50
+	ALPHA_BIAS = 0x0D1D
+	PERSPECTIVE_CORRECTION_HINT = 0x0C50
+	RED_SCALE = 0x0D14
+	INDEX_LOGIC_OP = 0x0BF1
+	DOMAIN = 0x0A02
+	PIXEL_MAP_G_TO_G_SIZE = 0x0CB7
+	X4D_COLOR_TEXTURE = 0x0604
+	MAX_MODELVIEW_STACK_DEPTH = 0x0D36
+	POINT_BIT = 0x00000002
+	COEFF = 0x0A00
+	ACCUM_BLUE_BITS = 0x0D5A
+	INDEX_BITS = 0x0D51
+	LUMINANCE12_ALPHA4 = 0x8046
+	SMOOTH = 0x1D01
+	RENDER_MODE = 0x0C40
+	ACCUM_GREEN_BITS = 0x0D59
+	MAP1_INDEX = 0x0D91
+	X3_BYTES = 0x1408
+	OBJECT_PLANE = 0x2501
+	MAP1_GRID_SEGMENTS = 0x0DD1
+	MAX_LIGHTS = 0x0D31
+	C3F_V3F = 0x2A24
+	POLYGON_BIT = 0x00000008
+	TEXTURE_INTENSITY_SIZE = 0x8061
+	PIXEL_MAP_R_TO_R_SIZE = 0x0CB6
+	FLAT = 0x1D00
+	INDEX_WRITEMASK = 0x0C21
+	PIXEL_MAP_B_TO_B_SIZE = 0x0CB8
+	LUMINANCE_ALPHA = 0x190A
+	LIGHT_MODEL_AMBIENT = 0x0B53
+	MAP1_GRID_DOMAIN = 0x0DD0
+	LIST_BASE = 0x0B32
+	COLOR_INDEXES = 0x1603
+	V3F = 0x2A21
+	BLUE_BITS = 0x0D54
+	SPECULAR = 0x1202
+	TEXTURE_BIT = 0x00040000
+	MATRIX_MODE = 0x0BA0
+	COPY_PIXEL_TOKEN = 0x0706
+	MAX_CLIP_PLANES = 0x0D32
 )
 // VERSION_1_2_DEPRECATED
 const (
+	LIGHT_MODEL_COLOR_CONTROL = 0x81F8
+	SINGLE_COLOR = 0x81F9
 	SEPARATE_SPECULAR_COLOR = 0x81FA
 	ALIASED_POINT_SIZE_RANGE = 0x846D
 	RESCALE_NORMAL = 0x803A
-	LIGHT_MODEL_COLOR_CONTROL = 0x81F8
-	SINGLE_COLOR = 0x81F9
 )
 // VERSION_2_0_DEPRECATED
 const (
@@ -4736,1767 +4636,2465 @@ const (
 	VERTEX_PROGRAM_TWO_SIDE = 0x8643
 	COORD_REPLACE = 0x8862
 )
-// VERSION_1_2_DEPRECATED
-func ColorTable(target Enum, internalformat Enum, width Sizei, format Enum, type_ Enum, table Pointer)  {
-	C.goglColorTable((C.GLenum)(target), (C.GLenum)(internalformat), (C.GLsizei)(width), (C.GLenum)(format), (C.GLenum)(type_), (unsafe.Pointer)(table))
-}
-func ColorTableParameterfv(target Enum, pname Enum, params *Float)  {
-	C.goglColorTableParameterfv((C.GLenum)(target), (C.GLenum)(pname), (*C.GLfloat)(params))
-}
-func ColorTableParameteriv(target Enum, pname Enum, params *Int)  {
-	C.goglColorTableParameteriv((C.GLenum)(target), (C.GLenum)(pname), (*C.GLint)(params))
-}
-func CopyColorTable(target Enum, internalformat Enum, x Int, y Int, width Sizei)  {
-	C.goglCopyColorTable((C.GLenum)(target), (C.GLenum)(internalformat), (C.GLint)(x), (C.GLint)(y), (C.GLsizei)(width))
-}
-func GetColorTable(target Enum, format Enum, type_ Enum, table Pointer)  {
-	C.goglGetColorTable((C.GLenum)(target), (C.GLenum)(format), (C.GLenum)(type_), (unsafe.Pointer)(table))
-}
-func GetColorTableParameterfv(target Enum, pname Enum, params *Float)  {
-	C.goglGetColorTableParameterfv((C.GLenum)(target), (C.GLenum)(pname), (*C.GLfloat)(params))
-}
-func GetColorTableParameteriv(target Enum, pname Enum, params *Int)  {
-	C.goglGetColorTableParameteriv((C.GLenum)(target), (C.GLenum)(pname), (*C.GLint)(params))
-}
-func ColorSubTable(target Enum, start Sizei, count Sizei, format Enum, type_ Enum, data Pointer)  {
-	C.goglColorSubTable((C.GLenum)(target), (C.GLsizei)(start), (C.GLsizei)(count), (C.GLenum)(format), (C.GLenum)(type_), (unsafe.Pointer)(data))
-}
-func CopyColorSubTable(target Enum, start Sizei, x Int, y Int, width Sizei)  {
-	C.goglCopyColorSubTable((C.GLenum)(target), (C.GLsizei)(start), (C.GLint)(x), (C.GLint)(y), (C.GLsizei)(width))
-}
-func ConvolutionFilter1D(target Enum, internalformat Enum, width Sizei, format Enum, type_ Enum, image Pointer)  {
-	C.goglConvolutionFilter1D((C.GLenum)(target), (C.GLenum)(internalformat), (C.GLsizei)(width), (C.GLenum)(format), (C.GLenum)(type_), (unsafe.Pointer)(image))
-}
-func ConvolutionFilter2D(target Enum, internalformat Enum, width Sizei, height Sizei, format Enum, type_ Enum, image Pointer)  {
-	C.goglConvolutionFilter2D((C.GLenum)(target), (C.GLenum)(internalformat), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLenum)(format), (C.GLenum)(type_), (unsafe.Pointer)(image))
-}
-func ConvolutionParameterf(target Enum, pname Enum, params Float)  {
-	C.goglConvolutionParameterf((C.GLenum)(target), (C.GLenum)(pname), (C.GLfloat)(params))
-}
-func ConvolutionParameterfv(target Enum, pname Enum, params *Float)  {
-	C.goglConvolutionParameterfv((C.GLenum)(target), (C.GLenum)(pname), (*C.GLfloat)(params))
-}
-func ConvolutionParameteri(target Enum, pname Enum, params Int)  {
-	C.goglConvolutionParameteri((C.GLenum)(target), (C.GLenum)(pname), (C.GLint)(params))
-}
-func ConvolutionParameteriv(target Enum, pname Enum, params *Int)  {
-	C.goglConvolutionParameteriv((C.GLenum)(target), (C.GLenum)(pname), (*C.GLint)(params))
-}
-func CopyConvolutionFilter1D(target Enum, internalformat Enum, x Int, y Int, width Sizei)  {
-	C.goglCopyConvolutionFilter1D((C.GLenum)(target), (C.GLenum)(internalformat), (C.GLint)(x), (C.GLint)(y), (C.GLsizei)(width))
-}
-func CopyConvolutionFilter2D(target Enum, internalformat Enum, x Int, y Int, width Sizei, height Sizei)  {
-	C.goglCopyConvolutionFilter2D((C.GLenum)(target), (C.GLenum)(internalformat), (C.GLint)(x), (C.GLint)(y), (C.GLsizei)(width), (C.GLsizei)(height))
-}
-func GetConvolutionFilter(target Enum, format Enum, type_ Enum, image Pointer)  {
-	C.goglGetConvolutionFilter((C.GLenum)(target), (C.GLenum)(format), (C.GLenum)(type_), (unsafe.Pointer)(image))
-}
-func GetConvolutionParameterfv(target Enum, pname Enum, params *Float)  {
-	C.goglGetConvolutionParameterfv((C.GLenum)(target), (C.GLenum)(pname), (*C.GLfloat)(params))
-}
-func GetConvolutionParameteriv(target Enum, pname Enum, params *Int)  {
-	C.goglGetConvolutionParameteriv((C.GLenum)(target), (C.GLenum)(pname), (*C.GLint)(params))
-}
-func GetSeparableFilter(target Enum, format Enum, type_ Enum, row Pointer, column Pointer, span Pointer)  {
-	C.goglGetSeparableFilter((C.GLenum)(target), (C.GLenum)(format), (C.GLenum)(type_), (unsafe.Pointer)(row), (unsafe.Pointer)(column), (unsafe.Pointer)(span))
-}
-func SeparableFilter2D(target Enum, internalformat Enum, width Sizei, height Sizei, format Enum, type_ Enum, row Pointer, column Pointer)  {
-	C.goglSeparableFilter2D((C.GLenum)(target), (C.GLenum)(internalformat), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLenum)(format), (C.GLenum)(type_), (unsafe.Pointer)(row), (unsafe.Pointer)(column))
-}
-func GetHistogram(target Enum, reset Boolean, format Enum, type_ Enum, values Pointer)  {
-	C.goglGetHistogram((C.GLenum)(target), (C.GLboolean)(reset), (C.GLenum)(format), (C.GLenum)(type_), (unsafe.Pointer)(values))
-}
-func GetHistogramParameterfv(target Enum, pname Enum, params *Float)  {
-	C.goglGetHistogramParameterfv((C.GLenum)(target), (C.GLenum)(pname), (*C.GLfloat)(params))
-}
-func GetHistogramParameteriv(target Enum, pname Enum, params *Int)  {
-	C.goglGetHistogramParameteriv((C.GLenum)(target), (C.GLenum)(pname), (*C.GLint)(params))
-}
-func GetMinmax(target Enum, reset Boolean, format Enum, type_ Enum, values Pointer)  {
-	C.goglGetMinmax((C.GLenum)(target), (C.GLboolean)(reset), (C.GLenum)(format), (C.GLenum)(type_), (unsafe.Pointer)(values))
-}
-func GetMinmaxParameterfv(target Enum, pname Enum, params *Float)  {
-	C.goglGetMinmaxParameterfv((C.GLenum)(target), (C.GLenum)(pname), (*C.GLfloat)(params))
-}
-func GetMinmaxParameteriv(target Enum, pname Enum, params *Int)  {
-	C.goglGetMinmaxParameteriv((C.GLenum)(target), (C.GLenum)(pname), (*C.GLint)(params))
-}
-func Histogram(target Enum, width Sizei, internalformat Enum, sink Boolean)  {
-	C.goglHistogram((C.GLenum)(target), (C.GLsizei)(width), (C.GLenum)(internalformat), (C.GLboolean)(sink))
-}
-func Minmax(target Enum, internalformat Enum, sink Boolean)  {
-	C.goglMinmax((C.GLenum)(target), (C.GLenum)(internalformat), (C.GLboolean)(sink))
-}
-func ResetHistogram(target Enum)  {
-	C.goglResetHistogram((C.GLenum)(target))
-}
-func ResetMinmax(target Enum)  {
-	C.goglResetMinmax((C.GLenum)(target))
-}
 // VERSION_2_1
-func UniformMatrix2x3fv(location Int, count Sizei, transpose Boolean, value *Float)  {
-	C.goglUniformMatrix2x3fv((C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(transpose), (*C.GLfloat)(value))
-}
-func UniformMatrix3x2fv(location Int, count Sizei, transpose Boolean, value *Float)  {
-	C.goglUniformMatrix3x2fv((C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(transpose), (*C.GLfloat)(value))
-}
-func UniformMatrix2x4fv(location Int, count Sizei, transpose Boolean, value *Float)  {
-	C.goglUniformMatrix2x4fv((C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(transpose), (*C.GLfloat)(value))
-}
-func UniformMatrix4x2fv(location Int, count Sizei, transpose Boolean, value *Float)  {
-	C.goglUniformMatrix4x2fv((C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(transpose), (*C.GLfloat)(value))
-}
-func UniformMatrix3x4fv(location Int, count Sizei, transpose Boolean, value *Float)  {
-	C.goglUniformMatrix3x4fv((C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(transpose), (*C.GLfloat)(value))
-}
-func UniformMatrix4x3fv(location Int, count Sizei, transpose Boolean, value *Float)  {
-	C.goglUniformMatrix4x3fv((C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(transpose), (*C.GLfloat)(value))
-}
+const (
+	FLOAT_MAT3x4 = 0x8B68
+	FLOAT_MAT3x2 = 0x8B67
+	COMPRESSED_SRGB = 0x8C48
+	SRGB = 0x8C40
+	SRGB_ALPHA = 0x8C42
+	FLOAT_MAT2x4 = 0x8B66
+	FLOAT_MAT2x3 = 0x8B65
+	PIXEL_UNPACK_BUFFER = 0x88EC
+	PIXEL_PACK_BUFFER = 0x88EB
+	SRGB8_ALPHA8 = 0x8C43
+	PIXEL_PACK_BUFFER_BINDING = 0x88ED
+	SRGB8 = 0x8C41
+	PIXEL_UNPACK_BUFFER_BINDING = 0x88EF
+	COMPRESSED_SRGB_ALPHA = 0x8C49
+	FLOAT_MAT4x2 = 0x8B69
+	FLOAT_MAT4x3 = 0x8B6A
+)
 // VERSION_2_0
-func BlendEquationSeparate(modeRGB Enum, modeAlpha Enum)  {
-	C.goglBlendEquationSeparate((C.GLenum)(modeRGB), (C.GLenum)(modeAlpha))
-}
-func DrawBuffers(n Sizei, bufs *Enum)  {
-	C.goglDrawBuffers((C.GLsizei)(n), (*C.GLenum)(bufs))
-}
-func StencilOpSeparate(face Enum, sfail Enum, dpfail Enum, dppass Enum)  {
-	C.goglStencilOpSeparate((C.GLenum)(face), (C.GLenum)(sfail), (C.GLenum)(dpfail), (C.GLenum)(dppass))
-}
-func StencilFuncSeparate(face Enum, func_ Enum, ref Int, mask Uint)  {
-	C.goglStencilFuncSeparate((C.GLenum)(face), (C.GLenum)(func_), (C.GLint)(ref), (C.GLuint)(mask))
-}
-func StencilMaskSeparate(face Enum, mask Uint)  {
-	C.goglStencilMaskSeparate((C.GLenum)(face), (C.GLuint)(mask))
-}
-func AttachShader(program Uint, shader Uint)  {
-	C.goglAttachShader((C.GLuint)(program), (C.GLuint)(shader))
-}
-func BindAttribLocation(program Uint, index Uint, name *Char)  {
-	C.goglBindAttribLocation((C.GLuint)(program), (C.GLuint)(index), (*C.GLchar)(name))
-}
-func CompileShader(shader Uint)  {
-	C.goglCompileShader((C.GLuint)(shader))
-}
-func CreateProgram() Uint {
-	return (Uint)(C.goglCreateProgram())
-}
-func CreateShader(type_ Enum) Uint {
-	return (Uint)(C.goglCreateShader((C.GLenum)(type_)))
-}
-func DeleteProgram(program Uint)  {
-	C.goglDeleteProgram((C.GLuint)(program))
-}
-func DeleteShader(shader Uint)  {
-	C.goglDeleteShader((C.GLuint)(shader))
-}
-func DetachShader(program Uint, shader Uint)  {
-	C.goglDetachShader((C.GLuint)(program), (C.GLuint)(shader))
-}
-func DisableVertexAttribArray(index Uint)  {
-	C.goglDisableVertexAttribArray((C.GLuint)(index))
-}
-func EnableVertexAttribArray(index Uint)  {
-	C.goglEnableVertexAttribArray((C.GLuint)(index))
-}
-func GetActiveAttrib(program Uint, index Uint, bufSize Sizei, length *Sizei, size *Int, type_ *Enum, name *Char)  {
-	C.goglGetActiveAttrib((C.GLuint)(program), (C.GLuint)(index), (C.GLsizei)(bufSize), (*C.GLsizei)(length), (*C.GLint)(size), (*C.GLenum)(type_), (*C.GLchar)(name))
-}
-func GetActiveUniform(program Uint, index Uint, bufSize Sizei, length *Sizei, size *Int, type_ *Enum, name *Char)  {
-	C.goglGetActiveUniform((C.GLuint)(program), (C.GLuint)(index), (C.GLsizei)(bufSize), (*C.GLsizei)(length), (*C.GLint)(size), (*C.GLenum)(type_), (*C.GLchar)(name))
-}
-func GetAttachedShaders(program Uint, maxCount Sizei, count *Sizei, obj *Uint)  {
-	C.goglGetAttachedShaders((C.GLuint)(program), (C.GLsizei)(maxCount), (*C.GLsizei)(count), (*C.GLuint)(obj))
-}
-func GetAttribLocation(program Uint, name *Char) Int {
-	return (Int)(C.goglGetAttribLocation((C.GLuint)(program), (*C.GLchar)(name)))
-}
-func GetProgramiv(program Uint, pname Enum, params *Int)  {
-	C.goglGetProgramiv((C.GLuint)(program), (C.GLenum)(pname), (*C.GLint)(params))
-}
-func GetProgramInfoLog(program Uint, bufSize Sizei, length *Sizei, infoLog *Char)  {
-	C.goglGetProgramInfoLog((C.GLuint)(program), (C.GLsizei)(bufSize), (*C.GLsizei)(length), (*C.GLchar)(infoLog))
-}
-func GetShaderiv(shader Uint, pname Enum, params *Int)  {
-	C.goglGetShaderiv((C.GLuint)(shader), (C.GLenum)(pname), (*C.GLint)(params))
-}
-func GetShaderInfoLog(shader Uint, bufSize Sizei, length *Sizei, infoLog *Char)  {
-	C.goglGetShaderInfoLog((C.GLuint)(shader), (C.GLsizei)(bufSize), (*C.GLsizei)(length), (*C.GLchar)(infoLog))
-}
-func GetShaderSource(shader Uint, bufSize Sizei, length *Sizei, source *Char)  {
-	C.goglGetShaderSource((C.GLuint)(shader), (C.GLsizei)(bufSize), (*C.GLsizei)(length), (*C.GLchar)(source))
-}
-func GetUniformLocation(program Uint, name *Char) Int {
-	return (Int)(C.goglGetUniformLocation((C.GLuint)(program), (*C.GLchar)(name)))
-}
-func GetUniformfv(program Uint, location Int, params *Float)  {
-	C.goglGetUniformfv((C.GLuint)(program), (C.GLint)(location), (*C.GLfloat)(params))
-}
-func GetUniformiv(program Uint, location Int, params *Int)  {
-	C.goglGetUniformiv((C.GLuint)(program), (C.GLint)(location), (*C.GLint)(params))
-}
-func GetVertexAttribdv(index Uint, pname Enum, params *Double)  {
-	C.goglGetVertexAttribdv((C.GLuint)(index), (C.GLenum)(pname), (*C.GLdouble)(params))
-}
-func GetVertexAttribfv(index Uint, pname Enum, params *Float)  {
-	C.goglGetVertexAttribfv((C.GLuint)(index), (C.GLenum)(pname), (*C.GLfloat)(params))
-}
-func GetVertexAttribiv(index Uint, pname Enum, params *Int)  {
-	C.goglGetVertexAttribiv((C.GLuint)(index), (C.GLenum)(pname), (*C.GLint)(params))
-}
-func GetVertexAttribPointerv(index Uint, pname Enum, pointer *Pointer)  {
-	C.goglGetVertexAttribPointerv((C.GLuint)(index), (C.GLenum)(pname), (*unsafe.Pointer)(pointer))
-}
-func IsProgram(program Uint) Boolean {
-	return (Boolean)(C.goglIsProgram((C.GLuint)(program)))
-}
-func IsShader(shader Uint) Boolean {
-	return (Boolean)(C.goglIsShader((C.GLuint)(shader)))
-}
-func LinkProgram(program Uint)  {
-	C.goglLinkProgram((C.GLuint)(program))
-}
-func ShaderSource(shader Uint, count Sizei, string_ **Char, length *Int)  {
-	C.goglShaderSource((C.GLuint)(shader), (C.GLsizei)(count), (**C.GLchar)(unsafe.Pointer(string_)), (*C.GLint)(length))
-}
-func UseProgram(program Uint)  {
-	C.goglUseProgram((C.GLuint)(program))
-}
-func Uniform1f(location Int, v0 Float)  {
-	C.goglUniform1f((C.GLint)(location), (C.GLfloat)(v0))
-}
-func Uniform2f(location Int, v0 Float, v1 Float)  {
-	C.goglUniform2f((C.GLint)(location), (C.GLfloat)(v0), (C.GLfloat)(v1))
-}
-func Uniform3f(location Int, v0 Float, v1 Float, v2 Float)  {
-	C.goglUniform3f((C.GLint)(location), (C.GLfloat)(v0), (C.GLfloat)(v1), (C.GLfloat)(v2))
-}
-func Uniform4f(location Int, v0 Float, v1 Float, v2 Float, v3 Float)  {
-	C.goglUniform4f((C.GLint)(location), (C.GLfloat)(v0), (C.GLfloat)(v1), (C.GLfloat)(v2), (C.GLfloat)(v3))
-}
-func Uniform1i(location Int, v0 Int)  {
-	C.goglUniform1i((C.GLint)(location), (C.GLint)(v0))
-}
-func Uniform2i(location Int, v0 Int, v1 Int)  {
-	C.goglUniform2i((C.GLint)(location), (C.GLint)(v0), (C.GLint)(v1))
-}
-func Uniform3i(location Int, v0 Int, v1 Int, v2 Int)  {
-	C.goglUniform3i((C.GLint)(location), (C.GLint)(v0), (C.GLint)(v1), (C.GLint)(v2))
-}
-func Uniform4i(location Int, v0 Int, v1 Int, v2 Int, v3 Int)  {
-	C.goglUniform4i((C.GLint)(location), (C.GLint)(v0), (C.GLint)(v1), (C.GLint)(v2), (C.GLint)(v3))
-}
-func Uniform1fv(location Int, count Sizei, value *Float)  {
-	C.goglUniform1fv((C.GLint)(location), (C.GLsizei)(count), (*C.GLfloat)(value))
-}
-func Uniform2fv(location Int, count Sizei, value *Float)  {
-	C.goglUniform2fv((C.GLint)(location), (C.GLsizei)(count), (*C.GLfloat)(value))
-}
-func Uniform3fv(location Int, count Sizei, value *Float)  {
-	C.goglUniform3fv((C.GLint)(location), (C.GLsizei)(count), (*C.GLfloat)(value))
-}
-func Uniform4fv(location Int, count Sizei, value *Float)  {
-	C.goglUniform4fv((C.GLint)(location), (C.GLsizei)(count), (*C.GLfloat)(value))
-}
-func Uniform1iv(location Int, count Sizei, value *Int)  {
-	C.goglUniform1iv((C.GLint)(location), (C.GLsizei)(count), (*C.GLint)(value))
-}
-func Uniform2iv(location Int, count Sizei, value *Int)  {
-	C.goglUniform2iv((C.GLint)(location), (C.GLsizei)(count), (*C.GLint)(value))
-}
-func Uniform3iv(location Int, count Sizei, value *Int)  {
-	C.goglUniform3iv((C.GLint)(location), (C.GLsizei)(count), (*C.GLint)(value))
-}
-func Uniform4iv(location Int, count Sizei, value *Int)  {
-	C.goglUniform4iv((C.GLint)(location), (C.GLsizei)(count), (*C.GLint)(value))
-}
-func UniformMatrix2fv(location Int, count Sizei, transpose Boolean, value *Float)  {
-	C.goglUniformMatrix2fv((C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(transpose), (*C.GLfloat)(value))
-}
-func UniformMatrix3fv(location Int, count Sizei, transpose Boolean, value *Float)  {
-	C.goglUniformMatrix3fv((C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(transpose), (*C.GLfloat)(value))
-}
-func UniformMatrix4fv(location Int, count Sizei, transpose Boolean, value *Float)  {
-	C.goglUniformMatrix4fv((C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(transpose), (*C.GLfloat)(value))
-}
-func ValidateProgram(program Uint)  {
-	C.goglValidateProgram((C.GLuint)(program))
-}
-func VertexAttrib1d(index Uint, x Double)  {
-	C.goglVertexAttrib1d((C.GLuint)(index), (C.GLdouble)(x))
-}
-func VertexAttrib1dv(index Uint, v *Double)  {
-	C.goglVertexAttrib1dv((C.GLuint)(index), (*C.GLdouble)(v))
-}
-func VertexAttrib1f(index Uint, x Float)  {
-	C.goglVertexAttrib1f((C.GLuint)(index), (C.GLfloat)(x))
-}
-func VertexAttrib1fv(index Uint, v *Float)  {
-	C.goglVertexAttrib1fv((C.GLuint)(index), (*C.GLfloat)(v))
-}
-func VertexAttrib1s(index Uint, x Short)  {
-	C.goglVertexAttrib1s((C.GLuint)(index), (C.GLshort)(x))
-}
-func VertexAttrib1sv(index Uint, v *Short)  {
-	C.goglVertexAttrib1sv((C.GLuint)(index), (*C.GLshort)(v))
-}
-func VertexAttrib2d(index Uint, x Double, y Double)  {
-	C.goglVertexAttrib2d((C.GLuint)(index), (C.GLdouble)(x), (C.GLdouble)(y))
-}
-func VertexAttrib2dv(index Uint, v *Double)  {
-	C.goglVertexAttrib2dv((C.GLuint)(index), (*C.GLdouble)(v))
-}
-func VertexAttrib2f(index Uint, x Float, y Float)  {
-	C.goglVertexAttrib2f((C.GLuint)(index), (C.GLfloat)(x), (C.GLfloat)(y))
-}
-func VertexAttrib2fv(index Uint, v *Float)  {
-	C.goglVertexAttrib2fv((C.GLuint)(index), (*C.GLfloat)(v))
-}
-func VertexAttrib2s(index Uint, x Short, y Short)  {
-	C.goglVertexAttrib2s((C.GLuint)(index), (C.GLshort)(x), (C.GLshort)(y))
-}
-func VertexAttrib2sv(index Uint, v *Short)  {
-	C.goglVertexAttrib2sv((C.GLuint)(index), (*C.GLshort)(v))
-}
-func VertexAttrib3d(index Uint, x Double, y Double, z Double)  {
-	C.goglVertexAttrib3d((C.GLuint)(index), (C.GLdouble)(x), (C.GLdouble)(y), (C.GLdouble)(z))
-}
-func VertexAttrib3dv(index Uint, v *Double)  {
-	C.goglVertexAttrib3dv((C.GLuint)(index), (*C.GLdouble)(v))
-}
-func VertexAttrib3f(index Uint, x Float, y Float, z Float)  {
-	C.goglVertexAttrib3f((C.GLuint)(index), (C.GLfloat)(x), (C.GLfloat)(y), (C.GLfloat)(z))
-}
-func VertexAttrib3fv(index Uint, v *Float)  {
-	C.goglVertexAttrib3fv((C.GLuint)(index), (*C.GLfloat)(v))
-}
-func VertexAttrib3s(index Uint, x Short, y Short, z Short)  {
-	C.goglVertexAttrib3s((C.GLuint)(index), (C.GLshort)(x), (C.GLshort)(y), (C.GLshort)(z))
-}
-func VertexAttrib3sv(index Uint, v *Short)  {
-	C.goglVertexAttrib3sv((C.GLuint)(index), (*C.GLshort)(v))
-}
-func VertexAttrib4Nbv(index Uint, v *Byte)  {
-	C.goglVertexAttrib4Nbv((C.GLuint)(index), (*C.GLbyte)(v))
-}
-func VertexAttrib4Niv(index Uint, v *Int)  {
-	C.goglVertexAttrib4Niv((C.GLuint)(index), (*C.GLint)(v))
-}
-func VertexAttrib4Nsv(index Uint, v *Short)  {
-	C.goglVertexAttrib4Nsv((C.GLuint)(index), (*C.GLshort)(v))
-}
-func VertexAttrib4Nub(index Uint, x Ubyte, y Ubyte, z Ubyte, w Ubyte)  {
-	C.goglVertexAttrib4Nub((C.GLuint)(index), (C.GLubyte)(x), (C.GLubyte)(y), (C.GLubyte)(z), (C.GLubyte)(w))
-}
-func VertexAttrib4Nubv(index Uint, v *Ubyte)  {
-	C.goglVertexAttrib4Nubv((C.GLuint)(index), (*C.GLubyte)(v))
-}
-func VertexAttrib4Nuiv(index Uint, v *Uint)  {
-	C.goglVertexAttrib4Nuiv((C.GLuint)(index), (*C.GLuint)(v))
-}
-func VertexAttrib4Nusv(index Uint, v *Ushort)  {
-	C.goglVertexAttrib4Nusv((C.GLuint)(index), (*C.GLushort)(v))
-}
-func VertexAttrib4bv(index Uint, v *Byte)  {
-	C.goglVertexAttrib4bv((C.GLuint)(index), (*C.GLbyte)(v))
-}
-func VertexAttrib4d(index Uint, x Double, y Double, z Double, w Double)  {
-	C.goglVertexAttrib4d((C.GLuint)(index), (C.GLdouble)(x), (C.GLdouble)(y), (C.GLdouble)(z), (C.GLdouble)(w))
-}
-func VertexAttrib4dv(index Uint, v *Double)  {
-	C.goglVertexAttrib4dv((C.GLuint)(index), (*C.GLdouble)(v))
-}
-func VertexAttrib4f(index Uint, x Float, y Float, z Float, w Float)  {
-	C.goglVertexAttrib4f((C.GLuint)(index), (C.GLfloat)(x), (C.GLfloat)(y), (C.GLfloat)(z), (C.GLfloat)(w))
-}
-func VertexAttrib4fv(index Uint, v *Float)  {
-	C.goglVertexAttrib4fv((C.GLuint)(index), (*C.GLfloat)(v))
-}
-func VertexAttrib4iv(index Uint, v *Int)  {
-	C.goglVertexAttrib4iv((C.GLuint)(index), (*C.GLint)(v))
-}
-func VertexAttrib4s(index Uint, x Short, y Short, z Short, w Short)  {
-	C.goglVertexAttrib4s((C.GLuint)(index), (C.GLshort)(x), (C.GLshort)(y), (C.GLshort)(z), (C.GLshort)(w))
-}
-func VertexAttrib4sv(index Uint, v *Short)  {
-	C.goglVertexAttrib4sv((C.GLuint)(index), (*C.GLshort)(v))
-}
-func VertexAttrib4ubv(index Uint, v *Ubyte)  {
-	C.goglVertexAttrib4ubv((C.GLuint)(index), (*C.GLubyte)(v))
-}
-func VertexAttrib4uiv(index Uint, v *Uint)  {
-	C.goglVertexAttrib4uiv((C.GLuint)(index), (*C.GLuint)(v))
-}
-func VertexAttrib4usv(index Uint, v *Ushort)  {
-	C.goglVertexAttrib4usv((C.GLuint)(index), (*C.GLushort)(v))
-}
-func VertexAttribPointer(index Uint, size Int, type_ Enum, normalized Boolean, stride Sizei, pointer Pointer)  {
-	C.goglVertexAttribPointer((C.GLuint)(index), (C.GLint)(size), (C.GLenum)(type_), (C.GLboolean)(normalized), (C.GLsizei)(stride), (unsafe.Pointer)(pointer))
-}
+const (
+	MAX_DRAW_BUFFERS = 0x8824
+	VERTEX_ATTRIB_ARRAY_NORMALIZED = 0x886A
+	INFO_LOG_LENGTH = 0x8B84
+	DELETE_STATUS = 0x8B80
+	FLOAT_VEC4 = 0x8B52
+	FLOAT_VEC2 = 0x8B50
+	FLOAT_VEC3 = 0x8B51
+	STENCIL_BACK_REF = 0x8CA3
+	ACTIVE_ATTRIBUTE_MAX_LENGTH = 0x8B8A
+	SHADING_LANGUAGE_VERSION = 0x8B8C
+	MAX_COMBINED_TEXTURE_IMAGE_UNITS = 0x8B4D
+	ACTIVE_UNIFORMS = 0x8B86
+	ATTACHED_SHADERS = 0x8B85
+	VERTEX_ATTRIB_ARRAY_ENABLED = 0x8622
+	MAX_VERTEX_UNIFORM_COMPONENTS = 0x8B4A
+	MAX_TEXTURE_IMAGE_UNITS = 0x8872
+	STENCIL_BACK_FAIL = 0x8801
+	VERTEX_ATTRIB_ARRAY_POINTER = 0x8645
+	MAX_VARYING_FLOATS = 0x8B4B
+	CURRENT_VERTEX_ATTRIB = 0x8626
+	SAMPLER_1D_SHADOW = 0x8B61
+	DRAW_BUFFER15 = 0x8834
+	DRAW_BUFFER14 = 0x8833
+	DRAW_BUFFER11 = 0x8830
+	DRAW_BUFFER10 = 0x882F
+	DRAW_BUFFER13 = 0x8832
+	DRAW_BUFFER12 = 0x8831
+	LINK_STATUS = 0x8B82
+	CURRENT_PROGRAM = 0x8B8D
+	LOWER_LEFT = 0x8CA1
+	MAX_VERTEX_TEXTURE_IMAGE_UNITS = 0x8B4C
+	VALIDATE_STATUS = 0x8B83
+	STENCIL_BACK_WRITEMASK = 0x8CA5
+	FLOAT_MAT4 = 0x8B5C
+	COMPILE_STATUS = 0x8B81
+	FLOAT_MAT2 = 0x8B5A
+	SAMPLER_3D = 0x8B5F
+	FLOAT_MAT3 = 0x8B5B
+	SHADER_TYPE = 0x8B4F
+	MAX_VERTEX_ATTRIBS = 0x8869
+	SAMPLER_1D = 0x8B5D
+	SAMPLER_2D_SHADOW = 0x8B62
+	SAMPLER_CUBE = 0x8B60
+	STENCIL_BACK_PASS_DEPTH_FAIL = 0x8802
+	BOOL_VEC2 = 0x8B57
+	BOOL_VEC3 = 0x8B58
+	BOOL_VEC4 = 0x8B59
+	FRAGMENT_SHADER = 0x8B30
+	STENCIL_BACK_FUNC = 0x8800
+	FRAGMENT_SHADER_DERIVATIVE_HINT = 0x8B8B
+	BOOL = 0x8B56
+	VERTEX_PROGRAM_POINT_SIZE = 0x8642
+	UPPER_LEFT = 0x8CA2
+	VERTEX_ATTRIB_ARRAY_STRIDE = 0x8624
+	SHADER_SOURCE_LENGTH = 0x8B88
+	ACTIVE_UNIFORM_MAX_LENGTH = 0x8B87
+	SAMPLER_2D = 0x8B5E
+	POINT_SPRITE_COORD_ORIGIN = 0x8CA0
+	ACTIVE_ATTRIBUTES = 0x8B89
+	DRAW_BUFFER2 = 0x8827
+	DRAW_BUFFER3 = 0x8828
+	DRAW_BUFFER0 = 0x8825
+	DRAW_BUFFER1 = 0x8826
+	DRAW_BUFFER6 = 0x882B
+	DRAW_BUFFER7 = 0x882C
+	DRAW_BUFFER4 = 0x8829
+	DRAW_BUFFER5 = 0x882A
+	DRAW_BUFFER8 = 0x882D
+	DRAW_BUFFER9 = 0x882E
+	BLEND_EQUATION_ALPHA = 0x883D
+	BLEND_EQUATION_RGB = 0x8009
+	STENCIL_BACK_VALUE_MASK = 0x8CA4
+	VERTEX_ATTRIB_ARRAY_SIZE = 0x8623
+	STENCIL_BACK_PASS_DEPTH_PASS = 0x8803
+	VERTEX_SHADER = 0x8B31
+	VERTEX_ATTRIB_ARRAY_TYPE = 0x8625
+	INT_VEC4 = 0x8B55
+	INT_VEC3 = 0x8B54
+	INT_VEC2 = 0x8B53
+	MAX_FRAGMENT_UNIFORM_COMPONENTS = 0x8B49
+)
 // VERSION_1_3_DEPRECATED
+
+// http://www.opengl.org/sdk/docs/man/xhtml/glClientActiveTexture.xml
 func ClientActiveTexture(texture Enum)  {
 	C.goglClientActiveTexture((C.GLenum)(texture))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glMultiTexCoord1d.xml
 func MultiTexCoord1d(target Enum, s Double)  {
 	C.goglMultiTexCoord1d((C.GLenum)(target), (C.GLdouble)(s))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glMultiTexCoord1dv.xml
 func MultiTexCoord1dv(target Enum, v *Double)  {
 	C.goglMultiTexCoord1dv((C.GLenum)(target), (*C.GLdouble)(v))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glMultiTexCoord1f.xml
 func MultiTexCoord1f(target Enum, s Float)  {
 	C.goglMultiTexCoord1f((C.GLenum)(target), (C.GLfloat)(s))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glMultiTexCoord1fv.xml
 func MultiTexCoord1fv(target Enum, v *Float)  {
 	C.goglMultiTexCoord1fv((C.GLenum)(target), (*C.GLfloat)(v))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glMultiTexCoord1i.xml
 func MultiTexCoord1i(target Enum, s Int)  {
 	C.goglMultiTexCoord1i((C.GLenum)(target), (C.GLint)(s))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glMultiTexCoord1iv.xml
 func MultiTexCoord1iv(target Enum, v *Int)  {
 	C.goglMultiTexCoord1iv((C.GLenum)(target), (*C.GLint)(v))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glMultiTexCoord1s.xml
 func MultiTexCoord1s(target Enum, s Short)  {
 	C.goglMultiTexCoord1s((C.GLenum)(target), (C.GLshort)(s))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glMultiTexCoord1sv.xml
 func MultiTexCoord1sv(target Enum, v *Short)  {
 	C.goglMultiTexCoord1sv((C.GLenum)(target), (*C.GLshort)(v))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glMultiTexCoord2d.xml
 func MultiTexCoord2d(target Enum, s Double, t Double)  {
 	C.goglMultiTexCoord2d((C.GLenum)(target), (C.GLdouble)(s), (C.GLdouble)(t))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glMultiTexCoord2dv.xml
 func MultiTexCoord2dv(target Enum, v *Double)  {
 	C.goglMultiTexCoord2dv((C.GLenum)(target), (*C.GLdouble)(v))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glMultiTexCoord2f.xml
 func MultiTexCoord2f(target Enum, s Float, t Float)  {
 	C.goglMultiTexCoord2f((C.GLenum)(target), (C.GLfloat)(s), (C.GLfloat)(t))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glMultiTexCoord2fv.xml
 func MultiTexCoord2fv(target Enum, v *Float)  {
 	C.goglMultiTexCoord2fv((C.GLenum)(target), (*C.GLfloat)(v))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glMultiTexCoord2i.xml
 func MultiTexCoord2i(target Enum, s Int, t Int)  {
 	C.goglMultiTexCoord2i((C.GLenum)(target), (C.GLint)(s), (C.GLint)(t))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glMultiTexCoord2iv.xml
 func MultiTexCoord2iv(target Enum, v *Int)  {
 	C.goglMultiTexCoord2iv((C.GLenum)(target), (*C.GLint)(v))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glMultiTexCoord2s.xml
 func MultiTexCoord2s(target Enum, s Short, t Short)  {
 	C.goglMultiTexCoord2s((C.GLenum)(target), (C.GLshort)(s), (C.GLshort)(t))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glMultiTexCoord2sv.xml
 func MultiTexCoord2sv(target Enum, v *Short)  {
 	C.goglMultiTexCoord2sv((C.GLenum)(target), (*C.GLshort)(v))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glMultiTexCoord3d.xml
 func MultiTexCoord3d(target Enum, s Double, t Double, r Double)  {
 	C.goglMultiTexCoord3d((C.GLenum)(target), (C.GLdouble)(s), (C.GLdouble)(t), (C.GLdouble)(r))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glMultiTexCoord3dv.xml
 func MultiTexCoord3dv(target Enum, v *Double)  {
 	C.goglMultiTexCoord3dv((C.GLenum)(target), (*C.GLdouble)(v))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glMultiTexCoord3f.xml
 func MultiTexCoord3f(target Enum, s Float, t Float, r Float)  {
 	C.goglMultiTexCoord3f((C.GLenum)(target), (C.GLfloat)(s), (C.GLfloat)(t), (C.GLfloat)(r))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glMultiTexCoord3fv.xml
 func MultiTexCoord3fv(target Enum, v *Float)  {
 	C.goglMultiTexCoord3fv((C.GLenum)(target), (*C.GLfloat)(v))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glMultiTexCoord3i.xml
 func MultiTexCoord3i(target Enum, s Int, t Int, r Int)  {
 	C.goglMultiTexCoord3i((C.GLenum)(target), (C.GLint)(s), (C.GLint)(t), (C.GLint)(r))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glMultiTexCoord3iv.xml
 func MultiTexCoord3iv(target Enum, v *Int)  {
 	C.goglMultiTexCoord3iv((C.GLenum)(target), (*C.GLint)(v))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glMultiTexCoord3s.xml
 func MultiTexCoord3s(target Enum, s Short, t Short, r Short)  {
 	C.goglMultiTexCoord3s((C.GLenum)(target), (C.GLshort)(s), (C.GLshort)(t), (C.GLshort)(r))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glMultiTexCoord3sv.xml
 func MultiTexCoord3sv(target Enum, v *Short)  {
 	C.goglMultiTexCoord3sv((C.GLenum)(target), (*C.GLshort)(v))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glMultiTexCoord4d.xml
 func MultiTexCoord4d(target Enum, s Double, t Double, r Double, q Double)  {
 	C.goglMultiTexCoord4d((C.GLenum)(target), (C.GLdouble)(s), (C.GLdouble)(t), (C.GLdouble)(r), (C.GLdouble)(q))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glMultiTexCoord4dv.xml
 func MultiTexCoord4dv(target Enum, v *Double)  {
 	C.goglMultiTexCoord4dv((C.GLenum)(target), (*C.GLdouble)(v))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glMultiTexCoord4f.xml
 func MultiTexCoord4f(target Enum, s Float, t Float, r Float, q Float)  {
 	C.goglMultiTexCoord4f((C.GLenum)(target), (C.GLfloat)(s), (C.GLfloat)(t), (C.GLfloat)(r), (C.GLfloat)(q))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glMultiTexCoord4fv.xml
 func MultiTexCoord4fv(target Enum, v *Float)  {
 	C.goglMultiTexCoord4fv((C.GLenum)(target), (*C.GLfloat)(v))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glMultiTexCoord4i.xml
 func MultiTexCoord4i(target Enum, s Int, t Int, r Int, q Int)  {
 	C.goglMultiTexCoord4i((C.GLenum)(target), (C.GLint)(s), (C.GLint)(t), (C.GLint)(r), (C.GLint)(q))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glMultiTexCoord4iv.xml
 func MultiTexCoord4iv(target Enum, v *Int)  {
 	C.goglMultiTexCoord4iv((C.GLenum)(target), (*C.GLint)(v))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glMultiTexCoord4s.xml
 func MultiTexCoord4s(target Enum, s Short, t Short, r Short, q Short)  {
 	C.goglMultiTexCoord4s((C.GLenum)(target), (C.GLshort)(s), (C.GLshort)(t), (C.GLshort)(r), (C.GLshort)(q))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glMultiTexCoord4sv.xml
 func MultiTexCoord4sv(target Enum, v *Short)  {
 	C.goglMultiTexCoord4sv((C.GLenum)(target), (*C.GLshort)(v))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glLoadTransposeMatrixf.xml
 func LoadTransposeMatrixf(m *Float)  {
 	C.goglLoadTransposeMatrixf((*C.GLfloat)(m))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glLoadTransposeMatrixd.xml
 func LoadTransposeMatrixd(m *Double)  {
 	C.goglLoadTransposeMatrixd((*C.GLdouble)(m))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glMultTransposeMatrixf.xml
 func MultTransposeMatrixf(m *Float)  {
 	C.goglMultTransposeMatrixf((*C.GLfloat)(m))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glMultTransposeMatrixd.xml
 func MultTransposeMatrixd(m *Double)  {
 	C.goglMultTransposeMatrixd((*C.GLdouble)(m))
 }
 // VERSION_1_4
+
+// http://www.opengl.org/sdk/docs/man/xhtml/glBlendFuncSeparate.xml
 func BlendFuncSeparate(sfactorRGB Enum, dfactorRGB Enum, sfactorAlpha Enum, dfactorAlpha Enum)  {
 	C.goglBlendFuncSeparate((C.GLenum)(sfactorRGB), (C.GLenum)(dfactorRGB), (C.GLenum)(sfactorAlpha), (C.GLenum)(dfactorAlpha))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glMultiDrawArrays.xml
 func MultiDrawArrays(mode Enum, first *Int, count *Sizei, primcount Sizei)  {
 	C.goglMultiDrawArrays((C.GLenum)(mode), (*C.GLint)(first), (*C.GLsizei)(count), (C.GLsizei)(primcount))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glMultiDrawElements.xml
 func MultiDrawElements(mode Enum, count *Sizei, type_ Enum, indices *Pointer, primcount Sizei)  {
 	C.goglMultiDrawElements((C.GLenum)(mode), (*C.GLsizei)(count), (C.GLenum)(type_), (*unsafe.Pointer)(indices), (C.GLsizei)(primcount))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glPointParameterf.xml
 func PointParameterf(pname Enum, param Float)  {
 	C.goglPointParameterf((C.GLenum)(pname), (C.GLfloat)(param))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glPointParameterfv.xml
 func PointParameterfv(pname Enum, params *Float)  {
 	C.goglPointParameterfv((C.GLenum)(pname), (*C.GLfloat)(params))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glPointParameteri.xml
 func PointParameteri(pname Enum, param Int)  {
 	C.goglPointParameteri((C.GLenum)(pname), (C.GLint)(param))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glPointParameteriv.xml
 func PointParameteriv(pname Enum, params *Int)  {
 	C.goglPointParameteriv((C.GLenum)(pname), (*C.GLint)(params))
 }
 // VERSION_1_5
+
+// http://www.opengl.org/sdk/docs/man/xhtml/glGenQueries.xml
 func GenQueries(n Sizei, ids *Uint)  {
 	C.goglGenQueries((C.GLsizei)(n), (*C.GLuint)(ids))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glDeleteQueries.xml
 func DeleteQueries(n Sizei, ids *Uint)  {
 	C.goglDeleteQueries((C.GLsizei)(n), (*C.GLuint)(ids))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glIsQuery.xml
 func IsQuery(id Uint) Boolean {
 	return (Boolean)(C.goglIsQuery((C.GLuint)(id)))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glBeginQuery.xml
 func BeginQuery(target Enum, id Uint)  {
 	C.goglBeginQuery((C.GLenum)(target), (C.GLuint)(id))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glEndQuery.xml
 func EndQuery(target Enum)  {
 	C.goglEndQuery((C.GLenum)(target))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glGetQueryiv.xml
 func GetQueryiv(target Enum, pname Enum, params *Int)  {
 	C.goglGetQueryiv((C.GLenum)(target), (C.GLenum)(pname), (*C.GLint)(params))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glGetQueryObjectiv.xml
 func GetQueryObjectiv(id Uint, pname Enum, params *Int)  {
 	C.goglGetQueryObjectiv((C.GLuint)(id), (C.GLenum)(pname), (*C.GLint)(params))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glGetQueryObjectuiv.xml
 func GetQueryObjectuiv(id Uint, pname Enum, params *Uint)  {
 	C.goglGetQueryObjectuiv((C.GLuint)(id), (C.GLenum)(pname), (*C.GLuint)(params))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glBindBuffer.xml
 func BindBuffer(target Enum, buffer Uint)  {
 	C.goglBindBuffer((C.GLenum)(target), (C.GLuint)(buffer))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glDeleteBuffers.xml
 func DeleteBuffers(n Sizei, buffers *Uint)  {
 	C.goglDeleteBuffers((C.GLsizei)(n), (*C.GLuint)(buffers))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glGenBuffers.xml
 func GenBuffers(n Sizei, buffers *Uint)  {
 	C.goglGenBuffers((C.GLsizei)(n), (*C.GLuint)(buffers))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glIsBuffer.xml
 func IsBuffer(buffer Uint) Boolean {
 	return (Boolean)(C.goglIsBuffer((C.GLuint)(buffer)))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glBufferData.xml
 func BufferData(target Enum, size Sizeiptr, data Pointer, usage Enum)  {
 	C.goglBufferData((C.GLenum)(target), (C.GLsizeiptr)(size), (unsafe.Pointer)(data), (C.GLenum)(usage))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glBufferSubData.xml
 func BufferSubData(target Enum, offset Intptr, size Sizeiptr, data Pointer)  {
 	C.goglBufferSubData((C.GLenum)(target), (C.GLintptr)(offset), (C.GLsizeiptr)(size), (unsafe.Pointer)(data))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glGetBufferSubData.xml
 func GetBufferSubData(target Enum, offset Intptr, size Sizeiptr, data Pointer)  {
 	C.goglGetBufferSubData((C.GLenum)(target), (C.GLintptr)(offset), (C.GLsizeiptr)(size), (unsafe.Pointer)(data))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glMapBuffer.xml
 func MapBuffer(target Enum, access Enum) Pointer {
 	return (Pointer)(C.goglMapBuffer((C.GLenum)(target), (C.GLenum)(access)))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glUnmapBuffer.xml
 func UnmapBuffer(target Enum) Boolean {
 	return (Boolean)(C.goglUnmapBuffer((C.GLenum)(target)))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glGetBufferParameteriv.xml
 func GetBufferParameteriv(target Enum, pname Enum, params *Int)  {
 	C.goglGetBufferParameteriv((C.GLenum)(target), (C.GLenum)(pname), (*C.GLint)(params))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glGetBufferPointerv.xml
 func GetBufferPointerv(target Enum, pname Enum, params *Pointer)  {
 	C.goglGetBufferPointerv((C.GLenum)(target), (C.GLenum)(pname), (*unsafe.Pointer)(params))
 }
 // VERSION_1_0
+
+// http://www.opengl.org/sdk/docs/man/xhtml/glCullFace.xml
 func CullFace(mode Enum)  {
 	C.goglCullFace((C.GLenum)(mode))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glFrontFace.xml
 func FrontFace(mode Enum)  {
 	C.goglFrontFace((C.GLenum)(mode))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glHint.xml
 func Hint(target Enum, mode Enum)  {
 	C.goglHint((C.GLenum)(target), (C.GLenum)(mode))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glLineWidth.xml
 func LineWidth(width Float)  {
 	C.goglLineWidth((C.GLfloat)(width))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glPointSize.xml
 func PointSize(size Float)  {
 	C.goglPointSize((C.GLfloat)(size))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glPolygonMode.xml
 func PolygonMode(face Enum, mode Enum)  {
 	C.goglPolygonMode((C.GLenum)(face), (C.GLenum)(mode))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glScissor.xml
 func Scissor(x Int, y Int, width Sizei, height Sizei)  {
 	C.goglScissor((C.GLint)(x), (C.GLint)(y), (C.GLsizei)(width), (C.GLsizei)(height))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glTexParameterf.xml
 func TexParameterf(target Enum, pname Enum, param Float)  {
 	C.goglTexParameterf((C.GLenum)(target), (C.GLenum)(pname), (C.GLfloat)(param))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glTexParameterfv.xml
 func TexParameterfv(target Enum, pname Enum, params *Float)  {
 	C.goglTexParameterfv((C.GLenum)(target), (C.GLenum)(pname), (*C.GLfloat)(params))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glTexParameteri.xml
 func TexParameteri(target Enum, pname Enum, param Int)  {
 	C.goglTexParameteri((C.GLenum)(target), (C.GLenum)(pname), (C.GLint)(param))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glTexParameteriv.xml
 func TexParameteriv(target Enum, pname Enum, params *Int)  {
 	C.goglTexParameteriv((C.GLenum)(target), (C.GLenum)(pname), (*C.GLint)(params))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glTexImage1D.xml
 func TexImage1D(target Enum, level Int, internalformat Int, width Sizei, border Int, format Enum, type_ Enum, pixels Pointer)  {
 	C.goglTexImage1D((C.GLenum)(target), (C.GLint)(level), (C.GLint)(internalformat), (C.GLsizei)(width), (C.GLint)(border), (C.GLenum)(format), (C.GLenum)(type_), (unsafe.Pointer)(pixels))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glTexImage2D.xml
 func TexImage2D(target Enum, level Int, internalformat Int, width Sizei, height Sizei, border Int, format Enum, type_ Enum, pixels Pointer)  {
 	C.goglTexImage2D((C.GLenum)(target), (C.GLint)(level), (C.GLint)(internalformat), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLint)(border), (C.GLenum)(format), (C.GLenum)(type_), (unsafe.Pointer)(pixels))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glDrawBuffer.xml
 func DrawBuffer(mode Enum)  {
 	C.goglDrawBuffer((C.GLenum)(mode))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glClear.xml
 func Clear(mask Bitfield)  {
 	C.goglClear((C.GLbitfield)(mask))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glClearColor.xml
 func ClearColor(red Clampf, green Clampf, blue Clampf, alpha Clampf)  {
 	C.goglClearColor((C.GLclampf)(red), (C.GLclampf)(green), (C.GLclampf)(blue), (C.GLclampf)(alpha))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glClearStencil.xml
 func ClearStencil(s Int)  {
 	C.goglClearStencil((C.GLint)(s))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glClearDepth.xml
 func ClearDepth(depth Clampd)  {
 	C.goglClearDepth((C.GLclampd)(depth))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glStencilMask.xml
 func StencilMask(mask Uint)  {
 	C.goglStencilMask((C.GLuint)(mask))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glColorMask.xml
 func ColorMask(red Boolean, green Boolean, blue Boolean, alpha Boolean)  {
 	C.goglColorMask((C.GLboolean)(red), (C.GLboolean)(green), (C.GLboolean)(blue), (C.GLboolean)(alpha))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glDepthMask.xml
 func DepthMask(flag Boolean)  {
 	C.goglDepthMask((C.GLboolean)(flag))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glDisable.xml
 func Disable(cap Enum)  {
 	C.goglDisable((C.GLenum)(cap))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glEnable.xml
 func Enable(cap Enum)  {
 	C.goglEnable((C.GLenum)(cap))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glFinish.xml
 func Finish()  {
 	C.goglFinish()
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glFlush.xml
 func Flush()  {
 	C.goglFlush()
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glBlendFunc.xml
 func BlendFunc(sfactor Enum, dfactor Enum)  {
 	C.goglBlendFunc((C.GLenum)(sfactor), (C.GLenum)(dfactor))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glLogicOp.xml
 func LogicOp(opcode Enum)  {
 	C.goglLogicOp((C.GLenum)(opcode))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glStencilFunc.xml
 func StencilFunc(func_ Enum, ref Int, mask Uint)  {
 	C.goglStencilFunc((C.GLenum)(func_), (C.GLint)(ref), (C.GLuint)(mask))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glStencilOp.xml
 func StencilOp(fail Enum, zfail Enum, zpass Enum)  {
 	C.goglStencilOp((C.GLenum)(fail), (C.GLenum)(zfail), (C.GLenum)(zpass))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glDepthFunc.xml
 func DepthFunc(func_ Enum)  {
 	C.goglDepthFunc((C.GLenum)(func_))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glPixelStoref.xml
 func PixelStoref(pname Enum, param Float)  {
 	C.goglPixelStoref((C.GLenum)(pname), (C.GLfloat)(param))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glPixelStorei.xml
 func PixelStorei(pname Enum, param Int)  {
 	C.goglPixelStorei((C.GLenum)(pname), (C.GLint)(param))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glReadBuffer.xml
 func ReadBuffer(mode Enum)  {
 	C.goglReadBuffer((C.GLenum)(mode))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glReadPixels.xml
 func ReadPixels(x Int, y Int, width Sizei, height Sizei, format Enum, type_ Enum, pixels Pointer)  {
 	C.goglReadPixels((C.GLint)(x), (C.GLint)(y), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLenum)(format), (C.GLenum)(type_), (unsafe.Pointer)(pixels))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glGetBooleanv.xml
 func GetBooleanv(pname Enum, params *Boolean)  {
 	C.goglGetBooleanv((C.GLenum)(pname), (*C.GLboolean)(params))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glGetDoublev.xml
 func GetDoublev(pname Enum, params *Double)  {
 	C.goglGetDoublev((C.GLenum)(pname), (*C.GLdouble)(params))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glGetError.xml
 func GetError() Enum {
 	return (Enum)(C.goglGetError())
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glGetFloatv.xml
 func GetFloatv(pname Enum, params *Float)  {
 	C.goglGetFloatv((C.GLenum)(pname), (*C.GLfloat)(params))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glGetIntegerv.xml
 func GetIntegerv(pname Enum, params *Int)  {
 	C.goglGetIntegerv((C.GLenum)(pname), (*C.GLint)(params))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glGetString.xml
 func GetString(name Enum) *Ubyte {
 	return (*Ubyte)(C.goglGetString((C.GLenum)(name)))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glGetTexImage.xml
 func GetTexImage(target Enum, level Int, format Enum, type_ Enum, pixels Pointer)  {
 	C.goglGetTexImage((C.GLenum)(target), (C.GLint)(level), (C.GLenum)(format), (C.GLenum)(type_), (unsafe.Pointer)(pixels))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glGetTexParameterfv.xml
 func GetTexParameterfv(target Enum, pname Enum, params *Float)  {
 	C.goglGetTexParameterfv((C.GLenum)(target), (C.GLenum)(pname), (*C.GLfloat)(params))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glGetTexParameteriv.xml
 func GetTexParameteriv(target Enum, pname Enum, params *Int)  {
 	C.goglGetTexParameteriv((C.GLenum)(target), (C.GLenum)(pname), (*C.GLint)(params))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glGetTexLevelParameterfv.xml
 func GetTexLevelParameterfv(target Enum, level Int, pname Enum, params *Float)  {
 	C.goglGetTexLevelParameterfv((C.GLenum)(target), (C.GLint)(level), (C.GLenum)(pname), (*C.GLfloat)(params))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glGetTexLevelParameteriv.xml
 func GetTexLevelParameteriv(target Enum, level Int, pname Enum, params *Int)  {
 	C.goglGetTexLevelParameteriv((C.GLenum)(target), (C.GLint)(level), (C.GLenum)(pname), (*C.GLint)(params))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glIsEnabled.xml
 func IsEnabled(cap Enum) Boolean {
 	return (Boolean)(C.goglIsEnabled((C.GLenum)(cap)))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glDepthRange.xml
 func DepthRange(near Clampd, far Clampd)  {
 	C.goglDepthRange((C.GLclampd)(near), (C.GLclampd)(far))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glViewport.xml
 func Viewport(x Int, y Int, width Sizei, height Sizei)  {
 	C.goglViewport((C.GLint)(x), (C.GLint)(y), (C.GLsizei)(width), (C.GLsizei)(height))
 }
 // VERSION_1_1
+
+// http://www.opengl.org/sdk/docs/man/xhtml/glDrawArrays.xml
 func DrawArrays(mode Enum, first Int, count Sizei)  {
 	C.goglDrawArrays((C.GLenum)(mode), (C.GLint)(first), (C.GLsizei)(count))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glDrawElements.xml
 func DrawElements(mode Enum, count Sizei, type_ Enum, indices Pointer)  {
 	C.goglDrawElements((C.GLenum)(mode), (C.GLsizei)(count), (C.GLenum)(type_), (unsafe.Pointer)(indices))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glGetPointerv.xml
 func GetPointerv(pname Enum, params *Pointer)  {
 	C.goglGetPointerv((C.GLenum)(pname), (*unsafe.Pointer)(params))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glPolygonOffset.xml
 func PolygonOffset(factor Float, units Float)  {
 	C.goglPolygonOffset((C.GLfloat)(factor), (C.GLfloat)(units))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glCopyTexImage1D.xml
 func CopyTexImage1D(target Enum, level Int, internalformat Enum, x Int, y Int, width Sizei, border Int)  {
 	C.goglCopyTexImage1D((C.GLenum)(target), (C.GLint)(level), (C.GLenum)(internalformat), (C.GLint)(x), (C.GLint)(y), (C.GLsizei)(width), (C.GLint)(border))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glCopyTexImage2D.xml
 func CopyTexImage2D(target Enum, level Int, internalformat Enum, x Int, y Int, width Sizei, height Sizei, border Int)  {
 	C.goglCopyTexImage2D((C.GLenum)(target), (C.GLint)(level), (C.GLenum)(internalformat), (C.GLint)(x), (C.GLint)(y), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLint)(border))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glCopyTexSubImage1D.xml
 func CopyTexSubImage1D(target Enum, level Int, xoffset Int, x Int, y Int, width Sizei)  {
 	C.goglCopyTexSubImage1D((C.GLenum)(target), (C.GLint)(level), (C.GLint)(xoffset), (C.GLint)(x), (C.GLint)(y), (C.GLsizei)(width))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glCopyTexSubImage2D.xml
 func CopyTexSubImage2D(target Enum, level Int, xoffset Int, yoffset Int, x Int, y Int, width Sizei, height Sizei)  {
 	C.goglCopyTexSubImage2D((C.GLenum)(target), (C.GLint)(level), (C.GLint)(xoffset), (C.GLint)(yoffset), (C.GLint)(x), (C.GLint)(y), (C.GLsizei)(width), (C.GLsizei)(height))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glTexSubImage1D.xml
 func TexSubImage1D(target Enum, level Int, xoffset Int, width Sizei, format Enum, type_ Enum, pixels Pointer)  {
 	C.goglTexSubImage1D((C.GLenum)(target), (C.GLint)(level), (C.GLint)(xoffset), (C.GLsizei)(width), (C.GLenum)(format), (C.GLenum)(type_), (unsafe.Pointer)(pixels))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glTexSubImage2D.xml
 func TexSubImage2D(target Enum, level Int, xoffset Int, yoffset Int, width Sizei, height Sizei, format Enum, type_ Enum, pixels Pointer)  {
 	C.goglTexSubImage2D((C.GLenum)(target), (C.GLint)(level), (C.GLint)(xoffset), (C.GLint)(yoffset), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLenum)(format), (C.GLenum)(type_), (unsafe.Pointer)(pixels))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glBindTexture.xml
 func BindTexture(target Enum, texture Uint)  {
 	C.goglBindTexture((C.GLenum)(target), (C.GLuint)(texture))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glDeleteTextures.xml
 func DeleteTextures(n Sizei, textures *Uint)  {
 	C.goglDeleteTextures((C.GLsizei)(n), (*C.GLuint)(textures))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glGenTextures.xml
 func GenTextures(n Sizei, textures *Uint)  {
 	C.goglGenTextures((C.GLsizei)(n), (*C.GLuint)(textures))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glIsTexture.xml
 func IsTexture(texture Uint) Boolean {
 	return (Boolean)(C.goglIsTexture((C.GLuint)(texture)))
 }
 // VERSION_1_4_DEPRECATED
+
+// http://www.opengl.org/sdk/docs/man/xhtml/glFogCoordf.xml
 func FogCoordf(coord Float)  {
 	C.goglFogCoordf((C.GLfloat)(coord))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glFogCoordfv.xml
 func FogCoordfv(coord *Float)  {
 	C.goglFogCoordfv((*C.GLfloat)(coord))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glFogCoordd.xml
 func FogCoordd(coord Double)  {
 	C.goglFogCoordd((C.GLdouble)(coord))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glFogCoorddv.xml
 func FogCoorddv(coord *Double)  {
 	C.goglFogCoorddv((*C.GLdouble)(coord))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glFogCoordPointer.xml
 func FogCoordPointer(type_ Enum, stride Sizei, pointer Pointer)  {
 	C.goglFogCoordPointer((C.GLenum)(type_), (C.GLsizei)(stride), (unsafe.Pointer)(pointer))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glSecondaryColor3b.xml
 func SecondaryColor3b(red Byte, green Byte, blue Byte)  {
 	C.goglSecondaryColor3b((C.GLbyte)(red), (C.GLbyte)(green), (C.GLbyte)(blue))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glSecondaryColor3bv.xml
 func SecondaryColor3bv(v *Byte)  {
 	C.goglSecondaryColor3bv((*C.GLbyte)(v))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glSecondaryColor3d.xml
 func SecondaryColor3d(red Double, green Double, blue Double)  {
 	C.goglSecondaryColor3d((C.GLdouble)(red), (C.GLdouble)(green), (C.GLdouble)(blue))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glSecondaryColor3dv.xml
 func SecondaryColor3dv(v *Double)  {
 	C.goglSecondaryColor3dv((*C.GLdouble)(v))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glSecondaryColor3f.xml
 func SecondaryColor3f(red Float, green Float, blue Float)  {
 	C.goglSecondaryColor3f((C.GLfloat)(red), (C.GLfloat)(green), (C.GLfloat)(blue))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glSecondaryColor3fv.xml
 func SecondaryColor3fv(v *Float)  {
 	C.goglSecondaryColor3fv((*C.GLfloat)(v))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glSecondaryColor3i.xml
 func SecondaryColor3i(red Int, green Int, blue Int)  {
 	C.goglSecondaryColor3i((C.GLint)(red), (C.GLint)(green), (C.GLint)(blue))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glSecondaryColor3iv.xml
 func SecondaryColor3iv(v *Int)  {
 	C.goglSecondaryColor3iv((*C.GLint)(v))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glSecondaryColor3s.xml
 func SecondaryColor3s(red Short, green Short, blue Short)  {
 	C.goglSecondaryColor3s((C.GLshort)(red), (C.GLshort)(green), (C.GLshort)(blue))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glSecondaryColor3sv.xml
 func SecondaryColor3sv(v *Short)  {
 	C.goglSecondaryColor3sv((*C.GLshort)(v))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glSecondaryColor3ub.xml
 func SecondaryColor3ub(red Ubyte, green Ubyte, blue Ubyte)  {
 	C.goglSecondaryColor3ub((C.GLubyte)(red), (C.GLubyte)(green), (C.GLubyte)(blue))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glSecondaryColor3ubv.xml
 func SecondaryColor3ubv(v *Ubyte)  {
 	C.goglSecondaryColor3ubv((*C.GLubyte)(v))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glSecondaryColor3ui.xml
 func SecondaryColor3ui(red Uint, green Uint, blue Uint)  {
 	C.goglSecondaryColor3ui((C.GLuint)(red), (C.GLuint)(green), (C.GLuint)(blue))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glSecondaryColor3uiv.xml
 func SecondaryColor3uiv(v *Uint)  {
 	C.goglSecondaryColor3uiv((*C.GLuint)(v))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glSecondaryColor3us.xml
 func SecondaryColor3us(red Ushort, green Ushort, blue Ushort)  {
 	C.goglSecondaryColor3us((C.GLushort)(red), (C.GLushort)(green), (C.GLushort)(blue))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glSecondaryColor3usv.xml
 func SecondaryColor3usv(v *Ushort)  {
 	C.goglSecondaryColor3usv((*C.GLushort)(v))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glSecondaryColorPointer.xml
 func SecondaryColorPointer(size Int, type_ Enum, stride Sizei, pointer Pointer)  {
 	C.goglSecondaryColorPointer((C.GLint)(size), (C.GLenum)(type_), (C.GLsizei)(stride), (unsafe.Pointer)(pointer))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glWindowPos2d.xml
 func WindowPos2d(x Double, y Double)  {
 	C.goglWindowPos2d((C.GLdouble)(x), (C.GLdouble)(y))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glWindowPos2dv.xml
 func WindowPos2dv(v *Double)  {
 	C.goglWindowPos2dv((*C.GLdouble)(v))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glWindowPos2f.xml
 func WindowPos2f(x Float, y Float)  {
 	C.goglWindowPos2f((C.GLfloat)(x), (C.GLfloat)(y))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glWindowPos2fv.xml
 func WindowPos2fv(v *Float)  {
 	C.goglWindowPos2fv((*C.GLfloat)(v))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glWindowPos2i.xml
 func WindowPos2i(x Int, y Int)  {
 	C.goglWindowPos2i((C.GLint)(x), (C.GLint)(y))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glWindowPos2iv.xml
 func WindowPos2iv(v *Int)  {
 	C.goglWindowPos2iv((*C.GLint)(v))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glWindowPos2s.xml
 func WindowPos2s(x Short, y Short)  {
 	C.goglWindowPos2s((C.GLshort)(x), (C.GLshort)(y))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glWindowPos2sv.xml
 func WindowPos2sv(v *Short)  {
 	C.goglWindowPos2sv((*C.GLshort)(v))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glWindowPos3d.xml
 func WindowPos3d(x Double, y Double, z Double)  {
 	C.goglWindowPos3d((C.GLdouble)(x), (C.GLdouble)(y), (C.GLdouble)(z))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glWindowPos3dv.xml
 func WindowPos3dv(v *Double)  {
 	C.goglWindowPos3dv((*C.GLdouble)(v))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glWindowPos3f.xml
 func WindowPos3f(x Float, y Float, z Float)  {
 	C.goglWindowPos3f((C.GLfloat)(x), (C.GLfloat)(y), (C.GLfloat)(z))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glWindowPos3fv.xml
 func WindowPos3fv(v *Float)  {
 	C.goglWindowPos3fv((*C.GLfloat)(v))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glWindowPos3i.xml
 func WindowPos3i(x Int, y Int, z Int)  {
 	C.goglWindowPos3i((C.GLint)(x), (C.GLint)(y), (C.GLint)(z))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glWindowPos3iv.xml
 func WindowPos3iv(v *Int)  {
 	C.goglWindowPos3iv((*C.GLint)(v))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glWindowPos3s.xml
 func WindowPos3s(x Short, y Short, z Short)  {
 	C.goglWindowPos3s((C.GLshort)(x), (C.GLshort)(y), (C.GLshort)(z))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glWindowPos3sv.xml
 func WindowPos3sv(v *Short)  {
 	C.goglWindowPos3sv((*C.GLshort)(v))
 }
 // VERSION_1_2
+
+// http://www.opengl.org/sdk/docs/man/xhtml/glBlendColor.xml
 func BlendColor(red Clampf, green Clampf, blue Clampf, alpha Clampf)  {
 	C.goglBlendColor((C.GLclampf)(red), (C.GLclampf)(green), (C.GLclampf)(blue), (C.GLclampf)(alpha))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glBlendEquation.xml
 func BlendEquation(mode Enum)  {
 	C.goglBlendEquation((C.GLenum)(mode))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glDrawRangeElements.xml
 func DrawRangeElements(mode Enum, start Uint, end Uint, count Sizei, type_ Enum, indices Pointer)  {
 	C.goglDrawRangeElements((C.GLenum)(mode), (C.GLuint)(start), (C.GLuint)(end), (C.GLsizei)(count), (C.GLenum)(type_), (unsafe.Pointer)(indices))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glTexImage3D.xml
 func TexImage3D(target Enum, level Int, internalformat Int, width Sizei, height Sizei, depth Sizei, border Int, format Enum, type_ Enum, pixels Pointer)  {
 	C.goglTexImage3D((C.GLenum)(target), (C.GLint)(level), (C.GLint)(internalformat), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLsizei)(depth), (C.GLint)(border), (C.GLenum)(format), (C.GLenum)(type_), (unsafe.Pointer)(pixels))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glTexSubImage3D.xml
 func TexSubImage3D(target Enum, level Int, xoffset Int, yoffset Int, zoffset Int, width Sizei, height Sizei, depth Sizei, format Enum, type_ Enum, pixels Pointer)  {
 	C.goglTexSubImage3D((C.GLenum)(target), (C.GLint)(level), (C.GLint)(xoffset), (C.GLint)(yoffset), (C.GLint)(zoffset), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLsizei)(depth), (C.GLenum)(format), (C.GLenum)(type_), (unsafe.Pointer)(pixels))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glCopyTexSubImage3D.xml
 func CopyTexSubImage3D(target Enum, level Int, xoffset Int, yoffset Int, zoffset Int, x Int, y Int, width Sizei, height Sizei)  {
 	C.goglCopyTexSubImage3D((C.GLenum)(target), (C.GLint)(level), (C.GLint)(xoffset), (C.GLint)(yoffset), (C.GLint)(zoffset), (C.GLint)(x), (C.GLint)(y), (C.GLsizei)(width), (C.GLsizei)(height))
 }
 // VERSION_1_3
+
+// http://www.opengl.org/sdk/docs/man/xhtml/glActiveTexture.xml
 func ActiveTexture(texture Enum)  {
 	C.goglActiveTexture((C.GLenum)(texture))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glSampleCoverage.xml
 func SampleCoverage(value Clampf, invert Boolean)  {
 	C.goglSampleCoverage((C.GLclampf)(value), (C.GLboolean)(invert))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glCompressedTexImage3D.xml
 func CompressedTexImage3D(target Enum, level Int, internalformat Enum, width Sizei, height Sizei, depth Sizei, border Int, imageSize Sizei, data Pointer)  {
 	C.goglCompressedTexImage3D((C.GLenum)(target), (C.GLint)(level), (C.GLenum)(internalformat), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLsizei)(depth), (C.GLint)(border), (C.GLsizei)(imageSize), (unsafe.Pointer)(data))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glCompressedTexImage2D.xml
 func CompressedTexImage2D(target Enum, level Int, internalformat Enum, width Sizei, height Sizei, border Int, imageSize Sizei, data Pointer)  {
 	C.goglCompressedTexImage2D((C.GLenum)(target), (C.GLint)(level), (C.GLenum)(internalformat), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLint)(border), (C.GLsizei)(imageSize), (unsafe.Pointer)(data))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glCompressedTexImage1D.xml
 func CompressedTexImage1D(target Enum, level Int, internalformat Enum, width Sizei, border Int, imageSize Sizei, data Pointer)  {
 	C.goglCompressedTexImage1D((C.GLenum)(target), (C.GLint)(level), (C.GLenum)(internalformat), (C.GLsizei)(width), (C.GLint)(border), (C.GLsizei)(imageSize), (unsafe.Pointer)(data))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glCompressedTexSubImage3D.xml
 func CompressedTexSubImage3D(target Enum, level Int, xoffset Int, yoffset Int, zoffset Int, width Sizei, height Sizei, depth Sizei, format Enum, imageSize Sizei, data Pointer)  {
 	C.goglCompressedTexSubImage3D((C.GLenum)(target), (C.GLint)(level), (C.GLint)(xoffset), (C.GLint)(yoffset), (C.GLint)(zoffset), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLsizei)(depth), (C.GLenum)(format), (C.GLsizei)(imageSize), (unsafe.Pointer)(data))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glCompressedTexSubImage2D.xml
 func CompressedTexSubImage2D(target Enum, level Int, xoffset Int, yoffset Int, width Sizei, height Sizei, format Enum, imageSize Sizei, data Pointer)  {
 	C.goglCompressedTexSubImage2D((C.GLenum)(target), (C.GLint)(level), (C.GLint)(xoffset), (C.GLint)(yoffset), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLenum)(format), (C.GLsizei)(imageSize), (unsafe.Pointer)(data))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glCompressedTexSubImage1D.xml
 func CompressedTexSubImage1D(target Enum, level Int, xoffset Int, width Sizei, format Enum, imageSize Sizei, data Pointer)  {
 	C.goglCompressedTexSubImage1D((C.GLenum)(target), (C.GLint)(level), (C.GLint)(xoffset), (C.GLsizei)(width), (C.GLenum)(format), (C.GLsizei)(imageSize), (unsafe.Pointer)(data))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glGetCompressedTexImage.xml
 func GetCompressedTexImage(target Enum, level Int, img Pointer)  {
 	C.goglGetCompressedTexImage((C.GLenum)(target), (C.GLint)(level), (unsafe.Pointer)(img))
 }
 // VERSION_1_1_DEPRECATED
+
+// http://www.opengl.org/sdk/docs/man/xhtml/glArrayElement.xml
 func ArrayElement(i Int)  {
 	C.goglArrayElement((C.GLint)(i))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glColorPointer.xml
 func ColorPointer(size Int, type_ Enum, stride Sizei, pointer Pointer)  {
 	C.goglColorPointer((C.GLint)(size), (C.GLenum)(type_), (C.GLsizei)(stride), (unsafe.Pointer)(pointer))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glDisableClientState.xml
 func DisableClientState(array Enum)  {
 	C.goglDisableClientState((C.GLenum)(array))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glEdgeFlagPointer.xml
 func EdgeFlagPointer(stride Sizei, pointer Pointer)  {
 	C.goglEdgeFlagPointer((C.GLsizei)(stride), (unsafe.Pointer)(pointer))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glEnableClientState.xml
 func EnableClientState(array Enum)  {
 	C.goglEnableClientState((C.GLenum)(array))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glIndexPointer.xml
 func IndexPointer(type_ Enum, stride Sizei, pointer Pointer)  {
 	C.goglIndexPointer((C.GLenum)(type_), (C.GLsizei)(stride), (unsafe.Pointer)(pointer))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glInterleavedArrays.xml
 func InterleavedArrays(format Enum, stride Sizei, pointer Pointer)  {
 	C.goglInterleavedArrays((C.GLenum)(format), (C.GLsizei)(stride), (unsafe.Pointer)(pointer))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glNormalPointer.xml
 func NormalPointer(type_ Enum, stride Sizei, pointer Pointer)  {
 	C.goglNormalPointer((C.GLenum)(type_), (C.GLsizei)(stride), (unsafe.Pointer)(pointer))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glTexCoordPointer.xml
 func TexCoordPointer(size Int, type_ Enum, stride Sizei, pointer Pointer)  {
 	C.goglTexCoordPointer((C.GLint)(size), (C.GLenum)(type_), (C.GLsizei)(stride), (unsafe.Pointer)(pointer))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glVertexPointer.xml
 func VertexPointer(size Int, type_ Enum, stride Sizei, pointer Pointer)  {
 	C.goglVertexPointer((C.GLint)(size), (C.GLenum)(type_), (C.GLsizei)(stride), (unsafe.Pointer)(pointer))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glAreTexturesResident.xml
 func AreTexturesResident(n Sizei, textures *Uint, residences *Boolean) Boolean {
 	return (Boolean)(C.goglAreTexturesResident((C.GLsizei)(n), (*C.GLuint)(textures), (*C.GLboolean)(residences)))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glPrioritizeTextures.xml
 func PrioritizeTextures(n Sizei, textures *Uint, priorities *Clampf)  {
 	C.goglPrioritizeTextures((C.GLsizei)(n), (*C.GLuint)(textures), (*C.GLclampf)(priorities))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glIndexub.xml
 func Indexub(c Ubyte)  {
 	C.goglIndexub((C.GLubyte)(c))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glIndexubv.xml
 func Indexubv(c *Ubyte)  {
 	C.goglIndexubv((*C.GLubyte)(c))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glPopClientAttrib.xml
 func PopClientAttrib()  {
 	C.goglPopClientAttrib()
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glPushClientAttrib.xml
 func PushClientAttrib(mask Bitfield)  {
 	C.goglPushClientAttrib((C.GLbitfield)(mask))
 }
 // VERSION_1_0_DEPRECATED
+
+// http://www.opengl.org/sdk/docs/man/xhtml/glNewList.xml
 func NewList(list Uint, mode Enum)  {
 	C.goglNewList((C.GLuint)(list), (C.GLenum)(mode))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glEndList.xml
 func EndList()  {
 	C.goglEndList()
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glCallList.xml
 func CallList(list Uint)  {
 	C.goglCallList((C.GLuint)(list))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glCallLists.xml
 func CallLists(n Sizei, type_ Enum, lists Pointer)  {
 	C.goglCallLists((C.GLsizei)(n), (C.GLenum)(type_), (unsafe.Pointer)(lists))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glDeleteLists.xml
 func DeleteLists(list Uint, range_ Sizei)  {
 	C.goglDeleteLists((C.GLuint)(list), (C.GLsizei)(range_))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glGenLists.xml
 func GenLists(range_ Sizei) Uint {
 	return (Uint)(C.goglGenLists((C.GLsizei)(range_)))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glListBase.xml
 func ListBase(base Uint)  {
 	C.goglListBase((C.GLuint)(base))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glBegin.xml
 func Begin(mode Enum)  {
 	C.goglBegin((C.GLenum)(mode))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glBitmap.xml
 func Bitmap(width Sizei, height Sizei, xorig Float, yorig Float, xmove Float, ymove Float, bitmap *Ubyte)  {
 	C.goglBitmap((C.GLsizei)(width), (C.GLsizei)(height), (C.GLfloat)(xorig), (C.GLfloat)(yorig), (C.GLfloat)(xmove), (C.GLfloat)(ymove), (*C.GLubyte)(bitmap))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glColor3b.xml
 func Color3b(red Byte, green Byte, blue Byte)  {
 	C.goglColor3b((C.GLbyte)(red), (C.GLbyte)(green), (C.GLbyte)(blue))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glColor3bv.xml
 func Color3bv(v *Byte)  {
 	C.goglColor3bv((*C.GLbyte)(v))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glColor3d.xml
 func Color3d(red Double, green Double, blue Double)  {
 	C.goglColor3d((C.GLdouble)(red), (C.GLdouble)(green), (C.GLdouble)(blue))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glColor3dv.xml
 func Color3dv(v *Double)  {
 	C.goglColor3dv((*C.GLdouble)(v))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glColor3f.xml
 func Color3f(red Float, green Float, blue Float)  {
 	C.goglColor3f((C.GLfloat)(red), (C.GLfloat)(green), (C.GLfloat)(blue))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glColor3fv.xml
 func Color3fv(v *Float)  {
 	C.goglColor3fv((*C.GLfloat)(v))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glColor3i.xml
 func Color3i(red Int, green Int, blue Int)  {
 	C.goglColor3i((C.GLint)(red), (C.GLint)(green), (C.GLint)(blue))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glColor3iv.xml
 func Color3iv(v *Int)  {
 	C.goglColor3iv((*C.GLint)(v))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glColor3s.xml
 func Color3s(red Short, green Short, blue Short)  {
 	C.goglColor3s((C.GLshort)(red), (C.GLshort)(green), (C.GLshort)(blue))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glColor3sv.xml
 func Color3sv(v *Short)  {
 	C.goglColor3sv((*C.GLshort)(v))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glColor3ub.xml
 func Color3ub(red Ubyte, green Ubyte, blue Ubyte)  {
 	C.goglColor3ub((C.GLubyte)(red), (C.GLubyte)(green), (C.GLubyte)(blue))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glColor3ubv.xml
 func Color3ubv(v *Ubyte)  {
 	C.goglColor3ubv((*C.GLubyte)(v))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glColor3ui.xml
 func Color3ui(red Uint, green Uint, blue Uint)  {
 	C.goglColor3ui((C.GLuint)(red), (C.GLuint)(green), (C.GLuint)(blue))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glColor3uiv.xml
 func Color3uiv(v *Uint)  {
 	C.goglColor3uiv((*C.GLuint)(v))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glColor3us.xml
 func Color3us(red Ushort, green Ushort, blue Ushort)  {
 	C.goglColor3us((C.GLushort)(red), (C.GLushort)(green), (C.GLushort)(blue))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glColor3usv.xml
 func Color3usv(v *Ushort)  {
 	C.goglColor3usv((*C.GLushort)(v))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glColor4b.xml
 func Color4b(red Byte, green Byte, blue Byte, alpha Byte)  {
 	C.goglColor4b((C.GLbyte)(red), (C.GLbyte)(green), (C.GLbyte)(blue), (C.GLbyte)(alpha))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glColor4bv.xml
 func Color4bv(v *Byte)  {
 	C.goglColor4bv((*C.GLbyte)(v))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glColor4d.xml
 func Color4d(red Double, green Double, blue Double, alpha Double)  {
 	C.goglColor4d((C.GLdouble)(red), (C.GLdouble)(green), (C.GLdouble)(blue), (C.GLdouble)(alpha))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glColor4dv.xml
 func Color4dv(v *Double)  {
 	C.goglColor4dv((*C.GLdouble)(v))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glColor4f.xml
 func Color4f(red Float, green Float, blue Float, alpha Float)  {
 	C.goglColor4f((C.GLfloat)(red), (C.GLfloat)(green), (C.GLfloat)(blue), (C.GLfloat)(alpha))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glColor4fv.xml
 func Color4fv(v *Float)  {
 	C.goglColor4fv((*C.GLfloat)(v))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glColor4i.xml
 func Color4i(red Int, green Int, blue Int, alpha Int)  {
 	C.goglColor4i((C.GLint)(red), (C.GLint)(green), (C.GLint)(blue), (C.GLint)(alpha))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glColor4iv.xml
 func Color4iv(v *Int)  {
 	C.goglColor4iv((*C.GLint)(v))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glColor4s.xml
 func Color4s(red Short, green Short, blue Short, alpha Short)  {
 	C.goglColor4s((C.GLshort)(red), (C.GLshort)(green), (C.GLshort)(blue), (C.GLshort)(alpha))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glColor4sv.xml
 func Color4sv(v *Short)  {
 	C.goglColor4sv((*C.GLshort)(v))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glColor4ub.xml
 func Color4ub(red Ubyte, green Ubyte, blue Ubyte, alpha Ubyte)  {
 	C.goglColor4ub((C.GLubyte)(red), (C.GLubyte)(green), (C.GLubyte)(blue), (C.GLubyte)(alpha))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glColor4ubv.xml
 func Color4ubv(v *Ubyte)  {
 	C.goglColor4ubv((*C.GLubyte)(v))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glColor4ui.xml
 func Color4ui(red Uint, green Uint, blue Uint, alpha Uint)  {
 	C.goglColor4ui((C.GLuint)(red), (C.GLuint)(green), (C.GLuint)(blue), (C.GLuint)(alpha))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glColor4uiv.xml
 func Color4uiv(v *Uint)  {
 	C.goglColor4uiv((*C.GLuint)(v))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glColor4us.xml
 func Color4us(red Ushort, green Ushort, blue Ushort, alpha Ushort)  {
 	C.goglColor4us((C.GLushort)(red), (C.GLushort)(green), (C.GLushort)(blue), (C.GLushort)(alpha))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glColor4usv.xml
 func Color4usv(v *Ushort)  {
 	C.goglColor4usv((*C.GLushort)(v))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glEdgeFlag.xml
 func EdgeFlag(flag Boolean)  {
 	C.goglEdgeFlag((C.GLboolean)(flag))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glEdgeFlagv.xml
 func EdgeFlagv(flag *Boolean)  {
 	C.goglEdgeFlagv((*C.GLboolean)(flag))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glEnd.xml
 func End()  {
 	C.goglEnd()
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glIndexd.xml
 func Indexd(c Double)  {
 	C.goglIndexd((C.GLdouble)(c))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glIndexdv.xml
 func Indexdv(c *Double)  {
 	C.goglIndexdv((*C.GLdouble)(c))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glIndexf.xml
 func Indexf(c Float)  {
 	C.goglIndexf((C.GLfloat)(c))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glIndexfv.xml
 func Indexfv(c *Float)  {
 	C.goglIndexfv((*C.GLfloat)(c))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glIndexi.xml
 func Indexi(c Int)  {
 	C.goglIndexi((C.GLint)(c))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glIndexiv.xml
 func Indexiv(c *Int)  {
 	C.goglIndexiv((*C.GLint)(c))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glIndexs.xml
 func Indexs(c Short)  {
 	C.goglIndexs((C.GLshort)(c))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glIndexsv.xml
 func Indexsv(c *Short)  {
 	C.goglIndexsv((*C.GLshort)(c))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glNormal3b.xml
 func Normal3b(nx Byte, ny Byte, nz Byte)  {
 	C.goglNormal3b((C.GLbyte)(nx), (C.GLbyte)(ny), (C.GLbyte)(nz))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glNormal3bv.xml
 func Normal3bv(v *Byte)  {
 	C.goglNormal3bv((*C.GLbyte)(v))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glNormal3d.xml
 func Normal3d(nx Double, ny Double, nz Double)  {
 	C.goglNormal3d((C.GLdouble)(nx), (C.GLdouble)(ny), (C.GLdouble)(nz))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glNormal3dv.xml
 func Normal3dv(v *Double)  {
 	C.goglNormal3dv((*C.GLdouble)(v))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glNormal3f.xml
 func Normal3f(nx Float, ny Float, nz Float)  {
 	C.goglNormal3f((C.GLfloat)(nx), (C.GLfloat)(ny), (C.GLfloat)(nz))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glNormal3fv.xml
 func Normal3fv(v *Float)  {
 	C.goglNormal3fv((*C.GLfloat)(v))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glNormal3i.xml
 func Normal3i(nx Int, ny Int, nz Int)  {
 	C.goglNormal3i((C.GLint)(nx), (C.GLint)(ny), (C.GLint)(nz))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glNormal3iv.xml
 func Normal3iv(v *Int)  {
 	C.goglNormal3iv((*C.GLint)(v))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glNormal3s.xml
 func Normal3s(nx Short, ny Short, nz Short)  {
 	C.goglNormal3s((C.GLshort)(nx), (C.GLshort)(ny), (C.GLshort)(nz))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glNormal3sv.xml
 func Normal3sv(v *Short)  {
 	C.goglNormal3sv((*C.GLshort)(v))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glRasterPos2d.xml
 func RasterPos2d(x Double, y Double)  {
 	C.goglRasterPos2d((C.GLdouble)(x), (C.GLdouble)(y))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glRasterPos2dv.xml
 func RasterPos2dv(v *Double)  {
 	C.goglRasterPos2dv((*C.GLdouble)(v))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glRasterPos2f.xml
 func RasterPos2f(x Float, y Float)  {
 	C.goglRasterPos2f((C.GLfloat)(x), (C.GLfloat)(y))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glRasterPos2fv.xml
 func RasterPos2fv(v *Float)  {
 	C.goglRasterPos2fv((*C.GLfloat)(v))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glRasterPos2i.xml
 func RasterPos2i(x Int, y Int)  {
 	C.goglRasterPos2i((C.GLint)(x), (C.GLint)(y))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glRasterPos2iv.xml
 func RasterPos2iv(v *Int)  {
 	C.goglRasterPos2iv((*C.GLint)(v))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glRasterPos2s.xml
 func RasterPos2s(x Short, y Short)  {
 	C.goglRasterPos2s((C.GLshort)(x), (C.GLshort)(y))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glRasterPos2sv.xml
 func RasterPos2sv(v *Short)  {
 	C.goglRasterPos2sv((*C.GLshort)(v))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glRasterPos3d.xml
 func RasterPos3d(x Double, y Double, z Double)  {
 	C.goglRasterPos3d((C.GLdouble)(x), (C.GLdouble)(y), (C.GLdouble)(z))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glRasterPos3dv.xml
 func RasterPos3dv(v *Double)  {
 	C.goglRasterPos3dv((*C.GLdouble)(v))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glRasterPos3f.xml
 func RasterPos3f(x Float, y Float, z Float)  {
 	C.goglRasterPos3f((C.GLfloat)(x), (C.GLfloat)(y), (C.GLfloat)(z))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glRasterPos3fv.xml
 func RasterPos3fv(v *Float)  {
 	C.goglRasterPos3fv((*C.GLfloat)(v))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glRasterPos3i.xml
 func RasterPos3i(x Int, y Int, z Int)  {
 	C.goglRasterPos3i((C.GLint)(x), (C.GLint)(y), (C.GLint)(z))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glRasterPos3iv.xml
 func RasterPos3iv(v *Int)  {
 	C.goglRasterPos3iv((*C.GLint)(v))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glRasterPos3s.xml
 func RasterPos3s(x Short, y Short, z Short)  {
 	C.goglRasterPos3s((C.GLshort)(x), (C.GLshort)(y), (C.GLshort)(z))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glRasterPos3sv.xml
 func RasterPos3sv(v *Short)  {
 	C.goglRasterPos3sv((*C.GLshort)(v))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glRasterPos4d.xml
 func RasterPos4d(x Double, y Double, z Double, w Double)  {
 	C.goglRasterPos4d((C.GLdouble)(x), (C.GLdouble)(y), (C.GLdouble)(z), (C.GLdouble)(w))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glRasterPos4dv.xml
 func RasterPos4dv(v *Double)  {
 	C.goglRasterPos4dv((*C.GLdouble)(v))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glRasterPos4f.xml
 func RasterPos4f(x Float, y Float, z Float, w Float)  {
 	C.goglRasterPos4f((C.GLfloat)(x), (C.GLfloat)(y), (C.GLfloat)(z), (C.GLfloat)(w))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glRasterPos4fv.xml
 func RasterPos4fv(v *Float)  {
 	C.goglRasterPos4fv((*C.GLfloat)(v))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glRasterPos4i.xml
 func RasterPos4i(x Int, y Int, z Int, w Int)  {
 	C.goglRasterPos4i((C.GLint)(x), (C.GLint)(y), (C.GLint)(z), (C.GLint)(w))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glRasterPos4iv.xml
 func RasterPos4iv(v *Int)  {
 	C.goglRasterPos4iv((*C.GLint)(v))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glRasterPos4s.xml
 func RasterPos4s(x Short, y Short, z Short, w Short)  {
 	C.goglRasterPos4s((C.GLshort)(x), (C.GLshort)(y), (C.GLshort)(z), (C.GLshort)(w))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glRasterPos4sv.xml
 func RasterPos4sv(v *Short)  {
 	C.goglRasterPos4sv((*C.GLshort)(v))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glRectd.xml
 func Rectd(x1 Double, y1 Double, x2 Double, y2 Double)  {
 	C.goglRectd((C.GLdouble)(x1), (C.GLdouble)(y1), (C.GLdouble)(x2), (C.GLdouble)(y2))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glRectdv.xml
 func Rectdv(v1 *Double, v2 *Double)  {
 	C.goglRectdv((*C.GLdouble)(v1), (*C.GLdouble)(v2))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glRectf.xml
 func Rectf(x1 Float, y1 Float, x2 Float, y2 Float)  {
 	C.goglRectf((C.GLfloat)(x1), (C.GLfloat)(y1), (C.GLfloat)(x2), (C.GLfloat)(y2))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glRectfv.xml
 func Rectfv(v1 *Float, v2 *Float)  {
 	C.goglRectfv((*C.GLfloat)(v1), (*C.GLfloat)(v2))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glRecti.xml
 func Recti(x1 Int, y1 Int, x2 Int, y2 Int)  {
 	C.goglRecti((C.GLint)(x1), (C.GLint)(y1), (C.GLint)(x2), (C.GLint)(y2))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glRectiv.xml
 func Rectiv(v1 *Int, v2 *Int)  {
 	C.goglRectiv((*C.GLint)(v1), (*C.GLint)(v2))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glRects.xml
 func Rects(x1 Short, y1 Short, x2 Short, y2 Short)  {
 	C.goglRects((C.GLshort)(x1), (C.GLshort)(y1), (C.GLshort)(x2), (C.GLshort)(y2))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glRectsv.xml
 func Rectsv(v1 *Short, v2 *Short)  {
 	C.goglRectsv((*C.GLshort)(v1), (*C.GLshort)(v2))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glTexCoord1d.xml
 func TexCoord1d(s Double)  {
 	C.goglTexCoord1d((C.GLdouble)(s))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glTexCoord1dv.xml
 func TexCoord1dv(v *Double)  {
 	C.goglTexCoord1dv((*C.GLdouble)(v))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glTexCoord1f.xml
 func TexCoord1f(s Float)  {
 	C.goglTexCoord1f((C.GLfloat)(s))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glTexCoord1fv.xml
 func TexCoord1fv(v *Float)  {
 	C.goglTexCoord1fv((*C.GLfloat)(v))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glTexCoord1i.xml
 func TexCoord1i(s Int)  {
 	C.goglTexCoord1i((C.GLint)(s))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glTexCoord1iv.xml
 func TexCoord1iv(v *Int)  {
 	C.goglTexCoord1iv((*C.GLint)(v))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glTexCoord1s.xml
 func TexCoord1s(s Short)  {
 	C.goglTexCoord1s((C.GLshort)(s))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glTexCoord1sv.xml
 func TexCoord1sv(v *Short)  {
 	C.goglTexCoord1sv((*C.GLshort)(v))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glTexCoord2d.xml
 func TexCoord2d(s Double, t Double)  {
 	C.goglTexCoord2d((C.GLdouble)(s), (C.GLdouble)(t))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glTexCoord2dv.xml
 func TexCoord2dv(v *Double)  {
 	C.goglTexCoord2dv((*C.GLdouble)(v))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glTexCoord2f.xml
 func TexCoord2f(s Float, t Float)  {
 	C.goglTexCoord2f((C.GLfloat)(s), (C.GLfloat)(t))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glTexCoord2fv.xml
 func TexCoord2fv(v *Float)  {
 	C.goglTexCoord2fv((*C.GLfloat)(v))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glTexCoord2i.xml
 func TexCoord2i(s Int, t Int)  {
 	C.goglTexCoord2i((C.GLint)(s), (C.GLint)(t))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glTexCoord2iv.xml
 func TexCoord2iv(v *Int)  {
 	C.goglTexCoord2iv((*C.GLint)(v))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glTexCoord2s.xml
 func TexCoord2s(s Short, t Short)  {
 	C.goglTexCoord2s((C.GLshort)(s), (C.GLshort)(t))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glTexCoord2sv.xml
 func TexCoord2sv(v *Short)  {
 	C.goglTexCoord2sv((*C.GLshort)(v))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glTexCoord3d.xml
 func TexCoord3d(s Double, t Double, r Double)  {
 	C.goglTexCoord3d((C.GLdouble)(s), (C.GLdouble)(t), (C.GLdouble)(r))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glTexCoord3dv.xml
 func TexCoord3dv(v *Double)  {
 	C.goglTexCoord3dv((*C.GLdouble)(v))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glTexCoord3f.xml
 func TexCoord3f(s Float, t Float, r Float)  {
 	C.goglTexCoord3f((C.GLfloat)(s), (C.GLfloat)(t), (C.GLfloat)(r))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glTexCoord3fv.xml
 func TexCoord3fv(v *Float)  {
 	C.goglTexCoord3fv((*C.GLfloat)(v))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glTexCoord3i.xml
 func TexCoord3i(s Int, t Int, r Int)  {
 	C.goglTexCoord3i((C.GLint)(s), (C.GLint)(t), (C.GLint)(r))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glTexCoord3iv.xml
 func TexCoord3iv(v *Int)  {
 	C.goglTexCoord3iv((*C.GLint)(v))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glTexCoord3s.xml
 func TexCoord3s(s Short, t Short, r Short)  {
 	C.goglTexCoord3s((C.GLshort)(s), (C.GLshort)(t), (C.GLshort)(r))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glTexCoord3sv.xml
 func TexCoord3sv(v *Short)  {
 	C.goglTexCoord3sv((*C.GLshort)(v))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glTexCoord4d.xml
 func TexCoord4d(s Double, t Double, r Double, q Double)  {
 	C.goglTexCoord4d((C.GLdouble)(s), (C.GLdouble)(t), (C.GLdouble)(r), (C.GLdouble)(q))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glTexCoord4dv.xml
 func TexCoord4dv(v *Double)  {
 	C.goglTexCoord4dv((*C.GLdouble)(v))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glTexCoord4f.xml
 func TexCoord4f(s Float, t Float, r Float, q Float)  {
 	C.goglTexCoord4f((C.GLfloat)(s), (C.GLfloat)(t), (C.GLfloat)(r), (C.GLfloat)(q))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glTexCoord4fv.xml
 func TexCoord4fv(v *Float)  {
 	C.goglTexCoord4fv((*C.GLfloat)(v))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glTexCoord4i.xml
 func TexCoord4i(s Int, t Int, r Int, q Int)  {
 	C.goglTexCoord4i((C.GLint)(s), (C.GLint)(t), (C.GLint)(r), (C.GLint)(q))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glTexCoord4iv.xml
 func TexCoord4iv(v *Int)  {
 	C.goglTexCoord4iv((*C.GLint)(v))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glTexCoord4s.xml
 func TexCoord4s(s Short, t Short, r Short, q Short)  {
 	C.goglTexCoord4s((C.GLshort)(s), (C.GLshort)(t), (C.GLshort)(r), (C.GLshort)(q))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glTexCoord4sv.xml
 func TexCoord4sv(v *Short)  {
 	C.goglTexCoord4sv((*C.GLshort)(v))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glVertex2d.xml
 func Vertex2d(x Double, y Double)  {
 	C.goglVertex2d((C.GLdouble)(x), (C.GLdouble)(y))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glVertex2dv.xml
 func Vertex2dv(v *Double)  {
 	C.goglVertex2dv((*C.GLdouble)(v))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glVertex2f.xml
 func Vertex2f(x Float, y Float)  {
 	C.goglVertex2f((C.GLfloat)(x), (C.GLfloat)(y))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glVertex2fv.xml
 func Vertex2fv(v *Float)  {
 	C.goglVertex2fv((*C.GLfloat)(v))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glVertex2i.xml
 func Vertex2i(x Int, y Int)  {
 	C.goglVertex2i((C.GLint)(x), (C.GLint)(y))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glVertex2iv.xml
 func Vertex2iv(v *Int)  {
 	C.goglVertex2iv((*C.GLint)(v))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glVertex2s.xml
 func Vertex2s(x Short, y Short)  {
 	C.goglVertex2s((C.GLshort)(x), (C.GLshort)(y))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glVertex2sv.xml
 func Vertex2sv(v *Short)  {
 	C.goglVertex2sv((*C.GLshort)(v))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glVertex3d.xml
 func Vertex3d(x Double, y Double, z Double)  {
 	C.goglVertex3d((C.GLdouble)(x), (C.GLdouble)(y), (C.GLdouble)(z))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glVertex3dv.xml
 func Vertex3dv(v *Double)  {
 	C.goglVertex3dv((*C.GLdouble)(v))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glVertex3f.xml
 func Vertex3f(x Float, y Float, z Float)  {
 	C.goglVertex3f((C.GLfloat)(x), (C.GLfloat)(y), (C.GLfloat)(z))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glVertex3fv.xml
 func Vertex3fv(v *Float)  {
 	C.goglVertex3fv((*C.GLfloat)(v))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glVertex3i.xml
 func Vertex3i(x Int, y Int, z Int)  {
 	C.goglVertex3i((C.GLint)(x), (C.GLint)(y), (C.GLint)(z))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glVertex3iv.xml
 func Vertex3iv(v *Int)  {
 	C.goglVertex3iv((*C.GLint)(v))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glVertex3s.xml
 func Vertex3s(x Short, y Short, z Short)  {
 	C.goglVertex3s((C.GLshort)(x), (C.GLshort)(y), (C.GLshort)(z))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glVertex3sv.xml
 func Vertex3sv(v *Short)  {
 	C.goglVertex3sv((*C.GLshort)(v))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glVertex4d.xml
 func Vertex4d(x Double, y Double, z Double, w Double)  {
 	C.goglVertex4d((C.GLdouble)(x), (C.GLdouble)(y), (C.GLdouble)(z), (C.GLdouble)(w))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glVertex4dv.xml
 func Vertex4dv(v *Double)  {
 	C.goglVertex4dv((*C.GLdouble)(v))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glVertex4f.xml
 func Vertex4f(x Float, y Float, z Float, w Float)  {
 	C.goglVertex4f((C.GLfloat)(x), (C.GLfloat)(y), (C.GLfloat)(z), (C.GLfloat)(w))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glVertex4fv.xml
 func Vertex4fv(v *Float)  {
 	C.goglVertex4fv((*C.GLfloat)(v))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glVertex4i.xml
 func Vertex4i(x Int, y Int, z Int, w Int)  {
 	C.goglVertex4i((C.GLint)(x), (C.GLint)(y), (C.GLint)(z), (C.GLint)(w))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glVertex4iv.xml
 func Vertex4iv(v *Int)  {
 	C.goglVertex4iv((*C.GLint)(v))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glVertex4s.xml
 func Vertex4s(x Short, y Short, z Short, w Short)  {
 	C.goglVertex4s((C.GLshort)(x), (C.GLshort)(y), (C.GLshort)(z), (C.GLshort)(w))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glVertex4sv.xml
 func Vertex4sv(v *Short)  {
 	C.goglVertex4sv((*C.GLshort)(v))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glClipPlane.xml
 func ClipPlane(plane Enum, equation *Double)  {
 	C.goglClipPlane((C.GLenum)(plane), (*C.GLdouble)(equation))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glColorMaterial.xml
 func ColorMaterial(face Enum, mode Enum)  {
 	C.goglColorMaterial((C.GLenum)(face), (C.GLenum)(mode))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glFogf.xml
 func Fogf(pname Enum, param Float)  {
 	C.goglFogf((C.GLenum)(pname), (C.GLfloat)(param))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glFogfv.xml
 func Fogfv(pname Enum, params *Float)  {
 	C.goglFogfv((C.GLenum)(pname), (*C.GLfloat)(params))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glFogi.xml
 func Fogi(pname Enum, param Int)  {
 	C.goglFogi((C.GLenum)(pname), (C.GLint)(param))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glFogiv.xml
 func Fogiv(pname Enum, params *Int)  {
 	C.goglFogiv((C.GLenum)(pname), (*C.GLint)(params))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glLightf.xml
 func Lightf(light Enum, pname Enum, param Float)  {
 	C.goglLightf((C.GLenum)(light), (C.GLenum)(pname), (C.GLfloat)(param))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glLightfv.xml
 func Lightfv(light Enum, pname Enum, params *Float)  {
 	C.goglLightfv((C.GLenum)(light), (C.GLenum)(pname), (*C.GLfloat)(params))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glLighti.xml
 func Lighti(light Enum, pname Enum, param Int)  {
 	C.goglLighti((C.GLenum)(light), (C.GLenum)(pname), (C.GLint)(param))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glLightiv.xml
 func Lightiv(light Enum, pname Enum, params *Int)  {
 	C.goglLightiv((C.GLenum)(light), (C.GLenum)(pname), (*C.GLint)(params))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glLightModelf.xml
 func LightModelf(pname Enum, param Float)  {
 	C.goglLightModelf((C.GLenum)(pname), (C.GLfloat)(param))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glLightModelfv.xml
 func LightModelfv(pname Enum, params *Float)  {
 	C.goglLightModelfv((C.GLenum)(pname), (*C.GLfloat)(params))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glLightModeli.xml
 func LightModeli(pname Enum, param Int)  {
 	C.goglLightModeli((C.GLenum)(pname), (C.GLint)(param))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glLightModeliv.xml
 func LightModeliv(pname Enum, params *Int)  {
 	C.goglLightModeliv((C.GLenum)(pname), (*C.GLint)(params))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glLineStipple.xml
 func LineStipple(factor Int, pattern Ushort)  {
 	C.goglLineStipple((C.GLint)(factor), (C.GLushort)(pattern))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glMaterialf.xml
 func Materialf(face Enum, pname Enum, param Float)  {
 	C.goglMaterialf((C.GLenum)(face), (C.GLenum)(pname), (C.GLfloat)(param))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glMaterialfv.xml
 func Materialfv(face Enum, pname Enum, params *Float)  {
 	C.goglMaterialfv((C.GLenum)(face), (C.GLenum)(pname), (*C.GLfloat)(params))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glMateriali.xml
 func Materiali(face Enum, pname Enum, param Int)  {
 	C.goglMateriali((C.GLenum)(face), (C.GLenum)(pname), (C.GLint)(param))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glMaterialiv.xml
 func Materialiv(face Enum, pname Enum, params *Int)  {
 	C.goglMaterialiv((C.GLenum)(face), (C.GLenum)(pname), (*C.GLint)(params))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glPolygonStipple.xml
 func PolygonStipple(mask *Ubyte)  {
 	C.goglPolygonStipple((*C.GLubyte)(mask))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glShadeModel.xml
 func ShadeModel(mode Enum)  {
 	C.goglShadeModel((C.GLenum)(mode))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glTexEnvf.xml
 func TexEnvf(target Enum, pname Enum, param Float)  {
 	C.goglTexEnvf((C.GLenum)(target), (C.GLenum)(pname), (C.GLfloat)(param))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glTexEnvfv.xml
 func TexEnvfv(target Enum, pname Enum, params *Float)  {
 	C.goglTexEnvfv((C.GLenum)(target), (C.GLenum)(pname), (*C.GLfloat)(params))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glTexEnvi.xml
 func TexEnvi(target Enum, pname Enum, param Int)  {
 	C.goglTexEnvi((C.GLenum)(target), (C.GLenum)(pname), (C.GLint)(param))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glTexEnviv.xml
 func TexEnviv(target Enum, pname Enum, params *Int)  {
 	C.goglTexEnviv((C.GLenum)(target), (C.GLenum)(pname), (*C.GLint)(params))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glTexGend.xml
 func TexGend(coord Enum, pname Enum, param Double)  {
 	C.goglTexGend((C.GLenum)(coord), (C.GLenum)(pname), (C.GLdouble)(param))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glTexGendv.xml
 func TexGendv(coord Enum, pname Enum, params *Double)  {
 	C.goglTexGendv((C.GLenum)(coord), (C.GLenum)(pname), (*C.GLdouble)(params))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glTexGenf.xml
 func TexGenf(coord Enum, pname Enum, param Float)  {
 	C.goglTexGenf((C.GLenum)(coord), (C.GLenum)(pname), (C.GLfloat)(param))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glTexGenfv.xml
 func TexGenfv(coord Enum, pname Enum, params *Float)  {
 	C.goglTexGenfv((C.GLenum)(coord), (C.GLenum)(pname), (*C.GLfloat)(params))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glTexGeni.xml
 func TexGeni(coord Enum, pname Enum, param Int)  {
 	C.goglTexGeni((C.GLenum)(coord), (C.GLenum)(pname), (C.GLint)(param))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glTexGeniv.xml
 func TexGeniv(coord Enum, pname Enum, params *Int)  {
 	C.goglTexGeniv((C.GLenum)(coord), (C.GLenum)(pname), (*C.GLint)(params))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glFeedbackBuffer.xml
 func FeedbackBuffer(size Sizei, type_ Enum, buffer *Float)  {
 	C.goglFeedbackBuffer((C.GLsizei)(size), (C.GLenum)(type_), (*C.GLfloat)(buffer))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glSelectBuffer.xml
 func SelectBuffer(size Sizei, buffer *Uint)  {
 	C.goglSelectBuffer((C.GLsizei)(size), (*C.GLuint)(buffer))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glRenderMode.xml
 func RenderMode(mode Enum) Int {
 	return (Int)(C.goglRenderMode((C.GLenum)(mode)))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glInitNames.xml
 func InitNames()  {
 	C.goglInitNames()
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glLoadName.xml
 func LoadName(name Uint)  {
 	C.goglLoadName((C.GLuint)(name))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glPassThrough.xml
 func PassThrough(token Float)  {
 	C.goglPassThrough((C.GLfloat)(token))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glPopName.xml
 func PopName()  {
 	C.goglPopName()
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glPushName.xml
 func PushName(name Uint)  {
 	C.goglPushName((C.GLuint)(name))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glClearAccum.xml
 func ClearAccum(red Float, green Float, blue Float, alpha Float)  {
 	C.goglClearAccum((C.GLfloat)(red), (C.GLfloat)(green), (C.GLfloat)(blue), (C.GLfloat)(alpha))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glClearIndex.xml
 func ClearIndex(c Float)  {
 	C.goglClearIndex((C.GLfloat)(c))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glIndexMask.xml
 func IndexMask(mask Uint)  {
 	C.goglIndexMask((C.GLuint)(mask))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glAccum.xml
 func Accum(op Enum, value Float)  {
 	C.goglAccum((C.GLenum)(op), (C.GLfloat)(value))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glPopAttrib.xml
 func PopAttrib()  {
 	C.goglPopAttrib()
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glPushAttrib.xml
 func PushAttrib(mask Bitfield)  {
 	C.goglPushAttrib((C.GLbitfield)(mask))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glMap1d.xml
 func Map1d(target Enum, u1 Double, u2 Double, stride Int, order Int, points *Double)  {
 	C.goglMap1d((C.GLenum)(target), (C.GLdouble)(u1), (C.GLdouble)(u2), (C.GLint)(stride), (C.GLint)(order), (*C.GLdouble)(points))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glMap1f.xml
 func Map1f(target Enum, u1 Float, u2 Float, stride Int, order Int, points *Float)  {
 	C.goglMap1f((C.GLenum)(target), (C.GLfloat)(u1), (C.GLfloat)(u2), (C.GLint)(stride), (C.GLint)(order), (*C.GLfloat)(points))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glMap2d.xml
 func Map2d(target Enum, u1 Double, u2 Double, ustride Int, uorder Int, v1 Double, v2 Double, vstride Int, vorder Int, points *Double)  {
 	C.goglMap2d((C.GLenum)(target), (C.GLdouble)(u1), (C.GLdouble)(u2), (C.GLint)(ustride), (C.GLint)(uorder), (C.GLdouble)(v1), (C.GLdouble)(v2), (C.GLint)(vstride), (C.GLint)(vorder), (*C.GLdouble)(points))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glMap2f.xml
 func Map2f(target Enum, u1 Float, u2 Float, ustride Int, uorder Int, v1 Float, v2 Float, vstride Int, vorder Int, points *Float)  {
 	C.goglMap2f((C.GLenum)(target), (C.GLfloat)(u1), (C.GLfloat)(u2), (C.GLint)(ustride), (C.GLint)(uorder), (C.GLfloat)(v1), (C.GLfloat)(v2), (C.GLint)(vstride), (C.GLint)(vorder), (*C.GLfloat)(points))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glMapGrid1d.xml
 func MapGrid1d(un Int, u1 Double, u2 Double)  {
 	C.goglMapGrid1d((C.GLint)(un), (C.GLdouble)(u1), (C.GLdouble)(u2))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glMapGrid1f.xml
 func MapGrid1f(un Int, u1 Float, u2 Float)  {
 	C.goglMapGrid1f((C.GLint)(un), (C.GLfloat)(u1), (C.GLfloat)(u2))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glMapGrid2d.xml
 func MapGrid2d(un Int, u1 Double, u2 Double, vn Int, v1 Double, v2 Double)  {
 	C.goglMapGrid2d((C.GLint)(un), (C.GLdouble)(u1), (C.GLdouble)(u2), (C.GLint)(vn), (C.GLdouble)(v1), (C.GLdouble)(v2))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glMapGrid2f.xml
 func MapGrid2f(un Int, u1 Float, u2 Float, vn Int, v1 Float, v2 Float)  {
 	C.goglMapGrid2f((C.GLint)(un), (C.GLfloat)(u1), (C.GLfloat)(u2), (C.GLint)(vn), (C.GLfloat)(v1), (C.GLfloat)(v2))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glEvalCoord1d.xml
 func EvalCoord1d(u Double)  {
 	C.goglEvalCoord1d((C.GLdouble)(u))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glEvalCoord1dv.xml
 func EvalCoord1dv(u *Double)  {
 	C.goglEvalCoord1dv((*C.GLdouble)(u))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glEvalCoord1f.xml
 func EvalCoord1f(u Float)  {
 	C.goglEvalCoord1f((C.GLfloat)(u))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glEvalCoord1fv.xml
 func EvalCoord1fv(u *Float)  {
 	C.goglEvalCoord1fv((*C.GLfloat)(u))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glEvalCoord2d.xml
 func EvalCoord2d(u Double, v Double)  {
 	C.goglEvalCoord2d((C.GLdouble)(u), (C.GLdouble)(v))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glEvalCoord2dv.xml
 func EvalCoord2dv(u *Double)  {
 	C.goglEvalCoord2dv((*C.GLdouble)(u))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glEvalCoord2f.xml
 func EvalCoord2f(u Float, v Float)  {
 	C.goglEvalCoord2f((C.GLfloat)(u), (C.GLfloat)(v))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glEvalCoord2fv.xml
 func EvalCoord2fv(u *Float)  {
 	C.goglEvalCoord2fv((*C.GLfloat)(u))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glEvalMesh1.xml
 func EvalMesh1(mode Enum, i1 Int, i2 Int)  {
 	C.goglEvalMesh1((C.GLenum)(mode), (C.GLint)(i1), (C.GLint)(i2))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glEvalPoint1.xml
 func EvalPoint1(i Int)  {
 	C.goglEvalPoint1((C.GLint)(i))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glEvalMesh2.xml
 func EvalMesh2(mode Enum, i1 Int, i2 Int, j1 Int, j2 Int)  {
 	C.goglEvalMesh2((C.GLenum)(mode), (C.GLint)(i1), (C.GLint)(i2), (C.GLint)(j1), (C.GLint)(j2))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glEvalPoint2.xml
 func EvalPoint2(i Int, j Int)  {
 	C.goglEvalPoint2((C.GLint)(i), (C.GLint)(j))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glAlphaFunc.xml
 func AlphaFunc(func_ Enum, ref Clampf)  {
 	C.goglAlphaFunc((C.GLenum)(func_), (C.GLclampf)(ref))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glPixelZoom.xml
 func PixelZoom(xfactor Float, yfactor Float)  {
 	C.goglPixelZoom((C.GLfloat)(xfactor), (C.GLfloat)(yfactor))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glPixelTransferf.xml
 func PixelTransferf(pname Enum, param Float)  {
 	C.goglPixelTransferf((C.GLenum)(pname), (C.GLfloat)(param))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glPixelTransferi.xml
 func PixelTransferi(pname Enum, param Int)  {
 	C.goglPixelTransferi((C.GLenum)(pname), (C.GLint)(param))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glPixelMapfv.xml
 func PixelMapfv(map_ Enum, mapsize Sizei, values *Float)  {
 	C.goglPixelMapfv((C.GLenum)(map_), (C.GLsizei)(mapsize), (*C.GLfloat)(values))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glPixelMapuiv.xml
 func PixelMapuiv(map_ Enum, mapsize Sizei, values *Uint)  {
 	C.goglPixelMapuiv((C.GLenum)(map_), (C.GLsizei)(mapsize), (*C.GLuint)(values))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glPixelMapusv.xml
 func PixelMapusv(map_ Enum, mapsize Sizei, values *Ushort)  {
 	C.goglPixelMapusv((C.GLenum)(map_), (C.GLsizei)(mapsize), (*C.GLushort)(values))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glCopyPixels.xml
 func CopyPixels(x Int, y Int, width Sizei, height Sizei, type_ Enum)  {
 	C.goglCopyPixels((C.GLint)(x), (C.GLint)(y), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLenum)(type_))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glDrawPixels.xml
 func DrawPixels(width Sizei, height Sizei, format Enum, type_ Enum, pixels Pointer)  {
 	C.goglDrawPixels((C.GLsizei)(width), (C.GLsizei)(height), (C.GLenum)(format), (C.GLenum)(type_), (unsafe.Pointer)(pixels))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glGetClipPlane.xml
 func GetClipPlane(plane Enum, equation *Double)  {
 	C.goglGetClipPlane((C.GLenum)(plane), (*C.GLdouble)(equation))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glGetLightfv.xml
 func GetLightfv(light Enum, pname Enum, params *Float)  {
 	C.goglGetLightfv((C.GLenum)(light), (C.GLenum)(pname), (*C.GLfloat)(params))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glGetLightiv.xml
 func GetLightiv(light Enum, pname Enum, params *Int)  {
 	C.goglGetLightiv((C.GLenum)(light), (C.GLenum)(pname), (*C.GLint)(params))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glGetMapdv.xml
 func GetMapdv(target Enum, query Enum, v *Double)  {
 	C.goglGetMapdv((C.GLenum)(target), (C.GLenum)(query), (*C.GLdouble)(v))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glGetMapfv.xml
 func GetMapfv(target Enum, query Enum, v *Float)  {
 	C.goglGetMapfv((C.GLenum)(target), (C.GLenum)(query), (*C.GLfloat)(v))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glGetMapiv.xml
 func GetMapiv(target Enum, query Enum, v *Int)  {
 	C.goglGetMapiv((C.GLenum)(target), (C.GLenum)(query), (*C.GLint)(v))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glGetMaterialfv.xml
 func GetMaterialfv(face Enum, pname Enum, params *Float)  {
 	C.goglGetMaterialfv((C.GLenum)(face), (C.GLenum)(pname), (*C.GLfloat)(params))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glGetMaterialiv.xml
 func GetMaterialiv(face Enum, pname Enum, params *Int)  {
 	C.goglGetMaterialiv((C.GLenum)(face), (C.GLenum)(pname), (*C.GLint)(params))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glGetPixelMapfv.xml
 func GetPixelMapfv(map_ Enum, values *Float)  {
 	C.goglGetPixelMapfv((C.GLenum)(map_), (*C.GLfloat)(values))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glGetPixelMapuiv.xml
 func GetPixelMapuiv(map_ Enum, values *Uint)  {
 	C.goglGetPixelMapuiv((C.GLenum)(map_), (*C.GLuint)(values))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glGetPixelMapusv.xml
 func GetPixelMapusv(map_ Enum, values *Ushort)  {
 	C.goglGetPixelMapusv((C.GLenum)(map_), (*C.GLushort)(values))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glGetPolygonStipple.xml
 func GetPolygonStipple(mask *Ubyte)  {
 	C.goglGetPolygonStipple((*C.GLubyte)(mask))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glGetTexEnvfv.xml
 func GetTexEnvfv(target Enum, pname Enum, params *Float)  {
 	C.goglGetTexEnvfv((C.GLenum)(target), (C.GLenum)(pname), (*C.GLfloat)(params))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glGetTexEnviv.xml
 func GetTexEnviv(target Enum, pname Enum, params *Int)  {
 	C.goglGetTexEnviv((C.GLenum)(target), (C.GLenum)(pname), (*C.GLint)(params))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glGetTexGendv.xml
 func GetTexGendv(coord Enum, pname Enum, params *Double)  {
 	C.goglGetTexGendv((C.GLenum)(coord), (C.GLenum)(pname), (*C.GLdouble)(params))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glGetTexGenfv.xml
 func GetTexGenfv(coord Enum, pname Enum, params *Float)  {
 	C.goglGetTexGenfv((C.GLenum)(coord), (C.GLenum)(pname), (*C.GLfloat)(params))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glGetTexGeniv.xml
 func GetTexGeniv(coord Enum, pname Enum, params *Int)  {
 	C.goglGetTexGeniv((C.GLenum)(coord), (C.GLenum)(pname), (*C.GLint)(params))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glIsList.xml
 func IsList(list Uint) Boolean {
 	return (Boolean)(C.goglIsList((C.GLuint)(list)))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glFrustum.xml
 func Frustum(left Double, right Double, bottom Double, top Double, zNear Double, zFar Double)  {
 	C.goglFrustum((C.GLdouble)(left), (C.GLdouble)(right), (C.GLdouble)(bottom), (C.GLdouble)(top), (C.GLdouble)(zNear), (C.GLdouble)(zFar))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glLoadIdentity.xml
 func LoadIdentity()  {
 	C.goglLoadIdentity()
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glLoadMatrixf.xml
 func LoadMatrixf(m *Float)  {
 	C.goglLoadMatrixf((*C.GLfloat)(m))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glLoadMatrixd.xml
 func LoadMatrixd(m *Double)  {
 	C.goglLoadMatrixd((*C.GLdouble)(m))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glMatrixMode.xml
 func MatrixMode(mode Enum)  {
 	C.goglMatrixMode((C.GLenum)(mode))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glMultMatrixf.xml
 func MultMatrixf(m *Float)  {
 	C.goglMultMatrixf((*C.GLfloat)(m))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glMultMatrixd.xml
 func MultMatrixd(m *Double)  {
 	C.goglMultMatrixd((*C.GLdouble)(m))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glOrtho.xml
 func Ortho(left Double, right Double, bottom Double, top Double, zNear Double, zFar Double)  {
 	C.goglOrtho((C.GLdouble)(left), (C.GLdouble)(right), (C.GLdouble)(bottom), (C.GLdouble)(top), (C.GLdouble)(zNear), (C.GLdouble)(zFar))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glPopMatrix.xml
 func PopMatrix()  {
 	C.goglPopMatrix()
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glPushMatrix.xml
 func PushMatrix()  {
 	C.goglPushMatrix()
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glRotated.xml
 func Rotated(angle Double, x Double, y Double, z Double)  {
 	C.goglRotated((C.GLdouble)(angle), (C.GLdouble)(x), (C.GLdouble)(y), (C.GLdouble)(z))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glRotatef.xml
 func Rotatef(angle Float, x Float, y Float, z Float)  {
 	C.goglRotatef((C.GLfloat)(angle), (C.GLfloat)(x), (C.GLfloat)(y), (C.GLfloat)(z))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glScaled.xml
 func Scaled(x Double, y Double, z Double)  {
 	C.goglScaled((C.GLdouble)(x), (C.GLdouble)(y), (C.GLdouble)(z))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glScalef.xml
 func Scalef(x Float, y Float, z Float)  {
 	C.goglScalef((C.GLfloat)(x), (C.GLfloat)(y), (C.GLfloat)(z))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glTranslated.xml
 func Translated(x Double, y Double, z Double)  {
 	C.goglTranslated((C.GLdouble)(x), (C.GLdouble)(y), (C.GLdouble)(z))
 }
+// http://www.opengl.org/sdk/docs/man/xhtml/glTranslatef.xml
 func Translatef(x Float, y Float, z Float)  {
 	C.goglTranslatef((C.GLfloat)(x), (C.GLfloat)(y), (C.GLfloat)(z))
+}
+// VERSION_1_2_DEPRECATED
+
+// http://www.opengl.org/sdk/docs/man/xhtml/glColorTable.xml
+func ColorTable(target Enum, internalformat Enum, width Sizei, format Enum, type_ Enum, table Pointer)  {
+	C.goglColorTable((C.GLenum)(target), (C.GLenum)(internalformat), (C.GLsizei)(width), (C.GLenum)(format), (C.GLenum)(type_), (unsafe.Pointer)(table))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glColorTableParameterfv.xml
+func ColorTableParameterfv(target Enum, pname Enum, params *Float)  {
+	C.goglColorTableParameterfv((C.GLenum)(target), (C.GLenum)(pname), (*C.GLfloat)(params))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glColorTableParameteriv.xml
+func ColorTableParameteriv(target Enum, pname Enum, params *Int)  {
+	C.goglColorTableParameteriv((C.GLenum)(target), (C.GLenum)(pname), (*C.GLint)(params))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glCopyColorTable.xml
+func CopyColorTable(target Enum, internalformat Enum, x Int, y Int, width Sizei)  {
+	C.goglCopyColorTable((C.GLenum)(target), (C.GLenum)(internalformat), (C.GLint)(x), (C.GLint)(y), (C.GLsizei)(width))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glGetColorTable.xml
+func GetColorTable(target Enum, format Enum, type_ Enum, table Pointer)  {
+	C.goglGetColorTable((C.GLenum)(target), (C.GLenum)(format), (C.GLenum)(type_), (unsafe.Pointer)(table))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glGetColorTableParameterfv.xml
+func GetColorTableParameterfv(target Enum, pname Enum, params *Float)  {
+	C.goglGetColorTableParameterfv((C.GLenum)(target), (C.GLenum)(pname), (*C.GLfloat)(params))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glGetColorTableParameteriv.xml
+func GetColorTableParameteriv(target Enum, pname Enum, params *Int)  {
+	C.goglGetColorTableParameteriv((C.GLenum)(target), (C.GLenum)(pname), (*C.GLint)(params))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glColorSubTable.xml
+func ColorSubTable(target Enum, start Sizei, count Sizei, format Enum, type_ Enum, data Pointer)  {
+	C.goglColorSubTable((C.GLenum)(target), (C.GLsizei)(start), (C.GLsizei)(count), (C.GLenum)(format), (C.GLenum)(type_), (unsafe.Pointer)(data))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glCopyColorSubTable.xml
+func CopyColorSubTable(target Enum, start Sizei, x Int, y Int, width Sizei)  {
+	C.goglCopyColorSubTable((C.GLenum)(target), (C.GLsizei)(start), (C.GLint)(x), (C.GLint)(y), (C.GLsizei)(width))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glConvolutionFilter1D.xml
+func ConvolutionFilter1D(target Enum, internalformat Enum, width Sizei, format Enum, type_ Enum, image Pointer)  {
+	C.goglConvolutionFilter1D((C.GLenum)(target), (C.GLenum)(internalformat), (C.GLsizei)(width), (C.GLenum)(format), (C.GLenum)(type_), (unsafe.Pointer)(image))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glConvolutionFilter2D.xml
+func ConvolutionFilter2D(target Enum, internalformat Enum, width Sizei, height Sizei, format Enum, type_ Enum, image Pointer)  {
+	C.goglConvolutionFilter2D((C.GLenum)(target), (C.GLenum)(internalformat), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLenum)(format), (C.GLenum)(type_), (unsafe.Pointer)(image))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glConvolutionParameterf.xml
+func ConvolutionParameterf(target Enum, pname Enum, params Float)  {
+	C.goglConvolutionParameterf((C.GLenum)(target), (C.GLenum)(pname), (C.GLfloat)(params))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glConvolutionParameterfv.xml
+func ConvolutionParameterfv(target Enum, pname Enum, params *Float)  {
+	C.goglConvolutionParameterfv((C.GLenum)(target), (C.GLenum)(pname), (*C.GLfloat)(params))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glConvolutionParameteri.xml
+func ConvolutionParameteri(target Enum, pname Enum, params Int)  {
+	C.goglConvolutionParameteri((C.GLenum)(target), (C.GLenum)(pname), (C.GLint)(params))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glConvolutionParameteriv.xml
+func ConvolutionParameteriv(target Enum, pname Enum, params *Int)  {
+	C.goglConvolutionParameteriv((C.GLenum)(target), (C.GLenum)(pname), (*C.GLint)(params))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glCopyConvolutionFilter1D.xml
+func CopyConvolutionFilter1D(target Enum, internalformat Enum, x Int, y Int, width Sizei)  {
+	C.goglCopyConvolutionFilter1D((C.GLenum)(target), (C.GLenum)(internalformat), (C.GLint)(x), (C.GLint)(y), (C.GLsizei)(width))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glCopyConvolutionFilter2D.xml
+func CopyConvolutionFilter2D(target Enum, internalformat Enum, x Int, y Int, width Sizei, height Sizei)  {
+	C.goglCopyConvolutionFilter2D((C.GLenum)(target), (C.GLenum)(internalformat), (C.GLint)(x), (C.GLint)(y), (C.GLsizei)(width), (C.GLsizei)(height))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glGetConvolutionFilter.xml
+func GetConvolutionFilter(target Enum, format Enum, type_ Enum, image Pointer)  {
+	C.goglGetConvolutionFilter((C.GLenum)(target), (C.GLenum)(format), (C.GLenum)(type_), (unsafe.Pointer)(image))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glGetConvolutionParameterfv.xml
+func GetConvolutionParameterfv(target Enum, pname Enum, params *Float)  {
+	C.goglGetConvolutionParameterfv((C.GLenum)(target), (C.GLenum)(pname), (*C.GLfloat)(params))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glGetConvolutionParameteriv.xml
+func GetConvolutionParameteriv(target Enum, pname Enum, params *Int)  {
+	C.goglGetConvolutionParameteriv((C.GLenum)(target), (C.GLenum)(pname), (*C.GLint)(params))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glGetSeparableFilter.xml
+func GetSeparableFilter(target Enum, format Enum, type_ Enum, row Pointer, column Pointer, span Pointer)  {
+	C.goglGetSeparableFilter((C.GLenum)(target), (C.GLenum)(format), (C.GLenum)(type_), (unsafe.Pointer)(row), (unsafe.Pointer)(column), (unsafe.Pointer)(span))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glSeparableFilter2D.xml
+func SeparableFilter2D(target Enum, internalformat Enum, width Sizei, height Sizei, format Enum, type_ Enum, row Pointer, column Pointer)  {
+	C.goglSeparableFilter2D((C.GLenum)(target), (C.GLenum)(internalformat), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLenum)(format), (C.GLenum)(type_), (unsafe.Pointer)(row), (unsafe.Pointer)(column))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glGetHistogram.xml
+func GetHistogram(target Enum, reset Boolean, format Enum, type_ Enum, values Pointer)  {
+	C.goglGetHistogram((C.GLenum)(target), (C.GLboolean)(reset), (C.GLenum)(format), (C.GLenum)(type_), (unsafe.Pointer)(values))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glGetHistogramParameterfv.xml
+func GetHistogramParameterfv(target Enum, pname Enum, params *Float)  {
+	C.goglGetHistogramParameterfv((C.GLenum)(target), (C.GLenum)(pname), (*C.GLfloat)(params))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glGetHistogramParameteriv.xml
+func GetHistogramParameteriv(target Enum, pname Enum, params *Int)  {
+	C.goglGetHistogramParameteriv((C.GLenum)(target), (C.GLenum)(pname), (*C.GLint)(params))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glGetMinmax.xml
+func GetMinmax(target Enum, reset Boolean, format Enum, type_ Enum, values Pointer)  {
+	C.goglGetMinmax((C.GLenum)(target), (C.GLboolean)(reset), (C.GLenum)(format), (C.GLenum)(type_), (unsafe.Pointer)(values))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glGetMinmaxParameterfv.xml
+func GetMinmaxParameterfv(target Enum, pname Enum, params *Float)  {
+	C.goglGetMinmaxParameterfv((C.GLenum)(target), (C.GLenum)(pname), (*C.GLfloat)(params))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glGetMinmaxParameteriv.xml
+func GetMinmaxParameteriv(target Enum, pname Enum, params *Int)  {
+	C.goglGetMinmaxParameteriv((C.GLenum)(target), (C.GLenum)(pname), (*C.GLint)(params))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glHistogram.xml
+func Histogram(target Enum, width Sizei, internalformat Enum, sink Boolean)  {
+	C.goglHistogram((C.GLenum)(target), (C.GLsizei)(width), (C.GLenum)(internalformat), (C.GLboolean)(sink))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glMinmax.xml
+func Minmax(target Enum, internalformat Enum, sink Boolean)  {
+	C.goglMinmax((C.GLenum)(target), (C.GLenum)(internalformat), (C.GLboolean)(sink))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glResetHistogram.xml
+func ResetHistogram(target Enum)  {
+	C.goglResetHistogram((C.GLenum)(target))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glResetMinmax.xml
+func ResetMinmax(target Enum)  {
+	C.goglResetMinmax((C.GLenum)(target))
+}
+// VERSION_2_1
+
+// http://www.opengl.org/sdk/docs/man/xhtml/glUniformMatrix2x3fv.xml
+func UniformMatrix2x3fv(location Int, count Sizei, transpose Boolean, value *Float)  {
+	C.goglUniformMatrix2x3fv((C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(transpose), (*C.GLfloat)(value))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glUniformMatrix3x2fv.xml
+func UniformMatrix3x2fv(location Int, count Sizei, transpose Boolean, value *Float)  {
+	C.goglUniformMatrix3x2fv((C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(transpose), (*C.GLfloat)(value))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glUniformMatrix2x4fv.xml
+func UniformMatrix2x4fv(location Int, count Sizei, transpose Boolean, value *Float)  {
+	C.goglUniformMatrix2x4fv((C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(transpose), (*C.GLfloat)(value))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glUniformMatrix4x2fv.xml
+func UniformMatrix4x2fv(location Int, count Sizei, transpose Boolean, value *Float)  {
+	C.goglUniformMatrix4x2fv((C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(transpose), (*C.GLfloat)(value))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glUniformMatrix3x4fv.xml
+func UniformMatrix3x4fv(location Int, count Sizei, transpose Boolean, value *Float)  {
+	C.goglUniformMatrix3x4fv((C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(transpose), (*C.GLfloat)(value))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glUniformMatrix4x3fv.xml
+func UniformMatrix4x3fv(location Int, count Sizei, transpose Boolean, value *Float)  {
+	C.goglUniformMatrix4x3fv((C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(transpose), (*C.GLfloat)(value))
+}
+// VERSION_2_0
+
+// http://www.opengl.org/sdk/docs/man/xhtml/glBlendEquationSeparate.xml
+func BlendEquationSeparate(modeRGB Enum, modeAlpha Enum)  {
+	C.goglBlendEquationSeparate((C.GLenum)(modeRGB), (C.GLenum)(modeAlpha))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glDrawBuffers.xml
+func DrawBuffers(n Sizei, bufs *Enum)  {
+	C.goglDrawBuffers((C.GLsizei)(n), (*C.GLenum)(bufs))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glStencilOpSeparate.xml
+func StencilOpSeparate(face Enum, sfail Enum, dpfail Enum, dppass Enum)  {
+	C.goglStencilOpSeparate((C.GLenum)(face), (C.GLenum)(sfail), (C.GLenum)(dpfail), (C.GLenum)(dppass))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glStencilFuncSeparate.xml
+func StencilFuncSeparate(face Enum, func_ Enum, ref Int, mask Uint)  {
+	C.goglStencilFuncSeparate((C.GLenum)(face), (C.GLenum)(func_), (C.GLint)(ref), (C.GLuint)(mask))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glStencilMaskSeparate.xml
+func StencilMaskSeparate(face Enum, mask Uint)  {
+	C.goglStencilMaskSeparate((C.GLenum)(face), (C.GLuint)(mask))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glAttachShader.xml
+func AttachShader(program Uint, shader Uint)  {
+	C.goglAttachShader((C.GLuint)(program), (C.GLuint)(shader))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glBindAttribLocation.xml
+func BindAttribLocation(program Uint, index Uint, name *Char)  {
+	C.goglBindAttribLocation((C.GLuint)(program), (C.GLuint)(index), (*C.GLchar)(name))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glCompileShader.xml
+func CompileShader(shader Uint)  {
+	C.goglCompileShader((C.GLuint)(shader))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glCreateProgram.xml
+func CreateProgram() Uint {
+	return (Uint)(C.goglCreateProgram())
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glCreateShader.xml
+func CreateShader(type_ Enum) Uint {
+	return (Uint)(C.goglCreateShader((C.GLenum)(type_)))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glDeleteProgram.xml
+func DeleteProgram(program Uint)  {
+	C.goglDeleteProgram((C.GLuint)(program))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glDeleteShader.xml
+func DeleteShader(shader Uint)  {
+	C.goglDeleteShader((C.GLuint)(shader))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glDetachShader.xml
+func DetachShader(program Uint, shader Uint)  {
+	C.goglDetachShader((C.GLuint)(program), (C.GLuint)(shader))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glDisableVertexAttribArray.xml
+func DisableVertexAttribArray(index Uint)  {
+	C.goglDisableVertexAttribArray((C.GLuint)(index))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glEnableVertexAttribArray.xml
+func EnableVertexAttribArray(index Uint)  {
+	C.goglEnableVertexAttribArray((C.GLuint)(index))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glGetActiveAttrib.xml
+func GetActiveAttrib(program Uint, index Uint, bufSize Sizei, length *Sizei, size *Int, type_ *Enum, name *Char)  {
+	C.goglGetActiveAttrib((C.GLuint)(program), (C.GLuint)(index), (C.GLsizei)(bufSize), (*C.GLsizei)(length), (*C.GLint)(size), (*C.GLenum)(type_), (*C.GLchar)(name))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glGetActiveUniform.xml
+func GetActiveUniform(program Uint, index Uint, bufSize Sizei, length *Sizei, size *Int, type_ *Enum, name *Char)  {
+	C.goglGetActiveUniform((C.GLuint)(program), (C.GLuint)(index), (C.GLsizei)(bufSize), (*C.GLsizei)(length), (*C.GLint)(size), (*C.GLenum)(type_), (*C.GLchar)(name))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glGetAttachedShaders.xml
+func GetAttachedShaders(program Uint, maxCount Sizei, count *Sizei, obj *Uint)  {
+	C.goglGetAttachedShaders((C.GLuint)(program), (C.GLsizei)(maxCount), (*C.GLsizei)(count), (*C.GLuint)(obj))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glGetAttribLocation.xml
+func GetAttribLocation(program Uint, name *Char) Int {
+	return (Int)(C.goglGetAttribLocation((C.GLuint)(program), (*C.GLchar)(name)))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glGetProgramiv.xml
+func GetProgramiv(program Uint, pname Enum, params *Int)  {
+	C.goglGetProgramiv((C.GLuint)(program), (C.GLenum)(pname), (*C.GLint)(params))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glGetProgramInfoLog.xml
+func GetProgramInfoLog(program Uint, bufSize Sizei, length *Sizei, infoLog *Char)  {
+	C.goglGetProgramInfoLog((C.GLuint)(program), (C.GLsizei)(bufSize), (*C.GLsizei)(length), (*C.GLchar)(infoLog))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glGetShaderiv.xml
+func GetShaderiv(shader Uint, pname Enum, params *Int)  {
+	C.goglGetShaderiv((C.GLuint)(shader), (C.GLenum)(pname), (*C.GLint)(params))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glGetShaderInfoLog.xml
+func GetShaderInfoLog(shader Uint, bufSize Sizei, length *Sizei, infoLog *Char)  {
+	C.goglGetShaderInfoLog((C.GLuint)(shader), (C.GLsizei)(bufSize), (*C.GLsizei)(length), (*C.GLchar)(infoLog))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glGetShaderSource.xml
+func GetShaderSource(shader Uint, bufSize Sizei, length *Sizei, source *Char)  {
+	C.goglGetShaderSource((C.GLuint)(shader), (C.GLsizei)(bufSize), (*C.GLsizei)(length), (*C.GLchar)(source))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glGetUniformLocation.xml
+func GetUniformLocation(program Uint, name *Char) Int {
+	return (Int)(C.goglGetUniformLocation((C.GLuint)(program), (*C.GLchar)(name)))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glGetUniformfv.xml
+func GetUniformfv(program Uint, location Int, params *Float)  {
+	C.goglGetUniformfv((C.GLuint)(program), (C.GLint)(location), (*C.GLfloat)(params))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glGetUniformiv.xml
+func GetUniformiv(program Uint, location Int, params *Int)  {
+	C.goglGetUniformiv((C.GLuint)(program), (C.GLint)(location), (*C.GLint)(params))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glGetVertexAttribdv.xml
+func GetVertexAttribdv(index Uint, pname Enum, params *Double)  {
+	C.goglGetVertexAttribdv((C.GLuint)(index), (C.GLenum)(pname), (*C.GLdouble)(params))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glGetVertexAttribfv.xml
+func GetVertexAttribfv(index Uint, pname Enum, params *Float)  {
+	C.goglGetVertexAttribfv((C.GLuint)(index), (C.GLenum)(pname), (*C.GLfloat)(params))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glGetVertexAttribiv.xml
+func GetVertexAttribiv(index Uint, pname Enum, params *Int)  {
+	C.goglGetVertexAttribiv((C.GLuint)(index), (C.GLenum)(pname), (*C.GLint)(params))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glGetVertexAttribPointerv.xml
+func GetVertexAttribPointerv(index Uint, pname Enum, pointer *Pointer)  {
+	C.goglGetVertexAttribPointerv((C.GLuint)(index), (C.GLenum)(pname), (*unsafe.Pointer)(pointer))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glIsProgram.xml
+func IsProgram(program Uint) Boolean {
+	return (Boolean)(C.goglIsProgram((C.GLuint)(program)))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glIsShader.xml
+func IsShader(shader Uint) Boolean {
+	return (Boolean)(C.goglIsShader((C.GLuint)(shader)))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glLinkProgram.xml
+func LinkProgram(program Uint)  {
+	C.goglLinkProgram((C.GLuint)(program))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glShaderSource.xml
+func ShaderSource(shader Uint, count Sizei, string_ **Char, length *Int)  {
+	C.goglShaderSource((C.GLuint)(shader), (C.GLsizei)(count), (**C.GLchar)(unsafe.Pointer(string_)), (*C.GLint)(length))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glUseProgram.xml
+func UseProgram(program Uint)  {
+	C.goglUseProgram((C.GLuint)(program))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glUniform1f.xml
+func Uniform1f(location Int, v0 Float)  {
+	C.goglUniform1f((C.GLint)(location), (C.GLfloat)(v0))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glUniform2f.xml
+func Uniform2f(location Int, v0 Float, v1 Float)  {
+	C.goglUniform2f((C.GLint)(location), (C.GLfloat)(v0), (C.GLfloat)(v1))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glUniform3f.xml
+func Uniform3f(location Int, v0 Float, v1 Float, v2 Float)  {
+	C.goglUniform3f((C.GLint)(location), (C.GLfloat)(v0), (C.GLfloat)(v1), (C.GLfloat)(v2))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glUniform4f.xml
+func Uniform4f(location Int, v0 Float, v1 Float, v2 Float, v3 Float)  {
+	C.goglUniform4f((C.GLint)(location), (C.GLfloat)(v0), (C.GLfloat)(v1), (C.GLfloat)(v2), (C.GLfloat)(v3))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glUniform1i.xml
+func Uniform1i(location Int, v0 Int)  {
+	C.goglUniform1i((C.GLint)(location), (C.GLint)(v0))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glUniform2i.xml
+func Uniform2i(location Int, v0 Int, v1 Int)  {
+	C.goglUniform2i((C.GLint)(location), (C.GLint)(v0), (C.GLint)(v1))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glUniform3i.xml
+func Uniform3i(location Int, v0 Int, v1 Int, v2 Int)  {
+	C.goglUniform3i((C.GLint)(location), (C.GLint)(v0), (C.GLint)(v1), (C.GLint)(v2))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glUniform4i.xml
+func Uniform4i(location Int, v0 Int, v1 Int, v2 Int, v3 Int)  {
+	C.goglUniform4i((C.GLint)(location), (C.GLint)(v0), (C.GLint)(v1), (C.GLint)(v2), (C.GLint)(v3))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glUniform1fv.xml
+func Uniform1fv(location Int, count Sizei, value *Float)  {
+	C.goglUniform1fv((C.GLint)(location), (C.GLsizei)(count), (*C.GLfloat)(value))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glUniform2fv.xml
+func Uniform2fv(location Int, count Sizei, value *Float)  {
+	C.goglUniform2fv((C.GLint)(location), (C.GLsizei)(count), (*C.GLfloat)(value))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glUniform3fv.xml
+func Uniform3fv(location Int, count Sizei, value *Float)  {
+	C.goglUniform3fv((C.GLint)(location), (C.GLsizei)(count), (*C.GLfloat)(value))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glUniform4fv.xml
+func Uniform4fv(location Int, count Sizei, value *Float)  {
+	C.goglUniform4fv((C.GLint)(location), (C.GLsizei)(count), (*C.GLfloat)(value))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glUniform1iv.xml
+func Uniform1iv(location Int, count Sizei, value *Int)  {
+	C.goglUniform1iv((C.GLint)(location), (C.GLsizei)(count), (*C.GLint)(value))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glUniform2iv.xml
+func Uniform2iv(location Int, count Sizei, value *Int)  {
+	C.goglUniform2iv((C.GLint)(location), (C.GLsizei)(count), (*C.GLint)(value))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glUniform3iv.xml
+func Uniform3iv(location Int, count Sizei, value *Int)  {
+	C.goglUniform3iv((C.GLint)(location), (C.GLsizei)(count), (*C.GLint)(value))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glUniform4iv.xml
+func Uniform4iv(location Int, count Sizei, value *Int)  {
+	C.goglUniform4iv((C.GLint)(location), (C.GLsizei)(count), (*C.GLint)(value))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glUniformMatrix2fv.xml
+func UniformMatrix2fv(location Int, count Sizei, transpose Boolean, value *Float)  {
+	C.goglUniformMatrix2fv((C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(transpose), (*C.GLfloat)(value))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glUniformMatrix3fv.xml
+func UniformMatrix3fv(location Int, count Sizei, transpose Boolean, value *Float)  {
+	C.goglUniformMatrix3fv((C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(transpose), (*C.GLfloat)(value))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glUniformMatrix4fv.xml
+func UniformMatrix4fv(location Int, count Sizei, transpose Boolean, value *Float)  {
+	C.goglUniformMatrix4fv((C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(transpose), (*C.GLfloat)(value))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glValidateProgram.xml
+func ValidateProgram(program Uint)  {
+	C.goglValidateProgram((C.GLuint)(program))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glVertexAttrib1d.xml
+func VertexAttrib1d(index Uint, x Double)  {
+	C.goglVertexAttrib1d((C.GLuint)(index), (C.GLdouble)(x))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glVertexAttrib1dv.xml
+func VertexAttrib1dv(index Uint, v *Double)  {
+	C.goglVertexAttrib1dv((C.GLuint)(index), (*C.GLdouble)(v))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glVertexAttrib1f.xml
+func VertexAttrib1f(index Uint, x Float)  {
+	C.goglVertexAttrib1f((C.GLuint)(index), (C.GLfloat)(x))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glVertexAttrib1fv.xml
+func VertexAttrib1fv(index Uint, v *Float)  {
+	C.goglVertexAttrib1fv((C.GLuint)(index), (*C.GLfloat)(v))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glVertexAttrib1s.xml
+func VertexAttrib1s(index Uint, x Short)  {
+	C.goglVertexAttrib1s((C.GLuint)(index), (C.GLshort)(x))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glVertexAttrib1sv.xml
+func VertexAttrib1sv(index Uint, v *Short)  {
+	C.goglVertexAttrib1sv((C.GLuint)(index), (*C.GLshort)(v))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glVertexAttrib2d.xml
+func VertexAttrib2d(index Uint, x Double, y Double)  {
+	C.goglVertexAttrib2d((C.GLuint)(index), (C.GLdouble)(x), (C.GLdouble)(y))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glVertexAttrib2dv.xml
+func VertexAttrib2dv(index Uint, v *Double)  {
+	C.goglVertexAttrib2dv((C.GLuint)(index), (*C.GLdouble)(v))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glVertexAttrib2f.xml
+func VertexAttrib2f(index Uint, x Float, y Float)  {
+	C.goglVertexAttrib2f((C.GLuint)(index), (C.GLfloat)(x), (C.GLfloat)(y))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glVertexAttrib2fv.xml
+func VertexAttrib2fv(index Uint, v *Float)  {
+	C.goglVertexAttrib2fv((C.GLuint)(index), (*C.GLfloat)(v))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glVertexAttrib2s.xml
+func VertexAttrib2s(index Uint, x Short, y Short)  {
+	C.goglVertexAttrib2s((C.GLuint)(index), (C.GLshort)(x), (C.GLshort)(y))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glVertexAttrib2sv.xml
+func VertexAttrib2sv(index Uint, v *Short)  {
+	C.goglVertexAttrib2sv((C.GLuint)(index), (*C.GLshort)(v))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glVertexAttrib3d.xml
+func VertexAttrib3d(index Uint, x Double, y Double, z Double)  {
+	C.goglVertexAttrib3d((C.GLuint)(index), (C.GLdouble)(x), (C.GLdouble)(y), (C.GLdouble)(z))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glVertexAttrib3dv.xml
+func VertexAttrib3dv(index Uint, v *Double)  {
+	C.goglVertexAttrib3dv((C.GLuint)(index), (*C.GLdouble)(v))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glVertexAttrib3f.xml
+func VertexAttrib3f(index Uint, x Float, y Float, z Float)  {
+	C.goglVertexAttrib3f((C.GLuint)(index), (C.GLfloat)(x), (C.GLfloat)(y), (C.GLfloat)(z))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glVertexAttrib3fv.xml
+func VertexAttrib3fv(index Uint, v *Float)  {
+	C.goglVertexAttrib3fv((C.GLuint)(index), (*C.GLfloat)(v))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glVertexAttrib3s.xml
+func VertexAttrib3s(index Uint, x Short, y Short, z Short)  {
+	C.goglVertexAttrib3s((C.GLuint)(index), (C.GLshort)(x), (C.GLshort)(y), (C.GLshort)(z))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glVertexAttrib3sv.xml
+func VertexAttrib3sv(index Uint, v *Short)  {
+	C.goglVertexAttrib3sv((C.GLuint)(index), (*C.GLshort)(v))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glVertexAttrib4Nbv.xml
+func VertexAttrib4Nbv(index Uint, v *Byte)  {
+	C.goglVertexAttrib4Nbv((C.GLuint)(index), (*C.GLbyte)(v))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glVertexAttrib4Niv.xml
+func VertexAttrib4Niv(index Uint, v *Int)  {
+	C.goglVertexAttrib4Niv((C.GLuint)(index), (*C.GLint)(v))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glVertexAttrib4Nsv.xml
+func VertexAttrib4Nsv(index Uint, v *Short)  {
+	C.goglVertexAttrib4Nsv((C.GLuint)(index), (*C.GLshort)(v))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glVertexAttrib4Nub.xml
+func VertexAttrib4Nub(index Uint, x Ubyte, y Ubyte, z Ubyte, w Ubyte)  {
+	C.goglVertexAttrib4Nub((C.GLuint)(index), (C.GLubyte)(x), (C.GLubyte)(y), (C.GLubyte)(z), (C.GLubyte)(w))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glVertexAttrib4Nubv.xml
+func VertexAttrib4Nubv(index Uint, v *Ubyte)  {
+	C.goglVertexAttrib4Nubv((C.GLuint)(index), (*C.GLubyte)(v))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glVertexAttrib4Nuiv.xml
+func VertexAttrib4Nuiv(index Uint, v *Uint)  {
+	C.goglVertexAttrib4Nuiv((C.GLuint)(index), (*C.GLuint)(v))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glVertexAttrib4Nusv.xml
+func VertexAttrib4Nusv(index Uint, v *Ushort)  {
+	C.goglVertexAttrib4Nusv((C.GLuint)(index), (*C.GLushort)(v))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glVertexAttrib4bv.xml
+func VertexAttrib4bv(index Uint, v *Byte)  {
+	C.goglVertexAttrib4bv((C.GLuint)(index), (*C.GLbyte)(v))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glVertexAttrib4d.xml
+func VertexAttrib4d(index Uint, x Double, y Double, z Double, w Double)  {
+	C.goglVertexAttrib4d((C.GLuint)(index), (C.GLdouble)(x), (C.GLdouble)(y), (C.GLdouble)(z), (C.GLdouble)(w))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glVertexAttrib4dv.xml
+func VertexAttrib4dv(index Uint, v *Double)  {
+	C.goglVertexAttrib4dv((C.GLuint)(index), (*C.GLdouble)(v))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glVertexAttrib4f.xml
+func VertexAttrib4f(index Uint, x Float, y Float, z Float, w Float)  {
+	C.goglVertexAttrib4f((C.GLuint)(index), (C.GLfloat)(x), (C.GLfloat)(y), (C.GLfloat)(z), (C.GLfloat)(w))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glVertexAttrib4fv.xml
+func VertexAttrib4fv(index Uint, v *Float)  {
+	C.goglVertexAttrib4fv((C.GLuint)(index), (*C.GLfloat)(v))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glVertexAttrib4iv.xml
+func VertexAttrib4iv(index Uint, v *Int)  {
+	C.goglVertexAttrib4iv((C.GLuint)(index), (*C.GLint)(v))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glVertexAttrib4s.xml
+func VertexAttrib4s(index Uint, x Short, y Short, z Short, w Short)  {
+	C.goglVertexAttrib4s((C.GLuint)(index), (C.GLshort)(x), (C.GLshort)(y), (C.GLshort)(z), (C.GLshort)(w))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glVertexAttrib4sv.xml
+func VertexAttrib4sv(index Uint, v *Short)  {
+	C.goglVertexAttrib4sv((C.GLuint)(index), (*C.GLshort)(v))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glVertexAttrib4ubv.xml
+func VertexAttrib4ubv(index Uint, v *Ubyte)  {
+	C.goglVertexAttrib4ubv((C.GLuint)(index), (*C.GLubyte)(v))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glVertexAttrib4uiv.xml
+func VertexAttrib4uiv(index Uint, v *Uint)  {
+	C.goglVertexAttrib4uiv((C.GLuint)(index), (*C.GLuint)(v))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glVertexAttrib4usv.xml
+func VertexAttrib4usv(index Uint, v *Ushort)  {
+	C.goglVertexAttrib4usv((C.GLuint)(index), (*C.GLushort)(v))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glVertexAttribPointer.xml
+func VertexAttribPointer(index Uint, size Int, type_ Enum, normalized Boolean, stride Sizei, pointer Pointer)  {
+	C.goglVertexAttribPointer((C.GLuint)(index), (C.GLint)(size), (C.GLenum)(type_), (C.GLboolean)(normalized), (C.GLsizei)(stride), (unsafe.Pointer)(pointer))
 }
 func InitVERSION21() error {
 	var ret C.int
@@ -6591,6 +7189,12 @@ func InitVERSION12DEPRECATED() error {
 }
 func Init() error {
 	var err error
+	if err = InitVERSION21(); err != nil {
+		return err
+	}
+	if err = InitVERSION20(); err != nil {
+		return err
+	}
 	if err = InitVERSION13DEPRECATED(); err != nil {
 		return err
 	}
@@ -6622,12 +7226,6 @@ func Init() error {
 		return err
 	}
 	if err = InitVERSION12DEPRECATED(); err != nil {
-		return err
-	}
-	if err = InitVERSION21(); err != nil {
-		return err
-	}
-	if err = InitVERSION20(); err != nil {
 		return err
 	}
 	return nil

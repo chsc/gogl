@@ -8,6 +8,7 @@ import (
 	"errors"
 	"fmt"
 	"strings"
+	"strconv"
 	"unicode"
 )
 
@@ -281,6 +282,18 @@ func MakeExtensionSpecDocUrl(vendor, extension string) string {
 	return fmt.Sprintf("http://www.opengl.org/registry/specs/%s/%s.txt", vendor, extension)
 }
 
+func MakeGLDocUrl(majorVersion int) string {
+	manVer := ""
+	if majorVersion >= 3 {
+		manVer = strconv.Itoa(majorVersion)
+	}
+	return fmt.Sprintf("http://www.opengl.org/sdk/docs/man%s", manVer)
+}
+
 func MakeFuncDocUrl(majorVersion int, fName string) string {
-	return fmt.Sprintf("http://www.opengl.org/sdk/docs/man%d/xhtml/gl%s.xml", majorVersion, fName)
+	manVer := ""
+	if majorVersion >= 3 {
+		manVer = strconv.Itoa(majorVersion)
+	}
+	return fmt.Sprintf("http://www.opengl.org/sdk/docs/man%s/xhtml/gl%s.xml", manVer, fName)
 }
