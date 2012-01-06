@@ -7096,91 +7096,91 @@ func VertexAttrib4usv(index Uint, v *Ushort)  {
 func VertexAttribPointer(index Uint, size Int, type_ Enum, normalized Boolean, stride Sizei, pointer Pointer)  {
 	C.goglVertexAttribPointer((C.GLuint)(index), (C.GLint)(size), (C.GLenum)(type_), (C.GLboolean)(normalized), (C.GLsizei)(stride), (unsafe.Pointer)(pointer))
 }
-func InitVERSION21() error {
+func InitVersion21() error {
 	var ret C.int
 	if ret = C.init_VERSION_2_1(); ret != 0 {
 		return errors.New("unable to initialize VERSION_2_1")
 	}
 	return nil
 }
-func InitVERSION20() error {
+func InitVersion20() error {
 	var ret C.int
 	if ret = C.init_VERSION_2_0(); ret != 0 {
 		return errors.New("unable to initialize VERSION_2_0")
 	}
 	return nil
 }
-func InitVERSION13DEPRECATED() error {
+func InitVersion13Deprecated() error {
 	var ret C.int
 	if ret = C.init_VERSION_1_3_DEPRECATED(); ret != 0 {
 		return errors.New("unable to initialize VERSION_1_3_DEPRECATED")
 	}
 	return nil
 }
-func InitVERSION14() error {
+func InitVersion14() error {
 	var ret C.int
 	if ret = C.init_VERSION_1_4(); ret != 0 {
 		return errors.New("unable to initialize VERSION_1_4")
 	}
 	return nil
 }
-func InitVERSION15() error {
+func InitVersion15() error {
 	var ret C.int
 	if ret = C.init_VERSION_1_5(); ret != 0 {
 		return errors.New("unable to initialize VERSION_1_5")
 	}
 	return nil
 }
-func InitVERSION10() error {
+func InitVersion10() error {
 	var ret C.int
 	if ret = C.init_VERSION_1_0(); ret != 0 {
 		return errors.New("unable to initialize VERSION_1_0")
 	}
 	return nil
 }
-func InitVERSION11() error {
+func InitVersion11() error {
 	var ret C.int
 	if ret = C.init_VERSION_1_1(); ret != 0 {
 		return errors.New("unable to initialize VERSION_1_1")
 	}
 	return nil
 }
-func InitVERSION14DEPRECATED() error {
+func InitVersion14Deprecated() error {
 	var ret C.int
 	if ret = C.init_VERSION_1_4_DEPRECATED(); ret != 0 {
 		return errors.New("unable to initialize VERSION_1_4_DEPRECATED")
 	}
 	return nil
 }
-func InitVERSION12() error {
+func InitVersion12() error {
 	var ret C.int
 	if ret = C.init_VERSION_1_2(); ret != 0 {
 		return errors.New("unable to initialize VERSION_1_2")
 	}
 	return nil
 }
-func InitVERSION13() error {
+func InitVersion13() error {
 	var ret C.int
 	if ret = C.init_VERSION_1_3(); ret != 0 {
 		return errors.New("unable to initialize VERSION_1_3")
 	}
 	return nil
 }
-func InitVERSION11DEPRECATED() error {
+func InitVersion11Deprecated() error {
 	var ret C.int
 	if ret = C.init_VERSION_1_1_DEPRECATED(); ret != 0 {
 		return errors.New("unable to initialize VERSION_1_1_DEPRECATED")
 	}
 	return nil
 }
-func InitVERSION10DEPRECATED() error {
+func InitVersion10Deprecated() error {
 	var ret C.int
 	if ret = C.init_VERSION_1_0_DEPRECATED(); ret != 0 {
 		return errors.New("unable to initialize VERSION_1_0_DEPRECATED")
 	}
 	return nil
 }
-func InitVERSION12DEPRECATED() error {
+func InitVersion12Deprecated() error {
 	var ret C.int
 	if ret = C.init_VERSION_1_2_DEPRECATED(); ret != 0 {
 		return errors.New("unable to initialize VERSION_1_2_DEPRECATED")
@@ -7189,43 +7189,43 @@ func InitVERSION12DEPRECATED() error {
 }
 func Init() error {
 	var err error
-	if err = InitVERSION21(); err != nil {
+	if err = InitVersion21(); err != nil {
 		return err
 	}
-	if err = InitVERSION20(); err != nil {
+	if err = InitVersion20(); err != nil {
 		return err
 	}
-	if err = InitVERSION13DEPRECATED(); err != nil {
+	if err = InitVersion13Deprecated(); err != nil {
 		return err
 	}
-	if err = InitVERSION14(); err != nil {
+	if err = InitVersion14(); err != nil {
 		return err
 	}
-	if err = InitVERSION15(); err != nil {
+	if err = InitVersion15(); err != nil {
 		return err
 	}
-	if err = InitVERSION10(); err != nil {
+	if err = InitVersion10(); err != nil {
 		return err
 	}
-	if err = InitVERSION11(); err != nil {
+	if err = InitVersion11(); err != nil {
 		return err
 	}
-	if err = InitVERSION14DEPRECATED(); err != nil {
+	if err = InitVersion14Deprecated(); err != nil {
 		return err
 	}
-	if err = InitVERSION12(); err != nil {
+	if err = InitVersion12(); err != nil {
 		return err
 	}
-	if err = InitVERSION13(); err != nil {
+	if err = InitVersion13(); err != nil {
 		return err
 	}
-	if err = InitVERSION11DEPRECATED(); err != nil {
+	if err = InitVersion11Deprecated(); err != nil {
 		return err
 	}
-	if err = InitVERSION10DEPRECATED(); err != nil {
+	if err = InitVersion10Deprecated(); err != nil {
 		return err
 	}
-	if err = InitVERSION12DEPRECATED(); err != nil {
+	if err = InitVersion12Deprecated(); err != nil {
 		return err
 	}
 	return nil

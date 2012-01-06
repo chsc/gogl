@@ -1,17 +1,17 @@
-GoGL 
+GoGL
 ====
 
 GoGL is an OpenGL binding generator for Go.
 No external dependencies like GLEW are needed.
 
-Install OpenGL bindings
------------------------
+Install the OpenGL bindings
+---------------------------
 
 For example, OpenGL 2.1 bindings can be installed using goinstall:
 
 	goinstall github.com/chsc/gogl/gl21
 
-The new 'go install' should also work.
+The new 'go install' command should also work.
 
 Documentation
 -------------
@@ -19,6 +19,8 @@ Documentation
 Khronos documentation:
 
 * [OpenGL 2.1](http://www.opengl.org/sdk/docs/man)
+* [OpenGL 3.3](http://www.opengl.org/sdk/docs/man2)
+* [OpenGL 4.2](http://www.opengl.org/sdk/docs/man3)
 
 Package documentation:
 

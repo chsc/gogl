@@ -82,7 +82,7 @@ func GoName(n string) string {
 			return unicode.ToTitle(r)
 		}
 		prev = r
-		return r
+		return unicode.ToLower(r)
 	},
 	n)
 }
