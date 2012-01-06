@@ -19,8 +19,8 @@ Documentation
 Khronos documentation:
 
 * [OpenGL 2.1](http://www.opengl.org/sdk/docs/man)
-* [OpenGL 3.3](http://www.opengl.org/sdk/docs/man2)
-* [OpenGL 4.2](http://www.opengl.org/sdk/docs/man3)
+* [OpenGL 3.3](http://www.opengl.org/sdk/docs/man3)
+* [OpenGL 4.2](http://www.opengl.org/sdk/docs/man4)
 
 Package documentation:
 
