@@ -252,12 +252,14 @@ func writeCFuncGetprocAddrs(w io.Writer, functions FunctionCategories) error {
 	return nil
 }
 
-func writeGoEnumDefinitions(w io.Writer, enums EnumCategories) {
-	for cat, enums := range enums {
+func writeGoEnumDefinitions(w io.Writer, enumCats EnumCategories) {
+	for cat, enums := range enumCats {
 		fmt.Fprintf(w, "// %s\n", cat)
 		fmt.Fprintf(w, "const (\n")
-		for _, e := range enums {
-			fmt.Fprintf(w, "	%s = %s\n", CleanEnumName(e.Name), e.Value)
+		for e, v := range enums {
+			if !enumCats.IsAlreadyDefined(e, cat) {
+				fmt.Fprintf(w, "\t%s = %s\n", CleanEnumName(e), v)
+			}
 		}
 		fmt.Fprintf(w, ")\n")
 	}

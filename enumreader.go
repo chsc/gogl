@@ -47,14 +47,25 @@ func ReadEnums(r io.Reader) (EnumCategories, error) {
 		line = strings.TrimRight(line, "\n")
 
 		if enumEmptyLineRE.MatchString(line) || enumPassthruRE.MatchString(line) {
-			// skip
-		} else if category := enumCategoryRE.FindStringSubmatch(line); category != nil {
+			continue
+		}
+
+		if category := enumCategoryRE.FindStringSubmatch(line); category != nil {
 			//fmt.Printf("%v\n", category[1])
 			currentCategory = category[1]
 			categories[currentCategory] = make(Enums)
 		} else if enum := enumRE.FindStringSubmatch(line); enum != nil {
 			//fmt.Printf("%v %v\n", enum[1], enum[2])
-			categories[currentCategory][enum[1]] = Enum{enum[1], enum[2]}
+			if strings.HasPrefix(enum[2], "GL_") {
+				//fmt.Printf("%s %s\n", enum[1], enum[2])
+				categories[currentCategory][enum[1]] = enum[2][3:]
+			} else if strings.HasSuffix(enum[2], "u") {
+				categories[currentCategory][enum[1]] = enum[2][:len(enum[2])-1]
+			} else if strings.HasSuffix(enum[2], "ull") {
+				categories[currentCategory][enum[1]] = enum[2][:len(enum[2])-3]
+			} else {
+				categories[currentCategory][enum[1]] = enum[2]
+			}
 		} else if use := enumUseRE.FindStringSubmatch(line); use != nil {
 			//fmt.Printf("%v %v\n", use[1], use[2])
 			if deferredUseEnums[currentCategory] == nil {

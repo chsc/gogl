@@ -151,16 +151,25 @@ func (fs Functions) Find(name string) *Function {
 
 // Enums
 
-type Enum struct {
-	Name  string
-	Value string
-}
-
-type Enums map[string]Enum
+type Enums map[string]string
 type EnumCategories map[string]Enums
 
-func (e Enum) String() string {
-	return fmt.Sprintf("%s = %s", e.Name, e.Value)
+func (e Enums) IsDefined(name string) bool {
+	if _, ok := e[name]; ok {
+		return true
+	}
+	return false
+}
+
+func (e EnumCategories) IsAlreadyDefined(name, excludeCategory string) bool {
+	for cat, enums := range e {
+		if excludeCategory != cat {
+			if enums.IsDefined(name) {
+				return true
+			}
+		}
+	}
+	return false
 }
 
 // Type maps
