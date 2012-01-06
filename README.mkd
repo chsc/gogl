@@ -25,6 +25,8 @@ Khronos documentation:
 Package documentation:
 
 * [OpenGL 2.1](http://gopkgdoc.appspot.com/pkg/github.com/chsc/gogl/gl21)
+* [OpenGL 3.3](http://gopkgdoc.appspot.com/pkg/github.com/chsc/gogl/gl33)
+* [OpenGL 4.2](http://gopkgdoc.appspot.com/pkg/github.com/chsc/gogl/gl42)
 
 Examples
 --------
