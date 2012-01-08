@@ -152,6 +152,7 @@ func writePackage(w io.Writer, packageName string, pak *Package, functsInfo *Fun
 	fmt.Fprintf(w, "	Clampd   C.GLclampd\n")
 	fmt.Fprintf(w, "	Char     C.GLchar\n")
 	fmt.Fprintf(w, "	Pointer  unsafe.Pointer\n")
+	fmt.Fprintf(w, "	Sync     C.GLsync\n")
 	fmt.Fprintf(w, "	Int64    C.GLint64\n")
 	fmt.Fprintf(w, "	Uint64   C.GLuint64\n")
 	fmt.Fprintf(w, "	Intptr   C.GLintptr\n")

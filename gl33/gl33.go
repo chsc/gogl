@@ -2,6 +2,10 @@
 // 
 // Categories in this package: 
 // 
+// VERSION_2_1
+// 
+// VERSION_2_0
+// 
 // VERSION_1_4
 // 
 // VERSION_1_5
@@ -21,10 +25,6 @@
 // VERSION_3_0
 // 
 // VERSION_3_1
-// 
-// VERSION_2_1
-// 
-// VERSION_2_0
 // 
 // http://www.opengl.org/sdk/docs/man3
 // 
@@ -181,107 +181,6 @@ package gl33
 // #endif
 // }
 // 
-// //  VERSION_2_1
-// void (APIENTRYP ptrgoglUniformMatrix2x3fv)(GLint location, GLsizei count, GLboolean transpose, GLfloat* value);
-// void (APIENTRYP ptrgoglUniformMatrix3x2fv)(GLint location, GLsizei count, GLboolean transpose, GLfloat* value);
-// void (APIENTRYP ptrgoglUniformMatrix2x4fv)(GLint location, GLsizei count, GLboolean transpose, GLfloat* value);
-// void (APIENTRYP ptrgoglUniformMatrix4x2fv)(GLint location, GLsizei count, GLboolean transpose, GLfloat* value);
-// void (APIENTRYP ptrgoglUniformMatrix3x4fv)(GLint location, GLsizei count, GLboolean transpose, GLfloat* value);
-// void (APIENTRYP ptrgoglUniformMatrix4x3fv)(GLint location, GLsizei count, GLboolean transpose, GLfloat* value);
-// //  VERSION_2_0
-// void (APIENTRYP ptrgoglBlendEquationSeparate)(GLenum modeRGB, GLenum modeAlpha);
-// void (APIENTRYP ptrgoglDrawBuffers)(GLsizei n, GLenum* bufs);
-// void (APIENTRYP ptrgoglStencilOpSeparate)(GLenum face, GLenum sfail, GLenum dpfail, GLenum dppass);
-// void (APIENTRYP ptrgoglStencilFuncSeparate)(GLenum face, GLenum func, GLint ref, GLuint mask);
-// void (APIENTRYP ptrgoglStencilMaskSeparate)(GLenum face, GLuint mask);
-// void (APIENTRYP ptrgoglAttachShader)(GLuint program, GLuint shader);
-// void (APIENTRYP ptrgoglBindAttribLocation)(GLuint program, GLuint index, GLchar* name);
-// void (APIENTRYP ptrgoglCompileShader)(GLuint shader);
-// GLuint (APIENTRYP ptrgoglCreateProgram)();
-// GLuint (APIENTRYP ptrgoglCreateShader)(GLenum type);
-// void (APIENTRYP ptrgoglDeleteProgram)(GLuint program);
-// void (APIENTRYP ptrgoglDeleteShader)(GLuint shader);
-// void (APIENTRYP ptrgoglDetachShader)(GLuint program, GLuint shader);
-// void (APIENTRYP ptrgoglDisableVertexAttribArray)(GLuint index);
-// void (APIENTRYP ptrgoglEnableVertexAttribArray)(GLuint index);
-// void (APIENTRYP ptrgoglGetActiveAttrib)(GLuint program, GLuint index, GLsizei bufSize, GLsizei* length, GLint* size, GLenum* type, GLchar* name);
-// void (APIENTRYP ptrgoglGetActiveUniform)(GLuint program, GLuint index, GLsizei bufSize, GLsizei* length, GLint* size, GLenum* type, GLchar* name);
-// void (APIENTRYP ptrgoglGetAttachedShaders)(GLuint program, GLsizei maxCount, GLsizei* count, GLuint* obj);
-// GLint (APIENTRYP ptrgoglGetAttribLocation)(GLuint program, GLchar* name);
-// void (APIENTRYP ptrgoglGetProgramiv)(GLuint program, GLenum pname, GLint* params);
-// void (APIENTRYP ptrgoglGetProgramInfoLog)(GLuint program, GLsizei bufSize, GLsizei* length, GLchar* infoLog);
-// void (APIENTRYP ptrgoglGetShaderiv)(GLuint shader, GLenum pname, GLint* params);
-// void (APIENTRYP ptrgoglGetShaderInfoLog)(GLuint shader, GLsizei bufSize, GLsizei* length, GLchar* infoLog);
-// void (APIENTRYP ptrgoglGetShaderSource)(GLuint shader, GLsizei bufSize, GLsizei* length, GLchar* source);
-// GLint (APIENTRYP ptrgoglGetUniformLocation)(GLuint program, GLchar* name);
-// void (APIENTRYP ptrgoglGetUniformfv)(GLuint program, GLint location, GLfloat* params);
-// void (APIENTRYP ptrgoglGetUniformiv)(GLuint program, GLint location, GLint* params);
-// void (APIENTRYP ptrgoglGetVertexAttribdv)(GLuint index, GLenum pname, GLdouble* params);
-// void (APIENTRYP ptrgoglGetVertexAttribfv)(GLuint index, GLenum pname, GLfloat* params);
-// void (APIENTRYP ptrgoglGetVertexAttribiv)(GLuint index, GLenum pname, GLint* params);
-// void (APIENTRYP ptrgoglGetVertexAttribPointerv)(GLuint index, GLenum pname, GLvoid** pointer);
-// GLboolean (APIENTRYP ptrgoglIsProgram)(GLuint program);
-// GLboolean (APIENTRYP ptrgoglIsShader)(GLuint shader);
-// void (APIENTRYP ptrgoglLinkProgram)(GLuint program);
-// void (APIENTRYP ptrgoglShaderSource)(GLuint shader, GLsizei count, GLchar** string, GLint* length);
-// void (APIENTRYP ptrgoglUseProgram)(GLuint program);
-// void (APIENTRYP ptrgoglUniform1f)(GLint location, GLfloat v0);
-// void (APIENTRYP ptrgoglUniform2f)(GLint location, GLfloat v0, GLfloat v1);
-// void (APIENTRYP ptrgoglUniform3f)(GLint location, GLfloat v0, GLfloat v1, GLfloat v2);
-// void (APIENTRYP ptrgoglUniform4f)(GLint location, GLfloat v0, GLfloat v1, GLfloat v2, GLfloat v3);
-// void (APIENTRYP ptrgoglUniform1i)(GLint location, GLint v0);
-// void (APIENTRYP ptrgoglUniform2i)(GLint location, GLint v0, GLint v1);
-// void (APIENTRYP ptrgoglUniform3i)(GLint location, GLint v0, GLint v1, GLint v2);
-// void (APIENTRYP ptrgoglUniform4i)(GLint location, GLint v0, GLint v1, GLint v2, GLint v3);
-// void (APIENTRYP ptrgoglUniform1fv)(GLint location, GLsizei count, GLfloat* value);
-// void (APIENTRYP ptrgoglUniform2fv)(GLint location, GLsizei count, GLfloat* value);
-// void (APIENTRYP ptrgoglUniform3fv)(GLint location, GLsizei count, GLfloat* value);
-// void (APIENTRYP ptrgoglUniform4fv)(GLint location, GLsizei count, GLfloat* value);
-// void (APIENTRYP ptrgoglUniform1iv)(GLint location, GLsizei count, GLint* value);
-// void (APIENTRYP ptrgoglUniform2iv)(GLint location, GLsizei count, GLint* value);
-// void (APIENTRYP ptrgoglUniform3iv)(GLint location, GLsizei count, GLint* value);
-// void (APIENTRYP ptrgoglUniform4iv)(GLint location, GLsizei count, GLint* value);
-// void (APIENTRYP ptrgoglUniformMatrix2fv)(GLint location, GLsizei count, GLboolean transpose, GLfloat* value);
-// void (APIENTRYP ptrgoglUniformMatrix3fv)(GLint location, GLsizei count, GLboolean transpose, GLfloat* value);
-// void (APIENTRYP ptrgoglUniformMatrix4fv)(GLint location, GLsizei count, GLboolean transpose, GLfloat* value);
-// void (APIENTRYP ptrgoglValidateProgram)(GLuint program);
-// void (APIENTRYP ptrgoglVertexAttrib1d)(GLuint index, GLdouble x);
-// void (APIENTRYP ptrgoglVertexAttrib1dv)(GLuint index, GLdouble* v);
-// void (APIENTRYP ptrgoglVertexAttrib1f)(GLuint index, GLfloat x);
-// void (APIENTRYP ptrgoglVertexAttrib1fv)(GLuint index, GLfloat* v);
-// void (APIENTRYP ptrgoglVertexAttrib1s)(GLuint index, GLshort x);
-// void (APIENTRYP ptrgoglVertexAttrib1sv)(GLuint index, GLshort* v);
-// void (APIENTRYP ptrgoglVertexAttrib2d)(GLuint index, GLdouble x, GLdouble y);
-// void (APIENTRYP ptrgoglVertexAttrib2dv)(GLuint index, GLdouble* v);
-// void (APIENTRYP ptrgoglVertexAttrib2f)(GLuint index, GLfloat x, GLfloat y);
-// void (APIENTRYP ptrgoglVertexAttrib2fv)(GLuint index, GLfloat* v);
-// void (APIENTRYP ptrgoglVertexAttrib2s)(GLuint index, GLshort x, GLshort y);
-// void (APIENTRYP ptrgoglVertexAttrib2sv)(GLuint index, GLshort* v);
-// void (APIENTRYP ptrgoglVertexAttrib3d)(GLuint index, GLdouble x, GLdouble y, GLdouble z);
-// void (APIENTRYP ptrgoglVertexAttrib3dv)(GLuint index, GLdouble* v);
-// void (APIENTRYP ptrgoglVertexAttrib3f)(GLuint index, GLfloat x, GLfloat y, GLfloat z);
-// void (APIENTRYP ptrgoglVertexAttrib3fv)(GLuint index, GLfloat* v);
-// void (APIENTRYP ptrgoglVertexAttrib3s)(GLuint index, GLshort x, GLshort y, GLshort z);
-// void (APIENTRYP ptrgoglVertexAttrib3sv)(GLuint index, GLshort* v);
-// void (APIENTRYP ptrgoglVertexAttrib4Nbv)(GLuint index, GLbyte* v);
-// void (APIENTRYP ptrgoglVertexAttrib4Niv)(GLuint index, GLint* v);
-// void (APIENTRYP ptrgoglVertexAttrib4Nsv)(GLuint index, GLshort* v);
-// void (APIENTRYP ptrgoglVertexAttrib4Nub)(GLuint index, GLubyte x, GLubyte y, GLubyte z, GLubyte w);
-// void (APIENTRYP ptrgoglVertexAttrib4Nubv)(GLuint index, GLubyte* v);
-// void (APIENTRYP ptrgoglVertexAttrib4Nuiv)(GLuint index, GLuint* v);
-// void (APIENTRYP ptrgoglVertexAttrib4Nusv)(GLuint index, GLushort* v);
-// void (APIENTRYP ptrgoglVertexAttrib4bv)(GLuint index, GLbyte* v);
-// void (APIENTRYP ptrgoglVertexAttrib4d)(GLuint index, GLdouble x, GLdouble y, GLdouble z, GLdouble w);
-// void (APIENTRYP ptrgoglVertexAttrib4dv)(GLuint index, GLdouble* v);
-// void (APIENTRYP ptrgoglVertexAttrib4f)(GLuint index, GLfloat x, GLfloat y, GLfloat z, GLfloat w);
-// void (APIENTRYP ptrgoglVertexAttrib4fv)(GLuint index, GLfloat* v);
-// void (APIENTRYP ptrgoglVertexAttrib4iv)(GLuint index, GLint* v);
-// void (APIENTRYP ptrgoglVertexAttrib4s)(GLuint index, GLshort x, GLshort y, GLshort z, GLshort w);
-// void (APIENTRYP ptrgoglVertexAttrib4sv)(GLuint index, GLshort* v);
-// void (APIENTRYP ptrgoglVertexAttrib4ubv)(GLuint index, GLubyte* v);
-// void (APIENTRYP ptrgoglVertexAttrib4uiv)(GLuint index, GLuint* v);
-// void (APIENTRYP ptrgoglVertexAttrib4usv)(GLuint index, GLushort* v);
-// void (APIENTRYP ptrgoglVertexAttribPointer)(GLuint index, GLint size, GLenum type, GLboolean normalized, GLsizei stride, GLvoid* pointer);
 // //  VERSION_1_4
 // void (APIENTRYP ptrgoglBlendFuncSeparate)(GLenum sfactorRGB, GLenum dfactorRGB, GLenum sfactorAlpha, GLenum dfactorAlpha);
 // void (APIENTRYP ptrgoglMultiDrawArrays)(GLenum mode, GLint* first, GLsizei* count, GLsizei primcount);
@@ -568,7 +467,423 @@ package gl33
 // void (APIENTRYP ptrgoglGetActiveUniformBlockiv)(GLuint program, GLuint uniformBlockIndex, GLenum pname, GLint* params);
 // void (APIENTRYP ptrgoglGetActiveUniformBlockName)(GLuint program, GLuint uniformBlockIndex, GLsizei bufSize, GLsizei* length, GLchar* uniformBlockName);
 // void (APIENTRYP ptrgoglUniformBlockBinding)(GLuint program, GLuint uniformBlockIndex, GLuint uniformBlockBinding);
+// //  VERSION_2_1
+// void (APIENTRYP ptrgoglUniformMatrix2x3fv)(GLint location, GLsizei count, GLboolean transpose, GLfloat* value);
+// void (APIENTRYP ptrgoglUniformMatrix3x2fv)(GLint location, GLsizei count, GLboolean transpose, GLfloat* value);
+// void (APIENTRYP ptrgoglUniformMatrix2x4fv)(GLint location, GLsizei count, GLboolean transpose, GLfloat* value);
+// void (APIENTRYP ptrgoglUniformMatrix4x2fv)(GLint location, GLsizei count, GLboolean transpose, GLfloat* value);
+// void (APIENTRYP ptrgoglUniformMatrix3x4fv)(GLint location, GLsizei count, GLboolean transpose, GLfloat* value);
+// void (APIENTRYP ptrgoglUniformMatrix4x3fv)(GLint location, GLsizei count, GLboolean transpose, GLfloat* value);
+// //  VERSION_2_0
+// void (APIENTRYP ptrgoglBlendEquationSeparate)(GLenum modeRGB, GLenum modeAlpha);
+// void (APIENTRYP ptrgoglDrawBuffers)(GLsizei n, GLenum* bufs);
+// void (APIENTRYP ptrgoglStencilOpSeparate)(GLenum face, GLenum sfail, GLenum dpfail, GLenum dppass);
+// void (APIENTRYP ptrgoglStencilFuncSeparate)(GLenum face, GLenum func, GLint ref, GLuint mask);
+// void (APIENTRYP ptrgoglStencilMaskSeparate)(GLenum face, GLuint mask);
+// void (APIENTRYP ptrgoglAttachShader)(GLuint program, GLuint shader);
+// void (APIENTRYP ptrgoglBindAttribLocation)(GLuint program, GLuint index, GLchar* name);
+// void (APIENTRYP ptrgoglCompileShader)(GLuint shader);
+// GLuint (APIENTRYP ptrgoglCreateProgram)();
+// GLuint (APIENTRYP ptrgoglCreateShader)(GLenum type);
+// void (APIENTRYP ptrgoglDeleteProgram)(GLuint program);
+// void (APIENTRYP ptrgoglDeleteShader)(GLuint shader);
+// void (APIENTRYP ptrgoglDetachShader)(GLuint program, GLuint shader);
+// void (APIENTRYP ptrgoglDisableVertexAttribArray)(GLuint index);
+// void (APIENTRYP ptrgoglEnableVertexAttribArray)(GLuint index);
+// void (APIENTRYP ptrgoglGetActiveAttrib)(GLuint program, GLuint index, GLsizei bufSize, GLsizei* length, GLint* size, GLenum* type, GLchar* name);
+// void (APIENTRYP ptrgoglGetActiveUniform)(GLuint program, GLuint index, GLsizei bufSize, GLsizei* length, GLint* size, GLenum* type, GLchar* name);
+// void (APIENTRYP ptrgoglGetAttachedShaders)(GLuint program, GLsizei maxCount, GLsizei* count, GLuint* obj);
+// GLint (APIENTRYP ptrgoglGetAttribLocation)(GLuint program, GLchar* name);
+// void (APIENTRYP ptrgoglGetProgramiv)(GLuint program, GLenum pname, GLint* params);
+// void (APIENTRYP ptrgoglGetProgramInfoLog)(GLuint program, GLsizei bufSize, GLsizei* length, GLchar* infoLog);
+// void (APIENTRYP ptrgoglGetShaderiv)(GLuint shader, GLenum pname, GLint* params);
+// void (APIENTRYP ptrgoglGetShaderInfoLog)(GLuint shader, GLsizei bufSize, GLsizei* length, GLchar* infoLog);
+// void (APIENTRYP ptrgoglGetShaderSource)(GLuint shader, GLsizei bufSize, GLsizei* length, GLchar* source);
+// GLint (APIENTRYP ptrgoglGetUniformLocation)(GLuint program, GLchar* name);
+// void (APIENTRYP ptrgoglGetUniformfv)(GLuint program, GLint location, GLfloat* params);
+// void (APIENTRYP ptrgoglGetUniformiv)(GLuint program, GLint location, GLint* params);
+// void (APIENTRYP ptrgoglGetVertexAttribdv)(GLuint index, GLenum pname, GLdouble* params);
+// void (APIENTRYP ptrgoglGetVertexAttribfv)(GLuint index, GLenum pname, GLfloat* params);
+// void (APIENTRYP ptrgoglGetVertexAttribiv)(GLuint index, GLenum pname, GLint* params);
+// void (APIENTRYP ptrgoglGetVertexAttribPointerv)(GLuint index, GLenum pname, GLvoid** pointer);
+// GLboolean (APIENTRYP ptrgoglIsProgram)(GLuint program);
+// GLboolean (APIENTRYP ptrgoglIsShader)(GLuint shader);
+// void (APIENTRYP ptrgoglLinkProgram)(GLuint program);
+// void (APIENTRYP ptrgoglShaderSource)(GLuint shader, GLsizei count, GLchar** string, GLint* length);
+// void (APIENTRYP ptrgoglUseProgram)(GLuint program);
+// void (APIENTRYP ptrgoglUniform1f)(GLint location, GLfloat v0);
+// void (APIENTRYP ptrgoglUniform2f)(GLint location, GLfloat v0, GLfloat v1);
+// void (APIENTRYP ptrgoglUniform3f)(GLint location, GLfloat v0, GLfloat v1, GLfloat v2);
+// void (APIENTRYP ptrgoglUniform4f)(GLint location, GLfloat v0, GLfloat v1, GLfloat v2, GLfloat v3);
+// void (APIENTRYP ptrgoglUniform1i)(GLint location, GLint v0);
+// void (APIENTRYP ptrgoglUniform2i)(GLint location, GLint v0, GLint v1);
+// void (APIENTRYP ptrgoglUniform3i)(GLint location, GLint v0, GLint v1, GLint v2);
+// void (APIENTRYP ptrgoglUniform4i)(GLint location, GLint v0, GLint v1, GLint v2, GLint v3);
+// void (APIENTRYP ptrgoglUniform1fv)(GLint location, GLsizei count, GLfloat* value);
+// void (APIENTRYP ptrgoglUniform2fv)(GLint location, GLsizei count, GLfloat* value);
+// void (APIENTRYP ptrgoglUniform3fv)(GLint location, GLsizei count, GLfloat* value);
+// void (APIENTRYP ptrgoglUniform4fv)(GLint location, GLsizei count, GLfloat* value);
+// void (APIENTRYP ptrgoglUniform1iv)(GLint location, GLsizei count, GLint* value);
+// void (APIENTRYP ptrgoglUniform2iv)(GLint location, GLsizei count, GLint* value);
+// void (APIENTRYP ptrgoglUniform3iv)(GLint location, GLsizei count, GLint* value);
+// void (APIENTRYP ptrgoglUniform4iv)(GLint location, GLsizei count, GLint* value);
+// void (APIENTRYP ptrgoglUniformMatrix2fv)(GLint location, GLsizei count, GLboolean transpose, GLfloat* value);
+// void (APIENTRYP ptrgoglUniformMatrix3fv)(GLint location, GLsizei count, GLboolean transpose, GLfloat* value);
+// void (APIENTRYP ptrgoglUniformMatrix4fv)(GLint location, GLsizei count, GLboolean transpose, GLfloat* value);
+// void (APIENTRYP ptrgoglValidateProgram)(GLuint program);
+// void (APIENTRYP ptrgoglVertexAttrib1d)(GLuint index, GLdouble x);
+// void (APIENTRYP ptrgoglVertexAttrib1dv)(GLuint index, GLdouble* v);
+// void (APIENTRYP ptrgoglVertexAttrib1f)(GLuint index, GLfloat x);
+// void (APIENTRYP ptrgoglVertexAttrib1fv)(GLuint index, GLfloat* v);
+// void (APIENTRYP ptrgoglVertexAttrib1s)(GLuint index, GLshort x);
+// void (APIENTRYP ptrgoglVertexAttrib1sv)(GLuint index, GLshort* v);
+// void (APIENTRYP ptrgoglVertexAttrib2d)(GLuint index, GLdouble x, GLdouble y);
+// void (APIENTRYP ptrgoglVertexAttrib2dv)(GLuint index, GLdouble* v);
+// void (APIENTRYP ptrgoglVertexAttrib2f)(GLuint index, GLfloat x, GLfloat y);
+// void (APIENTRYP ptrgoglVertexAttrib2fv)(GLuint index, GLfloat* v);
+// void (APIENTRYP ptrgoglVertexAttrib2s)(GLuint index, GLshort x, GLshort y);
+// void (APIENTRYP ptrgoglVertexAttrib2sv)(GLuint index, GLshort* v);
+// void (APIENTRYP ptrgoglVertexAttrib3d)(GLuint index, GLdouble x, GLdouble y, GLdouble z);
+// void (APIENTRYP ptrgoglVertexAttrib3dv)(GLuint index, GLdouble* v);
+// void (APIENTRYP ptrgoglVertexAttrib3f)(GLuint index, GLfloat x, GLfloat y, GLfloat z);
+// void (APIENTRYP ptrgoglVertexAttrib3fv)(GLuint index, GLfloat* v);
+// void (APIENTRYP ptrgoglVertexAttrib3s)(GLuint index, GLshort x, GLshort y, GLshort z);
+// void (APIENTRYP ptrgoglVertexAttrib3sv)(GLuint index, GLshort* v);
+// void (APIENTRYP ptrgoglVertexAttrib4Nbv)(GLuint index, GLbyte* v);
+// void (APIENTRYP ptrgoglVertexAttrib4Niv)(GLuint index, GLint* v);
+// void (APIENTRYP ptrgoglVertexAttrib4Nsv)(GLuint index, GLshort* v);
+// void (APIENTRYP ptrgoglVertexAttrib4Nub)(GLuint index, GLubyte x, GLubyte y, GLubyte z, GLubyte w);
+// void (APIENTRYP ptrgoglVertexAttrib4Nubv)(GLuint index, GLubyte* v);
+// void (APIENTRYP ptrgoglVertexAttrib4Nuiv)(GLuint index, GLuint* v);
+// void (APIENTRYP ptrgoglVertexAttrib4Nusv)(GLuint index, GLushort* v);
+// void (APIENTRYP ptrgoglVertexAttrib4bv)(GLuint index, GLbyte* v);
+// void (APIENTRYP ptrgoglVertexAttrib4d)(GLuint index, GLdouble x, GLdouble y, GLdouble z, GLdouble w);
+// void (APIENTRYP ptrgoglVertexAttrib4dv)(GLuint index, GLdouble* v);
+// void (APIENTRYP ptrgoglVertexAttrib4f)(GLuint index, GLfloat x, GLfloat y, GLfloat z, GLfloat w);
+// void (APIENTRYP ptrgoglVertexAttrib4fv)(GLuint index, GLfloat* v);
+// void (APIENTRYP ptrgoglVertexAttrib4iv)(GLuint index, GLint* v);
+// void (APIENTRYP ptrgoglVertexAttrib4s)(GLuint index, GLshort x, GLshort y, GLshort z, GLshort w);
+// void (APIENTRYP ptrgoglVertexAttrib4sv)(GLuint index, GLshort* v);
+// void (APIENTRYP ptrgoglVertexAttrib4ubv)(GLuint index, GLubyte* v);
+// void (APIENTRYP ptrgoglVertexAttrib4uiv)(GLuint index, GLuint* v);
+// void (APIENTRYP ptrgoglVertexAttrib4usv)(GLuint index, GLushort* v);
+// void (APIENTRYP ptrgoglVertexAttribPointer)(GLuint index, GLint size, GLenum type, GLboolean normalized, GLsizei stride, GLvoid* pointer);
 // 
+// //  VERSION_1_4
+// void goglBlendFuncSeparate(GLenum sfactorRGB, GLenum dfactorRGB, GLenum sfactorAlpha, GLenum dfactorAlpha) {
+// 	(*ptrgoglBlendFuncSeparate)(sfactorRGB, dfactorRGB, sfactorAlpha, dfactorAlpha);
+// }
+// void goglMultiDrawArrays(GLenum mode, GLint* first, GLsizei* count, GLsizei primcount) {
+// 	(*ptrgoglMultiDrawArrays)(mode, first, count, primcount);
+// }
+// void goglMultiDrawElements(GLenum mode, GLsizei* count, GLenum type, GLvoid** indices, GLsizei primcount) {
+// 	(*ptrgoglMultiDrawElements)(mode, count, type, indices, primcount);
+// }
+// void goglPointParameterf(GLenum pname, GLfloat param) {
+// 	(*ptrgoglPointParameterf)(pname, param);
+// }
+// void goglPointParameterfv(GLenum pname, GLfloat* params) {
+// 	(*ptrgoglPointParameterfv)(pname, params);
+// }
+// void goglPointParameteri(GLenum pname, GLint param) {
+// 	(*ptrgoglPointParameteri)(pname, param);
+// }
+// void goglPointParameteriv(GLenum pname, GLint* params) {
+// 	(*ptrgoglPointParameteriv)(pname, params);
+// }
+// //  VERSION_1_5
+// void goglGenQueries(GLsizei n, GLuint* ids) {
+// 	(*ptrgoglGenQueries)(n, ids);
+// }
+// void goglDeleteQueries(GLsizei n, GLuint* ids) {
+// 	(*ptrgoglDeleteQueries)(n, ids);
+// }
+// GLboolean goglIsQuery(GLuint id) {
+// 	return (*ptrgoglIsQuery)(id);
+// }
+// void goglBeginQuery(GLenum target, GLuint id) {
+// 	(*ptrgoglBeginQuery)(target, id);
+// }
+// void goglEndQuery(GLenum target) {
+// 	(*ptrgoglEndQuery)(target);
+// }
+// void goglGetQueryiv(GLenum target, GLenum pname, GLint* params) {
+// 	(*ptrgoglGetQueryiv)(target, pname, params);
+// }
+// void goglGetQueryObjectiv(GLuint id, GLenum pname, GLint* params) {
+// 	(*ptrgoglGetQueryObjectiv)(id, pname, params);
+// }
+// void goglGetQueryObjectuiv(GLuint id, GLenum pname, GLuint* params) {
+// 	(*ptrgoglGetQueryObjectuiv)(id, pname, params);
+// }
+// void goglBindBuffer(GLenum target, GLuint buffer) {
+// 	(*ptrgoglBindBuffer)(target, buffer);
+// }
+// void goglDeleteBuffers(GLsizei n, GLuint* buffers) {
+// 	(*ptrgoglDeleteBuffers)(n, buffers);
+// }
+// void goglGenBuffers(GLsizei n, GLuint* buffers) {
+// 	(*ptrgoglGenBuffers)(n, buffers);
+// }
+// GLboolean goglIsBuffer(GLuint buffer) {
+// 	return (*ptrgoglIsBuffer)(buffer);
+// }
+// void goglBufferData(GLenum target, GLsizeiptr size, GLvoid* data, GLenum usage) {
+// 	(*ptrgoglBufferData)(target, size, data, usage);
+// }
+// void goglBufferSubData(GLenum target, GLintptr offset, GLsizeiptr size, GLvoid* data) {
+// 	(*ptrgoglBufferSubData)(target, offset, size, data);
+// }
+// void goglGetBufferSubData(GLenum target, GLintptr offset, GLsizeiptr size, GLvoid* data) {
+// 	(*ptrgoglGetBufferSubData)(target, offset, size, data);
+// }
+// GLvoid* goglMapBuffer(GLenum target, GLenum access) {
+// 	return (*ptrgoglMapBuffer)(target, access);
+// }
+// GLboolean goglUnmapBuffer(GLenum target) {
+// 	return (*ptrgoglUnmapBuffer)(target);
+// }
+// void goglGetBufferParameteriv(GLenum target, GLenum pname, GLint* params) {
+// 	(*ptrgoglGetBufferParameteriv)(target, pname, params);
+// }
+// void goglGetBufferPointerv(GLenum target, GLenum pname, GLvoid** params) {
+// 	(*ptrgoglGetBufferPointerv)(target, pname, params);
+// }
+// //  VERSION_1_0
+// void goglCullFace(GLenum mode) {
+// 	(*ptrgoglCullFace)(mode);
+// }
+// void goglFrontFace(GLenum mode) {
+// 	(*ptrgoglFrontFace)(mode);
+// }
+// void goglHint(GLenum target, GLenum mode) {
+// 	(*ptrgoglHint)(target, mode);
+// }
+// void goglLineWidth(GLfloat width) {
+// 	(*ptrgoglLineWidth)(width);
+// }
+// void goglPointSize(GLfloat size) {
+// 	(*ptrgoglPointSize)(size);
+// }
+// void goglPolygonMode(GLenum face, GLenum mode) {
+// 	(*ptrgoglPolygonMode)(face, mode);
+// }
+// void goglScissor(GLint x, GLint y, GLsizei width, GLsizei height) {
+// 	(*ptrgoglScissor)(x, y, width, height);
+// }
+// void goglTexParameterf(GLenum target, GLenum pname, GLfloat param) {
+// 	(*ptrgoglTexParameterf)(target, pname, param);
+// }
+// void goglTexParameterfv(GLenum target, GLenum pname, GLfloat* params) {
+// 	(*ptrgoglTexParameterfv)(target, pname, params);
+// }
+// void goglTexParameteri(GLenum target, GLenum pname, GLint param) {
+// 	(*ptrgoglTexParameteri)(target, pname, param);
+// }
+// void goglTexParameteriv(GLenum target, GLenum pname, GLint* params) {
+// 	(*ptrgoglTexParameteriv)(target, pname, params);
+// }
+// void goglTexImage1D(GLenum target, GLint level, GLint internalformat, GLsizei width, GLint border, GLenum format, GLenum type, GLvoid* pixels) {
+// 	(*ptrgoglTexImage1D)(target, level, internalformat, width, border, format, type, pixels);
+// }
+// void goglTexImage2D(GLenum target, GLint level, GLint internalformat, GLsizei width, GLsizei height, GLint border, GLenum format, GLenum type, GLvoid* pixels) {
+// 	(*ptrgoglTexImage2D)(target, level, internalformat, width, height, border, format, type, pixels);
+// }
+// void goglDrawBuffer(GLenum mode) {
+// 	(*ptrgoglDrawBuffer)(mode);
+// }
+// void goglClear(GLbitfield mask) {
+// 	(*ptrgoglClear)(mask);
+// }
+// void goglClearColor(GLclampf red, GLclampf green, GLclampf blue, GLclampf alpha) {
+// 	(*ptrgoglClearColor)(red, green, blue, alpha);
+// }
+// void goglClearStencil(GLint s) {
+// 	(*ptrgoglClearStencil)(s);
+// }
+// void goglClearDepth(GLclampd depth) {
+// 	(*ptrgoglClearDepth)(depth);
+// }
+// void goglStencilMask(GLuint mask) {
+// 	(*ptrgoglStencilMask)(mask);
+// }
+// void goglColorMask(GLboolean red, GLboolean green, GLboolean blue, GLboolean alpha) {
+// 	(*ptrgoglColorMask)(red, green, blue, alpha);
+// }
+// void goglDepthMask(GLboolean flag) {
+// 	(*ptrgoglDepthMask)(flag);
+// }
+// void goglDisable(GLenum cap) {
+// 	(*ptrgoglDisable)(cap);
+// }
+// void goglEnable(GLenum cap) {
+// 	(*ptrgoglEnable)(cap);
+// }
+// void goglFinish() {
+// 	(*ptrgoglFinish)();
+// }
+// void goglFlush() {
+// 	(*ptrgoglFlush)();
+// }
+// void goglBlendFunc(GLenum sfactor, GLenum dfactor) {
+// 	(*ptrgoglBlendFunc)(sfactor, dfactor);
+// }
+// void goglLogicOp(GLenum opcode) {
+// 	(*ptrgoglLogicOp)(opcode);
+// }
+// void goglStencilFunc(GLenum func, GLint ref, GLuint mask) {
+// 	(*ptrgoglStencilFunc)(func, ref, mask);
+// }
+// void goglStencilOp(GLenum fail, GLenum zfail, GLenum zpass) {
+// 	(*ptrgoglStencilOp)(fail, zfail, zpass);
+// }
+// void goglDepthFunc(GLenum func) {
+// 	(*ptrgoglDepthFunc)(func);
+// }
+// void goglPixelStoref(GLenum pname, GLfloat param) {
+// 	(*ptrgoglPixelStoref)(pname, param);
+// }
+// void goglPixelStorei(GLenum pname, GLint param) {
+// 	(*ptrgoglPixelStorei)(pname, param);
+// }
+// void goglReadBuffer(GLenum mode) {
+// 	(*ptrgoglReadBuffer)(mode);
+// }
+// void goglReadPixels(GLint x, GLint y, GLsizei width, GLsizei height, GLenum format, GLenum type, GLvoid* pixels) {
+// 	(*ptrgoglReadPixels)(x, y, width, height, format, type, pixels);
+// }
+// void goglGetBooleanv(GLenum pname, GLboolean* params) {
+// 	(*ptrgoglGetBooleanv)(pname, params);
+// }
+// void goglGetDoublev(GLenum pname, GLdouble* params) {
+// 	(*ptrgoglGetDoublev)(pname, params);
+// }
+// GLenum goglGetError() {
+// 	return (*ptrgoglGetError)();
+// }
+// void goglGetFloatv(GLenum pname, GLfloat* params) {
+// 	(*ptrgoglGetFloatv)(pname, params);
+// }
+// void goglGetIntegerv(GLenum pname, GLint* params) {
+// 	(*ptrgoglGetIntegerv)(pname, params);
+// }
+// const GLubyte * goglGetString(GLenum name) {
+// 	return (*ptrgoglGetString)(name);
+// }
+// void goglGetTexImage(GLenum target, GLint level, GLenum format, GLenum type, GLvoid* pixels) {
+// 	(*ptrgoglGetTexImage)(target, level, format, type, pixels);
+// }
+// void goglGetTexParameterfv(GLenum target, GLenum pname, GLfloat* params) {
+// 	(*ptrgoglGetTexParameterfv)(target, pname, params);
+// }
+// void goglGetTexParameteriv(GLenum target, GLenum pname, GLint* params) {
+// 	(*ptrgoglGetTexParameteriv)(target, pname, params);
+// }
+// void goglGetTexLevelParameterfv(GLenum target, GLint level, GLenum pname, GLfloat* params) {
+// 	(*ptrgoglGetTexLevelParameterfv)(target, level, pname, params);
+// }
+// void goglGetTexLevelParameteriv(GLenum target, GLint level, GLenum pname, GLint* params) {
+// 	(*ptrgoglGetTexLevelParameteriv)(target, level, pname, params);
+// }
+// GLboolean goglIsEnabled(GLenum cap) {
+// 	return (*ptrgoglIsEnabled)(cap);
+// }
+// void goglDepthRange(GLclampd near, GLclampd far) {
+// 	(*ptrgoglDepthRange)(near, far);
+// }
+// void goglViewport(GLint x, GLint y, GLsizei width, GLsizei height) {
+// 	(*ptrgoglViewport)(x, y, width, height);
+// }
+// //  VERSION_1_1
+// void goglDrawArrays(GLenum mode, GLint first, GLsizei count) {
+// 	(*ptrgoglDrawArrays)(mode, first, count);
+// }
+// void goglDrawElements(GLenum mode, GLsizei count, GLenum type, GLvoid* indices) {
+// 	(*ptrgoglDrawElements)(mode, count, type, indices);
+// }
+// void goglGetPointerv(GLenum pname, GLvoid** params) {
+// 	(*ptrgoglGetPointerv)(pname, params);
+// }
+// void goglPolygonOffset(GLfloat factor, GLfloat units) {
+// 	(*ptrgoglPolygonOffset)(factor, units);
+// }
+// void goglCopyTexImage1D(GLenum target, GLint level, GLenum internalformat, GLint x, GLint y, GLsizei width, GLint border) {
+// 	(*ptrgoglCopyTexImage1D)(target, level, internalformat, x, y, width, border);
+// }
+// void goglCopyTexImage2D(GLenum target, GLint level, GLenum internalformat, GLint x, GLint y, GLsizei width, GLsizei height, GLint border) {
+// 	(*ptrgoglCopyTexImage2D)(target, level, internalformat, x, y, width, height, border);
+// }
+// void goglCopyTexSubImage1D(GLenum target, GLint level, GLint xoffset, GLint x, GLint y, GLsizei width) {
+// 	(*ptrgoglCopyTexSubImage1D)(target, level, xoffset, x, y, width);
+// }
+// void goglCopyTexSubImage2D(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint x, GLint y, GLsizei width, GLsizei height) {
+// 	(*ptrgoglCopyTexSubImage2D)(target, level, xoffset, yoffset, x, y, width, height);
+// }
+// void goglTexSubImage1D(GLenum target, GLint level, GLint xoffset, GLsizei width, GLenum format, GLenum type, GLvoid* pixels) {
+// 	(*ptrgoglTexSubImage1D)(target, level, xoffset, width, format, type, pixels);
+// }
+// void goglTexSubImage2D(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLsizei width, GLsizei height, GLenum format, GLenum type, GLvoid* pixels) {
+// 	(*ptrgoglTexSubImage2D)(target, level, xoffset, yoffset, width, height, format, type, pixels);
+// }
+// void goglBindTexture(GLenum target, GLuint texture) {
+// 	(*ptrgoglBindTexture)(target, texture);
+// }
+// void goglDeleteTextures(GLsizei n, GLuint* textures) {
+// 	(*ptrgoglDeleteTextures)(n, textures);
+// }
+// void goglGenTextures(GLsizei n, GLuint* textures) {
+// 	(*ptrgoglGenTextures)(n, textures);
+// }
+// GLboolean goglIsTexture(GLuint texture) {
+// 	return (*ptrgoglIsTexture)(texture);
+// }
+// //  VERSION_1_2
+// void goglBlendColor(GLclampf red, GLclampf green, GLclampf blue, GLclampf alpha) {
+// 	(*ptrgoglBlendColor)(red, green, blue, alpha);
+// }
+// void goglBlendEquation(GLenum mode) {
+// 	(*ptrgoglBlendEquation)(mode);
+// }
+// void goglDrawRangeElements(GLenum mode, GLuint start, GLuint end, GLsizei count, GLenum type, GLvoid* indices) {
+// 	(*ptrgoglDrawRangeElements)(mode, start, end, count, type, indices);
+// }
+// void goglTexImage3D(GLenum target, GLint level, GLint internalformat, GLsizei width, GLsizei height, GLsizei depth, GLint border, GLenum format, GLenum type, GLvoid* pixels) {
+// 	(*ptrgoglTexImage3D)(target, level, internalformat, width, height, depth, border, format, type, pixels);
+// }
+// void goglTexSubImage3D(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLenum format, GLenum type, GLvoid* pixels) {
+// 	(*ptrgoglTexSubImage3D)(target, level, xoffset, yoffset, zoffset, width, height, depth, format, type, pixels);
+// }
+// void goglCopyTexSubImage3D(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLint x, GLint y, GLsizei width, GLsizei height) {
+// 	(*ptrgoglCopyTexSubImage3D)(target, level, xoffset, yoffset, zoffset, x, y, width, height);
+// }
+// //  VERSION_1_3
+// void goglActiveTexture(GLenum texture) {
+// 	(*ptrgoglActiveTexture)(texture);
+// }
+// void goglSampleCoverage(GLclampf value, GLboolean invert) {
+// 	(*ptrgoglSampleCoverage)(value, invert);
+// }
+// void goglCompressedTexImage3D(GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLsizei depth, GLint border, GLsizei imageSize, GLvoid* data) {
+// 	(*ptrgoglCompressedTexImage3D)(target, level, internalformat, width, height, depth, border, imageSize, data);
+// }
+// void goglCompressedTexImage2D(GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLint border, GLsizei imageSize, GLvoid* data) {
+// 	(*ptrgoglCompressedTexImage2D)(target, level, internalformat, width, height, border, imageSize, data);
+// }
+// void goglCompressedTexImage1D(GLenum target, GLint level, GLenum internalformat, GLsizei width, GLint border, GLsizei imageSize, GLvoid* data) {
+// 	(*ptrgoglCompressedTexImage1D)(target, level, internalformat, width, border, imageSize, data);
+// }
+// void goglCompressedTexSubImage3D(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLenum format, GLsizei imageSize, GLvoid* data) {
+// 	(*ptrgoglCompressedTexSubImage3D)(target, level, xoffset, yoffset, zoffset, width, height, depth, format, imageSize, data);
+// }
+// void goglCompressedTexSubImage2D(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLsizei width, GLsizei height, GLenum format, GLsizei imageSize, GLvoid* data) {
+// 	(*ptrgoglCompressedTexSubImage2D)(target, level, xoffset, yoffset, width, height, format, imageSize, data);
+// }
+// void goglCompressedTexSubImage1D(GLenum target, GLint level, GLint xoffset, GLsizei width, GLenum format, GLsizei imageSize, GLvoid* data) {
+// 	(*ptrgoglCompressedTexSubImage1D)(target, level, xoffset, width, format, imageSize, data);
+// }
+// void goglGetCompressedTexImage(GLenum target, GLint level, GLvoid* img) {
+// 	(*ptrgoglGetCompressedTexImage)(target, level, img);
+// }
 // //  VERSION_3_2
 // void goglGetInteger64i_v(GLenum target, GLuint index, GLint64* data) {
 // 	(*ptrgoglGetInteger64i_v)(target, index, data);
@@ -1391,322 +1706,365 @@ package gl33
 // void goglVertexAttribPointer(GLuint index, GLint size, GLenum type, GLboolean normalized, GLsizei stride, GLvoid* pointer) {
 // 	(*ptrgoglVertexAttribPointer)(index, size, type, normalized, stride, pointer);
 // }
-// //  VERSION_1_4
-// void goglBlendFuncSeparate(GLenum sfactorRGB, GLenum dfactorRGB, GLenum sfactorAlpha, GLenum dfactorAlpha) {
-// 	(*ptrgoglBlendFuncSeparate)(sfactorRGB, dfactorRGB, sfactorAlpha, dfactorAlpha);
-// }
-// void goglMultiDrawArrays(GLenum mode, GLint* first, GLsizei* count, GLsizei primcount) {
-// 	(*ptrgoglMultiDrawArrays)(mode, first, count, primcount);
-// }
-// void goglMultiDrawElements(GLenum mode, GLsizei* count, GLenum type, GLvoid** indices, GLsizei primcount) {
-// 	(*ptrgoglMultiDrawElements)(mode, count, type, indices, primcount);
-// }
-// void goglPointParameterf(GLenum pname, GLfloat param) {
-// 	(*ptrgoglPointParameterf)(pname, param);
-// }
-// void goglPointParameterfv(GLenum pname, GLfloat* params) {
-// 	(*ptrgoglPointParameterfv)(pname, params);
-// }
-// void goglPointParameteri(GLenum pname, GLint param) {
-// 	(*ptrgoglPointParameteri)(pname, param);
-// }
-// void goglPointParameteriv(GLenum pname, GLint* params) {
-// 	(*ptrgoglPointParameteriv)(pname, params);
-// }
-// //  VERSION_1_5
-// void goglGenQueries(GLsizei n, GLuint* ids) {
-// 	(*ptrgoglGenQueries)(n, ids);
-// }
-// void goglDeleteQueries(GLsizei n, GLuint* ids) {
-// 	(*ptrgoglDeleteQueries)(n, ids);
-// }
-// GLboolean goglIsQuery(GLuint id) {
-// 	return (*ptrgoglIsQuery)(id);
-// }
-// void goglBeginQuery(GLenum target, GLuint id) {
-// 	(*ptrgoglBeginQuery)(target, id);
-// }
-// void goglEndQuery(GLenum target) {
-// 	(*ptrgoglEndQuery)(target);
-// }
-// void goglGetQueryiv(GLenum target, GLenum pname, GLint* params) {
-// 	(*ptrgoglGetQueryiv)(target, pname, params);
-// }
-// void goglGetQueryObjectiv(GLuint id, GLenum pname, GLint* params) {
-// 	(*ptrgoglGetQueryObjectiv)(id, pname, params);
-// }
-// void goglGetQueryObjectuiv(GLuint id, GLenum pname, GLuint* params) {
-// 	(*ptrgoglGetQueryObjectuiv)(id, pname, params);
-// }
-// void goglBindBuffer(GLenum target, GLuint buffer) {
-// 	(*ptrgoglBindBuffer)(target, buffer);
-// }
-// void goglDeleteBuffers(GLsizei n, GLuint* buffers) {
-// 	(*ptrgoglDeleteBuffers)(n, buffers);
-// }
-// void goglGenBuffers(GLsizei n, GLuint* buffers) {
-// 	(*ptrgoglGenBuffers)(n, buffers);
-// }
-// GLboolean goglIsBuffer(GLuint buffer) {
-// 	return (*ptrgoglIsBuffer)(buffer);
-// }
-// void goglBufferData(GLenum target, GLsizeiptr size, GLvoid* data, GLenum usage) {
-// 	(*ptrgoglBufferData)(target, size, data, usage);
-// }
-// void goglBufferSubData(GLenum target, GLintptr offset, GLsizeiptr size, GLvoid* data) {
-// 	(*ptrgoglBufferSubData)(target, offset, size, data);
-// }
-// void goglGetBufferSubData(GLenum target, GLintptr offset, GLsizeiptr size, GLvoid* data) {
-// 	(*ptrgoglGetBufferSubData)(target, offset, size, data);
-// }
-// GLvoid* goglMapBuffer(GLenum target, GLenum access) {
-// 	return (*ptrgoglMapBuffer)(target, access);
-// }
-// GLboolean goglUnmapBuffer(GLenum target) {
-// 	return (*ptrgoglUnmapBuffer)(target);
-// }
-// void goglGetBufferParameteriv(GLenum target, GLenum pname, GLint* params) {
-// 	(*ptrgoglGetBufferParameteriv)(target, pname, params);
-// }
-// void goglGetBufferPointerv(GLenum target, GLenum pname, GLvoid** params) {
-// 	(*ptrgoglGetBufferPointerv)(target, pname, params);
-// }
-// //  VERSION_1_0
-// void goglCullFace(GLenum mode) {
-// 	(*ptrgoglCullFace)(mode);
-// }
-// void goglFrontFace(GLenum mode) {
-// 	(*ptrgoglFrontFace)(mode);
-// }
-// void goglHint(GLenum target, GLenum mode) {
-// 	(*ptrgoglHint)(target, mode);
-// }
-// void goglLineWidth(GLfloat width) {
-// 	(*ptrgoglLineWidth)(width);
-// }
-// void goglPointSize(GLfloat size) {
-// 	(*ptrgoglPointSize)(size);
-// }
-// void goglPolygonMode(GLenum face, GLenum mode) {
-// 	(*ptrgoglPolygonMode)(face, mode);
-// }
-// void goglScissor(GLint x, GLint y, GLsizei width, GLsizei height) {
-// 	(*ptrgoglScissor)(x, y, width, height);
-// }
-// void goglTexParameterf(GLenum target, GLenum pname, GLfloat param) {
-// 	(*ptrgoglTexParameterf)(target, pname, param);
-// }
-// void goglTexParameterfv(GLenum target, GLenum pname, GLfloat* params) {
-// 	(*ptrgoglTexParameterfv)(target, pname, params);
-// }
-// void goglTexParameteri(GLenum target, GLenum pname, GLint param) {
-// 	(*ptrgoglTexParameteri)(target, pname, param);
-// }
-// void goglTexParameteriv(GLenum target, GLenum pname, GLint* params) {
-// 	(*ptrgoglTexParameteriv)(target, pname, params);
-// }
-// void goglTexImage1D(GLenum target, GLint level, GLint internalformat, GLsizei width, GLint border, GLenum format, GLenum type, GLvoid* pixels) {
-// 	(*ptrgoglTexImage1D)(target, level, internalformat, width, border, format, type, pixels);
-// }
-// void goglTexImage2D(GLenum target, GLint level, GLint internalformat, GLsizei width, GLsizei height, GLint border, GLenum format, GLenum type, GLvoid* pixels) {
-// 	(*ptrgoglTexImage2D)(target, level, internalformat, width, height, border, format, type, pixels);
-// }
-// void goglDrawBuffer(GLenum mode) {
-// 	(*ptrgoglDrawBuffer)(mode);
-// }
-// void goglClear(GLbitfield mask) {
-// 	(*ptrgoglClear)(mask);
-// }
-// void goglClearColor(GLclampf red, GLclampf green, GLclampf blue, GLclampf alpha) {
-// 	(*ptrgoglClearColor)(red, green, blue, alpha);
-// }
-// void goglClearStencil(GLint s) {
-// 	(*ptrgoglClearStencil)(s);
-// }
-// void goglClearDepth(GLclampd depth) {
-// 	(*ptrgoglClearDepth)(depth);
-// }
-// void goglStencilMask(GLuint mask) {
-// 	(*ptrgoglStencilMask)(mask);
-// }
-// void goglColorMask(GLboolean red, GLboolean green, GLboolean blue, GLboolean alpha) {
-// 	(*ptrgoglColorMask)(red, green, blue, alpha);
-// }
-// void goglDepthMask(GLboolean flag) {
-// 	(*ptrgoglDepthMask)(flag);
-// }
-// void goglDisable(GLenum cap) {
-// 	(*ptrgoglDisable)(cap);
-// }
-// void goglEnable(GLenum cap) {
-// 	(*ptrgoglEnable)(cap);
-// }
-// void goglFinish() {
-// 	(*ptrgoglFinish)();
-// }
-// void goglFlush() {
-// 	(*ptrgoglFlush)();
-// }
-// void goglBlendFunc(GLenum sfactor, GLenum dfactor) {
-// 	(*ptrgoglBlendFunc)(sfactor, dfactor);
-// }
-// void goglLogicOp(GLenum opcode) {
-// 	(*ptrgoglLogicOp)(opcode);
-// }
-// void goglStencilFunc(GLenum func, GLint ref, GLuint mask) {
-// 	(*ptrgoglStencilFunc)(func, ref, mask);
-// }
-// void goglStencilOp(GLenum fail, GLenum zfail, GLenum zpass) {
-// 	(*ptrgoglStencilOp)(fail, zfail, zpass);
-// }
-// void goglDepthFunc(GLenum func) {
-// 	(*ptrgoglDepthFunc)(func);
-// }
-// void goglPixelStoref(GLenum pname, GLfloat param) {
-// 	(*ptrgoglPixelStoref)(pname, param);
-// }
-// void goglPixelStorei(GLenum pname, GLint param) {
-// 	(*ptrgoglPixelStorei)(pname, param);
-// }
-// void goglReadBuffer(GLenum mode) {
-// 	(*ptrgoglReadBuffer)(mode);
-// }
-// void goglReadPixels(GLint x, GLint y, GLsizei width, GLsizei height, GLenum format, GLenum type, GLvoid* pixels) {
-// 	(*ptrgoglReadPixels)(x, y, width, height, format, type, pixels);
-// }
-// void goglGetBooleanv(GLenum pname, GLboolean* params) {
-// 	(*ptrgoglGetBooleanv)(pname, params);
-// }
-// void goglGetDoublev(GLenum pname, GLdouble* params) {
-// 	(*ptrgoglGetDoublev)(pname, params);
-// }
-// GLenum goglGetError() {
-// 	return (*ptrgoglGetError)();
-// }
-// void goglGetFloatv(GLenum pname, GLfloat* params) {
-// 	(*ptrgoglGetFloatv)(pname, params);
-// }
-// void goglGetIntegerv(GLenum pname, GLint* params) {
-// 	(*ptrgoglGetIntegerv)(pname, params);
-// }
-// const GLubyte * goglGetString(GLenum name) {
-// 	return (*ptrgoglGetString)(name);
-// }
-// void goglGetTexImage(GLenum target, GLint level, GLenum format, GLenum type, GLvoid* pixels) {
-// 	(*ptrgoglGetTexImage)(target, level, format, type, pixels);
-// }
-// void goglGetTexParameterfv(GLenum target, GLenum pname, GLfloat* params) {
-// 	(*ptrgoglGetTexParameterfv)(target, pname, params);
-// }
-// void goglGetTexParameteriv(GLenum target, GLenum pname, GLint* params) {
-// 	(*ptrgoglGetTexParameteriv)(target, pname, params);
-// }
-// void goglGetTexLevelParameterfv(GLenum target, GLint level, GLenum pname, GLfloat* params) {
-// 	(*ptrgoglGetTexLevelParameterfv)(target, level, pname, params);
-// }
-// void goglGetTexLevelParameteriv(GLenum target, GLint level, GLenum pname, GLint* params) {
-// 	(*ptrgoglGetTexLevelParameteriv)(target, level, pname, params);
-// }
-// GLboolean goglIsEnabled(GLenum cap) {
-// 	return (*ptrgoglIsEnabled)(cap);
-// }
-// void goglDepthRange(GLclampd near, GLclampd far) {
-// 	(*ptrgoglDepthRange)(near, far);
-// }
-// void goglViewport(GLint x, GLint y, GLsizei width, GLsizei height) {
-// 	(*ptrgoglViewport)(x, y, width, height);
-// }
-// //  VERSION_1_1
-// void goglDrawArrays(GLenum mode, GLint first, GLsizei count) {
-// 	(*ptrgoglDrawArrays)(mode, first, count);
-// }
-// void goglDrawElements(GLenum mode, GLsizei count, GLenum type, GLvoid* indices) {
-// 	(*ptrgoglDrawElements)(mode, count, type, indices);
-// }
-// void goglGetPointerv(GLenum pname, GLvoid** params) {
-// 	(*ptrgoglGetPointerv)(pname, params);
-// }
-// void goglPolygonOffset(GLfloat factor, GLfloat units) {
-// 	(*ptrgoglPolygonOffset)(factor, units);
-// }
-// void goglCopyTexImage1D(GLenum target, GLint level, GLenum internalformat, GLint x, GLint y, GLsizei width, GLint border) {
-// 	(*ptrgoglCopyTexImage1D)(target, level, internalformat, x, y, width, border);
-// }
-// void goglCopyTexImage2D(GLenum target, GLint level, GLenum internalformat, GLint x, GLint y, GLsizei width, GLsizei height, GLint border) {
-// 	(*ptrgoglCopyTexImage2D)(target, level, internalformat, x, y, width, height, border);
-// }
-// void goglCopyTexSubImage1D(GLenum target, GLint level, GLint xoffset, GLint x, GLint y, GLsizei width) {
-// 	(*ptrgoglCopyTexSubImage1D)(target, level, xoffset, x, y, width);
-// }
-// void goglCopyTexSubImage2D(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint x, GLint y, GLsizei width, GLsizei height) {
-// 	(*ptrgoglCopyTexSubImage2D)(target, level, xoffset, yoffset, x, y, width, height);
-// }
-// void goglTexSubImage1D(GLenum target, GLint level, GLint xoffset, GLsizei width, GLenum format, GLenum type, GLvoid* pixels) {
-// 	(*ptrgoglTexSubImage1D)(target, level, xoffset, width, format, type, pixels);
-// }
-// void goglTexSubImage2D(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLsizei width, GLsizei height, GLenum format, GLenum type, GLvoid* pixels) {
-// 	(*ptrgoglTexSubImage2D)(target, level, xoffset, yoffset, width, height, format, type, pixels);
-// }
-// void goglBindTexture(GLenum target, GLuint texture) {
-// 	(*ptrgoglBindTexture)(target, texture);
-// }
-// void goglDeleteTextures(GLsizei n, GLuint* textures) {
-// 	(*ptrgoglDeleteTextures)(n, textures);
-// }
-// void goglGenTextures(GLsizei n, GLuint* textures) {
-// 	(*ptrgoglGenTextures)(n, textures);
-// }
-// GLboolean goglIsTexture(GLuint texture) {
-// 	return (*ptrgoglIsTexture)(texture);
-// }
-// //  VERSION_1_2
-// void goglBlendColor(GLclampf red, GLclampf green, GLclampf blue, GLclampf alpha) {
-// 	(*ptrgoglBlendColor)(red, green, blue, alpha);
-// }
-// void goglBlendEquation(GLenum mode) {
-// 	(*ptrgoglBlendEquation)(mode);
-// }
-// void goglDrawRangeElements(GLenum mode, GLuint start, GLuint end, GLsizei count, GLenum type, GLvoid* indices) {
-// 	(*ptrgoglDrawRangeElements)(mode, start, end, count, type, indices);
-// }
-// void goglTexImage3D(GLenum target, GLint level, GLint internalformat, GLsizei width, GLsizei height, GLsizei depth, GLint border, GLenum format, GLenum type, GLvoid* pixels) {
-// 	(*ptrgoglTexImage3D)(target, level, internalformat, width, height, depth, border, format, type, pixels);
-// }
-// void goglTexSubImage3D(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLenum format, GLenum type, GLvoid* pixels) {
-// 	(*ptrgoglTexSubImage3D)(target, level, xoffset, yoffset, zoffset, width, height, depth, format, type, pixels);
-// }
-// void goglCopyTexSubImage3D(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLint x, GLint y, GLsizei width, GLsizei height) {
-// 	(*ptrgoglCopyTexSubImage3D)(target, level, xoffset, yoffset, zoffset, x, y, width, height);
-// }
-// //  VERSION_1_3
-// void goglActiveTexture(GLenum texture) {
-// 	(*ptrgoglActiveTexture)(texture);
-// }
-// void goglSampleCoverage(GLclampf value, GLboolean invert) {
-// 	(*ptrgoglSampleCoverage)(value, invert);
-// }
-// void goglCompressedTexImage3D(GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLsizei depth, GLint border, GLsizei imageSize, GLvoid* data) {
-// 	(*ptrgoglCompressedTexImage3D)(target, level, internalformat, width, height, depth, border, imageSize, data);
-// }
-// void goglCompressedTexImage2D(GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLint border, GLsizei imageSize, GLvoid* data) {
-// 	(*ptrgoglCompressedTexImage2D)(target, level, internalformat, width, height, border, imageSize, data);
-// }
-// void goglCompressedTexImage1D(GLenum target, GLint level, GLenum internalformat, GLsizei width, GLint border, GLsizei imageSize, GLvoid* data) {
-// 	(*ptrgoglCompressedTexImage1D)(target, level, internalformat, width, border, imageSize, data);
-// }
-// void goglCompressedTexSubImage3D(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLenum format, GLsizei imageSize, GLvoid* data) {
-// 	(*ptrgoglCompressedTexSubImage3D)(target, level, xoffset, yoffset, zoffset, width, height, depth, format, imageSize, data);
-// }
-// void goglCompressedTexSubImage2D(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLsizei width, GLsizei height, GLenum format, GLsizei imageSize, GLvoid* data) {
-// 	(*ptrgoglCompressedTexSubImage2D)(target, level, xoffset, yoffset, width, height, format, imageSize, data);
-// }
-// void goglCompressedTexSubImage1D(GLenum target, GLint level, GLint xoffset, GLsizei width, GLenum format, GLsizei imageSize, GLvoid* data) {
-// 	(*ptrgoglCompressedTexSubImage1D)(target, level, xoffset, width, format, imageSize, data);
-// }
-// void goglGetCompressedTexImage(GLenum target, GLint level, GLvoid* img) {
-// 	(*ptrgoglGetCompressedTexImage)(target, level, img);
-// }
 // 
+// int init_VERSION_3_2() {
+// 	ptrgoglGetInteger64i_v = goglGetProcAddress("glGetInteger64i_v");
+// 	if(ptrgoglGetInteger64i_v == NULL) return 1;
+// 	ptrgoglGetBufferParameteri64v = goglGetProcAddress("glGetBufferParameteri64v");
+// 	if(ptrgoglGetBufferParameteri64v == NULL) return 1;
+// 	ptrgoglFramebufferTexture = goglGetProcAddress("glFramebufferTexture");
+// 	if(ptrgoglFramebufferTexture == NULL) return 1;
+// 	ptrgoglDrawElementsBaseVertex = goglGetProcAddress("glDrawElementsBaseVertex");
+// 	if(ptrgoglDrawElementsBaseVertex == NULL) return 1;
+// 	ptrgoglDrawRangeElementsBaseVertex = goglGetProcAddress("glDrawRangeElementsBaseVertex");
+// 	if(ptrgoglDrawRangeElementsBaseVertex == NULL) return 1;
+// 	ptrgoglDrawElementsInstancedBaseVertex = goglGetProcAddress("glDrawElementsInstancedBaseVertex");
+// 	if(ptrgoglDrawElementsInstancedBaseVertex == NULL) return 1;
+// 	ptrgoglMultiDrawElementsBaseVertex = goglGetProcAddress("glMultiDrawElementsBaseVertex");
+// 	if(ptrgoglMultiDrawElementsBaseVertex == NULL) return 1;
+// 	ptrgoglProvokingVertex = goglGetProcAddress("glProvokingVertex");
+// 	if(ptrgoglProvokingVertex == NULL) return 1;
+// 	ptrgoglFenceSync = goglGetProcAddress("glFenceSync");
+// 	if(ptrgoglFenceSync == NULL) return 1;
+// 	ptrgoglIsSync = goglGetProcAddress("glIsSync");
+// 	if(ptrgoglIsSync == NULL) return 1;
+// 	ptrgoglDeleteSync = goglGetProcAddress("glDeleteSync");
+// 	if(ptrgoglDeleteSync == NULL) return 1;
+// 	ptrgoglClientWaitSync = goglGetProcAddress("glClientWaitSync");
+// 	if(ptrgoglClientWaitSync == NULL) return 1;
+// 	ptrgoglWaitSync = goglGetProcAddress("glWaitSync");
+// 	if(ptrgoglWaitSync == NULL) return 1;
+// 	ptrgoglGetInteger64v = goglGetProcAddress("glGetInteger64v");
+// 	if(ptrgoglGetInteger64v == NULL) return 1;
+// 	ptrgoglGetSynciv = goglGetProcAddress("glGetSynciv");
+// 	if(ptrgoglGetSynciv == NULL) return 1;
+// 	ptrgoglTexImage2DMultisample = goglGetProcAddress("glTexImage2DMultisample");
+// 	if(ptrgoglTexImage2DMultisample == NULL) return 1;
+// 	ptrgoglTexImage3DMultisample = goglGetProcAddress("glTexImage3DMultisample");
+// 	if(ptrgoglTexImage3DMultisample == NULL) return 1;
+// 	ptrgoglGetMultisamplefv = goglGetProcAddress("glGetMultisamplefv");
+// 	if(ptrgoglGetMultisamplefv == NULL) return 1;
+// 	ptrgoglSampleMaski = goglGetProcAddress("glSampleMaski");
+// 	if(ptrgoglSampleMaski == NULL) return 1;
+// 	return 0;
+// }
+// int init_VERSION_3_3() {
+// 	ptrgoglVertexAttribDivisor = goglGetProcAddress("glVertexAttribDivisor");
+// 	if(ptrgoglVertexAttribDivisor == NULL) return 1;
+// 	ptrgoglBindFragDataLocationIndexed = goglGetProcAddress("glBindFragDataLocationIndexed");
+// 	if(ptrgoglBindFragDataLocationIndexed == NULL) return 1;
+// 	ptrgoglGetFragDataIndex = goglGetProcAddress("glGetFragDataIndex");
+// 	if(ptrgoglGetFragDataIndex == NULL) return 1;
+// 	ptrgoglGenSamplers = goglGetProcAddress("glGenSamplers");
+// 	if(ptrgoglGenSamplers == NULL) return 1;
+// 	ptrgoglDeleteSamplers = goglGetProcAddress("glDeleteSamplers");
+// 	if(ptrgoglDeleteSamplers == NULL) return 1;
+// 	ptrgoglIsSampler = goglGetProcAddress("glIsSampler");
+// 	if(ptrgoglIsSampler == NULL) return 1;
+// 	ptrgoglBindSampler = goglGetProcAddress("glBindSampler");
+// 	if(ptrgoglBindSampler == NULL) return 1;
+// 	ptrgoglSamplerParameteri = goglGetProcAddress("glSamplerParameteri");
+// 	if(ptrgoglSamplerParameteri == NULL) return 1;
+// 	ptrgoglSamplerParameteriv = goglGetProcAddress("glSamplerParameteriv");
+// 	if(ptrgoglSamplerParameteriv == NULL) return 1;
+// 	ptrgoglSamplerParameterf = goglGetProcAddress("glSamplerParameterf");
+// 	if(ptrgoglSamplerParameterf == NULL) return 1;
+// 	ptrgoglSamplerParameterfv = goglGetProcAddress("glSamplerParameterfv");
+// 	if(ptrgoglSamplerParameterfv == NULL) return 1;
+// 	ptrgoglSamplerParameterIiv = goglGetProcAddress("glSamplerParameterIiv");
+// 	if(ptrgoglSamplerParameterIiv == NULL) return 1;
+// 	ptrgoglSamplerParameterIuiv = goglGetProcAddress("glSamplerParameterIuiv");
+// 	if(ptrgoglSamplerParameterIuiv == NULL) return 1;
+// 	ptrgoglGetSamplerParameteriv = goglGetProcAddress("glGetSamplerParameteriv");
+// 	if(ptrgoglGetSamplerParameteriv == NULL) return 1;
+// 	ptrgoglGetSamplerParameterIiv = goglGetProcAddress("glGetSamplerParameterIiv");
+// 	if(ptrgoglGetSamplerParameterIiv == NULL) return 1;
+// 	ptrgoglGetSamplerParameterfv = goglGetProcAddress("glGetSamplerParameterfv");
+// 	if(ptrgoglGetSamplerParameterfv == NULL) return 1;
+// 	ptrgoglGetSamplerParameterIuiv = goglGetProcAddress("glGetSamplerParameterIuiv");
+// 	if(ptrgoglGetSamplerParameterIuiv == NULL) return 1;
+// 	ptrgoglQueryCounter = goglGetProcAddress("glQueryCounter");
+// 	if(ptrgoglQueryCounter == NULL) return 1;
+// 	ptrgoglGetQueryObjecti64v = goglGetProcAddress("glGetQueryObjecti64v");
+// 	if(ptrgoglGetQueryObjecti64v == NULL) return 1;
+// 	ptrgoglGetQueryObjectui64v = goglGetProcAddress("glGetQueryObjectui64v");
+// 	if(ptrgoglGetQueryObjectui64v == NULL) return 1;
+// 	ptrgoglVertexP2ui = goglGetProcAddress("glVertexP2ui");
+// 	if(ptrgoglVertexP2ui == NULL) return 1;
+// 	ptrgoglVertexP2uiv = goglGetProcAddress("glVertexP2uiv");
+// 	if(ptrgoglVertexP2uiv == NULL) return 1;
+// 	ptrgoglVertexP3ui = goglGetProcAddress("glVertexP3ui");
+// 	if(ptrgoglVertexP3ui == NULL) return 1;
+// 	ptrgoglVertexP3uiv = goglGetProcAddress("glVertexP3uiv");
+// 	if(ptrgoglVertexP3uiv == NULL) return 1;
+// 	ptrgoglVertexP4ui = goglGetProcAddress("glVertexP4ui");
+// 	if(ptrgoglVertexP4ui == NULL) return 1;
+// 	ptrgoglVertexP4uiv = goglGetProcAddress("glVertexP4uiv");
+// 	if(ptrgoglVertexP4uiv == NULL) return 1;
+// 	ptrgoglTexCoordP1ui = goglGetProcAddress("glTexCoordP1ui");
+// 	if(ptrgoglTexCoordP1ui == NULL) return 1;
+// 	ptrgoglTexCoordP1uiv = goglGetProcAddress("glTexCoordP1uiv");
+// 	if(ptrgoglTexCoordP1uiv == NULL) return 1;
+// 	ptrgoglTexCoordP2ui = goglGetProcAddress("glTexCoordP2ui");
+// 	if(ptrgoglTexCoordP2ui == NULL) return 1;
+// 	ptrgoglTexCoordP2uiv = goglGetProcAddress("glTexCoordP2uiv");
+// 	if(ptrgoglTexCoordP2uiv == NULL) return 1;
+// 	ptrgoglTexCoordP3ui = goglGetProcAddress("glTexCoordP3ui");
+// 	if(ptrgoglTexCoordP3ui == NULL) return 1;
+// 	ptrgoglTexCoordP3uiv = goglGetProcAddress("glTexCoordP3uiv");
+// 	if(ptrgoglTexCoordP3uiv == NULL) return 1;
+// 	ptrgoglTexCoordP4ui = goglGetProcAddress("glTexCoordP4ui");
+// 	if(ptrgoglTexCoordP4ui == NULL) return 1;
+// 	ptrgoglTexCoordP4uiv = goglGetProcAddress("glTexCoordP4uiv");
+// 	if(ptrgoglTexCoordP4uiv == NULL) return 1;
+// 	ptrgoglMultiTexCoordP1ui = goglGetProcAddress("glMultiTexCoordP1ui");
+// 	if(ptrgoglMultiTexCoordP1ui == NULL) return 1;
+// 	ptrgoglMultiTexCoordP1uiv = goglGetProcAddress("glMultiTexCoordP1uiv");
+// 	if(ptrgoglMultiTexCoordP1uiv == NULL) return 1;
+// 	ptrgoglMultiTexCoordP2ui = goglGetProcAddress("glMultiTexCoordP2ui");
+// 	if(ptrgoglMultiTexCoordP2ui == NULL) return 1;
+// 	ptrgoglMultiTexCoordP2uiv = goglGetProcAddress("glMultiTexCoordP2uiv");
+// 	if(ptrgoglMultiTexCoordP2uiv == NULL) return 1;
+// 	ptrgoglMultiTexCoordP3ui = goglGetProcAddress("glMultiTexCoordP3ui");
+// 	if(ptrgoglMultiTexCoordP3ui == NULL) return 1;
+// 	ptrgoglMultiTexCoordP3uiv = goglGetProcAddress("glMultiTexCoordP3uiv");
+// 	if(ptrgoglMultiTexCoordP3uiv == NULL) return 1;
+// 	ptrgoglMultiTexCoordP4ui = goglGetProcAddress("glMultiTexCoordP4ui");
+// 	if(ptrgoglMultiTexCoordP4ui == NULL) return 1;
+// 	ptrgoglMultiTexCoordP4uiv = goglGetProcAddress("glMultiTexCoordP4uiv");
+// 	if(ptrgoglMultiTexCoordP4uiv == NULL) return 1;
+// 	ptrgoglNormalP3ui = goglGetProcAddress("glNormalP3ui");
+// 	if(ptrgoglNormalP3ui == NULL) return 1;
+// 	ptrgoglNormalP3uiv = goglGetProcAddress("glNormalP3uiv");
+// 	if(ptrgoglNormalP3uiv == NULL) return 1;
+// 	ptrgoglColorP3ui = goglGetProcAddress("glColorP3ui");
+// 	if(ptrgoglColorP3ui == NULL) return 1;
+// 	ptrgoglColorP3uiv = goglGetProcAddress("glColorP3uiv");
+// 	if(ptrgoglColorP3uiv == NULL) return 1;
+// 	ptrgoglColorP4ui = goglGetProcAddress("glColorP4ui");
+// 	if(ptrgoglColorP4ui == NULL) return 1;
+// 	ptrgoglColorP4uiv = goglGetProcAddress("glColorP4uiv");
+// 	if(ptrgoglColorP4uiv == NULL) return 1;
+// 	ptrgoglSecondaryColorP3ui = goglGetProcAddress("glSecondaryColorP3ui");
+// 	if(ptrgoglSecondaryColorP3ui == NULL) return 1;
+// 	ptrgoglSecondaryColorP3uiv = goglGetProcAddress("glSecondaryColorP3uiv");
+// 	if(ptrgoglSecondaryColorP3uiv == NULL) return 1;
+// 	ptrgoglVertexAttribP1ui = goglGetProcAddress("glVertexAttribP1ui");
+// 	if(ptrgoglVertexAttribP1ui == NULL) return 1;
+// 	ptrgoglVertexAttribP1uiv = goglGetProcAddress("glVertexAttribP1uiv");
+// 	if(ptrgoglVertexAttribP1uiv == NULL) return 1;
+// 	ptrgoglVertexAttribP2ui = goglGetProcAddress("glVertexAttribP2ui");
+// 	if(ptrgoglVertexAttribP2ui == NULL) return 1;
+// 	ptrgoglVertexAttribP2uiv = goglGetProcAddress("glVertexAttribP2uiv");
+// 	if(ptrgoglVertexAttribP2uiv == NULL) return 1;
+// 	ptrgoglVertexAttribP3ui = goglGetProcAddress("glVertexAttribP3ui");
+// 	if(ptrgoglVertexAttribP3ui == NULL) return 1;
+// 	ptrgoglVertexAttribP3uiv = goglGetProcAddress("glVertexAttribP3uiv");
+// 	if(ptrgoglVertexAttribP3uiv == NULL) return 1;
+// 	ptrgoglVertexAttribP4ui = goglGetProcAddress("glVertexAttribP4ui");
+// 	if(ptrgoglVertexAttribP4ui == NULL) return 1;
+// 	ptrgoglVertexAttribP4uiv = goglGetProcAddress("glVertexAttribP4uiv");
+// 	if(ptrgoglVertexAttribP4uiv == NULL) return 1;
+// 	return 0;
+// }
+// int init_VERSION_3_0() {
+// 	ptrgoglColorMaski = goglGetProcAddress("glColorMaski");
+// 	if(ptrgoglColorMaski == NULL) return 1;
+// 	ptrgoglGetBooleani_v = goglGetProcAddress("glGetBooleani_v");
+// 	if(ptrgoglGetBooleani_v == NULL) return 1;
+// 	ptrgoglGetIntegeri_v = goglGetProcAddress("glGetIntegeri_v");
+// 	if(ptrgoglGetIntegeri_v == NULL) return 1;
+// 	ptrgoglEnablei = goglGetProcAddress("glEnablei");
+// 	if(ptrgoglEnablei == NULL) return 1;
+// 	ptrgoglDisablei = goglGetProcAddress("glDisablei");
+// 	if(ptrgoglDisablei == NULL) return 1;
+// 	ptrgoglIsEnabledi = goglGetProcAddress("glIsEnabledi");
+// 	if(ptrgoglIsEnabledi == NULL) return 1;
+// 	ptrgoglBeginTransformFeedback = goglGetProcAddress("glBeginTransformFeedback");
+// 	if(ptrgoglBeginTransformFeedback == NULL) return 1;
+// 	ptrgoglEndTransformFeedback = goglGetProcAddress("glEndTransformFeedback");
+// 	if(ptrgoglEndTransformFeedback == NULL) return 1;
+// 	ptrgoglBindBufferRange = goglGetProcAddress("glBindBufferRange");
+// 	if(ptrgoglBindBufferRange == NULL) return 1;
+// 	ptrgoglBindBufferBase = goglGetProcAddress("glBindBufferBase");
+// 	if(ptrgoglBindBufferBase == NULL) return 1;
+// 	ptrgoglTransformFeedbackVaryings = goglGetProcAddress("glTransformFeedbackVaryings");
+// 	if(ptrgoglTransformFeedbackVaryings == NULL) return 1;
+// 	ptrgoglGetTransformFeedbackVarying = goglGetProcAddress("glGetTransformFeedbackVarying");
+// 	if(ptrgoglGetTransformFeedbackVarying == NULL) return 1;
+// 	ptrgoglClampColor = goglGetProcAddress("glClampColor");
+// 	if(ptrgoglClampColor == NULL) return 1;
+// 	ptrgoglBeginConditionalRender = goglGetProcAddress("glBeginConditionalRender");
+// 	if(ptrgoglBeginConditionalRender == NULL) return 1;
+// 	ptrgoglEndConditionalRender = goglGetProcAddress("glEndConditionalRender");
+// 	if(ptrgoglEndConditionalRender == NULL) return 1;
+// 	ptrgoglVertexAttribIPointer = goglGetProcAddress("glVertexAttribIPointer");
+// 	if(ptrgoglVertexAttribIPointer == NULL) return 1;
+// 	ptrgoglGetVertexAttribIiv = goglGetProcAddress("glGetVertexAttribIiv");
+// 	if(ptrgoglGetVertexAttribIiv == NULL) return 1;
+// 	ptrgoglGetVertexAttribIuiv = goglGetProcAddress("glGetVertexAttribIuiv");
+// 	if(ptrgoglGetVertexAttribIuiv == NULL) return 1;
+// 	ptrgoglVertexAttribI1i = goglGetProcAddress("glVertexAttribI1i");
+// 	if(ptrgoglVertexAttribI1i == NULL) return 1;
+// 	ptrgoglVertexAttribI2i = goglGetProcAddress("glVertexAttribI2i");
+// 	if(ptrgoglVertexAttribI2i == NULL) return 1;
+// 	ptrgoglVertexAttribI3i = goglGetProcAddress("glVertexAttribI3i");
+// 	if(ptrgoglVertexAttribI3i == NULL) return 1;
+// 	ptrgoglVertexAttribI4i = goglGetProcAddress("glVertexAttribI4i");
+// 	if(ptrgoglVertexAttribI4i == NULL) return 1;
+// 	ptrgoglVertexAttribI1ui = goglGetProcAddress("glVertexAttribI1ui");
+// 	if(ptrgoglVertexAttribI1ui == NULL) return 1;
+// 	ptrgoglVertexAttribI2ui = goglGetProcAddress("glVertexAttribI2ui");
+// 	if(ptrgoglVertexAttribI2ui == NULL) return 1;
+// 	ptrgoglVertexAttribI3ui = goglGetProcAddress("glVertexAttribI3ui");
+// 	if(ptrgoglVertexAttribI3ui == NULL) return 1;
+// 	ptrgoglVertexAttribI4ui = goglGetProcAddress("glVertexAttribI4ui");
+// 	if(ptrgoglVertexAttribI4ui == NULL) return 1;
+// 	ptrgoglVertexAttribI1iv = goglGetProcAddress("glVertexAttribI1iv");
+// 	if(ptrgoglVertexAttribI1iv == NULL) return 1;
+// 	ptrgoglVertexAttribI2iv = goglGetProcAddress("glVertexAttribI2iv");
+// 	if(ptrgoglVertexAttribI2iv == NULL) return 1;
+// 	ptrgoglVertexAttribI3iv = goglGetProcAddress("glVertexAttribI3iv");
+// 	if(ptrgoglVertexAttribI3iv == NULL) return 1;
+// 	ptrgoglVertexAttribI4iv = goglGetProcAddress("glVertexAttribI4iv");
+// 	if(ptrgoglVertexAttribI4iv == NULL) return 1;
+// 	ptrgoglVertexAttribI1uiv = goglGetProcAddress("glVertexAttribI1uiv");
+// 	if(ptrgoglVertexAttribI1uiv == NULL) return 1;
+// 	ptrgoglVertexAttribI2uiv = goglGetProcAddress("glVertexAttribI2uiv");
+// 	if(ptrgoglVertexAttribI2uiv == NULL) return 1;
+// 	ptrgoglVertexAttribI3uiv = goglGetProcAddress("glVertexAttribI3uiv");
+// 	if(ptrgoglVertexAttribI3uiv == NULL) return 1;
+// 	ptrgoglVertexAttribI4uiv = goglGetProcAddress("glVertexAttribI4uiv");
+// 	if(ptrgoglVertexAttribI4uiv == NULL) return 1;
+// 	ptrgoglVertexAttribI4bv = goglGetProcAddress("glVertexAttribI4bv");
+// 	if(ptrgoglVertexAttribI4bv == NULL) return 1;
+// 	ptrgoglVertexAttribI4sv = goglGetProcAddress("glVertexAttribI4sv");
+// 	if(ptrgoglVertexAttribI4sv == NULL) return 1;
+// 	ptrgoglVertexAttribI4ubv = goglGetProcAddress("glVertexAttribI4ubv");
+// 	if(ptrgoglVertexAttribI4ubv == NULL) return 1;
+// 	ptrgoglVertexAttribI4usv = goglGetProcAddress("glVertexAttribI4usv");
+// 	if(ptrgoglVertexAttribI4usv == NULL) return 1;
+// 	ptrgoglGetUniformuiv = goglGetProcAddress("glGetUniformuiv");
+// 	if(ptrgoglGetUniformuiv == NULL) return 1;
+// 	ptrgoglBindFragDataLocation = goglGetProcAddress("glBindFragDataLocation");
+// 	if(ptrgoglBindFragDataLocation == NULL) return 1;
+// 	ptrgoglGetFragDataLocation = goglGetProcAddress("glGetFragDataLocation");
+// 	if(ptrgoglGetFragDataLocation == NULL) return 1;
+// 	ptrgoglUniform1ui = goglGetProcAddress("glUniform1ui");
+// 	if(ptrgoglUniform1ui == NULL) return 1;
+// 	ptrgoglUniform2ui = goglGetProcAddress("glUniform2ui");
+// 	if(ptrgoglUniform2ui == NULL) return 1;
+// 	ptrgoglUniform3ui = goglGetProcAddress("glUniform3ui");
+// 	if(ptrgoglUniform3ui == NULL) return 1;
+// 	ptrgoglUniform4ui = goglGetProcAddress("glUniform4ui");
+// 	if(ptrgoglUniform4ui == NULL) return 1;
+// 	ptrgoglUniform1uiv = goglGetProcAddress("glUniform1uiv");
+// 	if(ptrgoglUniform1uiv == NULL) return 1;
+// 	ptrgoglUniform2uiv = goglGetProcAddress("glUniform2uiv");
+// 	if(ptrgoglUniform2uiv == NULL) return 1;
+// 	ptrgoglUniform3uiv = goglGetProcAddress("glUniform3uiv");
+// 	if(ptrgoglUniform3uiv == NULL) return 1;
+// 	ptrgoglUniform4uiv = goglGetProcAddress("glUniform4uiv");
+// 	if(ptrgoglUniform4uiv == NULL) return 1;
+// 	ptrgoglTexParameterIiv = goglGetProcAddress("glTexParameterIiv");
+// 	if(ptrgoglTexParameterIiv == NULL) return 1;
+// 	ptrgoglTexParameterIuiv = goglGetProcAddress("glTexParameterIuiv");
+// 	if(ptrgoglTexParameterIuiv == NULL) return 1;
+// 	ptrgoglGetTexParameterIiv = goglGetProcAddress("glGetTexParameterIiv");
+// 	if(ptrgoglGetTexParameterIiv == NULL) return 1;
+// 	ptrgoglGetTexParameterIuiv = goglGetProcAddress("glGetTexParameterIuiv");
+// 	if(ptrgoglGetTexParameterIuiv == NULL) return 1;
+// 	ptrgoglClearBufferiv = goglGetProcAddress("glClearBufferiv");
+// 	if(ptrgoglClearBufferiv == NULL) return 1;
+// 	ptrgoglClearBufferuiv = goglGetProcAddress("glClearBufferuiv");
+// 	if(ptrgoglClearBufferuiv == NULL) return 1;
+// 	ptrgoglClearBufferfv = goglGetProcAddress("glClearBufferfv");
+// 	if(ptrgoglClearBufferfv == NULL) return 1;
+// 	ptrgoglClearBufferfi = goglGetProcAddress("glClearBufferfi");
+// 	if(ptrgoglClearBufferfi == NULL) return 1;
+// 	ptrgoglGetStringi = goglGetProcAddress("glGetStringi");
+// 	if(ptrgoglGetStringi == NULL) return 1;
+// 	ptrgoglIsRenderbuffer = goglGetProcAddress("glIsRenderbuffer");
+// 	if(ptrgoglIsRenderbuffer == NULL) return 1;
+// 	ptrgoglBindRenderbuffer = goglGetProcAddress("glBindRenderbuffer");
+// 	if(ptrgoglBindRenderbuffer == NULL) return 1;
+// 	ptrgoglDeleteRenderbuffers = goglGetProcAddress("glDeleteRenderbuffers");
+// 	if(ptrgoglDeleteRenderbuffers == NULL) return 1;
+// 	ptrgoglGenRenderbuffers = goglGetProcAddress("glGenRenderbuffers");
+// 	if(ptrgoglGenRenderbuffers == NULL) return 1;
+// 	ptrgoglRenderbufferStorage = goglGetProcAddress("glRenderbufferStorage");
+// 	if(ptrgoglRenderbufferStorage == NULL) return 1;
+// 	ptrgoglGetRenderbufferParameteriv = goglGetProcAddress("glGetRenderbufferParameteriv");
+// 	if(ptrgoglGetRenderbufferParameteriv == NULL) return 1;
+// 	ptrgoglIsFramebuffer = goglGetProcAddress("glIsFramebuffer");
+// 	if(ptrgoglIsFramebuffer == NULL) return 1;
+// 	ptrgoglBindFramebuffer = goglGetProcAddress("glBindFramebuffer");
+// 	if(ptrgoglBindFramebuffer == NULL) return 1;
+// 	ptrgoglDeleteFramebuffers = goglGetProcAddress("glDeleteFramebuffers");
+// 	if(ptrgoglDeleteFramebuffers == NULL) return 1;
+// 	ptrgoglGenFramebuffers = goglGetProcAddress("glGenFramebuffers");
+// 	if(ptrgoglGenFramebuffers == NULL) return 1;
+// 	ptrgoglCheckFramebufferStatus = goglGetProcAddress("glCheckFramebufferStatus");
+// 	if(ptrgoglCheckFramebufferStatus == NULL) return 1;
+// 	ptrgoglFramebufferTexture1D = goglGetProcAddress("glFramebufferTexture1D");
+// 	if(ptrgoglFramebufferTexture1D == NULL) return 1;
+// 	ptrgoglFramebufferTexture2D = goglGetProcAddress("glFramebufferTexture2D");
+// 	if(ptrgoglFramebufferTexture2D == NULL) return 1;
+// 	ptrgoglFramebufferTexture3D = goglGetProcAddress("glFramebufferTexture3D");
+// 	if(ptrgoglFramebufferTexture3D == NULL) return 1;
+// 	ptrgoglFramebufferRenderbuffer = goglGetProcAddress("glFramebufferRenderbuffer");
+// 	if(ptrgoglFramebufferRenderbuffer == NULL) return 1;
+// 	ptrgoglGetFramebufferAttachmentParameteriv = goglGetProcAddress("glGetFramebufferAttachmentParameteriv");
+// 	if(ptrgoglGetFramebufferAttachmentParameteriv == NULL) return 1;
+// 	ptrgoglGenerateMipmap = goglGetProcAddress("glGenerateMipmap");
+// 	if(ptrgoglGenerateMipmap == NULL) return 1;
+// 	ptrgoglBlitFramebuffer = goglGetProcAddress("glBlitFramebuffer");
+// 	if(ptrgoglBlitFramebuffer == NULL) return 1;
+// 	ptrgoglRenderbufferStorageMultisample = goglGetProcAddress("glRenderbufferStorageMultisample");
+// 	if(ptrgoglRenderbufferStorageMultisample == NULL) return 1;
+// 	ptrgoglFramebufferTextureLayer = goglGetProcAddress("glFramebufferTextureLayer");
+// 	if(ptrgoglFramebufferTextureLayer == NULL) return 1;
+// 	ptrgoglMapBufferRange = goglGetProcAddress("glMapBufferRange");
+// 	if(ptrgoglMapBufferRange == NULL) return 1;
+// 	ptrgoglFlushMappedBufferRange = goglGetProcAddress("glFlushMappedBufferRange");
+// 	if(ptrgoglFlushMappedBufferRange == NULL) return 1;
+// 	ptrgoglBindVertexArray = goglGetProcAddress("glBindVertexArray");
+// 	if(ptrgoglBindVertexArray == NULL) return 1;
+// 	ptrgoglDeleteVertexArrays = goglGetProcAddress("glDeleteVertexArrays");
+// 	if(ptrgoglDeleteVertexArrays == NULL) return 1;
+// 	ptrgoglGenVertexArrays = goglGetProcAddress("glGenVertexArrays");
+// 	if(ptrgoglGenVertexArrays == NULL) return 1;
+// 	ptrgoglIsVertexArray = goglGetProcAddress("glIsVertexArray");
+// 	if(ptrgoglIsVertexArray == NULL) return 1;
+// 	return 0;
+// }
+// int init_VERSION_3_1() {
+// 	ptrgoglDrawArraysInstanced = goglGetProcAddress("glDrawArraysInstanced");
+// 	if(ptrgoglDrawArraysInstanced == NULL) return 1;
+// 	ptrgoglDrawElementsInstanced = goglGetProcAddress("glDrawElementsInstanced");
+// 	if(ptrgoglDrawElementsInstanced == NULL) return 1;
+// 	ptrgoglTexBuffer = goglGetProcAddress("glTexBuffer");
+// 	if(ptrgoglTexBuffer == NULL) return 1;
+// 	ptrgoglPrimitiveRestartIndex = goglGetProcAddress("glPrimitiveRestartIndex");
+// 	if(ptrgoglPrimitiveRestartIndex == NULL) return 1;
+// 	ptrgoglCopyBufferSubData = goglGetProcAddress("glCopyBufferSubData");
+// 	if(ptrgoglCopyBufferSubData == NULL) return 1;
+// 	ptrgoglGetUniformIndices = goglGetProcAddress("glGetUniformIndices");
+// 	if(ptrgoglGetUniformIndices == NULL) return 1;
+// 	ptrgoglGetActiveUniformsiv = goglGetProcAddress("glGetActiveUniformsiv");
+// 	if(ptrgoglGetActiveUniformsiv == NULL) return 1;
+// 	ptrgoglGetActiveUniformName = goglGetProcAddress("glGetActiveUniformName");
+// 	if(ptrgoglGetActiveUniformName == NULL) return 1;
+// 	ptrgoglGetUniformBlockIndex = goglGetProcAddress("glGetUniformBlockIndex");
+// 	if(ptrgoglGetUniformBlockIndex == NULL) return 1;
+// 	ptrgoglGetActiveUniformBlockiv = goglGetProcAddress("glGetActiveUniformBlockiv");
+// 	if(ptrgoglGetActiveUniformBlockiv == NULL) return 1;
+// 	ptrgoglGetActiveUniformBlockName = goglGetProcAddress("glGetActiveUniformBlockName");
+// 	if(ptrgoglGetActiveUniformBlockName == NULL) return 1;
+// 	ptrgoglUniformBlockBinding = goglGetProcAddress("glUniformBlockBinding");
+// 	if(ptrgoglUniformBlockBinding == NULL) return 1;
+// 	return 0;
+// }
 // int init_VERSION_2_1() {
 // 	ptrgoglUniformMatrix2x3fv = goglGetProcAddress("glUniformMatrix2x3fv");
 // 	if(ptrgoglUniformMatrix2x3fv == NULL) return 1;
@@ -2135,364 +2493,6 @@ package gl33
 // 	if(ptrgoglGetCompressedTexImage == NULL) return 1;
 // 	return 0;
 // }
-// int init_VERSION_3_2() {
-// 	ptrgoglGetInteger64i_v = goglGetProcAddress("glGetInteger64i_v");
-// 	if(ptrgoglGetInteger64i_v == NULL) return 1;
-// 	ptrgoglGetBufferParameteri64v = goglGetProcAddress("glGetBufferParameteri64v");
-// 	if(ptrgoglGetBufferParameteri64v == NULL) return 1;
-// 	ptrgoglFramebufferTexture = goglGetProcAddress("glFramebufferTexture");
-// 	if(ptrgoglFramebufferTexture == NULL) return 1;
-// 	ptrgoglDrawElementsBaseVertex = goglGetProcAddress("glDrawElementsBaseVertex");
-// 	if(ptrgoglDrawElementsBaseVertex == NULL) return 1;
-// 	ptrgoglDrawRangeElementsBaseVertex = goglGetProcAddress("glDrawRangeElementsBaseVertex");
-// 	if(ptrgoglDrawRangeElementsBaseVertex == NULL) return 1;
-// 	ptrgoglDrawElementsInstancedBaseVertex = goglGetProcAddress("glDrawElementsInstancedBaseVertex");
-// 	if(ptrgoglDrawElementsInstancedBaseVertex == NULL) return 1;
-// 	ptrgoglMultiDrawElementsBaseVertex = goglGetProcAddress("glMultiDrawElementsBaseVertex");
-// 	if(ptrgoglMultiDrawElementsBaseVertex == NULL) return 1;
-// 	ptrgoglProvokingVertex = goglGetProcAddress("glProvokingVertex");
-// 	if(ptrgoglProvokingVertex == NULL) return 1;
-// 	ptrgoglFenceSync = goglGetProcAddress("glFenceSync");
-// 	if(ptrgoglFenceSync == NULL) return 1;
-// 	ptrgoglIsSync = goglGetProcAddress("glIsSync");
-// 	if(ptrgoglIsSync == NULL) return 1;
-// 	ptrgoglDeleteSync = goglGetProcAddress("glDeleteSync");
-// 	if(ptrgoglDeleteSync == NULL) return 1;
-// 	ptrgoglClientWaitSync = goglGetProcAddress("glClientWaitSync");
-// 	if(ptrgoglClientWaitSync == NULL) return 1;
-// 	ptrgoglWaitSync = goglGetProcAddress("glWaitSync");
-// 	if(ptrgoglWaitSync == NULL) return 1;
-// 	ptrgoglGetInteger64v = goglGetProcAddress("glGetInteger64v");
-// 	if(ptrgoglGetInteger64v == NULL) return 1;
-// 	ptrgoglGetSynciv = goglGetProcAddress("glGetSynciv");
-// 	if(ptrgoglGetSynciv == NULL) return 1;
-// 	ptrgoglTexImage2DMultisample = goglGetProcAddress("glTexImage2DMultisample");
-// 	if(ptrgoglTexImage2DMultisample == NULL) return 1;
-// 	ptrgoglTexImage3DMultisample = goglGetProcAddress("glTexImage3DMultisample");
-// 	if(ptrgoglTexImage3DMultisample == NULL) return 1;
-// 	ptrgoglGetMultisamplefv = goglGetProcAddress("glGetMultisamplefv");
-// 	if(ptrgoglGetMultisamplefv == NULL) return 1;
-// 	ptrgoglSampleMaski = goglGetProcAddress("glSampleMaski");
-// 	if(ptrgoglSampleMaski == NULL) return 1;
-// 	return 0;
-// }
-// int init_VERSION_3_3() {
-// 	ptrgoglVertexAttribDivisor = goglGetProcAddress("glVertexAttribDivisor");
-// 	if(ptrgoglVertexAttribDivisor == NULL) return 1;
-// 	ptrgoglBindFragDataLocationIndexed = goglGetProcAddress("glBindFragDataLocationIndexed");
-// 	if(ptrgoglBindFragDataLocationIndexed == NULL) return 1;
-// 	ptrgoglGetFragDataIndex = goglGetProcAddress("glGetFragDataIndex");
-// 	if(ptrgoglGetFragDataIndex == NULL) return 1;
-// 	ptrgoglGenSamplers = goglGetProcAddress("glGenSamplers");
-// 	if(ptrgoglGenSamplers == NULL) return 1;
-// 	ptrgoglDeleteSamplers = goglGetProcAddress("glDeleteSamplers");
-// 	if(ptrgoglDeleteSamplers == NULL) return 1;
-// 	ptrgoglIsSampler = goglGetProcAddress("glIsSampler");
-// 	if(ptrgoglIsSampler == NULL) return 1;
-// 	ptrgoglBindSampler = goglGetProcAddress("glBindSampler");
-// 	if(ptrgoglBindSampler == NULL) return 1;
-// 	ptrgoglSamplerParameteri = goglGetProcAddress("glSamplerParameteri");
-// 	if(ptrgoglSamplerParameteri == NULL) return 1;
-// 	ptrgoglSamplerParameteriv = goglGetProcAddress("glSamplerParameteriv");
-// 	if(ptrgoglSamplerParameteriv == NULL) return 1;
-// 	ptrgoglSamplerParameterf = goglGetProcAddress("glSamplerParameterf");
-// 	if(ptrgoglSamplerParameterf == NULL) return 1;
-// 	ptrgoglSamplerParameterfv = goglGetProcAddress("glSamplerParameterfv");
-// 	if(ptrgoglSamplerParameterfv == NULL) return 1;
-// 	ptrgoglSamplerParameterIiv = goglGetProcAddress("glSamplerParameterIiv");
-// 	if(ptrgoglSamplerParameterIiv == NULL) return 1;
-// 	ptrgoglSamplerParameterIuiv = goglGetProcAddress("glSamplerParameterIuiv");
-// 	if(ptrgoglSamplerParameterIuiv == NULL) return 1;
-// 	ptrgoglGetSamplerParameteriv = goglGetProcAddress("glGetSamplerParameteriv");
-// 	if(ptrgoglGetSamplerParameteriv == NULL) return 1;
-// 	ptrgoglGetSamplerParameterIiv = goglGetProcAddress("glGetSamplerParameterIiv");
-// 	if(ptrgoglGetSamplerParameterIiv == NULL) return 1;
-// 	ptrgoglGetSamplerParameterfv = goglGetProcAddress("glGetSamplerParameterfv");
-// 	if(ptrgoglGetSamplerParameterfv == NULL) return 1;
-// 	ptrgoglGetSamplerParameterIuiv = goglGetProcAddress("glGetSamplerParameterIuiv");
-// 	if(ptrgoglGetSamplerParameterIuiv == NULL) return 1;
-// 	ptrgoglQueryCounter = goglGetProcAddress("glQueryCounter");
-// 	if(ptrgoglQueryCounter == NULL) return 1;
-// 	ptrgoglGetQueryObjecti64v = goglGetProcAddress("glGetQueryObjecti64v");
-// 	if(ptrgoglGetQueryObjecti64v == NULL) return 1;
-// 	ptrgoglGetQueryObjectui64v = goglGetProcAddress("glGetQueryObjectui64v");
-// 	if(ptrgoglGetQueryObjectui64v == NULL) return 1;
-// 	ptrgoglVertexP2ui = goglGetProcAddress("glVertexP2ui");
-// 	if(ptrgoglVertexP2ui == NULL) return 1;
-// 	ptrgoglVertexP2uiv = goglGetProcAddress("glVertexP2uiv");
-// 	if(ptrgoglVertexP2uiv == NULL) return 1;
-// 	ptrgoglVertexP3ui = goglGetProcAddress("glVertexP3ui");
-// 	if(ptrgoglVertexP3ui == NULL) return 1;
-// 	ptrgoglVertexP3uiv = goglGetProcAddress("glVertexP3uiv");
-// 	if(ptrgoglVertexP3uiv == NULL) return 1;
-// 	ptrgoglVertexP4ui = goglGetProcAddress("glVertexP4ui");
-// 	if(ptrgoglVertexP4ui == NULL) return 1;
-// 	ptrgoglVertexP4uiv = goglGetProcAddress("glVertexP4uiv");
-// 	if(ptrgoglVertexP4uiv == NULL) return 1;
-// 	ptrgoglTexCoordP1ui = goglGetProcAddress("glTexCoordP1ui");
-// 	if(ptrgoglTexCoordP1ui == NULL) return 1;
-// 	ptrgoglTexCoordP1uiv = goglGetProcAddress("glTexCoordP1uiv");
-// 	if(ptrgoglTexCoordP1uiv == NULL) return 1;
-// 	ptrgoglTexCoordP2ui = goglGetProcAddress("glTexCoordP2ui");
-// 	if(ptrgoglTexCoordP2ui == NULL) return 1;
-// 	ptrgoglTexCoordP2uiv = goglGetProcAddress("glTexCoordP2uiv");
-// 	if(ptrgoglTexCoordP2uiv == NULL) return 1;
-// 	ptrgoglTexCoordP3ui = goglGetProcAddress("glTexCoordP3ui");
-// 	if(ptrgoglTexCoordP3ui == NULL) return 1;
-// 	ptrgoglTexCoordP3uiv = goglGetProcAddress("glTexCoordP3uiv");
-// 	if(ptrgoglTexCoordP3uiv == NULL) return 1;
-// 	ptrgoglTexCoordP4ui = goglGetProcAddress("glTexCoordP4ui");
-// 	if(ptrgoglTexCoordP4ui == NULL) return 1;
-// 	ptrgoglTexCoordP4uiv = goglGetProcAddress("glTexCoordP4uiv");
-// 	if(ptrgoglTexCoordP4uiv == NULL) return 1;
-// 	ptrgoglMultiTexCoordP1ui = goglGetProcAddress("glMultiTexCoordP1ui");
-// 	if(ptrgoglMultiTexCoordP1ui == NULL) return 1;
-// 	ptrgoglMultiTexCoordP1uiv = goglGetProcAddress("glMultiTexCoordP1uiv");
-// 	if(ptrgoglMultiTexCoordP1uiv == NULL) return 1;
-// 	ptrgoglMultiTexCoordP2ui = goglGetProcAddress("glMultiTexCoordP2ui");
-// 	if(ptrgoglMultiTexCoordP2ui == NULL) return 1;
-// 	ptrgoglMultiTexCoordP2uiv = goglGetProcAddress("glMultiTexCoordP2uiv");
-// 	if(ptrgoglMultiTexCoordP2uiv == NULL) return 1;
-// 	ptrgoglMultiTexCoordP3ui = goglGetProcAddress("glMultiTexCoordP3ui");
-// 	if(ptrgoglMultiTexCoordP3ui == NULL) return 1;
-// 	ptrgoglMultiTexCoordP3uiv = goglGetProcAddress("glMultiTexCoordP3uiv");
-// 	if(ptrgoglMultiTexCoordP3uiv == NULL) return 1;
-// 	ptrgoglMultiTexCoordP4ui = goglGetProcAddress("glMultiTexCoordP4ui");
-// 	if(ptrgoglMultiTexCoordP4ui == NULL) return 1;
-// 	ptrgoglMultiTexCoordP4uiv = goglGetProcAddress("glMultiTexCoordP4uiv");
-// 	if(ptrgoglMultiTexCoordP4uiv == NULL) return 1;
-// 	ptrgoglNormalP3ui = goglGetProcAddress("glNormalP3ui");
-// 	if(ptrgoglNormalP3ui == NULL) return 1;
-// 	ptrgoglNormalP3uiv = goglGetProcAddress("glNormalP3uiv");
-// 	if(ptrgoglNormalP3uiv == NULL) return 1;
-// 	ptrgoglColorP3ui = goglGetProcAddress("glColorP3ui");
-// 	if(ptrgoglColorP3ui == NULL) return 1;
-// 	ptrgoglColorP3uiv = goglGetProcAddress("glColorP3uiv");
-// 	if(ptrgoglColorP3uiv == NULL) return 1;
-// 	ptrgoglColorP4ui = goglGetProcAddress("glColorP4ui");
-// 	if(ptrgoglColorP4ui == NULL) return 1;
-// 	ptrgoglColorP4uiv = goglGetProcAddress("glColorP4uiv");
-// 	if(ptrgoglColorP4uiv == NULL) return 1;
-// 	ptrgoglSecondaryColorP3ui = goglGetProcAddress("glSecondaryColorP3ui");
-// 	if(ptrgoglSecondaryColorP3ui == NULL) return 1;
-// 	ptrgoglSecondaryColorP3uiv = goglGetProcAddress("glSecondaryColorP3uiv");
-// 	if(ptrgoglSecondaryColorP3uiv == NULL) return 1;
-// 	ptrgoglVertexAttribP1ui = goglGetProcAddress("glVertexAttribP1ui");
-// 	if(ptrgoglVertexAttribP1ui == NULL) return 1;
-// 	ptrgoglVertexAttribP1uiv = goglGetProcAddress("glVertexAttribP1uiv");
-// 	if(ptrgoglVertexAttribP1uiv == NULL) return 1;
-// 	ptrgoglVertexAttribP2ui = goglGetProcAddress("glVertexAttribP2ui");
-// 	if(ptrgoglVertexAttribP2ui == NULL) return 1;
-// 	ptrgoglVertexAttribP2uiv = goglGetProcAddress("glVertexAttribP2uiv");
-// 	if(ptrgoglVertexAttribP2uiv == NULL) return 1;
-// 	ptrgoglVertexAttribP3ui = goglGetProcAddress("glVertexAttribP3ui");
-// 	if(ptrgoglVertexAttribP3ui == NULL) return 1;
-// 	ptrgoglVertexAttribP3uiv = goglGetProcAddress("glVertexAttribP3uiv");
-// 	if(ptrgoglVertexAttribP3uiv == NULL) return 1;
-// 	ptrgoglVertexAttribP4ui = goglGetProcAddress("glVertexAttribP4ui");
-// 	if(ptrgoglVertexAttribP4ui == NULL) return 1;
-// 	ptrgoglVertexAttribP4uiv = goglGetProcAddress("glVertexAttribP4uiv");
-// 	if(ptrgoglVertexAttribP4uiv == NULL) return 1;
-// 	return 0;
-// }
-// int init_VERSION_3_0() {
-// 	ptrgoglColorMaski = goglGetProcAddress("glColorMaski");
-// 	if(ptrgoglColorMaski == NULL) return 1;
-// 	ptrgoglGetBooleani_v = goglGetProcAddress("glGetBooleani_v");
-// 	if(ptrgoglGetBooleani_v == NULL) return 1;
-// 	ptrgoglGetIntegeri_v = goglGetProcAddress("glGetIntegeri_v");
-// 	if(ptrgoglGetIntegeri_v == NULL) return 1;
-// 	ptrgoglEnablei = goglGetProcAddress("glEnablei");
-// 	if(ptrgoglEnablei == NULL) return 1;
-// 	ptrgoglDisablei = goglGetProcAddress("glDisablei");
-// 	if(ptrgoglDisablei == NULL) return 1;
-// 	ptrgoglIsEnabledi = goglGetProcAddress("glIsEnabledi");
-// 	if(ptrgoglIsEnabledi == NULL) return 1;
-// 	ptrgoglBeginTransformFeedback = goglGetProcAddress("glBeginTransformFeedback");
-// 	if(ptrgoglBeginTransformFeedback == NULL) return 1;
-// 	ptrgoglEndTransformFeedback = goglGetProcAddress("glEndTransformFeedback");
-// 	if(ptrgoglEndTransformFeedback == NULL) return 1;
-// 	ptrgoglBindBufferRange = goglGetProcAddress("glBindBufferRange");
-// 	if(ptrgoglBindBufferRange == NULL) return 1;
-// 	ptrgoglBindBufferBase = goglGetProcAddress("glBindBufferBase");
-// 	if(ptrgoglBindBufferBase == NULL) return 1;
-// 	ptrgoglTransformFeedbackVaryings = goglGetProcAddress("glTransformFeedbackVaryings");
-// 	if(ptrgoglTransformFeedbackVaryings == NULL) return 1;
-// 	ptrgoglGetTransformFeedbackVarying = goglGetProcAddress("glGetTransformFeedbackVarying");
-// 	if(ptrgoglGetTransformFeedbackVarying == NULL) return 1;
-// 	ptrgoglClampColor = goglGetProcAddress("glClampColor");
-// 	if(ptrgoglClampColor == NULL) return 1;
-// 	ptrgoglBeginConditionalRender = goglGetProcAddress("glBeginConditionalRender");
-// 	if(ptrgoglBeginConditionalRender == NULL) return 1;
-// 	ptrgoglEndConditionalRender = goglGetProcAddress("glEndConditionalRender");
-// 	if(ptrgoglEndConditionalRender == NULL) return 1;
-// 	ptrgoglVertexAttribIPointer = goglGetProcAddress("glVertexAttribIPointer");
-// 	if(ptrgoglVertexAttribIPointer == NULL) return 1;
-// 	ptrgoglGetVertexAttribIiv = goglGetProcAddress("glGetVertexAttribIiv");
-// 	if(ptrgoglGetVertexAttribIiv == NULL) return 1;
-// 	ptrgoglGetVertexAttribIuiv = goglGetProcAddress("glGetVertexAttribIuiv");
-// 	if(ptrgoglGetVertexAttribIuiv == NULL) return 1;
-// 	ptrgoglVertexAttribI1i = goglGetProcAddress("glVertexAttribI1i");
-// 	if(ptrgoglVertexAttribI1i == NULL) return 1;
-// 	ptrgoglVertexAttribI2i = goglGetProcAddress("glVertexAttribI2i");
-// 	if(ptrgoglVertexAttribI2i == NULL) return 1;
-// 	ptrgoglVertexAttribI3i = goglGetProcAddress("glVertexAttribI3i");
-// 	if(ptrgoglVertexAttribI3i == NULL) return 1;
-// 	ptrgoglVertexAttribI4i = goglGetProcAddress("glVertexAttribI4i");
-// 	if(ptrgoglVertexAttribI4i == NULL) return 1;
-// 	ptrgoglVertexAttribI1ui = goglGetProcAddress("glVertexAttribI1ui");
-// 	if(ptrgoglVertexAttribI1ui == NULL) return 1;
-// 	ptrgoglVertexAttribI2ui = goglGetProcAddress("glVertexAttribI2ui");
-// 	if(ptrgoglVertexAttribI2ui == NULL) return 1;
-// 	ptrgoglVertexAttribI3ui = goglGetProcAddress("glVertexAttribI3ui");
-// 	if(ptrgoglVertexAttribI3ui == NULL) return 1;
-// 	ptrgoglVertexAttribI4ui = goglGetProcAddress("glVertexAttribI4ui");
-// 	if(ptrgoglVertexAttribI4ui == NULL) return 1;
-// 	ptrgoglVertexAttribI1iv = goglGetProcAddress("glVertexAttribI1iv");
-// 	if(ptrgoglVertexAttribI1iv == NULL) return 1;
-// 	ptrgoglVertexAttribI2iv = goglGetProcAddress("glVertexAttribI2iv");
-// 	if(ptrgoglVertexAttribI2iv == NULL) return 1;
-// 	ptrgoglVertexAttribI3iv = goglGetProcAddress("glVertexAttribI3iv");
-// 	if(ptrgoglVertexAttribI3iv == NULL) return 1;
-// 	ptrgoglVertexAttribI4iv = goglGetProcAddress("glVertexAttribI4iv");
-// 	if(ptrgoglVertexAttribI4iv == NULL) return 1;
-// 	ptrgoglVertexAttribI1uiv = goglGetProcAddress("glVertexAttribI1uiv");
-// 	if(ptrgoglVertexAttribI1uiv == NULL) return 1;
-// 	ptrgoglVertexAttribI2uiv = goglGetProcAddress("glVertexAttribI2uiv");
-// 	if(ptrgoglVertexAttribI2uiv == NULL) return 1;
-// 	ptrgoglVertexAttribI3uiv = goglGetProcAddress("glVertexAttribI3uiv");
-// 	if(ptrgoglVertexAttribI3uiv == NULL) return 1;
-// 	ptrgoglVertexAttribI4uiv = goglGetProcAddress("glVertexAttribI4uiv");
-// 	if(ptrgoglVertexAttribI4uiv == NULL) return 1;
-// 	ptrgoglVertexAttribI4bv = goglGetProcAddress("glVertexAttribI4bv");
-// 	if(ptrgoglVertexAttribI4bv == NULL) return 1;
-// 	ptrgoglVertexAttribI4sv = goglGetProcAddress("glVertexAttribI4sv");
-// 	if(ptrgoglVertexAttribI4sv == NULL) return 1;
-// 	ptrgoglVertexAttribI4ubv = goglGetProcAddress("glVertexAttribI4ubv");
-// 	if(ptrgoglVertexAttribI4ubv == NULL) return 1;
-// 	ptrgoglVertexAttribI4usv = goglGetProcAddress("glVertexAttribI4usv");
-// 	if(ptrgoglVertexAttribI4usv == NULL) return 1;
-// 	ptrgoglGetUniformuiv = goglGetProcAddress("glGetUniformuiv");
-// 	if(ptrgoglGetUniformuiv == NULL) return 1;
-// 	ptrgoglBindFragDataLocation = goglGetProcAddress("glBindFragDataLocation");
-// 	if(ptrgoglBindFragDataLocation == NULL) return 1;
-// 	ptrgoglGetFragDataLocation = goglGetProcAddress("glGetFragDataLocation");
-// 	if(ptrgoglGetFragDataLocation == NULL) return 1;
-// 	ptrgoglUniform1ui = goglGetProcAddress("glUniform1ui");
-// 	if(ptrgoglUniform1ui == NULL) return 1;
-// 	ptrgoglUniform2ui = goglGetProcAddress("glUniform2ui");
-// 	if(ptrgoglUniform2ui == NULL) return 1;
-// 	ptrgoglUniform3ui = goglGetProcAddress("glUniform3ui");
-// 	if(ptrgoglUniform3ui == NULL) return 1;
-// 	ptrgoglUniform4ui = goglGetProcAddress("glUniform4ui");
-// 	if(ptrgoglUniform4ui == NULL) return 1;
-// 	ptrgoglUniform1uiv = goglGetProcAddress("glUniform1uiv");
-// 	if(ptrgoglUniform1uiv == NULL) return 1;
-// 	ptrgoglUniform2uiv = goglGetProcAddress("glUniform2uiv");
-// 	if(ptrgoglUniform2uiv == NULL) return 1;
-// 	ptrgoglUniform3uiv = goglGetProcAddress("glUniform3uiv");
-// 	if(ptrgoglUniform3uiv == NULL) return 1;
-// 	ptrgoglUniform4uiv = goglGetProcAddress("glUniform4uiv");
-// 	if(ptrgoglUniform4uiv == NULL) return 1;
-// 	ptrgoglTexParameterIiv = goglGetProcAddress("glTexParameterIiv");
-// 	if(ptrgoglTexParameterIiv == NULL) return 1;
-// 	ptrgoglTexParameterIuiv = goglGetProcAddress("glTexParameterIuiv");
-// 	if(ptrgoglTexParameterIuiv == NULL) return 1;
-// 	ptrgoglGetTexParameterIiv = goglGetProcAddress("glGetTexParameterIiv");
-// 	if(ptrgoglGetTexParameterIiv == NULL) return 1;
-// 	ptrgoglGetTexParameterIuiv = goglGetProcAddress("glGetTexParameterIuiv");
-// 	if(ptrgoglGetTexParameterIuiv == NULL) return 1;
-// 	ptrgoglClearBufferiv = goglGetProcAddress("glClearBufferiv");
-// 	if(ptrgoglClearBufferiv == NULL) return 1;
-// 	ptrgoglClearBufferuiv = goglGetProcAddress("glClearBufferuiv");
-// 	if(ptrgoglClearBufferuiv == NULL) return 1;
-// 	ptrgoglClearBufferfv = goglGetProcAddress("glClearBufferfv");
-// 	if(ptrgoglClearBufferfv == NULL) return 1;
-// 	ptrgoglClearBufferfi = goglGetProcAddress("glClearBufferfi");
-// 	if(ptrgoglClearBufferfi == NULL) return 1;
-// 	ptrgoglGetStringi = goglGetProcAddress("glGetStringi");
-// 	if(ptrgoglGetStringi == NULL) return 1;
-// 	ptrgoglIsRenderbuffer = goglGetProcAddress("glIsRenderbuffer");
-// 	if(ptrgoglIsRenderbuffer == NULL) return 1;
-// 	ptrgoglBindRenderbuffer = goglGetProcAddress("glBindRenderbuffer");
-// 	if(ptrgoglBindRenderbuffer == NULL) return 1;
-// 	ptrgoglDeleteRenderbuffers = goglGetProcAddress("glDeleteRenderbuffers");
-// 	if(ptrgoglDeleteRenderbuffers == NULL) return 1;
-// 	ptrgoglGenRenderbuffers = goglGetProcAddress("glGenRenderbuffers");
-// 	if(ptrgoglGenRenderbuffers == NULL) return 1;
-// 	ptrgoglRenderbufferStorage = goglGetProcAddress("glRenderbufferStorage");
-// 	if(ptrgoglRenderbufferStorage == NULL) return 1;
-// 	ptrgoglGetRenderbufferParameteriv = goglGetProcAddress("glGetRenderbufferParameteriv");
-// 	if(ptrgoglGetRenderbufferParameteriv == NULL) return 1;
-// 	ptrgoglIsFramebuffer = goglGetProcAddress("glIsFramebuffer");
-// 	if(ptrgoglIsFramebuffer == NULL) return 1;
-// 	ptrgoglBindFramebuffer = goglGetProcAddress("glBindFramebuffer");
-// 	if(ptrgoglBindFramebuffer == NULL) return 1;
-// 	ptrgoglDeleteFramebuffers = goglGetProcAddress("glDeleteFramebuffers");
-// 	if(ptrgoglDeleteFramebuffers == NULL) return 1;
-// 	ptrgoglGenFramebuffers = goglGetProcAddress("glGenFramebuffers");
-// 	if(ptrgoglGenFramebuffers == NULL) return 1;
-// 	ptrgoglCheckFramebufferStatus = goglGetProcAddress("glCheckFramebufferStatus");
-// 	if(ptrgoglCheckFramebufferStatus == NULL) return 1;
-// 	ptrgoglFramebufferTexture1D = goglGetProcAddress("glFramebufferTexture1D");
-// 	if(ptrgoglFramebufferTexture1D == NULL) return 1;
-// 	ptrgoglFramebufferTexture2D = goglGetProcAddress("glFramebufferTexture2D");
-// 	if(ptrgoglFramebufferTexture2D == NULL) return 1;
-// 	ptrgoglFramebufferTexture3D = goglGetProcAddress("glFramebufferTexture3D");
-// 	if(ptrgoglFramebufferTexture3D == NULL) return 1;
-// 	ptrgoglFramebufferRenderbuffer = goglGetProcAddress("glFramebufferRenderbuffer");
-// 	if(ptrgoglFramebufferRenderbuffer == NULL) return 1;
-// 	ptrgoglGetFramebufferAttachmentParameteriv = goglGetProcAddress("glGetFramebufferAttachmentParameteriv");
-// 	if(ptrgoglGetFramebufferAttachmentParameteriv == NULL) return 1;
-// 	ptrgoglGenerateMipmap = goglGetProcAddress("glGenerateMipmap");
-// 	if(ptrgoglGenerateMipmap == NULL) return 1;
-// 	ptrgoglBlitFramebuffer = goglGetProcAddress("glBlitFramebuffer");
-// 	if(ptrgoglBlitFramebuffer == NULL) return 1;
-// 	ptrgoglRenderbufferStorageMultisample = goglGetProcAddress("glRenderbufferStorageMultisample");
-// 	if(ptrgoglRenderbufferStorageMultisample == NULL) return 1;
-// 	ptrgoglFramebufferTextureLayer = goglGetProcAddress("glFramebufferTextureLayer");
-// 	if(ptrgoglFramebufferTextureLayer == NULL) return 1;
-// 	ptrgoglMapBufferRange = goglGetProcAddress("glMapBufferRange");
-// 	if(ptrgoglMapBufferRange == NULL) return 1;
-// 	ptrgoglFlushMappedBufferRange = goglGetProcAddress("glFlushMappedBufferRange");
-// 	if(ptrgoglFlushMappedBufferRange == NULL) return 1;
-// 	ptrgoglBindVertexArray = goglGetProcAddress("glBindVertexArray");
-// 	if(ptrgoglBindVertexArray == NULL) return 1;
-// 	ptrgoglDeleteVertexArrays = goglGetProcAddress("glDeleteVertexArrays");
-// 	if(ptrgoglDeleteVertexArrays == NULL) return 1;
-// 	ptrgoglGenVertexArrays = goglGetProcAddress("glGenVertexArrays");
-// 	if(ptrgoglGenVertexArrays == NULL) return 1;
-// 	ptrgoglIsVertexArray = goglGetProcAddress("glIsVertexArray");
-// 	if(ptrgoglIsVertexArray == NULL) return 1;
-// 	return 0;
-// }
-// int init_VERSION_3_1() {
-// 	ptrgoglDrawArraysInstanced = goglGetProcAddress("glDrawArraysInstanced");
-// 	if(ptrgoglDrawArraysInstanced == NULL) return 1;
-// 	ptrgoglDrawElementsInstanced = goglGetProcAddress("glDrawElementsInstanced");
-// 	if(ptrgoglDrawElementsInstanced == NULL) return 1;
-// 	ptrgoglTexBuffer = goglGetProcAddress("glTexBuffer");
-// 	if(ptrgoglTexBuffer == NULL) return 1;
-// 	ptrgoglPrimitiveRestartIndex = goglGetProcAddress("glPrimitiveRestartIndex");
-// 	if(ptrgoglPrimitiveRestartIndex == NULL) return 1;
-// 	ptrgoglCopyBufferSubData = goglGetProcAddress("glCopyBufferSubData");
-// 	if(ptrgoglCopyBufferSubData == NULL) return 1;
-// 	ptrgoglGetUniformIndices = goglGetProcAddress("glGetUniformIndices");
-// 	if(ptrgoglGetUniformIndices == NULL) return 1;
-// 	ptrgoglGetActiveUniformsiv = goglGetProcAddress("glGetActiveUniformsiv");
-// 	if(ptrgoglGetActiveUniformsiv == NULL) return 1;
-// 	ptrgoglGetActiveUniformName = goglGetProcAddress("glGetActiveUniformName");
-// 	if(ptrgoglGetActiveUniformName == NULL) return 1;
-// 	ptrgoglGetUniformBlockIndex = goglGetProcAddress("glGetUniformBlockIndex");
-// 	if(ptrgoglGetUniformBlockIndex == NULL) return 1;
-// 	ptrgoglGetActiveUniformBlockiv = goglGetProcAddress("glGetActiveUniformBlockiv");
-// 	if(ptrgoglGetActiveUniformBlockiv == NULL) return 1;
-// 	ptrgoglGetActiveUniformBlockName = goglGetProcAddress("glGetActiveUniformBlockName");
-// 	if(ptrgoglGetActiveUniformBlockName == NULL) return 1;
-// 	ptrgoglUniformBlockBinding = goglGetProcAddress("glUniformBlockBinding");
-// 	if(ptrgoglUniformBlockBinding == NULL) return 1;
-// 	return 0;
-// }
 // 
 import "C"
 import "unsafe"
@@ -2516,468 +2516,17 @@ type (
 	Clampd   C.GLclampd
 	Char     C.GLchar
 	Pointer  unsafe.Pointer
+	Sync     C.GLsync
 	Int64    C.GLint64
 	Uint64   C.GLuint64
 	Intptr   C.GLintptr
 	Sizeiptr C.GLsizeiptr
 )
 
-// VERSION_2_1
-const (
-	FLOAT_MAT2x4 = 0x8B66
-	FLOAT_MAT2x3 = 0x8B65
-	PIXEL_UNPACK_BUFFER = 0x88EC
-	PIXEL_PACK_BUFFER = 0x88EB
-	SRGB8_ALPHA8 = 0x8C43
-	PIXEL_PACK_BUFFER_BINDING = 0x88ED
-	SRGB8 = 0x8C41
-	PIXEL_UNPACK_BUFFER_BINDING = 0x88EF
-	COMPRESSED_SRGB_ALPHA = 0x8C49
-	FLOAT_MAT4x2 = 0x8B69
-	FLOAT_MAT4x3 = 0x8B6A
-	FLOAT_MAT3x4 = 0x8B68
-	FLOAT_MAT3x2 = 0x8B67
-	COMPRESSED_SRGB = 0x8C48
-	SRGB = 0x8C40
-	SRGB_ALPHA = 0x8C42
-)
-// VERSION_2_0
-const (
-	MAX_VERTEX_UNIFORM_COMPONENTS = 0x8B4A
-	MAX_TEXTURE_IMAGE_UNITS = 0x8872
-	STENCIL_BACK_FAIL = 0x8801
-	VERTEX_ATTRIB_ARRAY_POINTER = 0x8645
-	MAX_VARYING_FLOATS = 0x8B4B
-	CURRENT_VERTEX_ATTRIB = 0x8626
-	SAMPLER_1D_SHADOW = 0x8B61
-	DRAW_BUFFER15 = 0x8834
-	DRAW_BUFFER14 = 0x8833
-	DRAW_BUFFER11 = 0x8830
-	DRAW_BUFFER10 = 0x882F
-	DRAW_BUFFER13 = 0x8832
-	DRAW_BUFFER12 = 0x8831
-	LINK_STATUS = 0x8B82
-	CURRENT_PROGRAM = 0x8B8D
-	LOWER_LEFT = 0x8CA1
-	MAX_VERTEX_TEXTURE_IMAGE_UNITS = 0x8B4C
-	VALIDATE_STATUS = 0x8B83
-	STENCIL_BACK_WRITEMASK = 0x8CA5
-	FLOAT_MAT4 = 0x8B5C
-	COMPILE_STATUS = 0x8B81
-	FLOAT_MAT2 = 0x8B5A
-	SAMPLER_3D = 0x8B5F
-	FLOAT_MAT3 = 0x8B5B
-	SHADER_TYPE = 0x8B4F
-	MAX_VERTEX_ATTRIBS = 0x8869
-	SAMPLER_1D = 0x8B5D
-	SAMPLER_2D_SHADOW = 0x8B62
-	SAMPLER_CUBE = 0x8B60
-	STENCIL_BACK_PASS_DEPTH_FAIL = 0x8802
-	BOOL_VEC2 = 0x8B57
-	BOOL_VEC3 = 0x8B58
-	BOOL_VEC4 = 0x8B59
-	FRAGMENT_SHADER = 0x8B30
-	STENCIL_BACK_FUNC = 0x8800
-	FRAGMENT_SHADER_DERIVATIVE_HINT = 0x8B8B
-	BOOL = 0x8B56
-	VERTEX_PROGRAM_POINT_SIZE = 0x8642
-	UPPER_LEFT = 0x8CA2
-	VERTEX_ATTRIB_ARRAY_STRIDE = 0x8624
-	SHADER_SOURCE_LENGTH = 0x8B88
-	ACTIVE_UNIFORM_MAX_LENGTH = 0x8B87
-	SAMPLER_2D = 0x8B5E
-	POINT_SPRITE_COORD_ORIGIN = 0x8CA0
-	ACTIVE_ATTRIBUTES = 0x8B89
-	DRAW_BUFFER2 = 0x8827
-	DRAW_BUFFER3 = 0x8828
-	DRAW_BUFFER0 = 0x8825
-	DRAW_BUFFER1 = 0x8826
-	DRAW_BUFFER6 = 0x882B
-	DRAW_BUFFER7 = 0x882C
-	DRAW_BUFFER4 = 0x8829
-	DRAW_BUFFER5 = 0x882A
-	DRAW_BUFFER8 = 0x882D
-	DRAW_BUFFER9 = 0x882E
-	BLEND_EQUATION_ALPHA = 0x883D
-	BLEND_EQUATION_RGB = 0x8009
-	STENCIL_BACK_VALUE_MASK = 0x8CA4
-	VERTEX_ATTRIB_ARRAY_SIZE = 0x8623
-	STENCIL_BACK_PASS_DEPTH_PASS = 0x8803
-	VERTEX_SHADER = 0x8B31
-	VERTEX_ATTRIB_ARRAY_TYPE = 0x8625
-	INT_VEC4 = 0x8B55
-	INT_VEC3 = 0x8B54
-	INT_VEC2 = 0x8B53
-	MAX_FRAGMENT_UNIFORM_COMPONENTS = 0x8B49
-	MAX_DRAW_BUFFERS = 0x8824
-	VERTEX_ATTRIB_ARRAY_NORMALIZED = 0x886A
-	INFO_LOG_LENGTH = 0x8B84
-	DELETE_STATUS = 0x8B80
-	FLOAT_VEC4 = 0x8B52
-	FLOAT_VEC2 = 0x8B50
-	FLOAT_VEC3 = 0x8B51
-	STENCIL_BACK_REF = 0x8CA3
-	ACTIVE_ATTRIBUTE_MAX_LENGTH = 0x8B8A
-	SHADING_LANGUAGE_VERSION = 0x8B8C
-	MAX_COMBINED_TEXTURE_IMAGE_UNITS = 0x8B4D
-	ACTIVE_UNIFORMS = 0x8B86
-	ATTACHED_SHADERS = 0x8B85
-	VERTEX_ATTRIB_ARRAY_ENABLED = 0x8622
-)
-// VERSION_1_4
-const (
-	DEPTH_COMPONENT16 = 0x81A5
-	MIRRORED_REPEAT = 0x8370
-	BLEND_DST_RGB = 0x80C8
-	DEPTH_COMPONENT32 = 0x81A7
-	DEPTH_COMPONENT24 = 0x81A6
-	TEXTURE_COMPARE_FUNC = 0x884D
-	DECR_WRAP = 0x8508
-	BLEND_SRC_RGB = 0x80C9
-	TEXTURE_COMPARE_MODE = 0x884C
-	MAX_TEXTURE_LOD_BIAS = 0x84FD
-	TEXTURE_DEPTH_SIZE = 0x884A
-	BLEND_DST_ALPHA = 0x80CA
-	POINT_FADE_THRESHOLD_SIZE = 0x8128
-	INCR_WRAP = 0x8507
-	TEXTURE_LOD_BIAS = 0x8501
-	BLEND_SRC_ALPHA = 0x80CB
-)
-// VERSION_1_5
-const (
-	BUFFER_MAPPED = 0x88BC
-	STREAM_READ = 0x88E1
-	BUFFER_USAGE = 0x8765
-	STATIC_READ = 0x88E5
-	ARRAY_BUFFER_BINDING = 0x8894
-	STATIC_COPY = 0x88E6
-	BUFFER_ACCESS = 0x88BB
-	READ_ONLY = 0x88B8
-	CURRENT_QUERY = 0x8865
-	DYNAMIC_DRAW = 0x88E8
-	READ_WRITE = 0x88BA
-	STATIC_DRAW = 0x88E4
-	ARRAY_BUFFER = 0x8892
-	ELEMENT_ARRAY_BUFFER_BINDING = 0x8895
-	BUFFER_SIZE = 0x8764
-	STREAM_COPY = 0x88E2
-	DYNAMIC_READ = 0x88E9
-	BUFFER_MAP_POINTER = 0x88BD
-	DYNAMIC_COPY = 0x88EA
-	QUERY_COUNTER_BITS = 0x8864
-	ELEMENT_ARRAY_BUFFER = 0x8893
-	QUERY_RESULT_AVAILABLE = 0x8867
-	STREAM_DRAW = 0x88E0
-	SAMPLES_PASSED = 0x8914
-	WRITE_ONLY = 0x88B9
-	QUERY_RESULT = 0x8866
-	VERTEX_ATTRIB_ARRAY_BUFFER_BINDING = 0x889F
-)
-// VERSION_1_1
-const (
-	DEPTH_CLEAR_VALUE = 0x0B73
-	RENDERER = 0x1F01
-	ALWAYS = 0x0207
-	SRC_ALPHA_SATURATE = 0x0308
-	FALSE = 0
-	EQUAL = 0x0202
-	STEREO = 0x0C33
-	LINE_SMOOTH_HINT = 0x0C52
-	BLEND = 0x0BE2
-	DEPTH_WRITEMASK = 0x0B72
-	TEXTURE_HEIGHT = 0x1001
-	STENCIL_TEST = 0x0B90
-	LINEAR_MIPMAP_LINEAR = 0x2703
-	DST_COLOR = 0x0306
-	NEAREST_MIPMAP_NEAREST = 0x2700
-	SRC_COLOR = 0x0300
-	XOR = 0x1506
-	STENCIL_WRITEMASK = 0x0B98
-	POLYGON_OFFSET_POINT = 0x2A01
-	OR = 0x1507
-	DST_ALPHA = 0x0304
-	CULL_FACE = 0x0B44
-	LINE_WIDTH_RANGE = 0x0B22
-	FLOAT = 0x1406
-	NOTEQUAL = 0x0205
-	DEPTH_COMPONENT = 0x1902
-	ZERO = 0
-	COPY = 0x1503
-	TEXTURE = 0x1702
-	RGBA = 0x1908
-	PACK_SKIP_ROWS = 0x0D03
-	LINE_LOOP = 0x0002
-	RGB = 0x1907
-	SUBPIXEL_BITS = 0x0D50
-	NO_ERROR = 0
-	BLEND_SRC = 0x0BE1
-	LINE_WIDTH = 0x0B21
-	STENCIL_PASS_DEPTH_FAIL = 0x0B95
-	LESS = 0x0201
-	TEXTURE_WRAP_T = 0x2803
-	PACK_ALIGNMENT = 0x0D05
-	TEXTURE_WRAP_S = 0x2802
-	UNPACK_ROW_LENGTH = 0x0CF2
-	LINE_SMOOTH = 0x0B20
-	POLYGON_SMOOTH_HINT = 0x0C53
-	LINE_STRIP = 0x0003
-	STENCIL_FAIL = 0x0B94
-	R3_G3_B2 = 0x2A10
-	REPLACE = 0x1E01
-	ONE_MINUS_SRC_ALPHA = 0x0303
-	COLOR_CLEAR_VALUE = 0x0C22
-	RED = 0x1903
-	LINE = 0x1B01
-	RGB8 = 0x8051
-	STENCIL_REF = 0x0B97
-	UNPACK_SKIP_ROWS = 0x0CF3
-	RGB4 = 0x804F
-	VENDOR = 0x1F00
-	RGB5 = 0x8050
-	DITHER = 0x0BD0
-	STENCIL_CLEAR_VALUE = 0x0B91
-	INVALID_OPERATION = 0x0502
-	EQUIV = 0x1509
-	AND_INVERTED = 0x1504
-	BACK_RIGHT = 0x0403
-	RGB12 = 0x8053
-	POINT_SIZE = 0x0B11
-	RGB10 = 0x8052
-	STENCIL_PASS_DEPTH_PASS = 0x0B96
-	RGB16 = 0x8054
-	ONE = 1
-	STENCIL_BUFFER_BIT = 0x00000400
-	STENCIL = 0x1802
-	FRONT_RIGHT = 0x0401
-	READ_BUFFER = 0x0C02
-	BACK = 0x0405
-	DEPTH_BUFFER_BIT = 0x00000100
-	UNSIGNED_SHORT = 0x1403
-	POLYGON_OFFSET_FILL = 0x8037
-	UNPACK_LSB_FIRST = 0x0CF1
-	ALPHA = 0x1906
-	INVALID_VALUE = 0x0501
-	SET = 0x150F
-	RIGHT = 0x0407
-	LINE_WIDTH_GRANULARITY = 0x0B23
-	NEAREST_MIPMAP_LINEAR = 0x2702
-	POINTS = 0x0000
-	FILL = 0x1B02
-	AND_REVERSE = 0x1502
-	CLEAR = 0x1500
-	DEPTH_FUNC = 0x0B74
-	TEXTURE_WIDTH = 0x1000
-	CCW = 0x0901
-	GEQUAL = 0x0206
-	OR_REVERSE = 0x150B
-	BLUE = 0x1905
-	RGB5_A1 = 0x8057
-	EXTENSIONS = 0x1F03
-	DRAW_BUFFER = 0x0C01
-	DONT_CARE = 0x1100
-	LEFT = 0x0406
-	PROXY_TEXTURE_1D = 0x8063
-	DOUBLE = 0x140A
-	TRIANGLE_FAN = 0x0006
-	POLYGON_OFFSET_LINE = 0x2A02
-	NONE = 0
-	TEXTURE_GREEN_SIZE = 0x805D
-	CW = 0x0900
-	POINT_SIZE_RANGE = 0x0B12
-	BLEND_DST = 0x0BE0
-	FRONT_FACE = 0x0B46
-	DOUBLEBUFFER = 0x0C32
-	BACK_LEFT = 0x0402
-	VERSION = 0x1F02
-	INCR = 0x1E02
-	ONE_MINUS_DST_COLOR = 0x0307
-	COLOR_BUFFER_BIT = 0x00004000
-	INVERT = 0x150A
-	ONE_MINUS_SRC_COLOR = 0x0301
-	POINT = 0x1B00
-	LEQUAL = 0x0203
-	PACK_LSB_FIRST = 0x0D01
-	GREATER = 0x0204
-	TEXTURE_BINDING_1D = 0x8068
-	UNSIGNED_BYTE = 0x1401
-	NEAREST = 0x2600
-	TEXTURE_MAG_FILTER = 0x2800
-	KEEP = 0x1E00
-	POLYGON_OFFSET_FACTOR = 0x8038
-	PROXY_TEXTURE_2D = 0x8064
-	PACK_SWAP_BYTES = 0x0D00
-	RGBA2 = 0x8055
-	ONE_MINUS_DST_ALPHA = 0x0305
-	CULL_FACE_MODE = 0x0B45
-	RGBA4 = 0x8056
-	UNSIGNED_INT = 0x1405
-	NOOP = 0x1505
-	RGBA8 = 0x8058
-	TEXTURE_BORDER_COLOR = 0x1004
-	AND = 0x1501
-	RGBA16 = 0x805B
-	RGBA12 = 0x805A
-	COLOR_LOGIC_OP = 0x0BF2
-	GREEN = 0x1904
-	INVALID_ENUM = 0x0500
-	TEXTURE_RED_SIZE = 0x805C
-	COPY_INVERTED = 0x150C
-	UNPACK_ALIGNMENT = 0x0CF5
-	LINES = 0x0001
-	SHORT = 0x1402
-	SRC_ALPHA = 0x0302
-	LINEAR_MIPMAP_NEAREST = 0x2701
-	RGB10_A2 = 0x8059
-	SCISSOR_TEST = 0x0C11
-	LINEAR = 0x2601
-	TEXTURE_ALPHA_SIZE = 0x805F
-	TRIANGLE_STRIP = 0x0005
-	DECR = 0x1E03
-	REPEAT = 0x2901
-	DEPTH = 0x1801
-	STENCIL_FUNC = 0x0B92
-	OUT_OF_MEMORY = 0x0505
-	POINT_SIZE_GRANULARITY = 0x0B13
-	INT = 0x1404
-	BYTE = 0x1400
-	OR_INVERTED = 0x150D
-	TRIANGLES = 0x0004
-	TEXTURE_MIN_FILTER = 0x2801
-	FRONT_AND_BACK = 0x0408
-	DEPTH_TEST = 0x0B71
-	FRONT = 0x0404
-	LOGIC_OP_MODE = 0x0BF0
-	UNPACK_SWAP_BYTES = 0x0CF0
-	TEXTURE_1D = 0x0DE0
-	UNPACK_SKIP_PIXELS = 0x0CF4
-	DEPTH_RANGE = 0x0B70
-	TEXTURE_BINDING_2D = 0x8069
-	COLOR_WRITEMASK = 0x0C23
-	PACK_ROW_LENGTH = 0x0D02
-	NOR = 0x1508
-	TRUE = 1
-	VIEWPORT = 0x0BA2
-	TEXTURE_INTERNAL_FORMAT = 0x1003
-	NAND = 0x150E
-	COLOR = 0x1800
-	STENCIL_VALUE_MASK = 0x0B93
-	NEVER = 0x0200
-	MAX_VIEWPORT_DIMS = 0x0D3A
-	TEXTURE_2D = 0x0DE1
-	MAX_TEXTURE_SIZE = 0x0D33
-	POLYGON_OFFSET_UNITS = 0x2A00
-	NICEST = 0x1102
-	TEXTURE_BLUE_SIZE = 0x805E
-	SCISSOR_BOX = 0x0C10
-	FRONT_LEFT = 0x0400
-	PACK_SKIP_PIXELS = 0x0D04
-	STENCIL_INDEX = 0x1901
-	FASTEST = 0x1101
-	POLYGON_SMOOTH = 0x0B41
-)
-// VERSION_1_2
-const (
-	TEXTURE_3D = 0x806F
-	PACK_SKIP_IMAGES = 0x806B
-	TEXTURE_MAX_LEVEL = 0x813D
-	UNSIGNED_BYTE_3_3_2 = 0x8032
-	ALIASED_LINE_WIDTH_RANGE = 0x846E
-	UNSIGNED_INT_2_10_10_10_REV = 0x8368
-	UNPACK_IMAGE_HEIGHT = 0x806E
-	UNSIGNED_SHORT_5_6_5_REV = 0x8364
-	UNSIGNED_SHORT_1_5_5_5_REV = 0x8366
-	UNSIGNED_BYTE_2_3_3_REV = 0x8362
-	UNSIGNED_SHORT_4_4_4_4_REV = 0x8365
-	UNSIGNED_INT_8_8_8_8 = 0x8035
-	UNSIGNED_SHORT_5_6_5 = 0x8363
-	TEXTURE_BASE_LEVEL = 0x813C
-	SMOOTH_LINE_WIDTH_GRANULARITY = 0x0B23
-	TEXTURE_WRAP_R = 0x8072
-	UNPACK_SKIP_IMAGES = 0x806D
-	PACK_IMAGE_HEIGHT = 0x806C
-	TEXTURE_MIN_LOD = 0x813A
-	BGR = 0x80E0
-	UNSIGNED_INT_10_10_10_2 = 0x8036
-	SMOOTH_LINE_WIDTH_RANGE = 0x0B22
-	UNSIGNED_INT_8_8_8_8_REV = 0x8367
-	UNSIGNED_SHORT_5_5_5_1 = 0x8034
-	BGRA = 0x80E1
-	PROXY_TEXTURE_3D = 0x8070
-	TEXTURE_DEPTH = 0x8071
-	SMOOTH_POINT_SIZE_GRANULARITY = 0x0B13
-	MAX_3D_TEXTURE_SIZE = 0x8073
-	MAX_ELEMENTS_VERTICES = 0x80E8
-	SMOOTH_POINT_SIZE_RANGE = 0x0B12
-	UNSIGNED_SHORT_4_4_4_4 = 0x8033
-	TEXTURE_MAX_LOD = 0x813B
-	MAX_ELEMENTS_INDICES = 0x80E9
-	TEXTURE_BINDING_3D = 0x806A
-	CLAMP_TO_EDGE = 0x812F
-)
-// VERSION_1_3
-const (
-	MAX_CUBE_MAP_TEXTURE_SIZE = 0x851C
-	SAMPLE_COVERAGE_INVERT = 0x80AB
-	TEXTURE4 = 0x84C4
-	TEXTURE5 = 0x84C5
-	TEXTURE6 = 0x84C6
-	TEXTURE7 = 0x84C7
-	TEXTURE0 = 0x84C0
-	TEXTURE1 = 0x84C1
-	TEXTURE2 = 0x84C2
-	TEXTURE3 = 0x84C3
-	TEXTURE8 = 0x84C8
-	TEXTURE9 = 0x84C9
-	SAMPLE_COVERAGE_VALUE = 0x80AA
-	TEXTURE_CUBE_MAP_POSITIVE_Z = 0x8519
-	TEXTURE_CUBE_MAP_POSITIVE_X = 0x8515
-	TEXTURE_CUBE_MAP_POSITIVE_Y = 0x8517
-	ACTIVE_TEXTURE = 0x84E0
-	NUM_COMPRESSED_TEXTURE_FORMATS = 0x86A2
-	TEXTURE_COMPRESSED = 0x86A1
-	PROXY_TEXTURE_CUBE_MAP = 0x851B
-	SAMPLE_COVERAGE = 0x80A0
-	MULTISAMPLE = 0x809D
-	COMPRESSED_TEXTURE_FORMATS = 0x86A3
-	TEXTURE_COMPRESSED_IMAGE_SIZE = 0x86A0
-	TEXTURE31 = 0x84DF
-	TEXTURE30 = 0x84DE
-	SAMPLE_ALPHA_TO_COVERAGE = 0x809E
-	TEXTURE28 = 0x84DC
-	TEXTURE29 = 0x84DD
-	TEXTURE22 = 0x84D6
-	TEXTURE23 = 0x84D7
-	TEXTURE20 = 0x84D4
-	TEXTURE21 = 0x84D5
-	TEXTURE26 = 0x84DA
-	TEXTURE27 = 0x84DB
-	TEXTURE24 = 0x84D8
-	TEXTURE25 = 0x84D9
-	SAMPLE_BUFFERS = 0x80A8
-	TEXTURE19 = 0x84D3
-	COMPRESSED_RGB = 0x84ED
-	TEXTURE18 = 0x84D2
-	TEXTURE13 = 0x84CD
-	TEXTURE12 = 0x84CC
-	TEXTURE11 = 0x84CB
-	TEXTURE10 = 0x84CA
-	TEXTURE17 = 0x84D1
-	TEXTURE16 = 0x84D0
-	TEXTURE15 = 0x84CF
-	TEXTURE14 = 0x84CE
-	SAMPLES = 0x80A9
-	TEXTURE_CUBE_MAP_NEGATIVE_Z = 0x851A
-	TEXTURE_CUBE_MAP_NEGATIVE_X = 0x8516
-	TEXTURE_CUBE_MAP_NEGATIVE_Y = 0x8518
-	TEXTURE_COMPRESSION_HINT = 0x84EF
-	TEXTURE_CUBE_MAP = 0x8513
-	CLAMP_TO_BORDER = 0x812D
-	TEXTURE_BINDING_CUBE_MAP = 0x8514
-	SAMPLE_ALPHA_TO_ONE = 0x809F
-	COMPRESSED_RGBA = 0x84EE
-)
 // VERSION_3_2
 const (
+	SYNC_STATUS = 0x9114
+	MAX_SAMPLE_MASK_WORDS = 0x8E59
 	TEXTURE_FIXED_SAMPLE_LOCATIONS = 0x9107
 	TIMEOUT_IGNORED = 0xFFFFFFFFFFFFFFFF
 	TEXTURE_2D_MULTISAMPLE = 0x9100
@@ -3040,12 +2589,9 @@ const (
 	WAIT_FAILED = 0x911D
 	SYNC_FENCE = 0x9116
 	TRIANGLE_STRIP_ADJACENCY = 0x000D
-	SYNC_STATUS = 0x9114
-	MAX_SAMPLE_MASK_WORDS = 0x8E59
 )
 // VERSION_3_3
 const (
-	ONE_MINUS_SRC1_COLOR = 0x88FA
 	ONE_MINUS_SRC1_ALPHA = 0x88FB
 	TEXTURE_SWIZZLE_RGBA = 0x8E46
 	MAX_DUAL_SOURCE_DRAW_BUFFERS = 0x88FC
@@ -3061,9 +2607,15 @@ const (
 	RGB10_A2UI = 0x906F
 	INT_2_10_10_10_REV = 0x8D9F
 	SRC1_COLOR = 0x88F9
+	ONE_MINUS_SRC1_COLOR = 0x88FA
 )
 // VERSION_3_0
 const (
+	RGBA8I = 0x8D8E
+	SAMPLER_1D_ARRAY_SHADOW = 0x8DC3
+	QUERY_NO_WAIT = 0x8E14
+	FRAMEBUFFER_INCOMPLETE_DRAW_BUFFER = 0x8CDB
+	CONTEXT_FLAGS = 0x821E
 	RENDERBUFFER_WIDTH = 0x8D42
 	TEXTURE_ALPHA_TYPE = 0x8C13
 	FRAMEBUFFER_ATTACHMENT_ALPHA_SIZE = 0x8215
@@ -3273,24 +2825,9 @@ const (
 	TEXTURE_DEPTH_TYPE = 0x8C16
 	RGBA32F = 0x8814
 	RG16UI = 0x823A
-	RGBA8I = 0x8D8E
-	SAMPLER_1D_ARRAY_SHADOW = 0x8DC3
-	QUERY_NO_WAIT = 0x8E14
-	FRAMEBUFFER_INCOMPLETE_DRAW_BUFFER = 0x8CDB
-	CONTEXT_FLAGS = 0x821E
 )
 // VERSION_3_1
 const (
-	ACTIVE_UNIFORM_BLOCK_MAX_NAME_LENGTH = 0x8A35
-	UNIFORM_SIZE = 0x8A38
-	TEXTURE_RECTANGLE = 0x84F5
-	MAX_RECTANGLE_TEXTURE_SIZE = 0x84F8
-	UNSIGNED_INT_SAMPLER_BUFFER = 0x8DD8
-	R16_SNORM = 0x8F98
-	UNIFORM_BLOCK_REFERENCED_BY_VERTEX_SHADER = 0x8A44
-	UNIFORM_NAME_LENGTH = 0x8A39
-	UNIFORM_BLOCK_NAME_LENGTH = 0x8A41
-	UNIFORM_BUFFER_OFFSET_ALIGNMENT = 0x8A34
 	RGB_SNORM = 0x8F92
 	PRIMITIVE_RESTART_INDEX = 0x8F9E
 	RGB16_SNORM = 0x8F9A
@@ -3344,407 +2881,471 @@ const (
 	TEXTURE_BUFFER_FORMAT = 0x8C2E
 	UNIFORM_OFFSET = 0x8A3B
 	MAX_COMBINED_FRAGMENT_UNIFORM_COMPONENTS = 0x8A33
+	ACTIVE_UNIFORM_BLOCK_MAX_NAME_LENGTH = 0x8A35
+	UNIFORM_SIZE = 0x8A38
+	TEXTURE_RECTANGLE = 0x84F5
+	MAX_RECTANGLE_TEXTURE_SIZE = 0x84F8
+	UNSIGNED_INT_SAMPLER_BUFFER = 0x8DD8
+	R16_SNORM = 0x8F98
+	UNIFORM_BLOCK_REFERENCED_BY_VERTEX_SHADER = 0x8A44
+	UNIFORM_NAME_LENGTH = 0x8A39
+	UNIFORM_BLOCK_NAME_LENGTH = 0x8A41
+	UNIFORM_BUFFER_OFFSET_ALIGNMENT = 0x8A34
 )
 // VERSION_2_1
-
-// http://www.opengl.org/sdk/docs/man3/xhtml/glUniformMatrix2x3fv.xml
-func UniformMatrix2x3fv(location Int, count Sizei, transpose Boolean, value *Float)  {
-	C.goglUniformMatrix2x3fv((C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(transpose), (*C.GLfloat)(value))
-}
-// http://www.opengl.org/sdk/docs/man3/xhtml/glUniformMatrix3x2fv.xml
-func UniformMatrix3x2fv(location Int, count Sizei, transpose Boolean, value *Float)  {
-	C.goglUniformMatrix3x2fv((C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(transpose), (*C.GLfloat)(value))
-}
-// http://www.opengl.org/sdk/docs/man3/xhtml/glUniformMatrix2x4fv.xml
-func UniformMatrix2x4fv(location Int, count Sizei, transpose Boolean, value *Float)  {
-	C.goglUniformMatrix2x4fv((C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(transpose), (*C.GLfloat)(value))
-}
-// http://www.opengl.org/sdk/docs/man3/xhtml/glUniformMatrix4x2fv.xml
-func UniformMatrix4x2fv(location Int, count Sizei, transpose Boolean, value *Float)  {
-	C.goglUniformMatrix4x2fv((C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(transpose), (*C.GLfloat)(value))
-}
-// http://www.opengl.org/sdk/docs/man3/xhtml/glUniformMatrix3x4fv.xml
-func UniformMatrix3x4fv(location Int, count Sizei, transpose Boolean, value *Float)  {
-	C.goglUniformMatrix3x4fv((C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(transpose), (*C.GLfloat)(value))
-}
-// http://www.opengl.org/sdk/docs/man3/xhtml/glUniformMatrix4x3fv.xml
-func UniformMatrix4x3fv(location Int, count Sizei, transpose Boolean, value *Float)  {
-	C.goglUniformMatrix4x3fv((C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(transpose), (*C.GLfloat)(value))
-}
+const (
+	FLOAT_MAT2x4 = 0x8B66
+	FLOAT_MAT2x3 = 0x8B65
+	PIXEL_UNPACK_BUFFER = 0x88EC
+	PIXEL_PACK_BUFFER = 0x88EB
+	SRGB8_ALPHA8 = 0x8C43
+	PIXEL_PACK_BUFFER_BINDING = 0x88ED
+	SRGB8 = 0x8C41
+	PIXEL_UNPACK_BUFFER_BINDING = 0x88EF
+	COMPRESSED_SRGB_ALPHA = 0x8C49
+	FLOAT_MAT4x2 = 0x8B69
+	FLOAT_MAT4x3 = 0x8B6A
+	FLOAT_MAT3x4 = 0x8B68
+	FLOAT_MAT3x2 = 0x8B67
+	COMPRESSED_SRGB = 0x8C48
+	SRGB = 0x8C40
+	SRGB_ALPHA = 0x8C42
+)
 // VERSION_2_0
-
-// http://www.opengl.org/sdk/docs/man3/xhtml/glBlendEquationSeparate.xml
-func BlendEquationSeparate(modeRGB Enum, modeAlpha Enum)  {
-	C.goglBlendEquationSeparate((C.GLenum)(modeRGB), (C.GLenum)(modeAlpha))
-}
-// http://www.opengl.org/sdk/docs/man3/xhtml/glDrawBuffers.xml
-func DrawBuffers(n Sizei, bufs *Enum)  {
-	C.goglDrawBuffers((C.GLsizei)(n), (*C.GLenum)(bufs))
-}
-// http://www.opengl.org/sdk/docs/man3/xhtml/glStencilOpSeparate.xml
-func StencilOpSeparate(face Enum, sfail Enum, dpfail Enum, dppass Enum)  {
-	C.goglStencilOpSeparate((C.GLenum)(face), (C.GLenum)(sfail), (C.GLenum)(dpfail), (C.GLenum)(dppass))
-}
-// http://www.opengl.org/sdk/docs/man3/xhtml/glStencilFuncSeparate.xml
-func StencilFuncSeparate(face Enum, func_ Enum, ref Int, mask Uint)  {
-	C.goglStencilFuncSeparate((C.GLenum)(face), (C.GLenum)(func_), (C.GLint)(ref), (C.GLuint)(mask))
-}
-// http://www.opengl.org/sdk/docs/man3/xhtml/glStencilMaskSeparate.xml
-func StencilMaskSeparate(face Enum, mask Uint)  {
-	C.goglStencilMaskSeparate((C.GLenum)(face), (C.GLuint)(mask))
-}
-// http://www.opengl.org/sdk/docs/man3/xhtml/glAttachShader.xml
-func AttachShader(program Uint, shader Uint)  {
-	C.goglAttachShader((C.GLuint)(program), (C.GLuint)(shader))
-}
-// http://www.opengl.org/sdk/docs/man3/xhtml/glBindAttribLocation.xml
-func BindAttribLocation(program Uint, index Uint, name *Char)  {
-	C.goglBindAttribLocation((C.GLuint)(program), (C.GLuint)(index), (*C.GLchar)(name))
-}
-// http://www.opengl.org/sdk/docs/man3/xhtml/glCompileShader.xml
-func CompileShader(shader Uint)  {
-	C.goglCompileShader((C.GLuint)(shader))
-}
-// http://www.opengl.org/sdk/docs/man3/xhtml/glCreateProgram.xml
-func CreateProgram() Uint {
-	return (Uint)(C.goglCreateProgram())
-}
-// http://www.opengl.org/sdk/docs/man3/xhtml/glCreateShader.xml
-func CreateShader(type_ Enum) Uint {
-	return (Uint)(C.goglCreateShader((C.GLenum)(type_)))
-}
-// http://www.opengl.org/sdk/docs/man3/xhtml/glDeleteProgram.xml
-func DeleteProgram(program Uint)  {
-	C.goglDeleteProgram((C.GLuint)(program))
-}
-// http://www.opengl.org/sdk/docs/man3/xhtml/glDeleteShader.xml
-func DeleteShader(shader Uint)  {
-	C.goglDeleteShader((C.GLuint)(shader))
-}
-// http://www.opengl.org/sdk/docs/man3/xhtml/glDetachShader.xml
-func DetachShader(program Uint, shader Uint)  {
-	C.goglDetachShader((C.GLuint)(program), (C.GLuint)(shader))
-}
-// http://www.opengl.org/sdk/docs/man3/xhtml/glDisableVertexAttribArray.xml
-func DisableVertexAttribArray(index Uint)  {
-	C.goglDisableVertexAttribArray((C.GLuint)(index))
-}
-// http://www.opengl.org/sdk/docs/man3/xhtml/glEnableVertexAttribArray.xml
-func EnableVertexAttribArray(index Uint)  {
-	C.goglEnableVertexAttribArray((C.GLuint)(index))
-}
-// http://www.opengl.org/sdk/docs/man3/xhtml/glGetActiveAttrib.xml
-func GetActiveAttrib(program Uint, index Uint, bufSize Sizei, length *Sizei, size *Int, type_ *Enum, name *Char)  {
-	C.goglGetActiveAttrib((C.GLuint)(program), (C.GLuint)(index), (C.GLsizei)(bufSize), (*C.GLsizei)(length), (*C.GLint)(size), (*C.GLenum)(type_), (*C.GLchar)(name))
-}
-// http://www.opengl.org/sdk/docs/man3/xhtml/glGetActiveUniform.xml
-func GetActiveUniform(program Uint, index Uint, bufSize Sizei, length *Sizei, size *Int, type_ *Enum, name *Char)  {
-	C.goglGetActiveUniform((C.GLuint)(program), (C.GLuint)(index), (C.GLsizei)(bufSize), (*C.GLsizei)(length), (*C.GLint)(size), (*C.GLenum)(type_), (*C.GLchar)(name))
-}
-// http://www.opengl.org/sdk/docs/man3/xhtml/glGetAttachedShaders.xml
-func GetAttachedShaders(program Uint, maxCount Sizei, count *Sizei, obj *Uint)  {
-	C.goglGetAttachedShaders((C.GLuint)(program), (C.GLsizei)(maxCount), (*C.GLsizei)(count), (*C.GLuint)(obj))
-}
-// http://www.opengl.org/sdk/docs/man3/xhtml/glGetAttribLocation.xml
-func GetAttribLocation(program Uint, name *Char) Int {
-	return (Int)(C.goglGetAttribLocation((C.GLuint)(program), (*C.GLchar)(name)))
-}
-// http://www.opengl.org/sdk/docs/man3/xhtml/glGetProgramiv.xml
-func GetProgramiv(program Uint, pname Enum, params *Int)  {
-	C.goglGetProgramiv((C.GLuint)(program), (C.GLenum)(pname), (*C.GLint)(params))
-}
-// http://www.opengl.org/sdk/docs/man3/xhtml/glGetProgramInfoLog.xml
-func GetProgramInfoLog(program Uint, bufSize Sizei, length *Sizei, infoLog *Char)  {
-	C.goglGetProgramInfoLog((C.GLuint)(program), (C.GLsizei)(bufSize), (*C.GLsizei)(length), (*C.GLchar)(infoLog))
-}
-// http://www.opengl.org/sdk/docs/man3/xhtml/glGetShaderiv.xml
-func GetShaderiv(shader Uint, pname Enum, params *Int)  {
-	C.goglGetShaderiv((C.GLuint)(shader), (C.GLenum)(pname), (*C.GLint)(params))
-}
-// http://www.opengl.org/sdk/docs/man3/xhtml/glGetShaderInfoLog.xml
-func GetShaderInfoLog(shader Uint, bufSize Sizei, length *Sizei, infoLog *Char)  {
-	C.goglGetShaderInfoLog((C.GLuint)(shader), (C.GLsizei)(bufSize), (*C.GLsizei)(length), (*C.GLchar)(infoLog))
-}
-// http://www.opengl.org/sdk/docs/man3/xhtml/glGetShaderSource.xml
-func GetShaderSource(shader Uint, bufSize Sizei, length *Sizei, source *Char)  {
-	C.goglGetShaderSource((C.GLuint)(shader), (C.GLsizei)(bufSize), (*C.GLsizei)(length), (*C.GLchar)(source))
-}
-// http://www.opengl.org/sdk/docs/man3/xhtml/glGetUniformLocation.xml
-func GetUniformLocation(program Uint, name *Char) Int {
-	return (Int)(C.goglGetUniformLocation((C.GLuint)(program), (*C.GLchar)(name)))
-}
-// http://www.opengl.org/sdk/docs/man3/xhtml/glGetUniformfv.xml
-func GetUniformfv(program Uint, location Int, params *Float)  {
-	C.goglGetUniformfv((C.GLuint)(program), (C.GLint)(location), (*C.GLfloat)(params))
-}
-// http://www.opengl.org/sdk/docs/man3/xhtml/glGetUniformiv.xml
-func GetUniformiv(program Uint, location Int, params *Int)  {
-	C.goglGetUniformiv((C.GLuint)(program), (C.GLint)(location), (*C.GLint)(params))
-}
-// http://www.opengl.org/sdk/docs/man3/xhtml/glGetVertexAttribdv.xml
-func GetVertexAttribdv(index Uint, pname Enum, params *Double)  {
-	C.goglGetVertexAttribdv((C.GLuint)(index), (C.GLenum)(pname), (*C.GLdouble)(params))
-}
-// http://www.opengl.org/sdk/docs/man3/xhtml/glGetVertexAttribfv.xml
-func GetVertexAttribfv(index Uint, pname Enum, params *Float)  {
-	C.goglGetVertexAttribfv((C.GLuint)(index), (C.GLenum)(pname), (*C.GLfloat)(params))
-}
-// http://www.opengl.org/sdk/docs/man3/xhtml/glGetVertexAttribiv.xml
-func GetVertexAttribiv(index Uint, pname Enum, params *Int)  {
-	C.goglGetVertexAttribiv((C.GLuint)(index), (C.GLenum)(pname), (*C.GLint)(params))
-}
-// http://www.opengl.org/sdk/docs/man3/xhtml/glGetVertexAttribPointerv.xml
-func GetVertexAttribPointerv(index Uint, pname Enum, pointer *Pointer)  {
-	C.goglGetVertexAttribPointerv((C.GLuint)(index), (C.GLenum)(pname), (*unsafe.Pointer)(pointer))
-}
-// http://www.opengl.org/sdk/docs/man3/xhtml/glIsProgram.xml
-func IsProgram(program Uint) Boolean {
-	return (Boolean)(C.goglIsProgram((C.GLuint)(program)))
-}
-// http://www.opengl.org/sdk/docs/man3/xhtml/glIsShader.xml
-func IsShader(shader Uint) Boolean {
-	return (Boolean)(C.goglIsShader((C.GLuint)(shader)))
-}
-// http://www.opengl.org/sdk/docs/man3/xhtml/glLinkProgram.xml
-func LinkProgram(program Uint)  {
-	C.goglLinkProgram((C.GLuint)(program))
-}
-// http://www.opengl.org/sdk/docs/man3/xhtml/glShaderSource.xml
-func ShaderSource(shader Uint, count Sizei, string_ **Char, length *Int)  {
-	C.goglShaderSource((C.GLuint)(shader), (C.GLsizei)(count), (**C.GLchar)(unsafe.Pointer(string_)), (*C.GLint)(length))
-}
-// http://www.opengl.org/sdk/docs/man3/xhtml/glUseProgram.xml
-func UseProgram(program Uint)  {
-	C.goglUseProgram((C.GLuint)(program))
-}
-// http://www.opengl.org/sdk/docs/man3/xhtml/glUniform1f.xml
-func Uniform1f(location Int, v0 Float)  {
-	C.goglUniform1f((C.GLint)(location), (C.GLfloat)(v0))
-}
-// http://www.opengl.org/sdk/docs/man3/xhtml/glUniform2f.xml
-func Uniform2f(location Int, v0 Float, v1 Float)  {
-	C.goglUniform2f((C.GLint)(location), (C.GLfloat)(v0), (C.GLfloat)(v1))
-}
-// http://www.opengl.org/sdk/docs/man3/xhtml/glUniform3f.xml
-func Uniform3f(location Int, v0 Float, v1 Float, v2 Float)  {
-	C.goglUniform3f((C.GLint)(location), (C.GLfloat)(v0), (C.GLfloat)(v1), (C.GLfloat)(v2))
-}
-// http://www.opengl.org/sdk/docs/man3/xhtml/glUniform4f.xml
-func Uniform4f(location Int, v0 Float, v1 Float, v2 Float, v3 Float)  {
-	C.goglUniform4f((C.GLint)(location), (C.GLfloat)(v0), (C.GLfloat)(v1), (C.GLfloat)(v2), (C.GLfloat)(v3))
-}
-// http://www.opengl.org/sdk/docs/man3/xhtml/glUniform1i.xml
-func Uniform1i(location Int, v0 Int)  {
-	C.goglUniform1i((C.GLint)(location), (C.GLint)(v0))
-}
-// http://www.opengl.org/sdk/docs/man3/xhtml/glUniform2i.xml
-func Uniform2i(location Int, v0 Int, v1 Int)  {
-	C.goglUniform2i((C.GLint)(location), (C.GLint)(v0), (C.GLint)(v1))
-}
-// http://www.opengl.org/sdk/docs/man3/xhtml/glUniform3i.xml
-func Uniform3i(location Int, v0 Int, v1 Int, v2 Int)  {
-	C.goglUniform3i((C.GLint)(location), (C.GLint)(v0), (C.GLint)(v1), (C.GLint)(v2))
-}
-// http://www.opengl.org/sdk/docs/man3/xhtml/glUniform4i.xml
-func Uniform4i(location Int, v0 Int, v1 Int, v2 Int, v3 Int)  {
-	C.goglUniform4i((C.GLint)(location), (C.GLint)(v0), (C.GLint)(v1), (C.GLint)(v2), (C.GLint)(v3))
-}
-// http://www.opengl.org/sdk/docs/man3/xhtml/glUniform1fv.xml
-func Uniform1fv(location Int, count Sizei, value *Float)  {
-	C.goglUniform1fv((C.GLint)(location), (C.GLsizei)(count), (*C.GLfloat)(value))
-}
-// http://www.opengl.org/sdk/docs/man3/xhtml/glUniform2fv.xml
-func Uniform2fv(location Int, count Sizei, value *Float)  {
-	C.goglUniform2fv((C.GLint)(location), (C.GLsizei)(count), (*C.GLfloat)(value))
-}
-// http://www.opengl.org/sdk/docs/man3/xhtml/glUniform3fv.xml
-func Uniform3fv(location Int, count Sizei, value *Float)  {
-	C.goglUniform3fv((C.GLint)(location), (C.GLsizei)(count), (*C.GLfloat)(value))
-}
-// http://www.opengl.org/sdk/docs/man3/xhtml/glUniform4fv.xml
-func Uniform4fv(location Int, count Sizei, value *Float)  {
-	C.goglUniform4fv((C.GLint)(location), (C.GLsizei)(count), (*C.GLfloat)(value))
-}
-// http://www.opengl.org/sdk/docs/man3/xhtml/glUniform1iv.xml
-func Uniform1iv(location Int, count Sizei, value *Int)  {
-	C.goglUniform1iv((C.GLint)(location), (C.GLsizei)(count), (*C.GLint)(value))
-}
-// http://www.opengl.org/sdk/docs/man3/xhtml/glUniform2iv.xml
-func Uniform2iv(location Int, count Sizei, value *Int)  {
-	C.goglUniform2iv((C.GLint)(location), (C.GLsizei)(count), (*C.GLint)(value))
-}
-// http://www.opengl.org/sdk/docs/man3/xhtml/glUniform3iv.xml
-func Uniform3iv(location Int, count Sizei, value *Int)  {
-	C.goglUniform3iv((C.GLint)(location), (C.GLsizei)(count), (*C.GLint)(value))
-}
-// http://www.opengl.org/sdk/docs/man3/xhtml/glUniform4iv.xml
-func Uniform4iv(location Int, count Sizei, value *Int)  {
-	C.goglUniform4iv((C.GLint)(location), (C.GLsizei)(count), (*C.GLint)(value))
-}
-// http://www.opengl.org/sdk/docs/man3/xhtml/glUniformMatrix2fv.xml
-func UniformMatrix2fv(location Int, count Sizei, transpose Boolean, value *Float)  {
-	C.goglUniformMatrix2fv((C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(transpose), (*C.GLfloat)(value))
-}
-// http://www.opengl.org/sdk/docs/man3/xhtml/glUniformMatrix3fv.xml
-func UniformMatrix3fv(location Int, count Sizei, transpose Boolean, value *Float)  {
-	C.goglUniformMatrix3fv((C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(transpose), (*C.GLfloat)(value))
-}
-// http://www.opengl.org/sdk/docs/man3/xhtml/glUniformMatrix4fv.xml
-func UniformMatrix4fv(location Int, count Sizei, transpose Boolean, value *Float)  {
-	C.goglUniformMatrix4fv((C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(transpose), (*C.GLfloat)(value))
-}
-// http://www.opengl.org/sdk/docs/man3/xhtml/glValidateProgram.xml
-func ValidateProgram(program Uint)  {
-	C.goglValidateProgram((C.GLuint)(program))
-}
-// http://www.opengl.org/sdk/docs/man3/xhtml/glVertexAttrib1d.xml
-func VertexAttrib1d(index Uint, x Double)  {
-	C.goglVertexAttrib1d((C.GLuint)(index), (C.GLdouble)(x))
-}
-// http://www.opengl.org/sdk/docs/man3/xhtml/glVertexAttrib1dv.xml
-func VertexAttrib1dv(index Uint, v *Double)  {
-	C.goglVertexAttrib1dv((C.GLuint)(index), (*C.GLdouble)(v))
-}
-// http://www.opengl.org/sdk/docs/man3/xhtml/glVertexAttrib1f.xml
-func VertexAttrib1f(index Uint, x Float)  {
-	C.goglVertexAttrib1f((C.GLuint)(index), (C.GLfloat)(x))
-}
-// http://www.opengl.org/sdk/docs/man3/xhtml/glVertexAttrib1fv.xml
-func VertexAttrib1fv(index Uint, v *Float)  {
-	C.goglVertexAttrib1fv((C.GLuint)(index), (*C.GLfloat)(v))
-}
-// http://www.opengl.org/sdk/docs/man3/xhtml/glVertexAttrib1s.xml
-func VertexAttrib1s(index Uint, x Short)  {
-	C.goglVertexAttrib1s((C.GLuint)(index), (C.GLshort)(x))
-}
-// http://www.opengl.org/sdk/docs/man3/xhtml/glVertexAttrib1sv.xml
-func VertexAttrib1sv(index Uint, v *Short)  {
-	C.goglVertexAttrib1sv((C.GLuint)(index), (*C.GLshort)(v))
-}
-// http://www.opengl.org/sdk/docs/man3/xhtml/glVertexAttrib2d.xml
-func VertexAttrib2d(index Uint, x Double, y Double)  {
-	C.goglVertexAttrib2d((C.GLuint)(index), (C.GLdouble)(x), (C.GLdouble)(y))
-}
-// http://www.opengl.org/sdk/docs/man3/xhtml/glVertexAttrib2dv.xml
-func VertexAttrib2dv(index Uint, v *Double)  {
-	C.goglVertexAttrib2dv((C.GLuint)(index), (*C.GLdouble)(v))
-}
-// http://www.opengl.org/sdk/docs/man3/xhtml/glVertexAttrib2f.xml
-func VertexAttrib2f(index Uint, x Float, y Float)  {
-	C.goglVertexAttrib2f((C.GLuint)(index), (C.GLfloat)(x), (C.GLfloat)(y))
-}
-// http://www.opengl.org/sdk/docs/man3/xhtml/glVertexAttrib2fv.xml
-func VertexAttrib2fv(index Uint, v *Float)  {
-	C.goglVertexAttrib2fv((C.GLuint)(index), (*C.GLfloat)(v))
-}
-// http://www.opengl.org/sdk/docs/man3/xhtml/glVertexAttrib2s.xml
-func VertexAttrib2s(index Uint, x Short, y Short)  {
-	C.goglVertexAttrib2s((C.GLuint)(index), (C.GLshort)(x), (C.GLshort)(y))
-}
-// http://www.opengl.org/sdk/docs/man3/xhtml/glVertexAttrib2sv.xml
-func VertexAttrib2sv(index Uint, v *Short)  {
-	C.goglVertexAttrib2sv((C.GLuint)(index), (*C.GLshort)(v))
-}
-// http://www.opengl.org/sdk/docs/man3/xhtml/glVertexAttrib3d.xml
-func VertexAttrib3d(index Uint, x Double, y Double, z Double)  {
-	C.goglVertexAttrib3d((C.GLuint)(index), (C.GLdouble)(x), (C.GLdouble)(y), (C.GLdouble)(z))
-}
-// http://www.opengl.org/sdk/docs/man3/xhtml/glVertexAttrib3dv.xml
-func VertexAttrib3dv(index Uint, v *Double)  {
-	C.goglVertexAttrib3dv((C.GLuint)(index), (*C.GLdouble)(v))
-}
-// http://www.opengl.org/sdk/docs/man3/xhtml/glVertexAttrib3f.xml
-func VertexAttrib3f(index Uint, x Float, y Float, z Float)  {
-	C.goglVertexAttrib3f((C.GLuint)(index), (C.GLfloat)(x), (C.GLfloat)(y), (C.GLfloat)(z))
-}
-// http://www.opengl.org/sdk/docs/man3/xhtml/glVertexAttrib3fv.xml
-func VertexAttrib3fv(index Uint, v *Float)  {
-	C.goglVertexAttrib3fv((C.GLuint)(index), (*C.GLfloat)(v))
-}
-// http://www.opengl.org/sdk/docs/man3/xhtml/glVertexAttrib3s.xml
-func VertexAttrib3s(index Uint, x Short, y Short, z Short)  {
-	C.goglVertexAttrib3s((C.GLuint)(index), (C.GLshort)(x), (C.GLshort)(y), (C.GLshort)(z))
-}
-// http://www.opengl.org/sdk/docs/man3/xhtml/glVertexAttrib3sv.xml
-func VertexAttrib3sv(index Uint, v *Short)  {
-	C.goglVertexAttrib3sv((C.GLuint)(index), (*C.GLshort)(v))
-}
-// http://www.opengl.org/sdk/docs/man3/xhtml/glVertexAttrib4Nbv.xml
-func VertexAttrib4Nbv(index Uint, v *Byte)  {
-	C.goglVertexAttrib4Nbv((C.GLuint)(index), (*C.GLbyte)(v))
-}
-// http://www.opengl.org/sdk/docs/man3/xhtml/glVertexAttrib4Niv.xml
-func VertexAttrib4Niv(index Uint, v *Int)  {
-	C.goglVertexAttrib4Niv((C.GLuint)(index), (*C.GLint)(v))
-}
-// http://www.opengl.org/sdk/docs/man3/xhtml/glVertexAttrib4Nsv.xml
-func VertexAttrib4Nsv(index Uint, v *Short)  {
-	C.goglVertexAttrib4Nsv((C.GLuint)(index), (*C.GLshort)(v))
-}
-// http://www.opengl.org/sdk/docs/man3/xhtml/glVertexAttrib4Nub.xml
-func VertexAttrib4Nub(index Uint, x Ubyte, y Ubyte, z Ubyte, w Ubyte)  {
-	C.goglVertexAttrib4Nub((C.GLuint)(index), (C.GLubyte)(x), (C.GLubyte)(y), (C.GLubyte)(z), (C.GLubyte)(w))
-}
-// http://www.opengl.org/sdk/docs/man3/xhtml/glVertexAttrib4Nubv.xml
-func VertexAttrib4Nubv(index Uint, v *Ubyte)  {
-	C.goglVertexAttrib4Nubv((C.GLuint)(index), (*C.GLubyte)(v))
-}
-// http://www.opengl.org/sdk/docs/man3/xhtml/glVertexAttrib4Nuiv.xml
-func VertexAttrib4Nuiv(index Uint, v *Uint)  {
-	C.goglVertexAttrib4Nuiv((C.GLuint)(index), (*C.GLuint)(v))
-}
-// http://www.opengl.org/sdk/docs/man3/xhtml/glVertexAttrib4Nusv.xml
-func VertexAttrib4Nusv(index Uint, v *Ushort)  {
-	C.goglVertexAttrib4Nusv((C.GLuint)(index), (*C.GLushort)(v))
-}
-// http://www.opengl.org/sdk/docs/man3/xhtml/glVertexAttrib4bv.xml
-func VertexAttrib4bv(index Uint, v *Byte)  {
-	C.goglVertexAttrib4bv((C.GLuint)(index), (*C.GLbyte)(v))
-}
-// http://www.opengl.org/sdk/docs/man3/xhtml/glVertexAttrib4d.xml
-func VertexAttrib4d(index Uint, x Double, y Double, z Double, w Double)  {
-	C.goglVertexAttrib4d((C.GLuint)(index), (C.GLdouble)(x), (C.GLdouble)(y), (C.GLdouble)(z), (C.GLdouble)(w))
-}
-// http://www.opengl.org/sdk/docs/man3/xhtml/glVertexAttrib4dv.xml
-func VertexAttrib4dv(index Uint, v *Double)  {
-	C.goglVertexAttrib4dv((C.GLuint)(index), (*C.GLdouble)(v))
-}
-// http://www.opengl.org/sdk/docs/man3/xhtml/glVertexAttrib4f.xml
-func VertexAttrib4f(index Uint, x Float, y Float, z Float, w Float)  {
-	C.goglVertexAttrib4f((C.GLuint)(index), (C.GLfloat)(x), (C.GLfloat)(y), (C.GLfloat)(z), (C.GLfloat)(w))
-}
-// http://www.opengl.org/sdk/docs/man3/xhtml/glVertexAttrib4fv.xml
-func VertexAttrib4fv(index Uint, v *Float)  {
-	C.goglVertexAttrib4fv((C.GLuint)(index), (*C.GLfloat)(v))
-}
-// http://www.opengl.org/sdk/docs/man3/xhtml/glVertexAttrib4iv.xml
-func VertexAttrib4iv(index Uint, v *Int)  {
-	C.goglVertexAttrib4iv((C.GLuint)(index), (*C.GLint)(v))
-}
-// http://www.opengl.org/sdk/docs/man3/xhtml/glVertexAttrib4s.xml
-func VertexAttrib4s(index Uint, x Short, y Short, z Short, w Short)  {
-	C.goglVertexAttrib4s((C.GLuint)(index), (C.GLshort)(x), (C.GLshort)(y), (C.GLshort)(z), (C.GLshort)(w))
-}
-// http://www.opengl.org/sdk/docs/man3/xhtml/glVertexAttrib4sv.xml
-func VertexAttrib4sv(index Uint, v *Short)  {
-	C.goglVertexAttrib4sv((C.GLuint)(index), (*C.GLshort)(v))
-}
-// http://www.opengl.org/sdk/docs/man3/xhtml/glVertexAttrib4ubv.xml
-func VertexAttrib4ubv(index Uint, v *Ubyte)  {
-	C.goglVertexAttrib4ubv((C.GLuint)(index), (*C.GLubyte)(v))
-}
-// http://www.opengl.org/sdk/docs/man3/xhtml/glVertexAttrib4uiv.xml
-func VertexAttrib4uiv(index Uint, v *Uint)  {
-	C.goglVertexAttrib4uiv((C.GLuint)(index), (*C.GLuint)(v))
-}
-// http://www.opengl.org/sdk/docs/man3/xhtml/glVertexAttrib4usv.xml
-func VertexAttrib4usv(index Uint, v *Ushort)  {
-	C.goglVertexAttrib4usv((C.GLuint)(index), (*C.GLushort)(v))
-}
-// http://www.opengl.org/sdk/docs/man3/xhtml/glVertexAttribPointer.xml
-func VertexAttribPointer(index Uint, size Int, type_ Enum, normalized Boolean, stride Sizei, pointer Pointer)  {
-	C.goglVertexAttribPointer((C.GLuint)(index), (C.GLint)(size), (C.GLenum)(type_), (C.GLboolean)(normalized), (C.GLsizei)(stride), (unsafe.Pointer)(pointer))
-}
+const (
+	MAX_DRAW_BUFFERS = 0x8824
+	VERTEX_ATTRIB_ARRAY_NORMALIZED = 0x886A
+	INFO_LOG_LENGTH = 0x8B84
+	DELETE_STATUS = 0x8B80
+	FLOAT_VEC4 = 0x8B52
+	FLOAT_VEC2 = 0x8B50
+	FLOAT_VEC3 = 0x8B51
+	STENCIL_BACK_REF = 0x8CA3
+	ACTIVE_ATTRIBUTE_MAX_LENGTH = 0x8B8A
+	SHADING_LANGUAGE_VERSION = 0x8B8C
+	MAX_COMBINED_TEXTURE_IMAGE_UNITS = 0x8B4D
+	ACTIVE_UNIFORMS = 0x8B86
+	ATTACHED_SHADERS = 0x8B85
+	VERTEX_ATTRIB_ARRAY_ENABLED = 0x8622
+	MAX_VERTEX_UNIFORM_COMPONENTS = 0x8B4A
+	MAX_TEXTURE_IMAGE_UNITS = 0x8872
+	STENCIL_BACK_FAIL = 0x8801
+	VERTEX_ATTRIB_ARRAY_POINTER = 0x8645
+	MAX_VARYING_FLOATS = 0x8B4B
+	CURRENT_VERTEX_ATTRIB = 0x8626
+	SAMPLER_1D_SHADOW = 0x8B61
+	DRAW_BUFFER15 = 0x8834
+	DRAW_BUFFER14 = 0x8833
+	DRAW_BUFFER11 = 0x8830
+	DRAW_BUFFER10 = 0x882F
+	DRAW_BUFFER13 = 0x8832
+	DRAW_BUFFER12 = 0x8831
+	LINK_STATUS = 0x8B82
+	CURRENT_PROGRAM = 0x8B8D
+	LOWER_LEFT = 0x8CA1
+	MAX_VERTEX_TEXTURE_IMAGE_UNITS = 0x8B4C
+	VALIDATE_STATUS = 0x8B83
+	STENCIL_BACK_WRITEMASK = 0x8CA5
+	FLOAT_MAT4 = 0x8B5C
+	COMPILE_STATUS = 0x8B81
+	FLOAT_MAT2 = 0x8B5A
+	SAMPLER_3D = 0x8B5F
+	FLOAT_MAT3 = 0x8B5B
+	SHADER_TYPE = 0x8B4F
+	MAX_VERTEX_ATTRIBS = 0x8869
+	SAMPLER_1D = 0x8B5D
+	SAMPLER_2D_SHADOW = 0x8B62
+	SAMPLER_CUBE = 0x8B60
+	STENCIL_BACK_PASS_DEPTH_FAIL = 0x8802
+	BOOL_VEC2 = 0x8B57
+	BOOL_VEC3 = 0x8B58
+	BOOL_VEC4 = 0x8B59
+	FRAGMENT_SHADER = 0x8B30
+	STENCIL_BACK_FUNC = 0x8800
+	FRAGMENT_SHADER_DERIVATIVE_HINT = 0x8B8B
+	BOOL = 0x8B56
+	VERTEX_PROGRAM_POINT_SIZE = 0x8642
+	UPPER_LEFT = 0x8CA2
+	VERTEX_ATTRIB_ARRAY_STRIDE = 0x8624
+	SHADER_SOURCE_LENGTH = 0x8B88
+	ACTIVE_UNIFORM_MAX_LENGTH = 0x8B87
+	SAMPLER_2D = 0x8B5E
+	POINT_SPRITE_COORD_ORIGIN = 0x8CA0
+	ACTIVE_ATTRIBUTES = 0x8B89
+	DRAW_BUFFER2 = 0x8827
+	DRAW_BUFFER3 = 0x8828
+	DRAW_BUFFER0 = 0x8825
+	DRAW_BUFFER1 = 0x8826
+	DRAW_BUFFER6 = 0x882B
+	DRAW_BUFFER7 = 0x882C
+	DRAW_BUFFER4 = 0x8829
+	DRAW_BUFFER5 = 0x882A
+	DRAW_BUFFER8 = 0x882D
+	DRAW_BUFFER9 = 0x882E
+	BLEND_EQUATION_ALPHA = 0x883D
+	BLEND_EQUATION_RGB = 0x8009
+	STENCIL_BACK_VALUE_MASK = 0x8CA4
+	VERTEX_ATTRIB_ARRAY_SIZE = 0x8623
+	STENCIL_BACK_PASS_DEPTH_PASS = 0x8803
+	VERTEX_SHADER = 0x8B31
+	VERTEX_ATTRIB_ARRAY_TYPE = 0x8625
+	INT_VEC4 = 0x8B55
+	INT_VEC3 = 0x8B54
+	INT_VEC2 = 0x8B53
+	MAX_FRAGMENT_UNIFORM_COMPONENTS = 0x8B49
+)
+// VERSION_1_4
+const (
+	DEPTH_COMPONENT16 = 0x81A5
+	MIRRORED_REPEAT = 0x8370
+	BLEND_DST_RGB = 0x80C8
+	DEPTH_COMPONENT32 = 0x81A7
+	DEPTH_COMPONENT24 = 0x81A6
+	TEXTURE_COMPARE_FUNC = 0x884D
+	DECR_WRAP = 0x8508
+	BLEND_SRC_RGB = 0x80C9
+	TEXTURE_COMPARE_MODE = 0x884C
+	MAX_TEXTURE_LOD_BIAS = 0x84FD
+	TEXTURE_DEPTH_SIZE = 0x884A
+	BLEND_DST_ALPHA = 0x80CA
+	POINT_FADE_THRESHOLD_SIZE = 0x8128
+	INCR_WRAP = 0x8507
+	TEXTURE_LOD_BIAS = 0x8501
+	BLEND_SRC_ALPHA = 0x80CB
+)
+// VERSION_1_5
+const (
+	DYNAMIC_DRAW = 0x88E8
+	READ_WRITE = 0x88BA
+	STATIC_DRAW = 0x88E4
+	ARRAY_BUFFER = 0x8892
+	ELEMENT_ARRAY_BUFFER_BINDING = 0x8895
+	BUFFER_SIZE = 0x8764
+	STREAM_COPY = 0x88E2
+	DYNAMIC_READ = 0x88E9
+	BUFFER_MAP_POINTER = 0x88BD
+	DYNAMIC_COPY = 0x88EA
+	QUERY_COUNTER_BITS = 0x8864
+	ELEMENT_ARRAY_BUFFER = 0x8893
+	QUERY_RESULT_AVAILABLE = 0x8867
+	STREAM_DRAW = 0x88E0
+	SAMPLES_PASSED = 0x8914
+	WRITE_ONLY = 0x88B9
+	QUERY_RESULT = 0x8866
+	VERTEX_ATTRIB_ARRAY_BUFFER_BINDING = 0x889F
+	BUFFER_MAPPED = 0x88BC
+	STREAM_READ = 0x88E1
+	BUFFER_USAGE = 0x8765
+	STATIC_READ = 0x88E5
+	ARRAY_BUFFER_BINDING = 0x8894
+	STATIC_COPY = 0x88E6
+	BUFFER_ACCESS = 0x88BB
+	READ_ONLY = 0x88B8
+	CURRENT_QUERY = 0x8865
+)
+// VERSION_1_1
+const (
+	RGBA12 = 0x805A
+	COLOR_LOGIC_OP = 0x0BF2
+	GREEN = 0x1904
+	INVALID_ENUM = 0x0500
+	TEXTURE_RED_SIZE = 0x805C
+	COPY_INVERTED = 0x150C
+	UNPACK_ALIGNMENT = 0x0CF5
+	LINES = 0x0001
+	SHORT = 0x1402
+	SRC_ALPHA = 0x0302
+	LINEAR_MIPMAP_NEAREST = 0x2701
+	RGB10_A2 = 0x8059
+	SCISSOR_TEST = 0x0C11
+	LINEAR = 0x2601
+	TEXTURE_ALPHA_SIZE = 0x805F
+	TRIANGLE_STRIP = 0x0005
+	DECR = 0x1E03
+	REPEAT = 0x2901
+	DEPTH = 0x1801
+	STENCIL_FUNC = 0x0B92
+	OUT_OF_MEMORY = 0x0505
+	POINT_SIZE_GRANULARITY = 0x0B13
+	INT = 0x1404
+	BYTE = 0x1400
+	OR_INVERTED = 0x150D
+	TRIANGLES = 0x0004
+	TEXTURE_MIN_FILTER = 0x2801
+	FRONT_AND_BACK = 0x0408
+	DEPTH_TEST = 0x0B71
+	FRONT = 0x0404
+	LOGIC_OP_MODE = 0x0BF0
+	UNPACK_SWAP_BYTES = 0x0CF0
+	TEXTURE_1D = 0x0DE0
+	UNPACK_SKIP_PIXELS = 0x0CF4
+	DEPTH_RANGE = 0x0B70
+	TEXTURE_BINDING_2D = 0x8069
+	COLOR_WRITEMASK = 0x0C23
+	PACK_ROW_LENGTH = 0x0D02
+	NOR = 0x1508
+	TRUE = 1
+	VIEWPORT = 0x0BA2
+	TEXTURE_INTERNAL_FORMAT = 0x1003
+	NAND = 0x150E
+	COLOR = 0x1800
+	STENCIL_VALUE_MASK = 0x0B93
+	NEVER = 0x0200
+	MAX_VIEWPORT_DIMS = 0x0D3A
+	TEXTURE_2D = 0x0DE1
+	MAX_TEXTURE_SIZE = 0x0D33
+	POLYGON_OFFSET_UNITS = 0x2A00
+	NICEST = 0x1102
+	TEXTURE_BLUE_SIZE = 0x805E
+	SCISSOR_BOX = 0x0C10
+	FRONT_LEFT = 0x0400
+	PACK_SKIP_PIXELS = 0x0D04
+	STENCIL_INDEX = 0x1901
+	FASTEST = 0x1101
+	POLYGON_SMOOTH = 0x0B41
+	DEPTH_CLEAR_VALUE = 0x0B73
+	RENDERER = 0x1F01
+	ALWAYS = 0x0207
+	SRC_ALPHA_SATURATE = 0x0308
+	FALSE = 0
+	EQUAL = 0x0202
+	STEREO = 0x0C33
+	LINE_SMOOTH_HINT = 0x0C52
+	BLEND = 0x0BE2
+	DEPTH_WRITEMASK = 0x0B72
+	TEXTURE_HEIGHT = 0x1001
+	STENCIL_TEST = 0x0B90
+	LINEAR_MIPMAP_LINEAR = 0x2703
+	DST_COLOR = 0x0306
+	NEAREST_MIPMAP_NEAREST = 0x2700
+	SRC_COLOR = 0x0300
+	XOR = 0x1506
+	STENCIL_WRITEMASK = 0x0B98
+	POLYGON_OFFSET_POINT = 0x2A01
+	OR = 0x1507
+	DST_ALPHA = 0x0304
+	CULL_FACE = 0x0B44
+	LINE_WIDTH_RANGE = 0x0B22
+	FLOAT = 0x1406
+	NOTEQUAL = 0x0205
+	DEPTH_COMPONENT = 0x1902
+	ZERO = 0
+	COPY = 0x1503
+	TEXTURE = 0x1702
+	RGBA = 0x1908
+	PACK_SKIP_ROWS = 0x0D03
+	LINE_LOOP = 0x0002
+	RGB = 0x1907
+	SUBPIXEL_BITS = 0x0D50
+	NO_ERROR = 0
+	BLEND_SRC = 0x0BE1
+	LINE_WIDTH = 0x0B21
+	STENCIL_PASS_DEPTH_FAIL = 0x0B95
+	LESS = 0x0201
+	TEXTURE_WRAP_T = 0x2803
+	PACK_ALIGNMENT = 0x0D05
+	TEXTURE_WRAP_S = 0x2802
+	UNPACK_ROW_LENGTH = 0x0CF2
+	LINE_SMOOTH = 0x0B20
+	POLYGON_SMOOTH_HINT = 0x0C53
+	LINE_STRIP = 0x0003
+	STENCIL_FAIL = 0x0B94
+	R3_G3_B2 = 0x2A10
+	REPLACE = 0x1E01
+	ONE_MINUS_SRC_ALPHA = 0x0303
+	COLOR_CLEAR_VALUE = 0x0C22
+	RED = 0x1903
+	LINE = 0x1B01
+	RGB8 = 0x8051
+	STENCIL_REF = 0x0B97
+	UNPACK_SKIP_ROWS = 0x0CF3
+	RGB4 = 0x804F
+	VENDOR = 0x1F00
+	RGB5 = 0x8050
+	DITHER = 0x0BD0
+	STENCIL_CLEAR_VALUE = 0x0B91
+	INVALID_OPERATION = 0x0502
+	EQUIV = 0x1509
+	AND_INVERTED = 0x1504
+	BACK_RIGHT = 0x0403
+	RGB12 = 0x8053
+	POINT_SIZE = 0x0B11
+	RGB10 = 0x8052
+	STENCIL_PASS_DEPTH_PASS = 0x0B96
+	RGB16 = 0x8054
+	ONE = 1
+	STENCIL_BUFFER_BIT = 0x00000400
+	STENCIL = 0x1802
+	FRONT_RIGHT = 0x0401
+	READ_BUFFER = 0x0C02
+	BACK = 0x0405
+	DEPTH_BUFFER_BIT = 0x00000100
+	UNSIGNED_SHORT = 0x1403
+	POLYGON_OFFSET_FILL = 0x8037
+	UNPACK_LSB_FIRST = 0x0CF1
+	ALPHA = 0x1906
+	INVALID_VALUE = 0x0501
+	SET = 0x150F
+	RIGHT = 0x0407
+	LINE_WIDTH_GRANULARITY = 0x0B23
+	NEAREST_MIPMAP_LINEAR = 0x2702
+	POINTS = 0x0000
+	FILL = 0x1B02
+	AND_REVERSE = 0x1502
+	CLEAR = 0x1500
+	DEPTH_FUNC = 0x0B74
+	TEXTURE_WIDTH = 0x1000
+	CCW = 0x0901
+	GEQUAL = 0x0206
+	OR_REVERSE = 0x150B
+	BLUE = 0x1905
+	RGB5_A1 = 0x8057
+	EXTENSIONS = 0x1F03
+	DRAW_BUFFER = 0x0C01
+	DONT_CARE = 0x1100
+	LEFT = 0x0406
+	PROXY_TEXTURE_1D = 0x8063
+	DOUBLE = 0x140A
+	TRIANGLE_FAN = 0x0006
+	POLYGON_OFFSET_LINE = 0x2A02
+	NONE = 0
+	TEXTURE_GREEN_SIZE = 0x805D
+	CW = 0x0900
+	POINT_SIZE_RANGE = 0x0B12
+	BLEND_DST = 0x0BE0
+	FRONT_FACE = 0x0B46
+	DOUBLEBUFFER = 0x0C32
+	BACK_LEFT = 0x0402
+	VERSION = 0x1F02
+	INCR = 0x1E02
+	ONE_MINUS_DST_COLOR = 0x0307
+	COLOR_BUFFER_BIT = 0x00004000
+	INVERT = 0x150A
+	ONE_MINUS_SRC_COLOR = 0x0301
+	POINT = 0x1B00
+	LEQUAL = 0x0203
+	PACK_LSB_FIRST = 0x0D01
+	GREATER = 0x0204
+	TEXTURE_BINDING_1D = 0x8068
+	UNSIGNED_BYTE = 0x1401
+	NEAREST = 0x2600
+	TEXTURE_MAG_FILTER = 0x2800
+	KEEP = 0x1E00
+	POLYGON_OFFSET_FACTOR = 0x8038
+	PROXY_TEXTURE_2D = 0x8064
+	PACK_SWAP_BYTES = 0x0D00
+	RGBA2 = 0x8055
+	ONE_MINUS_DST_ALPHA = 0x0305
+	CULL_FACE_MODE = 0x0B45
+	RGBA4 = 0x8056
+	UNSIGNED_INT = 0x1405
+	NOOP = 0x1505
+	RGBA8 = 0x8058
+	TEXTURE_BORDER_COLOR = 0x1004
+	AND = 0x1501
+	RGBA16 = 0x805B
+)
+// VERSION_1_2
+const (
+	UNSIGNED_INT_8_8_8_8_REV = 0x8367
+	UNSIGNED_SHORT_5_5_5_1 = 0x8034
+	BGRA = 0x80E1
+	PROXY_TEXTURE_3D = 0x8070
+	TEXTURE_DEPTH = 0x8071
+	SMOOTH_POINT_SIZE_GRANULARITY = 0x0B13
+	MAX_3D_TEXTURE_SIZE = 0x8073
+	MAX_ELEMENTS_VERTICES = 0x80E8
+	SMOOTH_POINT_SIZE_RANGE = 0x0B12
+	UNSIGNED_SHORT_4_4_4_4 = 0x8033
+	TEXTURE_MAX_LOD = 0x813B
+	MAX_ELEMENTS_INDICES = 0x80E9
+	TEXTURE_BINDING_3D = 0x806A
+	CLAMP_TO_EDGE = 0x812F
+	TEXTURE_3D = 0x806F
+	PACK_SKIP_IMAGES = 0x806B
+	TEXTURE_MAX_LEVEL = 0x813D
+	UNSIGNED_BYTE_3_3_2 = 0x8032
+	ALIASED_LINE_WIDTH_RANGE = 0x846E
+	UNSIGNED_INT_2_10_10_10_REV = 0x8368
+	UNPACK_IMAGE_HEIGHT = 0x806E
+	UNSIGNED_SHORT_5_6_5_REV = 0x8364
+	UNSIGNED_SHORT_1_5_5_5_REV = 0x8366
+	UNSIGNED_BYTE_2_3_3_REV = 0x8362
+	UNSIGNED_SHORT_4_4_4_4_REV = 0x8365
+	UNSIGNED_INT_8_8_8_8 = 0x8035
+	UNSIGNED_SHORT_5_6_5 = 0x8363
+	TEXTURE_BASE_LEVEL = 0x813C
+	SMOOTH_LINE_WIDTH_GRANULARITY = 0x0B23
+	TEXTURE_WRAP_R = 0x8072
+	UNPACK_SKIP_IMAGES = 0x806D
+	PACK_IMAGE_HEIGHT = 0x806C
+	TEXTURE_MIN_LOD = 0x813A
+	BGR = 0x80E0
+	UNSIGNED_INT_10_10_10_2 = 0x8036
+	SMOOTH_LINE_WIDTH_RANGE = 0x0B22
+)
+// VERSION_1_3
+const (
+	TEXTURE28 = 0x84DC
+	TEXTURE29 = 0x84DD
+	TEXTURE22 = 0x84D6
+	TEXTURE23 = 0x84D7
+	TEXTURE20 = 0x84D4
+	TEXTURE21 = 0x84D5
+	TEXTURE26 = 0x84DA
+	TEXTURE27 = 0x84DB
+	TEXTURE24 = 0x84D8
+	TEXTURE25 = 0x84D9
+	SAMPLE_BUFFERS = 0x80A8
+	TEXTURE19 = 0x84D3
+	COMPRESSED_RGB = 0x84ED
+	TEXTURE18 = 0x84D2
+	TEXTURE13 = 0x84CD
+	TEXTURE12 = 0x84CC
+	TEXTURE11 = 0x84CB
+	TEXTURE10 = 0x84CA
+	TEXTURE17 = 0x84D1
+	TEXTURE16 = 0x84D0
+	TEXTURE15 = 0x84CF
+	TEXTURE14 = 0x84CE
+	SAMPLES = 0x80A9
+	TEXTURE_CUBE_MAP_NEGATIVE_Z = 0x851A
+	TEXTURE_CUBE_MAP_NEGATIVE_X = 0x8516
+	TEXTURE_CUBE_MAP_NEGATIVE_Y = 0x8518
+	TEXTURE_COMPRESSION_HINT = 0x84EF
+	TEXTURE_CUBE_MAP = 0x8513
+	CLAMP_TO_BORDER = 0x812D
+	TEXTURE_BINDING_CUBE_MAP = 0x8514
+	SAMPLE_ALPHA_TO_ONE = 0x809F
+	COMPRESSED_RGBA = 0x84EE
+	MAX_CUBE_MAP_TEXTURE_SIZE = 0x851C
+	SAMPLE_COVERAGE_INVERT = 0x80AB
+	TEXTURE4 = 0x84C4
+	TEXTURE5 = 0x84C5
+	TEXTURE6 = 0x84C6
+	TEXTURE7 = 0x84C7
+	TEXTURE0 = 0x84C0
+	TEXTURE1 = 0x84C1
+	TEXTURE2 = 0x84C2
+	TEXTURE3 = 0x84C3
+	TEXTURE8 = 0x84C8
+	TEXTURE9 = 0x84C9
+	SAMPLE_COVERAGE_VALUE = 0x80AA
+	TEXTURE_CUBE_MAP_POSITIVE_Z = 0x8519
+	TEXTURE_CUBE_MAP_POSITIVE_X = 0x8515
+	TEXTURE_CUBE_MAP_POSITIVE_Y = 0x8517
+	ACTIVE_TEXTURE = 0x84E0
+	NUM_COMPRESSED_TEXTURE_FORMATS = 0x86A2
+	TEXTURE_COMPRESSED = 0x86A1
+	PROXY_TEXTURE_CUBE_MAP = 0x851B
+	SAMPLE_COVERAGE = 0x80A0
+	MULTISAMPLE = 0x809D
+	COMPRESSED_TEXTURE_FORMATS = 0x86A3
+	TEXTURE_COMPRESSED_IMAGE_SIZE = 0x86A0
+	TEXTURE31 = 0x84DF
+	TEXTURE30 = 0x84DE
+	SAMPLE_ALPHA_TO_COVERAGE = 0x809E
+)
 // VERSION_1_4
 
 // http://www.opengl.org/sdk/docs/man3/xhtml/glBlendFuncSeparate.xml
@@ -4204,32 +3805,32 @@ func ProvokingVertex(mode Enum)  {
 	C.goglProvokingVertex((C.GLenum)(mode))
 }
 // http://www.opengl.org/sdk/docs/man3/xhtml/glFenceSync.xml
-func FenceSync(condition Enum, flags Bitfield) Pointer {
-	return (Pointer)(C.goglFenceSync((C.GLenum)(condition), (C.GLbitfield)(flags)))
+func FenceSync(condition Enum, flags Bitfield) Sync {
+	return (Sync)(C.goglFenceSync((C.GLenum)(condition), (C.GLbitfield)(flags)))
 }
 // http://www.opengl.org/sdk/docs/man3/xhtml/glIsSync.xml
-func IsSync(sync Pointer) Boolean {
-	return (Boolean)(C.goglIsSync((unsafe.Pointer)(sync)))
+func IsSync(sync Sync) Boolean {
+	return (Boolean)(C.goglIsSync((C.GLsync)(sync)))
 }
 // http://www.opengl.org/sdk/docs/man3/xhtml/glDeleteSync.xml
-func DeleteSync(sync Pointer)  {
-	C.goglDeleteSync((unsafe.Pointer)(sync))
+func DeleteSync(sync Sync)  {
+	C.goglDeleteSync((C.GLsync)(sync))
 }
 // http://www.opengl.org/sdk/docs/man3/xhtml/glClientWaitSync.xml
-func ClientWaitSync(sync Pointer, flags Bitfield, timeout Uint64) Enum {
-	return (Enum)(C.goglClientWaitSync((unsafe.Pointer)(sync), (C.GLbitfield)(flags), (C.GLuint64)(timeout)))
+func ClientWaitSync(sync Sync, flags Bitfield, timeout Uint64) Enum {
+	return (Enum)(C.goglClientWaitSync((C.GLsync)(sync), (C.GLbitfield)(flags), (C.GLuint64)(timeout)))
 }
 // http://www.opengl.org/sdk/docs/man3/xhtml/glWaitSync.xml
-func WaitSync(sync Pointer, flags Bitfield, timeout Uint64)  {
-	C.goglWaitSync((unsafe.Pointer)(sync), (C.GLbitfield)(flags), (C.GLuint64)(timeout))
+func WaitSync(sync Sync, flags Bitfield, timeout Uint64)  {
+	C.goglWaitSync((C.GLsync)(sync), (C.GLbitfield)(flags), (C.GLuint64)(timeout))
 }
 // http://www.opengl.org/sdk/docs/man3/xhtml/glGetInteger64v.xml
 func GetInteger64v(pname Enum, params *Int64)  {
 	C.goglGetInteger64v((C.GLenum)(pname), (*C.GLint64)(params))
 }
 // http://www.opengl.org/sdk/docs/man3/xhtml/glGetSynciv.xml
-func GetSynciv(sync Pointer, pname Enum, bufSize Sizei, length *Sizei, values *Int)  {
-	C.goglGetSynciv((unsafe.Pointer)(sync), (C.GLenum)(pname), (C.GLsizei)(bufSize), (*C.GLsizei)(length), (*C.GLint)(values))
+func GetSynciv(sync Sync, pname Enum, bufSize Sizei, length *Sizei, values *Int)  {
+	C.goglGetSynciv((C.GLsync)(sync), (C.GLenum)(pname), (C.GLsizei)(bufSize), (*C.GLsizei)(length), (*C.GLint)(values))
 }
 // http://www.opengl.org/sdk/docs/man3/xhtml/glTexImage2DMultisample.xml
 func TexImage2DMultisample(target Enum, samples Sizei, internalformat Int, width Sizei, height Sizei, fixedsamplelocations Boolean)  {
@@ -4869,6 +4470,434 @@ func GetActiveUniformBlockName(program Uint, uniformBlockIndex Uint, bufSize Siz
 func UniformBlockBinding(program Uint, uniformBlockIndex Uint, uniformBlockBinding Uint)  {
 	C.goglUniformBlockBinding((C.GLuint)(program), (C.GLuint)(uniformBlockIndex), (C.GLuint)(uniformBlockBinding))
 }
+// VERSION_2_1
+
+// http://www.opengl.org/sdk/docs/man3/xhtml/glUniformMatrix2x3fv.xml
+func UniformMatrix2x3fv(location Int, count Sizei, transpose Boolean, value *Float)  {
+	C.goglUniformMatrix2x3fv((C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(transpose), (*C.GLfloat)(value))
+}
+// http://www.opengl.org/sdk/docs/man3/xhtml/glUniformMatrix3x2fv.xml
+func UniformMatrix3x2fv(location Int, count Sizei, transpose Boolean, value *Float)  {
+	C.goglUniformMatrix3x2fv((C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(transpose), (*C.GLfloat)(value))
+}
+// http://www.opengl.org/sdk/docs/man3/xhtml/glUniformMatrix2x4fv.xml
+func UniformMatrix2x4fv(location Int, count Sizei, transpose Boolean, value *Float)  {
+	C.goglUniformMatrix2x4fv((C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(transpose), (*C.GLfloat)(value))
+}
+// http://www.opengl.org/sdk/docs/man3/xhtml/glUniformMatrix4x2fv.xml
+func UniformMatrix4x2fv(location Int, count Sizei, transpose Boolean, value *Float)  {
+	C.goglUniformMatrix4x2fv((C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(transpose), (*C.GLfloat)(value))
+}
+// http://www.opengl.org/sdk/docs/man3/xhtml/glUniformMatrix3x4fv.xml
+func UniformMatrix3x4fv(location Int, count Sizei, transpose Boolean, value *Float)  {
+	C.goglUniformMatrix3x4fv((C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(transpose), (*C.GLfloat)(value))
+}
+// http://www.opengl.org/sdk/docs/man3/xhtml/glUniformMatrix4x3fv.xml
+func UniformMatrix4x3fv(location Int, count Sizei, transpose Boolean, value *Float)  {
+	C.goglUniformMatrix4x3fv((C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(transpose), (*C.GLfloat)(value))
+}
+// VERSION_2_0
+
+// http://www.opengl.org/sdk/docs/man3/xhtml/glBlendEquationSeparate.xml
+func BlendEquationSeparate(modeRGB Enum, modeAlpha Enum)  {
+	C.goglBlendEquationSeparate((C.GLenum)(modeRGB), (C.GLenum)(modeAlpha))
+}
+// http://www.opengl.org/sdk/docs/man3/xhtml/glDrawBuffers.xml
+func DrawBuffers(n Sizei, bufs *Enum)  {
+	C.goglDrawBuffers((C.GLsizei)(n), (*C.GLenum)(bufs))
+}
+// http://www.opengl.org/sdk/docs/man3/xhtml/glStencilOpSeparate.xml
+func StencilOpSeparate(face Enum, sfail Enum, dpfail Enum, dppass Enum)  {
+	C.goglStencilOpSeparate((C.GLenum)(face), (C.GLenum)(sfail), (C.GLenum)(dpfail), (C.GLenum)(dppass))
+}
+// http://www.opengl.org/sdk/docs/man3/xhtml/glStencilFuncSeparate.xml
+func StencilFuncSeparate(face Enum, func_ Enum, ref Int, mask Uint)  {
+	C.goglStencilFuncSeparate((C.GLenum)(face), (C.GLenum)(func_), (C.GLint)(ref), (C.GLuint)(mask))
+}
+// http://www.opengl.org/sdk/docs/man3/xhtml/glStencilMaskSeparate.xml
+func StencilMaskSeparate(face Enum, mask Uint)  {
+	C.goglStencilMaskSeparate((C.GLenum)(face), (C.GLuint)(mask))
+}
+// http://www.opengl.org/sdk/docs/man3/xhtml/glAttachShader.xml
+func AttachShader(program Uint, shader Uint)  {
+	C.goglAttachShader((C.GLuint)(program), (C.GLuint)(shader))
+}
+// http://www.opengl.org/sdk/docs/man3/xhtml/glBindAttribLocation.xml
+func BindAttribLocation(program Uint, index Uint, name *Char)  {
+	C.goglBindAttribLocation((C.GLuint)(program), (C.GLuint)(index), (*C.GLchar)(name))
+}
+// http://www.opengl.org/sdk/docs/man3/xhtml/glCompileShader.xml
+func CompileShader(shader Uint)  {
+	C.goglCompileShader((C.GLuint)(shader))
+}
+// http://www.opengl.org/sdk/docs/man3/xhtml/glCreateProgram.xml
+func CreateProgram() Uint {
+	return (Uint)(C.goglCreateProgram())
+}
+// http://www.opengl.org/sdk/docs/man3/xhtml/glCreateShader.xml
+func CreateShader(type_ Enum) Uint {
+	return (Uint)(C.goglCreateShader((C.GLenum)(type_)))
+}
+// http://www.opengl.org/sdk/docs/man3/xhtml/glDeleteProgram.xml
+func DeleteProgram(program Uint)  {
+	C.goglDeleteProgram((C.GLuint)(program))
+}
+// http://www.opengl.org/sdk/docs/man3/xhtml/glDeleteShader.xml
+func DeleteShader(shader Uint)  {
+	C.goglDeleteShader((C.GLuint)(shader))
+}
+// http://www.opengl.org/sdk/docs/man3/xhtml/glDetachShader.xml
+func DetachShader(program Uint, shader Uint)  {
+	C.goglDetachShader((C.GLuint)(program), (C.GLuint)(shader))
+}
+// http://www.opengl.org/sdk/docs/man3/xhtml/glDisableVertexAttribArray.xml
+func DisableVertexAttribArray(index Uint)  {
+	C.goglDisableVertexAttribArray((C.GLuint)(index))
+}
+// http://www.opengl.org/sdk/docs/man3/xhtml/glEnableVertexAttribArray.xml
+func EnableVertexAttribArray(index Uint)  {
+	C.goglEnableVertexAttribArray((C.GLuint)(index))
+}
+// http://www.opengl.org/sdk/docs/man3/xhtml/glGetActiveAttrib.xml
+func GetActiveAttrib(program Uint, index Uint, bufSize Sizei, length *Sizei, size *Int, type_ *Enum, name *Char)  {
+	C.goglGetActiveAttrib((C.GLuint)(program), (C.GLuint)(index), (C.GLsizei)(bufSize), (*C.GLsizei)(length), (*C.GLint)(size), (*C.GLenum)(type_), (*C.GLchar)(name))
+}
+// http://www.opengl.org/sdk/docs/man3/xhtml/glGetActiveUniform.xml
+func GetActiveUniform(program Uint, index Uint, bufSize Sizei, length *Sizei, size *Int, type_ *Enum, name *Char)  {
+	C.goglGetActiveUniform((C.GLuint)(program), (C.GLuint)(index), (C.GLsizei)(bufSize), (*C.GLsizei)(length), (*C.GLint)(size), (*C.GLenum)(type_), (*C.GLchar)(name))
+}
+// http://www.opengl.org/sdk/docs/man3/xhtml/glGetAttachedShaders.xml
+func GetAttachedShaders(program Uint, maxCount Sizei, count *Sizei, obj *Uint)  {
+	C.goglGetAttachedShaders((C.GLuint)(program), (C.GLsizei)(maxCount), (*C.GLsizei)(count), (*C.GLuint)(obj))
+}
+// http://www.opengl.org/sdk/docs/man3/xhtml/glGetAttribLocation.xml
+func GetAttribLocation(program Uint, name *Char) Int {
+	return (Int)(C.goglGetAttribLocation((C.GLuint)(program), (*C.GLchar)(name)))
+}
+// http://www.opengl.org/sdk/docs/man3/xhtml/glGetProgramiv.xml
+func GetProgramiv(program Uint, pname Enum, params *Int)  {
+	C.goglGetProgramiv((C.GLuint)(program), (C.GLenum)(pname), (*C.GLint)(params))
+}
+// http://www.opengl.org/sdk/docs/man3/xhtml/glGetProgramInfoLog.xml
+func GetProgramInfoLog(program Uint, bufSize Sizei, length *Sizei, infoLog *Char)  {
+	C.goglGetProgramInfoLog((C.GLuint)(program), (C.GLsizei)(bufSize), (*C.GLsizei)(length), (*C.GLchar)(infoLog))
+}
+// http://www.opengl.org/sdk/docs/man3/xhtml/glGetShaderiv.xml
+func GetShaderiv(shader Uint, pname Enum, params *Int)  {
+	C.goglGetShaderiv((C.GLuint)(shader), (C.GLenum)(pname), (*C.GLint)(params))
+}
+// http://www.opengl.org/sdk/docs/man3/xhtml/glGetShaderInfoLog.xml
+func GetShaderInfoLog(shader Uint, bufSize Sizei, length *Sizei, infoLog *Char)  {
+	C.goglGetShaderInfoLog((C.GLuint)(shader), (C.GLsizei)(bufSize), (*C.GLsizei)(length), (*C.GLchar)(infoLog))
+}
+// http://www.opengl.org/sdk/docs/man3/xhtml/glGetShaderSource.xml
+func GetShaderSource(shader Uint, bufSize Sizei, length *Sizei, source *Char)  {
+	C.goglGetShaderSource((C.GLuint)(shader), (C.GLsizei)(bufSize), (*C.GLsizei)(length), (*C.GLchar)(source))
+}
+// http://www.opengl.org/sdk/docs/man3/xhtml/glGetUniformLocation.xml
+func GetUniformLocation(program Uint, name *Char) Int {
+	return (Int)(C.goglGetUniformLocation((C.GLuint)(program), (*C.GLchar)(name)))
+}
+// http://www.opengl.org/sdk/docs/man3/xhtml/glGetUniformfv.xml
+func GetUniformfv(program Uint, location Int, params *Float)  {
+	C.goglGetUniformfv((C.GLuint)(program), (C.GLint)(location), (*C.GLfloat)(params))
+}
+// http://www.opengl.org/sdk/docs/man3/xhtml/glGetUniformiv.xml
+func GetUniformiv(program Uint, location Int, params *Int)  {
+	C.goglGetUniformiv((C.GLuint)(program), (C.GLint)(location), (*C.GLint)(params))
+}
+// http://www.opengl.org/sdk/docs/man3/xhtml/glGetVertexAttribdv.xml
+func GetVertexAttribdv(index Uint, pname Enum, params *Double)  {
+	C.goglGetVertexAttribdv((C.GLuint)(index), (C.GLenum)(pname), (*C.GLdouble)(params))
+}
+// http://www.opengl.org/sdk/docs/man3/xhtml/glGetVertexAttribfv.xml
+func GetVertexAttribfv(index Uint, pname Enum, params *Float)  {
+	C.goglGetVertexAttribfv((C.GLuint)(index), (C.GLenum)(pname), (*C.GLfloat)(params))
+}
+// http://www.opengl.org/sdk/docs/man3/xhtml/glGetVertexAttribiv.xml
+func GetVertexAttribiv(index Uint, pname Enum, params *Int)  {
+	C.goglGetVertexAttribiv((C.GLuint)(index), (C.GLenum)(pname), (*C.GLint)(params))
+}
+// http://www.opengl.org/sdk/docs/man3/xhtml/glGetVertexAttribPointerv.xml
+func GetVertexAttribPointerv(index Uint, pname Enum, pointer *Pointer)  {
+	C.goglGetVertexAttribPointerv((C.GLuint)(index), (C.GLenum)(pname), (*unsafe.Pointer)(pointer))
+}
+// http://www.opengl.org/sdk/docs/man3/xhtml/glIsProgram.xml
+func IsProgram(program Uint) Boolean {
+	return (Boolean)(C.goglIsProgram((C.GLuint)(program)))
+}
+// http://www.opengl.org/sdk/docs/man3/xhtml/glIsShader.xml
+func IsShader(shader Uint) Boolean {
+	return (Boolean)(C.goglIsShader((C.GLuint)(shader)))
+}
+// http://www.opengl.org/sdk/docs/man3/xhtml/glLinkProgram.xml
+func LinkProgram(program Uint)  {
+	C.goglLinkProgram((C.GLuint)(program))
+}
+// http://www.opengl.org/sdk/docs/man3/xhtml/glShaderSource.xml
+func ShaderSource(shader Uint, count Sizei, string_ **Char, length *Int)  {
+	C.goglShaderSource((C.GLuint)(shader), (C.GLsizei)(count), (**C.GLchar)(unsafe.Pointer(string_)), (*C.GLint)(length))
+}
+// http://www.opengl.org/sdk/docs/man3/xhtml/glUseProgram.xml
+func UseProgram(program Uint)  {
+	C.goglUseProgram((C.GLuint)(program))
+}
+// http://www.opengl.org/sdk/docs/man3/xhtml/glUniform1f.xml
+func Uniform1f(location Int, v0 Float)  {
+	C.goglUniform1f((C.GLint)(location), (C.GLfloat)(v0))
+}
+// http://www.opengl.org/sdk/docs/man3/xhtml/glUniform2f.xml
+func Uniform2f(location Int, v0 Float, v1 Float)  {
+	C.goglUniform2f((C.GLint)(location), (C.GLfloat)(v0), (C.GLfloat)(v1))
+}
+// http://www.opengl.org/sdk/docs/man3/xhtml/glUniform3f.xml
+func Uniform3f(location Int, v0 Float, v1 Float, v2 Float)  {
+	C.goglUniform3f((C.GLint)(location), (C.GLfloat)(v0), (C.GLfloat)(v1), (C.GLfloat)(v2))
+}
+// http://www.opengl.org/sdk/docs/man3/xhtml/glUniform4f.xml
+func Uniform4f(location Int, v0 Float, v1 Float, v2 Float, v3 Float)  {
+	C.goglUniform4f((C.GLint)(location), (C.GLfloat)(v0), (C.GLfloat)(v1), (C.GLfloat)(v2), (C.GLfloat)(v3))
+}
+// http://www.opengl.org/sdk/docs/man3/xhtml/glUniform1i.xml
+func Uniform1i(location Int, v0 Int)  {
+	C.goglUniform1i((C.GLint)(location), (C.GLint)(v0))
+}
+// http://www.opengl.org/sdk/docs/man3/xhtml/glUniform2i.xml
+func Uniform2i(location Int, v0 Int, v1 Int)  {
+	C.goglUniform2i((C.GLint)(location), (C.GLint)(v0), (C.GLint)(v1))
+}
+// http://www.opengl.org/sdk/docs/man3/xhtml/glUniform3i.xml
+func Uniform3i(location Int, v0 Int, v1 Int, v2 Int)  {
+	C.goglUniform3i((C.GLint)(location), (C.GLint)(v0), (C.GLint)(v1), (C.GLint)(v2))
+}
+// http://www.opengl.org/sdk/docs/man3/xhtml/glUniform4i.xml
+func Uniform4i(location Int, v0 Int, v1 Int, v2 Int, v3 Int)  {
+	C.goglUniform4i((C.GLint)(location), (C.GLint)(v0), (C.GLint)(v1), (C.GLint)(v2), (C.GLint)(v3))
+}
+// http://www.opengl.org/sdk/docs/man3/xhtml/glUniform1fv.xml
+func Uniform1fv(location Int, count Sizei, value *Float)  {
+	C.goglUniform1fv((C.GLint)(location), (C.GLsizei)(count), (*C.GLfloat)(value))
+}
+// http://www.opengl.org/sdk/docs/man3/xhtml/glUniform2fv.xml
+func Uniform2fv(location Int, count Sizei, value *Float)  {
+	C.goglUniform2fv((C.GLint)(location), (C.GLsizei)(count), (*C.GLfloat)(value))
+}
+// http://www.opengl.org/sdk/docs/man3/xhtml/glUniform3fv.xml
+func Uniform3fv(location Int, count Sizei, value *Float)  {
+	C.goglUniform3fv((C.GLint)(location), (C.GLsizei)(count), (*C.GLfloat)(value))
+}
+// http://www.opengl.org/sdk/docs/man3/xhtml/glUniform4fv.xml
+func Uniform4fv(location Int, count Sizei, value *Float)  {
+	C.goglUniform4fv((C.GLint)(location), (C.GLsizei)(count), (*C.GLfloat)(value))
+}
+// http://www.opengl.org/sdk/docs/man3/xhtml/glUniform1iv.xml
+func Uniform1iv(location Int, count Sizei, value *Int)  {
+	C.goglUniform1iv((C.GLint)(location), (C.GLsizei)(count), (*C.GLint)(value))
+}
+// http://www.opengl.org/sdk/docs/man3/xhtml/glUniform2iv.xml
+func Uniform2iv(location Int, count Sizei, value *Int)  {
+	C.goglUniform2iv((C.GLint)(location), (C.GLsizei)(count), (*C.GLint)(value))
+}
+// http://www.opengl.org/sdk/docs/man3/xhtml/glUniform3iv.xml
+func Uniform3iv(location Int, count Sizei, value *Int)  {
+	C.goglUniform3iv((C.GLint)(location), (C.GLsizei)(count), (*C.GLint)(value))
+}
+// http://www.opengl.org/sdk/docs/man3/xhtml/glUniform4iv.xml
+func Uniform4iv(location Int, count Sizei, value *Int)  {
+	C.goglUniform4iv((C.GLint)(location), (C.GLsizei)(count), (*C.GLint)(value))
+}
+// http://www.opengl.org/sdk/docs/man3/xhtml/glUniformMatrix2fv.xml
+func UniformMatrix2fv(location Int, count Sizei, transpose Boolean, value *Float)  {
+	C.goglUniformMatrix2fv((C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(transpose), (*C.GLfloat)(value))
+}
+// http://www.opengl.org/sdk/docs/man3/xhtml/glUniformMatrix3fv.xml
+func UniformMatrix3fv(location Int, count Sizei, transpose Boolean, value *Float)  {
+	C.goglUniformMatrix3fv((C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(transpose), (*C.GLfloat)(value))
+}
+// http://www.opengl.org/sdk/docs/man3/xhtml/glUniformMatrix4fv.xml
+func UniformMatrix4fv(location Int, count Sizei, transpose Boolean, value *Float)  {
+	C.goglUniformMatrix4fv((C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(transpose), (*C.GLfloat)(value))
+}
+// http://www.opengl.org/sdk/docs/man3/xhtml/glValidateProgram.xml
+func ValidateProgram(program Uint)  {
+	C.goglValidateProgram((C.GLuint)(program))
+}
+// http://www.opengl.org/sdk/docs/man3/xhtml/glVertexAttrib1d.xml
+func VertexAttrib1d(index Uint, x Double)  {
+	C.goglVertexAttrib1d((C.GLuint)(index), (C.GLdouble)(x))
+}
+// http://www.opengl.org/sdk/docs/man3/xhtml/glVertexAttrib1dv.xml
+func VertexAttrib1dv(index Uint, v *Double)  {
+	C.goglVertexAttrib1dv((C.GLuint)(index), (*C.GLdouble)(v))
+}
+// http://www.opengl.org/sdk/docs/man3/xhtml/glVertexAttrib1f.xml
+func VertexAttrib1f(index Uint, x Float)  {
+	C.goglVertexAttrib1f((C.GLuint)(index), (C.GLfloat)(x))
+}
+// http://www.opengl.org/sdk/docs/man3/xhtml/glVertexAttrib1fv.xml
+func VertexAttrib1fv(index Uint, v *Float)  {
+	C.goglVertexAttrib1fv((C.GLuint)(index), (*C.GLfloat)(v))
+}
+// http://www.opengl.org/sdk/docs/man3/xhtml/glVertexAttrib1s.xml
+func VertexAttrib1s(index Uint, x Short)  {
+	C.goglVertexAttrib1s((C.GLuint)(index), (C.GLshort)(x))
+}
+// http://www.opengl.org/sdk/docs/man3/xhtml/glVertexAttrib1sv.xml
+func VertexAttrib1sv(index Uint, v *Short)  {
+	C.goglVertexAttrib1sv((C.GLuint)(index), (*C.GLshort)(v))
+}
+// http://www.opengl.org/sdk/docs/man3/xhtml/glVertexAttrib2d.xml
+func VertexAttrib2d(index Uint, x Double, y Double)  {
+	C.goglVertexAttrib2d((C.GLuint)(index), (C.GLdouble)(x), (C.GLdouble)(y))
+}
+// http://www.opengl.org/sdk/docs/man3/xhtml/glVertexAttrib2dv.xml
+func VertexAttrib2dv(index Uint, v *Double)  {
+	C.goglVertexAttrib2dv((C.GLuint)(index), (*C.GLdouble)(v))
+}
+// http://www.opengl.org/sdk/docs/man3/xhtml/glVertexAttrib2f.xml
+func VertexAttrib2f(index Uint, x Float, y Float)  {
+	C.goglVertexAttrib2f((C.GLuint)(index), (C.GLfloat)(x), (C.GLfloat)(y))
+}
+// http://www.opengl.org/sdk/docs/man3/xhtml/glVertexAttrib2fv.xml
+func VertexAttrib2fv(index Uint, v *Float)  {
+	C.goglVertexAttrib2fv((C.GLuint)(index), (*C.GLfloat)(v))
+}
+// http://www.opengl.org/sdk/docs/man3/xhtml/glVertexAttrib2s.xml
+func VertexAttrib2s(index Uint, x Short, y Short)  {
+	C.goglVertexAttrib2s((C.GLuint)(index), (C.GLshort)(x), (C.GLshort)(y))
+}
+// http://www.opengl.org/sdk/docs/man3/xhtml/glVertexAttrib2sv.xml
+func VertexAttrib2sv(index Uint, v *Short)  {
+	C.goglVertexAttrib2sv((C.GLuint)(index), (*C.GLshort)(v))
+}
+// http://www.opengl.org/sdk/docs/man3/xhtml/glVertexAttrib3d.xml
+func VertexAttrib3d(index Uint, x Double, y Double, z Double)  {
+	C.goglVertexAttrib3d((C.GLuint)(index), (C.GLdouble)(x), (C.GLdouble)(y), (C.GLdouble)(z))
+}
+// http://www.opengl.org/sdk/docs/man3/xhtml/glVertexAttrib3dv.xml
+func VertexAttrib3dv(index Uint, v *Double)  {
+	C.goglVertexAttrib3dv((C.GLuint)(index), (*C.GLdouble)(v))
+}
+// http://www.opengl.org/sdk/docs/man3/xhtml/glVertexAttrib3f.xml
+func VertexAttrib3f(index Uint, x Float, y Float, z Float)  {
+	C.goglVertexAttrib3f((C.GLuint)(index), (C.GLfloat)(x), (C.GLfloat)(y), (C.GLfloat)(z))
+}
+// http://www.opengl.org/sdk/docs/man3/xhtml/glVertexAttrib3fv.xml
+func VertexAttrib3fv(index Uint, v *Float)  {
+	C.goglVertexAttrib3fv((C.GLuint)(index), (*C.GLfloat)(v))
+}
+// http://www.opengl.org/sdk/docs/man3/xhtml/glVertexAttrib3s.xml
+func VertexAttrib3s(index Uint, x Short, y Short, z Short)  {
+	C.goglVertexAttrib3s((C.GLuint)(index), (C.GLshort)(x), (C.GLshort)(y), (C.GLshort)(z))
+}
+// http://www.opengl.org/sdk/docs/man3/xhtml/glVertexAttrib3sv.xml
+func VertexAttrib3sv(index Uint, v *Short)  {
+	C.goglVertexAttrib3sv((C.GLuint)(index), (*C.GLshort)(v))
+}
+// http://www.opengl.org/sdk/docs/man3/xhtml/glVertexAttrib4Nbv.xml
+func VertexAttrib4Nbv(index Uint, v *Byte)  {
+	C.goglVertexAttrib4Nbv((C.GLuint)(index), (*C.GLbyte)(v))
+}
+// http://www.opengl.org/sdk/docs/man3/xhtml/glVertexAttrib4Niv.xml
+func VertexAttrib4Niv(index Uint, v *Int)  {
+	C.goglVertexAttrib4Niv((C.GLuint)(index), (*C.GLint)(v))
+}
+// http://www.opengl.org/sdk/docs/man3/xhtml/glVertexAttrib4Nsv.xml
+func VertexAttrib4Nsv(index Uint, v *Short)  {
+	C.goglVertexAttrib4Nsv((C.GLuint)(index), (*C.GLshort)(v))
+}
+// http://www.opengl.org/sdk/docs/man3/xhtml/glVertexAttrib4Nub.xml
+func VertexAttrib4Nub(index Uint, x Ubyte, y Ubyte, z Ubyte, w Ubyte)  {
+	C.goglVertexAttrib4Nub((C.GLuint)(index), (C.GLubyte)(x), (C.GLubyte)(y), (C.GLubyte)(z), (C.GLubyte)(w))
+}
+// http://www.opengl.org/sdk/docs/man3/xhtml/glVertexAttrib4Nubv.xml
+func VertexAttrib4Nubv(index Uint, v *Ubyte)  {
+	C.goglVertexAttrib4Nubv((C.GLuint)(index), (*C.GLubyte)(v))
+}
+// http://www.opengl.org/sdk/docs/man3/xhtml/glVertexAttrib4Nuiv.xml
+func VertexAttrib4Nuiv(index Uint, v *Uint)  {
+	C.goglVertexAttrib4Nuiv((C.GLuint)(index), (*C.GLuint)(v))
+}
+// http://www.opengl.org/sdk/docs/man3/xhtml/glVertexAttrib4Nusv.xml
+func VertexAttrib4Nusv(index Uint, v *Ushort)  {
+	C.goglVertexAttrib4Nusv((C.GLuint)(index), (*C.GLushort)(v))
+}
+// http://www.opengl.org/sdk/docs/man3/xhtml/glVertexAttrib4bv.xml
+func VertexAttrib4bv(index Uint, v *Byte)  {
+	C.goglVertexAttrib4bv((C.GLuint)(index), (*C.GLbyte)(v))
+}
+// http://www.opengl.org/sdk/docs/man3/xhtml/glVertexAttrib4d.xml
+func VertexAttrib4d(index Uint, x Double, y Double, z Double, w Double)  {
+	C.goglVertexAttrib4d((C.GLuint)(index), (C.GLdouble)(x), (C.GLdouble)(y), (C.GLdouble)(z), (C.GLdouble)(w))
+}
+// http://www.opengl.org/sdk/docs/man3/xhtml/glVertexAttrib4dv.xml
+func VertexAttrib4dv(index Uint, v *Double)  {
+	C.goglVertexAttrib4dv((C.GLuint)(index), (*C.GLdouble)(v))
+}
+// http://www.opengl.org/sdk/docs/man3/xhtml/glVertexAttrib4f.xml
+func VertexAttrib4f(index Uint, x Float, y Float, z Float, w Float)  {
+	C.goglVertexAttrib4f((C.GLuint)(index), (C.GLfloat)(x), (C.GLfloat)(y), (C.GLfloat)(z), (C.GLfloat)(w))
+}
+// http://www.opengl.org/sdk/docs/man3/xhtml/glVertexAttrib4fv.xml
+func VertexAttrib4fv(index Uint, v *Float)  {
+	C.goglVertexAttrib4fv((C.GLuint)(index), (*C.GLfloat)(v))
+}
+// http://www.opengl.org/sdk/docs/man3/xhtml/glVertexAttrib4iv.xml
+func VertexAttrib4iv(index Uint, v *Int)  {
+	C.goglVertexAttrib4iv((C.GLuint)(index), (*C.GLint)(v))
+}
+// http://www.opengl.org/sdk/docs/man3/xhtml/glVertexAttrib4s.xml
+func VertexAttrib4s(index Uint, x Short, y Short, z Short, w Short)  {
+	C.goglVertexAttrib4s((C.GLuint)(index), (C.GLshort)(x), (C.GLshort)(y), (C.GLshort)(z), (C.GLshort)(w))
+}
+// http://www.opengl.org/sdk/docs/man3/xhtml/glVertexAttrib4sv.xml
+func VertexAttrib4sv(index Uint, v *Short)  {
+	C.goglVertexAttrib4sv((C.GLuint)(index), (*C.GLshort)(v))
+}
+// http://www.opengl.org/sdk/docs/man3/xhtml/glVertexAttrib4ubv.xml
+func VertexAttrib4ubv(index Uint, v *Ubyte)  {
+	C.goglVertexAttrib4ubv((C.GLuint)(index), (*C.GLubyte)(v))
+}
+// http://www.opengl.org/sdk/docs/man3/xhtml/glVertexAttrib4uiv.xml
+func VertexAttrib4uiv(index Uint, v *Uint)  {
+	C.goglVertexAttrib4uiv((C.GLuint)(index), (*C.GLuint)(v))
+}
+// http://www.opengl.org/sdk/docs/man3/xhtml/glVertexAttrib4usv.xml
+func VertexAttrib4usv(index Uint, v *Ushort)  {
+	C.goglVertexAttrib4usv((C.GLuint)(index), (*C.GLushort)(v))
+}
+// http://www.opengl.org/sdk/docs/man3/xhtml/glVertexAttribPointer.xml
+func VertexAttribPointer(index Uint, size Int, type_ Enum, normalized Boolean, stride Sizei, pointer Pointer)  {
+	C.goglVertexAttribPointer((C.GLuint)(index), (C.GLint)(size), (C.GLenum)(type_), (C.GLboolean)(normalized), (C.GLsizei)(stride), (unsafe.Pointer)(pointer))
+}
+func InitVersion32() error {
+	var ret C.int
+	if ret = C.init_VERSION_3_2(); ret != 0 {
+		return errors.New("unable to initialize VERSION_3_2")
+	}
+	return nil
+}
+func InitVersion33() error {
+	var ret C.int
+	if ret = C.init_VERSION_3_3(); ret != 0 {
+		return errors.New("unable to initialize VERSION_3_3")
+	}
+	return nil
+}
+func InitVersion30() error {
+	var ret C.int
+	if ret = C.init_VERSION_3_0(); ret != 0 {
+		return errors.New("unable to initialize VERSION_3_0")
+	}
+	return nil
+}
+func InitVersion31() error {
+	var ret C.int
+	if ret = C.init_VERSION_3_1(); ret != 0 {
+		return errors.New("unable to initialize VERSION_3_1")
+	}
+	return nil
+}
 func InitVersion21() error {
 	var ret C.int
 	if ret = C.init_VERSION_2_1(); ret != 0 {
@@ -4925,36 +4954,14 @@ func InitVersion13() error {
 	}
 	return nil
 }
-func InitVersion32() error {
-	var ret C.int
-	if ret = C.init_VERSION_3_2(); ret != 0 {
-		return errors.New("unable to initialize VERSION_3_2")
-	}
-	return nil
-}
-func InitVersion33() error {
-	var ret C.int
-	if ret = C.init_VERSION_3_3(); ret != 0 {
-		return errors.New("unable to initialize VERSION_3_3")
-	}
-	return nil
-}
-func InitVersion30() error {
-	var ret C.int
-	if ret = C.init_VERSION_3_0(); ret != 0 {
-		return errors.New("unable to initialize VERSION_3_0")
-	}
-	return nil
-}
-func InitVersion31() error {
-	var ret C.int
-	if ret = C.init_VERSION_3_1(); ret != 0 {
-		return errors.New("unable to initialize VERSION_3_1")
-	}
-	return nil
-}
 func Init() error {
 	var err error
+	if err = InitVersion21(); err != nil {
+		return err
+	}
+	if err = InitVersion20(); err != nil {
+		return err
+	}
 	if err = InitVersion14(); err != nil {
 		return err
 	}
@@ -4983,12 +4990,6 @@ func Init() error {
 		return err
 	}
 	if err = InitVersion31(); err != nil {
-		return err
-	}
-	if err = InitVersion21(); err != nil {
-		return err
-	}
-	if err = InitVersion20(); err != nil {
 		return err
 	}
 	return nil

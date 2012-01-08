@@ -186,8 +186,8 @@ func CTypeToGoType(cType string, out bool, mod ParamModifier) (goType, cgoType s
 		}
 		return
 	case "GLsync":
-		goType = "Pointer"
-		cgoType = "unsafe.Pointer"
+		goType = "Sync"
+		cgoType = "C.GLsync"
 		if mod == ParamModifierArray || mod == ParamModifierReference || out {
 			err = errors.New("Unsupported type.")
 		}

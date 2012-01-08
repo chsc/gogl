@@ -55,7 +55,7 @@ func main() {
 		})
 
 	// TODO: This output is temporary for debugging
-	if true {
+	if false {
 		fmt.Println("Passthrus:")
 		for cat, pts := range funcInfo.Passthru {
 			fmt.Printf(" %s:\n", cat)
