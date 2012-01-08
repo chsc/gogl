@@ -41,7 +41,7 @@ var (
 	funcAllDeprVersionsRE = regexp.MustCompile("^deprecated:\\s*([0-9\\. ]+)")
 	funcPassthruRE        = regexp.MustCompile("^passthru:\\s*(.*)")
 	funcNewCategoryRE     = regexp.MustCompile("^newcategory:\\s*(\\w+)")
-	funcIgnoreRE          = regexp.MustCompile("^[a-z\\-]+:.*")
+	//funcIgnoreRE          = regexp.MustCompile("^[a-z\\-]+:.*")
 )
 
 func ReadFunctionsFromFile(name string) (FunctionCategories, *FunctionsInfo, error) {
@@ -55,8 +55,9 @@ func ReadFunctionsFromFile(name string) (FunctionCategories, *FunctionsInfo, err
 
 func ReadFunctions(r io.Reader) (FunctionCategories, *FunctionsInfo, error) {
 	var currentFunction *Function = nil
+	currentCategory := "global"
 	functions := make(FunctionCategories)
-	finfo := &FunctionsInfo{make([]Version, 0, 8), make([]Version, 0, 8), make([]string, 0, 8), make([]string, 0, 16)}
+	finfo := &FunctionsInfo{make([]Version, 0, 8), make([]Version, 0, 8), make([]string, 0, 8), make(map[string][]string)}
 
 	br := bufio.NewReader(r)
 
@@ -92,13 +93,14 @@ func ReadFunctions(r io.Reader) (FunctionCategories, *FunctionsInfo, error) {
 			}
 			currentFunction.Parameters = append(currentFunction.Parameters, Parameter{param[1], param[2], out, modifier})
 		} else if category := funcCategoryRE.FindStringSubmatch(line); category != nil {
-			currentFunction.Category = category[1]
-			if functions[category[1]] == nil {
-				functions[category[1]] = make([]*Function, 0, 4)
+			currentCategory = category[1]
+			currentFunction.Category = currentCategory
+			if functions[currentCategory] == nil {
+				functions[currentCategory] = make([]*Function, 0, 4)
 			}
-			functions[category[1]] = append(functions[category[1]], currentFunction)
+			functions[currentCategory] = append(functions[currentCategory], currentFunction)
 		} else if subcategory := funcSubCategoryRE.FindStringSubmatch(line); subcategory != nil {
-			currentFunction.Category = subcategory[1]
+			currentFunction.SubCategory = subcategory[1]
 		} else if version := funcVersionRE.FindStringSubmatch(line); version != nil {
 			v, err := MakeVersionFromMajorMinorString(version[1], version[2])
 			if err != nil {
@@ -159,14 +161,35 @@ func ReadFunctions(r io.Reader) (FunctionCategories, *FunctionsInfo, error) {
 			}
 		} else if allCategories := funcAllCategoriesRE.FindStringSubmatch(line); allCategories != nil {
 			finfo.Categories = strings.Split(allCategories[1], " ")
-		} else if passthru := funcPassthruRE.FindStringSubmatch(line); passthru != nil{
-			finfo.Passthru = append(finfo.Passthru, passthru[1])
+		} else if passthru := funcPassthruRE.FindStringSubmatch(line); passthru != nil {
+			if _, ok := finfo.Passthru[currentCategory]; !ok {
+				finfo.Passthru[currentCategory] = make([]string, 0, 8)
+			}
+			finfo.Passthru[currentCategory] = append(finfo.Passthru[currentCategory], passthru[1])
 		} else if newcategory := funcNewCategoryRE.FindStringSubmatch(line); newcategory != nil {
-			functions[newcategory[1]] = make([]*Function, 0)
-		} else if funcIgnoreRE.MatchString(line) {
-			// ignore
+			currentCategory = newcategory[1]
+			functions[currentCategory] = make([]*Function, 0)
+		//} else if funcIgnoreRE.MatchString(line) {
+		//	// ignore
 		} else {
-			return functions, finfo, fmt.Errorf("Unable to parse line: '%s'", line)
+			fmt.Fprintf(os.Stderr, "WARNING: Unable to parse line '%s'\n", line)
+			//return functions, finfo, fmt.Errorf("Unable to parse line: '%s'", line)
+		}
+	}
+
+	// HACK: This is really ugly:
+	// Some ARB extensions are now part of the GL core (starting from version 3.0).
+	// Parse the passthru C comments for every "VERSION_*" category.
+	// If we found an extension in the comment add them.
+	for cat, pts := range finfo.Passthru {
+		if strings.HasPrefix(cat, "VERSION") {
+			for _, pt := range pts {
+				strippedCat := strings.Trim(pt, "\t */")
+				if foundFuncts, ok := functions[strippedCat]; ok {
+					fmt.Printf("Add extension %s to %s\n", strippedCat, cat)
+					functions[cat] = append(functions[cat], foundFuncts...)
+				}
+			}
 		}
 	}
 

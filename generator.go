@@ -104,8 +104,8 @@ func writePackage(w io.Writer, packageName string, pak *Package, functsInfo *Fun
 	fmt.Fprintf(w, "// typedef double GLclampd;\n")
 	fmt.Fprintf(w, "// typedef void GLvoid;\n// \n")
 
-	for _, pt := range functsInfo.Passthru {
-		fmt.Fprintf(w, "// %s\n", pt)
+	for _, passthrus := range functsInfo.Passthru["global"] {
+		fmt.Fprintf(w, "// %s\n", passthrus)
 	}
 
 	fmt.Fprintf(w, "// void* goglGetProcAddress(const char* name) { \n")

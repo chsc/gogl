@@ -54,8 +54,17 @@ func main() {
 			return GroupPackagesByVendorFunc(category, funcInfo.Versions, funcInfo.DeprecatedVersions)
 		})
 
+	// TODO: This output is temporary for debugging
+	if true {
+		fmt.Println("Passthrus:")
+		for cat, pts := range funcInfo.Passthru {
+			fmt.Printf(" %s:\n", cat)
+			for _, pt := range pts {
+				fmt.Printf("  %s\n", pt)
+			}
+		}
+	}
 	if false {
-		// TODO: This output is temporary for debugging
 		fmt.Println("Supported versions:")
 		fmt.Println(funcInfo.Versions)
 		fmt.Println("Deprecated versions:")
