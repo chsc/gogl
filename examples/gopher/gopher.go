@@ -1,12 +1,14 @@
 package main
 
 import (
+	"bytes"
 	"errors"
 	"fmt"
 	gl "github.com/chsc/gogl/gl21"
 	"github.com/jteeuwen/glfw"
 	"image"
 	"image/png"
+	"io"
 	"os"
 )
 
@@ -58,15 +60,12 @@ func main() {
 	}
 }
 
-func createTexture(textureName string) (textureId gl.Uint, err error) {
-	f, err := os.Open(textureName)
+func createTexture(r io.Reader) (textureId gl.Uint, err error) {
+	img, err := png.Decode(r)
 	if err != nil {
 		return 0, err
 	}
-	img, err := png.Decode(f)
-	if err != nil {
-		return 0, err
-	}
+
 	rgbaImg, ok := img.(*image.NRGBA)
 	if !ok {
 		return 0, errors.New("texture must be an NRGBA image")
@@ -91,6 +90,11 @@ func createTexture(textureName string) (textureId gl.Uint, err error) {
 	return textureId, nil
 }
 
+func createTextureFromBytes(data []byte) (gl.Uint, error) {
+	r := bytes.NewBuffer(data)
+	return createTexture(r)
+}
+
 func initScene() (err error) {
 	gl.Enable(gl.TEXTURE_2D)
 	gl.Enable(gl.DEPTH_TEST)
@@ -112,7 +116,7 @@ func initScene() (err error) {
 	gl.MatrixMode(gl.MODELVIEW)
 	gl.LoadIdentity()
 
-	texture, err = createTexture("gopher.png")
+	texture, err = createTextureFromBytes(gopher_png[:])
 	return
 }
 
