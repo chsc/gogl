@@ -67,9 +67,10 @@ func writePackage(w io.Writer, packageName string, pak *Package, functsInfo *Fun
 	fmt.Fprintf(w, "// #cgo linux   LDFLAGS: -lGL\n")
 	fmt.Fprintf(w, "// #cgo windows LDFLAGS: -lopengl32\n// \n")
 
-	fmt.Fprintf(w, "// #ifdef __APPLE__\n")
-	fmt.Fprintf(w, "// // TODO: add context header\n")
-	fmt.Fprintf(w, "// #elif defined(_WIN32) && !defined(APIENTRY) && !defined(__CYGWIN__) && !defined(__SCITECH_SNAP__)\n")
+	fmt.Fprintf(w, "// #include <stdlib.h>\n")
+	fmt.Fprintf(w, "// #if defined(__APPLE__)\n")
+	fmt.Fprintf(w, "// // TODO: add context handling header\n")
+	fmt.Fprintf(w, "// #elif defined(_WIN32)\n")
 	fmt.Fprintf(w, "// #define WIN32_LEAN_AND_MEAN 1\n")
 	fmt.Fprintf(w, "// #include <windows.h> // for wglGetProcAddress\n")
 	fmt.Fprintf(w, "// #else\n")
@@ -166,6 +167,8 @@ func writePackage(w io.Writer, packageName string, pak *Package, functsInfo *Fun
 	}
 
 	writeGoInitDefinitions(w, pak.Functions)
+
+	writeUtilityFunctions(w)
 
 	fmt.Fprintf(w, "// EOF")
 
@@ -362,4 +365,67 @@ func writeGoInitDefinitions(w io.Writer, functions FunctionCategories) error {
 	fmt.Fprintf(w, "\treturn nil\n")
 	fmt.Fprintf(w, "}\n")
 	return nil
+}
+
+
+func writeUtilityFunctions(w io.Writer) {
+	fmt.Fprintln(w, `//Go bool to GL boolean.
+func GLBool(b bool) Boolean {
+	if b {
+		return TRUE
+	}
+	return FALSE
+}
+
+// GL boolean to Go bool.
+func GoBool(b Boolean) bool {
+	return b == TRUE
+}
+
+// Go string to GL string.
+func GLString(str string) *Char {
+	return (*Char)(C.CString(str))
+}
+
+// Allocates a GL string.
+func GLStringAlloc(length Sizei) *Char {
+	return (*Char)(C.malloc(C.size_t(length)))
+}
+
+// Frees GL string.
+func GLStringFree(str *Char) {
+	C.free(unsafe.Pointer(str))
+}
+
+// GL string (GLchar*) to Go string.
+func GoString(str *Char) string {
+	return C.GoString((*C.char)(str))
+}
+
+// GL string (GLubyte*) to Go string.
+func GoStringUb(str *Ubyte) string {
+	return C.GoString((*C.char)(unsafe.Pointer(str)))
+}
+
+// GL string (GLchar*) with length to Go string.
+func GoStringN(str *Char, length Sizei) string {
+	return C.GoStringN((*C.char)(str), C.int(length))
+}
+
+// Converts a list of Go strings to a slice of GL strings.
+// Usefull for ShaderSource().
+func GLStringArray(strs ...string) []*Char {
+	strSlice := make([]*Char, len(strs))
+	for i, s := range strs {
+		strSlice[i] = (*Char)(C.CString(s))
+	}
+	return strSlice
+}
+
+// Free GL string slice allocated by GLStringArray().
+func GLStringArrayFree(strs []*Char) {
+	for _, s := range strs {
+		C.free(unsafe.Pointer(s))
+	}
+}`)
 }

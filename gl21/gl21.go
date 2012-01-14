@@ -2,6 +2,14 @@
 // 
 // Categories in this package: 
 // 
+// VERSION_1_2_DEPRECATED
+// 
+// VERSION_2_1
+// 
+// VERSION_2_0
+// 
+// VERSION_1_3_DEPRECATED
+// 
 // VERSION_1_4
 // 
 // VERSION_1_5
@@ -20,14 +28,6 @@
 // 
 // VERSION_1_0_DEPRECATED
 // 
-// VERSION_1_2_DEPRECATED
-// 
-// VERSION_2_1
-// 
-// VERSION_2_0
-// 
-// VERSION_1_3_DEPRECATED
-// 
 // http://www.opengl.org/sdk/docs/man
 // 
 package gl21
@@ -36,9 +36,10 @@ package gl21
 // #cgo linux   LDFLAGS: -lGL
 // #cgo windows LDFLAGS: -lopengl32
 // 
-// #ifdef __APPLE__
-// // TODO: add context header
-// #elif defined(_WIN32) && !defined(APIENTRY) && !defined(__CYGWIN__) && !defined(__SCITECH_SNAP__)
+// #include <stdlib.h>
+// #if defined(__APPLE__)
+// // TODO: add context handling header
+// #elif defined(_WIN32)
 // #define WIN32_LEAN_AND_MEAN 1
 // #include <windows.h> // for wglGetProcAddress
 // #else
@@ -183,39 +184,6 @@ package gl21
 // #endif
 // }
 // 
-// //  VERSION_1_2_DEPRECATED
-// void (APIENTRYP ptrgoglColorTable)(GLenum target, GLenum internalformat, GLsizei width, GLenum format, GLenum type, GLvoid* table);
-// void (APIENTRYP ptrgoglColorTableParameterfv)(GLenum target, GLenum pname, GLfloat* params);
-// void (APIENTRYP ptrgoglColorTableParameteriv)(GLenum target, GLenum pname, GLint* params);
-// void (APIENTRYP ptrgoglCopyColorTable)(GLenum target, GLenum internalformat, GLint x, GLint y, GLsizei width);
-// void (APIENTRYP ptrgoglGetColorTable)(GLenum target, GLenum format, GLenum type, GLvoid* table);
-// void (APIENTRYP ptrgoglGetColorTableParameterfv)(GLenum target, GLenum pname, GLfloat* params);
-// void (APIENTRYP ptrgoglGetColorTableParameteriv)(GLenum target, GLenum pname, GLint* params);
-// void (APIENTRYP ptrgoglColorSubTable)(GLenum target, GLsizei start, GLsizei count, GLenum format, GLenum type, GLvoid* data);
-// void (APIENTRYP ptrgoglCopyColorSubTable)(GLenum target, GLsizei start, GLint x, GLint y, GLsizei width);
-// void (APIENTRYP ptrgoglConvolutionFilter1D)(GLenum target, GLenum internalformat, GLsizei width, GLenum format, GLenum type, GLvoid* image);
-// void (APIENTRYP ptrgoglConvolutionFilter2D)(GLenum target, GLenum internalformat, GLsizei width, GLsizei height, GLenum format, GLenum type, GLvoid* image);
-// void (APIENTRYP ptrgoglConvolutionParameterf)(GLenum target, GLenum pname, GLfloat params);
-// void (APIENTRYP ptrgoglConvolutionParameterfv)(GLenum target, GLenum pname, GLfloat* params);
-// void (APIENTRYP ptrgoglConvolutionParameteri)(GLenum target, GLenum pname, GLint params);
-// void (APIENTRYP ptrgoglConvolutionParameteriv)(GLenum target, GLenum pname, GLint* params);
-// void (APIENTRYP ptrgoglCopyConvolutionFilter1D)(GLenum target, GLenum internalformat, GLint x, GLint y, GLsizei width);
-// void (APIENTRYP ptrgoglCopyConvolutionFilter2D)(GLenum target, GLenum internalformat, GLint x, GLint y, GLsizei width, GLsizei height);
-// void (APIENTRYP ptrgoglGetConvolutionFilter)(GLenum target, GLenum format, GLenum type, GLvoid* image);
-// void (APIENTRYP ptrgoglGetConvolutionParameterfv)(GLenum target, GLenum pname, GLfloat* params);
-// void (APIENTRYP ptrgoglGetConvolutionParameteriv)(GLenum target, GLenum pname, GLint* params);
-// void (APIENTRYP ptrgoglGetSeparableFilter)(GLenum target, GLenum format, GLenum type, GLvoid* row, GLvoid* column, GLvoid* span);
-// void (APIENTRYP ptrgoglSeparableFilter2D)(GLenum target, GLenum internalformat, GLsizei width, GLsizei height, GLenum format, GLenum type, GLvoid* row, GLvoid* column);
-// void (APIENTRYP ptrgoglGetHistogram)(GLenum target, GLboolean reset, GLenum format, GLenum type, GLvoid* values);
-// void (APIENTRYP ptrgoglGetHistogramParameterfv)(GLenum target, GLenum pname, GLfloat* params);
-// void (APIENTRYP ptrgoglGetHistogramParameteriv)(GLenum target, GLenum pname, GLint* params);
-// void (APIENTRYP ptrgoglGetMinmax)(GLenum target, GLboolean reset, GLenum format, GLenum type, GLvoid* values);
-// void (APIENTRYP ptrgoglGetMinmaxParameterfv)(GLenum target, GLenum pname, GLfloat* params);
-// void (APIENTRYP ptrgoglGetMinmaxParameteriv)(GLenum target, GLenum pname, GLint* params);
-// void (APIENTRYP ptrgoglHistogram)(GLenum target, GLsizei width, GLenum internalformat, GLboolean sink);
-// void (APIENTRYP ptrgoglMinmax)(GLenum target, GLenum internalformat, GLboolean sink);
-// void (APIENTRYP ptrgoglResetHistogram)(GLenum target);
-// void (APIENTRYP ptrgoglResetMinmax)(GLenum target);
 // //  VERSION_2_1
 // void (APIENTRYP ptrgoglUniformMatrix2x3fv)(GLint location, GLsizei count, GLboolean transpose, GLfloat* value);
 // void (APIENTRYP ptrgoglUniformMatrix3x2fv)(GLint location, GLsizei count, GLboolean transpose, GLfloat* value);
@@ -740,9 +708,9 @@ package gl21
 // void (APIENTRYP ptrgoglPixelZoom)(GLfloat xfactor, GLfloat yfactor);
 // void (APIENTRYP ptrgoglPixelTransferf)(GLenum pname, GLfloat param);
 // void (APIENTRYP ptrgoglPixelTransferi)(GLenum pname, GLint param);
-// void (APIENTRYP ptrgoglPixelMapfv)(GLenum map, GLint mapsize, GLfloat* values);
-// void (APIENTRYP ptrgoglPixelMapuiv)(GLenum map, GLint mapsize, GLuint* values);
-// void (APIENTRYP ptrgoglPixelMapusv)(GLenum map, GLint mapsize, GLushort* values);
+// void (APIENTRYP ptrgoglPixelMapfv)(GLenum map, GLsizei mapsize, GLfloat* values);
+// void (APIENTRYP ptrgoglPixelMapuiv)(GLenum map, GLsizei mapsize, GLuint* values);
+// void (APIENTRYP ptrgoglPixelMapusv)(GLenum map, GLsizei mapsize, GLushort* values);
 // void (APIENTRYP ptrgoglCopyPixels)(GLint x, GLint y, GLsizei width, GLsizei height, GLenum type);
 // void (APIENTRYP ptrgoglDrawPixels)(GLsizei width, GLsizei height, GLenum format, GLenum type, GLvoid* pixels);
 // void (APIENTRYP ptrgoglGetClipPlane)(GLenum plane, GLdouble* equation);
@@ -779,7 +747,137 @@ package gl21
 // void (APIENTRYP ptrgoglScalef)(GLfloat x, GLfloat y, GLfloat z);
 // void (APIENTRYP ptrgoglTranslated)(GLdouble x, GLdouble y, GLdouble z);
 // void (APIENTRYP ptrgoglTranslatef)(GLfloat x, GLfloat y, GLfloat z);
+// //  VERSION_1_2_DEPRECATED
+// void (APIENTRYP ptrgoglColorTable)(GLenum target, GLenum internalformat, GLsizei width, GLenum format, GLenum type, GLvoid* table);
+// void (APIENTRYP ptrgoglColorTableParameterfv)(GLenum target, GLenum pname, GLfloat* params);
+// void (APIENTRYP ptrgoglColorTableParameteriv)(GLenum target, GLenum pname, GLint* params);
+// void (APIENTRYP ptrgoglCopyColorTable)(GLenum target, GLenum internalformat, GLint x, GLint y, GLsizei width);
+// void (APIENTRYP ptrgoglGetColorTable)(GLenum target, GLenum format, GLenum type, GLvoid* table);
+// void (APIENTRYP ptrgoglGetColorTableParameterfv)(GLenum target, GLenum pname, GLfloat* params);
+// void (APIENTRYP ptrgoglGetColorTableParameteriv)(GLenum target, GLenum pname, GLint* params);
+// void (APIENTRYP ptrgoglColorSubTable)(GLenum target, GLsizei start, GLsizei count, GLenum format, GLenum type, GLvoid* data);
+// void (APIENTRYP ptrgoglCopyColorSubTable)(GLenum target, GLsizei start, GLint x, GLint y, GLsizei width);
+// void (APIENTRYP ptrgoglConvolutionFilter1D)(GLenum target, GLenum internalformat, GLsizei width, GLenum format, GLenum type, GLvoid* image);
+// void (APIENTRYP ptrgoglConvolutionFilter2D)(GLenum target, GLenum internalformat, GLsizei width, GLsizei height, GLenum format, GLenum type, GLvoid* image);
+// void (APIENTRYP ptrgoglConvolutionParameterf)(GLenum target, GLenum pname, GLfloat params);
+// void (APIENTRYP ptrgoglConvolutionParameterfv)(GLenum target, GLenum pname, GLfloat* params);
+// void (APIENTRYP ptrgoglConvolutionParameteri)(GLenum target, GLenum pname, GLint params);
+// void (APIENTRYP ptrgoglConvolutionParameteriv)(GLenum target, GLenum pname, GLint* params);
+// void (APIENTRYP ptrgoglCopyConvolutionFilter1D)(GLenum target, GLenum internalformat, GLint x, GLint y, GLsizei width);
+// void (APIENTRYP ptrgoglCopyConvolutionFilter2D)(GLenum target, GLenum internalformat, GLint x, GLint y, GLsizei width, GLsizei height);
+// void (APIENTRYP ptrgoglGetConvolutionFilter)(GLenum target, GLenum format, GLenum type, GLvoid* image);
+// void (APIENTRYP ptrgoglGetConvolutionParameterfv)(GLenum target, GLenum pname, GLfloat* params);
+// void (APIENTRYP ptrgoglGetConvolutionParameteriv)(GLenum target, GLenum pname, GLint* params);
+// void (APIENTRYP ptrgoglGetSeparableFilter)(GLenum target, GLenum format, GLenum type, GLvoid* row, GLvoid* column, GLvoid* span);
+// void (APIENTRYP ptrgoglSeparableFilter2D)(GLenum target, GLenum internalformat, GLsizei width, GLsizei height, GLenum format, GLenum type, GLvoid* row, GLvoid* column);
+// void (APIENTRYP ptrgoglGetHistogram)(GLenum target, GLboolean reset, GLenum format, GLenum type, GLvoid* values);
+// void (APIENTRYP ptrgoglGetHistogramParameterfv)(GLenum target, GLenum pname, GLfloat* params);
+// void (APIENTRYP ptrgoglGetHistogramParameteriv)(GLenum target, GLenum pname, GLint* params);
+// void (APIENTRYP ptrgoglGetMinmax)(GLenum target, GLboolean reset, GLenum format, GLenum type, GLvoid* values);
+// void (APIENTRYP ptrgoglGetMinmaxParameterfv)(GLenum target, GLenum pname, GLfloat* params);
+// void (APIENTRYP ptrgoglGetMinmaxParameteriv)(GLenum target, GLenum pname, GLint* params);
+// void (APIENTRYP ptrgoglHistogram)(GLenum target, GLsizei width, GLenum internalformat, GLboolean sink);
+// void (APIENTRYP ptrgoglMinmax)(GLenum target, GLenum internalformat, GLboolean sink);
+// void (APIENTRYP ptrgoglResetHistogram)(GLenum target);
+// void (APIENTRYP ptrgoglResetMinmax)(GLenum target);
 // 
+// //  VERSION_1_2_DEPRECATED
+// void goglColorTable(GLenum target, GLenum internalformat, GLsizei width, GLenum format, GLenum type, GLvoid* table) {
+// 	(*ptrgoglColorTable)(target, internalformat, width, format, type, table);
+// }
+// void goglColorTableParameterfv(GLenum target, GLenum pname, GLfloat* params) {
+// 	(*ptrgoglColorTableParameterfv)(target, pname, params);
+// }
+// void goglColorTableParameteriv(GLenum target, GLenum pname, GLint* params) {
+// 	(*ptrgoglColorTableParameteriv)(target, pname, params);
+// }
+// void goglCopyColorTable(GLenum target, GLenum internalformat, GLint x, GLint y, GLsizei width) {
+// 	(*ptrgoglCopyColorTable)(target, internalformat, x, y, width);
+// }
+// void goglGetColorTable(GLenum target, GLenum format, GLenum type, GLvoid* table) {
+// 	(*ptrgoglGetColorTable)(target, format, type, table);
+// }
+// void goglGetColorTableParameterfv(GLenum target, GLenum pname, GLfloat* params) {
+// 	(*ptrgoglGetColorTableParameterfv)(target, pname, params);
+// }
+// void goglGetColorTableParameteriv(GLenum target, GLenum pname, GLint* params) {
+// 	(*ptrgoglGetColorTableParameteriv)(target, pname, params);
+// }
+// void goglColorSubTable(GLenum target, GLsizei start, GLsizei count, GLenum format, GLenum type, GLvoid* data) {
+// 	(*ptrgoglColorSubTable)(target, start, count, format, type, data);
+// }
+// void goglCopyColorSubTable(GLenum target, GLsizei start, GLint x, GLint y, GLsizei width) {
+// 	(*ptrgoglCopyColorSubTable)(target, start, x, y, width);
+// }
+// void goglConvolutionFilter1D(GLenum target, GLenum internalformat, GLsizei width, GLenum format, GLenum type, GLvoid* image) {
+// 	(*ptrgoglConvolutionFilter1D)(target, internalformat, width, format, type, image);
+// }
+// void goglConvolutionFilter2D(GLenum target, GLenum internalformat, GLsizei width, GLsizei height, GLenum format, GLenum type, GLvoid* image) {
+// 	(*ptrgoglConvolutionFilter2D)(target, internalformat, width, height, format, type, image);
+// }
+// void goglConvolutionParameterf(GLenum target, GLenum pname, GLfloat params) {
+// 	(*ptrgoglConvolutionParameterf)(target, pname, params);
+// }
+// void goglConvolutionParameterfv(GLenum target, GLenum pname, GLfloat* params) {
+// 	(*ptrgoglConvolutionParameterfv)(target, pname, params);
+// }
+// void goglConvolutionParameteri(GLenum target, GLenum pname, GLint params) {
+// 	(*ptrgoglConvolutionParameteri)(target, pname, params);
+// }
+// void goglConvolutionParameteriv(GLenum target, GLenum pname, GLint* params) {
+// 	(*ptrgoglConvolutionParameteriv)(target, pname, params);
+// }
+// void goglCopyConvolutionFilter1D(GLenum target, GLenum internalformat, GLint x, GLint y, GLsizei width) {
+// 	(*ptrgoglCopyConvolutionFilter1D)(target, internalformat, x, y, width);
+// }
+// void goglCopyConvolutionFilter2D(GLenum target, GLenum internalformat, GLint x, GLint y, GLsizei width, GLsizei height) {
+// 	(*ptrgoglCopyConvolutionFilter2D)(target, internalformat, x, y, width, height);
+// }
+// void goglGetConvolutionFilter(GLenum target, GLenum format, GLenum type, GLvoid* image) {
+// 	(*ptrgoglGetConvolutionFilter)(target, format, type, image);
+// }
+// void goglGetConvolutionParameterfv(GLenum target, GLenum pname, GLfloat* params) {
+// 	(*ptrgoglGetConvolutionParameterfv)(target, pname, params);
+// }
+// void goglGetConvolutionParameteriv(GLenum target, GLenum pname, GLint* params) {
+// 	(*ptrgoglGetConvolutionParameteriv)(target, pname, params);
+// }
+// void goglGetSeparableFilter(GLenum target, GLenum format, GLenum type, GLvoid* row, GLvoid* column, GLvoid* span) {
+// 	(*ptrgoglGetSeparableFilter)(target, format, type, row, column, span);
+// }
+// void goglSeparableFilter2D(GLenum target, GLenum internalformat, GLsizei width, GLsizei height, GLenum format, GLenum type, GLvoid* row, GLvoid* column) {
+// 	(*ptrgoglSeparableFilter2D)(target, internalformat, width, height, format, type, row, column);
+// }
+// void goglGetHistogram(GLenum target, GLboolean reset, GLenum format, GLenum type, GLvoid* values) {
+// 	(*ptrgoglGetHistogram)(target, reset, format, type, values);
+// }
+// void goglGetHistogramParameterfv(GLenum target, GLenum pname, GLfloat* params) {
+// 	(*ptrgoglGetHistogramParameterfv)(target, pname, params);
+// }
+// void goglGetHistogramParameteriv(GLenum target, GLenum pname, GLint* params) {
+// 	(*ptrgoglGetHistogramParameteriv)(target, pname, params);
+// }
+// void goglGetMinmax(GLenum target, GLboolean reset, GLenum format, GLenum type, GLvoid* values) {
+// 	(*ptrgoglGetMinmax)(target, reset, format, type, values);
+// }
+// void goglGetMinmaxParameterfv(GLenum target, GLenum pname, GLfloat* params) {
+// 	(*ptrgoglGetMinmaxParameterfv)(target, pname, params);
+// }
+// void goglGetMinmaxParameteriv(GLenum target, GLenum pname, GLint* params) {
+// 	(*ptrgoglGetMinmaxParameteriv)(target, pname, params);
+// }
+// void goglHistogram(GLenum target, GLsizei width, GLenum internalformat, GLboolean sink) {
+// 	(*ptrgoglHistogram)(target, width, internalformat, sink);
+// }
+// void goglMinmax(GLenum target, GLenum internalformat, GLboolean sink) {
+// 	(*ptrgoglMinmax)(target, internalformat, sink);
+// }
+// void goglResetHistogram(GLenum target) {
+// 	(*ptrgoglResetHistogram)(target);
+// }
+// void goglResetMinmax(GLenum target) {
+// 	(*ptrgoglResetMinmax)(target);
+// }
 // //  VERSION_2_1
 // void goglUniformMatrix2x3fv(GLint location, GLsizei count, GLboolean transpose, GLfloat* value) {
 // 	(*ptrgoglUniformMatrix2x3fv)(location, count, transpose, value);
@@ -2328,13 +2426,13 @@ package gl21
 // void goglPixelTransferi(GLenum pname, GLint param) {
 // 	(*ptrgoglPixelTransferi)(pname, param);
 // }
-// void goglPixelMapfv(GLenum map, GLint mapsize, GLfloat* values) {
+// void goglPixelMapfv(GLenum map, GLsizei mapsize, GLfloat* values) {
 // 	(*ptrgoglPixelMapfv)(map, mapsize, values);
 // }
-// void goglPixelMapuiv(GLenum map, GLint mapsize, GLuint* values) {
+// void goglPixelMapuiv(GLenum map, GLsizei mapsize, GLuint* values) {
 // 	(*ptrgoglPixelMapuiv)(map, mapsize, values);
 // }
-// void goglPixelMapusv(GLenum map, GLint mapsize, GLushort* values) {
+// void goglPixelMapusv(GLenum map, GLsizei mapsize, GLushort* values) {
 // 	(*ptrgoglPixelMapusv)(map, mapsize, values);
 // }
 // void goglCopyPixels(GLint x, GLint y, GLsizei width, GLsizei height, GLenum type) {
@@ -2444,103 +2542,6 @@ package gl21
 // }
 // void goglTranslatef(GLfloat x, GLfloat y, GLfloat z) {
 // 	(*ptrgoglTranslatef)(x, y, z);
-// }
-// //  VERSION_1_2_DEPRECATED
-// void goglColorTable(GLenum target, GLenum internalformat, GLsizei width, GLenum format, GLenum type, GLvoid* table) {
-// 	(*ptrgoglColorTable)(target, internalformat, width, format, type, table);
-// }
-// void goglColorTableParameterfv(GLenum target, GLenum pname, GLfloat* params) {
-// 	(*ptrgoglColorTableParameterfv)(target, pname, params);
-// }
-// void goglColorTableParameteriv(GLenum target, GLenum pname, GLint* params) {
-// 	(*ptrgoglColorTableParameteriv)(target, pname, params);
-// }
-// void goglCopyColorTable(GLenum target, GLenum internalformat, GLint x, GLint y, GLsizei width) {
-// 	(*ptrgoglCopyColorTable)(target, internalformat, x, y, width);
-// }
-// void goglGetColorTable(GLenum target, GLenum format, GLenum type, GLvoid* table) {
-// 	(*ptrgoglGetColorTable)(target, format, type, table);
-// }
-// void goglGetColorTableParameterfv(GLenum target, GLenum pname, GLfloat* params) {
-// 	(*ptrgoglGetColorTableParameterfv)(target, pname, params);
-// }
-// void goglGetColorTableParameteriv(GLenum target, GLenum pname, GLint* params) {
-// 	(*ptrgoglGetColorTableParameteriv)(target, pname, params);
-// }
-// void goglColorSubTable(GLenum target, GLsizei start, GLsizei count, GLenum format, GLenum type, GLvoid* data) {
-// 	(*ptrgoglColorSubTable)(target, start, count, format, type, data);
-// }
-// void goglCopyColorSubTable(GLenum target, GLsizei start, GLint x, GLint y, GLsizei width) {
-// 	(*ptrgoglCopyColorSubTable)(target, start, x, y, width);
-// }
-// void goglConvolutionFilter1D(GLenum target, GLenum internalformat, GLsizei width, GLenum format, GLenum type, GLvoid* image) {
-// 	(*ptrgoglConvolutionFilter1D)(target, internalformat, width, format, type, image);
-// }
-// void goglConvolutionFilter2D(GLenum target, GLenum internalformat, GLsizei width, GLsizei height, GLenum format, GLenum type, GLvoid* image) {
-// 	(*ptrgoglConvolutionFilter2D)(target, internalformat, width, height, format, type, image);
-// }
-// void goglConvolutionParameterf(GLenum target, GLenum pname, GLfloat params) {
-// 	(*ptrgoglConvolutionParameterf)(target, pname, params);
-// }
-// void goglConvolutionParameterfv(GLenum target, GLenum pname, GLfloat* params) {
-// 	(*ptrgoglConvolutionParameterfv)(target, pname, params);
-// }
-// void goglConvolutionParameteri(GLenum target, GLenum pname, GLint params) {
-// 	(*ptrgoglConvolutionParameteri)(target, pname, params);
-// }
-// void goglConvolutionParameteriv(GLenum target, GLenum pname, GLint* params) {
-// 	(*ptrgoglConvolutionParameteriv)(target, pname, params);
-// }
-// void goglCopyConvolutionFilter1D(GLenum target, GLenum internalformat, GLint x, GLint y, GLsizei width) {
-// 	(*ptrgoglCopyConvolutionFilter1D)(target, internalformat, x, y, width);
-// }
-// void goglCopyConvolutionFilter2D(GLenum target, GLenum internalformat, GLint x, GLint y, GLsizei width, GLsizei height) {
-// 	(*ptrgoglCopyConvolutionFilter2D)(target, internalformat, x, y, width, height);
-// }
-// void goglGetConvolutionFilter(GLenum target, GLenum format, GLenum type, GLvoid* image) {
-// 	(*ptrgoglGetConvolutionFilter)(target, format, type, image);
-// }
-// void goglGetConvolutionParameterfv(GLenum target, GLenum pname, GLfloat* params) {
-// 	(*ptrgoglGetConvolutionParameterfv)(target, pname, params);
-// }
-// void goglGetConvolutionParameteriv(GLenum target, GLenum pname, GLint* params) {
-// 	(*ptrgoglGetConvolutionParameteriv)(target, pname, params);
-// }
-// void goglGetSeparableFilter(GLenum target, GLenum format, GLenum type, GLvoid* row, GLvoid* column, GLvoid* span) {
-// 	(*ptrgoglGetSeparableFilter)(target, format, type, row, column, span);
-// }
-// void goglSeparableFilter2D(GLenum target, GLenum internalformat, GLsizei width, GLsizei height, GLenum format, GLenum type, GLvoid* row, GLvoid* column) {
-// 	(*ptrgoglSeparableFilter2D)(target, internalformat, width, height, format, type, row, column);
-// }
-// void goglGetHistogram(GLenum target, GLboolean reset, GLenum format, GLenum type, GLvoid* values) {
-// 	(*ptrgoglGetHistogram)(target, reset, format, type, values);
-// }
-// void goglGetHistogramParameterfv(GLenum target, GLenum pname, GLfloat* params) {
-// 	(*ptrgoglGetHistogramParameterfv)(target, pname, params);
-// }
-// void goglGetHistogramParameteriv(GLenum target, GLenum pname, GLint* params) {
-// 	(*ptrgoglGetHistogramParameteriv)(target, pname, params);
-// }
-// void goglGetMinmax(GLenum target, GLboolean reset, GLenum format, GLenum type, GLvoid* values) {
-// 	(*ptrgoglGetMinmax)(target, reset, format, type, values);
-// }
-// void goglGetMinmaxParameterfv(GLenum target, GLenum pname, GLfloat* params) {
-// 	(*ptrgoglGetMinmaxParameterfv)(target, pname, params);
-// }
-// void goglGetMinmaxParameteriv(GLenum target, GLenum pname, GLint* params) {
-// 	(*ptrgoglGetMinmaxParameteriv)(target, pname, params);
-// }
-// void goglHistogram(GLenum target, GLsizei width, GLenum internalformat, GLboolean sink) {
-// 	(*ptrgoglHistogram)(target, width, internalformat, sink);
-// }
-// void goglMinmax(GLenum target, GLenum internalformat, GLboolean sink) {
-// 	(*ptrgoglMinmax)(target, internalformat, sink);
-// }
-// void goglResetHistogram(GLenum target) {
-// 	(*ptrgoglResetHistogram)(target);
-// }
-// void goglResetMinmax(GLenum target) {
-// 	(*ptrgoglResetMinmax)(target);
 // }
 // 
 // int init_VERSION_1_4() {
@@ -3778,6 +3779,13 @@ type (
 	Sizeiptr C.GLsizeiptr
 )
 
+// VERSION_2_0_DEPRECATED
+const (
+	MAX_TEXTURE_COORDS = 0x8871
+	POINT_SPRITE = 0x8861
+	VERTEX_PROGRAM_TWO_SIDE = 0x8643
+	COORD_REPLACE = 0x8862
+)
 // VERSION_2_1
 const (
 	FLOAT_MAT4x2 = 0x8B69
@@ -3799,29 +3807,6 @@ const (
 )
 // VERSION_2_0
 const (
-	STENCIL_BACK_PASS_DEPTH_PASS = 0x8803
-	VERTEX_SHADER = 0x8B31
-	VERTEX_ATTRIB_ARRAY_TYPE = 0x8625
-	INT_VEC4 = 0x8B55
-	INT_VEC3 = 0x8B54
-	INT_VEC2 = 0x8B53
-	MAX_FRAGMENT_UNIFORM_COMPONENTS = 0x8B49
-	MAX_DRAW_BUFFERS = 0x8824
-	VERTEX_ATTRIB_ARRAY_NORMALIZED = 0x886A
-	INFO_LOG_LENGTH = 0x8B84
-	DELETE_STATUS = 0x8B80
-	FLOAT_VEC4 = 0x8B52
-	FLOAT_VEC2 = 0x8B50
-	FLOAT_VEC3 = 0x8B51
-	STENCIL_BACK_REF = 0x8CA3
-	ACTIVE_ATTRIBUTE_MAX_LENGTH = 0x8B8A
-	SHADING_LANGUAGE_VERSION = 0x8B8C
-	MAX_COMBINED_TEXTURE_IMAGE_UNITS = 0x8B4D
-	ACTIVE_UNIFORMS = 0x8B86
-	ATTACHED_SHADERS = 0x8B85
-	VERTEX_ATTRIB_ARRAY_ENABLED = 0x8622
-	MAX_VERTEX_UNIFORM_COMPONENTS = 0x8B4A
-	MAX_TEXTURE_IMAGE_UNITS = 0x8872
 	STENCIL_BACK_FAIL = 0x8801
 	VERTEX_ATTRIB_ARRAY_POINTER = 0x8645
 	MAX_VARYING_FLOATS = 0x8B4B
@@ -3879,9 +3864,45 @@ const (
 	BLEND_EQUATION_RGB = 0x8009
 	STENCIL_BACK_VALUE_MASK = 0x8CA4
 	VERTEX_ATTRIB_ARRAY_SIZE = 0x8623
+	STENCIL_BACK_PASS_DEPTH_PASS = 0x8803
+	VERTEX_SHADER = 0x8B31
+	VERTEX_ATTRIB_ARRAY_TYPE = 0x8625
+	INT_VEC4 = 0x8B55
+	INT_VEC3 = 0x8B54
+	INT_VEC2 = 0x8B53
+	MAX_FRAGMENT_UNIFORM_COMPONENTS = 0x8B49
+	MAX_DRAW_BUFFERS = 0x8824
+	VERTEX_ATTRIB_ARRAY_NORMALIZED = 0x886A
+	INFO_LOG_LENGTH = 0x8B84
+	DELETE_STATUS = 0x8B80
+	FLOAT_VEC4 = 0x8B52
+	FLOAT_VEC2 = 0x8B50
+	FLOAT_VEC3 = 0x8B51
+	STENCIL_BACK_REF = 0x8CA3
+	ACTIVE_ATTRIBUTE_MAX_LENGTH = 0x8B8A
+	SHADING_LANGUAGE_VERSION = 0x8B8C
+	MAX_COMBINED_TEXTURE_IMAGE_UNITS = 0x8B4D
+	ACTIVE_UNIFORMS = 0x8B86
+	ATTACHED_SHADERS = 0x8B85
+	VERTEX_ATTRIB_ARRAY_ENABLED = 0x8622
+	MAX_VERTEX_UNIFORM_COMPONENTS = 0x8B4A
+	MAX_TEXTURE_IMAGE_UNITS = 0x8872
 )
 // VERSION_1_3_DEPRECATED
 const (
+	OPERAND2_ALPHA = 0x859A
+	OPERAND0_ALPHA = 0x8598
+	SOURCE0_ALPHA = 0x8588
+	COMPRESSED_LUMINANCE_ALPHA = 0x84EB
+	MULTISAMPLE_BIT = 0x20000000
+	SUBTRACT = 0x84E7
+	TRANSPOSE_PROJECTION_MATRIX = 0x84E4
+	SOURCE2_ALPHA = 0x858A
+	REFLECTION_MAP = 0x8512
+	SOURCE0_RGB = 0x8580
+	COMPRESSED_ALPHA = 0x84E9
+	PRIMARY_COLOR = 0x8577
+	COMBINE_RGB = 0x8571
 	COMPRESSED_LUMINANCE = 0x84EA
 	DOT3_RGBA = 0x86AF
 	OPERAND0_RGB = 0x8590
@@ -3906,32 +3927,20 @@ const (
 	NORMAL_MAP = 0x8511
 	SOURCE1_ALPHA = 0x8589
 	COMPRESSED_INTENSITY = 0x84EC
-	OPERAND2_ALPHA = 0x859A
-	OPERAND0_ALPHA = 0x8598
-	SOURCE0_ALPHA = 0x8588
-	COMPRESSED_LUMINANCE_ALPHA = 0x84EB
-	MULTISAMPLE_BIT = 0x20000000
-	SUBTRACT = 0x84E7
-	TRANSPOSE_PROJECTION_MATRIX = 0x84E4
-	SOURCE2_ALPHA = 0x858A
-	REFLECTION_MAP = 0x8512
-	SOURCE0_RGB = 0x8580
-	COMPRESSED_ALPHA = 0x84E9
-	PRIMARY_COLOR = 0x8577
-	COMBINE_RGB = 0x8571
 )
 // VERSION_2_1_DEPRECATED
 const (
-	SLUMINANCE8_ALPHA8 = 0x8C45
-	SLUMINANCE8 = 0x8C47
 	COMPRESSED_SLUMINANCE = 0x8C4A
 	COMPRESSED_SLUMINANCE_ALPHA = 0x8C4B
 	CURRENT_RASTER_SECONDARY_COLOR = 0x845F
 	SLUMINANCE_ALPHA = 0x8C44
 	SLUMINANCE = 0x8C46
+	SLUMINANCE8_ALPHA8 = 0x8C45
+	SLUMINANCE8 = 0x8C47
 )
 // VERSION_1_5_DEPRECATED
 const (
+	FOG_COORDINATE_ARRAY_BUFFER_BINDING = 0x889D
 	SRC2_RGB = 0x8582
 	FOG_COORD_SRC = 0x8450
 	VERTEX_ARRAY_BUFFER_BINDING = 0x8896
@@ -3954,10 +3963,15 @@ const (
 	NORMAL_ARRAY_BUFFER_BINDING = 0x8897
 	SRC2_ALPHA = 0x858A
 	INDEX_ARRAY_BUFFER_BINDING = 0x8899
-	FOG_COORDINATE_ARRAY_BUFFER_BINDING = 0x889D
 )
 // VERSION_1_4
 const (
+	MIRRORED_REPEAT = 0x8370
+	BLEND_DST_RGB = 0x80C8
+	DEPTH_COMPONENT32 = 0x81A7
+	DEPTH_COMPONENT24 = 0x81A6
+	TEXTURE_COMPARE_FUNC = 0x884D
+	DECR_WRAP = 0x8508
 	BLEND_SRC_RGB = 0x80C9
 	TEXTURE_COMPARE_MODE = 0x884C
 	MAX_TEXTURE_LOD_BIAS = 0x84FD
@@ -3968,15 +3982,19 @@ const (
 	TEXTURE_LOD_BIAS = 0x8501
 	BLEND_SRC_ALPHA = 0x80CB
 	DEPTH_COMPONENT16 = 0x81A5
-	MIRRORED_REPEAT = 0x8370
-	BLEND_DST_RGB = 0x80C8
-	DEPTH_COMPONENT32 = 0x81A7
-	DEPTH_COMPONENT24 = 0x81A6
-	TEXTURE_COMPARE_FUNC = 0x884D
-	DECR_WRAP = 0x8508
 )
 // VERSION_1_5
 const (
+	CURRENT_QUERY = 0x8865
+	DYNAMIC_DRAW = 0x88E8
+	READ_WRITE = 0x88BA
+	STATIC_DRAW = 0x88E4
+	ARRAY_BUFFER = 0x8892
+	ELEMENT_ARRAY_BUFFER_BINDING = 0x8895
+	BUFFER_SIZE = 0x8764
+	STREAM_COPY = 0x88E2
+	DYNAMIC_READ = 0x88E9
+	BUFFER_MAP_POINTER = 0x88BD
 	DYNAMIC_COPY = 0x88EA
 	QUERY_COUNTER_BITS = 0x8864
 	ELEMENT_ARRAY_BUFFER = 0x8893
@@ -3994,19 +4012,25 @@ const (
 	STATIC_COPY = 0x88E6
 	BUFFER_ACCESS = 0x88BB
 	READ_ONLY = 0x88B8
-	CURRENT_QUERY = 0x8865
-	DYNAMIC_DRAW = 0x88E8
-	READ_WRITE = 0x88BA
-	STATIC_DRAW = 0x88E4
-	ARRAY_BUFFER = 0x8892
-	ELEMENT_ARRAY_BUFFER_BINDING = 0x8895
-	BUFFER_SIZE = 0x8764
-	STREAM_COPY = 0x88E2
-	DYNAMIC_READ = 0x88E9
-	BUFFER_MAP_POINTER = 0x88BD
 )
 // VERSION_1_1
 const (
+	PACK_SKIP_ROWS = 0x0D03
+	LINE_LOOP = 0x0002
+	RGB = 0x1907
+	SUBPIXEL_BITS = 0x0D50
+	NO_ERROR = 0
+	BLEND_SRC = 0x0BE1
+	LINE_WIDTH = 0x0B21
+	STENCIL_PASS_DEPTH_FAIL = 0x0B95
+	LESS = 0x0201
+	TEXTURE_WRAP_T = 0x2803
+	PACK_ALIGNMENT = 0x0D05
+	TEXTURE_WRAP_S = 0x2802
+	UNPACK_ROW_LENGTH = 0x0CF2
+	LINE_SMOOTH = 0x0B20
+	POLYGON_SMOOTH_HINT = 0x0C53
+	LINE_STRIP = 0x0003
 	STENCIL_FAIL = 0x0B94
 	R3_G3_B2 = 0x2A10
 	REPLACE = 0x1E01
@@ -4190,25 +4214,16 @@ const (
 	COPY = 0x1503
 	TEXTURE = 0x1702
 	RGBA = 0x1908
-	PACK_SKIP_ROWS = 0x0D03
-	LINE_LOOP = 0x0002
-	RGB = 0x1907
-	SUBPIXEL_BITS = 0x0D50
-	NO_ERROR = 0
-	BLEND_SRC = 0x0BE1
-	LINE_WIDTH = 0x0B21
-	STENCIL_PASS_DEPTH_FAIL = 0x0B95
-	LESS = 0x0201
-	TEXTURE_WRAP_T = 0x2803
-	PACK_ALIGNMENT = 0x0D05
-	TEXTURE_WRAP_S = 0x2802
-	UNPACK_ROW_LENGTH = 0x0CF2
-	LINE_SMOOTH = 0x0B20
-	POLYGON_SMOOTH_HINT = 0x0C53
-	LINE_STRIP = 0x0003
 )
 // VERSION_1_4_DEPRECATED
 const (
+	COMPARE_R_TO_TEXTURE = 0x884E
+	POINT_DISTANCE_ATTENUATION = 0x8129
+	FOG_COORDINATE = 0x8451
+	POINT_SIZE_MAX = 0x8127
+	FOG_COORDINATE_ARRAY_STRIDE = 0x8455
+	SECONDARY_COLOR_ARRAY_STRIDE = 0x845C
+	TEXTURE_FILTER_CONTROL = 0x8500
 	DEPTH_TEXTURE_MODE = 0x884B
 	COLOR_SUM = 0x8458
 	SECONDARY_COLOR_ARRAY_SIZE = 0x845A
@@ -4225,32 +4240,9 @@ const (
 	FRAGMENT_DEPTH = 0x8452
 	SECONDARY_COLOR_ARRAY = 0x845E
 	GENERATE_MIPMAP = 0x8191
-	COMPARE_R_TO_TEXTURE = 0x884E
-	POINT_DISTANCE_ATTENUATION = 0x8129
-	FOG_COORDINATE = 0x8451
-	POINT_SIZE_MAX = 0x8127
-	FOG_COORDINATE_ARRAY_STRIDE = 0x8455
-	SECONDARY_COLOR_ARRAY_STRIDE = 0x845C
-	TEXTURE_FILTER_CONTROL = 0x8500
 )
 // VERSION_1_2
 const (
-	UNSIGNED_INT_8_8_8_8_REV = 0x8367
-	UNSIGNED_SHORT_5_5_5_1 = 0x8034
-	BGRA = 0x80E1
-	PROXY_TEXTURE_3D = 0x8070
-	TEXTURE_DEPTH = 0x8071
-	SMOOTH_POINT_SIZE_GRANULARITY = 0x0B13
-	MAX_3D_TEXTURE_SIZE = 0x8073
-	MAX_ELEMENTS_VERTICES = 0x80E8
-	SMOOTH_POINT_SIZE_RANGE = 0x0B12
-	UNSIGNED_SHORT_4_4_4_4 = 0x8033
-	TEXTURE_MAX_LOD = 0x813B
-	MAX_ELEMENTS_INDICES = 0x80E9
-	TEXTURE_BINDING_3D = 0x806A
-	CLAMP_TO_EDGE = 0x812F
-	TEXTURE_3D = 0x806F
-	PACK_SKIP_IMAGES = 0x806B
 	TEXTURE_MAX_LEVEL = 0x813D
 	UNSIGNED_BYTE_3_3_2 = 0x8032
 	ALIASED_LINE_WIDTH_RANGE = 0x846E
@@ -4271,9 +4263,48 @@ const (
 	BGR = 0x80E0
 	UNSIGNED_INT_10_10_10_2 = 0x8036
 	SMOOTH_LINE_WIDTH_RANGE = 0x0B22
+	UNSIGNED_INT_8_8_8_8_REV = 0x8367
+	UNSIGNED_SHORT_5_5_5_1 = 0x8034
+	BGRA = 0x80E1
+	PROXY_TEXTURE_3D = 0x8070
+	TEXTURE_DEPTH = 0x8071
+	SMOOTH_POINT_SIZE_GRANULARITY = 0x0B13
+	MAX_3D_TEXTURE_SIZE = 0x8073
+	MAX_ELEMENTS_VERTICES = 0x80E8
+	SMOOTH_POINT_SIZE_RANGE = 0x0B12
+	UNSIGNED_SHORT_4_4_4_4 = 0x8033
+	TEXTURE_MAX_LOD = 0x813B
+	MAX_ELEMENTS_INDICES = 0x80E9
+	TEXTURE_BINDING_3D = 0x806A
+	CLAMP_TO_EDGE = 0x812F
+	TEXTURE_3D = 0x806F
+	PACK_SKIP_IMAGES = 0x806B
 )
 // VERSION_1_3
 const (
+	TEXTURE_BINDING_CUBE_MAP = 0x8514
+	SAMPLE_ALPHA_TO_ONE = 0x809F
+	COMPRESSED_RGBA = 0x84EE
+	MAX_CUBE_MAP_TEXTURE_SIZE = 0x851C
+	SAMPLE_COVERAGE_INVERT = 0x80AB
+	TEXTURE4 = 0x84C4
+	TEXTURE5 = 0x84C5
+	TEXTURE6 = 0x84C6
+	TEXTURE7 = 0x84C7
+	TEXTURE0 = 0x84C0
+	TEXTURE1 = 0x84C1
+	TEXTURE2 = 0x84C2
+	TEXTURE3 = 0x84C3
+	TEXTURE8 = 0x84C8
+	TEXTURE9 = 0x84C9
+	SAMPLE_COVERAGE_VALUE = 0x80AA
+	TEXTURE_CUBE_MAP_POSITIVE_Z = 0x8519
+	TEXTURE_CUBE_MAP_POSITIVE_X = 0x8515
+	TEXTURE_CUBE_MAP_POSITIVE_Y = 0x8517
+	ACTIVE_TEXTURE = 0x84E0
+	NUM_COMPRESSED_TEXTURE_FORMATS = 0x86A2
+	TEXTURE_COMPRESSED = 0x86A1
+	PROXY_TEXTURE_CUBE_MAP = 0x851B
 	SAMPLE_COVERAGE = 0x80A0
 	MULTISAMPLE = 0x809D
 	COMPRESSED_TEXTURE_FORMATS = 0x86A3
@@ -4310,93 +4341,9 @@ const (
 	TEXTURE_COMPRESSION_HINT = 0x84EF
 	TEXTURE_CUBE_MAP = 0x8513
 	CLAMP_TO_BORDER = 0x812D
-	TEXTURE_BINDING_CUBE_MAP = 0x8514
-	SAMPLE_ALPHA_TO_ONE = 0x809F
-	COMPRESSED_RGBA = 0x84EE
-	MAX_CUBE_MAP_TEXTURE_SIZE = 0x851C
-	SAMPLE_COVERAGE_INVERT = 0x80AB
-	TEXTURE4 = 0x84C4
-	TEXTURE5 = 0x84C5
-	TEXTURE6 = 0x84C6
-	TEXTURE7 = 0x84C7
-	TEXTURE0 = 0x84C0
-	TEXTURE1 = 0x84C1
-	TEXTURE2 = 0x84C2
-	TEXTURE3 = 0x84C3
-	TEXTURE8 = 0x84C8
-	TEXTURE9 = 0x84C9
-	SAMPLE_COVERAGE_VALUE = 0x80AA
-	TEXTURE_CUBE_MAP_POSITIVE_Z = 0x8519
-	TEXTURE_CUBE_MAP_POSITIVE_X = 0x8515
-	TEXTURE_CUBE_MAP_POSITIVE_Y = 0x8517
-	ACTIVE_TEXTURE = 0x84E0
-	NUM_COMPRESSED_TEXTURE_FORMATS = 0x86A2
-	TEXTURE_COMPRESSED = 0x86A1
-	PROXY_TEXTURE_CUBE_MAP = 0x851B
 )
 // VERSION_1_1_DEPRECATED
 const (
-	TEXTURE_INTENSITY_SIZE = 0x8061
-	PIXEL_MAP_R_TO_R_SIZE = 0x0CB6
-	FLAT = 0x1D00
-	INDEX_WRITEMASK = 0x0C21
-	PIXEL_MAP_B_TO_B_SIZE = 0x0CB8
-	LUMINANCE_ALPHA = 0x190A
-	LIGHT_MODEL_AMBIENT = 0x0B53
-	MAP1_GRID_DOMAIN = 0x0DD0
-	LIST_BASE = 0x0B32
-	COLOR_INDEXES = 0x1603
-	V3F = 0x2A21
-	BLUE_BITS = 0x0D54
-	SPECULAR = 0x1202
-	TEXTURE_BIT = 0x00040000
-	MATRIX_MODE = 0x0BA0
-	COPY_PIXEL_TOKEN = 0x0706
-	MAX_CLIP_PLANES = 0x0D32
-	PROJECTION_STACK_DEPTH = 0x0BA4
-	FOG_START = 0x0B63
-	FEEDBACK_BUFFER_TYPE = 0x0DF2
-	COMPILE = 0x1300
-	LUMINANCE8_ALPHA8 = 0x8045
-	POLYGON_MODE = 0x0B40
-	TRANSFORM_BIT = 0x00001000
-	COLOR_ARRAY_SIZE = 0x8081
-	INTENSITY8 = 0x804B
-	COLOR_INDEX = 0x1900
-	INTENSITY4 = 0x804A
-	GREEN_SCALE = 0x0D18
-	FEEDBACK = 0x1C01
-	COLOR_ARRAY_POINTER = 0x8090
-	RENDER = 0x1C00
-	TEXTURE_LUMINANCE_SIZE = 0x8060
-	AMBIENT = 0x1200
-	T2F_V3F = 0x2A27
-	MAX_PIXEL_MAP_TABLE = 0x0D34
-	VERTEX_ARRAY_STRIDE = 0x807C
-	MODELVIEW_STACK_DEPTH = 0x0BA3
-	POINT_SMOOTH = 0x0B10
-	DIFFUSE = 0x1201
-	LUMINANCE12_ALPHA12 = 0x8047
-	LINE_TOKEN = 0x0702
-	TEXTURE_PRIORITY = 0x8066
-	TEXTURE_COMPONENTS = 0x1003
-	EMISSION = 0x1600
-	POSITION = 0x1203
-	MAP1_TEXTURE_COORD_4 = 0x0D96
-	MAP1_TEXTURE_COORD_3 = 0x0D95
-	MAP1_TEXTURE_COORD_2 = 0x0D94
-	MAP1_COLOR_4 = 0x0D90
-	MAP1_TEXTURE_COORD_1 = 0x0D93
-	ALPHA_TEST = 0x0BC0
-	X3D = 0x0601
-	PIXEL_MAP_R_TO_R = 0x0C76
-	LINEAR_ATTENUATION = 0x1208
-	CURRENT_RASTER_DISTANCE = 0x0B09
-	PIXEL_MAP_S_TO_S_SIZE = 0x0CB1
-	N3F_V3F = 0x2A25
-	PIXEL_MAP_I_TO_R = 0x0C72
-	MAX_TEXTURE_STACK_DEPTH = 0x0D39
-	COLOR_ARRAY = 0x8076
 	PIXEL_MAP_I_TO_G = 0x0C73
 	TEXTURE_BORDER = 0x1005
 	PIXEL_MAP_I_TO_B = 0x0C74
@@ -4665,152 +4612,76 @@ const (
 	MAX_LIGHTS = 0x0D31
 	C3F_V3F = 0x2A24
 	POLYGON_BIT = 0x00000008
+	TEXTURE_INTENSITY_SIZE = 0x8061
+	PIXEL_MAP_R_TO_R_SIZE = 0x0CB6
+	FLAT = 0x1D00
+	INDEX_WRITEMASK = 0x0C21
+	PIXEL_MAP_B_TO_B_SIZE = 0x0CB8
+	LUMINANCE_ALPHA = 0x190A
+	LIGHT_MODEL_AMBIENT = 0x0B53
+	MAP1_GRID_DOMAIN = 0x0DD0
+	LIST_BASE = 0x0B32
+	COLOR_INDEXES = 0x1603
+	V3F = 0x2A21
+	BLUE_BITS = 0x0D54
+	SPECULAR = 0x1202
+	TEXTURE_BIT = 0x00040000
+	MATRIX_MODE = 0x0BA0
+	COPY_PIXEL_TOKEN = 0x0706
+	MAX_CLIP_PLANES = 0x0D32
+	PROJECTION_STACK_DEPTH = 0x0BA4
+	FOG_START = 0x0B63
+	FEEDBACK_BUFFER_TYPE = 0x0DF2
+	COMPILE = 0x1300
+	LUMINANCE8_ALPHA8 = 0x8045
+	POLYGON_MODE = 0x0B40
+	TRANSFORM_BIT = 0x00001000
+	COLOR_ARRAY_SIZE = 0x8081
+	INTENSITY8 = 0x804B
+	COLOR_INDEX = 0x1900
+	INTENSITY4 = 0x804A
+	GREEN_SCALE = 0x0D18
+	FEEDBACK = 0x1C01
+	COLOR_ARRAY_POINTER = 0x8090
+	RENDER = 0x1C00
+	TEXTURE_LUMINANCE_SIZE = 0x8060
+	AMBIENT = 0x1200
+	T2F_V3F = 0x2A27
+	MAX_PIXEL_MAP_TABLE = 0x0D34
+	VERTEX_ARRAY_STRIDE = 0x807C
+	MODELVIEW_STACK_DEPTH = 0x0BA3
+	POINT_SMOOTH = 0x0B10
+	DIFFUSE = 0x1201
+	LUMINANCE12_ALPHA12 = 0x8047
+	LINE_TOKEN = 0x0702
+	TEXTURE_PRIORITY = 0x8066
+	TEXTURE_COMPONENTS = 0x1003
+	EMISSION = 0x1600
+	POSITION = 0x1203
+	MAP1_TEXTURE_COORD_4 = 0x0D96
+	MAP1_TEXTURE_COORD_3 = 0x0D95
+	MAP1_TEXTURE_COORD_2 = 0x0D94
+	MAP1_COLOR_4 = 0x0D90
+	MAP1_TEXTURE_COORD_1 = 0x0D93
+	ALPHA_TEST = 0x0BC0
+	X3D = 0x0601
+	PIXEL_MAP_R_TO_R = 0x0C76
+	LINEAR_ATTENUATION = 0x1208
+	CURRENT_RASTER_DISTANCE = 0x0B09
+	PIXEL_MAP_S_TO_S_SIZE = 0x0CB1
+	N3F_V3F = 0x2A25
+	PIXEL_MAP_I_TO_R = 0x0C72
+	MAX_TEXTURE_STACK_DEPTH = 0x0D39
+	COLOR_ARRAY = 0x8076
 )
 // VERSION_1_2_DEPRECATED
 const (
+	ALIASED_POINT_SIZE_RANGE = 0x846D
+	RESCALE_NORMAL = 0x803A
 	LIGHT_MODEL_COLOR_CONTROL = 0x81F8
 	SINGLE_COLOR = 0x81F9
 	SEPARATE_SPECULAR_COLOR = 0x81FA
-	ALIASED_POINT_SIZE_RANGE = 0x846D
-	RESCALE_NORMAL = 0x803A
 )
-// VERSION_2_0_DEPRECATED
-const (
-	MAX_TEXTURE_COORDS = 0x8871
-	POINT_SPRITE = 0x8861
-	VERTEX_PROGRAM_TWO_SIDE = 0x8643
-	COORD_REPLACE = 0x8862
-)
-// VERSION_1_2_DEPRECATED
-
-// http://www.opengl.org/sdk/docs/man/xhtml/glColorTable.xml
-func ColorTable(target Enum, internalformat Enum, width Sizei, format Enum, type_ Enum, table Pointer)  {
-	C.goglColorTable((C.GLenum)(target), (C.GLenum)(internalformat), (C.GLsizei)(width), (C.GLenum)(format), (C.GLenum)(type_), (unsafe.Pointer)(table))
-}
-// http://www.opengl.org/sdk/docs/man/xhtml/glColorTableParameterfv.xml
-func ColorTableParameterfv(target Enum, pname Enum, params *Float)  {
-	C.goglColorTableParameterfv((C.GLenum)(target), (C.GLenum)(pname), (*C.GLfloat)(params))
-}
-// http://www.opengl.org/sdk/docs/man/xhtml/glColorTableParameteriv.xml
-func ColorTableParameteriv(target Enum, pname Enum, params *Int)  {
-	C.goglColorTableParameteriv((C.GLenum)(target), (C.GLenum)(pname), (*C.GLint)(params))
-}
-// http://www.opengl.org/sdk/docs/man/xhtml/glCopyColorTable.xml
-func CopyColorTable(target Enum, internalformat Enum, x Int, y Int, width Sizei)  {
-	C.goglCopyColorTable((C.GLenum)(target), (C.GLenum)(internalformat), (C.GLint)(x), (C.GLint)(y), (C.GLsizei)(width))
-}
-// http://www.opengl.org/sdk/docs/man/xhtml/glGetColorTable.xml
-func GetColorTable(target Enum, format Enum, type_ Enum, table Pointer)  {
-	C.goglGetColorTable((C.GLenum)(target), (C.GLenum)(format), (C.GLenum)(type_), (unsafe.Pointer)(table))
-}
-// http://www.opengl.org/sdk/docs/man/xhtml/glGetColorTableParameterfv.xml
-func GetColorTableParameterfv(target Enum, pname Enum, params *Float)  {
-	C.goglGetColorTableParameterfv((C.GLenum)(target), (C.GLenum)(pname), (*C.GLfloat)(params))
-}
-// http://www.opengl.org/sdk/docs/man/xhtml/glGetColorTableParameteriv.xml
-func GetColorTableParameteriv(target Enum, pname Enum, params *Int)  {
-	C.goglGetColorTableParameteriv((C.GLenum)(target), (C.GLenum)(pname), (*C.GLint)(params))
-}
-// http://www.opengl.org/sdk/docs/man/xhtml/glColorSubTable.xml
-func ColorSubTable(target Enum, start Sizei, count Sizei, format Enum, type_ Enum, data Pointer)  {
-	C.goglColorSubTable((C.GLenum)(target), (C.GLsizei)(start), (C.GLsizei)(count), (C.GLenum)(format), (C.GLenum)(type_), (unsafe.Pointer)(data))
-}
-// http://www.opengl.org/sdk/docs/man/xhtml/glCopyColorSubTable.xml
-func CopyColorSubTable(target Enum, start Sizei, x Int, y Int, width Sizei)  {
-	C.goglCopyColorSubTable((C.GLenum)(target), (C.GLsizei)(start), (C.GLint)(x), (C.GLint)(y), (C.GLsizei)(width))
-}
-// http://www.opengl.org/sdk/docs/man/xhtml/glConvolutionFilter1D.xml
-func ConvolutionFilter1D(target Enum, internalformat Enum, width Sizei, format Enum, type_ Enum, image Pointer)  {
-	C.goglConvolutionFilter1D((C.GLenum)(target), (C.GLenum)(internalformat), (C.GLsizei)(width), (C.GLenum)(format), (C.GLenum)(type_), (unsafe.Pointer)(image))
-}
-// http://www.opengl.org/sdk/docs/man/xhtml/glConvolutionFilter2D.xml
-func ConvolutionFilter2D(target Enum, internalformat Enum, width Sizei, height Sizei, format Enum, type_ Enum, image Pointer)  {
-	C.goglConvolutionFilter2D((C.GLenum)(target), (C.GLenum)(internalformat), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLenum)(format), (C.GLenum)(type_), (unsafe.Pointer)(image))
-}
-// http://www.opengl.org/sdk/docs/man/xhtml/glConvolutionParameterf.xml
-func ConvolutionParameterf(target Enum, pname Enum, params Float)  {
-	C.goglConvolutionParameterf((C.GLenum)(target), (C.GLenum)(pname), (C.GLfloat)(params))
-}
-// http://www.opengl.org/sdk/docs/man/xhtml/glConvolutionParameterfv.xml
-func ConvolutionParameterfv(target Enum, pname Enum, params *Float)  {
-	C.goglConvolutionParameterfv((C.GLenum)(target), (C.GLenum)(pname), (*C.GLfloat)(params))
-}
-// http://www.opengl.org/sdk/docs/man/xhtml/glConvolutionParameteri.xml
-func ConvolutionParameteri(target Enum, pname Enum, params Int)  {
-	C.goglConvolutionParameteri((C.GLenum)(target), (C.GLenum)(pname), (C.GLint)(params))
-}
-// http://www.opengl.org/sdk/docs/man/xhtml/glConvolutionParameteriv.xml
-func ConvolutionParameteriv(target Enum, pname Enum, params *Int)  {
-	C.goglConvolutionParameteriv((C.GLenum)(target), (C.GLenum)(pname), (*C.GLint)(params))
-}
-// http://www.opengl.org/sdk/docs/man/xhtml/glCopyConvolutionFilter1D.xml
-func CopyConvolutionFilter1D(target Enum, internalformat Enum, x Int, y Int, width Sizei)  {
-	C.goglCopyConvolutionFilter1D((C.GLenum)(target), (C.GLenum)(internalformat), (C.GLint)(x), (C.GLint)(y), (C.GLsizei)(width))
-}
-// http://www.opengl.org/sdk/docs/man/xhtml/glCopyConvolutionFilter2D.xml
-func CopyConvolutionFilter2D(target Enum, internalformat Enum, x Int, y Int, width Sizei, height Sizei)  {
-	C.goglCopyConvolutionFilter2D((C.GLenum)(target), (C.GLenum)(internalformat), (C.GLint)(x), (C.GLint)(y), (C.GLsizei)(width), (C.GLsizei)(height))
-}
-// http://www.opengl.org/sdk/docs/man/xhtml/glGetConvolutionFilter.xml
-func GetConvolutionFilter(target Enum, format Enum, type_ Enum, image Pointer)  {
-	C.goglGetConvolutionFilter((C.GLenum)(target), (C.GLenum)(format), (C.GLenum)(type_), (unsafe.Pointer)(image))
-}
-// http://www.opengl.org/sdk/docs/man/xhtml/glGetConvolutionParameterfv.xml
-func GetConvolutionParameterfv(target Enum, pname Enum, params *Float)  {
-	C.goglGetConvolutionParameterfv((C.GLenum)(target), (C.GLenum)(pname), (*C.GLfloat)(params))
-}
-// http://www.opengl.org/sdk/docs/man/xhtml/glGetConvolutionParameteriv.xml
-func GetConvolutionParameteriv(target Enum, pname Enum, params *Int)  {
-	C.goglGetConvolutionParameteriv((C.GLenum)(target), (C.GLenum)(pname), (*C.GLint)(params))
-}
-// http://www.opengl.org/sdk/docs/man/xhtml/glGetSeparableFilter.xml
-func GetSeparableFilter(target Enum, format Enum, type_ Enum, row Pointer, column Pointer, span Pointer)  {
-	C.goglGetSeparableFilter((C.GLenum)(target), (C.GLenum)(format), (C.GLenum)(type_), (unsafe.Pointer)(row), (unsafe.Pointer)(column), (unsafe.Pointer)(span))
-}
-// http://www.opengl.org/sdk/docs/man/xhtml/glSeparableFilter2D.xml
-func SeparableFilter2D(target Enum, internalformat Enum, width Sizei, height Sizei, format Enum, type_ Enum, row Pointer, column Pointer)  {
-	C.goglSeparableFilter2D((C.GLenum)(target), (C.GLenum)(internalformat), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLenum)(format), (C.GLenum)(type_), (unsafe.Pointer)(row), (unsafe.Pointer)(column))
-}
-// http://www.opengl.org/sdk/docs/man/xhtml/glGetHistogram.xml
-func GetHistogram(target Enum, reset Boolean, format Enum, type_ Enum, values Pointer)  {
-	C.goglGetHistogram((C.GLenum)(target), (C.GLboolean)(reset), (C.GLenum)(format), (C.GLenum)(type_), (unsafe.Pointer)(values))
-}
-// http://www.opengl.org/sdk/docs/man/xhtml/glGetHistogramParameterfv.xml
-func GetHistogramParameterfv(target Enum, pname Enum, params *Float)  {
-	C.goglGetHistogramParameterfv((C.GLenum)(target), (C.GLenum)(pname), (*C.GLfloat)(params))
-}
-// http://www.opengl.org/sdk/docs/man/xhtml/glGetHistogramParameteriv.xml
-func GetHistogramParameteriv(target Enum, pname Enum, params *Int)  {
-	C.goglGetHistogramParameteriv((C.GLenum)(target), (C.GLenum)(pname), (*C.GLint)(params))
-}
-// http://www.opengl.org/sdk/docs/man/xhtml/glGetMinmax.xml
-func GetMinmax(target Enum, reset Boolean, format Enum, type_ Enum, values Pointer)  {
-	C.goglGetMinmax((C.GLenum)(target), (C.GLboolean)(reset), (C.GLenum)(format), (C.GLenum)(type_), (unsafe.Pointer)(values))
-}
-// http://www.opengl.org/sdk/docs/man/xhtml/glGetMinmaxParameterfv.xml
-func GetMinmaxParameterfv(target Enum, pname Enum, params *Float)  {
-	C.goglGetMinmaxParameterfv((C.GLenum)(target), (C.GLenum)(pname), (*C.GLfloat)(params))
-}
-// http://www.opengl.org/sdk/docs/man/xhtml/glGetMinmaxParameteriv.xml
-func GetMinmaxParameteriv(target Enum, pname Enum, params *Int)  {
-	C.goglGetMinmaxParameteriv((C.GLenum)(target), (C.GLenum)(pname), (*C.GLint)(params))
-}
-// http://www.opengl.org/sdk/docs/man/xhtml/glHistogram.xml
-func Histogram(target Enum, width Sizei, internalformat Enum, sink Boolean)  {
-	C.goglHistogram((C.GLenum)(target), (C.GLsizei)(width), (C.GLenum)(internalformat), (C.GLboolean)(sink))
-}
-// http://www.opengl.org/sdk/docs/man/xhtml/glMinmax.xml
-func Minmax(target Enum, internalformat Enum, sink Boolean)  {
-	C.goglMinmax((C.GLenum)(target), (C.GLenum)(internalformat), (C.GLboolean)(sink))
-}
-// http://www.opengl.org/sdk/docs/man/xhtml/glResetHistogram.xml
-func ResetHistogram(target Enum)  {
-	C.goglResetHistogram((C.GLenum)(target))
-}
-// http://www.opengl.org/sdk/docs/man/xhtml/glResetMinmax.xml
-func ResetMinmax(target Enum)  {
-	C.goglResetMinmax((C.GLenum)(target))
-}
 // VERSION_2_1
 
 // http://www.opengl.org/sdk/docs/man/xhtml/glUniformMatrix2x3fv.xml
@@ -6884,16 +6755,16 @@ func PixelTransferi(pname Enum, param Int)  {
 	C.goglPixelTransferi((C.GLenum)(pname), (C.GLint)(param))
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glPixelMapfv.xml
-func PixelMapfv(map_ Enum, mapsize Int, values *Float)  {
-	C.goglPixelMapfv((C.GLenum)(map_), (C.GLint)(mapsize), (*C.GLfloat)(values))
+func PixelMapfv(map_ Enum, mapsize Sizei, values *Float)  {
+	C.goglPixelMapfv((C.GLenum)(map_), (C.GLsizei)(mapsize), (*C.GLfloat)(values))
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glPixelMapuiv.xml
-func PixelMapuiv(map_ Enum, mapsize Int, values *Uint)  {
-	C.goglPixelMapuiv((C.GLenum)(map_), (C.GLint)(mapsize), (*C.GLuint)(values))
+func PixelMapuiv(map_ Enum, mapsize Sizei, values *Uint)  {
+	C.goglPixelMapuiv((C.GLenum)(map_), (C.GLsizei)(mapsize), (*C.GLuint)(values))
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glPixelMapusv.xml
-func PixelMapusv(map_ Enum, mapsize Int, values *Ushort)  {
-	C.goglPixelMapusv((C.GLenum)(map_), (C.GLint)(mapsize), (*C.GLushort)(values))
+func PixelMapusv(map_ Enum, mapsize Sizei, values *Ushort)  {
+	C.goglPixelMapusv((C.GLenum)(map_), (C.GLsizei)(mapsize), (*C.GLushort)(values))
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glCopyPixels.xml
 func CopyPixels(x Int, y Int, width Sizei, height Sizei, type_ Enum)  {
@@ -7039,6 +6910,136 @@ func Translated(x Double, y Double, z Double)  {
 func Translatef(x Float, y Float, z Float)  {
 	C.goglTranslatef((C.GLfloat)(x), (C.GLfloat)(y), (C.GLfloat)(z))
 }
+// VERSION_1_2_DEPRECATED
+
+// http://www.opengl.org/sdk/docs/man/xhtml/glColorTable.xml
+func ColorTable(target Enum, internalformat Enum, width Sizei, format Enum, type_ Enum, table Pointer)  {
+	C.goglColorTable((C.GLenum)(target), (C.GLenum)(internalformat), (C.GLsizei)(width), (C.GLenum)(format), (C.GLenum)(type_), (unsafe.Pointer)(table))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glColorTableParameterfv.xml
+func ColorTableParameterfv(target Enum, pname Enum, params *Float)  {
+	C.goglColorTableParameterfv((C.GLenum)(target), (C.GLenum)(pname), (*C.GLfloat)(params))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glColorTableParameteriv.xml
+func ColorTableParameteriv(target Enum, pname Enum, params *Int)  {
+	C.goglColorTableParameteriv((C.GLenum)(target), (C.GLenum)(pname), (*C.GLint)(params))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glCopyColorTable.xml
+func CopyColorTable(target Enum, internalformat Enum, x Int, y Int, width Sizei)  {
+	C.goglCopyColorTable((C.GLenum)(target), (C.GLenum)(internalformat), (C.GLint)(x), (C.GLint)(y), (C.GLsizei)(width))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glGetColorTable.xml
+func GetColorTable(target Enum, format Enum, type_ Enum, table Pointer)  {
+	C.goglGetColorTable((C.GLenum)(target), (C.GLenum)(format), (C.GLenum)(type_), (unsafe.Pointer)(table))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glGetColorTableParameterfv.xml
+func GetColorTableParameterfv(target Enum, pname Enum, params *Float)  {
+	C.goglGetColorTableParameterfv((C.GLenum)(target), (C.GLenum)(pname), (*C.GLfloat)(params))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glGetColorTableParameteriv.xml
+func GetColorTableParameteriv(target Enum, pname Enum, params *Int)  {
+	C.goglGetColorTableParameteriv((C.GLenum)(target), (C.GLenum)(pname), (*C.GLint)(params))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glColorSubTable.xml
+func ColorSubTable(target Enum, start Sizei, count Sizei, format Enum, type_ Enum, data Pointer)  {
+	C.goglColorSubTable((C.GLenum)(target), (C.GLsizei)(start), (C.GLsizei)(count), (C.GLenum)(format), (C.GLenum)(type_), (unsafe.Pointer)(data))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glCopyColorSubTable.xml
+func CopyColorSubTable(target Enum, start Sizei, x Int, y Int, width Sizei)  {
+	C.goglCopyColorSubTable((C.GLenum)(target), (C.GLsizei)(start), (C.GLint)(x), (C.GLint)(y), (C.GLsizei)(width))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glConvolutionFilter1D.xml
+func ConvolutionFilter1D(target Enum, internalformat Enum, width Sizei, format Enum, type_ Enum, image Pointer)  {
+	C.goglConvolutionFilter1D((C.GLenum)(target), (C.GLenum)(internalformat), (C.GLsizei)(width), (C.GLenum)(format), (C.GLenum)(type_), (unsafe.Pointer)(image))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glConvolutionFilter2D.xml
+func ConvolutionFilter2D(target Enum, internalformat Enum, width Sizei, height Sizei, format Enum, type_ Enum, image Pointer)  {
+	C.goglConvolutionFilter2D((C.GLenum)(target), (C.GLenum)(internalformat), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLenum)(format), (C.GLenum)(type_), (unsafe.Pointer)(image))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glConvolutionParameterf.xml
+func ConvolutionParameterf(target Enum, pname Enum, params Float)  {
+	C.goglConvolutionParameterf((C.GLenum)(target), (C.GLenum)(pname), (C.GLfloat)(params))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glConvolutionParameterfv.xml
+func ConvolutionParameterfv(target Enum, pname Enum, params *Float)  {
+	C.goglConvolutionParameterfv((C.GLenum)(target), (C.GLenum)(pname), (*C.GLfloat)(params))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glConvolutionParameteri.xml
+func ConvolutionParameteri(target Enum, pname Enum, params Int)  {
+	C.goglConvolutionParameteri((C.GLenum)(target), (C.GLenum)(pname), (C.GLint)(params))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glConvolutionParameteriv.xml
+func ConvolutionParameteriv(target Enum, pname Enum, params *Int)  {
+	C.goglConvolutionParameteriv((C.GLenum)(target), (C.GLenum)(pname), (*C.GLint)(params))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glCopyConvolutionFilter1D.xml
+func CopyConvolutionFilter1D(target Enum, internalformat Enum, x Int, y Int, width Sizei)  {
+	C.goglCopyConvolutionFilter1D((C.GLenum)(target), (C.GLenum)(internalformat), (C.GLint)(x), (C.GLint)(y), (C.GLsizei)(width))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glCopyConvolutionFilter2D.xml
+func CopyConvolutionFilter2D(target Enum, internalformat Enum, x Int, y Int, width Sizei, height Sizei)  {
+	C.goglCopyConvolutionFilter2D((C.GLenum)(target), (C.GLenum)(internalformat), (C.GLint)(x), (C.GLint)(y), (C.GLsizei)(width), (C.GLsizei)(height))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glGetConvolutionFilter.xml
+func GetConvolutionFilter(target Enum, format Enum, type_ Enum, image Pointer)  {
+	C.goglGetConvolutionFilter((C.GLenum)(target), (C.GLenum)(format), (C.GLenum)(type_), (unsafe.Pointer)(image))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glGetConvolutionParameterfv.xml
+func GetConvolutionParameterfv(target Enum, pname Enum, params *Float)  {
+	C.goglGetConvolutionParameterfv((C.GLenum)(target), (C.GLenum)(pname), (*C.GLfloat)(params))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glGetConvolutionParameteriv.xml
+func GetConvolutionParameteriv(target Enum, pname Enum, params *Int)  {
+	C.goglGetConvolutionParameteriv((C.GLenum)(target), (C.GLenum)(pname), (*C.GLint)(params))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glGetSeparableFilter.xml
+func GetSeparableFilter(target Enum, format Enum, type_ Enum, row Pointer, column Pointer, span Pointer)  {
+	C.goglGetSeparableFilter((C.GLenum)(target), (C.GLenum)(format), (C.GLenum)(type_), (unsafe.Pointer)(row), (unsafe.Pointer)(column), (unsafe.Pointer)(span))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glSeparableFilter2D.xml
+func SeparableFilter2D(target Enum, internalformat Enum, width Sizei, height Sizei, format Enum, type_ Enum, row Pointer, column Pointer)  {
+	C.goglSeparableFilter2D((C.GLenum)(target), (C.GLenum)(internalformat), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLenum)(format), (C.GLenum)(type_), (unsafe.Pointer)(row), (unsafe.Pointer)(column))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glGetHistogram.xml
+func GetHistogram(target Enum, reset Boolean, format Enum, type_ Enum, values Pointer)  {
+	C.goglGetHistogram((C.GLenum)(target), (C.GLboolean)(reset), (C.GLenum)(format), (C.GLenum)(type_), (unsafe.Pointer)(values))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glGetHistogramParameterfv.xml
+func GetHistogramParameterfv(target Enum, pname Enum, params *Float)  {
+	C.goglGetHistogramParameterfv((C.GLenum)(target), (C.GLenum)(pname), (*C.GLfloat)(params))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glGetHistogramParameteriv.xml
+func GetHistogramParameteriv(target Enum, pname Enum, params *Int)  {
+	C.goglGetHistogramParameteriv((C.GLenum)(target), (C.GLenum)(pname), (*C.GLint)(params))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glGetMinmax.xml
+func GetMinmax(target Enum, reset Boolean, format Enum, type_ Enum, values Pointer)  {
+	C.goglGetMinmax((C.GLenum)(target), (C.GLboolean)(reset), (C.GLenum)(format), (C.GLenum)(type_), (unsafe.Pointer)(values))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glGetMinmaxParameterfv.xml
+func GetMinmaxParameterfv(target Enum, pname Enum, params *Float)  {
+	C.goglGetMinmaxParameterfv((C.GLenum)(target), (C.GLenum)(pname), (*C.GLfloat)(params))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glGetMinmaxParameteriv.xml
+func GetMinmaxParameteriv(target Enum, pname Enum, params *Int)  {
+	C.goglGetMinmaxParameteriv((C.GLenum)(target), (C.GLenum)(pname), (*C.GLint)(params))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glHistogram.xml
+func Histogram(target Enum, width Sizei, internalformat Enum, sink Boolean)  {
+	C.goglHistogram((C.GLenum)(target), (C.GLsizei)(width), (C.GLenum)(internalformat), (C.GLboolean)(sink))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glMinmax.xml
+func Minmax(target Enum, internalformat Enum, sink Boolean)  {
+	C.goglMinmax((C.GLenum)(target), (C.GLenum)(internalformat), (C.GLboolean)(sink))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glResetHistogram.xml
+func ResetHistogram(target Enum)  {
+	C.goglResetHistogram((C.GLenum)(target))
+}
+// http://www.opengl.org/sdk/docs/man/xhtml/glResetMinmax.xml
+func ResetMinmax(target Enum)  {
+	C.goglResetMinmax((C.GLenum)(target))
+}
 func InitVersion21() error {
 	var ret C.int
 	if ret = C.init_VERSION_2_1(); ret != 0 {
@@ -7132,15 +7133,6 @@ func InitVersion12Deprecated() error {
 }
 func Init() error {
 	var err error
-	if err = InitVersion12Deprecated(); err != nil {
-		return err
-	}
-	if err = InitVersion21(); err != nil {
-		return err
-	}
-	if err = InitVersion20(); err != nil {
-		return err
-	}
 	if err = InitVersion13Deprecated(); err != nil {
 		return err
 	}
@@ -7171,6 +7163,74 @@ func Init() error {
 	if err = InitVersion10Deprecated(); err != nil {
 		return err
 	}
+	if err = InitVersion12Deprecated(); err != nil {
+		return err
+	}
+	if err = InitVersion21(); err != nil {
+		return err
+	}
+	if err = InitVersion20(); err != nil {
+		return err
+	}
 	return nil
+}
+//Go bool to GL boolean.
+func GLBool(b bool) Boolean {
+	if b {
+		return TRUE
+	}
+	return FALSE
+}
+
+// GL boolean to Go bool.
+func GoBool(b Boolean) bool {
+	return b == TRUE
+}
+
+// Go string to GL string.
+func GLString(str string) *Char {
+	return (*Char)(C.CString(str))
+}
+
+// Allocates a GL string
+func GLStringAlloc(length Sizei) *Char {
+	return (*Char)(C.malloc(C.size_t(length)))
+}
+
+// Frees GL string.
+func GLStringFree(str *Char) {
+	C.free(unsafe.Pointer(str))
+}
+
+// GL string (GLchar*) to Go string.
+func GoString(str *Char) string {
+	return C.GoString((*C.char)(str))
+}
+
+// GL string (GLubyte*) to Go string.
+func GoStringUb(str *Ubyte) string {
+	return C.GoString((*C.char)(unsafe.Pointer(str)))
+}
+
+// GL string (GLchar*) with length to Go string.
+func GoStringN(str *Char, length Sizei) string {
+	return C.GoStringN((*C.char)(str), C.int(length))
+}
+
+// Converts a list of Go strings to a slice of GL strings.
+// Usefull for ShaderSource().
+func GLStringArray(strs ...string) []*Char {
+	strSlice := make([]*Char, len(strs))
+	for i, s := range strs {
+		strSlice[i] = (*Char)(C.CString(s))
+	}
+	return strSlice
+}
+
+// Free GL string slice allocated by GLStringArray().
+func GLStringArrayFree(strs []*Char) {
+	for _, s := range strs {
+		C.free(unsafe.Pointer(s))
+	}
 }
 // EOF
