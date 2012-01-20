@@ -6780,7 +6780,7 @@ func GLString(str string) *Char {
 	return (*Char)(C.CString(str))
 }
 
-// Allocates a GL string
+// Allocates a GL string.
 func GLStringAlloc(length Sizei) *Char {
 	return (*Char)(C.malloc(C.size_t(length)))
 }
@@ -6821,4 +6821,10 @@ func GLStringArrayFree(strs []*Char) {
 		C.free(unsafe.Pointer(s))
 	}
 }
+
+// Add offset to a pointer. Usefull for VertexAttribPointer, TexCoordPointer, NormalPointer, ... 
+func Offset(p Pointer, o uintptr) Pointer {
+	return Pointer(uintptr(p) + o)
+}
+
 // EOF
