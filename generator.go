@@ -119,15 +119,15 @@ func writePackage(w io.Writer, packageName string, pak *Package, functsInfo *Fun
 	fmt.Fprintf(w, "// #endif\n")
 	fmt.Fprintf(w, "// }\n// \n")
 
-	if err := writeCFuncDefs(w, pak.Functions, typeMap); err != nil {
+	if err := writeCFuncDeclarations(w, pak.Functions, typeMap); err != nil {
 		return err
 	}
 
-	if err := writeCFuncDecls(w, pak.Functions, typeMap); err != nil {
+	if err := writeCFuncDefinitions(w, pak.Functions, typeMap); err != nil {
 		return err
 	}
 
-	if err := writeCFuncGetprocAddrs(w, pak.Functions); err != nil {
+	if err := writeCFuncGetProcAddrs(w, pak.Functions); err != nil {
 		return err
 	}
 
@@ -162,7 +162,7 @@ func writePackage(w io.Writer, packageName string, pak *Package, functsInfo *Fun
 
 	writeGoEnumDefinitions(w, pak.Enums)
 
-	if err := writeGoFunctionDefinitions(w, pak.Functions, typeMap, highestMajorVersion); err != nil {
+	if err := writeGoFuncDefinitions(w, pak.Functions, typeMap, highestMajorVersion); err != nil {
 		return err
 	}
 
@@ -175,90 +175,141 @@ func writePackage(w io.Writer, packageName string, pak *Package, functsInfo *Fun
 	return nil
 }
 
-func writeCFuncDefs(w io.Writer, functions FunctionCategories, typeMap TypeMap) error {
+func isOpenGL11(cat string) (bool, error) {
+	pc, err := ParseCategoryString(cat)
+	if err != nil {
+		return false, err
+	}
+	if pc.Type == CategoryExtension {
+		return false, nil
+	}
+	if pc.Version.Compare(Version{1, 1}) <= 0 {
+		return true, nil
+	}
+	return false, nil
+}
+
+func writeCFuncDeclarations(w io.Writer, functions FunctionCategories, typeMap TypeMap) error {
 	for cat, fs := range functions {
 		fmt.Fprintf(w, "// //  %s\n", cat)
+		isGL11, err := isOpenGL11(cat)
+		if err != nil {
+			return err
+		}
 		for _, f := range fs {
-			rtype, err := typeMap.Resolve(f.Return)
-			if err != nil {
+			if err := writeCFuncDeclaration(w, f, typeMap, isGL11); err != nil {
 				return err
 			}
-			fmt.Fprintf(w, "// %s (APIENTRYP ptrgogl%s)(", rtype, f.Name)
-			for i, _  := range f.Parameters {
-				p := &f.Parameters[i]
-				ptype, err := typeMap.Resolve(p.Type)
-				if err != nil {
-					return err
-				}
-				fmt.Fprintf(w, "%s", ptype)
-				if p.Out || (p.Modifier == ParamModifierReference || p.Modifier == ParamModifierArray) {
-					fmt.Fprint(w, "*")
-				}
-				fmt.Fprintf(w, " %s", p.Name)
-				if i < len(f.Parameters)-1 {
-					fmt.Fprintf(w, ", ")
-				}
-			}
-			fmt.Fprintf(w, ");\n")
 		}
 	}
 	fmt.Fprintf(w, "// \n")
 	return nil
 }
 
-func writeCFuncDecls(w io.Writer, functions FunctionCategories, typeMap TypeMap) error {
+func writeCFuncDeclaration(w io.Writer, f *Function, typeMap TypeMap, prototype bool) error {
+	rtype, err := typeMap.Resolve(f.Return)
+	if err != nil {
+		return err
+	}
+	if prototype {
+		fmt.Fprintf(w, "// GLAPI %s APIENTRY gl%s)(", rtype, f.Name)
+	} else {
+		fmt.Fprintf(w, "// %s (APIENTRYP ptrgl%s)(", rtype, f.Name)
+	}
+	for i, _ := range f.Parameters {
+		p := &f.Parameters[i]
+		ptype, err := typeMap.Resolve(p.Type)
+		if err != nil {
+			return err
+		}
+		fmt.Fprintf(w, "%s", ptype)
+		if p.Out || (p.Modifier == ParamModifierReference || p.Modifier == ParamModifierArray) {
+			fmt.Fprint(w, "*")
+		}
+		fmt.Fprintf(w, " %s", p.Name)
+		if i < len(f.Parameters)-1 {
+			fmt.Fprintf(w, ", ")
+		}
+	}
+	fmt.Fprintf(w, ");\n")
+	return nil
+}
+
+func writeCFuncDefinitions(w io.Writer, functions FunctionCategories, typeMap TypeMap) error {
 	for cat, fs := range functions {
 		fmt.Fprintf(w, "// //  %s\n", cat)
+		isGL11, err := isOpenGL11(cat)
+		if err != nil {
+			return err
+		}
 		for _, f := range fs {
-			rtype, err := typeMap.Resolve(f.Return)
-			if err != nil {
+			if err := writeCFuncDefinition(w, f, typeMap, isGL11); err != nil {
 				return err
 			}
-			fmt.Fprintf(w, "// %s gogl%s(", rtype, f.Name)
-			for i, _ := range f.Parameters {
-				p := &f.Parameters[i]
-				ptype, err := typeMap.Resolve(p.Type)
-				if err != nil {
-					return err
-				}
-				fmt.Fprintf(w, "%s", ptype)
-				if p.Out || (p.Modifier == ParamModifierReference || p.Modifier == ParamModifierArray) {
-					fmt.Fprint(w, "*")
-				}
-				fmt.Fprintf(w, " %s", p.Name)
-				if i < len(f.Parameters)-1 {
-					fmt.Fprintf(w, ", ")
-				}
-			}
-			fmt.Fprintf(w, ") {\n")
-			if rtype == "void" {
-				fmt.Fprintf(w, "// 	(*ptrgogl%s)(", f.Name)
-			} else {
-				fmt.Fprintf(w, "// 	return (*ptrgogl%s)(", f.Name)
-			}
-			for i, _ := range f.Parameters {
-				p := &f.Parameters[i]
-				fmt.Fprintf(w, "%s", p.Name)
-				if i < len(f.Parameters)-1 {
-					fmt.Fprintf(w, ", ")
-				}
-			}
-			fmt.Fprintf(w, ");\n// }\n")
 		}
 	}
 	fmt.Fprintf(w, "// \n")
 	return nil
 }
 
-func writeCFuncGetprocAddrs(w io.Writer, functions FunctionCategories) error {
-	for cat, fs := range functions {
-		fmt.Fprintf(w, "// int init_%s() {\n", cat)
-		for _, f := range fs {
-			fmt.Fprintf(w, "// 	ptrgogl%s = goglGetProcAddress(\"gl%s\");\n", f.Name, f.Name)
-			fmt.Fprintf(w, "// 	if(ptrgogl%s == NULL) return 1;\n", f.Name)
+func writeCFuncDefinition(w io.Writer, f *Function, typeMap TypeMap, prototype bool) error {
+	rtype, err := typeMap.Resolve(f.Return)
+	if err != nil {
+		return err
+	}
+	fmt.Fprintf(w, "// %s gogl%s(", rtype, f.Name)
+	for i, _ := range f.Parameters {
+		p := &f.Parameters[i]
+		ptype, err := typeMap.Resolve(p.Type)
+		if err != nil {
+			return err
 		}
-		fmt.Fprintf(w, "// \treturn 0;\n")
-		fmt.Fprintf(w, "// }\n")
+		fmt.Fprintf(w, "%s", ptype)
+		if p.Out || (p.Modifier == ParamModifierReference || p.Modifier == ParamModifierArray) {
+			fmt.Fprint(w, "*")
+		}
+		fmt.Fprintf(w, " %s", p.Name)
+		if i < len(f.Parameters)-1 {
+			fmt.Fprintf(w, ", ")
+		}
+	}
+	fmt.Fprintf(w, ") {\n")
+	if rtype == "void" {
+		fmt.Fprintf(w, "// 	")
+	} else {
+		fmt.Fprintf(w, "// 	return ")
+	}
+	if prototype {
+		fmt.Fprintf(w, "gl%s(", f.Name)
+	} else {
+		fmt.Fprintf(w, "(*ptrgl%s)(", f.Name)
+	}
+	for i, _ := range f.Parameters {
+		p := &f.Parameters[i]
+		fmt.Fprintf(w, "%s", p.Name)
+		if i < len(f.Parameters)-1 {
+			fmt.Fprintf(w, ", ")
+		}
+	}
+	fmt.Fprintf(w, ");\n// }\n")
+	return nil
+}
+
+func writeCFuncGetProcAddrs(w io.Writer, functions FunctionCategories) error {
+	for cat, fs := range functions {
+		isGL11, err := isOpenGL11(cat)
+		if err != nil {
+			return err
+		}
+		if !isGL11 {
+			fmt.Fprintf(w, "// int init_%s() {\n", cat)
+			for _, f := range fs {
+				fmt.Fprintf(w, "// 	ptrgogl%s = goglGetProcAddress(\"gl%s\");\n", f.Name, f.Name)
+				fmt.Fprintf(w, "// 	if(ptrgogl%s == NULL) return 1;\n", f.Name)
+			}
+			fmt.Fprintf(w, "// \treturn 0;\n")
+			fmt.Fprintf(w, "// }\n")
+		}
 	}
 	fmt.Fprintf(w, "// \n")
 	return nil
@@ -277,96 +328,126 @@ func writeGoEnumDefinitions(w io.Writer, enumCats EnumCategories) {
 	}
 }
 
-func writeGoFunctionDefinitions(w io.Writer, functions FunctionCategories, typeMap TypeMap, majorVersion int) error {
+func writeGoFuncDefinitions(w io.Writer, functions FunctionCategories, typeMap TypeMap, majorVersion int) error {
 	for cat, fs := range functions {
 		fmt.Fprintf(w, "// %s\n\n", cat)
+		isGL11, err := isOpenGL11(cat)
+		if err != nil {
+			return err
+		}
 		for _, f := range fs {
-			if majorVersion > 0 {
-				fmt.Fprintf(w, "// %s\n", MakeFuncDocUrl(majorVersion, f.Name))
-			}
-			fmt.Fprintf(w, "func %s(", f.Name)
-			for i, _ := range f.Parameters {
-				p := &f.Parameters[i]
-				fmt.Fprintf(w, "%s ", RenameIfReservedWord(p.Name))
-				ptype, err := typeMap.Resolve(p.Type)
-				if err != nil {
-					return err
-				}
-				goType, _, err := CTypeToGoType(ptype, p.Out, p.Modifier)
-				if err != nil {
-					return err
-				}
-				fmt.Fprintf(w, "%s", goType)
-				if i < len(f.Parameters)-1 {
-					fmt.Fprintf(w, ", ")
-				}
-			}
-			rtype, err := typeMap.Resolve(f.Return)
-			if err != nil {
+			if err := writeGoFuncDefinition(w, f, typeMap, majorVersion, isGL11); err != nil {
 				return err
-			}
-			goType, _, err := CTypeToGoType(rtype, false, ParamModifierValue)
-			if err != nil {
-				return err
-			}
-			fmt.Fprintf(w, ") %s {\n", goType)
-			if rtype == "void" {
-				fmt.Fprintf(w, "	C.gogl%s(", f.Name)
-			} else {
-				fmt.Fprintf(w, "	return (%s)(C.gogl%s(", goType, f.Name)
-			}
-			for i, _ := range f.Parameters {
-				p := &f.Parameters[i]
-				ptype, err := typeMap.Resolve(p.Type)
-				if err != nil {
-					return err
-				}
-				_, cgoType, err := CTypeToGoType(ptype, p.Out, p.Modifier)
-				if err != nil {
-					return err
-				}
-				// HACK: handling pointers to pointers is tricky. We use unsafe.Pointer. Any better solution?
-				if strings.HasPrefix(cgoType, "**") {
-					fmt.Fprintf(w, "(%s)(unsafe.Pointer(%s))", cgoType, RenameIfReservedWord(p.Name))
-				} else {
-					fmt.Fprintf(w, "(%s)(%s)", cgoType, RenameIfReservedWord(p.Name))
-				}
-				if i < len(f.Parameters)-1 {
-					fmt.Fprintf(w, ", ")
-				}
-			}
-			if rtype == "void" {
-				fmt.Fprintf(w, ")\n}\n")
-			} else {
-				fmt.Fprintf(w, "))\n}\n")
 			}
 		}
 	}
 	return nil
 }
 
+func writeGoFuncDefinition(w io.Writer, f *Function, typeMap TypeMap, majorVersion int, prototype bool) error {
+	if majorVersion > 0 {
+		fmt.Fprintf(w, "// %s\n", MakeFuncDocUrl(majorVersion, f.Name))
+	}
+	fmt.Fprintf(w, "func %s(", f.Name)
+	for i, _ := range f.Parameters {
+		p := &f.Parameters[i]
+		fmt.Fprintf(w, "%s ", RenameIfReservedWord(p.Name))
+		ptype, err := typeMap.Resolve(p.Type)
+		if err != nil {
+			return err
+		}
+		goType, _, err := CTypeToGoType(ptype, p.Out, p.Modifier)
+		if err != nil {
+			return err
+		}
+		fmt.Fprintf(w, "%s", goType)
+		if i < len(f.Parameters)-1 {
+			fmt.Fprintf(w, ", ")
+		}
+	}
+	rtype, err := typeMap.Resolve(f.Return)
+	if err != nil {
+		return err
+	}
+	goType, _, err := CTypeToGoType(rtype, false, ParamModifierValue)
+	if err != nil {
+		return err
+	}
+	fmt.Fprintf(w, ") %s {\n", goType)
+	if rtype == "void" {
+		if prototype {
+			fmt.Fprintf(w, "	C.gl%s(", f.Name)
+		} else {
+			fmt.Fprintf(w, "	C.gogl%s(", f.Name)
+		}
+	} else {
+		if prototype {
+			fmt.Fprintf(w, "	return (%s)(C.gl%s(", goType, f.Name)
+		} else {
+			fmt.Fprintf(w, "	return (%s)(C.gogl%s(", goType, f.Name)
+		}
+	}
+	for i, _ := range f.Parameters {
+		p := &f.Parameters[i]
+		ptype, err := typeMap.Resolve(p.Type)
+		if err != nil {
+			return err
+		}
+		_, cgoType, err := CTypeToGoType(ptype, p.Out, p.Modifier)
+		if err != nil {
+			return err
+		}
+		// HACK: handling pointers to pointers is tricky. We use unsafe.Pointer. Any better solution?
+		if strings.HasPrefix(cgoType, "**") {
+			fmt.Fprintf(w, "(%s)(unsafe.Pointer(%s))", cgoType, RenameIfReservedWord(p.Name))
+		} else {
+			fmt.Fprintf(w, "(%s)(%s)", cgoType, RenameIfReservedWord(p.Name))
+		}
+		if i < len(f.Parameters)-1 {
+			fmt.Fprintf(w, ", ")
+		}
+	}
+	if rtype == "void" {
+		fmt.Fprintf(w, ")\n}\n")
+	} else {
+		fmt.Fprintf(w, "))\n}\n")
+	}
+	return nil
+}
+
 func writeGoInitDefinitions(w io.Writer, functions FunctionCategories) error {
 	for cat, _ := range functions {
-		fmt.Fprintf(w, "func Init%s() error {\n", GoName(cat))
-		fmt.Fprintf(w, "\tvar ret C.int\n")
-		fmt.Fprintf(w, "\tif ret = C.init_%s(); ret != 0 {\n", cat)
-		fmt.Fprintf(w, "\t\treturn errors.New(\"unable to initialize %s\")\n", cat)
-		fmt.Fprintf(w, "\t}\n")
-		fmt.Fprintf(w, "\treturn nil\n")
-		fmt.Fprintf(w, "}\n")
+		isGL11, err := isOpenGL11(cat)
+		if err != nil {
+			return err
+		}
+		if !isGL11 {
+			fmt.Fprintf(w, "func Init%s() error {\n", GoName(cat))
+			fmt.Fprintf(w, "\tvar ret C.int\n")
+			fmt.Fprintf(w, "\tif ret = C.init_%s(); ret != 0 {\n", cat)
+			fmt.Fprintf(w, "\t\treturn errors.New(\"unable to initialize %s\")\n", cat)
+			fmt.Fprintf(w, "\t}\n")
+			fmt.Fprintf(w, "\treturn nil\n")
+			fmt.Fprintf(w, "}\n")
+		}
 	}
 	fmt.Fprintf(w, "func Init() error {\n")
 	fmt.Fprintf(w, "\tvar err error\n")
 	for cat, _ := range functions {
-		fmt.Fprintf(w, "\tif err = Init%s(); err != nil {\n", GoName(cat))
-		fmt.Fprintf(w, "\t\treturn err\n")
-		fmt.Fprintf(w, "\t}\n")
+		isGL11, err := isOpenGL11(cat)
+		if err != nil {
+			return err
+		}
+		if !isGL11 {
+			fmt.Fprintf(w, "\tif err = Init%s(); err != nil {\n", GoName(cat))
+			fmt.Fprintf(w, "\t\treturn err\n")
+			fmt.Fprintf(w, "\t}\n")
+		}
 	}
 	fmt.Fprintf(w, "\treturn nil\n")
 	fmt.Fprintf(w, "}\n")
 	return nil
 }
-
 
 func writeUtilityFunctions(w io.Writer) {
 	fmt.Fprintln(w, `//Go bool to GL boolean.
