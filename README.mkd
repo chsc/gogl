@@ -7,7 +7,7 @@ No external dependencies like GLEW are needed.
 Install the OpenGL bindings
 ---------------------------
 
-For example, OpenGL 2.1 bindings can be installed using the go comand:
+For example, OpenGL 2.1 bindings can be installed using the go command:
 
 	go get github.com/chsc/gogl/gl21
 
