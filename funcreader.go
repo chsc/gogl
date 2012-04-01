@@ -169,8 +169,8 @@ func ReadFunctions(r io.Reader) (FunctionCategories, *FunctionsInfo, error) {
 		} else if newcategory := funcNewCategoryRE.FindStringSubmatch(line); newcategory != nil {
 			currentCategory = newcategory[1]
 			functions[currentCategory] = make([]*Function, 0)
-		//} else if funcIgnoreRE.MatchString(line) {
-		//	// ignore
+			//} else if funcIgnoreRE.MatchString(line) {
+			//	// ignore
 		} else {
 			fmt.Fprintf(os.Stderr, "WARNING: Unable to parse line '%s'\n", line)
 			//return functions, finfo, fmt.Errorf("Unable to parse line: '%s'", line)

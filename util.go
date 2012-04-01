@@ -7,8 +7,8 @@ package main
 import (
 	"errors"
 	"fmt"
-	"strings"
 	"strconv"
+	"strings"
 	"unicode"
 )
 
@@ -29,10 +29,10 @@ const (
 )
 
 type ParsedCategory struct {
-	Type     CategoryType
-	Version  Version
-	Vendor   string
-	Name     string
+	Type    CategoryType
+	Version Version
+	Vendor  string
+	Name    string
 }
 
 func (pc ParsedCategory) String() string {
@@ -84,12 +84,12 @@ func GoName(n string) string {
 		prev = r
 		return unicode.ToLower(r)
 	},
-	n)
+		n)
 }
 
 func RenameIfReservedWord(word string) string {
 	switch word {
-	case "func", "type", "struct", "range", "map", "string":
+	case "func", "type", "struct", "range", "map", "string", "near", "far":
 		return fmt.Sprintf("%s_", word)
 	}
 	return word
@@ -106,7 +106,7 @@ func CleanEnumName(enum string) string {
 // Converts C types to Go types.
 func CTypeToGoType(cType string, out bool, mod ParamModifier) (goType, cgoType string, err error) {
 	// special cases:
-	switch cType{
+	switch cType {
 	case "void":
 		goType = ""
 		cgoType = ""
@@ -163,7 +163,7 @@ func CTypeToGoType(cType string, out bool, mod ParamModifier) (goType, cgoType s
 		}
 		return
 	case "GLhandleARB":
-		goType = "Uint"      // handle is uint
+		goType = "Uint" // handle is uint
 		cgoType = "C.GLuint"
 		if mod == ParamModifierArray || mod == ParamModifierReference {
 			goType = "*" + goType

@@ -109,11 +109,22 @@ func writePackage(w io.Writer, packageName string, pak *Package, functsInfo *Fun
 		fmt.Fprintf(w, "// %s\n", passthrus)
 	}
 
+	fmt.Fprintf(w, "// #ifdef _WIN32\n")
+	fmt.Fprintf(w, "// static HMODULE opengl32 = NULL;\n")
+	fmt.Fprintf(w, "// #endif\n// \n")
+
 	fmt.Fprintf(w, "// void* goglGetProcAddress(const char* name) { \n")
 	fmt.Fprintf(w, "// #ifdef __APPLE__\n")
 	fmt.Fprintf(w, "// 	return NULL; // TODO: Add get proc addr for Mac.\n")
 	fmt.Fprintf(w, "// #elif _WIN32\n")
-	fmt.Fprintf(w, "// 	return wglGetProcAddress((LPCSTR)name); // TODO: Not tested\n")
+	fmt.Fprintf(w, "// 	void* pf = wglGetProcAddress((LPCSTR)name);\n")
+	fmt.Fprintf(w, "// 	if(pf) {\n")
+	fmt.Fprintf(w, "// 		return pf;\n")
+	fmt.Fprintf(w, "// 	}\n")
+	fmt.Fprintf(w, "// 	if(opengl32 == NULL) {\n")
+	fmt.Fprintf(w, "// 		opengl32 = LoadLibraryA(\"opengl32.dll\");\n")
+	fmt.Fprintf(w, "// 	}\n")
+	fmt.Fprintf(w, "// 	return GetProcAddress(opengl32, (LPCSTR)name);\n")
 	fmt.Fprintf(w, "// #else\n")
 	fmt.Fprintf(w, "// 	return glXGetProcAddress((const GLubyte*)name);\n")
 	fmt.Fprintf(w, "// #endif\n")
@@ -175,29 +186,11 @@ func writePackage(w io.Writer, packageName string, pak *Package, functsInfo *Fun
 	return nil
 }
 
-func isOpenGL11(cat string) (bool, error) {
-	pc, err := ParseCategoryString(cat)
-	if err != nil {
-		return false, err
-	}
-	if pc.Type == CategoryExtension {
-		return false, nil
-	}
-	if pc.Version.Compare(Version{1, 1}) <= 0 {
-		return true, nil
-	}
-	return false, nil
-}
-
 func writeCFuncDeclarations(w io.Writer, functions FunctionCategories, typeMap TypeMap) error {
 	for cat, fs := range functions {
 		fmt.Fprintf(w, "// //  %s\n", cat)
-		isGL11, err := isOpenGL11(cat)
-		if err != nil {
-			return err
-		}
 		for _, f := range fs {
-			if err := writeCFuncDeclaration(w, f, typeMap, isGL11); err != nil {
+			if err := writeCFuncDeclaration(w, f, typeMap, false); err != nil {
 				return err
 			}
 		}
@@ -212,7 +205,7 @@ func writeCFuncDeclaration(w io.Writer, f *Function, typeMap TypeMap, prototype 
 		return err
 	}
 	if prototype {
-		fmt.Fprintf(w, "// GLAPI %s APIENTRY gl%s)(", rtype, f.Name)
+		fmt.Fprintf(w, "// GLAPI %s APIENTRY gl%s(", rtype, f.Name)
 	} else {
 		fmt.Fprintf(w, "// %s (APIENTRYP ptrgl%s)(", rtype, f.Name)
 	}
@@ -238,12 +231,8 @@ func writeCFuncDeclaration(w io.Writer, f *Function, typeMap TypeMap, prototype 
 func writeCFuncDefinitions(w io.Writer, functions FunctionCategories, typeMap TypeMap) error {
 	for cat, fs := range functions {
 		fmt.Fprintf(w, "// //  %s\n", cat)
-		isGL11, err := isOpenGL11(cat)
-		if err != nil {
-			return err
-		}
 		for _, f := range fs {
-			if err := writeCFuncDefinition(w, f, typeMap, isGL11); err != nil {
+			if err := writeCFuncDefinition(w, f, typeMap, false); err != nil {
 				return err
 			}
 		}
@@ -268,7 +257,7 @@ func writeCFuncDefinition(w io.Writer, f *Function, typeMap TypeMap, prototype b
 		if p.Out || (p.Modifier == ParamModifierReference || p.Modifier == ParamModifierArray) {
 			fmt.Fprint(w, "*")
 		}
-		fmt.Fprintf(w, " %s", p.Name)
+		fmt.Fprintf(w, " %s", RenameIfReservedWord(p.Name))
 		if i < len(f.Parameters)-1 {
 			fmt.Fprintf(w, ", ")
 		}
@@ -286,7 +275,7 @@ func writeCFuncDefinition(w io.Writer, f *Function, typeMap TypeMap, prototype b
 	}
 	for i, _ := range f.Parameters {
 		p := &f.Parameters[i]
-		fmt.Fprintf(w, "%s", p.Name)
+		fmt.Fprintf(w, "%s", RenameIfReservedWord(p.Name))
 		if i < len(f.Parameters)-1 {
 			fmt.Fprintf(w, ", ")
 		}
@@ -297,19 +286,13 @@ func writeCFuncDefinition(w io.Writer, f *Function, typeMap TypeMap, prototype b
 
 func writeCFuncGetProcAddrs(w io.Writer, functions FunctionCategories) error {
 	for cat, fs := range functions {
-		isGL11, err := isOpenGL11(cat)
-		if err != nil {
-			return err
+		fmt.Fprintf(w, "// int init_%s() {\n", cat)
+		for _, f := range fs {
+			fmt.Fprintf(w, "// 	ptrgl%s = goglGetProcAddress(\"gl%s\");\n", f.Name, f.Name)
+			fmt.Fprintf(w, "// 	if(ptrgl%s == NULL) return 1;\n", f.Name)
 		}
-		if !isGL11 {
-			fmt.Fprintf(w, "// int init_%s() {\n", cat)
-			for _, f := range fs {
-				fmt.Fprintf(w, "// 	ptrgogl%s = goglGetProcAddress(\"gl%s\");\n", f.Name, f.Name)
-				fmt.Fprintf(w, "// 	if(ptrgogl%s == NULL) return 1;\n", f.Name)
-			}
-			fmt.Fprintf(w, "// \treturn 0;\n")
-			fmt.Fprintf(w, "// }\n")
-		}
+		fmt.Fprintf(w, "// \treturn 0;\n")
+		fmt.Fprintf(w, "// }\n")
 	}
 	fmt.Fprintf(w, "// \n")
 	return nil
@@ -331,12 +314,8 @@ func writeGoEnumDefinitions(w io.Writer, enumCats EnumCategories) {
 func writeGoFuncDefinitions(w io.Writer, functions FunctionCategories, typeMap TypeMap, majorVersion int) error {
 	for cat, fs := range functions {
 		fmt.Fprintf(w, "// %s\n\n", cat)
-		isGL11, err := isOpenGL11(cat)
-		if err != nil {
-			return err
-		}
 		for _, f := range fs {
-			if err := writeGoFuncDefinition(w, f, typeMap, majorVersion, isGL11); err != nil {
+			if err := writeGoFuncDefinition(w, f, typeMap, majorVersion, false); err != nil {
 				return err
 			}
 		}
@@ -417,32 +396,20 @@ func writeGoFuncDefinition(w io.Writer, f *Function, typeMap TypeMap, majorVersi
 
 func writeGoInitDefinitions(w io.Writer, functions FunctionCategories) error {
 	for cat, _ := range functions {
-		isGL11, err := isOpenGL11(cat)
-		if err != nil {
-			return err
-		}
-		if !isGL11 {
-			fmt.Fprintf(w, "func Init%s() error {\n", GoName(cat))
-			fmt.Fprintf(w, "\tvar ret C.int\n")
-			fmt.Fprintf(w, "\tif ret = C.init_%s(); ret != 0 {\n", cat)
-			fmt.Fprintf(w, "\t\treturn errors.New(\"unable to initialize %s\")\n", cat)
-			fmt.Fprintf(w, "\t}\n")
-			fmt.Fprintf(w, "\treturn nil\n")
-			fmt.Fprintf(w, "}\n")
-		}
+		fmt.Fprintf(w, "func Init%s() error {\n", GoName(cat))
+		fmt.Fprintf(w, "\tvar ret C.int\n")
+		fmt.Fprintf(w, "\tif ret = C.init_%s(); ret != 0 {\n", cat)
+		fmt.Fprintf(w, "\t\treturn errors.New(\"unable to initialize %s\")\n", cat)
+		fmt.Fprintf(w, "\t}\n")
+		fmt.Fprintf(w, "\treturn nil\n")
+		fmt.Fprintf(w, "}\n")
 	}
 	fmt.Fprintf(w, "func Init() error {\n")
 	fmt.Fprintf(w, "\tvar err error\n")
 	for cat, _ := range functions {
-		isGL11, err := isOpenGL11(cat)
-		if err != nil {
-			return err
-		}
-		if !isGL11 {
-			fmt.Fprintf(w, "\tif err = Init%s(); err != nil {\n", GoName(cat))
-			fmt.Fprintf(w, "\t\treturn err\n")
-			fmt.Fprintf(w, "\t}\n")
-		}
+		fmt.Fprintf(w, "\tif err = Init%s(); err != nil {\n", GoName(cat))
+		fmt.Fprintf(w, "\t\treturn err\n")
+		fmt.Fprintf(w, "\t}\n")
 	}
 	fmt.Fprintf(w, "\treturn nil\n")
 	fmt.Fprintf(w, "}\n")

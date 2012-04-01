@@ -68,7 +68,7 @@ func TestReadFunctions(t *testing.T) {
 	f1.Name = "Foo1"
 	f1.Parameters = []Parameter{{"p1", "type1", false, false}, {"p2", "type2", false, true}}
 	f1.Return = "void"
-	f1.Version =  Version{1, 0}
+	f1.Version = Version{1, 0}
 	f1.DeprecatedVersion = Version{0, 0}
 	f1.Category = "cat_1"
 	f1.GlxRopCode = "85"
@@ -79,12 +79,12 @@ func TestReadFunctions(t *testing.T) {
 	f2.Name = "Foo2"
 	f2.Parameters = []Parameter{{"p1", "type3", true, false}, {"p2", "type4", true, true}}
 	f2.Return = "void"
-	f2.Version =  Version{2, 1}
+	f2.Version = Version{2, 1}
 	f2.DeprecatedVersion = Version{0, 0}
 	f2.Category = "cat_2"
 	f2.GlxRopCode = "95"
 	f2.Offset = "168"
 	checkFunc(f2, f, t)
-	
+
 	// TODO: add more tests: flags, categories ...	
 }

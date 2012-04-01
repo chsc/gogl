@@ -7,11 +7,9 @@ No external dependencies like GLEW are needed.
 Install the OpenGL bindings
 ---------------------------
 
-For example, OpenGL 2.1 bindings can be installed using goinstall:
+For example, OpenGL 2.1 bindings can be installed using the go comand:
 
-	goinstall github.com/chsc/gogl/gl21
-
-The new 'go install' command should also work.
+	go get github.com/chsc/gogl/gl21
 
 Documentation
 -------------
@@ -33,7 +31,7 @@ Examples
 
 To test the package, build and install the "spinning gopher" example:
 
-	goinstall github.com/chsc/gogl/examples/gopher
+	go get github.com/chsc/gogl/examples/gopher
 
 and run it from your command line.
 
