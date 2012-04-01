@@ -1,21 +1,5 @@
-include $(GOROOT)/src/Make.inc
- 
-TARG=gogl
-GOFILES=\
-	main.go\
-	download.go\
-	structs.go\
-	enumreader.go\
-	funcreader.go\
-	tmreader.go\
-	group.go\
-	generator.go\
-	util.go
- 
-include $(GOROOT)/src/Make.cmd
-
 format:
-	gofmt -w *.go
+	go fmt *.go
 
 download_khronos:
 	./gogl -download
@@ -32,22 +16,22 @@ gen_alfonse:
 
 # Just test go install
 install_all:
-	goinstall ./gl21
-#	goinstall ./gl30
-#	goinstall ./gl31
-#	goinstall ./gl31c
-#	goinstall ./gl32
-#	goinstall ./gl32c
-#	goinstall ./gl32
-#	goinstall ./gl32c
-	goinstall ./gl33
-#	goinstall ./gl33c
-#	goinstall ./gl40
-#	goinstall ./gl41c
-	goinstall ./gl42
-#	goinstall ./gl42c
-#	goinstall ./arb
-#	goinstall ./ext
-#	goinstall ./ati
-#	goinstall ./amd
-#	goinstall ./nv
+	go install ./gl21
+#	go install ./gl30
+#	go install ./gl31
+#	go install ./gl31c
+#	go install ./gl32
+#	go install ./gl32c
+#	go install ./gl32
+#	go install ./gl32c
+	go install ./gl33
+#	go install ./gl33c
+#	go install ./gl40
+#	go install ./gl41c
+	go install ./gl42
+#	go install ./gl42c
+#	go install ./arb
+#	go install ./ext
+#	go install ./ati
+#	go install ./amd
+#	go install ./nv
