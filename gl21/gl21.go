@@ -38,8 +38,7 @@ package gl21
 // 
 // #include <stdlib.h>
 // #if defined(__APPLE__)
-// #include <mach-o/dyld.h>
-// #include <string.h>
+// #include <dlfcn.h>
 // #elif defined(_WIN32)
 // #define WIN32_LEAN_AND_MEAN 1
 // #include <windows.h>
@@ -181,18 +180,7 @@ package gl21
 // 
 // void* goglGetProcAddress(const char* name) { 
 // #ifdef __APPLE__
-// 	NSSymbol symbol;
-// 	char symbolname[1024];
-// 	symbolname[0] = '_';
-// 	strcpy(symbolname + 1, name);
-// 	symbol = NULL;
-// 	if(NSIsSymbolNameDefined(symbolname)) {
-// 		symbol = NSLookupAndBindSymbol(symbolname);
-// 		if (symbol) {
-// 			return NSAddressOfSymbol(symbol);
-// 		}
-// 	}
-// 	return NULL;
+// 	return dlsym(RTLD_DEFAULT, name);
 // #elif _WIN32
 // 	void* pf = wglGetProcAddress((LPCSTR)name);
 // 	if(pf) {
@@ -2567,6 +2555,287 @@ package gl21
 // 	(*ptrglMultTransposeMatrixd)(m);
 // }
 // 
+// int init_VERSION_2_1() {
+// 	ptrglUniformMatrix2x3fv = goglGetProcAddress("glUniformMatrix2x3fv");
+// 	if(ptrglUniformMatrix2x3fv == NULL) return 1;
+// 	ptrglUniformMatrix3x2fv = goglGetProcAddress("glUniformMatrix3x2fv");
+// 	if(ptrglUniformMatrix3x2fv == NULL) return 1;
+// 	ptrglUniformMatrix2x4fv = goglGetProcAddress("glUniformMatrix2x4fv");
+// 	if(ptrglUniformMatrix2x4fv == NULL) return 1;
+// 	ptrglUniformMatrix4x2fv = goglGetProcAddress("glUniformMatrix4x2fv");
+// 	if(ptrglUniformMatrix4x2fv == NULL) return 1;
+// 	ptrglUniformMatrix3x4fv = goglGetProcAddress("glUniformMatrix3x4fv");
+// 	if(ptrglUniformMatrix3x4fv == NULL) return 1;
+// 	ptrglUniformMatrix4x3fv = goglGetProcAddress("glUniformMatrix4x3fv");
+// 	if(ptrglUniformMatrix4x3fv == NULL) return 1;
+// 	return 0;
+// }
+// int init_VERSION_2_0() {
+// 	ptrglBlendEquationSeparate = goglGetProcAddress("glBlendEquationSeparate");
+// 	if(ptrglBlendEquationSeparate == NULL) return 1;
+// 	ptrglDrawBuffers = goglGetProcAddress("glDrawBuffers");
+// 	if(ptrglDrawBuffers == NULL) return 1;
+// 	ptrglStencilOpSeparate = goglGetProcAddress("glStencilOpSeparate");
+// 	if(ptrglStencilOpSeparate == NULL) return 1;
+// 	ptrglStencilFuncSeparate = goglGetProcAddress("glStencilFuncSeparate");
+// 	if(ptrglStencilFuncSeparate == NULL) return 1;
+// 	ptrglStencilMaskSeparate = goglGetProcAddress("glStencilMaskSeparate");
+// 	if(ptrglStencilMaskSeparate == NULL) return 1;
+// 	ptrglAttachShader = goglGetProcAddress("glAttachShader");
+// 	if(ptrglAttachShader == NULL) return 1;
+// 	ptrglBindAttribLocation = goglGetProcAddress("glBindAttribLocation");
+// 	if(ptrglBindAttribLocation == NULL) return 1;
+// 	ptrglCompileShader = goglGetProcAddress("glCompileShader");
+// 	if(ptrglCompileShader == NULL) return 1;
+// 	ptrglCreateProgram = goglGetProcAddress("glCreateProgram");
+// 	if(ptrglCreateProgram == NULL) return 1;
+// 	ptrglCreateShader = goglGetProcAddress("glCreateShader");
+// 	if(ptrglCreateShader == NULL) return 1;
+// 	ptrglDeleteProgram = goglGetProcAddress("glDeleteProgram");
+// 	if(ptrglDeleteProgram == NULL) return 1;
+// 	ptrglDeleteShader = goglGetProcAddress("glDeleteShader");
+// 	if(ptrglDeleteShader == NULL) return 1;
+// 	ptrglDetachShader = goglGetProcAddress("glDetachShader");
+// 	if(ptrglDetachShader == NULL) return 1;
+// 	ptrglDisableVertexAttribArray = goglGetProcAddress("glDisableVertexAttribArray");
+// 	if(ptrglDisableVertexAttribArray == NULL) return 1;
+// 	ptrglEnableVertexAttribArray = goglGetProcAddress("glEnableVertexAttribArray");
+// 	if(ptrglEnableVertexAttribArray == NULL) return 1;
+// 	ptrglGetActiveAttrib = goglGetProcAddress("glGetActiveAttrib");
+// 	if(ptrglGetActiveAttrib == NULL) return 1;
+// 	ptrglGetActiveUniform = goglGetProcAddress("glGetActiveUniform");
+// 	if(ptrglGetActiveUniform == NULL) return 1;
+// 	ptrglGetAttachedShaders = goglGetProcAddress("glGetAttachedShaders");
+// 	if(ptrglGetAttachedShaders == NULL) return 1;
+// 	ptrglGetAttribLocation = goglGetProcAddress("glGetAttribLocation");
+// 	if(ptrglGetAttribLocation == NULL) return 1;
+// 	ptrglGetProgramiv = goglGetProcAddress("glGetProgramiv");
+// 	if(ptrglGetProgramiv == NULL) return 1;
+// 	ptrglGetProgramInfoLog = goglGetProcAddress("glGetProgramInfoLog");
+// 	if(ptrglGetProgramInfoLog == NULL) return 1;
+// 	ptrglGetShaderiv = goglGetProcAddress("glGetShaderiv");
+// 	if(ptrglGetShaderiv == NULL) return 1;
+// 	ptrglGetShaderInfoLog = goglGetProcAddress("glGetShaderInfoLog");
+// 	if(ptrglGetShaderInfoLog == NULL) return 1;
+// 	ptrglGetShaderSource = goglGetProcAddress("glGetShaderSource");
+// 	if(ptrglGetShaderSource == NULL) return 1;
+// 	ptrglGetUniformLocation = goglGetProcAddress("glGetUniformLocation");
+// 	if(ptrglGetUniformLocation == NULL) return 1;
+// 	ptrglGetUniformfv = goglGetProcAddress("glGetUniformfv");
+// 	if(ptrglGetUniformfv == NULL) return 1;
+// 	ptrglGetUniformiv = goglGetProcAddress("glGetUniformiv");
+// 	if(ptrglGetUniformiv == NULL) return 1;
+// 	ptrglGetVertexAttribdv = goglGetProcAddress("glGetVertexAttribdv");
+// 	if(ptrglGetVertexAttribdv == NULL) return 1;
+// 	ptrglGetVertexAttribfv = goglGetProcAddress("glGetVertexAttribfv");
+// 	if(ptrglGetVertexAttribfv == NULL) return 1;
+// 	ptrglGetVertexAttribiv = goglGetProcAddress("glGetVertexAttribiv");
+// 	if(ptrglGetVertexAttribiv == NULL) return 1;
+// 	ptrglGetVertexAttribPointerv = goglGetProcAddress("glGetVertexAttribPointerv");
+// 	if(ptrglGetVertexAttribPointerv == NULL) return 1;
+// 	ptrglIsProgram = goglGetProcAddress("glIsProgram");
+// 	if(ptrglIsProgram == NULL) return 1;
+// 	ptrglIsShader = goglGetProcAddress("glIsShader");
+// 	if(ptrglIsShader == NULL) return 1;
+// 	ptrglLinkProgram = goglGetProcAddress("glLinkProgram");
+// 	if(ptrglLinkProgram == NULL) return 1;
+// 	ptrglShaderSource = goglGetProcAddress("glShaderSource");
+// 	if(ptrglShaderSource == NULL) return 1;
+// 	ptrglUseProgram = goglGetProcAddress("glUseProgram");
+// 	if(ptrglUseProgram == NULL) return 1;
+// 	ptrglUniform1f = goglGetProcAddress("glUniform1f");
+// 	if(ptrglUniform1f == NULL) return 1;
+// 	ptrglUniform2f = goglGetProcAddress("glUniform2f");
+// 	if(ptrglUniform2f == NULL) return 1;
+// 	ptrglUniform3f = goglGetProcAddress("glUniform3f");
+// 	if(ptrglUniform3f == NULL) return 1;
+// 	ptrglUniform4f = goglGetProcAddress("glUniform4f");
+// 	if(ptrglUniform4f == NULL) return 1;
+// 	ptrglUniform1i = goglGetProcAddress("glUniform1i");
+// 	if(ptrglUniform1i == NULL) return 1;
+// 	ptrglUniform2i = goglGetProcAddress("glUniform2i");
+// 	if(ptrglUniform2i == NULL) return 1;
+// 	ptrglUniform3i = goglGetProcAddress("glUniform3i");
+// 	if(ptrglUniform3i == NULL) return 1;
+// 	ptrglUniform4i = goglGetProcAddress("glUniform4i");
+// 	if(ptrglUniform4i == NULL) return 1;
+// 	ptrglUniform1fv = goglGetProcAddress("glUniform1fv");
+// 	if(ptrglUniform1fv == NULL) return 1;
+// 	ptrglUniform2fv = goglGetProcAddress("glUniform2fv");
+// 	if(ptrglUniform2fv == NULL) return 1;
+// 	ptrglUniform3fv = goglGetProcAddress("glUniform3fv");
+// 	if(ptrglUniform3fv == NULL) return 1;
+// 	ptrglUniform4fv = goglGetProcAddress("glUniform4fv");
+// 	if(ptrglUniform4fv == NULL) return 1;
+// 	ptrglUniform1iv = goglGetProcAddress("glUniform1iv");
+// 	if(ptrglUniform1iv == NULL) return 1;
+// 	ptrglUniform2iv = goglGetProcAddress("glUniform2iv");
+// 	if(ptrglUniform2iv == NULL) return 1;
+// 	ptrglUniform3iv = goglGetProcAddress("glUniform3iv");
+// 	if(ptrglUniform3iv == NULL) return 1;
+// 	ptrglUniform4iv = goglGetProcAddress("glUniform4iv");
+// 	if(ptrglUniform4iv == NULL) return 1;
+// 	ptrglUniformMatrix2fv = goglGetProcAddress("glUniformMatrix2fv");
+// 	if(ptrglUniformMatrix2fv == NULL) return 1;
+// 	ptrglUniformMatrix3fv = goglGetProcAddress("glUniformMatrix3fv");
+// 	if(ptrglUniformMatrix3fv == NULL) return 1;
+// 	ptrglUniformMatrix4fv = goglGetProcAddress("glUniformMatrix4fv");
+// 	if(ptrglUniformMatrix4fv == NULL) return 1;
+// 	ptrglValidateProgram = goglGetProcAddress("glValidateProgram");
+// 	if(ptrglValidateProgram == NULL) return 1;
+// 	ptrglVertexAttrib1d = goglGetProcAddress("glVertexAttrib1d");
+// 	if(ptrglVertexAttrib1d == NULL) return 1;
+// 	ptrglVertexAttrib1dv = goglGetProcAddress("glVertexAttrib1dv");
+// 	if(ptrglVertexAttrib1dv == NULL) return 1;
+// 	ptrglVertexAttrib1f = goglGetProcAddress("glVertexAttrib1f");
+// 	if(ptrglVertexAttrib1f == NULL) return 1;
+// 	ptrglVertexAttrib1fv = goglGetProcAddress("glVertexAttrib1fv");
+// 	if(ptrglVertexAttrib1fv == NULL) return 1;
+// 	ptrglVertexAttrib1s = goglGetProcAddress("glVertexAttrib1s");
+// 	if(ptrglVertexAttrib1s == NULL) return 1;
+// 	ptrglVertexAttrib1sv = goglGetProcAddress("glVertexAttrib1sv");
+// 	if(ptrglVertexAttrib1sv == NULL) return 1;
+// 	ptrglVertexAttrib2d = goglGetProcAddress("glVertexAttrib2d");
+// 	if(ptrglVertexAttrib2d == NULL) return 1;
+// 	ptrglVertexAttrib2dv = goglGetProcAddress("glVertexAttrib2dv");
+// 	if(ptrglVertexAttrib2dv == NULL) return 1;
+// 	ptrglVertexAttrib2f = goglGetProcAddress("glVertexAttrib2f");
+// 	if(ptrglVertexAttrib2f == NULL) return 1;
+// 	ptrglVertexAttrib2fv = goglGetProcAddress("glVertexAttrib2fv");
+// 	if(ptrglVertexAttrib2fv == NULL) return 1;
+// 	ptrglVertexAttrib2s = goglGetProcAddress("glVertexAttrib2s");
+// 	if(ptrglVertexAttrib2s == NULL) return 1;
+// 	ptrglVertexAttrib2sv = goglGetProcAddress("glVertexAttrib2sv");
+// 	if(ptrglVertexAttrib2sv == NULL) return 1;
+// 	ptrglVertexAttrib3d = goglGetProcAddress("glVertexAttrib3d");
+// 	if(ptrglVertexAttrib3d == NULL) return 1;
+// 	ptrglVertexAttrib3dv = goglGetProcAddress("glVertexAttrib3dv");
+// 	if(ptrglVertexAttrib3dv == NULL) return 1;
+// 	ptrglVertexAttrib3f = goglGetProcAddress("glVertexAttrib3f");
+// 	if(ptrglVertexAttrib3f == NULL) return 1;
+// 	ptrglVertexAttrib3fv = goglGetProcAddress("glVertexAttrib3fv");
+// 	if(ptrglVertexAttrib3fv == NULL) return 1;
+// 	ptrglVertexAttrib3s = goglGetProcAddress("glVertexAttrib3s");
+// 	if(ptrglVertexAttrib3s == NULL) return 1;
+// 	ptrglVertexAttrib3sv = goglGetProcAddress("glVertexAttrib3sv");
+// 	if(ptrglVertexAttrib3sv == NULL) return 1;
+// 	ptrglVertexAttrib4Nbv = goglGetProcAddress("glVertexAttrib4Nbv");
+// 	if(ptrglVertexAttrib4Nbv == NULL) return 1;
+// 	ptrglVertexAttrib4Niv = goglGetProcAddress("glVertexAttrib4Niv");
+// 	if(ptrglVertexAttrib4Niv == NULL) return 1;
+// 	ptrglVertexAttrib4Nsv = goglGetProcAddress("glVertexAttrib4Nsv");
+// 	if(ptrglVertexAttrib4Nsv == NULL) return 1;
+// 	ptrglVertexAttrib4Nub = goglGetProcAddress("glVertexAttrib4Nub");
+// 	if(ptrglVertexAttrib4Nub == NULL) return 1;
+// 	ptrglVertexAttrib4Nubv = goglGetProcAddress("glVertexAttrib4Nubv");
+// 	if(ptrglVertexAttrib4Nubv == NULL) return 1;
+// 	ptrglVertexAttrib4Nuiv = goglGetProcAddress("glVertexAttrib4Nuiv");
+// 	if(ptrglVertexAttrib4Nuiv == NULL) return 1;
+// 	ptrglVertexAttrib4Nusv = goglGetProcAddress("glVertexAttrib4Nusv");
+// 	if(ptrglVertexAttrib4Nusv == NULL) return 1;
+// 	ptrglVertexAttrib4bv = goglGetProcAddress("glVertexAttrib4bv");
+// 	if(ptrglVertexAttrib4bv == NULL) return 1;
+// 	ptrglVertexAttrib4d = goglGetProcAddress("glVertexAttrib4d");
+// 	if(ptrglVertexAttrib4d == NULL) return 1;
+// 	ptrglVertexAttrib4dv = goglGetProcAddress("glVertexAttrib4dv");
+// 	if(ptrglVertexAttrib4dv == NULL) return 1;
+// 	ptrglVertexAttrib4f = goglGetProcAddress("glVertexAttrib4f");
+// 	if(ptrglVertexAttrib4f == NULL) return 1;
+// 	ptrglVertexAttrib4fv = goglGetProcAddress("glVertexAttrib4fv");
+// 	if(ptrglVertexAttrib4fv == NULL) return 1;
+// 	ptrglVertexAttrib4iv = goglGetProcAddress("glVertexAttrib4iv");
+// 	if(ptrglVertexAttrib4iv == NULL) return 1;
+// 	ptrglVertexAttrib4s = goglGetProcAddress("glVertexAttrib4s");
+// 	if(ptrglVertexAttrib4s == NULL) return 1;
+// 	ptrglVertexAttrib4sv = goglGetProcAddress("glVertexAttrib4sv");
+// 	if(ptrglVertexAttrib4sv == NULL) return 1;
+// 	ptrglVertexAttrib4ubv = goglGetProcAddress("glVertexAttrib4ubv");
+// 	if(ptrglVertexAttrib4ubv == NULL) return 1;
+// 	ptrglVertexAttrib4uiv = goglGetProcAddress("glVertexAttrib4uiv");
+// 	if(ptrglVertexAttrib4uiv == NULL) return 1;
+// 	ptrglVertexAttrib4usv = goglGetProcAddress("glVertexAttrib4usv");
+// 	if(ptrglVertexAttrib4usv == NULL) return 1;
+// 	ptrglVertexAttribPointer = goglGetProcAddress("glVertexAttribPointer");
+// 	if(ptrglVertexAttribPointer == NULL) return 1;
+// 	return 0;
+// }
+// int init_VERSION_1_3_DEPRECATED() {
+// 	ptrglClientActiveTexture = goglGetProcAddress("glClientActiveTexture");
+// 	if(ptrglClientActiveTexture == NULL) return 1;
+// 	ptrglMultiTexCoord1d = goglGetProcAddress("glMultiTexCoord1d");
+// 	if(ptrglMultiTexCoord1d == NULL) return 1;
+// 	ptrglMultiTexCoord1dv = goglGetProcAddress("glMultiTexCoord1dv");
+// 	if(ptrglMultiTexCoord1dv == NULL) return 1;
+// 	ptrglMultiTexCoord1f = goglGetProcAddress("glMultiTexCoord1f");
+// 	if(ptrglMultiTexCoord1f == NULL) return 1;
+// 	ptrglMultiTexCoord1fv = goglGetProcAddress("glMultiTexCoord1fv");
+// 	if(ptrglMultiTexCoord1fv == NULL) return 1;
+// 	ptrglMultiTexCoord1i = goglGetProcAddress("glMultiTexCoord1i");
+// 	if(ptrglMultiTexCoord1i == NULL) return 1;
+// 	ptrglMultiTexCoord1iv = goglGetProcAddress("glMultiTexCoord1iv");
+// 	if(ptrglMultiTexCoord1iv == NULL) return 1;
+// 	ptrglMultiTexCoord1s = goglGetProcAddress("glMultiTexCoord1s");
+// 	if(ptrglMultiTexCoord1s == NULL) return 1;
+// 	ptrglMultiTexCoord1sv = goglGetProcAddress("glMultiTexCoord1sv");
+// 	if(ptrglMultiTexCoord1sv == NULL) return 1;
+// 	ptrglMultiTexCoord2d = goglGetProcAddress("glMultiTexCoord2d");
+// 	if(ptrglMultiTexCoord2d == NULL) return 1;
+// 	ptrglMultiTexCoord2dv = goglGetProcAddress("glMultiTexCoord2dv");
+// 	if(ptrglMultiTexCoord2dv == NULL) return 1;
+// 	ptrglMultiTexCoord2f = goglGetProcAddress("glMultiTexCoord2f");
+// 	if(ptrglMultiTexCoord2f == NULL) return 1;
+// 	ptrglMultiTexCoord2fv = goglGetProcAddress("glMultiTexCoord2fv");
+// 	if(ptrglMultiTexCoord2fv == NULL) return 1;
+// 	ptrglMultiTexCoord2i = goglGetProcAddress("glMultiTexCoord2i");
+// 	if(ptrglMultiTexCoord2i == NULL) return 1;
+// 	ptrglMultiTexCoord2iv = goglGetProcAddress("glMultiTexCoord2iv");
+// 	if(ptrglMultiTexCoord2iv == NULL) return 1;
+// 	ptrglMultiTexCoord2s = goglGetProcAddress("glMultiTexCoord2s");
+// 	if(ptrglMultiTexCoord2s == NULL) return 1;
+// 	ptrglMultiTexCoord2sv = goglGetProcAddress("glMultiTexCoord2sv");
+// 	if(ptrglMultiTexCoord2sv == NULL) return 1;
+// 	ptrglMultiTexCoord3d = goglGetProcAddress("glMultiTexCoord3d");
+// 	if(ptrglMultiTexCoord3d == NULL) return 1;
+// 	ptrglMultiTexCoord3dv = goglGetProcAddress("glMultiTexCoord3dv");
+// 	if(ptrglMultiTexCoord3dv == NULL) return 1;
+// 	ptrglMultiTexCoord3f = goglGetProcAddress("glMultiTexCoord3f");
+// 	if(ptrglMultiTexCoord3f == NULL) return 1;
+// 	ptrglMultiTexCoord3fv = goglGetProcAddress("glMultiTexCoord3fv");
+// 	if(ptrglMultiTexCoord3fv == NULL) return 1;
+// 	ptrglMultiTexCoord3i = goglGetProcAddress("glMultiTexCoord3i");
+// 	if(ptrglMultiTexCoord3i == NULL) return 1;
+// 	ptrglMultiTexCoord3iv = goglGetProcAddress("glMultiTexCoord3iv");
+// 	if(ptrglMultiTexCoord3iv == NULL) return 1;
+// 	ptrglMultiTexCoord3s = goglGetProcAddress("glMultiTexCoord3s");
+// 	if(ptrglMultiTexCoord3s == NULL) return 1;
+// 	ptrglMultiTexCoord3sv = goglGetProcAddress("glMultiTexCoord3sv");
+// 	if(ptrglMultiTexCoord3sv == NULL) return 1;
+// 	ptrglMultiTexCoord4d = goglGetProcAddress("glMultiTexCoord4d");
+// 	if(ptrglMultiTexCoord4d == NULL) return 1;
+// 	ptrglMultiTexCoord4dv = goglGetProcAddress("glMultiTexCoord4dv");
+// 	if(ptrglMultiTexCoord4dv == NULL) return 1;
+// 	ptrglMultiTexCoord4f = goglGetProcAddress("glMultiTexCoord4f");
+// 	if(ptrglMultiTexCoord4f == NULL) return 1;
+// 	ptrglMultiTexCoord4fv = goglGetProcAddress("glMultiTexCoord4fv");
+// 	if(ptrglMultiTexCoord4fv == NULL) return 1;
+// 	ptrglMultiTexCoord4i = goglGetProcAddress("glMultiTexCoord4i");
+// 	if(ptrglMultiTexCoord4i == NULL) return 1;
+// 	ptrglMultiTexCoord4iv = goglGetProcAddress("glMultiTexCoord4iv");
+// 	if(ptrglMultiTexCoord4iv == NULL) return 1;
+// 	ptrglMultiTexCoord4s = goglGetProcAddress("glMultiTexCoord4s");
+// 	if(ptrglMultiTexCoord4s == NULL) return 1;
+// 	ptrglMultiTexCoord4sv = goglGetProcAddress("glMultiTexCoord4sv");
+// 	if(ptrglMultiTexCoord4sv == NULL) return 1;
+// 	ptrglLoadTransposeMatrixf = goglGetProcAddress("glLoadTransposeMatrixf");
+// 	if(ptrglLoadTransposeMatrixf == NULL) return 1;
+// 	ptrglLoadTransposeMatrixd = goglGetProcAddress("glLoadTransposeMatrixd");
+// 	if(ptrglLoadTransposeMatrixd == NULL) return 1;
+// 	ptrglMultTransposeMatrixf = goglGetProcAddress("glMultTransposeMatrixf");
+// 	if(ptrglMultTransposeMatrixf == NULL) return 1;
+// 	ptrglMultTransposeMatrixd = goglGetProcAddress("glMultTransposeMatrixd");
+// 	if(ptrglMultTransposeMatrixd == NULL) return 1;
+// 	return 0;
+// }
 // int init_VERSION_1_4() {
 // 	ptrglBlendFuncSeparate = goglGetProcAddress("glBlendFuncSeparate");
 // 	if(ptrglBlendFuncSeparate == NULL) return 1;
@@ -3491,287 +3760,6 @@ package gl21
 // 	if(ptrglResetMinmax == NULL) return 1;
 // 	return 0;
 // }
-// int init_VERSION_2_1() {
-// 	ptrglUniformMatrix2x3fv = goglGetProcAddress("glUniformMatrix2x3fv");
-// 	if(ptrglUniformMatrix2x3fv == NULL) return 1;
-// 	ptrglUniformMatrix3x2fv = goglGetProcAddress("glUniformMatrix3x2fv");
-// 	if(ptrglUniformMatrix3x2fv == NULL) return 1;
-// 	ptrglUniformMatrix2x4fv = goglGetProcAddress("glUniformMatrix2x4fv");
-// 	if(ptrglUniformMatrix2x4fv == NULL) return 1;
-// 	ptrglUniformMatrix4x2fv = goglGetProcAddress("glUniformMatrix4x2fv");
-// 	if(ptrglUniformMatrix4x2fv == NULL) return 1;
-// 	ptrglUniformMatrix3x4fv = goglGetProcAddress("glUniformMatrix3x4fv");
-// 	if(ptrglUniformMatrix3x4fv == NULL) return 1;
-// 	ptrglUniformMatrix4x3fv = goglGetProcAddress("glUniformMatrix4x3fv");
-// 	if(ptrglUniformMatrix4x3fv == NULL) return 1;
-// 	return 0;
-// }
-// int init_VERSION_2_0() {
-// 	ptrglBlendEquationSeparate = goglGetProcAddress("glBlendEquationSeparate");
-// 	if(ptrglBlendEquationSeparate == NULL) return 1;
-// 	ptrglDrawBuffers = goglGetProcAddress("glDrawBuffers");
-// 	if(ptrglDrawBuffers == NULL) return 1;
-// 	ptrglStencilOpSeparate = goglGetProcAddress("glStencilOpSeparate");
-// 	if(ptrglStencilOpSeparate == NULL) return 1;
-// 	ptrglStencilFuncSeparate = goglGetProcAddress("glStencilFuncSeparate");
-// 	if(ptrglStencilFuncSeparate == NULL) return 1;
-// 	ptrglStencilMaskSeparate = goglGetProcAddress("glStencilMaskSeparate");
-// 	if(ptrglStencilMaskSeparate == NULL) return 1;
-// 	ptrglAttachShader = goglGetProcAddress("glAttachShader");
-// 	if(ptrglAttachShader == NULL) return 1;
-// 	ptrglBindAttribLocation = goglGetProcAddress("glBindAttribLocation");
-// 	if(ptrglBindAttribLocation == NULL) return 1;
-// 	ptrglCompileShader = goglGetProcAddress("glCompileShader");
-// 	if(ptrglCompileShader == NULL) return 1;
-// 	ptrglCreateProgram = goglGetProcAddress("glCreateProgram");
-// 	if(ptrglCreateProgram == NULL) return 1;
-// 	ptrglCreateShader = goglGetProcAddress("glCreateShader");
-// 	if(ptrglCreateShader == NULL) return 1;
-// 	ptrglDeleteProgram = goglGetProcAddress("glDeleteProgram");
-// 	if(ptrglDeleteProgram == NULL) return 1;
-// 	ptrglDeleteShader = goglGetProcAddress("glDeleteShader");
-// 	if(ptrglDeleteShader == NULL) return 1;
-// 	ptrglDetachShader = goglGetProcAddress("glDetachShader");
-// 	if(ptrglDetachShader == NULL) return 1;
-// 	ptrglDisableVertexAttribArray = goglGetProcAddress("glDisableVertexAttribArray");
-// 	if(ptrglDisableVertexAttribArray == NULL) return 1;
-// 	ptrglEnableVertexAttribArray = goglGetProcAddress("glEnableVertexAttribArray");
-// 	if(ptrglEnableVertexAttribArray == NULL) return 1;
-// 	ptrglGetActiveAttrib = goglGetProcAddress("glGetActiveAttrib");
-// 	if(ptrglGetActiveAttrib == NULL) return 1;
-// 	ptrglGetActiveUniform = goglGetProcAddress("glGetActiveUniform");
-// 	if(ptrglGetActiveUniform == NULL) return 1;
-// 	ptrglGetAttachedShaders = goglGetProcAddress("glGetAttachedShaders");
-// 	if(ptrglGetAttachedShaders == NULL) return 1;
-// 	ptrglGetAttribLocation = goglGetProcAddress("glGetAttribLocation");
-// 	if(ptrglGetAttribLocation == NULL) return 1;
-// 	ptrglGetProgramiv = goglGetProcAddress("glGetProgramiv");
-// 	if(ptrglGetProgramiv == NULL) return 1;
-// 	ptrglGetProgramInfoLog = goglGetProcAddress("glGetProgramInfoLog");
-// 	if(ptrglGetProgramInfoLog == NULL) return 1;
-// 	ptrglGetShaderiv = goglGetProcAddress("glGetShaderiv");
-// 	if(ptrglGetShaderiv == NULL) return 1;
-// 	ptrglGetShaderInfoLog = goglGetProcAddress("glGetShaderInfoLog");
-// 	if(ptrglGetShaderInfoLog == NULL) return 1;
-// 	ptrglGetShaderSource = goglGetProcAddress("glGetShaderSource");
-// 	if(ptrglGetShaderSource == NULL) return 1;
-// 	ptrglGetUniformLocation = goglGetProcAddress("glGetUniformLocation");
-// 	if(ptrglGetUniformLocation == NULL) return 1;
-// 	ptrglGetUniformfv = goglGetProcAddress("glGetUniformfv");
-// 	if(ptrglGetUniformfv == NULL) return 1;
-// 	ptrglGetUniformiv = goglGetProcAddress("glGetUniformiv");
-// 	if(ptrglGetUniformiv == NULL) return 1;
-// 	ptrglGetVertexAttribdv = goglGetProcAddress("glGetVertexAttribdv");
-// 	if(ptrglGetVertexAttribdv == NULL) return 1;
-// 	ptrglGetVertexAttribfv = goglGetProcAddress("glGetVertexAttribfv");
-// 	if(ptrglGetVertexAttribfv == NULL) return 1;
-// 	ptrglGetVertexAttribiv = goglGetProcAddress("glGetVertexAttribiv");
-// 	if(ptrglGetVertexAttribiv == NULL) return 1;
-// 	ptrglGetVertexAttribPointerv = goglGetProcAddress("glGetVertexAttribPointerv");
-// 	if(ptrglGetVertexAttribPointerv == NULL) return 1;
-// 	ptrglIsProgram = goglGetProcAddress("glIsProgram");
-// 	if(ptrglIsProgram == NULL) return 1;
-// 	ptrglIsShader = goglGetProcAddress("glIsShader");
-// 	if(ptrglIsShader == NULL) return 1;
-// 	ptrglLinkProgram = goglGetProcAddress("glLinkProgram");
-// 	if(ptrglLinkProgram == NULL) return 1;
-// 	ptrglShaderSource = goglGetProcAddress("glShaderSource");
-// 	if(ptrglShaderSource == NULL) return 1;
-// 	ptrglUseProgram = goglGetProcAddress("glUseProgram");
-// 	if(ptrglUseProgram == NULL) return 1;
-// 	ptrglUniform1f = goglGetProcAddress("glUniform1f");
-// 	if(ptrglUniform1f == NULL) return 1;
-// 	ptrglUniform2f = goglGetProcAddress("glUniform2f");
-// 	if(ptrglUniform2f == NULL) return 1;
-// 	ptrglUniform3f = goglGetProcAddress("glUniform3f");
-// 	if(ptrglUniform3f == NULL) return 1;
-// 	ptrglUniform4f = goglGetProcAddress("glUniform4f");
-// 	if(ptrglUniform4f == NULL) return 1;
-// 	ptrglUniform1i = goglGetProcAddress("glUniform1i");
-// 	if(ptrglUniform1i == NULL) return 1;
-// 	ptrglUniform2i = goglGetProcAddress("glUniform2i");
-// 	if(ptrglUniform2i == NULL) return 1;
-// 	ptrglUniform3i = goglGetProcAddress("glUniform3i");
-// 	if(ptrglUniform3i == NULL) return 1;
-// 	ptrglUniform4i = goglGetProcAddress("glUniform4i");
-// 	if(ptrglUniform4i == NULL) return 1;
-// 	ptrglUniform1fv = goglGetProcAddress("glUniform1fv");
-// 	if(ptrglUniform1fv == NULL) return 1;
-// 	ptrglUniform2fv = goglGetProcAddress("glUniform2fv");
-// 	if(ptrglUniform2fv == NULL) return 1;
-// 	ptrglUniform3fv = goglGetProcAddress("glUniform3fv");
-// 	if(ptrglUniform3fv == NULL) return 1;
-// 	ptrglUniform4fv = goglGetProcAddress("glUniform4fv");
-// 	if(ptrglUniform4fv == NULL) return 1;
-// 	ptrglUniform1iv = goglGetProcAddress("glUniform1iv");
-// 	if(ptrglUniform1iv == NULL) return 1;
-// 	ptrglUniform2iv = goglGetProcAddress("glUniform2iv");
-// 	if(ptrglUniform2iv == NULL) return 1;
-// 	ptrglUniform3iv = goglGetProcAddress("glUniform3iv");
-// 	if(ptrglUniform3iv == NULL) return 1;
-// 	ptrglUniform4iv = goglGetProcAddress("glUniform4iv");
-// 	if(ptrglUniform4iv == NULL) return 1;
-// 	ptrglUniformMatrix2fv = goglGetProcAddress("glUniformMatrix2fv");
-// 	if(ptrglUniformMatrix2fv == NULL) return 1;
-// 	ptrglUniformMatrix3fv = goglGetProcAddress("glUniformMatrix3fv");
-// 	if(ptrglUniformMatrix3fv == NULL) return 1;
-// 	ptrglUniformMatrix4fv = goglGetProcAddress("glUniformMatrix4fv");
-// 	if(ptrglUniformMatrix4fv == NULL) return 1;
-// 	ptrglValidateProgram = goglGetProcAddress("glValidateProgram");
-// 	if(ptrglValidateProgram == NULL) return 1;
-// 	ptrglVertexAttrib1d = goglGetProcAddress("glVertexAttrib1d");
-// 	if(ptrglVertexAttrib1d == NULL) return 1;
-// 	ptrglVertexAttrib1dv = goglGetProcAddress("glVertexAttrib1dv");
-// 	if(ptrglVertexAttrib1dv == NULL) return 1;
-// 	ptrglVertexAttrib1f = goglGetProcAddress("glVertexAttrib1f");
-// 	if(ptrglVertexAttrib1f == NULL) return 1;
-// 	ptrglVertexAttrib1fv = goglGetProcAddress("glVertexAttrib1fv");
-// 	if(ptrglVertexAttrib1fv == NULL) return 1;
-// 	ptrglVertexAttrib1s = goglGetProcAddress("glVertexAttrib1s");
-// 	if(ptrglVertexAttrib1s == NULL) return 1;
-// 	ptrglVertexAttrib1sv = goglGetProcAddress("glVertexAttrib1sv");
-// 	if(ptrglVertexAttrib1sv == NULL) return 1;
-// 	ptrglVertexAttrib2d = goglGetProcAddress("glVertexAttrib2d");
-// 	if(ptrglVertexAttrib2d == NULL) return 1;
-// 	ptrglVertexAttrib2dv = goglGetProcAddress("glVertexAttrib2dv");
-// 	if(ptrglVertexAttrib2dv == NULL) return 1;
-// 	ptrglVertexAttrib2f = goglGetProcAddress("glVertexAttrib2f");
-// 	if(ptrglVertexAttrib2f == NULL) return 1;
-// 	ptrglVertexAttrib2fv = goglGetProcAddress("glVertexAttrib2fv");
-// 	if(ptrglVertexAttrib2fv == NULL) return 1;
-// 	ptrglVertexAttrib2s = goglGetProcAddress("glVertexAttrib2s");
-// 	if(ptrglVertexAttrib2s == NULL) return 1;
-// 	ptrglVertexAttrib2sv = goglGetProcAddress("glVertexAttrib2sv");
-// 	if(ptrglVertexAttrib2sv == NULL) return 1;
-// 	ptrglVertexAttrib3d = goglGetProcAddress("glVertexAttrib3d");
-// 	if(ptrglVertexAttrib3d == NULL) return 1;
-// 	ptrglVertexAttrib3dv = goglGetProcAddress("glVertexAttrib3dv");
-// 	if(ptrglVertexAttrib3dv == NULL) return 1;
-// 	ptrglVertexAttrib3f = goglGetProcAddress("glVertexAttrib3f");
-// 	if(ptrglVertexAttrib3f == NULL) return 1;
-// 	ptrglVertexAttrib3fv = goglGetProcAddress("glVertexAttrib3fv");
-// 	if(ptrglVertexAttrib3fv == NULL) return 1;
-// 	ptrglVertexAttrib3s = goglGetProcAddress("glVertexAttrib3s");
-// 	if(ptrglVertexAttrib3s == NULL) return 1;
-// 	ptrglVertexAttrib3sv = goglGetProcAddress("glVertexAttrib3sv");
-// 	if(ptrglVertexAttrib3sv == NULL) return 1;
-// 	ptrglVertexAttrib4Nbv = goglGetProcAddress("glVertexAttrib4Nbv");
-// 	if(ptrglVertexAttrib4Nbv == NULL) return 1;
-// 	ptrglVertexAttrib4Niv = goglGetProcAddress("glVertexAttrib4Niv");
-// 	if(ptrglVertexAttrib4Niv == NULL) return 1;
-// 	ptrglVertexAttrib4Nsv = goglGetProcAddress("glVertexAttrib4Nsv");
-// 	if(ptrglVertexAttrib4Nsv == NULL) return 1;
-// 	ptrglVertexAttrib4Nub = goglGetProcAddress("glVertexAttrib4Nub");
-// 	if(ptrglVertexAttrib4Nub == NULL) return 1;
-// 	ptrglVertexAttrib4Nubv = goglGetProcAddress("glVertexAttrib4Nubv");
-// 	if(ptrglVertexAttrib4Nubv == NULL) return 1;
-// 	ptrglVertexAttrib4Nuiv = goglGetProcAddress("glVertexAttrib4Nuiv");
-// 	if(ptrglVertexAttrib4Nuiv == NULL) return 1;
-// 	ptrglVertexAttrib4Nusv = goglGetProcAddress("glVertexAttrib4Nusv");
-// 	if(ptrglVertexAttrib4Nusv == NULL) return 1;
-// 	ptrglVertexAttrib4bv = goglGetProcAddress("glVertexAttrib4bv");
-// 	if(ptrglVertexAttrib4bv == NULL) return 1;
-// 	ptrglVertexAttrib4d = goglGetProcAddress("glVertexAttrib4d");
-// 	if(ptrglVertexAttrib4d == NULL) return 1;
-// 	ptrglVertexAttrib4dv = goglGetProcAddress("glVertexAttrib4dv");
-// 	if(ptrglVertexAttrib4dv == NULL) return 1;
-// 	ptrglVertexAttrib4f = goglGetProcAddress("glVertexAttrib4f");
-// 	if(ptrglVertexAttrib4f == NULL) return 1;
-// 	ptrglVertexAttrib4fv = goglGetProcAddress("glVertexAttrib4fv");
-// 	if(ptrglVertexAttrib4fv == NULL) return 1;
-// 	ptrglVertexAttrib4iv = goglGetProcAddress("glVertexAttrib4iv");
-// 	if(ptrglVertexAttrib4iv == NULL) return 1;
-// 	ptrglVertexAttrib4s = goglGetProcAddress("glVertexAttrib4s");
-// 	if(ptrglVertexAttrib4s == NULL) return 1;
-// 	ptrglVertexAttrib4sv = goglGetProcAddress("glVertexAttrib4sv");
-// 	if(ptrglVertexAttrib4sv == NULL) return 1;
-// 	ptrglVertexAttrib4ubv = goglGetProcAddress("glVertexAttrib4ubv");
-// 	if(ptrglVertexAttrib4ubv == NULL) return 1;
-// 	ptrglVertexAttrib4uiv = goglGetProcAddress("glVertexAttrib4uiv");
-// 	if(ptrglVertexAttrib4uiv == NULL) return 1;
-// 	ptrglVertexAttrib4usv = goglGetProcAddress("glVertexAttrib4usv");
-// 	if(ptrglVertexAttrib4usv == NULL) return 1;
-// 	ptrglVertexAttribPointer = goglGetProcAddress("glVertexAttribPointer");
-// 	if(ptrglVertexAttribPointer == NULL) return 1;
-// 	return 0;
-// }
-// int init_VERSION_1_3_DEPRECATED() {
-// 	ptrglClientActiveTexture = goglGetProcAddress("glClientActiveTexture");
-// 	if(ptrglClientActiveTexture == NULL) return 1;
-// 	ptrglMultiTexCoord1d = goglGetProcAddress("glMultiTexCoord1d");
-// 	if(ptrglMultiTexCoord1d == NULL) return 1;
-// 	ptrglMultiTexCoord1dv = goglGetProcAddress("glMultiTexCoord1dv");
-// 	if(ptrglMultiTexCoord1dv == NULL) return 1;
-// 	ptrglMultiTexCoord1f = goglGetProcAddress("glMultiTexCoord1f");
-// 	if(ptrglMultiTexCoord1f == NULL) return 1;
-// 	ptrglMultiTexCoord1fv = goglGetProcAddress("glMultiTexCoord1fv");
-// 	if(ptrglMultiTexCoord1fv == NULL) return 1;
-// 	ptrglMultiTexCoord1i = goglGetProcAddress("glMultiTexCoord1i");
-// 	if(ptrglMultiTexCoord1i == NULL) return 1;
-// 	ptrglMultiTexCoord1iv = goglGetProcAddress("glMultiTexCoord1iv");
-// 	if(ptrglMultiTexCoord1iv == NULL) return 1;
-// 	ptrglMultiTexCoord1s = goglGetProcAddress("glMultiTexCoord1s");
-// 	if(ptrglMultiTexCoord1s == NULL) return 1;
-// 	ptrglMultiTexCoord1sv = goglGetProcAddress("glMultiTexCoord1sv");
-// 	if(ptrglMultiTexCoord1sv == NULL) return 1;
-// 	ptrglMultiTexCoord2d = goglGetProcAddress("glMultiTexCoord2d");
-// 	if(ptrglMultiTexCoord2d == NULL) return 1;
-// 	ptrglMultiTexCoord2dv = goglGetProcAddress("glMultiTexCoord2dv");
-// 	if(ptrglMultiTexCoord2dv == NULL) return 1;
-// 	ptrglMultiTexCoord2f = goglGetProcAddress("glMultiTexCoord2f");
-// 	if(ptrglMultiTexCoord2f == NULL) return 1;
-// 	ptrglMultiTexCoord2fv = goglGetProcAddress("glMultiTexCoord2fv");
-// 	if(ptrglMultiTexCoord2fv == NULL) return 1;
-// 	ptrglMultiTexCoord2i = goglGetProcAddress("glMultiTexCoord2i");
-// 	if(ptrglMultiTexCoord2i == NULL) return 1;
-// 	ptrglMultiTexCoord2iv = goglGetProcAddress("glMultiTexCoord2iv");
-// 	if(ptrglMultiTexCoord2iv == NULL) return 1;
-// 	ptrglMultiTexCoord2s = goglGetProcAddress("glMultiTexCoord2s");
-// 	if(ptrglMultiTexCoord2s == NULL) return 1;
-// 	ptrglMultiTexCoord2sv = goglGetProcAddress("glMultiTexCoord2sv");
-// 	if(ptrglMultiTexCoord2sv == NULL) return 1;
-// 	ptrglMultiTexCoord3d = goglGetProcAddress("glMultiTexCoord3d");
-// 	if(ptrglMultiTexCoord3d == NULL) return 1;
-// 	ptrglMultiTexCoord3dv = goglGetProcAddress("glMultiTexCoord3dv");
-// 	if(ptrglMultiTexCoord3dv == NULL) return 1;
-// 	ptrglMultiTexCoord3f = goglGetProcAddress("glMultiTexCoord3f");
-// 	if(ptrglMultiTexCoord3f == NULL) return 1;
-// 	ptrglMultiTexCoord3fv = goglGetProcAddress("glMultiTexCoord3fv");
-// 	if(ptrglMultiTexCoord3fv == NULL) return 1;
-// 	ptrglMultiTexCoord3i = goglGetProcAddress("glMultiTexCoord3i");
-// 	if(ptrglMultiTexCoord3i == NULL) return 1;
-// 	ptrglMultiTexCoord3iv = goglGetProcAddress("glMultiTexCoord3iv");
-// 	if(ptrglMultiTexCoord3iv == NULL) return 1;
-// 	ptrglMultiTexCoord3s = goglGetProcAddress("glMultiTexCoord3s");
-// 	if(ptrglMultiTexCoord3s == NULL) return 1;
-// 	ptrglMultiTexCoord3sv = goglGetProcAddress("glMultiTexCoord3sv");
-// 	if(ptrglMultiTexCoord3sv == NULL) return 1;
-// 	ptrglMultiTexCoord4d = goglGetProcAddress("glMultiTexCoord4d");
-// 	if(ptrglMultiTexCoord4d == NULL) return 1;
-// 	ptrglMultiTexCoord4dv = goglGetProcAddress("glMultiTexCoord4dv");
-// 	if(ptrglMultiTexCoord4dv == NULL) return 1;
-// 	ptrglMultiTexCoord4f = goglGetProcAddress("glMultiTexCoord4f");
-// 	if(ptrglMultiTexCoord4f == NULL) return 1;
-// 	ptrglMultiTexCoord4fv = goglGetProcAddress("glMultiTexCoord4fv");
-// 	if(ptrglMultiTexCoord4fv == NULL) return 1;
-// 	ptrglMultiTexCoord4i = goglGetProcAddress("glMultiTexCoord4i");
-// 	if(ptrglMultiTexCoord4i == NULL) return 1;
-// 	ptrglMultiTexCoord4iv = goglGetProcAddress("glMultiTexCoord4iv");
-// 	if(ptrglMultiTexCoord4iv == NULL) return 1;
-// 	ptrglMultiTexCoord4s = goglGetProcAddress("glMultiTexCoord4s");
-// 	if(ptrglMultiTexCoord4s == NULL) return 1;
-// 	ptrglMultiTexCoord4sv = goglGetProcAddress("glMultiTexCoord4sv");
-// 	if(ptrglMultiTexCoord4sv == NULL) return 1;
-// 	ptrglLoadTransposeMatrixf = goglGetProcAddress("glLoadTransposeMatrixf");
-// 	if(ptrglLoadTransposeMatrixf == NULL) return 1;
-// 	ptrglLoadTransposeMatrixd = goglGetProcAddress("glLoadTransposeMatrixd");
-// 	if(ptrglLoadTransposeMatrixd == NULL) return 1;
-// 	ptrglMultTransposeMatrixf = goglGetProcAddress("glMultTransposeMatrixf");
-// 	if(ptrglMultTransposeMatrixf == NULL) return 1;
-// 	ptrglMultTransposeMatrixd = goglGetProcAddress("glMultTransposeMatrixd");
-// 	if(ptrglMultTransposeMatrixd == NULL) return 1;
-// 	return 0;
-// }
 // 
 import "C"
 import "unsafe"
@@ -3802,8 +3790,26 @@ type (
 	Sizeiptr C.GLsizeiptr
 )
 
+// VERSION_1_2_DEPRECATED
+const (
+	LIGHT_MODEL_COLOR_CONTROL = 0x81F8
+	SINGLE_COLOR = 0x81F9
+	SEPARATE_SPECULAR_COLOR = 0x81FA
+	ALIASED_POINT_SIZE_RANGE = 0x846D
+	RESCALE_NORMAL = 0x803A
+)
+// VERSION_2_0_DEPRECATED
+const (
+	MAX_TEXTURE_COORDS = 0x8871
+	POINT_SPRITE = 0x8861
+	VERTEX_PROGRAM_TWO_SIDE = 0x8643
+	COORD_REPLACE = 0x8862
+)
 // VERSION_2_1
 const (
+	COMPRESSED_SRGB = 0x8C48
+	SRGB = 0x8C40
+	SRGB_ALPHA = 0x8C42
 	FLOAT_MAT2x4 = 0x8B66
 	FLOAT_MAT2x3 = 0x8B65
 	PIXEL_UNPACK_BUFFER = 0x88EC
@@ -3817,12 +3823,36 @@ const (
 	FLOAT_MAT4x3 = 0x8B6A
 	FLOAT_MAT3x4 = 0x8B68
 	FLOAT_MAT3x2 = 0x8B67
-	COMPRESSED_SRGB = 0x8C48
-	SRGB = 0x8C40
-	SRGB_ALPHA = 0x8C42
 )
 // VERSION_2_0
 const (
+	STENCIL_BACK_VALUE_MASK = 0x8CA4
+	VERTEX_ATTRIB_ARRAY_SIZE = 0x8623
+	STENCIL_BACK_PASS_DEPTH_PASS = 0x8803
+	VERTEX_SHADER = 0x8B31
+	VERTEX_ATTRIB_ARRAY_TYPE = 0x8625
+	INT_VEC4 = 0x8B55
+	INT_VEC3 = 0x8B54
+	INT_VEC2 = 0x8B53
+	MAX_FRAGMENT_UNIFORM_COMPONENTS = 0x8B49
+	MAX_DRAW_BUFFERS = 0x8824
+	VERTEX_ATTRIB_ARRAY_NORMALIZED = 0x886A
+	INFO_LOG_LENGTH = 0x8B84
+	DELETE_STATUS = 0x8B80
+	FLOAT_VEC4 = 0x8B52
+	FLOAT_VEC2 = 0x8B50
+	FLOAT_VEC3 = 0x8B51
+	STENCIL_BACK_REF = 0x8CA3
+	ACTIVE_ATTRIBUTE_MAX_LENGTH = 0x8B8A
+	SHADING_LANGUAGE_VERSION = 0x8B8C
+	MAX_COMBINED_TEXTURE_IMAGE_UNITS = 0x8B4D
+	ACTIVE_UNIFORMS = 0x8B86
+	ATTACHED_SHADERS = 0x8B85
+	VERTEX_ATTRIB_ARRAY_ENABLED = 0x8622
+	MAX_VERTEX_UNIFORM_COMPONENTS = 0x8B4A
+	MAX_TEXTURE_IMAGE_UNITS = 0x8872
+	STENCIL_BACK_FAIL = 0x8801
+	VERTEX_ATTRIB_ARRAY_POINTER = 0x8645
 	MAX_VARYING_FLOATS = 0x8B4B
 	CURRENT_VERTEX_ATTRIB = 0x8626
 	SAMPLER_1D_SHADOW = 0x8B61
@@ -3876,36 +3906,19 @@ const (
 	DRAW_BUFFER9 = 0x882E
 	BLEND_EQUATION_ALPHA = 0x883D
 	BLEND_EQUATION_RGB = 0x8009
-	STENCIL_BACK_VALUE_MASK = 0x8CA4
-	VERTEX_ATTRIB_ARRAY_SIZE = 0x8623
-	STENCIL_BACK_PASS_DEPTH_PASS = 0x8803
-	VERTEX_SHADER = 0x8B31
-	VERTEX_ATTRIB_ARRAY_TYPE = 0x8625
-	INT_VEC4 = 0x8B55
-	INT_VEC3 = 0x8B54
-	INT_VEC2 = 0x8B53
-	MAX_FRAGMENT_UNIFORM_COMPONENTS = 0x8B49
-	MAX_DRAW_BUFFERS = 0x8824
-	VERTEX_ATTRIB_ARRAY_NORMALIZED = 0x886A
-	INFO_LOG_LENGTH = 0x8B84
-	DELETE_STATUS = 0x8B80
-	FLOAT_VEC4 = 0x8B52
-	FLOAT_VEC2 = 0x8B50
-	FLOAT_VEC3 = 0x8B51
-	STENCIL_BACK_REF = 0x8CA3
-	ACTIVE_ATTRIBUTE_MAX_LENGTH = 0x8B8A
-	SHADING_LANGUAGE_VERSION = 0x8B8C
-	MAX_COMBINED_TEXTURE_IMAGE_UNITS = 0x8B4D
-	ACTIVE_UNIFORMS = 0x8B86
-	ATTACHED_SHADERS = 0x8B85
-	VERTEX_ATTRIB_ARRAY_ENABLED = 0x8622
-	MAX_VERTEX_UNIFORM_COMPONENTS = 0x8B4A
-	MAX_TEXTURE_IMAGE_UNITS = 0x8872
-	STENCIL_BACK_FAIL = 0x8801
-	VERTEX_ATTRIB_ARRAY_POINTER = 0x8645
 )
 // VERSION_1_3_DEPRECATED
 const (
+	RGB_SCALE = 0x8573
+	COMBINE_ALPHA = 0x8572
+	TRANSPOSE_TEXTURE_MATRIX = 0x84E5
+	OPERAND1_ALPHA = 0x8599
+	TRANSPOSE_COLOR_MATRIX = 0x84E6
+	OPERAND1_RGB = 0x8591
+	PREVIOUS = 0x8578
+	OPERAND2_RGB = 0x8592
+	CONSTANT = 0x8576
+	SOURCE2_RGB = 0x8582
 	MAX_TEXTURE_UNITS = 0x84E2
 	ADD_SIGNED = 0x8574
 	NORMAL_MAP = 0x8511
@@ -3933,32 +3946,19 @@ const (
 	TRANSPOSE_MODELVIEW_MATRIX = 0x84E3
 	SOURCE1_RGB = 0x8581
 	INTERPOLATE = 0x8575
-	RGB_SCALE = 0x8573
-	COMBINE_ALPHA = 0x8572
-	TRANSPOSE_TEXTURE_MATRIX = 0x84E5
-	OPERAND1_ALPHA = 0x8599
-	TRANSPOSE_COLOR_MATRIX = 0x84E6
-	OPERAND1_RGB = 0x8591
-	PREVIOUS = 0x8578
-	OPERAND2_RGB = 0x8592
-	CONSTANT = 0x8576
-	SOURCE2_RGB = 0x8582
 )
 // VERSION_2_1_DEPRECATED
 const (
-	CURRENT_RASTER_SECONDARY_COLOR = 0x845F
-	SLUMINANCE_ALPHA = 0x8C44
-	SLUMINANCE = 0x8C46
 	SLUMINANCE8_ALPHA8 = 0x8C45
 	SLUMINANCE8 = 0x8C47
 	COMPRESSED_SLUMINANCE = 0x8C4A
 	COMPRESSED_SLUMINANCE_ALPHA = 0x8C4B
+	CURRENT_RASTER_SECONDARY_COLOR = 0x845F
+	SLUMINANCE_ALPHA = 0x8C44
+	SLUMINANCE = 0x8C46
 )
 // VERSION_1_5_DEPRECATED
 const (
-	NORMAL_ARRAY_BUFFER_BINDING = 0x8897
-	SRC2_ALPHA = 0x858A
-	INDEX_ARRAY_BUFFER_BINDING = 0x8899
 	FOG_COORDINATE_ARRAY_BUFFER_BINDING = 0x889D
 	SRC2_RGB = 0x8582
 	FOG_COORD_SRC = 0x8450
@@ -3979,9 +3979,15 @@ const (
 	SRC0_ALPHA = 0x8588
 	CURRENT_FOG_COORD = 0x8453
 	SECONDARY_COLOR_ARRAY_BUFFER_BINDING = 0x889C
+	NORMAL_ARRAY_BUFFER_BINDING = 0x8897
+	SRC2_ALPHA = 0x858A
+	INDEX_ARRAY_BUFFER_BINDING = 0x8899
 )
 // VERSION_1_4
 const (
+	BLEND_DST_ALPHA = 0x80CA
+	POINT_FADE_THRESHOLD_SIZE = 0x8128
+	INCR_WRAP = 0x8507
 	TEXTURE_LOD_BIAS = 0x8501
 	BLEND_SRC_ALPHA = 0x80CB
 	DEPTH_COMPONENT16 = 0x81A5
@@ -3995,12 +4001,13 @@ const (
 	TEXTURE_COMPARE_MODE = 0x884C
 	MAX_TEXTURE_LOD_BIAS = 0x84FD
 	TEXTURE_DEPTH_SIZE = 0x884A
-	BLEND_DST_ALPHA = 0x80CA
-	POINT_FADE_THRESHOLD_SIZE = 0x8128
-	INCR_WRAP = 0x8507
 )
 // VERSION_1_5
 const (
+	BUFFER_MAPPED = 0x88BC
+	STREAM_READ = 0x88E1
+	BUFFER_USAGE = 0x8765
+	STATIC_READ = 0x88E5
 	ARRAY_BUFFER_BINDING = 0x8894
 	STATIC_COPY = 0x88E6
 	BUFFER_ACCESS = 0x88BB
@@ -4024,46 +4031,9 @@ const (
 	WRITE_ONLY = 0x88B9
 	QUERY_RESULT = 0x8866
 	VERTEX_ATTRIB_ARRAY_BUFFER_BINDING = 0x889F
-	BUFFER_MAPPED = 0x88BC
-	STREAM_READ = 0x88E1
-	BUFFER_USAGE = 0x8765
-	STATIC_READ = 0x88E5
 )
 // VERSION_1_1
 const (
-	STENCIL_CLEAR_VALUE = 0x0B91
-	INVALID_OPERATION = 0x0502
-	EQUIV = 0x1509
-	AND_INVERTED = 0x1504
-	BACK_RIGHT = 0x0403
-	RGB12 = 0x8053
-	POINT_SIZE = 0x0B11
-	RGB10 = 0x8052
-	STENCIL_PASS_DEPTH_PASS = 0x0B96
-	RGB16 = 0x8054
-	ONE = 1
-	STENCIL_BUFFER_BIT = 0x00000400
-	STENCIL = 0x1802
-	FRONT_RIGHT = 0x0401
-	READ_BUFFER = 0x0C02
-	BACK = 0x0405
-	DEPTH_BUFFER_BIT = 0x00000100
-	UNSIGNED_SHORT = 0x1403
-	POLYGON_OFFSET_FILL = 0x8037
-	UNPACK_LSB_FIRST = 0x0CF1
-	ALPHA = 0x1906
-	INVALID_VALUE = 0x0501
-	SET = 0x150F
-	RIGHT = 0x0407
-	LINE_WIDTH_GRANULARITY = 0x0B23
-	NEAREST_MIPMAP_LINEAR = 0x2702
-	POINTS = 0x0000
-	FILL = 0x1B02
-	AND_REVERSE = 0x1502
-	CLEAR = 0x1500
-	DEPTH_FUNC = 0x0B74
-	TEXTURE_WIDTH = 0x1000
-	CCW = 0x0901
 	GEQUAL = 0x0206
 	OR_REVERSE = 0x150B
 	BLUE = 0x1905
@@ -4230,18 +4200,42 @@ const (
 	VENDOR = 0x1F00
 	RGB5 = 0x8050
 	DITHER = 0x0BD0
+	STENCIL_CLEAR_VALUE = 0x0B91
+	INVALID_OPERATION = 0x0502
+	EQUIV = 0x1509
+	AND_INVERTED = 0x1504
+	BACK_RIGHT = 0x0403
+	RGB12 = 0x8053
+	POINT_SIZE = 0x0B11
+	RGB10 = 0x8052
+	STENCIL_PASS_DEPTH_PASS = 0x0B96
+	RGB16 = 0x8054
+	ONE = 1
+	STENCIL_BUFFER_BIT = 0x00000400
+	STENCIL = 0x1802
+	FRONT_RIGHT = 0x0401
+	READ_BUFFER = 0x0C02
+	BACK = 0x0405
+	DEPTH_BUFFER_BIT = 0x00000100
+	UNSIGNED_SHORT = 0x1403
+	POLYGON_OFFSET_FILL = 0x8037
+	UNPACK_LSB_FIRST = 0x0CF1
+	ALPHA = 0x1906
+	INVALID_VALUE = 0x0501
+	SET = 0x150F
+	RIGHT = 0x0407
+	LINE_WIDTH_GRANULARITY = 0x0B23
+	NEAREST_MIPMAP_LINEAR = 0x2702
+	POINTS = 0x0000
+	FILL = 0x1B02
+	AND_REVERSE = 0x1502
+	CLEAR = 0x1500
+	DEPTH_FUNC = 0x0B74
+	TEXTURE_WIDTH = 0x1000
+	CCW = 0x0901
 )
 // VERSION_1_4_DEPRECATED
 const (
-	FOG_COORDINATE_ARRAY_STRIDE = 0x8455
-	SECONDARY_COLOR_ARRAY_STRIDE = 0x845C
-	TEXTURE_FILTER_CONTROL = 0x8500
-	DEPTH_TEXTURE_MODE = 0x884B
-	COLOR_SUM = 0x8458
-	SECONDARY_COLOR_ARRAY_SIZE = 0x845A
-	CURRENT_SECONDARY_COLOR = 0x8459
-	FOG_COORDINATE_ARRAY_POINTER = 0x8456
-	FOG_COORDINATE_SOURCE = 0x8450
 	GENERATE_MIPMAP_HINT = 0x8192
 	SECONDARY_COLOR_ARRAY_POINTER = 0x845D
 	SECONDARY_COLOR_ARRAY_TYPE = 0x845B
@@ -4256,9 +4250,33 @@ const (
 	POINT_DISTANCE_ATTENUATION = 0x8129
 	FOG_COORDINATE = 0x8451
 	POINT_SIZE_MAX = 0x8127
+	FOG_COORDINATE_ARRAY_STRIDE = 0x8455
+	SECONDARY_COLOR_ARRAY_STRIDE = 0x845C
+	TEXTURE_FILTER_CONTROL = 0x8500
+	DEPTH_TEXTURE_MODE = 0x884B
+	COLOR_SUM = 0x8458
+	SECONDARY_COLOR_ARRAY_SIZE = 0x845A
+	CURRENT_SECONDARY_COLOR = 0x8459
+	FOG_COORDINATE_ARRAY_POINTER = 0x8456
+	FOG_COORDINATE_SOURCE = 0x8450
 )
 // VERSION_1_2
 const (
+	PACK_SKIP_IMAGES = 0x806B
+	TEXTURE_MAX_LEVEL = 0x813D
+	UNSIGNED_BYTE_3_3_2 = 0x8032
+	ALIASED_LINE_WIDTH_RANGE = 0x846E
+	UNSIGNED_INT_2_10_10_10_REV = 0x8368
+	UNPACK_IMAGE_HEIGHT = 0x806E
+	UNSIGNED_SHORT_5_6_5_REV = 0x8364
+	UNSIGNED_SHORT_1_5_5_5_REV = 0x8366
+	UNSIGNED_BYTE_2_3_3_REV = 0x8362
+	UNSIGNED_SHORT_4_4_4_4_REV = 0x8365
+	UNSIGNED_INT_8_8_8_8 = 0x8035
+	UNSIGNED_SHORT_5_6_5 = 0x8363
+	TEXTURE_BASE_LEVEL = 0x813C
+	SMOOTH_LINE_WIDTH_GRANULARITY = 0x0B23
+	TEXTURE_WRAP_R = 0x8072
 	UNPACK_SKIP_IMAGES = 0x806D
 	PACK_IMAGE_HEIGHT = 0x806C
 	TEXTURE_MIN_LOD = 0x813A
@@ -4280,24 +4298,29 @@ const (
 	TEXTURE_BINDING_3D = 0x806A
 	CLAMP_TO_EDGE = 0x812F
 	TEXTURE_3D = 0x806F
-	PACK_SKIP_IMAGES = 0x806B
-	TEXTURE_MAX_LEVEL = 0x813D
-	UNSIGNED_BYTE_3_3_2 = 0x8032
-	ALIASED_LINE_WIDTH_RANGE = 0x846E
-	UNSIGNED_INT_2_10_10_10_REV = 0x8368
-	UNPACK_IMAGE_HEIGHT = 0x806E
-	UNSIGNED_SHORT_5_6_5_REV = 0x8364
-	UNSIGNED_SHORT_1_5_5_5_REV = 0x8366
-	UNSIGNED_BYTE_2_3_3_REV = 0x8362
-	UNSIGNED_SHORT_4_4_4_4_REV = 0x8365
-	UNSIGNED_INT_8_8_8_8 = 0x8035
-	UNSIGNED_SHORT_5_6_5 = 0x8363
-	TEXTURE_BASE_LEVEL = 0x813C
-	SMOOTH_LINE_WIDTH_GRANULARITY = 0x0B23
-	TEXTURE_WRAP_R = 0x8072
 )
 // VERSION_1_3
 const (
+	TEXTURE_BINDING_CUBE_MAP = 0x8514
+	SAMPLE_ALPHA_TO_ONE = 0x809F
+	COMPRESSED_RGBA = 0x84EE
+	MAX_CUBE_MAP_TEXTURE_SIZE = 0x851C
+	SAMPLE_COVERAGE_INVERT = 0x80AB
+	TEXTURE4 = 0x84C4
+	TEXTURE5 = 0x84C5
+	TEXTURE6 = 0x84C6
+	TEXTURE7 = 0x84C7
+	TEXTURE0 = 0x84C0
+	TEXTURE1 = 0x84C1
+	TEXTURE2 = 0x84C2
+	TEXTURE3 = 0x84C3
+	TEXTURE8 = 0x84C8
+	TEXTURE9 = 0x84C9
+	SAMPLE_COVERAGE_VALUE = 0x80AA
+	TEXTURE_CUBE_MAP_POSITIVE_Z = 0x8519
+	TEXTURE_CUBE_MAP_POSITIVE_X = 0x8515
+	TEXTURE_CUBE_MAP_POSITIVE_Y = 0x8517
+	ACTIVE_TEXTURE = 0x84E0
 	NUM_COMPRESSED_TEXTURE_FORMATS = 0x86A2
 	TEXTURE_COMPRESSED = 0x86A1
 	PROXY_TEXTURE_CUBE_MAP = 0x851B
@@ -4337,124 +4360,9 @@ const (
 	TEXTURE_COMPRESSION_HINT = 0x84EF
 	TEXTURE_CUBE_MAP = 0x8513
 	CLAMP_TO_BORDER = 0x812D
-	TEXTURE_BINDING_CUBE_MAP = 0x8514
-	SAMPLE_ALPHA_TO_ONE = 0x809F
-	COMPRESSED_RGBA = 0x84EE
-	MAX_CUBE_MAP_TEXTURE_SIZE = 0x851C
-	SAMPLE_COVERAGE_INVERT = 0x80AB
-	TEXTURE4 = 0x84C4
-	TEXTURE5 = 0x84C5
-	TEXTURE6 = 0x84C6
-	TEXTURE7 = 0x84C7
-	TEXTURE0 = 0x84C0
-	TEXTURE1 = 0x84C1
-	TEXTURE2 = 0x84C2
-	TEXTURE3 = 0x84C3
-	TEXTURE8 = 0x84C8
-	TEXTURE9 = 0x84C9
-	SAMPLE_COVERAGE_VALUE = 0x80AA
-	TEXTURE_CUBE_MAP_POSITIVE_Z = 0x8519
-	TEXTURE_CUBE_MAP_POSITIVE_X = 0x8515
-	TEXTURE_CUBE_MAP_POSITIVE_Y = 0x8517
-	ACTIVE_TEXTURE = 0x84E0
 )
 // VERSION_1_1_DEPRECATED
 const (
-	LUMINANCE4_ALPHA4 = 0x8043
-	SELECT = 0x1C02
-	LINE_BIT = 0x00000004
-	PIXEL_MAP_I_TO_I = 0x0C70
-	PIXEL_MAP_A_TO_A_SIZE = 0x0CB9
-	NORMAL_ARRAY_POINTER = 0x808F
-	POLYGON_STIPPLE_BIT = 0x00000010
-	LUMINANCE = 0x1909
-	POINT_SMOOTH_HINT = 0x0C51
-	TEXTURE_COORD_ARRAY_POINTER = 0x8092
-	CURRENT_NORMAL = 0x0B02
-	PIXEL_MAP_S_TO_S = 0x0C71
-	POLYGON = 0x0009
-	X3D_COLOR_TEXTURE = 0x0603
-	TEXTURE_COORD_ARRAY_STRIDE = 0x808A
-	X2_BYTES = 0x1407
-	COLOR_ARRAY_TYPE = 0x8082
-	MODELVIEW = 0x1700
-	CURRENT_RASTER_TEXTURE_COORDS = 0x0B06
-	INDEX_OFFSET = 0x0D13
-	STACK_OVERFLOW = 0x0503
-	T4F_V4F = 0x2A28
-	ENABLE_BIT = 0x00002000
-	MAP2_VERTEX_4 = 0x0DB8
-	MAP2_COLOR_4 = 0x0DB0
-	SPOT_DIRECTION = 0x1204
-	CLAMP = 0x2900
-	AUTO_NORMAL = 0x0D80
-	INDEX_ARRAY_TYPE = 0x8085
-	MAP2_VERTEX_3 = 0x0DB7
-	QUADS = 0x0007
-	X2D = 0x0600
-	SPOT_CUTOFF = 0x1206
-	MODELVIEW_MATRIX = 0x0BA6
-	LIGHT_MODEL_LOCAL_VIEWER = 0x0B51
-	MULT = 0x0103
-	INTENSITY = 0x8049
-	COLOR_MATERIAL_FACE = 0x0B55
-	NAME_STACK_DEPTH = 0x0D70
-	VERTEX_ARRAY_TYPE = 0x807B
-	FEEDBACK_BUFFER_POINTER = 0x0DF0
-	INDEX_SHIFT = 0x0D12
-	RED_BIAS = 0x0D15
-	EDGE_FLAG_ARRAY = 0x8079
-	INDEX_CLEAR_VALUE = 0x0C20
-	TEXTURE_COORD_ARRAY = 0x8078
-	QUAD_STRIP = 0x0008
-	CURRENT_RASTER_POSITION = 0x0B07
-	INDEX_ARRAY_POINTER = 0x8091
-	LIGHT_MODEL_TWO_SIDE = 0x0B52
-	TEXTURE_COORD_ARRAY_SIZE = 0x8088
-	MAX_PROJECTION_STACK_DEPTH = 0x0D38
-	PIXEL_MAP_I_TO_G_SIZE = 0x0CB3
-	SELECTION_BUFFER_SIZE = 0x0DF4
-	DECAL = 0x2101
-	MAP1_NORMAL = 0x0D92
-	SHADE_MODEL = 0x0B54
-	T2F_N3F_V3F = 0x2A2B
-	CLIENT_VERTEX_ARRAY_BIT = 0x00000002
-	ALPHA_TEST_REF = 0x0BC2
-	CURRENT_RASTER_COLOR = 0x0B04
-	AMBIENT_AND_DIFFUSE = 0x1602
-	CLIP_PLANE2 = 0x3002
-	ALPHA_TEST_FUNC = 0x0BC1
-	CLIP_PLANE3 = 0x3003
-	T2F_C4F_N3F_V3F = 0x2A2C
-	CLIP_PLANE0 = 0x3000
-	CLIP_PLANE1 = 0x3001
-	CLIP_PLANE4 = 0x3004
-	CLIP_PLANE5 = 0x3005
-	MAP1_VERTEX_4 = 0x0D98
-	POLYGON_STIPPLE = 0x0B42
-	MAP1_VERTEX_3 = 0x0D97
-	FOG_HINT = 0x0C54
-	FOG_COLOR = 0x0B66
-	DRAW_PIXEL_TOKEN = 0x0705
-	LOAD = 0x0101
-	TEXTURE_ENV_MODE = 0x2200
-	NORMAL_ARRAY_TYPE = 0x807E
-	BITMAP_TOKEN = 0x0704
-	ALPHA_BITS = 0x0D55
-	ALPHA16 = 0x803E
-	CURRENT_RASTER_INDEX = 0x0B05
-	ACCUM = 0x0100
-	STACK_UNDERFLOW = 0x0504
-	ALPHA12 = 0x803D
-	PIXEL_MAP_B_TO_B = 0x0C78
-	SCISSOR_BIT = 0x00080000
-	EXP = 0x0800
-	CLIENT_PIXEL_STORE_BIT = 0x00000001
-	PIXEL_MAP_I_TO_R_SIZE = 0x0CB2
-	X3D_COLOR = 0x0602
-	DEPTH_BIAS = 0x0D1F
-	TEXTURE_ENV = 0x2300
-	MODULATE = 0x2100
 	ALPHA4 = 0x803B
 	VIEWPORT_BIT = 0x00000800
 	EDGE_FLAG = 0x0B43
@@ -4689,21 +4597,101 @@ const (
 	TEXTURE_BORDER = 0x1005
 	PIXEL_MAP_I_TO_B = 0x0C74
 	PIXEL_MAP_I_TO_A = 0x0C75
-)
-// VERSION_1_2_DEPRECATED
-const (
-	ALIASED_POINT_SIZE_RANGE = 0x846D
-	RESCALE_NORMAL = 0x803A
-	LIGHT_MODEL_COLOR_CONTROL = 0x81F8
-	SINGLE_COLOR = 0x81F9
-	SEPARATE_SPECULAR_COLOR = 0x81FA
-)
-// VERSION_2_0_DEPRECATED
-const (
-	MAX_TEXTURE_COORDS = 0x8871
-	POINT_SPRITE = 0x8861
-	VERTEX_PROGRAM_TWO_SIDE = 0x8643
-	COORD_REPLACE = 0x8862
+	LUMINANCE4_ALPHA4 = 0x8043
+	SELECT = 0x1C02
+	LINE_BIT = 0x00000004
+	PIXEL_MAP_I_TO_I = 0x0C70
+	PIXEL_MAP_A_TO_A_SIZE = 0x0CB9
+	NORMAL_ARRAY_POINTER = 0x808F
+	POLYGON_STIPPLE_BIT = 0x00000010
+	LUMINANCE = 0x1909
+	POINT_SMOOTH_HINT = 0x0C51
+	TEXTURE_COORD_ARRAY_POINTER = 0x8092
+	CURRENT_NORMAL = 0x0B02
+	PIXEL_MAP_S_TO_S = 0x0C71
+	POLYGON = 0x0009
+	X3D_COLOR_TEXTURE = 0x0603
+	TEXTURE_COORD_ARRAY_STRIDE = 0x808A
+	X2_BYTES = 0x1407
+	COLOR_ARRAY_TYPE = 0x8082
+	MODELVIEW = 0x1700
+	CURRENT_RASTER_TEXTURE_COORDS = 0x0B06
+	INDEX_OFFSET = 0x0D13
+	STACK_OVERFLOW = 0x0503
+	T4F_V4F = 0x2A28
+	ENABLE_BIT = 0x00002000
+	MAP2_VERTEX_4 = 0x0DB8
+	MAP2_COLOR_4 = 0x0DB0
+	SPOT_DIRECTION = 0x1204
+	CLAMP = 0x2900
+	AUTO_NORMAL = 0x0D80
+	INDEX_ARRAY_TYPE = 0x8085
+	MAP2_VERTEX_3 = 0x0DB7
+	QUADS = 0x0007
+	X2D = 0x0600
+	SPOT_CUTOFF = 0x1206
+	MODELVIEW_MATRIX = 0x0BA6
+	LIGHT_MODEL_LOCAL_VIEWER = 0x0B51
+	MULT = 0x0103
+	INTENSITY = 0x8049
+	COLOR_MATERIAL_FACE = 0x0B55
+	NAME_STACK_DEPTH = 0x0D70
+	VERTEX_ARRAY_TYPE = 0x807B
+	FEEDBACK_BUFFER_POINTER = 0x0DF0
+	INDEX_SHIFT = 0x0D12
+	RED_BIAS = 0x0D15
+	EDGE_FLAG_ARRAY = 0x8079
+	INDEX_CLEAR_VALUE = 0x0C20
+	TEXTURE_COORD_ARRAY = 0x8078
+	QUAD_STRIP = 0x0008
+	CURRENT_RASTER_POSITION = 0x0B07
+	INDEX_ARRAY_POINTER = 0x8091
+	LIGHT_MODEL_TWO_SIDE = 0x0B52
+	TEXTURE_COORD_ARRAY_SIZE = 0x8088
+	MAX_PROJECTION_STACK_DEPTH = 0x0D38
+	PIXEL_MAP_I_TO_G_SIZE = 0x0CB3
+	SELECTION_BUFFER_SIZE = 0x0DF4
+	DECAL = 0x2101
+	MAP1_NORMAL = 0x0D92
+	SHADE_MODEL = 0x0B54
+	T2F_N3F_V3F = 0x2A2B
+	CLIENT_VERTEX_ARRAY_BIT = 0x00000002
+	ALPHA_TEST_REF = 0x0BC2
+	CURRENT_RASTER_COLOR = 0x0B04
+	AMBIENT_AND_DIFFUSE = 0x1602
+	CLIP_PLANE2 = 0x3002
+	ALPHA_TEST_FUNC = 0x0BC1
+	CLIP_PLANE3 = 0x3003
+	T2F_C4F_N3F_V3F = 0x2A2C
+	CLIP_PLANE0 = 0x3000
+	CLIP_PLANE1 = 0x3001
+	CLIP_PLANE4 = 0x3004
+	CLIP_PLANE5 = 0x3005
+	MAP1_VERTEX_4 = 0x0D98
+	POLYGON_STIPPLE = 0x0B42
+	MAP1_VERTEX_3 = 0x0D97
+	FOG_HINT = 0x0C54
+	FOG_COLOR = 0x0B66
+	DRAW_PIXEL_TOKEN = 0x0705
+	LOAD = 0x0101
+	TEXTURE_ENV_MODE = 0x2200
+	NORMAL_ARRAY_TYPE = 0x807E
+	BITMAP_TOKEN = 0x0704
+	ALPHA_BITS = 0x0D55
+	ALPHA16 = 0x803E
+	CURRENT_RASTER_INDEX = 0x0B05
+	ACCUM = 0x0100
+	STACK_UNDERFLOW = 0x0504
+	ALPHA12 = 0x803D
+	PIXEL_MAP_B_TO_B = 0x0C78
+	SCISSOR_BIT = 0x00080000
+	EXP = 0x0800
+	CLIENT_PIXEL_STORE_BIT = 0x00000001
+	PIXEL_MAP_I_TO_R_SIZE = 0x0CB2
+	X3D_COLOR = 0x0602
+	DEPTH_BIAS = 0x0D1F
+	TEXTURE_ENV = 0x2300
+	MODULATE = 0x2100
 )
 // VERSION_2_1
 
@@ -7156,6 +7144,12 @@ func InitVersion12Deprecated() error {
 }
 func Init() error {
 	var err error
+	if err = InitVersion21(); err != nil {
+		return err
+	}
+	if err = InitVersion20(); err != nil {
+		return err
+	}
 	if err = InitVersion13Deprecated(); err != nil {
 		return err
 	}
@@ -7187,12 +7181,6 @@ func Init() error {
 		return err
 	}
 	if err = InitVersion12Deprecated(); err != nil {
-		return err
-	}
-	if err = InitVersion21(); err != nil {
-		return err
-	}
-	if err = InitVersion20(); err != nil {
 		return err
 	}
 	return nil
