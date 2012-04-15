@@ -40,11 +40,11 @@ func DownloadFile(baseURL, fileName, outDir string) error {
 	if err != nil {
 		return err
 	}
-	err = os.MkdirAll(absPath, 0666)
+	err = os.MkdirAll(absPath, 0755)
 	if err != nil {
 		return err
 	}
-	err = ioutil.WriteFile(filepath.Join(absPath, fileName), data, 0666)
+	err = ioutil.WriteFile(filepath.Join(absPath, fileName), data, 0644)
 	if err != nil {
 		return err
 	}
