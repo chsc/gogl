@@ -6771,6 +6771,9 @@ func Init() error {
 	if err = InitVersion20(); err != nil {
 		return err
 	}
+	if err = InitWgl(); err != nil {
+		return err
+	}
 	return nil
 }
 //Go bool to GL boolean.
