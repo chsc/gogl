@@ -58,7 +58,7 @@ func ReadEnums(r io.Reader) (EnumCategories, error) {
 			//fmt.Printf("%v %v\n", enum[1], enum[2])
 			if strings.HasPrefix(enum[2], "GL_") {
 				//fmt.Printf("%s %s\n", enum[1], enum[2])
-				categories[currentCategory][enum[1]] = enum[2][3:]
+				categories[currentCategory][enum[1]] = categories[currentCategory][enum[2][3:]]
 			} else if strings.HasSuffix(enum[2], "u") {
 				categories[currentCategory][enum[1]] = enum[2][:len(enum[2])-1]
 			} else if strings.HasSuffix(enum[2], "ull") {
