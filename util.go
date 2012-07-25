@@ -146,7 +146,7 @@ func CTypeToGoType(cType string, out bool, mod ParamModifier) (goType, cgoType s
 			err = errors.New("Unsupported out parameter.")
 		}
 		return
-	case "GLchar*", "GLcharARB*":
+	case "GLchar*", "GLchar* const", "GLcharARB*":
 		goType = "*Char"
 		cgoType = "*C.GLchar"
 		if mod == ParamModifierArray || mod == ParamModifierReference {
