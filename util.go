@@ -146,9 +146,17 @@ func CTypeToGoType(cType string, out bool, mod ParamModifier) (goType, cgoType s
 			err = errors.New("Unsupported out parameter.")
 		}
 		return
-	case "GLchar*", "GLchar* const", "GLcharARB*":
+	case "GLchar*", "GLchar* const":
 		goType = "*Char"
 		cgoType = "*C.GLchar"
+		if mod == ParamModifierArray || mod == ParamModifierReference {
+			goType = "*" + goType
+			cgoType = "*" + cgoType
+		}
+		return
+	case "GLcharARB*":
+		goType = "*Char"
+		cgoType = "*C.GLcharARB"
 		if mod == ParamModifierArray || mod == ParamModifierReference {
 			goType = "*" + goType
 			cgoType = "*" + cgoType
@@ -164,7 +172,7 @@ func CTypeToGoType(cType string, out bool, mod ParamModifier) (goType, cgoType s
 		return
 	case "GLhandleARB":
 		goType = "Uint" // handle is uint
-		cgoType = "C.GLuint"
+		cgoType = "C.GLhandleARB"
 		if mod == ParamModifierArray || mod == ParamModifierReference {
 			goType = "*" + goType
 			cgoType = "*" + cgoType
@@ -172,14 +180,14 @@ func CTypeToGoType(cType string, out bool, mod ParamModifier) (goType, cgoType s
 		return
 	case "GLDEBUGPROCARB", "GLDEBUGPROCAMD":
 		goType = "Pointer" // TODO: Debug callback support?
-		cgoType = "unsafe.Pointer"
+		cgoType = "*[0]byte"
 		if mod == ParamModifierArray || mod == ParamModifierReference || out {
 			err = errors.New("Unsupported type.")
 		}
 		return
 	case "GLvdpauSurfaceNV":
 		goType = "Pointer" // TODO: vdpau support?
-		cgoType = "unsafe.Pointer"
+		cgoType = "C.GLvdpauSurfaceNV"
 		if mod == ParamModifierArray || mod == ParamModifierReference {
 			goType = "*" + goType
 			cgoType = "*" + goType
@@ -194,7 +202,7 @@ func CTypeToGoType(cType string, out bool, mod ParamModifier) (goType, cgoType s
 		return
 	case "struct _cl_context *", "struct _cl_event *":
 		goType = "Pointer" // TODO: OpenCL context, event support?
-		cgoType = "unsafe.Pointer"
+		cgoType = "*[0]byte"
 		if mod == ParamModifierArray || mod == ParamModifierReference || out {
 			err = errors.New("Unsupported type.")
 		}
@@ -249,16 +257,25 @@ func CTypeToGoType(cType string, out bool, mod ParamModifier) (goType, cgoType s
 		goType = "Clampd"
 		cgoType = "C.GLclampd"
 	//  
-	case "GLchar", "GLcharARB":
+	case "GLchar":
 		goType = "Char"
 		cgoType = "C.GLchar"
+	case "GLcharARB":
+		goType = "Char"
+		cgoType = "C.GLcharARB"
 	// 
-	case "GLintptr", "GLintptrARB":
+	case "GLintptr":
 		goType = "Intptr"
-		cgoType = "C.GLintptr" // is uintptr better ?
-	case "GLsizeiptr", "GLsizeiptrARB":
+		cgoType = "C.GLintptr"
+	case "GLintptrARB":
+		goType = "Intptr"
+		cgoType = "C.GLintptrARB"
+	case "GLsizeiptr":
 		goType = "Sizeiptr"
-		cgoType = "C.GLsizeiptr" // is intptr better ?
+		cgoType = "C.GLsizeiptr"
+	case "GLsizeiptrARB":
+		goType = "Sizeiptr"
+		cgoType = "C.GLsizeiptrARB"
 	// 
 	case "GLint64", "GLint64EXT":
 		goType = "Int64"

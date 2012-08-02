@@ -131,7 +131,7 @@ func writePackage(w io.Writer, packageName string, pak *Package, functsInfo *Fun
 	fmt.Fprintf(w, "// static HMODULE opengl32 = NULL;\n")
 	fmt.Fprintf(w, "// #endif\n// \n")
 
-	fmt.Fprintf(w, "// void* goglGetProcAddress(const char* name) { \n")
+	fmt.Fprintf(w, "// static void* goglGetProcAddress(const char* name) { \n")
 	fmt.Fprintf(w, "// #ifdef __APPLE__\n")
 	fmt.Fprintf(w, "// 	return dlsym(RTLD_DEFAULT, name);\n")
 	fmt.Fprintf(w, "// #elif _WIN32\n")
@@ -197,7 +197,9 @@ func writePackage(w io.Writer, packageName string, pak *Package, functsInfo *Fun
 
 	writeGoInitDefinitions(w, sortedFunctionCategories, pak.Functions)
 
-	writeUtilityFunctions(w)
+	if strings.HasPrefix(packageName, "gl") {
+		writeUtilityFunctions(w)
+	}
 
 	fmt.Fprintf(w, "// EOF")
 
