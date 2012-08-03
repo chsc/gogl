@@ -186,11 +186,11 @@ func CTypeToGoType(cType string, out bool, mod ParamModifier) (goType, cgoType s
 		}
 		return
 	case "GLvdpauSurfaceNV":
-		goType = "Pointer" // TODO: vdpau support?
+		goType = "Intptr" // TODO: vdpau support?
 		cgoType = "C.GLvdpauSurfaceNV"
 		if mod == ParamModifierArray || mod == ParamModifierReference {
 			goType = "*" + goType
-			cgoType = "*" + goType
+			cgoType = "*" + cgoType
 		}
 		return
 	case "GLsync":
@@ -241,9 +241,12 @@ func CTypeToGoType(cType string, out bool, mod ParamModifier) (goType, cgoType s
 	case "GLuint":
 		goType = "Uint"
 		cgoType = "C.GLuint"
-	case "GLhalf", "GLhalfNV":
+	case "GLhalf":
 		goType = "Half"
 		cgoType = "C.GLhalf"
+	case "GLhalfNV":
+		goType = "Half"
+		cgoType = "C.GLhalfNV"
 	case "GLfloat":
 		goType = "Float"
 		cgoType = "C.GLfloat"
@@ -277,13 +280,18 @@ func CTypeToGoType(cType string, out bool, mod ParamModifier) (goType, cgoType s
 		goType = "Sizeiptr"
 		cgoType = "C.GLsizeiptrARB"
 	// 
-	case "GLint64", "GLint64EXT":
+	case "GLint64":
 		goType = "Int64"
 		cgoType = "C.GLint64"
-	case "GLuint64", "GLuint64EXT":
+	case "GLint64EXT":
+		goType = "Int64"
+		cgoType = "C.GLint64EXT"
+	case "GLuint64":
 		goType = "Uint64"
 		cgoType = "C.GLuint64"
-
+	case "GLuint64EXT":
+		goType = "Uint64"
+		cgoType = "C.GLuint64EXT"
 	default:
 		err = errors.New("Unknown GL type: " + cType)
 		return

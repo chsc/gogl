@@ -42,6 +42,11 @@ func generatePackage(packageName string, pak *Package, functsInfo *FunctionsInfo
 
 func writePackage(w io.Writer, packageName string, pak *Package, functsInfo *FunctionsInfo, typeMap TypeMap) error {
 	highestMajorVersion := -1
+	isGLPackage := false
+
+	if strings.HasPrefix(packageName, "gl") {
+		isGLPackage = true
+	}
 
 	fmt.Fprintf(w, "// Automatically generated OpenGL binding.\n// \n")
 	fmt.Fprintf(w, "// Categories in this package: \n// \n")
@@ -195,9 +200,9 @@ func writePackage(w io.Writer, packageName string, pak *Package, functsInfo *Fun
 		return err
 	}
 
-	writeGoInitDefinitions(w, sortedFunctionCategories, pak.Functions)
+	writeGoInitDefinitions(w, sortedFunctionCategories, pak.Functions, isGLPackage)
 
-	if strings.HasPrefix(packageName, "gl") {
+	if isGLPackage {
 		writeUtilityFunctions(w)
 	}
 
@@ -330,9 +335,9 @@ func writeGoEnumDefinitions(w io.Writer, sortedEnumCategories []string, enumCats
 		sortedEnums := make([]string, len(enums))
 		i := 0
 		for k, _ := range enums {
-			if strings.HasPrefix(k, "COPY_READ") {
-				fmt.Println(k)
-			}
+			//if strings.HasPrefix(k, "COPY_READ") {
+			//	fmt.Println(k)
+			//}
 			sortedEnums[i] = k
 			i++
 		}
@@ -432,7 +437,7 @@ func writeGoFuncDefinition(w io.Writer, f *Function, typeMap TypeMap, majorVersi
 	return nil
 }
 
-func writeGoInitDefinitions(w io.Writer, sortedFunctionCategories []string, functions FunctionCategories) error {
+func writeGoInitDefinitions(w io.Writer, sortedFunctionCategories []string, functions FunctionCategories, initAll bool) error {
 	for _, cat := range sortedFunctionCategories {
 		fmt.Fprintf(w, "func Init%s() error {\n", GoName(cat))
 		fmt.Fprintf(w, "\tvar ret C.int\n")
@@ -442,15 +447,17 @@ func writeGoInitDefinitions(w io.Writer, sortedFunctionCategories []string, func
 		fmt.Fprintf(w, "\treturn nil\n")
 		fmt.Fprintf(w, "}\n")
 	}
-	fmt.Fprintf(w, "func Init() error {\n")
-	fmt.Fprintf(w, "\tvar err error\n")
-	for _, cat := range sortedFunctionCategories {
-		fmt.Fprintf(w, "\tif err = Init%s(); err != nil {\n", GoName(cat))
-		fmt.Fprintf(w, "\t\treturn err\n")
-		fmt.Fprintf(w, "\t}\n")
+	if initAll {
+		fmt.Fprintf(w, "func Init() error {\n")
+		fmt.Fprintf(w, "\tvar err error\n")
+		for _, cat := range sortedFunctionCategories {
+			fmt.Fprintf(w, "\tif err = Init%s(); err != nil {\n", GoName(cat))
+			fmt.Fprintf(w, "\t\treturn err\n")
+			fmt.Fprintf(w, "\t}\n")
+		}
+		fmt.Fprintf(w, "\treturn nil\n")
+		fmt.Fprintf(w, "}\n")
 	}
-	fmt.Fprintf(w, "\treturn nil\n")
-	fmt.Fprintf(w, "}\n")
 	return nil
 }
 

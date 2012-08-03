@@ -172,6 +172,15 @@ func (e EnumCategories) IsAlreadyDefined(name, excludeCategory string) bool {
 	return false
 }
 
+func (e EnumCategories) LookUpDefinition(name string) (bool, string) {
+	for _, enums := range e {
+		if val, ok := enums[name]; ok {
+			return true, val
+		}
+	}
+	return false, ""
+}
+
 // Type maps
 
 type TypeMap map[string]string

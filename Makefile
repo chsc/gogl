@@ -30,8 +30,8 @@ install_all:
 #	go install ./gl41c
 	go install ./gl42
 #	go install ./gl42c
-#	go install ./arb
-#	go install ./ext
-#	go install ./ati
-#	go install ./amd
-#	go install ./nv
+	go install ./arb
+	go install ./ext
+	go install ./ati
+	go install ./amd
+	go install ./nv
