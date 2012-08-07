@@ -18,6 +18,14 @@ const (
 	OpenGLEnumExtSpecFile  = "enumext.spec"
 	OpenGLSpecFile         = "gl.spec"
 	OpenGLTypeMapFile      = "gl.tm"
+	GLXEnumSpecFile        = "glxenum.spec"
+	GLXEnumExtSpecFile     = "glxenumext.spec"
+	GLXSpecFile            = "glx.spec"
+	GLXTypeMapFile         = "glx.tm"
+	WGLEnumSpecFile        = "wglenum.spec"
+	WGLEnumExtSpecFile     = "wglenumext.spec"
+	WGLSpecFile            = "wgl.spec"
+	WGLTypeMapFile         = "wgl.tm"
 )
 
 func makeURL(base, file string) string {
@@ -55,6 +63,12 @@ func DownloadOpenGLSpecs(baseURL, outDir string) {
 	DownloadFile(baseURL, OpenGLEnumExtSpecFile, outDir)
 	DownloadFile(baseURL, OpenGLSpecFile, outDir)
 	DownloadFile(baseURL, OpenGLTypeMapFile, outDir)
-}
 
-// TODO: download wgl, glx specs ...
+	DownloadFile(baseURL, GLXEnumExtSpecFile, outDir)
+	DownloadFile(baseURL, GLXSpecFile, outDir)
+	DownloadFile(baseURL, GLXTypeMapFile, outDir)
+
+	DownloadFile(baseURL, WGLEnumExtSpecFile, outDir)
+	DownloadFile(baseURL, WGLSpecFile, outDir)
+	DownloadFile(baseURL, WGLTypeMapFile, outDir)
+}

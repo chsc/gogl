@@ -14,28 +14,28 @@ import (
 )
 
 var (
-	funcEmptyLineRE       = regexp.MustCompile("^\\s*(#.*)?$")
+	funcCommentLineRE     = regexp.MustCompile("^#")
 	funcRE                = regexp.MustCompile("^(\\w+)\\([\\w\\s,]*\\)")
-	funcReturnRE          = regexp.MustCompile("^\\s+return\\s+(\\w+)")
-	funcParamRE           = regexp.MustCompile("^\\s+param\\s+(\\w+)\\s+(\\w+)\\s+(in|out)\\s+(array|value|reference)")
-	funcVectorEquivRE     = regexp.MustCompile("^\\s+vectorequiv\\s+(\\w+)")
-	funcGlxVectorEquivRE  = regexp.MustCompile("^\\s+glxvectorequiv\\s+(\\w+)")
-	funcCategoryRE        = regexp.MustCompile("^\\s+category\\s+(\\w+)")
-	funcSubCategoryRE     = regexp.MustCompile("^\\s+subcategory\\s+(\\w+)")
-	funcVersionRE         = regexp.MustCompile("^\\s+version\\s+([0-9]+)\\.([0-9]+)")
-	funcDeprecatedRE      = regexp.MustCompile("^\\s+deprecated\\s+([0-9]+)\\.([0-9]+)")
-	funcOffsetRE          = regexp.MustCompile("^\\s+offset(\\s+([0-9\\*\\?]+))?")
-	funcGlxRopCodeRE      = regexp.MustCompile("^\\s+glxropcode(\\s+([0-9\\*\\?]+))?")
-	funcGlxSingleRE       = regexp.MustCompile("^\\s+glxsingle\\s+([0-9\\?\\*]+)")
-	funcWglFlagsRE        = regexp.MustCompile("^\\s+wglflags(\\s+([\\w\\*\\- ]+))?")
-	funcGlxFlagsRE        = regexp.MustCompile("^\\s+glxflags(\\s+([\\w\\*\\- ]+))?")
-	funcDlFlagsRE         = regexp.MustCompile("^\\s+dlflags(\\s+([\\w\\*\\- ]+))?")
-	funcGlfFlagsRE        = regexp.MustCompile("^\\s+glfflags(\\s+([\\w\\*\\- ]+))?")
-	funcGlxVendorPrivRE   = regexp.MustCompile("^\\s+glxvendorpriv\\s+([0-9\\?]+)")
-	funcGlextMaskRE       = regexp.MustCompile("^\\s+glextmask(\\s+(\\w+))?")
-	funcExtensionRE       = regexp.MustCompile("^\\s+extension(\\s+([\\w\\- ]+))?")
-	funcAliasRE           = regexp.MustCompile("^\\s+alias\\s+(\\w+)")
-	funcBeginEndRE        = regexp.MustCompile("^\\s+beginend\\s+([\\w\\*\\-]+)")
+	funcReturnRE          = regexp.MustCompile("^return\\s+(\\w+)")
+	funcParamRE           = regexp.MustCompile("^param\\s+(\\w+)\\s+(\\w+)\\s+(in|out)\\s+(array|value|reference)")
+	funcVectorEquivRE     = regexp.MustCompile("^vectorequiv\\s+(\\w+)")
+	funcGlxVectorEquivRE  = regexp.MustCompile("^glxvectorequiv\\s+(\\w+)")
+	funcCategoryRE        = regexp.MustCompile("^category\\s+(\\w+)")
+	funcSubCategoryRE     = regexp.MustCompile("^subcategory\\s+(\\w+)")
+	funcVersionRE         = regexp.MustCompile("^version\\s+([0-9]+)\\.([0-9]+)")
+	funcDeprecatedRE      = regexp.MustCompile("^deprecated\\s+([0-9]+)\\.([0-9]+)")
+	funcOffsetRE          = regexp.MustCompile("^offset\\s+([0-9\\*\\?]+)")
+	funcGlxRopCodeRE      = regexp.MustCompile("^glxropcode\\s+([0-9\\*\\?]+)")
+	funcGlxSingleRE       = regexp.MustCompile("^glxsingle\\s+([0-9\\?\\*]+)")
+	funcWglFlagsRE        = regexp.MustCompile("^wglflags(\\s+([\\w\\*\\- ]+))")
+	funcGlxFlagsRE        = regexp.MustCompile("^glxflags(\\s+([\\w\\*\\- ]+))")
+	funcDlFlagsRE         = regexp.MustCompile("^dlflags\\s+([\\w\\*\\- ]+)")
+	funcGlfFlagsRE        = regexp.MustCompile("^glfflags\\s+([\\w\\*\\- ]+)")
+	funcGlxVendorPrivRE   = regexp.MustCompile("^glxvendorpriv\\s+([0-9\\?]+)")
+	funcGlextMaskRE       = regexp.MustCompile("^glextmask\\s+(\\w+)")
+	funcExtensionRE       = regexp.MustCompile("^extension$|^extension\\s+([\\w\\- ]*)")
+	funcAliasRE           = regexp.MustCompile("^alias\\s+(\\w+)")
+	funcBeginEndRE        = regexp.MustCompile("^beginend\\s+([\\w\\*\\-]+)")
 	funcAllCategoriesRE   = regexp.MustCompile("^category:\\s*([\\w ]+)")
 	funcAllVersionsRE     = regexp.MustCompile("^version:\\s*([0-9\\. ]+)")
 	funcAllDeprVersionsRE = regexp.MustCompile("^deprecated:\\s*([0-9\\. ]+)")
@@ -68,9 +68,10 @@ func ReadFunctions(r io.Reader) (FunctionCategories, *FunctionsInfo, error) {
 		} else if err != nil {
 			return nil, nil, err
 		}
-		line = strings.TrimRight(line, "\n")
+		line = strings.Trim(line, "\t\n\r ")
 
-		if funcEmptyLineRE.MatchString(line) {
+		if len(line) == 0 || enumCommentLineRE.MatchString(line) {
+			//fmt.Printf("Empty or comment line %s\n", line)
 			continue
 		}
 
@@ -114,25 +115,27 @@ func ReadFunctions(r io.Reader) (FunctionCategories, *FunctionsInfo, error) {
 			}
 			currentFunction.DeprecatedVersion = v
 		} else if offset := funcOffsetRE.FindStringSubmatch(line); offset != nil {
-			currentFunction.Offset = offset[2]
+			currentFunction.Offset = offset[1]
 		} else if glxropcode := funcGlxRopCodeRE.FindStringSubmatch(line); glxropcode != nil {
-			currentFunction.GlxRopCode = glxropcode[2]
+			currentFunction.GlxRopCode = glxropcode[1]
 		} else if glxsingle := funcGlxSingleRE.FindStringSubmatch(line); glxsingle != nil {
 			currentFunction.GlxSingle = glxsingle[1]
 		} else if wglflags := funcWglFlagsRE.FindStringSubmatch(line); wglflags != nil {
-			currentFunction.WglFlags = wglflags[2]
+			currentFunction.WglFlags = wglflags[1]
 		} else if glxflags := funcGlxFlagsRE.FindStringSubmatch(line); glxflags != nil {
-			currentFunction.GlxFlags = glxflags[2]
+			currentFunction.GlxFlags = glxflags[1]
 		} else if dlflags := funcDlFlagsRE.FindStringSubmatch(line); dlflags != nil {
-			currentFunction.DlFlags = dlflags[2]
+			currentFunction.DlFlags = dlflags[1]
 		} else if glfflags := funcGlfFlagsRE.FindStringSubmatch(line); glfflags != nil {
-			currentFunction.GlfFlags = glfflags[2]
+			currentFunction.GlfFlags = glfflags[1]
 		} else if glxvendorpriv := funcGlxVendorPrivRE.FindStringSubmatch(line); glxvendorpriv != nil {
 			currentFunction.GlxVendorPriv = glxvendorpriv[1]
 		} else if glextmask := funcGlextMaskRE.FindStringSubmatch(line); glextmask != nil {
-			currentFunction.GlextMask = glextmask[2]
+			currentFunction.GlextMask = glextmask[1]
 		} else if extension := funcExtensionRE.FindStringSubmatch(line); extension != nil {
-			currentFunction.Extension = extension[2]
+			if(len(extension) >= 2) {
+				currentFunction.Extension = extension[1]
+			}
 		} else if vectorequiv := funcVectorEquivRE.FindStringSubmatch(line); vectorequiv != nil {
 			currentFunction.VectorEquiv = vectorequiv[1]
 		} else if glxvectorequiv := funcGlxVectorEquivRE.FindStringSubmatch(line); glxvectorequiv != nil {
@@ -172,7 +175,7 @@ func ReadFunctions(r io.Reader) (FunctionCategories, *FunctionsInfo, error) {
 			//} else if funcIgnoreRE.MatchString(line) {
 			//	// ignore
 		} else {
-			fmt.Fprintf(os.Stderr, "WARNING: Unable to parse line '%s'\n", line)
+			fmt.Fprintf(os.Stderr, "WARNING: Unable to parse line '%s' (Ignoring)\n", line)
 			//return functions, finfo, fmt.Errorf("Unable to parse line: '%s'", line)
 		}
 	}

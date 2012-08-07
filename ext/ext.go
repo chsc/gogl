@@ -355,7 +355,7 @@ package ext
 // GLint (APIENTRYP ptrglGetUniformBufferSizeEXT)(GLuint program, GLint location);
 // GLintptr (APIENTRYP ptrglGetUniformOffsetEXT)(GLuint program, GLint location);
 // //  EXT_blend_color
-// void (APIENTRYP ptrglBlendColorEXT)(GLclampf red, GLclampf green, GLclampf blue, GLclampf alpha);
+// void (APIENTRYP ptrglBlendColorEXT)(GLfloat red, GLfloat green, GLfloat blue, GLfloat alpha);
 // //  EXT_blend_equation_separate
 // void (APIENTRYP ptrglBlendEquationSeparateEXT)(GLenum modeRGB, GLenum modeAlpha);
 // //  EXT_blend_func_separate
@@ -933,7 +933,7 @@ package ext
 // 	return (*ptrglGetUniformOffsetEXT)(program, location);
 // }
 // //  EXT_blend_color
-// void goglBlendColorEXT(GLclampf red, GLclampf green, GLclampf blue, GLclampf alpha) {
+// void goglBlendColorEXT(GLfloat red, GLfloat green, GLfloat blue, GLfloat alpha) {
 // 	(*ptrglBlendColorEXT)(red, green, blue, alpha);
 // }
 // //  EXT_blend_equation_separate
@@ -4787,8 +4787,8 @@ func GetUniformOffsetEXT(program Uint, location Int) Intptr {
 }
 // EXT_blend_color
 
-func BlendColorEXT(red Clampf, green Clampf, blue Clampf, alpha Clampf)  {
-	C.goglBlendColorEXT((C.GLclampf)(red), (C.GLclampf)(green), (C.GLclampf)(blue), (C.GLclampf)(alpha))
+func BlendColorEXT(red Float, green Float, blue Float, alpha Float)  {
+	C.goglBlendColorEXT((C.GLfloat)(red), (C.GLfloat)(green), (C.GLfloat)(blue), (C.GLfloat)(alpha))
 }
 // EXT_blend_equation_separate
 

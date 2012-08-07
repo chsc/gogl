@@ -18,17 +18,25 @@
 // 
 // AMD_performance_monitor: http://www.opengl.org/registry/specs/AMD/performance_monitor.txt
 // 
+// AMD_pinned_memory: http://www.opengl.org/registry/specs/AMD/pinned_memory.txt
+// 
 // AMD_sample_positions: http://www.opengl.org/registry/specs/AMD/sample_positions.txt
 // 
 // AMD_seamless_cubemap_per_texture: http://www.opengl.org/registry/specs/AMD/seamless_cubemap_per_texture.txt
 // 
 // AMD_shader_stencil_export: http://www.opengl.org/registry/specs/AMD/shader_stencil_export.txt
 // 
+// AMD_stencil_operation_extended: http://www.opengl.org/registry/specs/AMD/stencil_operation_extended.txt
+// 
 // AMD_texture_texture4: http://www.opengl.org/registry/specs/AMD/texture_texture4.txt
 // 
 // AMD_transform_feedback3_lines_triangles: http://www.opengl.org/registry/specs/AMD/transform_feedback3_lines_triangles.txt
 // 
+// AMD_vertex_shader_layer: http://www.opengl.org/registry/specs/AMD/vertex_shader_layer.txt
+// 
 // AMD_vertex_shader_tessellator: http://www.opengl.org/registry/specs/AMD/vertex_shader_tessellator.txt
+// 
+// AMD_vertex_shader_viewport_index: http://www.opengl.org/registry/specs/AMD/vertex_shader_viewport_index.txt
 // 
 package amd
 
@@ -227,15 +235,20 @@ package amd
 // void (APIENTRYP ptrglBeginPerfMonitorAMD)(GLuint monitor);
 // void (APIENTRYP ptrglEndPerfMonitorAMD)(GLuint monitor);
 // void (APIENTRYP ptrglGetPerfMonitorCounterDataAMD)(GLuint monitor, GLenum pname, GLsizei dataSize, GLuint* data, GLint* bytesWritten);
+// //  AMD_pinned_memory
 // //  AMD_sample_positions
 // void (APIENTRYP ptrglSetMultisamplefvAMD)(GLenum pname, GLuint index, GLfloat* val);
 // //  AMD_seamless_cubemap_per_texture
 // //  AMD_shader_stencil_export
+// //  AMD_stencil_operation_extended
+// void (APIENTRYP ptrglStencilOpValueAMD)(GLenum face, GLuint value);
 // //  AMD_texture_texture4
 // //  AMD_transform_feedback3_lines_triangles
+// //  AMD_vertex_shader_layer
 // //  AMD_vertex_shader_tessellator
 // void (APIENTRYP ptrglTessellationFactorAMD)(GLfloat factor);
 // void (APIENTRYP ptrglTessellationModeAMD)(GLenum mode);
+// //  AMD_vertex_shader_viewport_index
 // 
 // //  AMD_blend_minmax_factor
 // //  AMD_conservative_depth
@@ -317,14 +330,20 @@ package amd
 // void goglGetPerfMonitorCounterDataAMD(GLuint monitor, GLenum pname, GLsizei dataSize, GLuint* data, GLint* bytesWritten) {
 // 	(*ptrglGetPerfMonitorCounterDataAMD)(monitor, pname, dataSize, data, bytesWritten);
 // }
+// //  AMD_pinned_memory
 // //  AMD_sample_positions
 // void goglSetMultisamplefvAMD(GLenum pname, GLuint index, GLfloat* val) {
 // 	(*ptrglSetMultisamplefvAMD)(pname, index, val);
 // }
 // //  AMD_seamless_cubemap_per_texture
 // //  AMD_shader_stencil_export
+// //  AMD_stencil_operation_extended
+// void goglStencilOpValueAMD(GLenum face, GLuint value) {
+// 	(*ptrglStencilOpValueAMD)(face, value);
+// }
 // //  AMD_texture_texture4
 // //  AMD_transform_feedback3_lines_triangles
+// //  AMD_vertex_shader_layer
 // //  AMD_vertex_shader_tessellator
 // void goglTessellationFactorAMD(GLfloat factor) {
 // 	(*ptrglTessellationFactorAMD)(factor);
@@ -332,6 +351,7 @@ package amd
 // void goglTessellationModeAMD(GLenum mode) {
 // 	(*ptrglTessellationModeAMD)(mode);
 // }
+// //  AMD_vertex_shader_viewport_index
 // 
 // int init_AMD_blend_minmax_factor() {
 // 	return 0;
@@ -405,6 +425,9 @@ package amd
 // 	if(ptrglGetPerfMonitorCounterDataAMD == NULL) return 1;
 // 	return 0;
 // }
+// int init_AMD_pinned_memory() {
+// 	return 0;
+// }
 // int init_AMD_sample_positions() {
 // 	ptrglSetMultisamplefvAMD = goglGetProcAddress("glSetMultisamplefvAMD");
 // 	if(ptrglSetMultisamplefvAMD == NULL) return 1;
@@ -416,10 +439,18 @@ package amd
 // int init_AMD_shader_stencil_export() {
 // 	return 0;
 // }
+// int init_AMD_stencil_operation_extended() {
+// 	ptrglStencilOpValueAMD = goglGetProcAddress("glStencilOpValueAMD");
+// 	if(ptrglStencilOpValueAMD == NULL) return 1;
+// 	return 0;
+// }
 // int init_AMD_texture_texture4() {
 // 	return 0;
 // }
 // int init_AMD_transform_feedback3_lines_triangles() {
+// 	return 0;
+// }
+// int init_AMD_vertex_shader_layer() {
 // 	return 0;
 // }
 // int init_AMD_vertex_shader_tessellator() {
@@ -427,6 +458,9 @@ package amd
 // 	if(ptrglTessellationFactorAMD == NULL) return 1;
 // 	ptrglTessellationModeAMD = goglGetProcAddress("glTessellationModeAMD");
 // 	if(ptrglTessellationModeAMD == NULL) return 1;
+// 	return 0;
+// }
+// int init_AMD_vertex_shader_viewport_index() {
 // 	return 0;
 // }
 // 
@@ -513,6 +547,10 @@ const (
 	PERFMON_RESULT_SIZE_AMD = 0x8BC5
 	UNSIGNED_INT64_AMD = 0x8BC2
 )
+// AMD_pinned_memory
+const (
+	EXTERNAL_VIRTUAL_MEMORY_BUFFER_AMD = 0x9160
+)
 // AMD_sample_positions
 const (
 	SUBSAMPLE_DISTANCE_AMD = 0x883F
@@ -523,10 +561,20 @@ const (
 // AMD_shader_stencil_export
 const (
 )
+// AMD_stencil_operation_extended
+const (
+	REPLACE_VALUE_AMD = 0x874B
+	SET_AMD = 0x874A
+	STENCIL_BACK_OP_VALUE_AMD = 0x874D
+	STENCIL_OP_VALUE_AMD = 0x874C
+)
 // AMD_texture_texture4
 const (
 )
 // AMD_transform_feedback3_lines_triangles
+const (
+)
+// AMD_vertex_shader_layer
 const (
 )
 // AMD_vertex_shader_tessellator
@@ -538,6 +586,9 @@ const (
 	TESSELLATION_FACTOR_AMD = 0x9005
 	TESSELLATION_MODE_AMD = 0x9004
 	UNSIGNED_INT_SAMPLER_BUFFER_AMD = 0x9003
+)
+// AMD_vertex_shader_viewport_index
+const (
 )
 // AMD_blend_minmax_factor
 
@@ -627,6 +678,8 @@ func EndPerfMonitorAMD(monitor Uint)  {
 func GetPerfMonitorCounterDataAMD(monitor Uint, pname Enum, dataSize Sizei, data *Uint, bytesWritten *Int)  {
 	C.goglGetPerfMonitorCounterDataAMD((C.GLuint)(monitor), (C.GLenum)(pname), (C.GLsizei)(dataSize), (*C.GLuint)(data), (*C.GLint)(bytesWritten))
 }
+// AMD_pinned_memory
+
 // AMD_sample_positions
 
 func SetMultisamplefvAMD(pname Enum, index Uint, val *Float)  {
@@ -636,9 +689,16 @@ func SetMultisamplefvAMD(pname Enum, index Uint, val *Float)  {
 
 // AMD_shader_stencil_export
 
+// AMD_stencil_operation_extended
+
+func StencilOpValueAMD(face Enum, value Uint)  {
+	C.goglStencilOpValueAMD((C.GLenum)(face), (C.GLuint)(value))
+}
 // AMD_texture_texture4
 
 // AMD_transform_feedback3_lines_triangles
+
+// AMD_vertex_shader_layer
 
 // AMD_vertex_shader_tessellator
 
@@ -648,6 +708,8 @@ func TessellationFactorAMD(factor Float)  {
 func TessellationModeAMD(mode Enum)  {
 	C.goglTessellationModeAMD((C.GLenum)(mode))
 }
+// AMD_vertex_shader_viewport_index
+
 func InitAmdBlendMinmaxFactor() error {
 	var ret C.int
 	if ret = C.init_AMD_blend_minmax_factor(); ret != 0 {
@@ -704,6 +766,13 @@ func InitAmdPerformanceMonitor() error {
 	}
 	return nil
 }
+func InitAmdPinnedMemory() error {
+	var ret C.int
+	if ret = C.init_AMD_pinned_memory(); ret != 0 {
+		return errors.New("unable to initialize AMD_pinned_memory")
+	}
+	return nil
+}
 func InitAmdSamplePositions() error {
 	var ret C.int
 	if ret = C.init_AMD_sample_positions(); ret != 0 {
@@ -725,6 +794,13 @@ func InitAmdShaderStencilExport() error {
 	}
 	return nil
 }
+func InitAmdStencilOperationExtended() error {
+	var ret C.int
+	if ret = C.init_AMD_stencil_operation_extended(); ret != 0 {
+		return errors.New("unable to initialize AMD_stencil_operation_extended")
+	}
+	return nil
+}
 func InitAmdTextureTexture4() error {
 	var ret C.int
 	if ret = C.init_AMD_texture_texture4(); ret != 0 {
@@ -739,10 +815,24 @@ func InitAmdTransformFeedback3LinesTriangles() error {
 	}
 	return nil
 }
+func InitAmdVertexShaderLayer() error {
+	var ret C.int
+	if ret = C.init_AMD_vertex_shader_layer(); ret != 0 {
+		return errors.New("unable to initialize AMD_vertex_shader_layer")
+	}
+	return nil
+}
 func InitAmdVertexShaderTessellator() error {
 	var ret C.int
 	if ret = C.init_AMD_vertex_shader_tessellator(); ret != 0 {
 		return errors.New("unable to initialize AMD_vertex_shader_tessellator")
+	}
+	return nil
+}
+func InitAmdVertexShaderViewportIndex() error {
+	var ret C.int
+	if ret = C.init_AMD_vertex_shader_viewport_index(); ret != 0 {
+		return errors.New("unable to initialize AMD_vertex_shader_viewport_index")
 	}
 	return nil
 }

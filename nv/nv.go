@@ -2,6 +2,8 @@
 // 
 // Categories in this package: 
 // 
+// NV_bindless_texture: http://www.opengl.org/registry/specs/NV/bindless_texture.txt
+// 
 // NV_blend_square: http://www.opengl.org/registry/specs/NV/blend_square.txt
 // 
 // NV_conditional_render: http://www.opengl.org/registry/specs/NV/conditional_render.txt
@@ -60,6 +62,8 @@
 // 
 // NV_parameter_buffer_object2: http://www.opengl.org/registry/specs/NV/parameter_buffer_object2.txt
 // 
+// NV_path_rendering: http://www.opengl.org/registry/specs/NV/path_rendering.txt
+// 
 // NV_pixel_data_range: http://www.opengl.org/registry/specs/NV/pixel_data_range.txt
 // 
 // NV_point_sprite: http://www.opengl.org/registry/specs/NV/point_sprite.txt
@@ -71,6 +75,8 @@
 // NV_register_combiners: http://www.opengl.org/registry/specs/NV/register_combiners.txt
 // 
 // NV_register_combiners2: http://www.opengl.org/registry/specs/NV/register_combiners2.txt
+// 
+// NV_shader_atomic_float: http://www.opengl.org/registry/specs/NV/shader_atomic_float.txt
 // 
 // NV_shader_buffer_load: http://www.opengl.org/registry/specs/NV/shader_buffer_load.txt
 // 
@@ -293,6 +299,20 @@ package nv
 // #endif
 // }
 // 
+// //  NV_bindless_texture
+// GLuint64 (APIENTRYP ptrglGetTextureHandleNV)(GLuint texture);
+// GLuint64 (APIENTRYP ptrglGetTextureSamplerHandleNV)(GLuint texture, GLuint sampler);
+// void (APIENTRYP ptrglMakeTextureHandleResidentNV)(GLuint64 handle);
+// void (APIENTRYP ptrglMakeTextureHandleNonResidentNV)(GLuint64 handle);
+// GLuint64 (APIENTRYP ptrglGetImageHandleNV)(GLuint texture, GLint level, GLboolean layered, GLint layer, GLenum format);
+// void (APIENTRYP ptrglMakeImageHandleResidentNV)(GLuint64 handle, GLenum access);
+// void (APIENTRYP ptrglMakeImageHandleNonResidentNV)(GLuint64 handle);
+// void (APIENTRYP ptrglUniformHandleui64NV)(GLint location, GLuint64 value);
+// void (APIENTRYP ptrglUniformHandleui64vNV)(GLint location, GLsizei count, GLuint64* value);
+// void (APIENTRYP ptrglProgramUniformHandleui64NV)(GLuint program, GLint location, GLuint64 value);
+// void (APIENTRYP ptrglProgramUniformHandleui64vNV)(GLuint program, GLint location, GLsizei count, GLuint64* values);
+// GLboolean (APIENTRYP ptrglIsTextureHandleResidentNV)(GLuint64 handle);
+// GLboolean (APIENTRYP ptrglIsImageHandleResidentNV)(GLuint64 handle);
 // //  NV_blend_square
 // //  NV_conditional_render
 // void (APIENTRYP ptrglBeginConditionalRenderNV)(GLuint id, GLenum mode);
@@ -465,6 +485,56 @@ package nv
 // void (APIENTRYP ptrglProgramBufferParametersIivNV)(GLenum target, GLuint buffer, GLuint index, GLsizei count, GLint* params);
 // void (APIENTRYP ptrglProgramBufferParametersIuivNV)(GLenum target, GLuint buffer, GLuint index, GLsizei count, GLuint* params);
 // //  NV_parameter_buffer_object2
+// //  NV_path_rendering
+// GLuint (APIENTRYP ptrglGenPathsNV)(GLsizei range);
+// void (APIENTRYP ptrglDeletePathsNV)(GLuint path, GLsizei range);
+// GLboolean (APIENTRYP ptrglIsPathNV)(GLuint path);
+// void (APIENTRYP ptrglPathCommandsNV)(GLuint path, GLsizei numCommands, GLubyte* commands, GLsizei numCoords, GLenum coordType, GLvoid* coords);
+// void (APIENTRYP ptrglPathCoordsNV)(GLuint path, GLsizei numCoords, GLenum coordType, GLvoid* coords);
+// void (APIENTRYP ptrglPathSubCommandsNV)(GLuint path, GLsizei commandStart, GLsizei commandsToDelete, GLsizei numCommands, GLubyte* commands, GLsizei numCoords, GLenum coordType, GLvoid* coords);
+// void (APIENTRYP ptrglPathSubCoordsNV)(GLuint path, GLsizei coordStart, GLsizei numCoords, GLenum coordType, GLvoid* coords);
+// void (APIENTRYP ptrglPathStringNV)(GLuint path, GLenum format, GLsizei length, GLvoid* pathString);
+// void (APIENTRYP ptrglPathGlyphsNV)(GLuint firstPathName, GLenum fontTarget, GLvoid* fontName, GLbitfield fontStyle, GLsizei numGlyphs, GLenum type, GLvoid* charcodes, GLenum handleMissingGlyphs, GLuint pathParameterTemplate, GLfloat emScale);
+// void (APIENTRYP ptrglPathGlyphRangeNV)(GLuint firstPathName, GLenum fontTarget, GLvoid* fontName, GLbitfield fontStyle, GLuint firstGlyph, GLsizei numGlyphs, GLenum handleMissingGlyphs, GLuint pathParameterTemplate, GLfloat emScale);
+// void (APIENTRYP ptrglWeightPathsNV)(GLuint resultPath, GLsizei numPaths, GLuint* paths, GLfloat* weights);
+// void (APIENTRYP ptrglCopyPathNV)(GLuint resultPath, GLuint srcPath);
+// void (APIENTRYP ptrglInterpolatePathsNV)(GLuint resultPath, GLuint pathA, GLuint pathB, GLfloat weight);
+// void (APIENTRYP ptrglTransformPathNV)(GLuint resultPath, GLuint srcPath, GLenum transformType, GLfloat* transformValues);
+// void (APIENTRYP ptrglPathParameterivNV)(GLuint path, GLenum pname, GLint* value);
+// void (APIENTRYP ptrglPathParameteriNV)(GLuint path, GLenum pname, GLint value);
+// void (APIENTRYP ptrglPathParameterfvNV)(GLuint path, GLenum pname, GLfloat* value);
+// void (APIENTRYP ptrglPathParameterfNV)(GLuint path, GLenum pname, GLfloat value);
+// void (APIENTRYP ptrglPathDashArrayNV)(GLuint path, GLsizei dashCount, GLfloat* dashArray);
+// void (APIENTRYP ptrglPathStencilFuncNV)(GLenum func, GLint ref, GLuint mask);
+// void (APIENTRYP ptrglPathStencilDepthOffsetNV)(GLfloat factor, GLfloat units);
+// void (APIENTRYP ptrglStencilFillPathNV)(GLuint path, GLenum fillMode, GLuint mask);
+// void (APIENTRYP ptrglStencilStrokePathNV)(GLuint path, GLint reference, GLuint mask);
+// void (APIENTRYP ptrglStencilFillPathInstancedNV)(GLsizei numPaths, GLenum pathNameType, GLvoid* paths, GLuint pathBase, GLenum fillMode, GLuint mask, GLenum transformType, GLfloat* transformValues);
+// void (APIENTRYP ptrglStencilStrokePathInstancedNV)(GLsizei numPaths, GLenum pathNameType, GLvoid* paths, GLuint pathBase, GLint reference, GLuint mask, GLenum transformType, GLfloat* transformValues);
+// void (APIENTRYP ptrglPathCoverDepthFuncNV)(GLenum func);
+// void (APIENTRYP ptrglPathColorGenNV)(GLenum color, GLenum genMode, GLenum colorFormat, GLfloat* coeffs);
+// void (APIENTRYP ptrglPathTexGenNV)(GLenum texCoordSet, GLenum genMode, GLint components, GLfloat* coeffs);
+// void (APIENTRYP ptrglPathFogGenNV)(GLenum genMode);
+// void (APIENTRYP ptrglCoverFillPathNV)(GLuint path, GLenum coverMode);
+// void (APIENTRYP ptrglCoverStrokePathNV)(GLuint path, GLenum coverMode);
+// void (APIENTRYP ptrglCoverFillPathInstancedNV)(GLsizei numPaths, GLenum pathNameType, GLvoid* paths, GLuint pathBase, GLenum coverMode, GLenum transformType, GLfloat* transformValues);
+// void (APIENTRYP ptrglCoverStrokePathInstancedNV)(GLsizei numPaths, GLenum pathNameType, GLvoid* paths, GLuint pathBase, GLenum coverMode, GLenum transformType, GLfloat* transformValues);
+// void (APIENTRYP ptrglGetPathParameterivNV)(GLuint path, GLenum pname, GLint* value);
+// void (APIENTRYP ptrglGetPathParameterfvNV)(GLuint path, GLenum pname, GLfloat* value);
+// void (APIENTRYP ptrglGetPathCommandsNV)(GLuint path, GLubyte* commands);
+// void (APIENTRYP ptrglGetPathCoordsNV)(GLuint path, GLfloat* coords);
+// void (APIENTRYP ptrglGetPathDashArrayNV)(GLuint path, GLfloat* dashArray);
+// void (APIENTRYP ptrglGetPathMetricsNV)(GLbitfield metricQueryMask, GLsizei numPaths, GLenum pathNameType, GLvoid* paths, GLuint pathBase, GLsizei stride, GLfloat* metrics);
+// void (APIENTRYP ptrglGetPathMetricRangeNV)(GLbitfield metricQueryMask, GLuint firstPathName, GLsizei numPaths, GLsizei stride, GLfloat* metrics);
+// void (APIENTRYP ptrglGetPathSpacingNV)(GLenum pathListMode, GLsizei numPaths, GLenum pathNameType, GLvoid* paths, GLuint pathBase, GLfloat advanceScale, GLfloat kerningScale, GLenum transformType, GLfloat* returnedSpacing);
+// void (APIENTRYP ptrglGetPathColorGenivNV)(GLenum color, GLenum pname, GLint* value);
+// void (APIENTRYP ptrglGetPathColorGenfvNV)(GLenum color, GLenum pname, GLfloat* value);
+// void (APIENTRYP ptrglGetPathTexGenivNV)(GLenum texCoordSet, GLenum pname, GLint* value);
+// void (APIENTRYP ptrglGetPathTexGenfvNV)(GLenum texCoordSet, GLenum pname, GLfloat* value);
+// GLboolean (APIENTRYP ptrglIsPointInFillPathNV)(GLuint path, GLuint mask, GLfloat x, GLfloat y);
+// GLboolean (APIENTRYP ptrglIsPointInStrokePathNV)(GLuint path, GLfloat x, GLfloat y);
+// GLfloat (APIENTRYP ptrglGetPathLengthNV)(GLuint path, GLsizei startSegment, GLsizei numSegments);
+// GLboolean (APIENTRYP ptrglPointAlongPathNV)(GLuint path, GLsizei startSegment, GLsizei numSegments, GLfloat distance, GLfloat* x, GLfloat* y, GLfloat* tangentX, GLfloat* tangentY);
 // //  NV_pixel_data_range
 // void (APIENTRYP ptrglPixelDataRangeNV)(GLenum target, GLsizei length, GLvoid* pointer);
 // void (APIENTRYP ptrglFlushPixelDataRangeNV)(GLenum target);
@@ -498,6 +568,7 @@ package nv
 // //  NV_register_combiners2
 // void (APIENTRYP ptrglCombinerStageParameterfvNV)(GLenum stage, GLenum pname, GLfloat* params);
 // void (APIENTRYP ptrglGetCombinerStageParameterfvNV)(GLenum stage, GLenum pname, GLfloat* params);
+// //  NV_shader_atomic_float
 // //  NV_shader_buffer_load
 // void (APIENTRYP ptrglMakeBufferResidentNV)(GLenum target, GLenum access);
 // void (APIENTRYP ptrglMakeBufferNonResidentNV)(GLenum target);
@@ -709,6 +780,46 @@ package nv
 // void (APIENTRYP ptrglVideoCaptureStreamParameterfvNV)(GLuint video_capture_slot, GLuint stream, GLenum pname, GLfloat* params);
 // void (APIENTRYP ptrglVideoCaptureStreamParameterdvNV)(GLuint video_capture_slot, GLuint stream, GLenum pname, GLdouble* params);
 // 
+// //  NV_bindless_texture
+// GLuint64 goglGetTextureHandleNV(GLuint texture) {
+// 	return (*ptrglGetTextureHandleNV)(texture);
+// }
+// GLuint64 goglGetTextureSamplerHandleNV(GLuint texture, GLuint sampler) {
+// 	return (*ptrglGetTextureSamplerHandleNV)(texture, sampler);
+// }
+// void goglMakeTextureHandleResidentNV(GLuint64 handle) {
+// 	(*ptrglMakeTextureHandleResidentNV)(handle);
+// }
+// void goglMakeTextureHandleNonResidentNV(GLuint64 handle) {
+// 	(*ptrglMakeTextureHandleNonResidentNV)(handle);
+// }
+// GLuint64 goglGetImageHandleNV(GLuint texture, GLint level, GLboolean layered, GLint layer, GLenum format) {
+// 	return (*ptrglGetImageHandleNV)(texture, level, layered, layer, format);
+// }
+// void goglMakeImageHandleResidentNV(GLuint64 handle, GLenum access) {
+// 	(*ptrglMakeImageHandleResidentNV)(handle, access);
+// }
+// void goglMakeImageHandleNonResidentNV(GLuint64 handle) {
+// 	(*ptrglMakeImageHandleNonResidentNV)(handle);
+// }
+// void goglUniformHandleui64NV(GLint location, GLuint64 value) {
+// 	(*ptrglUniformHandleui64NV)(location, value);
+// }
+// void goglUniformHandleui64vNV(GLint location, GLsizei count, GLuint64* value) {
+// 	(*ptrglUniformHandleui64vNV)(location, count, value);
+// }
+// void goglProgramUniformHandleui64NV(GLuint program, GLint location, GLuint64 value) {
+// 	(*ptrglProgramUniformHandleui64NV)(program, location, value);
+// }
+// void goglProgramUniformHandleui64vNV(GLuint program, GLint location, GLsizei count, GLuint64* values) {
+// 	(*ptrglProgramUniformHandleui64vNV)(program, location, count, values);
+// }
+// GLboolean goglIsTextureHandleResidentNV(GLuint64 handle) {
+// 	return (*ptrglIsTextureHandleResidentNV)(handle);
+// }
+// GLboolean goglIsImageHandleResidentNV(GLuint64 handle) {
+// 	return (*ptrglIsImageHandleResidentNV)(handle);
+// }
 // //  NV_blend_square
 // //  NV_conditional_render
 // void goglBeginConditionalRenderNV(GLuint id, GLenum mode) {
@@ -1167,6 +1278,154 @@ package nv
 // 	(*ptrglProgramBufferParametersIuivNV)(target, buffer, index, count, params);
 // }
 // //  NV_parameter_buffer_object2
+// //  NV_path_rendering
+// GLuint goglGenPathsNV(GLsizei range_) {
+// 	return (*ptrglGenPathsNV)(range_);
+// }
+// void goglDeletePathsNV(GLuint path, GLsizei range_) {
+// 	(*ptrglDeletePathsNV)(path, range_);
+// }
+// GLboolean goglIsPathNV(GLuint path) {
+// 	return (*ptrglIsPathNV)(path);
+// }
+// void goglPathCommandsNV(GLuint path, GLsizei numCommands, GLubyte* commands, GLsizei numCoords, GLenum coordType, GLvoid* coords) {
+// 	(*ptrglPathCommandsNV)(path, numCommands, commands, numCoords, coordType, coords);
+// }
+// void goglPathCoordsNV(GLuint path, GLsizei numCoords, GLenum coordType, GLvoid* coords) {
+// 	(*ptrglPathCoordsNV)(path, numCoords, coordType, coords);
+// }
+// void goglPathSubCommandsNV(GLuint path, GLsizei commandStart, GLsizei commandsToDelete, GLsizei numCommands, GLubyte* commands, GLsizei numCoords, GLenum coordType, GLvoid* coords) {
+// 	(*ptrglPathSubCommandsNV)(path, commandStart, commandsToDelete, numCommands, commands, numCoords, coordType, coords);
+// }
+// void goglPathSubCoordsNV(GLuint path, GLsizei coordStart, GLsizei numCoords, GLenum coordType, GLvoid* coords) {
+// 	(*ptrglPathSubCoordsNV)(path, coordStart, numCoords, coordType, coords);
+// }
+// void goglPathStringNV(GLuint path, GLenum format, GLsizei length, GLvoid* pathString) {
+// 	(*ptrglPathStringNV)(path, format, length, pathString);
+// }
+// void goglPathGlyphsNV(GLuint firstPathName, GLenum fontTarget, GLvoid* fontName, GLbitfield fontStyle, GLsizei numGlyphs, GLenum type_, GLvoid* charcodes, GLenum handleMissingGlyphs, GLuint pathParameterTemplate, GLfloat emScale) {
+// 	(*ptrglPathGlyphsNV)(firstPathName, fontTarget, fontName, fontStyle, numGlyphs, type_, charcodes, handleMissingGlyphs, pathParameterTemplate, emScale);
+// }
+// void goglPathGlyphRangeNV(GLuint firstPathName, GLenum fontTarget, GLvoid* fontName, GLbitfield fontStyle, GLuint firstGlyph, GLsizei numGlyphs, GLenum handleMissingGlyphs, GLuint pathParameterTemplate, GLfloat emScale) {
+// 	(*ptrglPathGlyphRangeNV)(firstPathName, fontTarget, fontName, fontStyle, firstGlyph, numGlyphs, handleMissingGlyphs, pathParameterTemplate, emScale);
+// }
+// void goglWeightPathsNV(GLuint resultPath, GLsizei numPaths, GLuint* paths, GLfloat* weights) {
+// 	(*ptrglWeightPathsNV)(resultPath, numPaths, paths, weights);
+// }
+// void goglCopyPathNV(GLuint resultPath, GLuint srcPath) {
+// 	(*ptrglCopyPathNV)(resultPath, srcPath);
+// }
+// void goglInterpolatePathsNV(GLuint resultPath, GLuint pathA, GLuint pathB, GLfloat weight) {
+// 	(*ptrglInterpolatePathsNV)(resultPath, pathA, pathB, weight);
+// }
+// void goglTransformPathNV(GLuint resultPath, GLuint srcPath, GLenum transformType, GLfloat* transformValues) {
+// 	(*ptrglTransformPathNV)(resultPath, srcPath, transformType, transformValues);
+// }
+// void goglPathParameterivNV(GLuint path, GLenum pname, GLint* value) {
+// 	(*ptrglPathParameterivNV)(path, pname, value);
+// }
+// void goglPathParameteriNV(GLuint path, GLenum pname, GLint value) {
+// 	(*ptrglPathParameteriNV)(path, pname, value);
+// }
+// void goglPathParameterfvNV(GLuint path, GLenum pname, GLfloat* value) {
+// 	(*ptrglPathParameterfvNV)(path, pname, value);
+// }
+// void goglPathParameterfNV(GLuint path, GLenum pname, GLfloat value) {
+// 	(*ptrglPathParameterfNV)(path, pname, value);
+// }
+// void goglPathDashArrayNV(GLuint path, GLsizei dashCount, GLfloat* dashArray) {
+// 	(*ptrglPathDashArrayNV)(path, dashCount, dashArray);
+// }
+// void goglPathStencilFuncNV(GLenum func_, GLint ref, GLuint mask) {
+// 	(*ptrglPathStencilFuncNV)(func_, ref, mask);
+// }
+// void goglPathStencilDepthOffsetNV(GLfloat factor, GLfloat units) {
+// 	(*ptrglPathStencilDepthOffsetNV)(factor, units);
+// }
+// void goglStencilFillPathNV(GLuint path, GLenum fillMode, GLuint mask) {
+// 	(*ptrglStencilFillPathNV)(path, fillMode, mask);
+// }
+// void goglStencilStrokePathNV(GLuint path, GLint reference, GLuint mask) {
+// 	(*ptrglStencilStrokePathNV)(path, reference, mask);
+// }
+// void goglStencilFillPathInstancedNV(GLsizei numPaths, GLenum pathNameType, GLvoid* paths, GLuint pathBase, GLenum fillMode, GLuint mask, GLenum transformType, GLfloat* transformValues) {
+// 	(*ptrglStencilFillPathInstancedNV)(numPaths, pathNameType, paths, pathBase, fillMode, mask, transformType, transformValues);
+// }
+// void goglStencilStrokePathInstancedNV(GLsizei numPaths, GLenum pathNameType, GLvoid* paths, GLuint pathBase, GLint reference, GLuint mask, GLenum transformType, GLfloat* transformValues) {
+// 	(*ptrglStencilStrokePathInstancedNV)(numPaths, pathNameType, paths, pathBase, reference, mask, transformType, transformValues);
+// }
+// void goglPathCoverDepthFuncNV(GLenum func_) {
+// 	(*ptrglPathCoverDepthFuncNV)(func_);
+// }
+// void goglPathColorGenNV(GLenum color, GLenum genMode, GLenum colorFormat, GLfloat* coeffs) {
+// 	(*ptrglPathColorGenNV)(color, genMode, colorFormat, coeffs);
+// }
+// void goglPathTexGenNV(GLenum texCoordSet, GLenum genMode, GLint components, GLfloat* coeffs) {
+// 	(*ptrglPathTexGenNV)(texCoordSet, genMode, components, coeffs);
+// }
+// void goglPathFogGenNV(GLenum genMode) {
+// 	(*ptrglPathFogGenNV)(genMode);
+// }
+// void goglCoverFillPathNV(GLuint path, GLenum coverMode) {
+// 	(*ptrglCoverFillPathNV)(path, coverMode);
+// }
+// void goglCoverStrokePathNV(GLuint path, GLenum coverMode) {
+// 	(*ptrglCoverStrokePathNV)(path, coverMode);
+// }
+// void goglCoverFillPathInstancedNV(GLsizei numPaths, GLenum pathNameType, GLvoid* paths, GLuint pathBase, GLenum coverMode, GLenum transformType, GLfloat* transformValues) {
+// 	(*ptrglCoverFillPathInstancedNV)(numPaths, pathNameType, paths, pathBase, coverMode, transformType, transformValues);
+// }
+// void goglCoverStrokePathInstancedNV(GLsizei numPaths, GLenum pathNameType, GLvoid* paths, GLuint pathBase, GLenum coverMode, GLenum transformType, GLfloat* transformValues) {
+// 	(*ptrglCoverStrokePathInstancedNV)(numPaths, pathNameType, paths, pathBase, coverMode, transformType, transformValues);
+// }
+// void goglGetPathParameterivNV(GLuint path, GLenum pname, GLint* value) {
+// 	(*ptrglGetPathParameterivNV)(path, pname, value);
+// }
+// void goglGetPathParameterfvNV(GLuint path, GLenum pname, GLfloat* value) {
+// 	(*ptrglGetPathParameterfvNV)(path, pname, value);
+// }
+// void goglGetPathCommandsNV(GLuint path, GLubyte* commands) {
+// 	(*ptrglGetPathCommandsNV)(path, commands);
+// }
+// void goglGetPathCoordsNV(GLuint path, GLfloat* coords) {
+// 	(*ptrglGetPathCoordsNV)(path, coords);
+// }
+// void goglGetPathDashArrayNV(GLuint path, GLfloat* dashArray) {
+// 	(*ptrglGetPathDashArrayNV)(path, dashArray);
+// }
+// void goglGetPathMetricsNV(GLbitfield metricQueryMask, GLsizei numPaths, GLenum pathNameType, GLvoid* paths, GLuint pathBase, GLsizei stride, GLfloat* metrics) {
+// 	(*ptrglGetPathMetricsNV)(metricQueryMask, numPaths, pathNameType, paths, pathBase, stride, metrics);
+// }
+// void goglGetPathMetricRangeNV(GLbitfield metricQueryMask, GLuint firstPathName, GLsizei numPaths, GLsizei stride, GLfloat* metrics) {
+// 	(*ptrglGetPathMetricRangeNV)(metricQueryMask, firstPathName, numPaths, stride, metrics);
+// }
+// void goglGetPathSpacingNV(GLenum pathListMode, GLsizei numPaths, GLenum pathNameType, GLvoid* paths, GLuint pathBase, GLfloat advanceScale, GLfloat kerningScale, GLenum transformType, GLfloat* returnedSpacing) {
+// 	(*ptrglGetPathSpacingNV)(pathListMode, numPaths, pathNameType, paths, pathBase, advanceScale, kerningScale, transformType, returnedSpacing);
+// }
+// void goglGetPathColorGenivNV(GLenum color, GLenum pname, GLint* value) {
+// 	(*ptrglGetPathColorGenivNV)(color, pname, value);
+// }
+// void goglGetPathColorGenfvNV(GLenum color, GLenum pname, GLfloat* value) {
+// 	(*ptrglGetPathColorGenfvNV)(color, pname, value);
+// }
+// void goglGetPathTexGenivNV(GLenum texCoordSet, GLenum pname, GLint* value) {
+// 	(*ptrglGetPathTexGenivNV)(texCoordSet, pname, value);
+// }
+// void goglGetPathTexGenfvNV(GLenum texCoordSet, GLenum pname, GLfloat* value) {
+// 	(*ptrglGetPathTexGenfvNV)(texCoordSet, pname, value);
+// }
+// GLboolean goglIsPointInFillPathNV(GLuint path, GLuint mask, GLfloat x, GLfloat y) {
+// 	return (*ptrglIsPointInFillPathNV)(path, mask, x, y);
+// }
+// GLboolean goglIsPointInStrokePathNV(GLuint path, GLfloat x, GLfloat y) {
+// 	return (*ptrglIsPointInStrokePathNV)(path, x, y);
+// }
+// GLfloat goglGetPathLengthNV(GLuint path, GLsizei startSegment, GLsizei numSegments) {
+// 	return (*ptrglGetPathLengthNV)(path, startSegment, numSegments);
+// }
+// GLboolean goglPointAlongPathNV(GLuint path, GLsizei startSegment, GLsizei numSegments, GLfloat distance, GLfloat* x, GLfloat* y, GLfloat* tangentX, GLfloat* tangentY) {
+// 	return (*ptrglPointAlongPathNV)(path, startSegment, numSegments, distance, x, y, tangentX, tangentY);
+// }
 // //  NV_pixel_data_range
 // void goglPixelDataRangeNV(GLenum target, GLsizei length, GLvoid* pointer) {
 // 	(*ptrglPixelDataRangeNV)(target, length, pointer);
@@ -1254,6 +1513,7 @@ package nv
 // void goglGetCombinerStageParameterfvNV(GLenum stage, GLenum pname, GLfloat* params) {
 // 	(*ptrglGetCombinerStageParameterfvNV)(stage, pname, params);
 // }
+// //  NV_shader_atomic_float
 // //  NV_shader_buffer_load
 // void goglMakeBufferResidentNV(GLenum target, GLenum access) {
 // 	(*ptrglMakeBufferResidentNV)(target, access);
@@ -1829,6 +2089,35 @@ package nv
 // 	(*ptrglVideoCaptureStreamParameterdvNV)(video_capture_slot, stream, pname, params);
 // }
 // 
+// int init_NV_bindless_texture() {
+// 	ptrglGetTextureHandleNV = goglGetProcAddress("glGetTextureHandleNV");
+// 	if(ptrglGetTextureHandleNV == NULL) return 1;
+// 	ptrglGetTextureSamplerHandleNV = goglGetProcAddress("glGetTextureSamplerHandleNV");
+// 	if(ptrglGetTextureSamplerHandleNV == NULL) return 1;
+// 	ptrglMakeTextureHandleResidentNV = goglGetProcAddress("glMakeTextureHandleResidentNV");
+// 	if(ptrglMakeTextureHandleResidentNV == NULL) return 1;
+// 	ptrglMakeTextureHandleNonResidentNV = goglGetProcAddress("glMakeTextureHandleNonResidentNV");
+// 	if(ptrglMakeTextureHandleNonResidentNV == NULL) return 1;
+// 	ptrglGetImageHandleNV = goglGetProcAddress("glGetImageHandleNV");
+// 	if(ptrglGetImageHandleNV == NULL) return 1;
+// 	ptrglMakeImageHandleResidentNV = goglGetProcAddress("glMakeImageHandleResidentNV");
+// 	if(ptrglMakeImageHandleResidentNV == NULL) return 1;
+// 	ptrglMakeImageHandleNonResidentNV = goglGetProcAddress("glMakeImageHandleNonResidentNV");
+// 	if(ptrglMakeImageHandleNonResidentNV == NULL) return 1;
+// 	ptrglUniformHandleui64NV = goglGetProcAddress("glUniformHandleui64NV");
+// 	if(ptrglUniformHandleui64NV == NULL) return 1;
+// 	ptrglUniformHandleui64vNV = goglGetProcAddress("glUniformHandleui64vNV");
+// 	if(ptrglUniformHandleui64vNV == NULL) return 1;
+// 	ptrglProgramUniformHandleui64NV = goglGetProcAddress("glProgramUniformHandleui64NV");
+// 	if(ptrglProgramUniformHandleui64NV == NULL) return 1;
+// 	ptrglProgramUniformHandleui64vNV = goglGetProcAddress("glProgramUniformHandleui64vNV");
+// 	if(ptrglProgramUniformHandleui64vNV == NULL) return 1;
+// 	ptrglIsTextureHandleResidentNV = goglGetProcAddress("glIsTextureHandleResidentNV");
+// 	if(ptrglIsTextureHandleResidentNV == NULL) return 1;
+// 	ptrglIsImageHandleResidentNV = goglGetProcAddress("glIsImageHandleResidentNV");
+// 	if(ptrglIsImageHandleResidentNV == NULL) return 1;
+// 	return 0;
+// }
 // int init_NV_blend_square() {
 // 	return 0;
 // }
@@ -2202,6 +2491,107 @@ package nv
 // int init_NV_parameter_buffer_object2() {
 // 	return 0;
 // }
+// int init_NV_path_rendering() {
+// 	ptrglGenPathsNV = goglGetProcAddress("glGenPathsNV");
+// 	if(ptrglGenPathsNV == NULL) return 1;
+// 	ptrglDeletePathsNV = goglGetProcAddress("glDeletePathsNV");
+// 	if(ptrglDeletePathsNV == NULL) return 1;
+// 	ptrglIsPathNV = goglGetProcAddress("glIsPathNV");
+// 	if(ptrglIsPathNV == NULL) return 1;
+// 	ptrglPathCommandsNV = goglGetProcAddress("glPathCommandsNV");
+// 	if(ptrglPathCommandsNV == NULL) return 1;
+// 	ptrglPathCoordsNV = goglGetProcAddress("glPathCoordsNV");
+// 	if(ptrglPathCoordsNV == NULL) return 1;
+// 	ptrglPathSubCommandsNV = goglGetProcAddress("glPathSubCommandsNV");
+// 	if(ptrglPathSubCommandsNV == NULL) return 1;
+// 	ptrglPathSubCoordsNV = goglGetProcAddress("glPathSubCoordsNV");
+// 	if(ptrglPathSubCoordsNV == NULL) return 1;
+// 	ptrglPathStringNV = goglGetProcAddress("glPathStringNV");
+// 	if(ptrglPathStringNV == NULL) return 1;
+// 	ptrglPathGlyphsNV = goglGetProcAddress("glPathGlyphsNV");
+// 	if(ptrglPathGlyphsNV == NULL) return 1;
+// 	ptrglPathGlyphRangeNV = goglGetProcAddress("glPathGlyphRangeNV");
+// 	if(ptrglPathGlyphRangeNV == NULL) return 1;
+// 	ptrglWeightPathsNV = goglGetProcAddress("glWeightPathsNV");
+// 	if(ptrglWeightPathsNV == NULL) return 1;
+// 	ptrglCopyPathNV = goglGetProcAddress("glCopyPathNV");
+// 	if(ptrglCopyPathNV == NULL) return 1;
+// 	ptrglInterpolatePathsNV = goglGetProcAddress("glInterpolatePathsNV");
+// 	if(ptrglInterpolatePathsNV == NULL) return 1;
+// 	ptrglTransformPathNV = goglGetProcAddress("glTransformPathNV");
+// 	if(ptrglTransformPathNV == NULL) return 1;
+// 	ptrglPathParameterivNV = goglGetProcAddress("glPathParameterivNV");
+// 	if(ptrglPathParameterivNV == NULL) return 1;
+// 	ptrglPathParameteriNV = goglGetProcAddress("glPathParameteriNV");
+// 	if(ptrglPathParameteriNV == NULL) return 1;
+// 	ptrglPathParameterfvNV = goglGetProcAddress("glPathParameterfvNV");
+// 	if(ptrglPathParameterfvNV == NULL) return 1;
+// 	ptrglPathParameterfNV = goglGetProcAddress("glPathParameterfNV");
+// 	if(ptrglPathParameterfNV == NULL) return 1;
+// 	ptrglPathDashArrayNV = goglGetProcAddress("glPathDashArrayNV");
+// 	if(ptrglPathDashArrayNV == NULL) return 1;
+// 	ptrglPathStencilFuncNV = goglGetProcAddress("glPathStencilFuncNV");
+// 	if(ptrglPathStencilFuncNV == NULL) return 1;
+// 	ptrglPathStencilDepthOffsetNV = goglGetProcAddress("glPathStencilDepthOffsetNV");
+// 	if(ptrglPathStencilDepthOffsetNV == NULL) return 1;
+// 	ptrglStencilFillPathNV = goglGetProcAddress("glStencilFillPathNV");
+// 	if(ptrglStencilFillPathNV == NULL) return 1;
+// 	ptrglStencilStrokePathNV = goglGetProcAddress("glStencilStrokePathNV");
+// 	if(ptrglStencilStrokePathNV == NULL) return 1;
+// 	ptrglStencilFillPathInstancedNV = goglGetProcAddress("glStencilFillPathInstancedNV");
+// 	if(ptrglStencilFillPathInstancedNV == NULL) return 1;
+// 	ptrglStencilStrokePathInstancedNV = goglGetProcAddress("glStencilStrokePathInstancedNV");
+// 	if(ptrglStencilStrokePathInstancedNV == NULL) return 1;
+// 	ptrglPathCoverDepthFuncNV = goglGetProcAddress("glPathCoverDepthFuncNV");
+// 	if(ptrglPathCoverDepthFuncNV == NULL) return 1;
+// 	ptrglPathColorGenNV = goglGetProcAddress("glPathColorGenNV");
+// 	if(ptrglPathColorGenNV == NULL) return 1;
+// 	ptrglPathTexGenNV = goglGetProcAddress("glPathTexGenNV");
+// 	if(ptrglPathTexGenNV == NULL) return 1;
+// 	ptrglPathFogGenNV = goglGetProcAddress("glPathFogGenNV");
+// 	if(ptrglPathFogGenNV == NULL) return 1;
+// 	ptrglCoverFillPathNV = goglGetProcAddress("glCoverFillPathNV");
+// 	if(ptrglCoverFillPathNV == NULL) return 1;
+// 	ptrglCoverStrokePathNV = goglGetProcAddress("glCoverStrokePathNV");
+// 	if(ptrglCoverStrokePathNV == NULL) return 1;
+// 	ptrglCoverFillPathInstancedNV = goglGetProcAddress("glCoverFillPathInstancedNV");
+// 	if(ptrglCoverFillPathInstancedNV == NULL) return 1;
+// 	ptrglCoverStrokePathInstancedNV = goglGetProcAddress("glCoverStrokePathInstancedNV");
+// 	if(ptrglCoverStrokePathInstancedNV == NULL) return 1;
+// 	ptrglGetPathParameterivNV = goglGetProcAddress("glGetPathParameterivNV");
+// 	if(ptrglGetPathParameterivNV == NULL) return 1;
+// 	ptrglGetPathParameterfvNV = goglGetProcAddress("glGetPathParameterfvNV");
+// 	if(ptrglGetPathParameterfvNV == NULL) return 1;
+// 	ptrglGetPathCommandsNV = goglGetProcAddress("glGetPathCommandsNV");
+// 	if(ptrglGetPathCommandsNV == NULL) return 1;
+// 	ptrglGetPathCoordsNV = goglGetProcAddress("glGetPathCoordsNV");
+// 	if(ptrglGetPathCoordsNV == NULL) return 1;
+// 	ptrglGetPathDashArrayNV = goglGetProcAddress("glGetPathDashArrayNV");
+// 	if(ptrglGetPathDashArrayNV == NULL) return 1;
+// 	ptrglGetPathMetricsNV = goglGetProcAddress("glGetPathMetricsNV");
+// 	if(ptrglGetPathMetricsNV == NULL) return 1;
+// 	ptrglGetPathMetricRangeNV = goglGetProcAddress("glGetPathMetricRangeNV");
+// 	if(ptrglGetPathMetricRangeNV == NULL) return 1;
+// 	ptrglGetPathSpacingNV = goglGetProcAddress("glGetPathSpacingNV");
+// 	if(ptrglGetPathSpacingNV == NULL) return 1;
+// 	ptrglGetPathColorGenivNV = goglGetProcAddress("glGetPathColorGenivNV");
+// 	if(ptrglGetPathColorGenivNV == NULL) return 1;
+// 	ptrglGetPathColorGenfvNV = goglGetProcAddress("glGetPathColorGenfvNV");
+// 	if(ptrglGetPathColorGenfvNV == NULL) return 1;
+// 	ptrglGetPathTexGenivNV = goglGetProcAddress("glGetPathTexGenivNV");
+// 	if(ptrglGetPathTexGenivNV == NULL) return 1;
+// 	ptrglGetPathTexGenfvNV = goglGetProcAddress("glGetPathTexGenfvNV");
+// 	if(ptrglGetPathTexGenfvNV == NULL) return 1;
+// 	ptrglIsPointInFillPathNV = goglGetProcAddress("glIsPointInFillPathNV");
+// 	if(ptrglIsPointInFillPathNV == NULL) return 1;
+// 	ptrglIsPointInStrokePathNV = goglGetProcAddress("glIsPointInStrokePathNV");
+// 	if(ptrglIsPointInStrokePathNV == NULL) return 1;
+// 	ptrglGetPathLengthNV = goglGetProcAddress("glGetPathLengthNV");
+// 	if(ptrglGetPathLengthNV == NULL) return 1;
+// 	ptrglPointAlongPathNV = goglGetProcAddress("glPointAlongPathNV");
+// 	if(ptrglPointAlongPathNV == NULL) return 1;
+// 	return 0;
+// }
 // int init_NV_pixel_data_range() {
 // 	ptrglPixelDataRangeNV = goglGetProcAddress("glPixelDataRangeNV");
 // 	if(ptrglPixelDataRangeNV == NULL) return 1;
@@ -2272,6 +2662,9 @@ package nv
 // 	if(ptrglCombinerStageParameterfvNV == NULL) return 1;
 // 	ptrglGetCombinerStageParameterfvNV = goglGetProcAddress("glGetCombinerStageParameterfvNV");
 // 	if(ptrglGetCombinerStageParameterfvNV == NULL) return 1;
+// 	return 0;
+// }
+// int init_NV_shader_atomic_float() {
 // 	return 0;
 // }
 // int init_NV_shader_buffer_load() {
@@ -2752,6 +3145,9 @@ type (
 	Sizeiptr C.GLsizeiptr
 )
 
+// NV_bindless_texture
+const (
+)
 // NV_blend_square
 const (
 )
@@ -2994,6 +3390,144 @@ const (
 // NV_parameter_buffer_object2
 const (
 )
+// NV_path_rendering
+const (
+	ACCUM_ADJACENT_PAIRS_NV = 0x90AD
+	ADJACENT_PAIRS_NV = 0x90AE
+	AFFINE_2D_NV = 0x9092
+	AFFINE_3D_NV = 0x9094
+	ARC_TO_NV = 0xFE
+	BEVEL_NV = 0x90A6
+	BOLD_BIT_NV = 0x01
+	BOUNDING_BOX_NV = 0x908D
+	BOUNDING_BOX_OF_BOUNDING_BOXES_NV = 0x909C
+	CIRCULAR_CCW_ARC_TO_NV = 0xF8
+	CIRCULAR_CW_ARC_TO_NV = 0xFA
+	CIRCULAR_TANGENT_ARC_TO_NV = 0xFC
+	CLOSE_PATH_NV = 0x00
+	CONVEX_HULL_NV = 0x908B
+	COUNT_DOWN_NV = 0x9089
+	COUNT_UP_NV = 0x9088
+	CUBIC_CURVE_TO_NV = 0x0C
+	DUP_FIRST_CUBIC_CURVE_TO_NV = 0xF2
+	DUP_LAST_CUBIC_CURVE_TO_NV = 0xF4
+	FILE_NAME_NV = 0x9074
+	FIRST_TO_REST_NV = 0x90AF
+	FONT_ASCENDER_NV = 0x00200000
+	FONT_DESCENDER_NV = 0x00400000
+	FONT_HAS_KERNING_NV = 0x10000000
+	FONT_HEIGHT_NV = 0x00800000
+	FONT_MAX_ADVANCE_HEIGHT_NV = 0x02000000
+	FONT_MAX_ADVANCE_WIDTH_NV = 0x01000000
+	FONT_UNDERLINE_POSITION_NV = 0x04000000
+	FONT_UNDERLINE_THICKNESS_NV = 0x08000000
+	FONT_UNITS_PER_EM_NV = 0x00100000
+	FONT_X_MAX_BOUNDS_NV = 0x00040000
+	FONT_X_MIN_BOUNDS_NV = 0x00010000
+	FONT_Y_MAX_BOUNDS_NV = 0x00080000
+	FONT_Y_MIN_BOUNDS_NV = 0x00020000
+	GLYPH_HAS_KERNING_NV = 0x100
+	GLYPH_HEIGHT_BIT_NV = 0x02
+	GLYPH_HORIZONTAL_BEARING_ADVANCE_BIT_NV = 0x10
+	GLYPH_HORIZONTAL_BEARING_X_BIT_NV = 0x04
+	GLYPH_HORIZONTAL_BEARING_Y_BIT_NV = 0x08
+	GLYPH_VERTICAL_BEARING_ADVANCE_BIT_NV = 0x80
+	GLYPH_VERTICAL_BEARING_X_BIT_NV = 0x20
+	GLYPH_VERTICAL_BEARING_Y_BIT_NV = 0x40
+	GLYPH_WIDTH_BIT_NV = 0x01
+	HORIZONTAL_LINE_TO_NV = 0x06
+	ITALIC_BIT_NV = 0x02
+	LARGE_CCW_ARC_TO_NV = 0x16
+	LARGE_CW_ARC_TO_NV = 0x18
+	LINE_TO_NV = 0x04
+	MITER_REVERT_NV = 0x90A7
+	MITER_TRUNCATE_NV = 0x90A8
+	MOVE_TO_CONTINUES_NV = 0x90B6
+	MOVE_TO_NV = 0x02
+	MOVE_TO_RESETS_NV = 0x90B5
+	MULTI_HULLS_NV = 0x908C
+	PATH_CLIENT_LENGTH_NV = 0x907F
+	PATH_COMMAND_COUNT_NV = 0x909D
+	PATH_COMPUTED_LENGTH_NV = 0x90A0
+	PATH_COORD_COUNT_NV = 0x909E
+	PATH_COVER_DEPTH_FUNC_NV = 0x90BF
+	PATH_DASH_ARRAY_COUNT_NV = 0x909F
+	PATH_DASH_CAPS_NV = 0x907B
+	PATH_DASH_OFFSET_NV = 0x907E
+	PATH_DASH_OFFSET_RESET_NV = 0x90B4
+	PATH_END_CAPS_NV = 0x9076
+	PATH_ERROR_POSITION_NV = 0x90AB
+	PATH_FILL_BOUNDING_BOX_NV = 0x90A1
+	PATH_FILL_COVER_MODE_NV = 0x9082
+	PATH_FILL_MASK_NV = 0x9081
+	PATH_FILL_MODE_NV = 0x9080
+	PATH_FOG_GEN_MODE_NV = 0x90AC
+	PATH_FORMAT_PS_NV = 0x9071
+	PATH_FORMAT_SVG_NV = 0x9070
+	PATH_GEN_COEFF_NV = 0x90B1
+	PATH_GEN_COLOR_FORMAT_NV = 0x90B2
+	PATH_GEN_COMPONENTS_NV = 0x90B3
+	PATH_GEN_MODE_NV = 0x90B0
+	PATH_INITIAL_DASH_CAP_NV = 0x907C
+	PATH_INITIAL_END_CAP_NV = 0x9077
+	PATH_JOIN_STYLE_NV = 0x9079
+	PATH_MITER_LIMIT_NV = 0x907A
+	PATH_OBJECT_BOUNDING_BOX_NV = 0x908A
+	PATH_SAMPLE_QUALITY_NV = 0x9085
+	PATH_STENCIL_DEPTH_OFFSET_FACTOR_NV = 0x90BD
+	PATH_STENCIL_DEPTH_OFFSET_UNITS_NV = 0x90BE
+	PATH_STENCIL_FUNC_NV = 0x90B7
+	PATH_STENCIL_REF_NV = 0x90B8
+	PATH_STENCIL_VALUE_MASK_NV = 0x90B9
+	PATH_STROKE_BOUNDING_BOX_NV = 0x90A2
+	PATH_STROKE_BOUND_NV = 0x9086
+	PATH_STROKE_COVER_MODE_NV = 0x9083
+	PATH_STROKE_MASK_NV = 0x9084
+	PATH_STROKE_OVERSAMPLE_COUNT_NV = 0x9087
+	PATH_STROKE_WIDTH_NV = 0x9075
+	PATH_TERMINAL_DASH_CAP_NV = 0x907D
+	PATH_TERMINAL_END_CAP_NV = 0x9078
+	PROJECTIVE_2D_NV = 0x9093
+	PROJECTIVE_3D_NV = 0x9095
+	QUADRATIC_CURVE_TO_NV = 0x0A
+	RECT_NV = 0xF6
+	RELATIVE_ARC_TO_NV = 0xFF
+	RELATIVE_CUBIC_CURVE_TO_NV = 0x0D
+	RELATIVE_HORIZONTAL_LINE_TO_NV = 0x07
+	RELATIVE_LARGE_CCW_ARC_TO_NV = 0x17
+	RELATIVE_LARGE_CW_ARC_TO_NV = 0x19
+	RELATIVE_LINE_TO_NV = 0x05
+	RELATIVE_MOVE_TO_NV = 0x03
+	RELATIVE_QUADRATIC_CURVE_TO_NV = 0x0B
+	RELATIVE_SMALL_CCW_ARC_TO_NV = 0x13
+	RELATIVE_SMALL_CW_ARC_TO_NV = 0x15
+	RELATIVE_SMOOTH_CUBIC_CURVE_TO_NV = 0x11
+	RELATIVE_SMOOTH_QUADRATIC_CURVE_TO_NV = 0x0F
+	RELATIVE_VERTICAL_LINE_TO_NV = 0x09
+	RESTART_PATH_NV = 0xF0
+	ROUND_NV = 0x90A4
+	SKIP_MISSING_GLYPH_NV = 0x90A9
+	SMALL_CCW_ARC_TO_NV = 0x12
+	SMALL_CW_ARC_TO_NV = 0x14
+	SMOOTH_CUBIC_CURVE_TO_NV = 0x10
+	SMOOTH_QUADRATIC_CURVE_TO_NV = 0x0E
+	SQUARE_NV = 0x90A3
+	STANDARD_FONT_NAME_NV = 0x9072
+	SYSTEM_FONT_NAME_NV = 0x9073
+	TRANSLATE_2D_NV = 0x9090
+	TRANSLATE_3D_NV = 0x9091
+	TRANSLATE_X_NV = 0x908E
+	TRANSLATE_Y_NV = 0x908F
+	TRANSPOSE_AFFINE_2D_NV = 0x9096
+	TRANSPOSE_AFFINE_3D_NV = 0x9098
+	TRANSPOSE_PROJECTIVE_2D_NV = 0x9097
+	TRANSPOSE_PROJECTIVE_3D_NV = 0x9099
+	TRIANGULAR_NV = 0x90A5
+	USE_MISSING_GLYPH_NV = 0x90AA
+	UTF16_NV = 0x909B
+	UTF8_NV = 0x909A
+	VERTICAL_LINE_TO_NV = 0x08
+)
 // NV_pixel_data_range
 const (
 	READ_PIXEL_DATA_RANGE_LENGTH_NV = 0x887B
@@ -3082,6 +3616,9 @@ const (
 // NV_register_combiners2
 const (
 	PER_STAGE_CONSTANTS_NV = 0x8535
+)
+// NV_shader_atomic_float
+const (
 )
 // NV_shader_buffer_load
 const (
@@ -3470,6 +4007,47 @@ const (
 	Z6Y10Z6CB10Z6A10Z6Y10Z6CR10Z6A10_4224_NV = 0x9034
 	Z6Y10Z6CB10Z6Y10Z6CR10_422_NV = 0x9033
 )
+// NV_bindless_texture
+
+func GetTextureHandleNV(texture Uint) Uint64 {
+	return (Uint64)(C.goglGetTextureHandleNV((C.GLuint)(texture)))
+}
+func GetTextureSamplerHandleNV(texture Uint, sampler Uint) Uint64 {
+	return (Uint64)(C.goglGetTextureSamplerHandleNV((C.GLuint)(texture), (C.GLuint)(sampler)))
+}
+func MakeTextureHandleResidentNV(handle Uint64)  {
+	C.goglMakeTextureHandleResidentNV((C.GLuint64)(handle))
+}
+func MakeTextureHandleNonResidentNV(handle Uint64)  {
+	C.goglMakeTextureHandleNonResidentNV((C.GLuint64)(handle))
+}
+func GetImageHandleNV(texture Uint, level Int, layered Boolean, layer Int, format Enum) Uint64 {
+	return (Uint64)(C.goglGetImageHandleNV((C.GLuint)(texture), (C.GLint)(level), (C.GLboolean)(layered), (C.GLint)(layer), (C.GLenum)(format)))
+}
+func MakeImageHandleResidentNV(handle Uint64, access Enum)  {
+	C.goglMakeImageHandleResidentNV((C.GLuint64)(handle), (C.GLenum)(access))
+}
+func MakeImageHandleNonResidentNV(handle Uint64)  {
+	C.goglMakeImageHandleNonResidentNV((C.GLuint64)(handle))
+}
+func UniformHandleui64NV(location Int, value Uint64)  {
+	C.goglUniformHandleui64NV((C.GLint)(location), (C.GLuint64)(value))
+}
+func UniformHandleui64vNV(location Int, count Sizei, value *Uint64)  {
+	C.goglUniformHandleui64vNV((C.GLint)(location), (C.GLsizei)(count), (*C.GLuint64)(value))
+}
+func ProgramUniformHandleui64NV(program Uint, location Int, value Uint64)  {
+	C.goglProgramUniformHandleui64NV((C.GLuint)(program), (C.GLint)(location), (C.GLuint64)(value))
+}
+func ProgramUniformHandleui64vNV(program Uint, location Int, count Sizei, values *Uint64)  {
+	C.goglProgramUniformHandleui64vNV((C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLuint64)(values))
+}
+func IsTextureHandleResidentNV(handle Uint64) Boolean {
+	return (Boolean)(C.goglIsTextureHandleResidentNV((C.GLuint64)(handle)))
+}
+func IsImageHandleResidentNV(handle Uint64) Boolean {
+	return (Boolean)(C.goglIsImageHandleResidentNV((C.GLuint64)(handle)))
+}
 // NV_blend_square
 
 // NV_conditional_render
@@ -3957,6 +4535,155 @@ func ProgramBufferParametersIuivNV(target Enum, buffer Uint, index Uint, count S
 }
 // NV_parameter_buffer_object2
 
+// NV_path_rendering
+
+func GenPathsNV(range_ Sizei) Uint {
+	return (Uint)(C.goglGenPathsNV((C.GLsizei)(range_)))
+}
+func DeletePathsNV(path Uint, range_ Sizei)  {
+	C.goglDeletePathsNV((C.GLuint)(path), (C.GLsizei)(range_))
+}
+func IsPathNV(path Uint) Boolean {
+	return (Boolean)(C.goglIsPathNV((C.GLuint)(path)))
+}
+func PathCommandsNV(path Uint, numCommands Sizei, commands *Ubyte, numCoords Sizei, coordType Enum, coords Pointer)  {
+	C.goglPathCommandsNV((C.GLuint)(path), (C.GLsizei)(numCommands), (*C.GLubyte)(commands), (C.GLsizei)(numCoords), (C.GLenum)(coordType), (unsafe.Pointer)(coords))
+}
+func PathCoordsNV(path Uint, numCoords Sizei, coordType Enum, coords Pointer)  {
+	C.goglPathCoordsNV((C.GLuint)(path), (C.GLsizei)(numCoords), (C.GLenum)(coordType), (unsafe.Pointer)(coords))
+}
+func PathSubCommandsNV(path Uint, commandStart Sizei, commandsToDelete Sizei, numCommands Sizei, commands *Ubyte, numCoords Sizei, coordType Enum, coords Pointer)  {
+	C.goglPathSubCommandsNV((C.GLuint)(path), (C.GLsizei)(commandStart), (C.GLsizei)(commandsToDelete), (C.GLsizei)(numCommands), (*C.GLubyte)(commands), (C.GLsizei)(numCoords), (C.GLenum)(coordType), (unsafe.Pointer)(coords))
+}
+func PathSubCoordsNV(path Uint, coordStart Sizei, numCoords Sizei, coordType Enum, coords Pointer)  {
+	C.goglPathSubCoordsNV((C.GLuint)(path), (C.GLsizei)(coordStart), (C.GLsizei)(numCoords), (C.GLenum)(coordType), (unsafe.Pointer)(coords))
+}
+func PathStringNV(path Uint, format Enum, length Sizei, pathString Pointer)  {
+	C.goglPathStringNV((C.GLuint)(path), (C.GLenum)(format), (C.GLsizei)(length), (unsafe.Pointer)(pathString))
+}
+func PathGlyphsNV(firstPathName Uint, fontTarget Enum, fontName Pointer, fontStyle Bitfield, numGlyphs Sizei, type_ Enum, charcodes Pointer, handleMissingGlyphs Enum, pathParameterTemplate Uint, emScale Float)  {
+	C.goglPathGlyphsNV((C.GLuint)(firstPathName), (C.GLenum)(fontTarget), (unsafe.Pointer)(fontName), (C.GLbitfield)(fontStyle), (C.GLsizei)(numGlyphs), (C.GLenum)(type_), (unsafe.Pointer)(charcodes), (C.GLenum)(handleMissingGlyphs), (C.GLuint)(pathParameterTemplate), (C.GLfloat)(emScale))
+}
+func PathGlyphRangeNV(firstPathName Uint, fontTarget Enum, fontName Pointer, fontStyle Bitfield, firstGlyph Uint, numGlyphs Sizei, handleMissingGlyphs Enum, pathParameterTemplate Uint, emScale Float)  {
+	C.goglPathGlyphRangeNV((C.GLuint)(firstPathName), (C.GLenum)(fontTarget), (unsafe.Pointer)(fontName), (C.GLbitfield)(fontStyle), (C.GLuint)(firstGlyph), (C.GLsizei)(numGlyphs), (C.GLenum)(handleMissingGlyphs), (C.GLuint)(pathParameterTemplate), (C.GLfloat)(emScale))
+}
+func WeightPathsNV(resultPath Uint, numPaths Sizei, paths *Uint, weights *Float)  {
+	C.goglWeightPathsNV((C.GLuint)(resultPath), (C.GLsizei)(numPaths), (*C.GLuint)(paths), (*C.GLfloat)(weights))
+}
+func CopyPathNV(resultPath Uint, srcPath Uint)  {
+	C.goglCopyPathNV((C.GLuint)(resultPath), (C.GLuint)(srcPath))
+}
+func InterpolatePathsNV(resultPath Uint, pathA Uint, pathB Uint, weight Float)  {
+	C.goglInterpolatePathsNV((C.GLuint)(resultPath), (C.GLuint)(pathA), (C.GLuint)(pathB), (C.GLfloat)(weight))
+}
+func TransformPathNV(resultPath Uint, srcPath Uint, transformType Enum, transformValues *Float)  {
+	C.goglTransformPathNV((C.GLuint)(resultPath), (C.GLuint)(srcPath), (C.GLenum)(transformType), (*C.GLfloat)(transformValues))
+}
+func PathParameterivNV(path Uint, pname Enum, value *Int)  {
+	C.goglPathParameterivNV((C.GLuint)(path), (C.GLenum)(pname), (*C.GLint)(value))
+}
+func PathParameteriNV(path Uint, pname Enum, value Int)  {
+	C.goglPathParameteriNV((C.GLuint)(path), (C.GLenum)(pname), (C.GLint)(value))
+}
+func PathParameterfvNV(path Uint, pname Enum, value *Float)  {
+	C.goglPathParameterfvNV((C.GLuint)(path), (C.GLenum)(pname), (*C.GLfloat)(value))
+}
+func PathParameterfNV(path Uint, pname Enum, value Float)  {
+	C.goglPathParameterfNV((C.GLuint)(path), (C.GLenum)(pname), (C.GLfloat)(value))
+}
+func PathDashArrayNV(path Uint, dashCount Sizei, dashArray *Float)  {
+	C.goglPathDashArrayNV((C.GLuint)(path), (C.GLsizei)(dashCount), (*C.GLfloat)(dashArray))
+}
+func PathStencilFuncNV(func_ Enum, ref Int, mask Uint)  {
+	C.goglPathStencilFuncNV((C.GLenum)(func_), (C.GLint)(ref), (C.GLuint)(mask))
+}
+func PathStencilDepthOffsetNV(factor Float, units Float)  {
+	C.goglPathStencilDepthOffsetNV((C.GLfloat)(factor), (C.GLfloat)(units))
+}
+func StencilFillPathNV(path Uint, fillMode Enum, mask Uint)  {
+	C.goglStencilFillPathNV((C.GLuint)(path), (C.GLenum)(fillMode), (C.GLuint)(mask))
+}
+func StencilStrokePathNV(path Uint, reference Int, mask Uint)  {
+	C.goglStencilStrokePathNV((C.GLuint)(path), (C.GLint)(reference), (C.GLuint)(mask))
+}
+func StencilFillPathInstancedNV(numPaths Sizei, pathNameType Enum, paths Pointer, pathBase Uint, fillMode Enum, mask Uint, transformType Enum, transformValues *Float)  {
+	C.goglStencilFillPathInstancedNV((C.GLsizei)(numPaths), (C.GLenum)(pathNameType), (unsafe.Pointer)(paths), (C.GLuint)(pathBase), (C.GLenum)(fillMode), (C.GLuint)(mask), (C.GLenum)(transformType), (*C.GLfloat)(transformValues))
+}
+func StencilStrokePathInstancedNV(numPaths Sizei, pathNameType Enum, paths Pointer, pathBase Uint, reference Int, mask Uint, transformType Enum, transformValues *Float)  {
+	C.goglStencilStrokePathInstancedNV((C.GLsizei)(numPaths), (C.GLenum)(pathNameType), (unsafe.Pointer)(paths), (C.GLuint)(pathBase), (C.GLint)(reference), (C.GLuint)(mask), (C.GLenum)(transformType), (*C.GLfloat)(transformValues))
+}
+func PathCoverDepthFuncNV(func_ Enum)  {
+	C.goglPathCoverDepthFuncNV((C.GLenum)(func_))
+}
+func PathColorGenNV(color Enum, genMode Enum, colorFormat Enum, coeffs *Float)  {
+	C.goglPathColorGenNV((C.GLenum)(color), (C.GLenum)(genMode), (C.GLenum)(colorFormat), (*C.GLfloat)(coeffs))
+}
+func PathTexGenNV(texCoordSet Enum, genMode Enum, components Int, coeffs *Float)  {
+	C.goglPathTexGenNV((C.GLenum)(texCoordSet), (C.GLenum)(genMode), (C.GLint)(components), (*C.GLfloat)(coeffs))
+}
+func PathFogGenNV(genMode Enum)  {
+	C.goglPathFogGenNV((C.GLenum)(genMode))
+}
+func CoverFillPathNV(path Uint, coverMode Enum)  {
+	C.goglCoverFillPathNV((C.GLuint)(path), (C.GLenum)(coverMode))
+}
+func CoverStrokePathNV(path Uint, coverMode Enum)  {
+	C.goglCoverStrokePathNV((C.GLuint)(path), (C.GLenum)(coverMode))
+}
+func CoverFillPathInstancedNV(numPaths Sizei, pathNameType Enum, paths Pointer, pathBase Uint, coverMode Enum, transformType Enum, transformValues *Float)  {
+	C.goglCoverFillPathInstancedNV((C.GLsizei)(numPaths), (C.GLenum)(pathNameType), (unsafe.Pointer)(paths), (C.GLuint)(pathBase), (C.GLenum)(coverMode), (C.GLenum)(transformType), (*C.GLfloat)(transformValues))
+}
+func CoverStrokePathInstancedNV(numPaths Sizei, pathNameType Enum, paths Pointer, pathBase Uint, coverMode Enum, transformType Enum, transformValues *Float)  {
+	C.goglCoverStrokePathInstancedNV((C.GLsizei)(numPaths), (C.GLenum)(pathNameType), (unsafe.Pointer)(paths), (C.GLuint)(pathBase), (C.GLenum)(coverMode), (C.GLenum)(transformType), (*C.GLfloat)(transformValues))
+}
+func GetPathParameterivNV(path Uint, pname Enum, value *Int)  {
+	C.goglGetPathParameterivNV((C.GLuint)(path), (C.GLenum)(pname), (*C.GLint)(value))
+}
+func GetPathParameterfvNV(path Uint, pname Enum, value *Float)  {
+	C.goglGetPathParameterfvNV((C.GLuint)(path), (C.GLenum)(pname), (*C.GLfloat)(value))
+}
+func GetPathCommandsNV(path Uint, commands *Ubyte)  {
+	C.goglGetPathCommandsNV((C.GLuint)(path), (*C.GLubyte)(commands))
+}
+func GetPathCoordsNV(path Uint, coords *Float)  {
+	C.goglGetPathCoordsNV((C.GLuint)(path), (*C.GLfloat)(coords))
+}
+func GetPathDashArrayNV(path Uint, dashArray *Float)  {
+	C.goglGetPathDashArrayNV((C.GLuint)(path), (*C.GLfloat)(dashArray))
+}
+func GetPathMetricsNV(metricQueryMask Bitfield, numPaths Sizei, pathNameType Enum, paths Pointer, pathBase Uint, stride Sizei, metrics *Float)  {
+	C.goglGetPathMetricsNV((C.GLbitfield)(metricQueryMask), (C.GLsizei)(numPaths), (C.GLenum)(pathNameType), (unsafe.Pointer)(paths), (C.GLuint)(pathBase), (C.GLsizei)(stride), (*C.GLfloat)(metrics))
+}
+func GetPathMetricRangeNV(metricQueryMask Bitfield, firstPathName Uint, numPaths Sizei, stride Sizei, metrics *Float)  {
+	C.goglGetPathMetricRangeNV((C.GLbitfield)(metricQueryMask), (C.GLuint)(firstPathName), (C.GLsizei)(numPaths), (C.GLsizei)(stride), (*C.GLfloat)(metrics))
+}
+func GetPathSpacingNV(pathListMode Enum, numPaths Sizei, pathNameType Enum, paths Pointer, pathBase Uint, advanceScale Float, kerningScale Float, transformType Enum, returnedSpacing *Float)  {
+	C.goglGetPathSpacingNV((C.GLenum)(pathListMode), (C.GLsizei)(numPaths), (C.GLenum)(pathNameType), (unsafe.Pointer)(paths), (C.GLuint)(pathBase), (C.GLfloat)(advanceScale), (C.GLfloat)(kerningScale), (C.GLenum)(transformType), (*C.GLfloat)(returnedSpacing))
+}
+func GetPathColorGenivNV(color Enum, pname Enum, value *Int)  {
+	C.goglGetPathColorGenivNV((C.GLenum)(color), (C.GLenum)(pname), (*C.GLint)(value))
+}
+func GetPathColorGenfvNV(color Enum, pname Enum, value *Float)  {
+	C.goglGetPathColorGenfvNV((C.GLenum)(color), (C.GLenum)(pname), (*C.GLfloat)(value))
+}
+func GetPathTexGenivNV(texCoordSet Enum, pname Enum, value *Int)  {
+	C.goglGetPathTexGenivNV((C.GLenum)(texCoordSet), (C.GLenum)(pname), (*C.GLint)(value))
+}
+func GetPathTexGenfvNV(texCoordSet Enum, pname Enum, value *Float)  {
+	C.goglGetPathTexGenfvNV((C.GLenum)(texCoordSet), (C.GLenum)(pname), (*C.GLfloat)(value))
+}
+func IsPointInFillPathNV(path Uint, mask Uint, x Float, y Float) Boolean {
+	return (Boolean)(C.goglIsPointInFillPathNV((C.GLuint)(path), (C.GLuint)(mask), (C.GLfloat)(x), (C.GLfloat)(y)))
+}
+func IsPointInStrokePathNV(path Uint, x Float, y Float) Boolean {
+	return (Boolean)(C.goglIsPointInStrokePathNV((C.GLuint)(path), (C.GLfloat)(x), (C.GLfloat)(y)))
+}
+func GetPathLengthNV(path Uint, startSegment Sizei, numSegments Sizei) Float {
+	return (Float)(C.goglGetPathLengthNV((C.GLuint)(path), (C.GLsizei)(startSegment), (C.GLsizei)(numSegments)))
+}
+func PointAlongPathNV(path Uint, startSegment Sizei, numSegments Sizei, distance Float, x *Float, y *Float, tangentX *Float, tangentY *Float) Boolean {
+	return (Boolean)(C.goglPointAlongPathNV((C.GLuint)(path), (C.GLsizei)(startSegment), (C.GLsizei)(numSegments), (C.GLfloat)(distance), (*C.GLfloat)(x), (*C.GLfloat)(y), (*C.GLfloat)(tangentX), (*C.GLfloat)(tangentY)))
+}
 // NV_pixel_data_range
 
 func PixelDataRangeNV(target Enum, length Sizei, pointer Pointer)  {
@@ -4050,6 +4777,8 @@ func CombinerStageParameterfvNV(stage Enum, pname Enum, params *Float)  {
 func GetCombinerStageParameterfvNV(stage Enum, pname Enum, params *Float)  {
 	C.goglGetCombinerStageParameterfvNV((C.GLenum)(stage), (C.GLenum)(pname), (*C.GLfloat)(params))
 }
+// NV_shader_atomic_float
+
 // NV_shader_buffer_load
 
 func MakeBufferResidentNV(target Enum, access Enum)  {
@@ -4652,6 +5381,13 @@ func VideoCaptureStreamParameterfvNV(video_capture_slot Uint, stream Uint, pname
 func VideoCaptureStreamParameterdvNV(video_capture_slot Uint, stream Uint, pname Enum, params *Double)  {
 	C.goglVideoCaptureStreamParameterdvNV((C.GLuint)(video_capture_slot), (C.GLuint)(stream), (C.GLenum)(pname), (*C.GLdouble)(params))
 }
+func InitNvBindlessTexture() error {
+	var ret C.int
+	if ret = C.init_NV_bindless_texture(); ret != 0 {
+		return errors.New("unable to initialize NV_bindless_texture")
+	}
+	return nil
+}
 func InitNvBlendSquare() error {
 	var ret C.int
 	if ret = C.init_NV_blend_square(); ret != 0 {
@@ -4855,6 +5591,13 @@ func InitNvParameterBufferObject2() error {
 	}
 	return nil
 }
+func InitNvPathRendering() error {
+	var ret C.int
+	if ret = C.init_NV_path_rendering(); ret != 0 {
+		return errors.New("unable to initialize NV_path_rendering")
+	}
+	return nil
+}
 func InitNvPixelDataRange() error {
 	var ret C.int
 	if ret = C.init_NV_pixel_data_range(); ret != 0 {
@@ -4894,6 +5637,13 @@ func InitNvRegisterCombiners2() error {
 	var ret C.int
 	if ret = C.init_NV_register_combiners2(); ret != 0 {
 		return errors.New("unable to initialize NV_register_combiners2")
+	}
+	return nil
+}
+func InitNvShaderAtomicFloat() error {
+	var ret C.int
+	if ret = C.init_NV_shader_atomic_float(); ret != 0 {
+		return errors.New("unable to initialize NV_shader_atomic_float")
 	}
 	return nil
 }

@@ -15,11 +15,11 @@ import (
 
 // TODO: better regexps
 var (
-	enumEmptyLineRE = regexp.MustCompile("^[ \\t]*(#.*)?$")
-	enumCategoryRE  = regexp.MustCompile("^[ \\t]*([_0-9A-Za-z]+)[ \\t]+enum:")
-	enumRE          = regexp.MustCompile("^[ \\t]*([_0-9A-Za-z]+)[ \\t]*=[ \\t]*([^ \\t#\\n]*)")
-	enumPassthruRE  = regexp.MustCompile("^[ \\t]*passthru:")
-	enumUseRE       = regexp.MustCompile("^[ \\t]*use[ \\t]+([_0-9A-Za-z]+)[ \\t]+([_0-9A-Za-z]+)")
+	enumCommentLineRE = regexp.MustCompile("^#.*")
+	enumCategoryRE    = regexp.MustCompile("^([_0-9A-Za-z]+)[ \\t]+enum:")
+	enumRE            = regexp.MustCompile("^([_0-9A-Za-z]+)[ \\t]*=[ \\t]*([\\-_0-9A-Za-z]+)")
+	enumPassthruRE    = regexp.MustCompile("^passthru:.*")
+	enumUseRE         = regexp.MustCompile("^use[ \\t]+([_0-9A-Za-z]+)[ \\t]+([_0-9A-Za-z]+)")
 )
 
 func ReadEnumsFromFile(name string) (EnumCategories, error) {
@@ -44,9 +44,10 @@ func ReadEnums(r io.Reader) (EnumCategories, error) {
 		} else if err != nil {
 			return nil, err
 		}
-		line = strings.TrimRight(line, "\n")
+		line = strings.Trim(line, "\t\n\r ")
 
-		if enumEmptyLineRE.MatchString(line) || enumPassthruRE.MatchString(line) {
+		if len(line) == 0 || enumCommentLineRE.MatchString(line) || enumPassthruRE.MatchString(line) {
+			//fmt.Printf("Empty or comment line %s\n", line)
 			continue
 		}
 
@@ -57,12 +58,12 @@ func ReadEnums(r io.Reader) (EnumCategories, error) {
 		} else if enum := enumRE.FindStringSubmatch(line); enum != nil {
 			//fmt.Printf("%v %v\n", enum[1], enum[2])
 			if strings.HasPrefix(enum[2], "GL_") {
-				//fmt.Printf("Replace %s in %s\n", enum[2], enum[1])
+				//fmt.Printf("Lookup %s in %s\n", enum[2][3:], enum[1])
 				ok, val := categories.LookUpDefinition(enum[2][3:])
 				if ok {
 					categories[currentCategory][enum[1]] = val
 				} else {
-					fmt.Fprintf(os.Stderr, "ERROR: Unable to parse line: %v\n", line)
+					fmt.Fprintf(os.Stderr, "ERROR: Unable to find %s.\n", enum[2][3:])
 				}
 			} else if strings.HasSuffix(enum[2], "u") {
 				categories[currentCategory][enum[1]] = enum[2][:len(enum[2])-1]
@@ -78,7 +79,7 @@ func ReadEnums(r io.Reader) (EnumCategories, error) {
 			}
 			deferredUseEnums[currentCategory][use[2]] = use[1]
 		} else {
-			fmt.Fprintf(os.Stderr, "WARNING: Unable to parse line: %v\n", line)
+			fmt.Fprintf(os.Stderr, "WARNING: Unable to parse line: '%s' (Ignoring)\n", line)
 		}
 	}
 

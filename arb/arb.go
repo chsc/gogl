@@ -377,8 +377,8 @@ package arb
 // void (APIENTRYP ptrglReleaseShaderCompiler)();
 // void (APIENTRYP ptrglShaderBinary)(GLsizei count, GLuint* shaders, GLenum binaryformat, GLvoid* binary, GLsizei length);
 // void (APIENTRYP ptrglGetShaderPrecisionFormat)(GLenum shadertype, GLenum precisiontype, GLint* range, GLint* precision);
-// void (APIENTRYP ptrglDepthRangef)(GLclampf n, GLclampf f);
-// void (APIENTRYP ptrglClearDepthf)(GLclampf d);
+// void (APIENTRYP ptrglDepthRangef)(GLfloat n, GLfloat f);
+// void (APIENTRYP ptrglClearDepthf)(GLfloat d);
 // //  ARB_base_instance
 // void (APIENTRYP ptrglDrawArraysInstancedBaseInstance)(GLenum mode, GLint first, GLsizei count, GLsizei primcount, GLuint baseinstance);
 // void (APIENTRYP ptrglDrawElementsInstancedBaseInstance)(GLenum mode, GLsizei count, GLenum type, void* indices, GLsizei primcount, GLuint baseinstance);
@@ -414,7 +414,7 @@ package arb
 // void (APIENTRYP ptrglDrawElementsBaseVertex)(GLenum mode, GLsizei count, GLenum type, GLvoid* indices, GLint basevertex);
 // void (APIENTRYP ptrglDrawRangeElementsBaseVertex)(GLenum mode, GLuint start, GLuint end, GLsizei count, GLenum type, GLvoid* indices, GLint basevertex);
 // void (APIENTRYP ptrglDrawElementsInstancedBaseVertex)(GLenum mode, GLsizei count, GLenum type, GLvoid* indices, GLsizei primcount, GLint basevertex);
-// void (APIENTRYP ptrglMultiDrawElementsBaseVertex)(GLenum mode, GLsizei* count, GLenum type, GLvoid** indices, GLsizei primcount, GLint* basevertex);
+// void (APIENTRYP ptrglMultiDrawElementsBaseVertex)(GLenum mode, GLsizei* count, GLenum type, GLvoid* const* indices, GLsizei primcount, GLint* basevertex);
 // //  ARB_draw_indirect
 // void (APIENTRYP ptrglDrawArraysIndirect)(GLenum mode, GLvoid* indirect);
 // void (APIENTRYP ptrglDrawElementsIndirect)(GLenum mode, GLenum type, GLvoid* indirect);
@@ -494,7 +494,7 @@ package arb
 // void (APIENTRYP ptrglMatrixIndexuivARB)(GLint size, GLuint* indices);
 // void (APIENTRYP ptrglMatrixIndexPointerARB)(GLint size, GLenum type, GLsizei stride, GLvoid* pointer);
 // //  ARB_multisample
-// void (APIENTRYP ptrglSampleCoverageARB)(GLclampf value, GLboolean invert);
+// void (APIENTRYP ptrglSampleCoverageARB)(GLfloat value, GLboolean invert);
 // //  ARB_multitexture
 // void (APIENTRYP ptrglActiveTextureARB)(GLenum texture);
 // void (APIENTRYP ptrglClientActiveTextureARB)(GLenum texture);
@@ -569,7 +569,7 @@ package arb
 // void (APIENTRYP ptrglGetnUniformuivARB)(GLuint program, GLint location, GLsizei bufSize, GLuint* params);
 // void (APIENTRYP ptrglGetnUniformdvARB)(GLuint program, GLint location, GLsizei bufSize, GLdouble* params);
 // //  ARB_sample_shading
-// void (APIENTRYP ptrglMinSampleShadingARB)(GLclampf value);
+// void (APIENTRYP ptrglMinSampleShadingARB)(GLfloat value);
 // //  ARB_sampler_objects
 // void (APIENTRYP ptrglGenSamplers)(GLsizei count, GLuint* samplers);
 // void (APIENTRYP ptrglDeleteSamplers)(GLsizei count, GLuint* samplers);
@@ -589,7 +589,7 @@ package arb
 // //  ARB_separate_shader_objects
 // void (APIENTRYP ptrglUseProgramStages)(GLuint pipeline, GLbitfield stages, GLuint program);
 // void (APIENTRYP ptrglActiveShaderProgram)(GLuint pipeline, GLuint program);
-// GLuint (APIENTRYP ptrglCreateShaderProgramv)(GLenum type, GLsizei count, GLchar** strings);
+// GLuint (APIENTRYP ptrglCreateShaderProgramv)(GLenum type, GLsizei count, GLchar* const* strings);
 // void (APIENTRYP ptrglBindProgramPipeline)(GLuint pipeline);
 // void (APIENTRYP ptrglDeleteProgramPipelines)(GLsizei n, GLuint* pipelines);
 // void (APIENTRYP ptrglGenProgramPipelines)(GLsizei n, GLuint* pipelines);
@@ -794,7 +794,7 @@ package arb
 // void (APIENTRYP ptrglMultTransposeMatrixfARB)(GLfloat* m);
 // void (APIENTRYP ptrglMultTransposeMatrixdARB)(GLdouble* m);
 // //  ARB_uniform_buffer_object
-// void (APIENTRYP ptrglGetUniformIndices)(GLuint program, GLsizei uniformCount, GLchar** uniformNames, GLuint* uniformIndices);
+// void (APIENTRYP ptrglGetUniformIndices)(GLuint program, GLsizei uniformCount, GLchar* const* uniformNames, GLuint* uniformIndices);
 // void (APIENTRYP ptrglGetActiveUniformsiv)(GLuint program, GLsizei uniformCount, GLuint* uniformIndices, GLenum pname, GLint* params);
 // void (APIENTRYP ptrglGetActiveUniformName)(GLuint program, GLuint uniformIndex, GLsizei bufSize, GLsizei* length, GLchar* uniformName);
 // GLuint (APIENTRYP ptrglGetUniformBlockIndex)(GLuint program, GLchar* uniformBlockName);
@@ -954,8 +954,8 @@ package arb
 // void (APIENTRYP ptrglScissorArrayv)(GLuint first, GLsizei count, GLint* v);
 // void (APIENTRYP ptrglScissorIndexed)(GLuint index, GLint left, GLint bottom, GLsizei width, GLsizei height);
 // void (APIENTRYP ptrglScissorIndexedv)(GLuint index, GLint* v);
-// void (APIENTRYP ptrglDepthRangeArrayv)(GLuint first, GLsizei count, GLclampd* v);
-// void (APIENTRYP ptrglDepthRangeIndexed)(GLuint index, GLclampd n, GLclampd f);
+// void (APIENTRYP ptrglDepthRangeArrayv)(GLuint first, GLsizei count, GLdouble* v);
+// void (APIENTRYP ptrglDepthRangeIndexed)(GLuint index, GLdouble n, GLdouble f);
 // void (APIENTRYP ptrglGetFloati_v)(GLenum target, GLuint index, GLfloat* data);
 // void (APIENTRYP ptrglGetDoublei_v)(GLenum target, GLuint index, GLdouble* data);
 // //  ARB_window_pos
@@ -986,10 +986,10 @@ package arb
 // void goglGetShaderPrecisionFormat(GLenum shadertype, GLenum precisiontype, GLint* range_, GLint* precision) {
 // 	(*ptrglGetShaderPrecisionFormat)(shadertype, precisiontype, range_, precision);
 // }
-// void goglDepthRangef(GLclampf n, GLclampf f) {
+// void goglDepthRangef(GLfloat n, GLfloat f) {
 // 	(*ptrglDepthRangef)(n, f);
 // }
-// void goglClearDepthf(GLclampf d) {
+// void goglClearDepthf(GLfloat d) {
 // 	(*ptrglClearDepthf)(d);
 // }
 // //  ARB_base_instance
@@ -1067,7 +1067,7 @@ package arb
 // void goglDrawElementsInstancedBaseVertex(GLenum mode, GLsizei count, GLenum type_, GLvoid* indices, GLsizei primcount, GLint basevertex) {
 // 	(*ptrglDrawElementsInstancedBaseVertex)(mode, count, type_, indices, primcount, basevertex);
 // }
-// void goglMultiDrawElementsBaseVertex(GLenum mode, GLsizei* count, GLenum type_, GLvoid** indices, GLsizei primcount, GLint* basevertex) {
+// void goglMultiDrawElementsBaseVertex(GLenum mode, GLsizei* count, GLenum type_, GLvoid* const* indices, GLsizei primcount, GLint* basevertex) {
 // 	(*ptrglMultiDrawElementsBaseVertex)(mode, count, type_, indices, primcount, basevertex);
 // }
 // //  ARB_draw_indirect
@@ -1265,7 +1265,7 @@ package arb
 // 	(*ptrglMatrixIndexPointerARB)(size, type_, stride, pointer);
 // }
 // //  ARB_multisample
-// void goglSampleCoverageARB(GLclampf value, GLboolean invert) {
+// void goglSampleCoverageARB(GLfloat value, GLboolean invert) {
 // 	(*ptrglSampleCoverageARB)(value, invert);
 // }
 // //  ARB_multitexture
@@ -1472,7 +1472,7 @@ package arb
 // 	(*ptrglGetnUniformdvARB)(program, location, bufSize, params);
 // }
 // //  ARB_sample_shading
-// void goglMinSampleShadingARB(GLclampf value) {
+// void goglMinSampleShadingARB(GLfloat value) {
 // 	(*ptrglMinSampleShadingARB)(value);
 // }
 // //  ARB_sampler_objects
@@ -1526,7 +1526,7 @@ package arb
 // void goglActiveShaderProgram(GLuint pipeline, GLuint program) {
 // 	(*ptrglActiveShaderProgram)(pipeline, program);
 // }
-// GLuint goglCreateShaderProgramv(GLenum type_, GLsizei count, GLchar** strings) {
+// GLuint goglCreateShaderProgramv(GLenum type_, GLsizei count, GLchar* const* strings) {
 // 	return (*ptrglCreateShaderProgramv)(type_, count, strings);
 // }
 // void goglBindProgramPipeline(GLuint pipeline) {
@@ -2053,7 +2053,7 @@ package arb
 // 	(*ptrglMultTransposeMatrixdARB)(m);
 // }
 // //  ARB_uniform_buffer_object
-// void goglGetUniformIndices(GLuint program, GLsizei uniformCount, GLchar** uniformNames, GLuint* uniformIndices) {
+// void goglGetUniformIndices(GLuint program, GLsizei uniformCount, GLchar* const* uniformNames, GLuint* uniformIndices) {
 // 	(*ptrglGetUniformIndices)(program, uniformCount, uniformNames, uniformIndices);
 // }
 // void goglGetActiveUniformsiv(GLuint program, GLsizei uniformCount, GLuint* uniformIndices, GLenum pname, GLint* params) {
@@ -2515,10 +2515,10 @@ package arb
 // void goglScissorIndexedv(GLuint index, GLint* v) {
 // 	(*ptrglScissorIndexedv)(index, v);
 // }
-// void goglDepthRangeArrayv(GLuint first, GLsizei count, GLclampd* v) {
+// void goglDepthRangeArrayv(GLuint first, GLsizei count, GLdouble* v) {
 // 	(*ptrglDepthRangeArrayv)(first, count, v);
 // }
-// void goglDepthRangeIndexed(GLuint index, GLclampd n, GLclampd f) {
+// void goglDepthRangeIndexed(GLuint index, GLdouble n, GLdouble f) {
 // 	(*ptrglDepthRangeIndexed)(index, n, f);
 // }
 // void goglGetFloati_v(GLenum target, GLuint index, GLfloat* data) {
@@ -3929,6 +3929,8 @@ const (
 	MEDIUM_FLOAT = 0x8DF1
 	MEDIUM_INT = 0x8DF4
 	NUM_SHADER_BINARY_FORMATS = 0x8DF9
+	RGB565 = 0x8D62
+	SHADER_BINARY_FORMATS = 0x8DF8
 	SHADER_COMPILER = 0x8DFA
 )
 // ARB_base_instance
@@ -3975,7 +3977,9 @@ const (
 // ARB_copy_buffer
 const (
 	COPY_READ_BUFFER = 0x8F36
+	COPY_READ_BUFFER_BINDING = 0x8F36
 	COPY_WRITE_BUFFER = 0x8F37
+	COPY_WRITE_BUFFER_BINDING = 0x8F37
 )
 // ARB_debug_output
 const (
@@ -4930,9 +4934,11 @@ const (
 // ARB_transform_feedback2
 const (
 	TRANSFORM_FEEDBACK = 0x8E22
+	TRANSFORM_FEEDBACK_ACTIVE = 0x8E24
 	TRANSFORM_FEEDBACK_BINDING = 0x8E25
 	TRANSFORM_FEEDBACK_BUFFER_ACTIVE = 0x8E24
 	TRANSFORM_FEEDBACK_BUFFER_PAUSED = 0x8E23
+	TRANSFORM_FEEDBACK_PAUSED = 0x8E23
 )
 // ARB_transform_feedback3
 const (
@@ -5197,11 +5203,11 @@ func ShaderBinary(count Sizei, shaders *Uint, binaryformat Enum, binary Pointer,
 func GetShaderPrecisionFormat(shadertype Enum, precisiontype Enum, range_ *Int, precision *Int)  {
 	C.goglGetShaderPrecisionFormat((C.GLenum)(shadertype), (C.GLenum)(precisiontype), (*C.GLint)(range_), (*C.GLint)(precision))
 }
-func DepthRangef(n Clampf, f Clampf)  {
-	C.goglDepthRangef((C.GLclampf)(n), (C.GLclampf)(f))
+func DepthRangef(n Float, f Float)  {
+	C.goglDepthRangef((C.GLfloat)(n), (C.GLfloat)(f))
 }
-func ClearDepthf(d Clampf)  {
-	C.goglClearDepthf((C.GLclampf)(d))
+func ClearDepthf(d Float)  {
+	C.goglClearDepthf((C.GLfloat)(d))
 }
 // ARB_base_instance
 
@@ -5512,8 +5518,8 @@ func MatrixIndexPointerARB(size Int, type_ Enum, stride Sizei, pointer Pointer) 
 }
 // ARB_multisample
 
-func SampleCoverageARB(value Clampf, invert Boolean)  {
-	C.goglSampleCoverageARB((C.GLclampf)(value), (C.GLboolean)(invert))
+func SampleCoverageARB(value Float, invert Boolean)  {
+	C.goglSampleCoverageARB((C.GLfloat)(value), (C.GLboolean)(invert))
 }
 // ARB_multitexture
 
@@ -5728,8 +5734,8 @@ func GetnUniformdvARB(program Uint, location Int, bufSize Sizei, params *Double)
 }
 // ARB_sample_shading
 
-func MinSampleShadingARB(value Clampf)  {
-	C.goglMinSampleShadingARB((C.GLclampf)(value))
+func MinSampleShadingARB(value Float)  {
+	C.goglMinSampleShadingARB((C.GLfloat)(value))
 }
 // ARB_sampler_objects
 
@@ -6827,11 +6833,11 @@ func ScissorIndexed(index Uint, left Int, bottom Int, width Sizei, height Sizei)
 func ScissorIndexedv(index Uint, v *Int)  {
 	C.goglScissorIndexedv((C.GLuint)(index), (*C.GLint)(v))
 }
-func DepthRangeArrayv(first Uint, count Sizei, v *Clampd)  {
-	C.goglDepthRangeArrayv((C.GLuint)(first), (C.GLsizei)(count), (*C.GLclampd)(v))
+func DepthRangeArrayv(first Uint, count Sizei, v *Double)  {
+	C.goglDepthRangeArrayv((C.GLuint)(first), (C.GLsizei)(count), (*C.GLdouble)(v))
 }
-func DepthRangeIndexed(index Uint, n Clampd, f Clampd)  {
-	C.goglDepthRangeIndexed((C.GLuint)(index), (C.GLclampd)(n), (C.GLclampd)(f))
+func DepthRangeIndexed(index Uint, n Double, f Double)  {
+	C.goglDepthRangeIndexed((C.GLuint)(index), (C.GLdouble)(n), (C.GLdouble)(f))
 }
 func GetFloati_v(target Enum, index Uint, data *Float)  {
 	C.goglGetFloati_v((C.GLenum)(target), (C.GLuint)(index), (*C.GLfloat)(data))

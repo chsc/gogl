@@ -209,9 +209,9 @@ package gl33
 // void (APIENTRYP ptrglTexImage2D)(GLenum target, GLint level, GLint internalformat, GLsizei width, GLsizei height, GLint border, GLenum format, GLenum type, GLvoid* pixels);
 // void (APIENTRYP ptrglDrawBuffer)(GLenum mode);
 // void (APIENTRYP ptrglClear)(GLbitfield mask);
-// void (APIENTRYP ptrglClearColor)(GLclampf red, GLclampf green, GLclampf blue, GLclampf alpha);
+// void (APIENTRYP ptrglClearColor)(GLfloat red, GLfloat green, GLfloat blue, GLfloat alpha);
 // void (APIENTRYP ptrglClearStencil)(GLint s);
-// void (APIENTRYP ptrglClearDepth)(GLclampd depth);
+// void (APIENTRYP ptrglClearDepth)(GLdouble depth);
 // void (APIENTRYP ptrglStencilMask)(GLuint mask);
 // void (APIENTRYP ptrglColorMask)(GLboolean red, GLboolean green, GLboolean blue, GLboolean alpha);
 // void (APIENTRYP ptrglDepthMask)(GLboolean flag);
@@ -240,7 +240,7 @@ package gl33
 // void (APIENTRYP ptrglGetTexLevelParameterfv)(GLenum target, GLint level, GLenum pname, GLfloat* params);
 // void (APIENTRYP ptrglGetTexLevelParameteriv)(GLenum target, GLint level, GLenum pname, GLint* params);
 // GLboolean (APIENTRYP ptrglIsEnabled)(GLenum cap);
-// void (APIENTRYP ptrglDepthRange)(GLclampd near, GLclampd far);
+// void (APIENTRYP ptrglDepthRange)(GLdouble near, GLdouble far);
 // void (APIENTRYP ptrglViewport)(GLint x, GLint y, GLsizei width, GLsizei height);
 // //  VERSION_1_1
 // void (APIENTRYP ptrglDrawArrays)(GLenum mode, GLint first, GLsizei count);
@@ -258,7 +258,7 @@ package gl33
 // void (APIENTRYP ptrglGenTextures)(GLsizei n, GLuint* textures);
 // GLboolean (APIENTRYP ptrglIsTexture)(GLuint texture);
 // //  VERSION_1_2
-// void (APIENTRYP ptrglBlendColor)(GLclampf red, GLclampf green, GLclampf blue, GLclampf alpha);
+// void (APIENTRYP ptrglBlendColor)(GLfloat red, GLfloat green, GLfloat blue, GLfloat alpha);
 // void (APIENTRYP ptrglBlendEquation)(GLenum mode);
 // void (APIENTRYP ptrglDrawRangeElements)(GLenum mode, GLuint start, GLuint end, GLsizei count, GLenum type, GLvoid* indices);
 // void (APIENTRYP ptrglTexImage3D)(GLenum target, GLint level, GLint internalformat, GLsizei width, GLsizei height, GLsizei depth, GLint border, GLenum format, GLenum type, GLvoid* pixels);
@@ -266,7 +266,7 @@ package gl33
 // void (APIENTRYP ptrglCopyTexSubImage3D)(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLint x, GLint y, GLsizei width, GLsizei height);
 // //  VERSION_1_3
 // void (APIENTRYP ptrglActiveTexture)(GLenum texture);
-// void (APIENTRYP ptrglSampleCoverage)(GLclampf value, GLboolean invert);
+// void (APIENTRYP ptrglSampleCoverage)(GLfloat value, GLboolean invert);
 // void (APIENTRYP ptrglCompressedTexImage3D)(GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLsizei depth, GLint border, GLsizei imageSize, GLvoid* data);
 // void (APIENTRYP ptrglCompressedTexImage2D)(GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLint border, GLsizei imageSize, GLvoid* data);
 // void (APIENTRYP ptrglCompressedTexImage1D)(GLenum target, GLint level, GLenum internalformat, GLsizei width, GLint border, GLsizei imageSize, GLvoid* data);
@@ -277,7 +277,7 @@ package gl33
 // //  VERSION_1_4
 // void (APIENTRYP ptrglBlendFuncSeparate)(GLenum sfactorRGB, GLenum dfactorRGB, GLenum sfactorAlpha, GLenum dfactorAlpha);
 // void (APIENTRYP ptrglMultiDrawArrays)(GLenum mode, GLint* first, GLsizei* count, GLsizei primcount);
-// void (APIENTRYP ptrglMultiDrawElements)(GLenum mode, GLsizei* count, GLenum type, GLvoid** indices, GLsizei primcount);
+// void (APIENTRYP ptrglMultiDrawElements)(GLenum mode, GLsizei* count, GLenum type, GLvoid* const* indices, GLsizei primcount);
 // void (APIENTRYP ptrglPointParameterf)(GLenum pname, GLfloat param);
 // void (APIENTRYP ptrglPointParameterfv)(GLenum pname, GLfloat* params);
 // void (APIENTRYP ptrglPointParameteri)(GLenum pname, GLint param);
@@ -337,7 +337,7 @@ package gl33
 // GLboolean (APIENTRYP ptrglIsProgram)(GLuint program);
 // GLboolean (APIENTRYP ptrglIsShader)(GLuint shader);
 // void (APIENTRYP ptrglLinkProgram)(GLuint program);
-// void (APIENTRYP ptrglShaderSource)(GLuint shader, GLsizei count, GLchar** string, GLint* length);
+// void (APIENTRYP ptrglShaderSource)(GLuint shader, GLsizei count, GLchar* const* string, GLint* length);
 // void (APIENTRYP ptrglUseProgram)(GLuint program);
 // void (APIENTRYP ptrglUniform1f)(GLint location, GLfloat v0);
 // void (APIENTRYP ptrglUniform2f)(GLint location, GLfloat v0, GLfloat v1);
@@ -414,7 +414,7 @@ package gl33
 // void (APIENTRYP ptrglEndTransformFeedback)();
 // void (APIENTRYP ptrglBindBufferRange)(GLenum target, GLuint index, GLuint buffer, GLintptr offset, GLsizeiptr size);
 // void (APIENTRYP ptrglBindBufferBase)(GLenum target, GLuint index, GLuint buffer);
-// void (APIENTRYP ptrglTransformFeedbackVaryings)(GLuint program, GLsizei count, GLchar** varyings, GLenum bufferMode);
+// void (APIENTRYP ptrglTransformFeedbackVaryings)(GLuint program, GLsizei count, GLchar* const* varyings, GLenum bufferMode);
 // void (APIENTRYP ptrglGetTransformFeedbackVarying)(GLuint program, GLuint index, GLsizei bufSize, GLsizei* length, GLsizei* size, GLenum* type, GLchar* name);
 // void (APIENTRYP ptrglClampColor)(GLenum target, GLenum clamp);
 // void (APIENTRYP ptrglBeginConditionalRender)(GLuint id, GLenum mode);
@@ -494,7 +494,7 @@ package gl33
 // void (APIENTRYP ptrglTexBuffer)(GLenum target, GLenum internalformat, GLuint buffer);
 // void (APIENTRYP ptrglPrimitiveRestartIndex)(GLuint index);
 // void (APIENTRYP ptrglCopyBufferSubData)(GLenum readTarget, GLenum writeTarget, GLintptr readOffset, GLintptr writeOffset, GLsizeiptr size);
-// void (APIENTRYP ptrglGetUniformIndices)(GLuint program, GLsizei uniformCount, GLchar** uniformNames, GLuint* uniformIndices);
+// void (APIENTRYP ptrglGetUniformIndices)(GLuint program, GLsizei uniformCount, GLchar* const* uniformNames, GLuint* uniformIndices);
 // void (APIENTRYP ptrglGetActiveUniformsiv)(GLuint program, GLsizei uniformCount, GLuint* uniformIndices, GLenum pname, GLint* params);
 // void (APIENTRYP ptrglGetActiveUniformName)(GLuint program, GLuint uniformIndex, GLsizei bufSize, GLsizei* length, GLchar* uniformName);
 // GLuint (APIENTRYP ptrglGetUniformBlockIndex)(GLuint program, GLchar* uniformBlockName);
@@ -508,7 +508,7 @@ package gl33
 // void (APIENTRYP ptrglDrawElementsBaseVertex)(GLenum mode, GLsizei count, GLenum type, GLvoid* indices, GLint basevertex);
 // void (APIENTRYP ptrglDrawRangeElementsBaseVertex)(GLenum mode, GLuint start, GLuint end, GLsizei count, GLenum type, GLvoid* indices, GLint basevertex);
 // void (APIENTRYP ptrglDrawElementsInstancedBaseVertex)(GLenum mode, GLsizei count, GLenum type, GLvoid* indices, GLsizei primcount, GLint basevertex);
-// void (APIENTRYP ptrglMultiDrawElementsBaseVertex)(GLenum mode, GLsizei* count, GLenum type, GLvoid** indices, GLsizei primcount, GLint* basevertex);
+// void (APIENTRYP ptrglMultiDrawElementsBaseVertex)(GLenum mode, GLsizei* count, GLenum type, GLvoid* const* indices, GLsizei primcount, GLint* basevertex);
 // void (APIENTRYP ptrglProvokingVertex)(GLenum mode);
 // GLsync (APIENTRYP ptrglFenceSync)(GLenum condition, GLbitfield flags);
 // GLboolean (APIENTRYP ptrglIsSync)(GLsync sync);
@@ -627,13 +627,13 @@ package gl33
 // void goglClear(GLbitfield mask) {
 // 	(*ptrglClear)(mask);
 // }
-// void goglClearColor(GLclampf red, GLclampf green, GLclampf blue, GLclampf alpha) {
+// void goglClearColor(GLfloat red, GLfloat green, GLfloat blue, GLfloat alpha) {
 // 	(*ptrglClearColor)(red, green, blue, alpha);
 // }
 // void goglClearStencil(GLint s) {
 // 	(*ptrglClearStencil)(s);
 // }
-// void goglClearDepth(GLclampd depth) {
+// void goglClearDepth(GLdouble depth) {
 // 	(*ptrglClearDepth)(depth);
 // }
 // void goglStencilMask(GLuint mask) {
@@ -720,7 +720,7 @@ package gl33
 // GLboolean goglIsEnabled(GLenum cap) {
 // 	return (*ptrglIsEnabled)(cap);
 // }
-// void goglDepthRange(GLclampd near_, GLclampd far_) {
+// void goglDepthRange(GLdouble near_, GLdouble far_) {
 // 	(*ptrglDepthRange)(near_, far_);
 // }
 // void goglViewport(GLint x, GLint y, GLsizei width, GLsizei height) {
@@ -770,7 +770,7 @@ package gl33
 // 	return (*ptrglIsTexture)(texture);
 // }
 // //  VERSION_1_2
-// void goglBlendColor(GLclampf red, GLclampf green, GLclampf blue, GLclampf alpha) {
+// void goglBlendColor(GLfloat red, GLfloat green, GLfloat blue, GLfloat alpha) {
 // 	(*ptrglBlendColor)(red, green, blue, alpha);
 // }
 // void goglBlendEquation(GLenum mode) {
@@ -792,7 +792,7 @@ package gl33
 // void goglActiveTexture(GLenum texture) {
 // 	(*ptrglActiveTexture)(texture);
 // }
-// void goglSampleCoverage(GLclampf value, GLboolean invert) {
+// void goglSampleCoverage(GLfloat value, GLboolean invert) {
 // 	(*ptrglSampleCoverage)(value, invert);
 // }
 // void goglCompressedTexImage3D(GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLsizei depth, GLint border, GLsizei imageSize, GLvoid* data) {
@@ -823,7 +823,7 @@ package gl33
 // void goglMultiDrawArrays(GLenum mode, GLint* first, GLsizei* count, GLsizei primcount) {
 // 	(*ptrglMultiDrawArrays)(mode, first, count, primcount);
 // }
-// void goglMultiDrawElements(GLenum mode, GLsizei* count, GLenum type_, GLvoid** indices, GLsizei primcount) {
+// void goglMultiDrawElements(GLenum mode, GLsizei* count, GLenum type_, GLvoid* const* indices, GLsizei primcount) {
 // 	(*ptrglMultiDrawElements)(mode, count, type_, indices, primcount);
 // }
 // void goglPointParameterf(GLenum pname, GLfloat param) {
@@ -999,7 +999,7 @@ package gl33
 // void goglLinkProgram(GLuint program) {
 // 	(*ptrglLinkProgram)(program);
 // }
-// void goglShaderSource(GLuint shader, GLsizei count, GLchar** string_, GLint* length) {
+// void goglShaderSource(GLuint shader, GLsizei count, GLchar* const* string_, GLint* length) {
 // 	(*ptrglShaderSource)(shader, count, string_, length);
 // }
 // void goglUseProgram(GLuint program) {
@@ -1226,7 +1226,7 @@ package gl33
 // void goglBindBufferBase(GLenum target, GLuint index, GLuint buffer) {
 // 	(*ptrglBindBufferBase)(target, index, buffer);
 // }
-// void goglTransformFeedbackVaryings(GLuint program, GLsizei count, GLchar** varyings, GLenum bufferMode) {
+// void goglTransformFeedbackVaryings(GLuint program, GLsizei count, GLchar* const* varyings, GLenum bufferMode) {
 // 	(*ptrglTransformFeedbackVaryings)(program, count, varyings, bufferMode);
 // }
 // void goglGetTransformFeedbackVarying(GLuint program, GLuint index, GLsizei bufSize, GLsizei* length, GLsizei* size, GLenum* type_, GLchar* name) {
@@ -1464,7 +1464,7 @@ package gl33
 // void goglCopyBufferSubData(GLenum readTarget, GLenum writeTarget, GLintptr readOffset, GLintptr writeOffset, GLsizeiptr size) {
 // 	(*ptrglCopyBufferSubData)(readTarget, writeTarget, readOffset, writeOffset, size);
 // }
-// void goglGetUniformIndices(GLuint program, GLsizei uniformCount, GLchar** uniformNames, GLuint* uniformIndices) {
+// void goglGetUniformIndices(GLuint program, GLsizei uniformCount, GLchar* const* uniformNames, GLuint* uniformIndices) {
 // 	(*ptrglGetUniformIndices)(program, uniformCount, uniformNames, uniformIndices);
 // }
 // void goglGetActiveUniformsiv(GLuint program, GLsizei uniformCount, GLuint* uniformIndices, GLenum pname, GLint* params) {
@@ -1504,7 +1504,7 @@ package gl33
 // void goglDrawElementsInstancedBaseVertex(GLenum mode, GLsizei count, GLenum type_, GLvoid* indices, GLsizei primcount, GLint basevertex) {
 // 	(*ptrglDrawElementsInstancedBaseVertex)(mode, count, type_, indices, primcount, basevertex);
 // }
-// void goglMultiDrawElementsBaseVertex(GLenum mode, GLsizei* count, GLenum type_, GLvoid** indices, GLsizei primcount, GLint* basevertex) {
+// void goglMultiDrawElementsBaseVertex(GLenum mode, GLsizei* count, GLenum type_, GLvoid* const* indices, GLsizei primcount, GLint* basevertex) {
 // 	(*ptrglMultiDrawElementsBaseVertex)(mode, count, type_, indices, primcount, basevertex);
 // }
 // void goglProvokingVertex(GLenum mode) {
@@ -3034,7 +3034,6 @@ const (
 	DEPTH24_STENCIL8 = 0x88F0
 	DEPTH32F_STENCIL8 = 0x8CAD
 	DEPTH_ATTACHMENT = 0x8D00
-	DEPTH_BUFFER = 0x8223
 	DEPTH_COMPONENT32F = 0x8CAC
 	DEPTH_STENCIL = 0x84F9
 	DEPTH_STENCIL_ATTACHMENT = 0x821A
@@ -3168,7 +3167,6 @@ const (
 	SAMPLER_CUBE_SHADOW = 0x8DC5
 	SEPARATE_ATTRIBS = 0x8C8D
 	STENCIL_ATTACHMENT = 0x8D20
-	STENCIL_BUFFER = 0x8224
 	STENCIL_INDEX1 = 0x8D46
 	STENCIL_INDEX16 = 0x8D49
 	STENCIL_INDEX4 = 0x8D47
@@ -3423,16 +3421,16 @@ func Clear(mask Bitfield)  {
 	C.goglClear((C.GLbitfield)(mask))
 }
 // http://www.opengl.org/sdk/docs/man3/xhtml/glClearColor.xml
-func ClearColor(red Clampf, green Clampf, blue Clampf, alpha Clampf)  {
-	C.goglClearColor((C.GLclampf)(red), (C.GLclampf)(green), (C.GLclampf)(blue), (C.GLclampf)(alpha))
+func ClearColor(red Float, green Float, blue Float, alpha Float)  {
+	C.goglClearColor((C.GLfloat)(red), (C.GLfloat)(green), (C.GLfloat)(blue), (C.GLfloat)(alpha))
 }
 // http://www.opengl.org/sdk/docs/man3/xhtml/glClearStencil.xml
 func ClearStencil(s Int)  {
 	C.goglClearStencil((C.GLint)(s))
 }
 // http://www.opengl.org/sdk/docs/man3/xhtml/glClearDepth.xml
-func ClearDepth(depth Clampd)  {
-	C.goglClearDepth((C.GLclampd)(depth))
+func ClearDepth(depth Double)  {
+	C.goglClearDepth((C.GLdouble)(depth))
 }
 // http://www.opengl.org/sdk/docs/man3/xhtml/glStencilMask.xml
 func StencilMask(mask Uint)  {
@@ -3547,8 +3545,8 @@ func IsEnabled(cap Enum) Boolean {
 	return (Boolean)(C.goglIsEnabled((C.GLenum)(cap)))
 }
 // http://www.opengl.org/sdk/docs/man3/xhtml/glDepthRange.xml
-func DepthRange(near_ Clampd, far_ Clampd)  {
-	C.goglDepthRange((C.GLclampd)(near_), (C.GLclampd)(far_))
+func DepthRange(near_ Double, far_ Double)  {
+	C.goglDepthRange((C.GLdouble)(near_), (C.GLdouble)(far_))
 }
 // http://www.opengl.org/sdk/docs/man3/xhtml/glViewport.xml
 func Viewport(x Int, y Int, width Sizei, height Sizei)  {
@@ -3615,8 +3613,8 @@ func IsTexture(texture Uint) Boolean {
 // VERSION_1_2
 
 // http://www.opengl.org/sdk/docs/man3/xhtml/glBlendColor.xml
-func BlendColor(red Clampf, green Clampf, blue Clampf, alpha Clampf)  {
-	C.goglBlendColor((C.GLclampf)(red), (C.GLclampf)(green), (C.GLclampf)(blue), (C.GLclampf)(alpha))
+func BlendColor(red Float, green Float, blue Float, alpha Float)  {
+	C.goglBlendColor((C.GLfloat)(red), (C.GLfloat)(green), (C.GLfloat)(blue), (C.GLfloat)(alpha))
 }
 // http://www.opengl.org/sdk/docs/man3/xhtml/glBlendEquation.xml
 func BlendEquation(mode Enum)  {
@@ -3645,8 +3643,8 @@ func ActiveTexture(texture Enum)  {
 	C.goglActiveTexture((C.GLenum)(texture))
 }
 // http://www.opengl.org/sdk/docs/man3/xhtml/glSampleCoverage.xml
-func SampleCoverage(value Clampf, invert Boolean)  {
-	C.goglSampleCoverage((C.GLclampf)(value), (C.GLboolean)(invert))
+func SampleCoverage(value Float, invert Boolean)  {
+	C.goglSampleCoverage((C.GLfloat)(value), (C.GLboolean)(invert))
 }
 // http://www.opengl.org/sdk/docs/man3/xhtml/glCompressedTexImage3D.xml
 func CompressedTexImage3D(target Enum, level Int, internalformat Enum, width Sizei, height Sizei, depth Sizei, border Int, imageSize Sizei, data Pointer)  {
