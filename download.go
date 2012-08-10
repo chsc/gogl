@@ -21,10 +21,12 @@ const (
 	GLXEnumSpecFile        = "glxenum.spec"
 	GLXEnumExtSpecFile     = "glxenumext.spec"
 	GLXSpecFile            = "glx.spec"
+	GLXExtSpecFile         = "glxext.spec"
 	GLXTypeMapFile         = "glx.tm"
 	WGLEnumSpecFile        = "wglenum.spec"
 	WGLEnumExtSpecFile     = "wglenumext.spec"
 	WGLSpecFile            = "wgl.spec"
+	WGLExtSpecFile         = "wglext.spec"
 	WGLTypeMapFile         = "wgl.tm"
 )
 
@@ -66,9 +68,11 @@ func DownloadOpenGLSpecs(baseURL, outDir string) {
 
 	DownloadFile(baseURL, GLXEnumExtSpecFile, outDir)
 	DownloadFile(baseURL, GLXSpecFile, outDir)
+	DownloadFile(baseURL, GLXExtSpecFile, outDir)
 	DownloadFile(baseURL, GLXTypeMapFile, outDir)
 
 	DownloadFile(baseURL, WGLEnumExtSpecFile, outDir)
 	DownloadFile(baseURL, WGLSpecFile, outDir)
+	DownloadFile(baseURL, WGLExtSpecFile, outDir)
 	DownloadFile(baseURL, WGLTypeMapFile, outDir)
 }

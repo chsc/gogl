@@ -18,41 +18,46 @@ var (
 	// TODO: add additional flags ...
 )
 
-func main() {
-	fmt.Printf("OpenGL binding generator for Go. Copyright (c) 2011 by Christoph Schunk.\n")
-	flag.Parse()
-
-	if *download {
-		DownloadOpenGLSpecs(*specUrl, *specDir)
-		return
-	}
-
-	fmt.Printf("Parsing enumext.spec file...\n")
-	enumCategories, err := ReadEnumsFromFile(filepath.Join(*specDir, OpenGLEnumExtSpecFile))
+func generatePackages(enumextFile, specFile string, typeMapFiles []string, singlePackage string) error {
+	fmt.Printf("Parsing %s file...\n", enumextFile)
+	enumCategories, err := ReadEnumsFromFile(filepath.Join(*specDir, enumextFile))
 	if err != nil {
-		fmt.Fprintln(os.Stderr, err.Error())
-		return
+		return err
 	}
 
-	fmt.Printf("Parsing gl.tm file ...\n")
-	typeMap, err := ReadTypeMapFromFile(filepath.Join(*specDir, OpenGLTypeMapFile))
+	fmt.Printf("Parsing %v files ...\n", typeMapFiles)
+	tmPaths := make([]string, len(typeMapFiles))
+	for i, tmFile := range typeMapFiles {
+		tmPaths[i] = filepath.Join(*specDir, tmFile)
+	}
+	typeMap, err := ReadTypeMapFromFiles(tmPaths)
 	if err != nil {
-		fmt.Fprintln(os.Stderr, err.Error())
-		return
+		return err
 	}
 
-	fmt.Printf("Parsing gl.spec file ...\n")
-	funcCategories, funcInfo, err := ReadFunctionsFromFile(filepath.Join(*specDir, OpenGLSpecFile))
+	fmt.Printf("Parsing %s file ...\n", specFile)
+	funcCategories, funcInfo, err := ReadFunctionsFromFile(filepath.Join(*specDir, specFile))
 	if err != nil {
-		fmt.Fprintln(os.Stderr, err.Error())
-		return
+		return err
 	}
 
-	fmt.Printf("Sorting extensions ...\n")
-	packages := GroupEnumsAndFunctions(enumCategories, funcCategories,
-		func(category string) (packageNames []string) {
-			return GroupPackagesByVendorFunc(category, funcInfo.Versions, funcInfo.DeprecatedVersions)
-		})
+	fmt.Printf("Grouping extensions ...\n")
+	var gf PackageGroupFunc
+	if len(singlePackage) == 0 {
+		gf = func(category string) (packageNames []string) {
+			return GroupCategoriesByVendorAndVersion(
+				category,
+				funcInfo.Versions,
+				funcInfo.DeprecatedVersions)
+		}
+	} else {
+		gf = func(category string) (packageNames []string) {
+			return GroupCategoriesIntoOnePackage(
+				category,
+				singlePackage)
+		}
+	}
+	packages := GroupEnumsAndFunctions(enumCategories, funcCategories, gf)
 
 	// TODO: This output is temporary for debugging
 	if false {
@@ -92,7 +97,47 @@ func main() {
 
 	fmt.Printf("Generating packages ...\n")
 	if err := GeneratePackages(packages, funcInfo, typeMap); err != nil {
-		fmt.Fprintln(os.Stderr, err.Error())
+		return err
+	}
+
+	return nil
+}
+
+func main() {
+	fmt.Printf("OpenGL binding generator for Go. Copyright (c) 2011-2012 by Christoph Schunk.\n")
+	flag.Parse()
+
+	if *download {
+		DownloadOpenGLSpecs(*specUrl, *specDir)
 		return
+	}
+	var err error
+
+goto ll
+	err = generatePackages(
+		OpenGLEnumExtSpecFile,
+		OpenGLSpecFile,
+		[]string{OpenGLTypeMapFile},
+		"")
+	if err != nil {
+		fmt.Fprintln(os.Stderr, err.Error())
+	}
+ll:
+	err = generatePackages(
+		GLXEnumExtSpecFile,
+		GLXSpecFile,
+		[]string{OpenGLTypeMapFile, GLXTypeMapFile},
+		"glx")
+	if err != nil {
+		fmt.Fprintln(os.Stderr, err.Error())
+	}
+
+	err = generatePackages(
+		WGLEnumExtSpecFile,
+		WGLSpecFile,
+		[]string{OpenGLTypeMapFile, WGLTypeMapFile},
+		"wgl")
+	if err != nil {
+		fmt.Fprintln(os.Stderr, err.Error())
 	}
 }

@@ -43,8 +43,12 @@ func GroupEnumsAndFunctions(enums EnumCategories, functions FunctionCategories, 
 }
 
 // Default grouping function.
-// Currently only one deprecation level supported.
-func GroupPackagesByVendorFunc(category string, supportedVersions []Version, deprecatedVersions []Version) (packageNames []string) {
+// Groups packages by GL versions and vendor extensions:
+//  EXT, ARB, ATI, NV -> ext, arb, ati, nv package
+//  VERSION_1_0, VERSION_1_1, VERSION_1_2 -> gl12
+//  ...
+// Currently only one deprecation level is supported.
+func GroupCategoriesByVendorAndVersion(category string, supportedVersions []Version, deprecatedVersions []Version) (packageNames []string) {
 	pc, err := ParseCategoryString(category)
 	if err != nil {
 		return nil
@@ -74,4 +78,10 @@ func GroupPackagesByVendorFunc(category string, supportedVersions []Version, dep
 		}
 	}
 	return packages
+}
+
+// Put everything into one package.
+// For wgl/glx.
+func GroupCategoriesIntoOnePackage(category, packageName string) (packageNames []string) {
+	return []string{packageName}
 }

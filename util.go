@@ -207,6 +207,31 @@ func CTypeToGoType(cType string, out bool, mod ParamModifier) (goType, cgoType s
 			err = errors.New("Unsupported type.")
 		}
 		return
+	// glx
+	case "Display":
+		goType = "Pointer"
+		cgoType = "C.Display"
+		if mod == ParamModifierArray || mod == ParamModifierReference {
+			//goType = "*" + goType
+			cgoType = "*" + cgoType
+		}
+		return
+	case "GLXHyperpipeNetworkSGIX *":
+		goType = "Pointer"
+		cgoType = "*C.GLXHyperpipeNetworkSGIX"
+		return
+	case "GLXHyperpipeConfigSGIX *":
+		goType = "Pointer"
+		cgoType = "*C.GLXHyperpipeConfigSGIX"
+		return
+	case "GLXHyperpipeConfigSGIX":
+		if mod == ParamModifierArray || mod == ParamModifierReference || out {
+			goType = "Pointer"
+			cgoType = "*C.GLXHyperpipeConfigSGIX"
+		} else {
+			err = errors.New("Unsupported GLXHyperpipeConfigSGIX type.")
+		}
+		return	
 	}
 	// standard cases for primitive data types:
 	switch cType {
@@ -292,6 +317,11 @@ func CTypeToGoType(cType string, out bool, mod ParamModifier) (goType, cgoType s
 	case "GLuint64EXT":
 		goType = "Uint64"
 		cgoType = "C.GLuint64EXT"
+	// glx
+	case "int":
+		goType = "Int"
+		cgoType = "C.int"
+
 	default:
 		err = errors.New("Unknown GL type: " + cType)
 		return

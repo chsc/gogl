@@ -133,7 +133,7 @@ func ReadFunctions(r io.Reader) (FunctionCategories, *FunctionsInfo, error) {
 		} else if glextmask := funcGlextMaskRE.FindStringSubmatch(line); glextmask != nil {
 			currentFunction.GlextMask = glextmask[1]
 		} else if extension := funcExtensionRE.FindStringSubmatch(line); extension != nil {
-			if(len(extension) >= 2) {
+			if len(extension) >= 2 {
 				currentFunction.Extension = extension[1]
 			}
 		} else if vectorequiv := funcVectorEquivRE.FindStringSubmatch(line); vectorequiv != nil {

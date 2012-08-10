@@ -65,6 +65,14 @@ func ReadEnums(r io.Reader) (EnumCategories, error) {
 				} else {
 					fmt.Fprintf(os.Stderr, "ERROR: Unable to find %s.\n", enum[2][3:])
 				}
+			} else if strings.HasPrefix(enum[2], "GLX_") {
+				//fmt.Printf("Lookup %s in %s\n", enum[2][3:], enum[1])
+				ok, val := categories.LookUpDefinition(enum[2][4:])
+				if ok {
+					categories[currentCategory][enum[1]] = val
+				} else {
+					fmt.Fprintf(os.Stderr, "ERROR: Unable to find %s.\n", enum[2][4:])
+				}
 			} else if strings.HasSuffix(enum[2], "u") {
 				categories[currentCategory][enum[1]] = enum[2][:len(enum[2])-1]
 			} else if strings.HasSuffix(enum[2], "ull") {

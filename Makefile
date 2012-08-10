@@ -35,3 +35,5 @@ install_all:
 	go install ./ati
 	go install ./amd
 	go install ./nv
+#	go install ./glx
+#	go install ./wgl

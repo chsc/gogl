@@ -44,7 +44,7 @@ func writePackage(w io.Writer, packageName string, pak *Package, functsInfo *Fun
 	highestMajorVersion := -1
 	isGLPackage := false
 
-	if strings.HasPrefix(packageName, "gl") {
+	if strings.HasPrefix(packageName, "gl") && !strings.HasPrefix(packageName, "glx") {
 		isGLPackage = true
 	}
 
