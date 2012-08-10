@@ -18,8 +18,13 @@ var (
 	// TODO: add additional flags ...
 )
 
-func generatePackages(enumextFile, specFile string, typeMapFiles []string, singlePackage string) error {
-	fmt.Printf("Parsing %s file...\n", enumextFile)
+func generatePackages(
+	enumextFile string,
+	specFiles []string,
+	typeMapFiles []string,
+	singlePackage string) error {
+
+	fmt.Printf("Parsing %s file ...\n", enumextFile)
 	enumCategories, err := ReadEnumsFromFile(filepath.Join(*specDir, enumextFile))
 	if err != nil {
 		return err
@@ -35,8 +40,12 @@ func generatePackages(enumextFile, specFile string, typeMapFiles []string, singl
 		return err
 	}
 
-	fmt.Printf("Parsing %s file ...\n", specFile)
-	funcCategories, funcInfo, err := ReadFunctionsFromFile(filepath.Join(*specDir, specFile))
+	fmt.Printf("Parsing %v files ...\n", specFiles)
+	specPaths := make([]string, len(specFiles))
+	for i, specFile := range specFiles {
+		specPaths[i] = filepath.Join(*specDir, specFile)
+	}
+	funcCategories, funcInfo, err := ReadFunctionsFromFiles(specPaths)
 	if err != nil {
 		return err
 	}
@@ -113,28 +122,30 @@ func main() {
 	}
 	var err error
 
-goto ll
+
 	err = generatePackages(
 		OpenGLEnumExtSpecFile,
-		OpenGLSpecFile,
+		[]string{OpenGLSpecFile},
 		[]string{OpenGLTypeMapFile},
 		"")
 	if err != nil {
 		fmt.Fprintln(os.Stderr, err.Error())
 	}
-ll:
+
+	// TODO: add glxext
 	err = generatePackages(
 		GLXEnumExtSpecFile,
-		GLXSpecFile,
+		[]string{GLXSpecFile, GLXExtSpecFile},
 		[]string{OpenGLTypeMapFile, GLXTypeMapFile},
 		"glx")
 	if err != nil {
 		fmt.Fprintln(os.Stderr, err.Error())
 	}
 
+	// TODO: add wglext
 	err = generatePackages(
 		WGLEnumExtSpecFile,
-		WGLSpecFile,
+		[]string{WGLSpecFile, WGLExtSpecFile},
 		[]string{OpenGLTypeMapFile, WGLTypeMapFile},
 		"wgl")
 	if err != nil {

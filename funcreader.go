@@ -44,6 +44,33 @@ var (
 	//funcIgnoreRE          = regexp.MustCompile("^[a-z\\-]+:.*")
 )
 
+
+func ReadFunctionsFromFiles(files []string) (FunctionCategories, *FunctionsInfo, error) {
+	var finfo *FunctionsInfo = nil
+	allFuncts := make(FunctionCategories)
+	for _, file := range files {
+		functs, info, err := ReadFunctionsFromFile(file)
+		if err != nil {
+			return nil, nil, err
+		}
+		for k, v := range functs {
+			allFuncts[k] = v
+		}
+		if finfo == nil {
+			finfo = info
+		} else {
+			finfo.Versions = append(finfo.Versions, info.Versions...)
+			finfo.DeprecatedVersions = append(finfo.DeprecatedVersions, info.DeprecatedVersions...)
+			finfo.Categories = append(finfo.Categories, info.Categories...)
+			for k, v := range info.Passthru {
+				finfo.Passthru[k] = append(finfo.Passthru[k], v...)
+			}
+		
+		}
+	}
+	return allFuncts, finfo, nil
+}
+
 func ReadFunctionsFromFile(name string) (FunctionCategories, *FunctionsInfo, error) {
 	file, err := os.Open(name)
 	if err != nil {

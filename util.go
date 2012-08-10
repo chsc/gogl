@@ -65,6 +65,8 @@ func ParseCategoryString(category string) (ParsedCategory, error) {
 		return ParsedCategory{}, errors.New("Invalid category string.")
 	} else if splitCat := strings.SplitN(category, "_", 2); len(splitCat) == 2 {
 		return ParsedCategory{CategoryExtension, Version{}, splitCat[0], splitCat[1]}, nil
+	} else if len(category) > 0 {
+		return ParsedCategory{CategoryExtension, Version{}, category, ""}, nil
 	}
 	return ParsedCategory{}, errors.New("Invalid category string.")
 }
