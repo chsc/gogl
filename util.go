@@ -116,9 +116,9 @@ func CTypeToGoType(cType string, out bool, mod ParamModifier) (goType, cgoType s
 			goType = "Pointer"
 			cgoType = "unsafe.Pointer"
 		}
-		if out {
-			err = errors.New("Unsupported void type.")
-		}
+		//if out {
+		//	err = errors.New("Unsupported void type.")
+		//}
 		return
 	case "GLvoid":
 		if mod == ParamModifierArray || mod == ParamModifierReference || out {
@@ -218,6 +218,94 @@ func CTypeToGoType(cType string, out bool, mod ParamModifier) (goType, cgoType s
 			cgoType = "*" + cgoType
 		}
 		return
+	case "Display *":
+		goType = "Pointer"
+		cgoType = "*C.Display"
+		if mod == ParamModifierArray || mod == ParamModifierReference {
+			//goType = "*" + goType
+			cgoType = "*" + cgoType
+		}
+		return
+	case "GLXFBConfig":
+		goType = "Pointer"
+		cgoType = "C.GLXFBConfig"
+		return
+	case "GLXFBConfig *":
+		goType = "Pointer"
+		cgoType = "C.GLXFBConfig *"
+		return
+	case "GLXContext", "const GLXContext":
+		goType = "Pointer"
+		cgoType = "C.GLXContext"
+		return
+	case "GLXContextID":
+		goType = "uint32"
+		cgoType = "C.GLXContextID"
+		return
+	case "GLXDrawable":
+		goType = "Pointer"
+		cgoType = "C.GLXDrawable"
+		return
+	case "XVisualInfo":
+		goType = "Pointer"
+		cgoType = "C.XVisualInfo"
+		return
+	case "XVisualInfo *":
+		goType = "Pointer"
+		cgoType = "*C.XVisualInfo"
+		return
+	case "Pixmap":
+		goType = "Pointer"
+		cgoType = "C.Pixmap"
+		return
+	case "GLXPixmap":
+		goType = "Pointer"
+		cgoType = "C.GLXPixmap"
+		return
+	case "Colormap":
+		goType = "Pointer"
+		cgoType = "C.Colormap"
+		return
+	case "GLXPbuffer":
+		goType = "Pointer"
+		cgoType = "C.GLXPbuffer"
+		return
+	case "GLXPbufferSGIX":
+		goType = "Pointer"
+		cgoType = "C.GLXPbufferSGIX"
+		return
+	case "GLXFBConfigSGIX":
+		goType = "Pointer"
+		cgoType = "C.GLXFBConfigSGIX"
+		return
+	case "GLXFBConfigSGIX *":
+		goType = "Pointer"
+		cgoType = "*C.GLXFBConfigSGIX"
+		return
+	case "DMparams":
+		goType = "Pointer"
+		cgoType = "C.DMparams"
+		return
+	case "DMbuffer":
+		goType = "Pointer"
+		cgoType = "C.DMbuffer"
+		return
+	case "__GLXextFuncPtr":
+		goType = "Pointer"
+		cgoType = "C.__GLXextFuncPtr"
+		return
+	case "GLXVideoDeviceNV":
+		goType = "Pointer"
+		cgoType = "C.GLXVideoDeviceNV"
+		return
+	case "GLXVideoCaptureDeviceNV":
+		goType = "Pointer"
+		cgoType = "C.GLXVideoCaptureDeviceNV"
+		return
+	case "GLXVideoCaptureDeviceNV *":
+		goType = "Pointer"
+		cgoType = "*C.GLXVideoCaptureDeviceNV"
+		return
 	case "GLXHyperpipeNetworkSGIX *":
 		goType = "Pointer"
 		cgoType = "*C.GLXHyperpipeNetworkSGIX"
@@ -233,7 +321,111 @@ func CTypeToGoType(cType string, out bool, mod ParamModifier) (goType, cgoType s
 		} else {
 			err = errors.New("Unsupported GLXHyperpipeConfigSGIX type.")
 		}
-		return	
+		return
+	case "GLXVideoSourceSGIX":
+		goType = "Pointer"
+		cgoType = "*C.GGLXVideoSourceSGIX"
+		return
+	case "Window":
+		goType = "Pointer"
+		cgoType = "C.Window"
+		return
+	case "GLXWindow":
+		goType = "Pointer"
+		cgoType = "C.GLXWindow"
+		return
+	case "VLServer":
+		goType = "Pointer"
+		cgoType = "C.VLServer"
+		return
+	case "VLPath":
+		goType = "Pointer"
+		cgoType = "C.VLPath"
+		return
+	case "VLNode":
+		goType = "Pointer"
+		cgoType = "C.VLNode"
+		return
+	case "unsigned int *":
+		goType = "*uint32"
+		cgoType = "*C.uint32"
+		return
+
+	// wgl
+	case "VOID":
+		goType = ""
+		cgoType = ""
+		return
+	case "LPVOID":
+		goType = "Pointer"
+		cgoType = "C.LPVOID"
+		return
+	case "void*":
+		goType = "Pointer"
+		cgoType = "C.LPVOID"
+		return
+	case "HANDLE":
+		goType = "Pointer"
+		cgoType = "C.HANDLE"
+		return
+	case "HDC":
+		goType = "Pointer"
+		cgoType = "C.HDC"
+		return
+	case "HGLRC":
+		goType = "Pointer"
+		cgoType = "C.HGLRC"
+		return
+	case "HPBUFFERARB":
+		goType = "Pointer"
+		cgoType = "C.HPBUFFERARB"
+		return
+	case "HPBUFFEREXT":
+		goType = "Pointer"
+		cgoType = "C.HPBUFFEREXT"
+		return
+	case "HGPUNV":
+		goType = "Pointer"
+		cgoType = "C.HGPUNV"
+		return
+	case "PGPU_DEVICE":
+		goType = "Pointer"
+		cgoType = "C.PGPU_DEVICE"
+		return
+	case "HVIDEOOUTPUTDEVICENV":
+		goType = "Pointer"
+		cgoType = "C.HVIDEOOUTPUTDEVICENV"
+		return
+	case "HVIDEOINPUTDEVICENV":
+		goType = "Pointer"
+		cgoType = "C.HVIDEOINPUTDEVICENV"
+		return
+	case "HPVIDEODEV":
+		goType = "Pointer"
+		cgoType = "C.HPVIDEODEV"
+		return
+	case "COLORREF":
+		goType = "Pointer"
+		cgoType = "C.COLORREF"
+		return
+	case "LAYERPLANEDESCRIPTOR":
+		goType = "[]byte"
+		cgoType = "C.LAYERPLANEDESCRIPTOR"
+		return
+	case "LPCSTR":
+		goType = "*byte"
+		cgoType = "C.LPCSTR"
+		return
+	case "PIXELFORMATDESCRIPTOR":
+		goType = "[]byte"
+		cgoType = "C.PIXELFORMATDESCRIPTOR"
+		return
+	case "const char *":
+		goType = "*byte"
+		cgoType = "*C.char"
+		return
+
+	
 	}
 	// standard cases for primitive data types:
 	switch cType {
@@ -323,7 +515,59 @@ func CTypeToGoType(cType string, out bool, mod ParamModifier) (goType, cgoType s
 	case "int":
 		goType = "Int"
 		cgoType = "C.int"
+	case "int32_t":
+		goType = "int32"
+		cgoType = "C.int32_t"
+	case "int64_t":
+		goType = "int64"
+		cgoType = "C.int64_t"
+	case "Bool":
+		goType = "int"
+		cgoType = "C.int"
+	case "Status":
+		goType = "int"
+		cgoType = "C.int"
+	case "long":
+		goType = "int32"
+		cgoType = "C.long"
 
+	//wgl
+	case "UINT":
+		goType = "uint32"
+		cgoType = "C.UINT"
+	case "INT":
+		goType = "int32"
+		cgoType = "C.INT"
+	case "INT32":
+		goType = "int32"
+		cgoType = "C.INT32"
+	case "INT64":
+		goType = "int64"
+		cgoType = "C.INT64"
+	case "USHORT":
+		goType = "uint16"
+		cgoType = "C.USHORT"
+	case "DWORD":
+		goType = "uint32"
+		cgoType = "C.DWORD"
+	case "FLOAT":
+		goType = "float32"
+		cgoType = "C.FLOAT"
+	case "BOOL":
+		goType = "int32"
+		cgoType = "C.BOOL"
+	case "PROC":
+		goType = "Pointer"
+		cgoType = "C.PROC"
+	case "float":
+		goType = "float32"
+		cgoType = "C.float32"
+	case "unsigned int":
+		goType = "uint32"
+		cgoType = "C.uint32"
+	case "unsigned long":
+		goType = "uint32"
+		cgoType = "C.unsigned_long"
 	default:
 		err = errors.New("Unknown GL type: " + cType)
 		return

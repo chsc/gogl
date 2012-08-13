@@ -186,7 +186,23 @@ func (e EnumCategories) LookUpDefinition(name string) (bool, string) {
 type TypeMap map[string]string
 
 func (tm TypeMap) Resolve(t string) (string, error) {
+	// HACK: return t if type is not part of the spec
 	if t == "void" {
+		return t, nil
+	}
+	if t == "PIXELFORMATDESCRIPTOR" { 
+		return t, nil
+	}
+	if t == "LPCSTR" { 
+		return t, nil
+	}
+	if t == "LAYERPLANEDESCRIPTOR" { 
+		return t, nil
+	}
+	if t == "COLORREF" { 
+		return t, nil
+	}
+	if t == "HDC" { 
 		return t, nil
 	}
 	if rt, ok := tm[t]; ok {
