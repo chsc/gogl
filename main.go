@@ -22,7 +22,7 @@ func generatePackages(
 	enumextFile string,
 	specFiles []string,
 	typeMapFiles []string,
-	singlePackage string) error {
+	singlePackage, prefix string) error {
 
 	fmt.Printf("Parsing %s file ...\n", enumextFile)
 	enumCategories, err := ReadEnumsFromFile(filepath.Join(*specDir, enumextFile))
@@ -105,7 +105,7 @@ func generatePackages(
 	}
 
 	fmt.Printf("Generating packages ...\n")
-	if err := GeneratePackages(packages, funcInfo, typeMap); err != nil {
+	if err := GeneratePackages(packages, funcInfo, typeMap, prefix); err != nil {
 		return err
 	}
 
@@ -127,7 +127,7 @@ func main() {
 		OpenGLEnumExtSpecFile,
 		[]string{OpenGLSpecFile},
 		[]string{OpenGLTypeMapFile},
-		"")
+		"", "gl")
 	if err != nil {
 		fmt.Fprintln(os.Stderr, err.Error())
 	}
@@ -137,7 +137,7 @@ func main() {
 		GLXEnumExtSpecFile,
 		[]string{GLXSpecFile, GLXExtSpecFile},
 		[]string{OpenGLTypeMapFile, GLXTypeMapFile},
-		"glx")
+		"glx", "glx")
 	if err != nil {
 		fmt.Fprintln(os.Stderr, err.Error())
 	}
@@ -147,7 +147,7 @@ func main() {
 		WGLEnumExtSpecFile,
 		[]string{WGLSpecFile, WGLExtSpecFile},
 		[]string{OpenGLTypeMapFile, WGLTypeMapFile},
-		"wgl")
+		"wgl", "wgl")
 	if err != nil {
 		fmt.Fprintln(os.Stderr, err.Error())
 	}

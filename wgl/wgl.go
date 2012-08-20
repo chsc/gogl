@@ -170,7 +170,7 @@ package wgl
 // static HMODULE opengl32 = NULL;
 // #endif
 // 
-// static void* goglGetProcAddress(const char* name) { 
+// static void* gowglGetProcAddress(const char* name) { 
 // #ifdef __APPLE__
 // 	return dlsym(RTLD_DEFAULT, name);
 // #elif _WIN32
@@ -189,697 +189,697 @@ package wgl
 // 
 // //  3DFX_multisample
 // //  3DL_stereo_control
-// BOOL (APIENTRYP ptrglSetStereoEmitterState3DL)(HDC hDC, UINT uState);
+// BOOL (APIENTRYP ptrwglSetStereoEmitterState3DL)(HDC hDC, UINT uState);
 // //  AMD_gpu_association
-// UINT (APIENTRYP ptrglGetGPUIDsAMD)(UINT maxCount, UINT* ids);
-// INT (APIENTRYP ptrglGetGPUInfoAMD)(UINT id, int property, GLenum dataType, UINT size, void* data);
-// UINT (APIENTRYP ptrglGetContextGPUIDAMD)(HGLRC hglrc);
-// HGLRC (APIENTRYP ptrglCreateAssociatedContextAMD)(UINT id);
-// HGLRC (APIENTRYP ptrglCreateAssociatedContextAttribsAMD)(UINT id, HGLRC hShareContext, int* attribList);
-// BOOL (APIENTRYP ptrglDeleteAssociatedContextAMD)(HGLRC hglrc);
-// BOOL (APIENTRYP ptrglMakeAssociatedContextCurrentAMD)(HGLRC hglrc);
-// HGLRC (APIENTRYP ptrglGetCurrentAssociatedContextAMD)();
-// VOID (APIENTRYP ptrglBlitContextFramebufferAMD)(HGLRC dstCtx, GLint srcX0, GLint srcY0, GLint srcX1, GLint srcY1, GLint dstX0, GLint dstY0, GLint dstX1, GLint dstY1, GLbitfield mask, GLenum filter);
+// UINT (APIENTRYP ptrwglGetGPUIDsAMD)(UINT maxCount, UINT* ids);
+// INT (APIENTRYP ptrwglGetGPUInfoAMD)(UINT id, int property, GLenum dataType, UINT size, void* data);
+// UINT (APIENTRYP ptrwglGetContextGPUIDAMD)(HGLRC hglrc);
+// HGLRC (APIENTRYP ptrwglCreateAssociatedContextAMD)(UINT id);
+// HGLRC (APIENTRYP ptrwglCreateAssociatedContextAttribsAMD)(UINT id, HGLRC hShareContext, int* attribList);
+// BOOL (APIENTRYP ptrwglDeleteAssociatedContextAMD)(HGLRC hglrc);
+// BOOL (APIENTRYP ptrwglMakeAssociatedContextCurrentAMD)(HGLRC hglrc);
+// HGLRC (APIENTRYP ptrwglGetCurrentAssociatedContextAMD)();
+// VOID (APIENTRYP ptrwglBlitContextFramebufferAMD)(HGLRC dstCtx, GLint srcX0, GLint srcY0, GLint srcX1, GLint srcY1, GLint dstX0, GLint dstY0, GLint dstX1, GLint dstY1, GLbitfield mask, GLenum filter);
 // //  ARB_buffer_region
-// HANDLE (APIENTRYP ptrglCreateBufferRegionARB)(HDC hDC, int iLayerPlane, UINT uType);
-// VOID (APIENTRYP ptrglDeleteBufferRegionARB)(HANDLE hRegion);
-// BOOL (APIENTRYP ptrglSaveBufferRegionARB)(HANDLE hRegion, int x, int y, int width, int height);
-// BOOL (APIENTRYP ptrglRestoreBufferRegionARB)(HANDLE hRegion, int x, int y, int width, int height, int xSrc, int ySrc);
+// HANDLE (APIENTRYP ptrwglCreateBufferRegionARB)(HDC hDC, int iLayerPlane, UINT uType);
+// VOID (APIENTRYP ptrwglDeleteBufferRegionARB)(HANDLE hRegion);
+// BOOL (APIENTRYP ptrwglSaveBufferRegionARB)(HANDLE hRegion, int x, int y, int width, int height);
+// BOOL (APIENTRYP ptrwglRestoreBufferRegionARB)(HANDLE hRegion, int x, int y, int width, int height, int xSrc, int ySrc);
 // //  ARB_create_context
-// HGLRC (APIENTRYP ptrglCreateContextAttribsARB)(HDC hDC, HGLRC hShareContext, int* attribList);
+// HGLRC (APIENTRYP ptrwglCreateContextAttribsARB)(HDC hDC, HGLRC hShareContext, int* attribList);
 // //  ARB_create_context_profile
 // //  ARB_create_context_robustness
 // //  ARB_extensions_string
-// const char * (APIENTRYP ptrglGetExtensionsStringARB)(HDC hdc);
+// const char * (APIENTRYP ptrwglGetExtensionsStringARB)(HDC hdc);
 // //  ARB_framebuffer_sRGB
 // //  ARB_make_current_read
-// BOOL (APIENTRYP ptrglMakeContextCurrentARB)(HDC hDrawDC, HDC hReadDC, HGLRC hglrc);
-// HDC (APIENTRYP ptrglGetCurrentReadDCARB)();
+// BOOL (APIENTRYP ptrwglMakeContextCurrentARB)(HDC hDrawDC, HDC hReadDC, HGLRC hglrc);
+// HDC (APIENTRYP ptrwglGetCurrentReadDCARB)();
 // //  ARB_multisample
 // //  ARB_pbuffer
-// HPBUFFERARB (APIENTRYP ptrglCreatePbufferARB)(HDC hDC, int iPixelFormat, int iWidth, int iHeight, int* piAttribList);
-// HDC (APIENTRYP ptrglGetPbufferDCARB)(HPBUFFERARB hPbuffer);
-// int (APIENTRYP ptrglReleasePbufferDCARB)(HPBUFFERARB hPbuffer, HDC hDC);
-// BOOL (APIENTRYP ptrglDestroyPbufferARB)(HPBUFFERARB hPbuffer);
-// BOOL (APIENTRYP ptrglQueryPbufferARB)(HPBUFFERARB hPbuffer, int iAttribute, int* piValue);
+// HPBUFFERARB (APIENTRYP ptrwglCreatePbufferARB)(HDC hDC, int iPixelFormat, int iWidth, int iHeight, int* piAttribList);
+// HDC (APIENTRYP ptrwglGetPbufferDCARB)(HPBUFFERARB hPbuffer);
+// int (APIENTRYP ptrwglReleasePbufferDCARB)(HPBUFFERARB hPbuffer, HDC hDC);
+// BOOL (APIENTRYP ptrwglDestroyPbufferARB)(HPBUFFERARB hPbuffer);
+// BOOL (APIENTRYP ptrwglQueryPbufferARB)(HPBUFFERARB hPbuffer, int iAttribute, int* piValue);
 // //  ARB_pixel_format
-// BOOL (APIENTRYP ptrglGetPixelFormatAttribivARB)(HDC hdc, int iPixelFormat, int iLayerPlane, UINT nAttributes, int* piAttributes, int* piValues);
-// BOOL (APIENTRYP ptrglGetPixelFormatAttribfvARB)(HDC hdc, int iPixelFormat, int iLayerPlane, UINT nAttributes, int* piAttributes, FLOAT* pfValues);
-// BOOL (APIENTRYP ptrglChoosePixelFormatARB)(HDC hdc, int* piAttribIList, FLOAT* pfAttribFList, UINT nMaxFormats, int* piFormats, UINT* nNumFormats);
+// BOOL (APIENTRYP ptrwglGetPixelFormatAttribivARB)(HDC hdc, int iPixelFormat, int iLayerPlane, UINT nAttributes, int* piAttributes, int* piValues);
+// BOOL (APIENTRYP ptrwglGetPixelFormatAttribfvARB)(HDC hdc, int iPixelFormat, int iLayerPlane, UINT nAttributes, int* piAttributes, FLOAT* pfValues);
+// BOOL (APIENTRYP ptrwglChoosePixelFormatARB)(HDC hdc, int* piAttribIList, FLOAT* pfAttribFList, UINT nMaxFormats, int* piFormats, UINT* nNumFormats);
 // //  ARB_pixel_format_float
 // //  ARB_render_texture
-// BOOL (APIENTRYP ptrglBindTexImageARB)(HPBUFFERARB hPbuffer, int iBuffer);
-// BOOL (APIENTRYP ptrglReleaseTexImageARB)(HPBUFFERARB hPbuffer, int iBuffer);
-// BOOL (APIENTRYP ptrglSetPbufferAttribARB)(HPBUFFERARB hPbuffer, int* piAttribList);
+// BOOL (APIENTRYP ptrwglBindTexImageARB)(HPBUFFERARB hPbuffer, int iBuffer);
+// BOOL (APIENTRYP ptrwglReleaseTexImageARB)(HPBUFFERARB hPbuffer, int iBuffer);
+// BOOL (APIENTRYP ptrwglSetPbufferAttribARB)(HPBUFFERARB hPbuffer, int* piAttribList);
 // //  ATI_pixel_format_float
 // //  EXT_depth_float
 // //  EXT_display_color_table
-// GLboolean (APIENTRYP ptrglCreateDisplayColorTableEXT)(GLushort id);
-// GLboolean (APIENTRYP ptrglLoadDisplayColorTableEXT)(GLushort* table, GLuint length);
-// GLboolean (APIENTRYP ptrglBindDisplayColorTableEXT)(GLushort id);
-// VOID (APIENTRYP ptrglDestroyDisplayColorTableEXT)(GLushort id);
+// GLboolean (APIENTRYP ptrwglCreateDisplayColorTableEXT)(GLushort id);
+// GLboolean (APIENTRYP ptrwglLoadDisplayColorTableEXT)(GLushort* table, GLuint length);
+// GLboolean (APIENTRYP ptrwglBindDisplayColorTableEXT)(GLushort id);
+// VOID (APIENTRYP ptrwglDestroyDisplayColorTableEXT)(GLushort id);
 // //  EXT_extensions_string
-// const char * (APIENTRYP ptrglGetExtensionsStringEXT)();
+// const char * (APIENTRYP ptrwglGetExtensionsStringEXT)();
 // //  EXT_framebuffer_sRGB
 // //  EXT_make_current_read
-// BOOL (APIENTRYP ptrglMakeContextCurrentEXT)(HDC hDrawDC, HDC hReadDC, HGLRC hglrc);
-// HDC (APIENTRYP ptrglGetCurrentReadDCEXT)();
+// BOOL (APIENTRYP ptrwglMakeContextCurrentEXT)(HDC hDrawDC, HDC hReadDC, HGLRC hglrc);
+// HDC (APIENTRYP ptrwglGetCurrentReadDCEXT)();
 // //  EXT_multisample
 // //  EXT_pbuffer
-// HPBUFFEREXT (APIENTRYP ptrglCreatePbufferEXT)(HDC hDC, int iPixelFormat, int iWidth, int iHeight, int* piAttribList);
-// HDC (APIENTRYP ptrglGetPbufferDCEXT)(HPBUFFEREXT hPbuffer);
-// int (APIENTRYP ptrglReleasePbufferDCEXT)(HPBUFFEREXT hPbuffer, HDC hDC);
-// BOOL (APIENTRYP ptrglDestroyPbufferEXT)(HPBUFFEREXT hPbuffer);
-// BOOL (APIENTRYP ptrglQueryPbufferEXT)(HPBUFFEREXT hPbuffer, int iAttribute, int* piValue);
+// HPBUFFEREXT (APIENTRYP ptrwglCreatePbufferEXT)(HDC hDC, int iPixelFormat, int iWidth, int iHeight, int* piAttribList);
+// HDC (APIENTRYP ptrwglGetPbufferDCEXT)(HPBUFFEREXT hPbuffer);
+// int (APIENTRYP ptrwglReleasePbufferDCEXT)(HPBUFFEREXT hPbuffer, HDC hDC);
+// BOOL (APIENTRYP ptrwglDestroyPbufferEXT)(HPBUFFEREXT hPbuffer);
+// BOOL (APIENTRYP ptrwglQueryPbufferEXT)(HPBUFFEREXT hPbuffer, int iAttribute, int* piValue);
 // //  EXT_pixel_format
-// BOOL (APIENTRYP ptrglGetPixelFormatAttribivEXT)(HDC hdc, int iPixelFormat, int iLayerPlane, UINT nAttributes, int* piAttributes, int* piValues);
-// BOOL (APIENTRYP ptrglGetPixelFormatAttribfvEXT)(HDC hdc, int iPixelFormat, int iLayerPlane, UINT nAttributes, int* piAttributes, FLOAT* pfValues);
-// BOOL (APIENTRYP ptrglChoosePixelFormatEXT)(HDC hdc, int* piAttribIList, FLOAT* pfAttribFList, UINT nMaxFormats, int* piFormats, UINT* nNumFormats);
+// BOOL (APIENTRYP ptrwglGetPixelFormatAttribivEXT)(HDC hdc, int iPixelFormat, int iLayerPlane, UINT nAttributes, int* piAttributes, int* piValues);
+// BOOL (APIENTRYP ptrwglGetPixelFormatAttribfvEXT)(HDC hdc, int iPixelFormat, int iLayerPlane, UINT nAttributes, int* piAttributes, FLOAT* pfValues);
+// BOOL (APIENTRYP ptrwglChoosePixelFormatEXT)(HDC hdc, int* piAttribIList, FLOAT* pfAttribFList, UINT nMaxFormats, int* piFormats, UINT* nNumFormats);
 // //  EXT_pixel_format_packed_float
 // //  EXT_swap_control
-// BOOL (APIENTRYP ptrglSwapIntervalEXT)(int interval);
-// int (APIENTRYP ptrglGetSwapIntervalEXT)();
+// BOOL (APIENTRYP ptrwglSwapIntervalEXT)(int interval);
+// int (APIENTRYP ptrwglGetSwapIntervalEXT)();
 // //  EXT_swap_control_tear
 // //  I3D_digital_video_control
-// BOOL (APIENTRYP ptrglGetDigitalVideoParametersI3D)(HDC hDC, int iAttribute, int* piValue);
-// BOOL (APIENTRYP ptrglSetDigitalVideoParametersI3D)(HDC hDC, int iAttribute, int* piValue);
+// BOOL (APIENTRYP ptrwglGetDigitalVideoParametersI3D)(HDC hDC, int iAttribute, int* piValue);
+// BOOL (APIENTRYP ptrwglSetDigitalVideoParametersI3D)(HDC hDC, int iAttribute, int* piValue);
 // //  I3D_gamma
-// BOOL (APIENTRYP ptrglGetGammaTableParametersI3D)(HDC hDC, int iAttribute, int* piValue);
-// BOOL (APIENTRYP ptrglSetGammaTableParametersI3D)(HDC hDC, int iAttribute, int* piValue);
-// BOOL (APIENTRYP ptrglGetGammaTableI3D)(HDC hDC, int iEntries, USHORT* puRed, USHORT* puGreen, USHORT* puBlue);
-// BOOL (APIENTRYP ptrglSetGammaTableI3D)(HDC hDC, int iEntries, USHORT* puRed, USHORT* puGreen, USHORT* puBlue);
+// BOOL (APIENTRYP ptrwglGetGammaTableParametersI3D)(HDC hDC, int iAttribute, int* piValue);
+// BOOL (APIENTRYP ptrwglSetGammaTableParametersI3D)(HDC hDC, int iAttribute, int* piValue);
+// BOOL (APIENTRYP ptrwglGetGammaTableI3D)(HDC hDC, int iEntries, USHORT* puRed, USHORT* puGreen, USHORT* puBlue);
+// BOOL (APIENTRYP ptrwglSetGammaTableI3D)(HDC hDC, int iEntries, USHORT* puRed, USHORT* puGreen, USHORT* puBlue);
 // //  I3D_genlock
-// BOOL (APIENTRYP ptrglEnableGenlockI3D)(HDC hDC);
-// BOOL (APIENTRYP ptrglDisableGenlockI3D)(HDC hDC);
-// BOOL (APIENTRYP ptrglIsEnabledGenlockI3D)(HDC hDC, BOOL* pFlag);
-// BOOL (APIENTRYP ptrglGenlockSourceI3D)(HDC hDC, UINT uSource);
-// BOOL (APIENTRYP ptrglGetGenlockSourceI3D)(HDC hDC, UINT* uSource);
-// BOOL (APIENTRYP ptrglGenlockSourceEdgeI3D)(HDC hDC, UINT uEdge);
-// BOOL (APIENTRYP ptrglGetGenlockSourceEdgeI3D)(HDC hDC, UINT* uEdge);
-// BOOL (APIENTRYP ptrglGenlockSampleRateI3D)(HDC hDC, UINT uRate);
-// BOOL (APIENTRYP ptrglGetGenlockSampleRateI3D)(HDC hDC, UINT* uRate);
-// BOOL (APIENTRYP ptrglGenlockSourceDelayI3D)(HDC hDC, UINT uDelay);
-// BOOL (APIENTRYP ptrglGetGenlockSourceDelayI3D)(HDC hDC, UINT* uDelay);
-// BOOL (APIENTRYP ptrglQueryGenlockMaxSourceDelayI3D)(HDC hDC, UINT* uMaxLineDelay, UINT* uMaxPixelDelay);
+// BOOL (APIENTRYP ptrwglEnableGenlockI3D)(HDC hDC);
+// BOOL (APIENTRYP ptrwglDisableGenlockI3D)(HDC hDC);
+// BOOL (APIENTRYP ptrwglIsEnabledGenlockI3D)(HDC hDC, BOOL* pFlag);
+// BOOL (APIENTRYP ptrwglGenlockSourceI3D)(HDC hDC, UINT uSource);
+// BOOL (APIENTRYP ptrwglGetGenlockSourceI3D)(HDC hDC, UINT* uSource);
+// BOOL (APIENTRYP ptrwglGenlockSourceEdgeI3D)(HDC hDC, UINT uEdge);
+// BOOL (APIENTRYP ptrwglGetGenlockSourceEdgeI3D)(HDC hDC, UINT* uEdge);
+// BOOL (APIENTRYP ptrwglGenlockSampleRateI3D)(HDC hDC, UINT uRate);
+// BOOL (APIENTRYP ptrwglGetGenlockSampleRateI3D)(HDC hDC, UINT* uRate);
+// BOOL (APIENTRYP ptrwglGenlockSourceDelayI3D)(HDC hDC, UINT uDelay);
+// BOOL (APIENTRYP ptrwglGetGenlockSourceDelayI3D)(HDC hDC, UINT* uDelay);
+// BOOL (APIENTRYP ptrwglQueryGenlockMaxSourceDelayI3D)(HDC hDC, UINT* uMaxLineDelay, UINT* uMaxPixelDelay);
 // //  I3D_image_buffer
-// LPVOID (APIENTRYP ptrglCreateImageBufferI3D)(HDC hDC, DWORD dwSize, UINT uFlags);
-// BOOL (APIENTRYP ptrglDestroyImageBufferI3D)(HDC hDC, LPVOID pAddress);
-// BOOL (APIENTRYP ptrglAssociateImageBufferEventsI3D)(HDC hDC, HANDLE* pEvent, LPVOID* pAddress, DWORD* pSize, UINT count);
-// BOOL (APIENTRYP ptrglReleaseImageBufferEventsI3D)(HDC hDC, LPVOID* pAddress, UINT count);
+// LPVOID (APIENTRYP ptrwglCreateImageBufferI3D)(HDC hDC, DWORD dwSize, UINT uFlags);
+// BOOL (APIENTRYP ptrwglDestroyImageBufferI3D)(HDC hDC, LPVOID pAddress);
+// BOOL (APIENTRYP ptrwglAssociateImageBufferEventsI3D)(HDC hDC, HANDLE* pEvent, LPVOID* pAddress, DWORD* pSize, UINT count);
+// BOOL (APIENTRYP ptrwglReleaseImageBufferEventsI3D)(HDC hDC, LPVOID* pAddress, UINT count);
 // //  I3D_swap_frame_lock
-// BOOL (APIENTRYP ptrglEnableFrameLockI3D)();
-// BOOL (APIENTRYP ptrglDisableFrameLockI3D)();
-// BOOL (APIENTRYP ptrglIsEnabledFrameLockI3D)(BOOL* pFlag);
-// BOOL (APIENTRYP ptrglQueryFrameLockMasterI3D)(BOOL* pFlag);
+// BOOL (APIENTRYP ptrwglEnableFrameLockI3D)();
+// BOOL (APIENTRYP ptrwglDisableFrameLockI3D)();
+// BOOL (APIENTRYP ptrwglIsEnabledFrameLockI3D)(BOOL* pFlag);
+// BOOL (APIENTRYP ptrwglQueryFrameLockMasterI3D)(BOOL* pFlag);
 // //  I3D_swap_frame_usage
-// BOOL (APIENTRYP ptrglGetFrameUsageI3D)(float* pUsage);
-// BOOL (APIENTRYP ptrglBeginFrameTrackingI3D)();
-// BOOL (APIENTRYP ptrglEndFrameTrackingI3D)();
-// BOOL (APIENTRYP ptrglQueryFrameTrackingI3D)(DWORD* pFrameCount, DWORD* pMissedFrames, float* pLastMissedUsage);
+// BOOL (APIENTRYP ptrwglGetFrameUsageI3D)(float* pUsage);
+// BOOL (APIENTRYP ptrwglBeginFrameTrackingI3D)();
+// BOOL (APIENTRYP ptrwglEndFrameTrackingI3D)();
+// BOOL (APIENTRYP ptrwglQueryFrameTrackingI3D)(DWORD* pFrameCount, DWORD* pMissedFrames, float* pLastMissedUsage);
 // //  NV_DX_interop
-// BOOL (APIENTRYP ptrglDXSetResourceShareHandleNV)(void* dxObject, HANDLE shareHandle);
-// HANDLE (APIENTRYP ptrglDXOpenDeviceNV)(void* dxDevice);
-// BOOL (APIENTRYP ptrglDXCloseDeviceNV)(HANDLE hDevice);
-// HANDLE (APIENTRYP ptrglDXRegisterObjectNV)(HANDLE hDevice, void* dxObject, GLuint name, GLenum type, GLenum access);
-// BOOL (APIENTRYP ptrglDXUnregisterObjectNV)(HANDLE hDevice, HANDLE hObject);
-// BOOL (APIENTRYP ptrglDXObjectAccessNV)(HANDLE hObject, GLenum access);
-// BOOL (APIENTRYP ptrglDXLockObjectsNV)(HANDLE hDevice, GLint count, HANDLE* hObjects);
-// BOOL (APIENTRYP ptrglDXUnlockObjectsNV)(HANDLE hDevice, GLint count, HANDLE* hObjects);
+// BOOL (APIENTRYP ptrwglDXSetResourceShareHandleNV)(void* dxObject, HANDLE shareHandle);
+// HANDLE (APIENTRYP ptrwglDXOpenDeviceNV)(void* dxDevice);
+// BOOL (APIENTRYP ptrwglDXCloseDeviceNV)(HANDLE hDevice);
+// HANDLE (APIENTRYP ptrwglDXRegisterObjectNV)(HANDLE hDevice, void* dxObject, GLuint name, GLenum type, GLenum access);
+// BOOL (APIENTRYP ptrwglDXUnregisterObjectNV)(HANDLE hDevice, HANDLE hObject);
+// BOOL (APIENTRYP ptrwglDXObjectAccessNV)(HANDLE hObject, GLenum access);
+// BOOL (APIENTRYP ptrwglDXLockObjectsNV)(HANDLE hDevice, GLint count, HANDLE* hObjects);
+// BOOL (APIENTRYP ptrwglDXUnlockObjectsNV)(HANDLE hDevice, GLint count, HANDLE* hObjects);
 // //  NV_DX_interop2
 // //  NV_copy_image
-// BOOL (APIENTRYP ptrglCopyImageSubDataNV)(HGLRC hSrcRC, GLuint srcName, GLenum srcTarget, GLint srcLevel, GLint srcX, GLint srcY, GLint srcZ, HGLRC hDstRC, GLuint dstName, GLenum dstTarget, GLint dstLevel, GLint dstX, GLint dstY, GLint dstZ, GLsizei width, GLsizei height, GLsizei depth);
+// BOOL (APIENTRYP ptrwglCopyImageSubDataNV)(HGLRC hSrcRC, GLuint srcName, GLenum srcTarget, GLint srcLevel, GLint srcX, GLint srcY, GLint srcZ, HGLRC hDstRC, GLuint dstName, GLenum dstTarget, GLint dstLevel, GLint dstX, GLint dstY, GLint dstZ, GLsizei width, GLsizei height, GLsizei depth);
 // //  NV_float_buffer
 // //  NV_gpu_affinity
-// BOOL (APIENTRYP ptrglEnumGpusNV)(UINT iGpuIndex, HGPUNV* phGpu);
-// BOOL (APIENTRYP ptrglEnumGpuDevicesNV)(HGPUNV hGpu, UINT iDeviceIndex, PGPU_DEVICE lpGpuDevice);
-// HDC (APIENTRYP ptrglCreateAffinityDCNV)(HGPUNV* phGpuList);
-// BOOL (APIENTRYP ptrglEnumGpusFromAffinityDCNV)(HDC hAffinityDC, UINT iGpuIndex, HGPUNV* hGpu);
-// BOOL (APIENTRYP ptrglDeleteDCNV)(HDC hdc);
+// BOOL (APIENTRYP ptrwglEnumGpusNV)(UINT iGpuIndex, HGPUNV* phGpu);
+// BOOL (APIENTRYP ptrwglEnumGpuDevicesNV)(HGPUNV hGpu, UINT iDeviceIndex, PGPU_DEVICE lpGpuDevice);
+// HDC (APIENTRYP ptrwglCreateAffinityDCNV)(HGPUNV* phGpuList);
+// BOOL (APIENTRYP ptrwglEnumGpusFromAffinityDCNV)(HDC hAffinityDC, UINT iGpuIndex, HGPUNV* hGpu);
+// BOOL (APIENTRYP ptrwglDeleteDCNV)(HDC hdc);
 // //  NV_multisample_coverage
 // //  NV_present_video
-// int (APIENTRYP ptrglEnumerateVideoDevicesNV)(HDC hDC, HVIDEOOUTPUTDEVICENV* phDeviceList);
-// BOOL (APIENTRYP ptrglBindVideoDeviceNV)(HDC hDC, unsigned int uVideoSlot, HVIDEOOUTPUTDEVICENV hVideoDevice, int* piAttribList);
-// BOOL (APIENTRYP ptrglQueryCurrentContextNV)(int iAttribute, int* piValue);
+// int (APIENTRYP ptrwglEnumerateVideoDevicesNV)(HDC hDC, HVIDEOOUTPUTDEVICENV* phDeviceList);
+// BOOL (APIENTRYP ptrwglBindVideoDeviceNV)(HDC hDC, unsigned int uVideoSlot, HVIDEOOUTPUTDEVICENV hVideoDevice, int* piAttribList);
+// BOOL (APIENTRYP ptrwglQueryCurrentContextNV)(int iAttribute, int* piValue);
 // //  NV_swap_group
-// BOOL (APIENTRYP ptrglJoinSwapGroupNV)(HDC hDC, GLuint group);
-// BOOL (APIENTRYP ptrglBindSwapBarrierNV)(GLuint group, GLuint barrier);
-// BOOL (APIENTRYP ptrglQuerySwapGroupNV)(HDC hDC, GLuint* group, GLuint* barrier);
-// BOOL (APIENTRYP ptrglQueryMaxSwapGroupsNV)(HDC hDC, GLuint* maxGroups, GLuint* maxBarriers);
-// BOOL (APIENTRYP ptrglQueryFrameCountNV)(HDC hDC, GLuint* count);
-// BOOL (APIENTRYP ptrglResetFrameCountNV)(HDC hDC);
+// BOOL (APIENTRYP ptrwglJoinSwapGroupNV)(HDC hDC, GLuint group);
+// BOOL (APIENTRYP ptrwglBindSwapBarrierNV)(GLuint group, GLuint barrier);
+// BOOL (APIENTRYP ptrwglQuerySwapGroupNV)(HDC hDC, GLuint* group, GLuint* barrier);
+// BOOL (APIENTRYP ptrwglQueryMaxSwapGroupsNV)(HDC hDC, GLuint* maxGroups, GLuint* maxBarriers);
+// BOOL (APIENTRYP ptrwglQueryFrameCountNV)(HDC hDC, GLuint* count);
+// BOOL (APIENTRYP ptrwglResetFrameCountNV)(HDC hDC);
 // //  NV_vertex_array_range
-// void* (APIENTRYP ptrglAllocateMemoryNV)(GLsizei size, GLfloat readfreq, GLfloat writefreq, GLfloat priority);
-// void (APIENTRYP ptrglFreeMemoryNV)(void* pointer);
+// void* (APIENTRYP ptrwglAllocateMemoryNV)(GLsizei size, GLfloat readfreq, GLfloat writefreq, GLfloat priority);
+// void (APIENTRYP ptrwglFreeMemoryNV)(void* pointer);
 // //  NV_video_capture
-// BOOL (APIENTRYP ptrglBindVideoCaptureDeviceNV)(UINT uVideoSlot, HVIDEOINPUTDEVICENV hDevice);
-// UINT (APIENTRYP ptrglEnumerateVideoCaptureDevicesNV)(HDC hDc, HVIDEOINPUTDEVICENV* phDeviceList);
-// BOOL (APIENTRYP ptrglLockVideoCaptureDeviceNV)(HDC hDc, HVIDEOINPUTDEVICENV hDevice);
-// BOOL (APIENTRYP ptrglQueryVideoCaptureDeviceNV)(HDC hDc, HVIDEOINPUTDEVICENV hDevice, int iAttribute, int* piValue);
-// BOOL (APIENTRYP ptrglReleaseVideoCaptureDeviceNV)(HDC hDc, HVIDEOINPUTDEVICENV hDevice);
+// BOOL (APIENTRYP ptrwglBindVideoCaptureDeviceNV)(UINT uVideoSlot, HVIDEOINPUTDEVICENV hDevice);
+// UINT (APIENTRYP ptrwglEnumerateVideoCaptureDevicesNV)(HDC hDc, HVIDEOINPUTDEVICENV* phDeviceList);
+// BOOL (APIENTRYP ptrwglLockVideoCaptureDeviceNV)(HDC hDc, HVIDEOINPUTDEVICENV hDevice);
+// BOOL (APIENTRYP ptrwglQueryVideoCaptureDeviceNV)(HDC hDc, HVIDEOINPUTDEVICENV hDevice, int iAttribute, int* piValue);
+// BOOL (APIENTRYP ptrwglReleaseVideoCaptureDeviceNV)(HDC hDc, HVIDEOINPUTDEVICENV hDevice);
 // //  NV_video_output
-// BOOL (APIENTRYP ptrglGetVideoDeviceNV)(HDC hDC, int numDevices, HPVIDEODEV* hVideoDevice);
-// BOOL (APIENTRYP ptrglReleaseVideoDeviceNV)(HPVIDEODEV hVideoDevice);
-// BOOL (APIENTRYP ptrglBindVideoImageNV)(HPVIDEODEV hVideoDevice, HPBUFFERARB hPbuffer, int iVideoBuffer);
-// BOOL (APIENTRYP ptrglReleaseVideoImageNV)(HPBUFFERARB hPbuffer, int iVideoBuffer);
-// BOOL (APIENTRYP ptrglSendPbufferToVideoNV)(HPBUFFERARB hPbuffer, int iBufferType, unsigned long* pulCounterPbuffer, BOOL bBlock);
-// BOOL (APIENTRYP ptrglGetVideoInfoNV)(HPVIDEODEV hpVideoDevice, unsigned long* pulCounterOutputPbuffer, unsigned long* pulCounterOutputVideo);
+// BOOL (APIENTRYP ptrwglGetVideoDeviceNV)(HDC hDC, int numDevices, HPVIDEODEV* hVideoDevice);
+// BOOL (APIENTRYP ptrwglReleaseVideoDeviceNV)(HPVIDEODEV hVideoDevice);
+// BOOL (APIENTRYP ptrwglBindVideoImageNV)(HPVIDEODEV hVideoDevice, HPBUFFERARB hPbuffer, int iVideoBuffer);
+// BOOL (APIENTRYP ptrwglReleaseVideoImageNV)(HPBUFFERARB hPbuffer, int iVideoBuffer);
+// BOOL (APIENTRYP ptrwglSendPbufferToVideoNV)(HPBUFFERARB hPbuffer, int iBufferType, unsigned long* pulCounterPbuffer, BOOL bBlock);
+// BOOL (APIENTRYP ptrwglGetVideoInfoNV)(HPVIDEODEV hpVideoDevice, unsigned long* pulCounterOutputPbuffer, unsigned long* pulCounterOutputVideo);
 // //  OML_sync_control
-// BOOL (APIENTRYP ptrglGetSyncValuesOML)(HDC hdc, INT64* ust, INT64* msc, INT64* sbc);
-// BOOL (APIENTRYP ptrglGetMscRateOML)(HDC hdc, INT32* numerator, INT32* denominator);
-// INT64 (APIENTRYP ptrglSwapBuffersMscOML)(HDC hdc, INT64 target_msc, INT64 divisor, INT64 remainder);
-// INT64 (APIENTRYP ptrglSwapLayerBuffersMscOML)(HDC hdc, int fuPlanes, INT64 target_msc, INT64 divisor, INT64 remainder);
-// BOOL (APIENTRYP ptrglWaitForMscOML)(HDC hdc, INT64 target_msc, INT64 divisor, INT64 remainder, INT64* ust, INT64* msc, INT64* sbc);
-// BOOL (APIENTRYP ptrglWaitForSbcOML)(HDC hdc, INT64 target_sbc, INT64* ust, INT64* msc, INT64* sbc);
+// BOOL (APIENTRYP ptrwglGetSyncValuesOML)(HDC hdc, INT64* ust, INT64* msc, INT64* sbc);
+// BOOL (APIENTRYP ptrwglGetMscRateOML)(HDC hdc, INT32* numerator, INT32* denominator);
+// INT64 (APIENTRYP ptrwglSwapBuffersMscOML)(HDC hdc, INT64 target_msc, INT64 divisor, INT64 remainder);
+// INT64 (APIENTRYP ptrwglSwapLayerBuffersMscOML)(HDC hdc, int fuPlanes, INT64 target_msc, INT64 divisor, INT64 remainder);
+// BOOL (APIENTRYP ptrwglWaitForMscOML)(HDC hdc, INT64 target_msc, INT64 divisor, INT64 remainder, INT64* ust, INT64* msc, INT64* sbc);
+// BOOL (APIENTRYP ptrwglWaitForSbcOML)(HDC hdc, INT64 target_sbc, INT64* ust, INT64* msc, INT64* sbc);
 // //  wgl
-// HGLRC (APIENTRYP ptrglCreateContext)(HDC hDc);
-// BOOL (APIENTRYP ptrglDeleteContext)(HGLRC oldContext);
-// HGLRC (APIENTRYP ptrglGetCurrentContext)();
-// BOOL (APIENTRYP ptrglMakeCurrent)(HDC hDc, HGLRC newContext);
-// BOOL (APIENTRYP ptrglCopyContext)(HGLRC hglrcSrc, HGLRC hglrcDst, UINT mask);
-// int (APIENTRYP ptrglChoosePixelFormat)(HDC hDc, PIXELFORMATDESCRIPTOR* pPfd);
-// HDC (APIENTRYP ptrglGetCurrentDC)();
-// PROC (APIENTRYP ptrglGetDefaultProcAddress)(LPCSTR lpszProc);
-// PROC (APIENTRYP ptrglGetProcAddress)(LPCSTR lpszProc);
-// int (APIENTRYP ptrglGetPixelFormat)(HDC hdc);
-// BOOL (APIENTRYP ptrglSetPixelFormat)(HDC hdc, int ipfd, PIXELFORMATDESCRIPTOR* ppfd);
-// BOOL (APIENTRYP ptrglSwapBuffers)(HDC hdc);
-// BOOL (APIENTRYP ptrglShareLists)(HGLRC hrcSrvShare, HGLRC hrcSrvSource);
-// HGLRC (APIENTRYP ptrglCreateLayerContext)(HDC hDc, int level);
-// BOOL (APIENTRYP ptrglDescribeLayerPlane)(HDC hDc, int pixelFormat, int layerPlane, UINT nBytes, LAYERPLANEDESCRIPTOR* plpd);
-// int (APIENTRYP ptrglSetLayerPaletteEntries)(HDC hdc, int iLayerPlane, int iStart, int cEntries, COLORREF* pcr);
-// int (APIENTRYP ptrglGetLayerPaletteEntries)(HDC hdc, int iLayerPlane, int iStart, int cEntries, COLORREF* pcr);
-// BOOL (APIENTRYP ptrglRealizeLayerPalette)(HDC hdc, int iLayerPlane, BOOL bRealize);
-// BOOL (APIENTRYP ptrglSwapLayerBuffers)(HDC hdc, UINT fuFlags);
-// BOOL (APIENTRYP ptrglUseFontBitmapsA)(HDC hDC, DWORD first, DWORD count, DWORD listBase);
-// BOOL (APIENTRYP ptrglUseFontBitmapsW)(HDC hDC, DWORD first, DWORD count, DWORD listBase);
+// HGLRC (APIENTRYP ptrwglCreateContext)(HDC hDc);
+// BOOL (APIENTRYP ptrwglDeleteContext)(HGLRC oldContext);
+// HGLRC (APIENTRYP ptrwglGetCurrentContext)();
+// BOOL (APIENTRYP ptrwglMakeCurrent)(HDC hDc, HGLRC newContext);
+// BOOL (APIENTRYP ptrwglCopyContext)(HGLRC hglrcSrc, HGLRC hglrcDst, UINT mask);
+// int (APIENTRYP ptrwglChoosePixelFormat)(HDC hDc, PIXELFORMATDESCRIPTOR* pPfd);
+// HDC (APIENTRYP ptrwglGetCurrentDC)();
+// PROC (APIENTRYP ptrwglGetDefaultProcAddress)(LPCSTR lpszProc);
+// PROC (APIENTRYP ptrwglGetProcAddress)(LPCSTR lpszProc);
+// int (APIENTRYP ptrwglGetPixelFormat)(HDC hdc);
+// BOOL (APIENTRYP ptrwglSetPixelFormat)(HDC hdc, int ipfd, PIXELFORMATDESCRIPTOR* ppfd);
+// BOOL (APIENTRYP ptrwglSwapBuffers)(HDC hdc);
+// BOOL (APIENTRYP ptrwglShareLists)(HGLRC hrcSrvShare, HGLRC hrcSrvSource);
+// HGLRC (APIENTRYP ptrwglCreateLayerContext)(HDC hDc, int level);
+// BOOL (APIENTRYP ptrwglDescribeLayerPlane)(HDC hDc, int pixelFormat, int layerPlane, UINT nBytes, LAYERPLANEDESCRIPTOR* plpd);
+// int (APIENTRYP ptrwglSetLayerPaletteEntries)(HDC hdc, int iLayerPlane, int iStart, int cEntries, COLORREF* pcr);
+// int (APIENTRYP ptrwglGetLayerPaletteEntries)(HDC hdc, int iLayerPlane, int iStart, int cEntries, COLORREF* pcr);
+// BOOL (APIENTRYP ptrwglRealizeLayerPalette)(HDC hdc, int iLayerPlane, BOOL bRealize);
+// BOOL (APIENTRYP ptrwglSwapLayerBuffers)(HDC hdc, UINT fuFlags);
+// BOOL (APIENTRYP ptrwglUseFontBitmapsA)(HDC hDC, DWORD first, DWORD count, DWORD listBase);
+// BOOL (APIENTRYP ptrwglUseFontBitmapsW)(HDC hDC, DWORD first, DWORD count, DWORD listBase);
 // 
 // //  3DFX_multisample
 // //  3DL_stereo_control
-// BOOL goglSetStereoEmitterState3DL(HDC hDC, UINT uState) {
-// 	return (*ptrglSetStereoEmitterState3DL)(hDC, uState);
+// BOOL gowglSetStereoEmitterState3DL(HDC hDC, UINT uState) {
+// 	return (*ptrwglSetStereoEmitterState3DL)(hDC, uState);
 // }
 // //  AMD_gpu_association
-// UINT goglGetGPUIDsAMD(UINT maxCount, UINT* ids) {
-// 	return (*ptrglGetGPUIDsAMD)(maxCount, ids);
+// UINT gowglGetGPUIDsAMD(UINT maxCount, UINT* ids) {
+// 	return (*ptrwglGetGPUIDsAMD)(maxCount, ids);
 // }
-// INT goglGetGPUInfoAMD(UINT id, int property, GLenum dataType, UINT size, void* data) {
-// 	return (*ptrglGetGPUInfoAMD)(id, property, dataType, size, data);
+// INT gowglGetGPUInfoAMD(UINT id, int property, GLenum dataType, UINT size, void* data) {
+// 	return (*ptrwglGetGPUInfoAMD)(id, property, dataType, size, data);
 // }
-// UINT goglGetContextGPUIDAMD(HGLRC hglrc) {
-// 	return (*ptrglGetContextGPUIDAMD)(hglrc);
+// UINT gowglGetContextGPUIDAMD(HGLRC hglrc) {
+// 	return (*ptrwglGetContextGPUIDAMD)(hglrc);
 // }
-// HGLRC goglCreateAssociatedContextAMD(UINT id) {
-// 	return (*ptrglCreateAssociatedContextAMD)(id);
+// HGLRC gowglCreateAssociatedContextAMD(UINT id) {
+// 	return (*ptrwglCreateAssociatedContextAMD)(id);
 // }
-// HGLRC goglCreateAssociatedContextAttribsAMD(UINT id, HGLRC hShareContext, int* attribList) {
-// 	return (*ptrglCreateAssociatedContextAttribsAMD)(id, hShareContext, attribList);
+// HGLRC gowglCreateAssociatedContextAttribsAMD(UINT id, HGLRC hShareContext, int* attribList) {
+// 	return (*ptrwglCreateAssociatedContextAttribsAMD)(id, hShareContext, attribList);
 // }
-// BOOL goglDeleteAssociatedContextAMD(HGLRC hglrc) {
-// 	return (*ptrglDeleteAssociatedContextAMD)(hglrc);
+// BOOL gowglDeleteAssociatedContextAMD(HGLRC hglrc) {
+// 	return (*ptrwglDeleteAssociatedContextAMD)(hglrc);
 // }
-// BOOL goglMakeAssociatedContextCurrentAMD(HGLRC hglrc) {
-// 	return (*ptrglMakeAssociatedContextCurrentAMD)(hglrc);
+// BOOL gowglMakeAssociatedContextCurrentAMD(HGLRC hglrc) {
+// 	return (*ptrwglMakeAssociatedContextCurrentAMD)(hglrc);
 // }
-// HGLRC goglGetCurrentAssociatedContextAMD() {
-// 	return (*ptrglGetCurrentAssociatedContextAMD)();
+// HGLRC gowglGetCurrentAssociatedContextAMD() {
+// 	return (*ptrwglGetCurrentAssociatedContextAMD)();
 // }
-// VOID goglBlitContextFramebufferAMD(HGLRC dstCtx, GLint srcX0, GLint srcY0, GLint srcX1, GLint srcY1, GLint dstX0, GLint dstY0, GLint dstX1, GLint dstY1, GLbitfield mask, GLenum filter) {
-// 	return (*ptrglBlitContextFramebufferAMD)(dstCtx, srcX0, srcY0, srcX1, srcY1, dstX0, dstY0, dstX1, dstY1, mask, filter);
+// VOID gowglBlitContextFramebufferAMD(HGLRC dstCtx, GLint srcX0, GLint srcY0, GLint srcX1, GLint srcY1, GLint dstX0, GLint dstY0, GLint dstX1, GLint dstY1, GLbitfield mask, GLenum filter) {
+// 	(*ptrwglBlitContextFramebufferAMD)(dstCtx, srcX0, srcY0, srcX1, srcY1, dstX0, dstY0, dstX1, dstY1, mask, filter);
 // }
 // //  ARB_buffer_region
-// HANDLE goglCreateBufferRegionARB(HDC hDC, int iLayerPlane, UINT uType) {
-// 	return (*ptrglCreateBufferRegionARB)(hDC, iLayerPlane, uType);
+// HANDLE gowglCreateBufferRegionARB(HDC hDC, int iLayerPlane, UINT uType) {
+// 	return (*ptrwglCreateBufferRegionARB)(hDC, iLayerPlane, uType);
 // }
-// VOID goglDeleteBufferRegionARB(HANDLE hRegion) {
-// 	return (*ptrglDeleteBufferRegionARB)(hRegion);
+// VOID gowglDeleteBufferRegionARB(HANDLE hRegion) {
+// 	(*ptrwglDeleteBufferRegionARB)(hRegion);
 // }
-// BOOL goglSaveBufferRegionARB(HANDLE hRegion, int x, int y, int width, int height) {
-// 	return (*ptrglSaveBufferRegionARB)(hRegion, x, y, width, height);
+// BOOL gowglSaveBufferRegionARB(HANDLE hRegion, int x, int y, int width, int height) {
+// 	return (*ptrwglSaveBufferRegionARB)(hRegion, x, y, width, height);
 // }
-// BOOL goglRestoreBufferRegionARB(HANDLE hRegion, int x, int y, int width, int height, int xSrc, int ySrc) {
-// 	return (*ptrglRestoreBufferRegionARB)(hRegion, x, y, width, height, xSrc, ySrc);
+// BOOL gowglRestoreBufferRegionARB(HANDLE hRegion, int x, int y, int width, int height, int xSrc, int ySrc) {
+// 	return (*ptrwglRestoreBufferRegionARB)(hRegion, x, y, width, height, xSrc, ySrc);
 // }
 // //  ARB_create_context
-// HGLRC goglCreateContextAttribsARB(HDC hDC, HGLRC hShareContext, int* attribList) {
-// 	return (*ptrglCreateContextAttribsARB)(hDC, hShareContext, attribList);
+// HGLRC gowglCreateContextAttribsARB(HDC hDC, HGLRC hShareContext, int* attribList) {
+// 	return (*ptrwglCreateContextAttribsARB)(hDC, hShareContext, attribList);
 // }
 // //  ARB_create_context_profile
 // //  ARB_create_context_robustness
 // //  ARB_extensions_string
-// const char * goglGetExtensionsStringARB(HDC hdc) {
-// 	return (*ptrglGetExtensionsStringARB)(hdc);
+// const char * gowglGetExtensionsStringARB(HDC hdc) {
+// 	return (*ptrwglGetExtensionsStringARB)(hdc);
 // }
 // //  ARB_framebuffer_sRGB
 // //  ARB_make_current_read
-// BOOL goglMakeContextCurrentARB(HDC hDrawDC, HDC hReadDC, HGLRC hglrc) {
-// 	return (*ptrglMakeContextCurrentARB)(hDrawDC, hReadDC, hglrc);
+// BOOL gowglMakeContextCurrentARB(HDC hDrawDC, HDC hReadDC, HGLRC hglrc) {
+// 	return (*ptrwglMakeContextCurrentARB)(hDrawDC, hReadDC, hglrc);
 // }
-// HDC goglGetCurrentReadDCARB() {
-// 	return (*ptrglGetCurrentReadDCARB)();
+// HDC gowglGetCurrentReadDCARB() {
+// 	return (*ptrwglGetCurrentReadDCARB)();
 // }
 // //  ARB_multisample
 // //  ARB_pbuffer
-// HPBUFFERARB goglCreatePbufferARB(HDC hDC, int iPixelFormat, int iWidth, int iHeight, int* piAttribList) {
-// 	return (*ptrglCreatePbufferARB)(hDC, iPixelFormat, iWidth, iHeight, piAttribList);
+// HPBUFFERARB gowglCreatePbufferARB(HDC hDC, int iPixelFormat, int iWidth, int iHeight, int* piAttribList) {
+// 	return (*ptrwglCreatePbufferARB)(hDC, iPixelFormat, iWidth, iHeight, piAttribList);
 // }
-// HDC goglGetPbufferDCARB(HPBUFFERARB hPbuffer) {
-// 	return (*ptrglGetPbufferDCARB)(hPbuffer);
+// HDC gowglGetPbufferDCARB(HPBUFFERARB hPbuffer) {
+// 	return (*ptrwglGetPbufferDCARB)(hPbuffer);
 // }
-// int goglReleasePbufferDCARB(HPBUFFERARB hPbuffer, HDC hDC) {
-// 	return (*ptrglReleasePbufferDCARB)(hPbuffer, hDC);
+// int gowglReleasePbufferDCARB(HPBUFFERARB hPbuffer, HDC hDC) {
+// 	return (*ptrwglReleasePbufferDCARB)(hPbuffer, hDC);
 // }
-// BOOL goglDestroyPbufferARB(HPBUFFERARB hPbuffer) {
-// 	return (*ptrglDestroyPbufferARB)(hPbuffer);
+// BOOL gowglDestroyPbufferARB(HPBUFFERARB hPbuffer) {
+// 	return (*ptrwglDestroyPbufferARB)(hPbuffer);
 // }
-// BOOL goglQueryPbufferARB(HPBUFFERARB hPbuffer, int iAttribute, int* piValue) {
-// 	return (*ptrglQueryPbufferARB)(hPbuffer, iAttribute, piValue);
+// BOOL gowglQueryPbufferARB(HPBUFFERARB hPbuffer, int iAttribute, int* piValue) {
+// 	return (*ptrwglQueryPbufferARB)(hPbuffer, iAttribute, piValue);
 // }
 // //  ARB_pixel_format
-// BOOL goglGetPixelFormatAttribivARB(HDC hdc, int iPixelFormat, int iLayerPlane, UINT nAttributes, int* piAttributes, int* piValues) {
-// 	return (*ptrglGetPixelFormatAttribivARB)(hdc, iPixelFormat, iLayerPlane, nAttributes, piAttributes, piValues);
+// BOOL gowglGetPixelFormatAttribivARB(HDC hdc, int iPixelFormat, int iLayerPlane, UINT nAttributes, int* piAttributes, int* piValues) {
+// 	return (*ptrwglGetPixelFormatAttribivARB)(hdc, iPixelFormat, iLayerPlane, nAttributes, piAttributes, piValues);
 // }
-// BOOL goglGetPixelFormatAttribfvARB(HDC hdc, int iPixelFormat, int iLayerPlane, UINT nAttributes, int* piAttributes, FLOAT* pfValues) {
-// 	return (*ptrglGetPixelFormatAttribfvARB)(hdc, iPixelFormat, iLayerPlane, nAttributes, piAttributes, pfValues);
+// BOOL gowglGetPixelFormatAttribfvARB(HDC hdc, int iPixelFormat, int iLayerPlane, UINT nAttributes, int* piAttributes, FLOAT* pfValues) {
+// 	return (*ptrwglGetPixelFormatAttribfvARB)(hdc, iPixelFormat, iLayerPlane, nAttributes, piAttributes, pfValues);
 // }
-// BOOL goglChoosePixelFormatARB(HDC hdc, int* piAttribIList, FLOAT* pfAttribFList, UINT nMaxFormats, int* piFormats, UINT* nNumFormats) {
-// 	return (*ptrglChoosePixelFormatARB)(hdc, piAttribIList, pfAttribFList, nMaxFormats, piFormats, nNumFormats);
+// BOOL gowglChoosePixelFormatARB(HDC hdc, int* piAttribIList, FLOAT* pfAttribFList, UINT nMaxFormats, int* piFormats, UINT* nNumFormats) {
+// 	return (*ptrwglChoosePixelFormatARB)(hdc, piAttribIList, pfAttribFList, nMaxFormats, piFormats, nNumFormats);
 // }
 // //  ARB_pixel_format_float
 // //  ARB_render_texture
-// BOOL goglBindTexImageARB(HPBUFFERARB hPbuffer, int iBuffer) {
-// 	return (*ptrglBindTexImageARB)(hPbuffer, iBuffer);
+// BOOL gowglBindTexImageARB(HPBUFFERARB hPbuffer, int iBuffer) {
+// 	return (*ptrwglBindTexImageARB)(hPbuffer, iBuffer);
 // }
-// BOOL goglReleaseTexImageARB(HPBUFFERARB hPbuffer, int iBuffer) {
-// 	return (*ptrglReleaseTexImageARB)(hPbuffer, iBuffer);
+// BOOL gowglReleaseTexImageARB(HPBUFFERARB hPbuffer, int iBuffer) {
+// 	return (*ptrwglReleaseTexImageARB)(hPbuffer, iBuffer);
 // }
-// BOOL goglSetPbufferAttribARB(HPBUFFERARB hPbuffer, int* piAttribList) {
-// 	return (*ptrglSetPbufferAttribARB)(hPbuffer, piAttribList);
+// BOOL gowglSetPbufferAttribARB(HPBUFFERARB hPbuffer, int* piAttribList) {
+// 	return (*ptrwglSetPbufferAttribARB)(hPbuffer, piAttribList);
 // }
 // //  ATI_pixel_format_float
 // //  EXT_depth_float
 // //  EXT_display_color_table
-// GLboolean goglCreateDisplayColorTableEXT(GLushort id) {
-// 	return (*ptrglCreateDisplayColorTableEXT)(id);
+// GLboolean gowglCreateDisplayColorTableEXT(GLushort id) {
+// 	return (*ptrwglCreateDisplayColorTableEXT)(id);
 // }
-// GLboolean goglLoadDisplayColorTableEXT(GLushort* table, GLuint length) {
-// 	return (*ptrglLoadDisplayColorTableEXT)(table, length);
+// GLboolean gowglLoadDisplayColorTableEXT(GLushort* table, GLuint length) {
+// 	return (*ptrwglLoadDisplayColorTableEXT)(table, length);
 // }
-// GLboolean goglBindDisplayColorTableEXT(GLushort id) {
-// 	return (*ptrglBindDisplayColorTableEXT)(id);
+// GLboolean gowglBindDisplayColorTableEXT(GLushort id) {
+// 	return (*ptrwglBindDisplayColorTableEXT)(id);
 // }
-// VOID goglDestroyDisplayColorTableEXT(GLushort id) {
-// 	return (*ptrglDestroyDisplayColorTableEXT)(id);
+// VOID gowglDestroyDisplayColorTableEXT(GLushort id) {
+// 	(*ptrwglDestroyDisplayColorTableEXT)(id);
 // }
 // //  EXT_extensions_string
-// const char * goglGetExtensionsStringEXT() {
-// 	return (*ptrglGetExtensionsStringEXT)();
+// const char * gowglGetExtensionsStringEXT() {
+// 	return (*ptrwglGetExtensionsStringEXT)();
 // }
 // //  EXT_framebuffer_sRGB
 // //  EXT_make_current_read
-// BOOL goglMakeContextCurrentEXT(HDC hDrawDC, HDC hReadDC, HGLRC hglrc) {
-// 	return (*ptrglMakeContextCurrentEXT)(hDrawDC, hReadDC, hglrc);
+// BOOL gowglMakeContextCurrentEXT(HDC hDrawDC, HDC hReadDC, HGLRC hglrc) {
+// 	return (*ptrwglMakeContextCurrentEXT)(hDrawDC, hReadDC, hglrc);
 // }
-// HDC goglGetCurrentReadDCEXT() {
-// 	return (*ptrglGetCurrentReadDCEXT)();
+// HDC gowglGetCurrentReadDCEXT() {
+// 	return (*ptrwglGetCurrentReadDCEXT)();
 // }
 // //  EXT_multisample
 // //  EXT_pbuffer
-// HPBUFFEREXT goglCreatePbufferEXT(HDC hDC, int iPixelFormat, int iWidth, int iHeight, int* piAttribList) {
-// 	return (*ptrglCreatePbufferEXT)(hDC, iPixelFormat, iWidth, iHeight, piAttribList);
+// HPBUFFEREXT gowglCreatePbufferEXT(HDC hDC, int iPixelFormat, int iWidth, int iHeight, int* piAttribList) {
+// 	return (*ptrwglCreatePbufferEXT)(hDC, iPixelFormat, iWidth, iHeight, piAttribList);
 // }
-// HDC goglGetPbufferDCEXT(HPBUFFEREXT hPbuffer) {
-// 	return (*ptrglGetPbufferDCEXT)(hPbuffer);
+// HDC gowglGetPbufferDCEXT(HPBUFFEREXT hPbuffer) {
+// 	return (*ptrwglGetPbufferDCEXT)(hPbuffer);
 // }
-// int goglReleasePbufferDCEXT(HPBUFFEREXT hPbuffer, HDC hDC) {
-// 	return (*ptrglReleasePbufferDCEXT)(hPbuffer, hDC);
+// int gowglReleasePbufferDCEXT(HPBUFFEREXT hPbuffer, HDC hDC) {
+// 	return (*ptrwglReleasePbufferDCEXT)(hPbuffer, hDC);
 // }
-// BOOL goglDestroyPbufferEXT(HPBUFFEREXT hPbuffer) {
-// 	return (*ptrglDestroyPbufferEXT)(hPbuffer);
+// BOOL gowglDestroyPbufferEXT(HPBUFFEREXT hPbuffer) {
+// 	return (*ptrwglDestroyPbufferEXT)(hPbuffer);
 // }
-// BOOL goglQueryPbufferEXT(HPBUFFEREXT hPbuffer, int iAttribute, int* piValue) {
-// 	return (*ptrglQueryPbufferEXT)(hPbuffer, iAttribute, piValue);
+// BOOL gowglQueryPbufferEXT(HPBUFFEREXT hPbuffer, int iAttribute, int* piValue) {
+// 	return (*ptrwglQueryPbufferEXT)(hPbuffer, iAttribute, piValue);
 // }
 // //  EXT_pixel_format
-// BOOL goglGetPixelFormatAttribivEXT(HDC hdc, int iPixelFormat, int iLayerPlane, UINT nAttributes, int* piAttributes, int* piValues) {
-// 	return (*ptrglGetPixelFormatAttribivEXT)(hdc, iPixelFormat, iLayerPlane, nAttributes, piAttributes, piValues);
+// BOOL gowglGetPixelFormatAttribivEXT(HDC hdc, int iPixelFormat, int iLayerPlane, UINT nAttributes, int* piAttributes, int* piValues) {
+// 	return (*ptrwglGetPixelFormatAttribivEXT)(hdc, iPixelFormat, iLayerPlane, nAttributes, piAttributes, piValues);
 // }
-// BOOL goglGetPixelFormatAttribfvEXT(HDC hdc, int iPixelFormat, int iLayerPlane, UINT nAttributes, int* piAttributes, FLOAT* pfValues) {
-// 	return (*ptrglGetPixelFormatAttribfvEXT)(hdc, iPixelFormat, iLayerPlane, nAttributes, piAttributes, pfValues);
+// BOOL gowglGetPixelFormatAttribfvEXT(HDC hdc, int iPixelFormat, int iLayerPlane, UINT nAttributes, int* piAttributes, FLOAT* pfValues) {
+// 	return (*ptrwglGetPixelFormatAttribfvEXT)(hdc, iPixelFormat, iLayerPlane, nAttributes, piAttributes, pfValues);
 // }
-// BOOL goglChoosePixelFormatEXT(HDC hdc, int* piAttribIList, FLOAT* pfAttribFList, UINT nMaxFormats, int* piFormats, UINT* nNumFormats) {
-// 	return (*ptrglChoosePixelFormatEXT)(hdc, piAttribIList, pfAttribFList, nMaxFormats, piFormats, nNumFormats);
+// BOOL gowglChoosePixelFormatEXT(HDC hdc, int* piAttribIList, FLOAT* pfAttribFList, UINT nMaxFormats, int* piFormats, UINT* nNumFormats) {
+// 	return (*ptrwglChoosePixelFormatEXT)(hdc, piAttribIList, pfAttribFList, nMaxFormats, piFormats, nNumFormats);
 // }
 // //  EXT_pixel_format_packed_float
 // //  EXT_swap_control
-// BOOL goglSwapIntervalEXT(int interval) {
-// 	return (*ptrglSwapIntervalEXT)(interval);
+// BOOL gowglSwapIntervalEXT(int interval) {
+// 	return (*ptrwglSwapIntervalEXT)(interval);
 // }
-// int goglGetSwapIntervalEXT() {
-// 	return (*ptrglGetSwapIntervalEXT)();
+// int gowglGetSwapIntervalEXT() {
+// 	return (*ptrwglGetSwapIntervalEXT)();
 // }
 // //  EXT_swap_control_tear
 // //  I3D_digital_video_control
-// BOOL goglGetDigitalVideoParametersI3D(HDC hDC, int iAttribute, int* piValue) {
-// 	return (*ptrglGetDigitalVideoParametersI3D)(hDC, iAttribute, piValue);
+// BOOL gowglGetDigitalVideoParametersI3D(HDC hDC, int iAttribute, int* piValue) {
+// 	return (*ptrwglGetDigitalVideoParametersI3D)(hDC, iAttribute, piValue);
 // }
-// BOOL goglSetDigitalVideoParametersI3D(HDC hDC, int iAttribute, int* piValue) {
-// 	return (*ptrglSetDigitalVideoParametersI3D)(hDC, iAttribute, piValue);
+// BOOL gowglSetDigitalVideoParametersI3D(HDC hDC, int iAttribute, int* piValue) {
+// 	return (*ptrwglSetDigitalVideoParametersI3D)(hDC, iAttribute, piValue);
 // }
 // //  I3D_gamma
-// BOOL goglGetGammaTableParametersI3D(HDC hDC, int iAttribute, int* piValue) {
-// 	return (*ptrglGetGammaTableParametersI3D)(hDC, iAttribute, piValue);
+// BOOL gowglGetGammaTableParametersI3D(HDC hDC, int iAttribute, int* piValue) {
+// 	return (*ptrwglGetGammaTableParametersI3D)(hDC, iAttribute, piValue);
 // }
-// BOOL goglSetGammaTableParametersI3D(HDC hDC, int iAttribute, int* piValue) {
-// 	return (*ptrglSetGammaTableParametersI3D)(hDC, iAttribute, piValue);
+// BOOL gowglSetGammaTableParametersI3D(HDC hDC, int iAttribute, int* piValue) {
+// 	return (*ptrwglSetGammaTableParametersI3D)(hDC, iAttribute, piValue);
 // }
-// BOOL goglGetGammaTableI3D(HDC hDC, int iEntries, USHORT* puRed, USHORT* puGreen, USHORT* puBlue) {
-// 	return (*ptrglGetGammaTableI3D)(hDC, iEntries, puRed, puGreen, puBlue);
+// BOOL gowglGetGammaTableI3D(HDC hDC, int iEntries, USHORT* puRed, USHORT* puGreen, USHORT* puBlue) {
+// 	return (*ptrwglGetGammaTableI3D)(hDC, iEntries, puRed, puGreen, puBlue);
 // }
-// BOOL goglSetGammaTableI3D(HDC hDC, int iEntries, USHORT* puRed, USHORT* puGreen, USHORT* puBlue) {
-// 	return (*ptrglSetGammaTableI3D)(hDC, iEntries, puRed, puGreen, puBlue);
+// BOOL gowglSetGammaTableI3D(HDC hDC, int iEntries, USHORT* puRed, USHORT* puGreen, USHORT* puBlue) {
+// 	return (*ptrwglSetGammaTableI3D)(hDC, iEntries, puRed, puGreen, puBlue);
 // }
 // //  I3D_genlock
-// BOOL goglEnableGenlockI3D(HDC hDC) {
-// 	return (*ptrglEnableGenlockI3D)(hDC);
+// BOOL gowglEnableGenlockI3D(HDC hDC) {
+// 	return (*ptrwglEnableGenlockI3D)(hDC);
 // }
-// BOOL goglDisableGenlockI3D(HDC hDC) {
-// 	return (*ptrglDisableGenlockI3D)(hDC);
+// BOOL gowglDisableGenlockI3D(HDC hDC) {
+// 	return (*ptrwglDisableGenlockI3D)(hDC);
 // }
-// BOOL goglIsEnabledGenlockI3D(HDC hDC, BOOL* pFlag) {
-// 	return (*ptrglIsEnabledGenlockI3D)(hDC, pFlag);
+// BOOL gowglIsEnabledGenlockI3D(HDC hDC, BOOL* pFlag) {
+// 	return (*ptrwglIsEnabledGenlockI3D)(hDC, pFlag);
 // }
-// BOOL goglGenlockSourceI3D(HDC hDC, UINT uSource) {
-// 	return (*ptrglGenlockSourceI3D)(hDC, uSource);
+// BOOL gowglGenlockSourceI3D(HDC hDC, UINT uSource) {
+// 	return (*ptrwglGenlockSourceI3D)(hDC, uSource);
 // }
-// BOOL goglGetGenlockSourceI3D(HDC hDC, UINT* uSource) {
-// 	return (*ptrglGetGenlockSourceI3D)(hDC, uSource);
+// BOOL gowglGetGenlockSourceI3D(HDC hDC, UINT* uSource) {
+// 	return (*ptrwglGetGenlockSourceI3D)(hDC, uSource);
 // }
-// BOOL goglGenlockSourceEdgeI3D(HDC hDC, UINT uEdge) {
-// 	return (*ptrglGenlockSourceEdgeI3D)(hDC, uEdge);
+// BOOL gowglGenlockSourceEdgeI3D(HDC hDC, UINT uEdge) {
+// 	return (*ptrwglGenlockSourceEdgeI3D)(hDC, uEdge);
 // }
-// BOOL goglGetGenlockSourceEdgeI3D(HDC hDC, UINT* uEdge) {
-// 	return (*ptrglGetGenlockSourceEdgeI3D)(hDC, uEdge);
+// BOOL gowglGetGenlockSourceEdgeI3D(HDC hDC, UINT* uEdge) {
+// 	return (*ptrwglGetGenlockSourceEdgeI3D)(hDC, uEdge);
 // }
-// BOOL goglGenlockSampleRateI3D(HDC hDC, UINT uRate) {
-// 	return (*ptrglGenlockSampleRateI3D)(hDC, uRate);
+// BOOL gowglGenlockSampleRateI3D(HDC hDC, UINT uRate) {
+// 	return (*ptrwglGenlockSampleRateI3D)(hDC, uRate);
 // }
-// BOOL goglGetGenlockSampleRateI3D(HDC hDC, UINT* uRate) {
-// 	return (*ptrglGetGenlockSampleRateI3D)(hDC, uRate);
+// BOOL gowglGetGenlockSampleRateI3D(HDC hDC, UINT* uRate) {
+// 	return (*ptrwglGetGenlockSampleRateI3D)(hDC, uRate);
 // }
-// BOOL goglGenlockSourceDelayI3D(HDC hDC, UINT uDelay) {
-// 	return (*ptrglGenlockSourceDelayI3D)(hDC, uDelay);
+// BOOL gowglGenlockSourceDelayI3D(HDC hDC, UINT uDelay) {
+// 	return (*ptrwglGenlockSourceDelayI3D)(hDC, uDelay);
 // }
-// BOOL goglGetGenlockSourceDelayI3D(HDC hDC, UINT* uDelay) {
-// 	return (*ptrglGetGenlockSourceDelayI3D)(hDC, uDelay);
+// BOOL gowglGetGenlockSourceDelayI3D(HDC hDC, UINT* uDelay) {
+// 	return (*ptrwglGetGenlockSourceDelayI3D)(hDC, uDelay);
 // }
-// BOOL goglQueryGenlockMaxSourceDelayI3D(HDC hDC, UINT* uMaxLineDelay, UINT* uMaxPixelDelay) {
-// 	return (*ptrglQueryGenlockMaxSourceDelayI3D)(hDC, uMaxLineDelay, uMaxPixelDelay);
+// BOOL gowglQueryGenlockMaxSourceDelayI3D(HDC hDC, UINT* uMaxLineDelay, UINT* uMaxPixelDelay) {
+// 	return (*ptrwglQueryGenlockMaxSourceDelayI3D)(hDC, uMaxLineDelay, uMaxPixelDelay);
 // }
 // //  I3D_image_buffer
-// LPVOID goglCreateImageBufferI3D(HDC hDC, DWORD dwSize, UINT uFlags) {
-// 	return (*ptrglCreateImageBufferI3D)(hDC, dwSize, uFlags);
+// LPVOID gowglCreateImageBufferI3D(HDC hDC, DWORD dwSize, UINT uFlags) {
+// 	return (*ptrwglCreateImageBufferI3D)(hDC, dwSize, uFlags);
 // }
-// BOOL goglDestroyImageBufferI3D(HDC hDC, LPVOID pAddress) {
-// 	return (*ptrglDestroyImageBufferI3D)(hDC, pAddress);
+// BOOL gowglDestroyImageBufferI3D(HDC hDC, LPVOID pAddress) {
+// 	return (*ptrwglDestroyImageBufferI3D)(hDC, pAddress);
 // }
-// BOOL goglAssociateImageBufferEventsI3D(HDC hDC, HANDLE* pEvent, LPVOID* pAddress, DWORD* pSize, UINT count) {
-// 	return (*ptrglAssociateImageBufferEventsI3D)(hDC, pEvent, pAddress, pSize, count);
+// BOOL gowglAssociateImageBufferEventsI3D(HDC hDC, HANDLE* pEvent, LPVOID* pAddress, DWORD* pSize, UINT count) {
+// 	return (*ptrwglAssociateImageBufferEventsI3D)(hDC, pEvent, pAddress, pSize, count);
 // }
-// BOOL goglReleaseImageBufferEventsI3D(HDC hDC, LPVOID* pAddress, UINT count) {
-// 	return (*ptrglReleaseImageBufferEventsI3D)(hDC, pAddress, count);
+// BOOL gowglReleaseImageBufferEventsI3D(HDC hDC, LPVOID* pAddress, UINT count) {
+// 	return (*ptrwglReleaseImageBufferEventsI3D)(hDC, pAddress, count);
 // }
 // //  I3D_swap_frame_lock
-// BOOL goglEnableFrameLockI3D() {
-// 	return (*ptrglEnableFrameLockI3D)();
+// BOOL gowglEnableFrameLockI3D() {
+// 	return (*ptrwglEnableFrameLockI3D)();
 // }
-// BOOL goglDisableFrameLockI3D() {
-// 	return (*ptrglDisableFrameLockI3D)();
+// BOOL gowglDisableFrameLockI3D() {
+// 	return (*ptrwglDisableFrameLockI3D)();
 // }
-// BOOL goglIsEnabledFrameLockI3D(BOOL* pFlag) {
-// 	return (*ptrglIsEnabledFrameLockI3D)(pFlag);
+// BOOL gowglIsEnabledFrameLockI3D(BOOL* pFlag) {
+// 	return (*ptrwglIsEnabledFrameLockI3D)(pFlag);
 // }
-// BOOL goglQueryFrameLockMasterI3D(BOOL* pFlag) {
-// 	return (*ptrglQueryFrameLockMasterI3D)(pFlag);
+// BOOL gowglQueryFrameLockMasterI3D(BOOL* pFlag) {
+// 	return (*ptrwglQueryFrameLockMasterI3D)(pFlag);
 // }
 // //  I3D_swap_frame_usage
-// BOOL goglGetFrameUsageI3D(float* pUsage) {
-// 	return (*ptrglGetFrameUsageI3D)(pUsage);
+// BOOL gowglGetFrameUsageI3D(float* pUsage) {
+// 	return (*ptrwglGetFrameUsageI3D)(pUsage);
 // }
-// BOOL goglBeginFrameTrackingI3D() {
-// 	return (*ptrglBeginFrameTrackingI3D)();
+// BOOL gowglBeginFrameTrackingI3D() {
+// 	return (*ptrwglBeginFrameTrackingI3D)();
 // }
-// BOOL goglEndFrameTrackingI3D() {
-// 	return (*ptrglEndFrameTrackingI3D)();
+// BOOL gowglEndFrameTrackingI3D() {
+// 	return (*ptrwglEndFrameTrackingI3D)();
 // }
-// BOOL goglQueryFrameTrackingI3D(DWORD* pFrameCount, DWORD* pMissedFrames, float* pLastMissedUsage) {
-// 	return (*ptrglQueryFrameTrackingI3D)(pFrameCount, pMissedFrames, pLastMissedUsage);
+// BOOL gowglQueryFrameTrackingI3D(DWORD* pFrameCount, DWORD* pMissedFrames, float* pLastMissedUsage) {
+// 	return (*ptrwglQueryFrameTrackingI3D)(pFrameCount, pMissedFrames, pLastMissedUsage);
 // }
 // //  NV_DX_interop
-// BOOL goglDXSetResourceShareHandleNV(void* dxObject, HANDLE shareHandle) {
-// 	return (*ptrglDXSetResourceShareHandleNV)(dxObject, shareHandle);
+// BOOL gowglDXSetResourceShareHandleNV(void* dxObject, HANDLE shareHandle) {
+// 	return (*ptrwglDXSetResourceShareHandleNV)(dxObject, shareHandle);
 // }
-// HANDLE goglDXOpenDeviceNV(void* dxDevice) {
-// 	return (*ptrglDXOpenDeviceNV)(dxDevice);
+// HANDLE gowglDXOpenDeviceNV(void* dxDevice) {
+// 	return (*ptrwglDXOpenDeviceNV)(dxDevice);
 // }
-// BOOL goglDXCloseDeviceNV(HANDLE hDevice) {
-// 	return (*ptrglDXCloseDeviceNV)(hDevice);
+// BOOL gowglDXCloseDeviceNV(HANDLE hDevice) {
+// 	return (*ptrwglDXCloseDeviceNV)(hDevice);
 // }
-// HANDLE goglDXRegisterObjectNV(HANDLE hDevice, void* dxObject, GLuint name, GLenum type_, GLenum access) {
-// 	return (*ptrglDXRegisterObjectNV)(hDevice, dxObject, name, type_, access);
+// HANDLE gowglDXRegisterObjectNV(HANDLE hDevice, void* dxObject, GLuint name, GLenum type_, GLenum access) {
+// 	return (*ptrwglDXRegisterObjectNV)(hDevice, dxObject, name, type_, access);
 // }
-// BOOL goglDXUnregisterObjectNV(HANDLE hDevice, HANDLE hObject) {
-// 	return (*ptrglDXUnregisterObjectNV)(hDevice, hObject);
+// BOOL gowglDXUnregisterObjectNV(HANDLE hDevice, HANDLE hObject) {
+// 	return (*ptrwglDXUnregisterObjectNV)(hDevice, hObject);
 // }
-// BOOL goglDXObjectAccessNV(HANDLE hObject, GLenum access) {
-// 	return (*ptrglDXObjectAccessNV)(hObject, access);
+// BOOL gowglDXObjectAccessNV(HANDLE hObject, GLenum access) {
+// 	return (*ptrwglDXObjectAccessNV)(hObject, access);
 // }
-// BOOL goglDXLockObjectsNV(HANDLE hDevice, GLint count, HANDLE* hObjects) {
-// 	return (*ptrglDXLockObjectsNV)(hDevice, count, hObjects);
+// BOOL gowglDXLockObjectsNV(HANDLE hDevice, GLint count, HANDLE* hObjects) {
+// 	return (*ptrwglDXLockObjectsNV)(hDevice, count, hObjects);
 // }
-// BOOL goglDXUnlockObjectsNV(HANDLE hDevice, GLint count, HANDLE* hObjects) {
-// 	return (*ptrglDXUnlockObjectsNV)(hDevice, count, hObjects);
+// BOOL gowglDXUnlockObjectsNV(HANDLE hDevice, GLint count, HANDLE* hObjects) {
+// 	return (*ptrwglDXUnlockObjectsNV)(hDevice, count, hObjects);
 // }
 // //  NV_DX_interop2
 // //  NV_copy_image
-// BOOL goglCopyImageSubDataNV(HGLRC hSrcRC, GLuint srcName, GLenum srcTarget, GLint srcLevel, GLint srcX, GLint srcY, GLint srcZ, HGLRC hDstRC, GLuint dstName, GLenum dstTarget, GLint dstLevel, GLint dstX, GLint dstY, GLint dstZ, GLsizei width, GLsizei height, GLsizei depth) {
-// 	return (*ptrglCopyImageSubDataNV)(hSrcRC, srcName, srcTarget, srcLevel, srcX, srcY, srcZ, hDstRC, dstName, dstTarget, dstLevel, dstX, dstY, dstZ, width, height, depth);
+// BOOL gowglCopyImageSubDataNV(HGLRC hSrcRC, GLuint srcName, GLenum srcTarget, GLint srcLevel, GLint srcX, GLint srcY, GLint srcZ, HGLRC hDstRC, GLuint dstName, GLenum dstTarget, GLint dstLevel, GLint dstX, GLint dstY, GLint dstZ, GLsizei width, GLsizei height, GLsizei depth) {
+// 	return (*ptrwglCopyImageSubDataNV)(hSrcRC, srcName, srcTarget, srcLevel, srcX, srcY, srcZ, hDstRC, dstName, dstTarget, dstLevel, dstX, dstY, dstZ, width, height, depth);
 // }
 // //  NV_float_buffer
 // //  NV_gpu_affinity
-// BOOL goglEnumGpusNV(UINT iGpuIndex, HGPUNV* phGpu) {
-// 	return (*ptrglEnumGpusNV)(iGpuIndex, phGpu);
+// BOOL gowglEnumGpusNV(UINT iGpuIndex, HGPUNV* phGpu) {
+// 	return (*ptrwglEnumGpusNV)(iGpuIndex, phGpu);
 // }
-// BOOL goglEnumGpuDevicesNV(HGPUNV hGpu, UINT iDeviceIndex, PGPU_DEVICE lpGpuDevice) {
-// 	return (*ptrglEnumGpuDevicesNV)(hGpu, iDeviceIndex, lpGpuDevice);
+// BOOL gowglEnumGpuDevicesNV(HGPUNV hGpu, UINT iDeviceIndex, PGPU_DEVICE lpGpuDevice) {
+// 	return (*ptrwglEnumGpuDevicesNV)(hGpu, iDeviceIndex, lpGpuDevice);
 // }
-// HDC goglCreateAffinityDCNV(HGPUNV* phGpuList) {
-// 	return (*ptrglCreateAffinityDCNV)(phGpuList);
+// HDC gowglCreateAffinityDCNV(HGPUNV* phGpuList) {
+// 	return (*ptrwglCreateAffinityDCNV)(phGpuList);
 // }
-// BOOL goglEnumGpusFromAffinityDCNV(HDC hAffinityDC, UINT iGpuIndex, HGPUNV* hGpu) {
-// 	return (*ptrglEnumGpusFromAffinityDCNV)(hAffinityDC, iGpuIndex, hGpu);
+// BOOL gowglEnumGpusFromAffinityDCNV(HDC hAffinityDC, UINT iGpuIndex, HGPUNV* hGpu) {
+// 	return (*ptrwglEnumGpusFromAffinityDCNV)(hAffinityDC, iGpuIndex, hGpu);
 // }
-// BOOL goglDeleteDCNV(HDC hdc) {
-// 	return (*ptrglDeleteDCNV)(hdc);
+// BOOL gowglDeleteDCNV(HDC hdc) {
+// 	return (*ptrwglDeleteDCNV)(hdc);
 // }
 // //  NV_multisample_coverage
 // //  NV_present_video
-// int goglEnumerateVideoDevicesNV(HDC hDC, HVIDEOOUTPUTDEVICENV* phDeviceList) {
-// 	return (*ptrglEnumerateVideoDevicesNV)(hDC, phDeviceList);
+// int gowglEnumerateVideoDevicesNV(HDC hDC, HVIDEOOUTPUTDEVICENV* phDeviceList) {
+// 	return (*ptrwglEnumerateVideoDevicesNV)(hDC, phDeviceList);
 // }
-// BOOL goglBindVideoDeviceNV(HDC hDC, unsigned int uVideoSlot, HVIDEOOUTPUTDEVICENV hVideoDevice, int* piAttribList) {
-// 	return (*ptrglBindVideoDeviceNV)(hDC, uVideoSlot, hVideoDevice, piAttribList);
+// BOOL gowglBindVideoDeviceNV(HDC hDC, unsigned int uVideoSlot, HVIDEOOUTPUTDEVICENV hVideoDevice, int* piAttribList) {
+// 	return (*ptrwglBindVideoDeviceNV)(hDC, uVideoSlot, hVideoDevice, piAttribList);
 // }
-// BOOL goglQueryCurrentContextNV(int iAttribute, int* piValue) {
-// 	return (*ptrglQueryCurrentContextNV)(iAttribute, piValue);
+// BOOL gowglQueryCurrentContextNV(int iAttribute, int* piValue) {
+// 	return (*ptrwglQueryCurrentContextNV)(iAttribute, piValue);
 // }
 // //  NV_swap_group
-// BOOL goglJoinSwapGroupNV(HDC hDC, GLuint group) {
-// 	return (*ptrglJoinSwapGroupNV)(hDC, group);
+// BOOL gowglJoinSwapGroupNV(HDC hDC, GLuint group) {
+// 	return (*ptrwglJoinSwapGroupNV)(hDC, group);
 // }
-// BOOL goglBindSwapBarrierNV(GLuint group, GLuint barrier) {
-// 	return (*ptrglBindSwapBarrierNV)(group, barrier);
+// BOOL gowglBindSwapBarrierNV(GLuint group, GLuint barrier) {
+// 	return (*ptrwglBindSwapBarrierNV)(group, barrier);
 // }
-// BOOL goglQuerySwapGroupNV(HDC hDC, GLuint* group, GLuint* barrier) {
-// 	return (*ptrglQuerySwapGroupNV)(hDC, group, barrier);
+// BOOL gowglQuerySwapGroupNV(HDC hDC, GLuint* group, GLuint* barrier) {
+// 	return (*ptrwglQuerySwapGroupNV)(hDC, group, barrier);
 // }
-// BOOL goglQueryMaxSwapGroupsNV(HDC hDC, GLuint* maxGroups, GLuint* maxBarriers) {
-// 	return (*ptrglQueryMaxSwapGroupsNV)(hDC, maxGroups, maxBarriers);
+// BOOL gowglQueryMaxSwapGroupsNV(HDC hDC, GLuint* maxGroups, GLuint* maxBarriers) {
+// 	return (*ptrwglQueryMaxSwapGroupsNV)(hDC, maxGroups, maxBarriers);
 // }
-// BOOL goglQueryFrameCountNV(HDC hDC, GLuint* count) {
-// 	return (*ptrglQueryFrameCountNV)(hDC, count);
+// BOOL gowglQueryFrameCountNV(HDC hDC, GLuint* count) {
+// 	return (*ptrwglQueryFrameCountNV)(hDC, count);
 // }
-// BOOL goglResetFrameCountNV(HDC hDC) {
-// 	return (*ptrglResetFrameCountNV)(hDC);
+// BOOL gowglResetFrameCountNV(HDC hDC) {
+// 	return (*ptrwglResetFrameCountNV)(hDC);
 // }
 // //  NV_vertex_array_range
-// void* goglAllocateMemoryNV(GLsizei size, GLfloat readfreq, GLfloat writefreq, GLfloat priority) {
-// 	return (*ptrglAllocateMemoryNV)(size, readfreq, writefreq, priority);
+// void* gowglAllocateMemoryNV(GLsizei size, GLfloat readfreq, GLfloat writefreq, GLfloat priority) {
+// 	return (*ptrwglAllocateMemoryNV)(size, readfreq, writefreq, priority);
 // }
-// void goglFreeMemoryNV(void* pointer) {
-// 	(*ptrglFreeMemoryNV)(pointer);
+// void gowglFreeMemoryNV(void* pointer) {
+// 	(*ptrwglFreeMemoryNV)(pointer);
 // }
 // //  NV_video_capture
-// BOOL goglBindVideoCaptureDeviceNV(UINT uVideoSlot, HVIDEOINPUTDEVICENV hDevice) {
-// 	return (*ptrglBindVideoCaptureDeviceNV)(uVideoSlot, hDevice);
+// BOOL gowglBindVideoCaptureDeviceNV(UINT uVideoSlot, HVIDEOINPUTDEVICENV hDevice) {
+// 	return (*ptrwglBindVideoCaptureDeviceNV)(uVideoSlot, hDevice);
 // }
-// UINT goglEnumerateVideoCaptureDevicesNV(HDC hDc, HVIDEOINPUTDEVICENV* phDeviceList) {
-// 	return (*ptrglEnumerateVideoCaptureDevicesNV)(hDc, phDeviceList);
+// UINT gowglEnumerateVideoCaptureDevicesNV(HDC hDc, HVIDEOINPUTDEVICENV* phDeviceList) {
+// 	return (*ptrwglEnumerateVideoCaptureDevicesNV)(hDc, phDeviceList);
 // }
-// BOOL goglLockVideoCaptureDeviceNV(HDC hDc, HVIDEOINPUTDEVICENV hDevice) {
-// 	return (*ptrglLockVideoCaptureDeviceNV)(hDc, hDevice);
+// BOOL gowglLockVideoCaptureDeviceNV(HDC hDc, HVIDEOINPUTDEVICENV hDevice) {
+// 	return (*ptrwglLockVideoCaptureDeviceNV)(hDc, hDevice);
 // }
-// BOOL goglQueryVideoCaptureDeviceNV(HDC hDc, HVIDEOINPUTDEVICENV hDevice, int iAttribute, int* piValue) {
-// 	return (*ptrglQueryVideoCaptureDeviceNV)(hDc, hDevice, iAttribute, piValue);
+// BOOL gowglQueryVideoCaptureDeviceNV(HDC hDc, HVIDEOINPUTDEVICENV hDevice, int iAttribute, int* piValue) {
+// 	return (*ptrwglQueryVideoCaptureDeviceNV)(hDc, hDevice, iAttribute, piValue);
 // }
-// BOOL goglReleaseVideoCaptureDeviceNV(HDC hDc, HVIDEOINPUTDEVICENV hDevice) {
-// 	return (*ptrglReleaseVideoCaptureDeviceNV)(hDc, hDevice);
+// BOOL gowglReleaseVideoCaptureDeviceNV(HDC hDc, HVIDEOINPUTDEVICENV hDevice) {
+// 	return (*ptrwglReleaseVideoCaptureDeviceNV)(hDc, hDevice);
 // }
 // //  NV_video_output
-// BOOL goglGetVideoDeviceNV(HDC hDC, int numDevices, HPVIDEODEV* hVideoDevice) {
-// 	return (*ptrglGetVideoDeviceNV)(hDC, numDevices, hVideoDevice);
+// BOOL gowglGetVideoDeviceNV(HDC hDC, int numDevices, HPVIDEODEV* hVideoDevice) {
+// 	return (*ptrwglGetVideoDeviceNV)(hDC, numDevices, hVideoDevice);
 // }
-// BOOL goglReleaseVideoDeviceNV(HPVIDEODEV hVideoDevice) {
-// 	return (*ptrglReleaseVideoDeviceNV)(hVideoDevice);
+// BOOL gowglReleaseVideoDeviceNV(HPVIDEODEV hVideoDevice) {
+// 	return (*ptrwglReleaseVideoDeviceNV)(hVideoDevice);
 // }
-// BOOL goglBindVideoImageNV(HPVIDEODEV hVideoDevice, HPBUFFERARB hPbuffer, int iVideoBuffer) {
-// 	return (*ptrglBindVideoImageNV)(hVideoDevice, hPbuffer, iVideoBuffer);
+// BOOL gowglBindVideoImageNV(HPVIDEODEV hVideoDevice, HPBUFFERARB hPbuffer, int iVideoBuffer) {
+// 	return (*ptrwglBindVideoImageNV)(hVideoDevice, hPbuffer, iVideoBuffer);
 // }
-// BOOL goglReleaseVideoImageNV(HPBUFFERARB hPbuffer, int iVideoBuffer) {
-// 	return (*ptrglReleaseVideoImageNV)(hPbuffer, iVideoBuffer);
+// BOOL gowglReleaseVideoImageNV(HPBUFFERARB hPbuffer, int iVideoBuffer) {
+// 	return (*ptrwglReleaseVideoImageNV)(hPbuffer, iVideoBuffer);
 // }
-// BOOL goglSendPbufferToVideoNV(HPBUFFERARB hPbuffer, int iBufferType, unsigned long* pulCounterPbuffer, BOOL bBlock) {
-// 	return (*ptrglSendPbufferToVideoNV)(hPbuffer, iBufferType, pulCounterPbuffer, bBlock);
+// BOOL gowglSendPbufferToVideoNV(HPBUFFERARB hPbuffer, int iBufferType, unsigned long* pulCounterPbuffer, BOOL bBlock) {
+// 	return (*ptrwglSendPbufferToVideoNV)(hPbuffer, iBufferType, pulCounterPbuffer, bBlock);
 // }
-// BOOL goglGetVideoInfoNV(HPVIDEODEV hpVideoDevice, unsigned long* pulCounterOutputPbuffer, unsigned long* pulCounterOutputVideo) {
-// 	return (*ptrglGetVideoInfoNV)(hpVideoDevice, pulCounterOutputPbuffer, pulCounterOutputVideo);
+// BOOL gowglGetVideoInfoNV(HPVIDEODEV hpVideoDevice, unsigned long* pulCounterOutputPbuffer, unsigned long* pulCounterOutputVideo) {
+// 	return (*ptrwglGetVideoInfoNV)(hpVideoDevice, pulCounterOutputPbuffer, pulCounterOutputVideo);
 // }
 // //  OML_sync_control
-// BOOL goglGetSyncValuesOML(HDC hdc, INT64* ust, INT64* msc, INT64* sbc) {
-// 	return (*ptrglGetSyncValuesOML)(hdc, ust, msc, sbc);
+// BOOL gowglGetSyncValuesOML(HDC hdc, INT64* ust, INT64* msc, INT64* sbc) {
+// 	return (*ptrwglGetSyncValuesOML)(hdc, ust, msc, sbc);
 // }
-// BOOL goglGetMscRateOML(HDC hdc, INT32* numerator, INT32* denominator) {
-// 	return (*ptrglGetMscRateOML)(hdc, numerator, denominator);
+// BOOL gowglGetMscRateOML(HDC hdc, INT32* numerator, INT32* denominator) {
+// 	return (*ptrwglGetMscRateOML)(hdc, numerator, denominator);
 // }
-// INT64 goglSwapBuffersMscOML(HDC hdc, INT64 target_msc, INT64 divisor, INT64 remainder) {
-// 	return (*ptrglSwapBuffersMscOML)(hdc, target_msc, divisor, remainder);
+// INT64 gowglSwapBuffersMscOML(HDC hdc, INT64 target_msc, INT64 divisor, INT64 remainder) {
+// 	return (*ptrwglSwapBuffersMscOML)(hdc, target_msc, divisor, remainder);
 // }
-// INT64 goglSwapLayerBuffersMscOML(HDC hdc, int fuPlanes, INT64 target_msc, INT64 divisor, INT64 remainder) {
-// 	return (*ptrglSwapLayerBuffersMscOML)(hdc, fuPlanes, target_msc, divisor, remainder);
+// INT64 gowglSwapLayerBuffersMscOML(HDC hdc, int fuPlanes, INT64 target_msc, INT64 divisor, INT64 remainder) {
+// 	return (*ptrwglSwapLayerBuffersMscOML)(hdc, fuPlanes, target_msc, divisor, remainder);
 // }
-// BOOL goglWaitForMscOML(HDC hdc, INT64 target_msc, INT64 divisor, INT64 remainder, INT64* ust, INT64* msc, INT64* sbc) {
-// 	return (*ptrglWaitForMscOML)(hdc, target_msc, divisor, remainder, ust, msc, sbc);
+// BOOL gowglWaitForMscOML(HDC hdc, INT64 target_msc, INT64 divisor, INT64 remainder, INT64* ust, INT64* msc, INT64* sbc) {
+// 	return (*ptrwglWaitForMscOML)(hdc, target_msc, divisor, remainder, ust, msc, sbc);
 // }
-// BOOL goglWaitForSbcOML(HDC hdc, INT64 target_sbc, INT64* ust, INT64* msc, INT64* sbc) {
-// 	return (*ptrglWaitForSbcOML)(hdc, target_sbc, ust, msc, sbc);
+// BOOL gowglWaitForSbcOML(HDC hdc, INT64 target_sbc, INT64* ust, INT64* msc, INT64* sbc) {
+// 	return (*ptrwglWaitForSbcOML)(hdc, target_sbc, ust, msc, sbc);
 // }
 // //  wgl
-// HGLRC goglCreateContext(HDC hDc) {
-// 	return (*ptrglCreateContext)(hDc);
+// HGLRC gowglCreateContext(HDC hDc) {
+// 	return (*ptrwglCreateContext)(hDc);
 // }
-// BOOL goglDeleteContext(HGLRC oldContext) {
-// 	return (*ptrglDeleteContext)(oldContext);
+// BOOL gowglDeleteContext(HGLRC oldContext) {
+// 	return (*ptrwglDeleteContext)(oldContext);
 // }
-// HGLRC goglGetCurrentContext() {
-// 	return (*ptrglGetCurrentContext)();
+// HGLRC gowglGetCurrentContext() {
+// 	return (*ptrwglGetCurrentContext)();
 // }
-// BOOL goglMakeCurrent(HDC hDc, HGLRC newContext) {
-// 	return (*ptrglMakeCurrent)(hDc, newContext);
+// BOOL gowglMakeCurrent(HDC hDc, HGLRC newContext) {
+// 	return (*ptrwglMakeCurrent)(hDc, newContext);
 // }
-// BOOL goglCopyContext(HGLRC hglrcSrc, HGLRC hglrcDst, UINT mask) {
-// 	return (*ptrglCopyContext)(hglrcSrc, hglrcDst, mask);
+// BOOL gowglCopyContext(HGLRC hglrcSrc, HGLRC hglrcDst, UINT mask) {
+// 	return (*ptrwglCopyContext)(hglrcSrc, hglrcDst, mask);
 // }
-// int goglChoosePixelFormat(HDC hDc, PIXELFORMATDESCRIPTOR* pPfd) {
-// 	return (*ptrglChoosePixelFormat)(hDc, pPfd);
+// int gowglChoosePixelFormat(HDC hDc, PIXELFORMATDESCRIPTOR* pPfd) {
+// 	return (*ptrwglChoosePixelFormat)(hDc, pPfd);
 // }
-// HDC goglGetCurrentDC() {
-// 	return (*ptrglGetCurrentDC)();
+// HDC gowglGetCurrentDC() {
+// 	return (*ptrwglGetCurrentDC)();
 // }
-// PROC goglGetDefaultProcAddress(LPCSTR lpszProc) {
-// 	return (*ptrglGetDefaultProcAddress)(lpszProc);
+// PROC gowglGetDefaultProcAddress(LPCSTR lpszProc) {
+// 	return (*ptrwglGetDefaultProcAddress)(lpszProc);
 // }
-// PROC goglGetProcAddress(LPCSTR lpszProc) {
-// 	return (*ptrglGetProcAddress)(lpszProc);
+// PROC gowglGetProcAddress(LPCSTR lpszProc) {
+// 	return (*ptrwglGetProcAddress)(lpszProc);
 // }
-// int goglGetPixelFormat(HDC hdc) {
-// 	return (*ptrglGetPixelFormat)(hdc);
+// int gowglGetPixelFormat(HDC hdc) {
+// 	return (*ptrwglGetPixelFormat)(hdc);
 // }
-// BOOL goglSetPixelFormat(HDC hdc, int ipfd, PIXELFORMATDESCRIPTOR* ppfd) {
-// 	return (*ptrglSetPixelFormat)(hdc, ipfd, ppfd);
+// BOOL gowglSetPixelFormat(HDC hdc, int ipfd, PIXELFORMATDESCRIPTOR* ppfd) {
+// 	return (*ptrwglSetPixelFormat)(hdc, ipfd, ppfd);
 // }
-// BOOL goglSwapBuffers(HDC hdc) {
-// 	return (*ptrglSwapBuffers)(hdc);
+// BOOL gowglSwapBuffers(HDC hdc) {
+// 	return (*ptrwglSwapBuffers)(hdc);
 // }
-// BOOL goglShareLists(HGLRC hrcSrvShare, HGLRC hrcSrvSource) {
-// 	return (*ptrglShareLists)(hrcSrvShare, hrcSrvSource);
+// BOOL gowglShareLists(HGLRC hrcSrvShare, HGLRC hrcSrvSource) {
+// 	return (*ptrwglShareLists)(hrcSrvShare, hrcSrvSource);
 // }
-// HGLRC goglCreateLayerContext(HDC hDc, int level) {
-// 	return (*ptrglCreateLayerContext)(hDc, level);
+// HGLRC gowglCreateLayerContext(HDC hDc, int level) {
+// 	return (*ptrwglCreateLayerContext)(hDc, level);
 // }
-// BOOL goglDescribeLayerPlane(HDC hDc, int pixelFormat, int layerPlane, UINT nBytes, LAYERPLANEDESCRIPTOR* plpd) {
-// 	return (*ptrglDescribeLayerPlane)(hDc, pixelFormat, layerPlane, nBytes, plpd);
+// BOOL gowglDescribeLayerPlane(HDC hDc, int pixelFormat, int layerPlane, UINT nBytes, LAYERPLANEDESCRIPTOR* plpd) {
+// 	return (*ptrwglDescribeLayerPlane)(hDc, pixelFormat, layerPlane, nBytes, plpd);
 // }
-// int goglSetLayerPaletteEntries(HDC hdc, int iLayerPlane, int iStart, int cEntries, COLORREF* pcr) {
-// 	return (*ptrglSetLayerPaletteEntries)(hdc, iLayerPlane, iStart, cEntries, pcr);
+// int gowglSetLayerPaletteEntries(HDC hdc, int iLayerPlane, int iStart, int cEntries, COLORREF* pcr) {
+// 	return (*ptrwglSetLayerPaletteEntries)(hdc, iLayerPlane, iStart, cEntries, pcr);
 // }
-// int goglGetLayerPaletteEntries(HDC hdc, int iLayerPlane, int iStart, int cEntries, COLORREF* pcr) {
-// 	return (*ptrglGetLayerPaletteEntries)(hdc, iLayerPlane, iStart, cEntries, pcr);
+// int gowglGetLayerPaletteEntries(HDC hdc, int iLayerPlane, int iStart, int cEntries, COLORREF* pcr) {
+// 	return (*ptrwglGetLayerPaletteEntries)(hdc, iLayerPlane, iStart, cEntries, pcr);
 // }
-// BOOL goglRealizeLayerPalette(HDC hdc, int iLayerPlane, BOOL bRealize) {
-// 	return (*ptrglRealizeLayerPalette)(hdc, iLayerPlane, bRealize);
+// BOOL gowglRealizeLayerPalette(HDC hdc, int iLayerPlane, BOOL bRealize) {
+// 	return (*ptrwglRealizeLayerPalette)(hdc, iLayerPlane, bRealize);
 // }
-// BOOL goglSwapLayerBuffers(HDC hdc, UINT fuFlags) {
-// 	return (*ptrglSwapLayerBuffers)(hdc, fuFlags);
+// BOOL gowglSwapLayerBuffers(HDC hdc, UINT fuFlags) {
+// 	return (*ptrwglSwapLayerBuffers)(hdc, fuFlags);
 // }
-// BOOL goglUseFontBitmapsA(HDC hDC, DWORD first, DWORD count, DWORD listBase) {
-// 	return (*ptrglUseFontBitmapsA)(hDC, first, count, listBase);
+// BOOL gowglUseFontBitmapsA(HDC hDC, DWORD first, DWORD count, DWORD listBase) {
+// 	return (*ptrwglUseFontBitmapsA)(hDC, first, count, listBase);
 // }
-// BOOL goglUseFontBitmapsW(HDC hDC, DWORD first, DWORD count, DWORD listBase) {
-// 	return (*ptrglUseFontBitmapsW)(hDC, first, count, listBase);
+// BOOL gowglUseFontBitmapsW(HDC hDC, DWORD first, DWORD count, DWORD listBase) {
+// 	return (*ptrwglUseFontBitmapsW)(hDC, first, count, listBase);
 // }
 // 
 // int init_3DFX_multisample() {
 // 	return 0;
 // }
 // int init_3DL_stereo_control() {
-// 	ptrglSetStereoEmitterState3DL = goglGetProcAddress("glSetStereoEmitterState3DL");
-// 	if(ptrglSetStereoEmitterState3DL == NULL) return 1;
+// 	ptrwglSetStereoEmitterState3DL = gowglGetProcAddress("wglSetStereoEmitterState3DL");
+// 	if(ptrwglSetStereoEmitterState3DL == NULL) return 1;
 // 	return 0;
 // }
 // int init_AMD_gpu_association() {
-// 	ptrglGetGPUIDsAMD = goglGetProcAddress("glGetGPUIDsAMD");
-// 	if(ptrglGetGPUIDsAMD == NULL) return 1;
-// 	ptrglGetGPUInfoAMD = goglGetProcAddress("glGetGPUInfoAMD");
-// 	if(ptrglGetGPUInfoAMD == NULL) return 1;
-// 	ptrglGetContextGPUIDAMD = goglGetProcAddress("glGetContextGPUIDAMD");
-// 	if(ptrglGetContextGPUIDAMD == NULL) return 1;
-// 	ptrglCreateAssociatedContextAMD = goglGetProcAddress("glCreateAssociatedContextAMD");
-// 	if(ptrglCreateAssociatedContextAMD == NULL) return 1;
-// 	ptrglCreateAssociatedContextAttribsAMD = goglGetProcAddress("glCreateAssociatedContextAttribsAMD");
-// 	if(ptrglCreateAssociatedContextAttribsAMD == NULL) return 1;
-// 	ptrglDeleteAssociatedContextAMD = goglGetProcAddress("glDeleteAssociatedContextAMD");
-// 	if(ptrglDeleteAssociatedContextAMD == NULL) return 1;
-// 	ptrglMakeAssociatedContextCurrentAMD = goglGetProcAddress("glMakeAssociatedContextCurrentAMD");
-// 	if(ptrglMakeAssociatedContextCurrentAMD == NULL) return 1;
-// 	ptrglGetCurrentAssociatedContextAMD = goglGetProcAddress("glGetCurrentAssociatedContextAMD");
-// 	if(ptrglGetCurrentAssociatedContextAMD == NULL) return 1;
-// 	ptrglBlitContextFramebufferAMD = goglGetProcAddress("glBlitContextFramebufferAMD");
-// 	if(ptrglBlitContextFramebufferAMD == NULL) return 1;
+// 	ptrwglGetGPUIDsAMD = gowglGetProcAddress("wglGetGPUIDsAMD");
+// 	if(ptrwglGetGPUIDsAMD == NULL) return 1;
+// 	ptrwglGetGPUInfoAMD = gowglGetProcAddress("wglGetGPUInfoAMD");
+// 	if(ptrwglGetGPUInfoAMD == NULL) return 1;
+// 	ptrwglGetContextGPUIDAMD = gowglGetProcAddress("wglGetContextGPUIDAMD");
+// 	if(ptrwglGetContextGPUIDAMD == NULL) return 1;
+// 	ptrwglCreateAssociatedContextAMD = gowglGetProcAddress("wglCreateAssociatedContextAMD");
+// 	if(ptrwglCreateAssociatedContextAMD == NULL) return 1;
+// 	ptrwglCreateAssociatedContextAttribsAMD = gowglGetProcAddress("wglCreateAssociatedContextAttribsAMD");
+// 	if(ptrwglCreateAssociatedContextAttribsAMD == NULL) return 1;
+// 	ptrwglDeleteAssociatedContextAMD = gowglGetProcAddress("wglDeleteAssociatedContextAMD");
+// 	if(ptrwglDeleteAssociatedContextAMD == NULL) return 1;
+// 	ptrwglMakeAssociatedContextCurrentAMD = gowglGetProcAddress("wglMakeAssociatedContextCurrentAMD");
+// 	if(ptrwglMakeAssociatedContextCurrentAMD == NULL) return 1;
+// 	ptrwglGetCurrentAssociatedContextAMD = gowglGetProcAddress("wglGetCurrentAssociatedContextAMD");
+// 	if(ptrwglGetCurrentAssociatedContextAMD == NULL) return 1;
+// 	ptrwglBlitContextFramebufferAMD = gowglGetProcAddress("wglBlitContextFramebufferAMD");
+// 	if(ptrwglBlitContextFramebufferAMD == NULL) return 1;
 // 	return 0;
 // }
 // int init_ARB_buffer_region() {
-// 	ptrglCreateBufferRegionARB = goglGetProcAddress("glCreateBufferRegionARB");
-// 	if(ptrglCreateBufferRegionARB == NULL) return 1;
-// 	ptrglDeleteBufferRegionARB = goglGetProcAddress("glDeleteBufferRegionARB");
-// 	if(ptrglDeleteBufferRegionARB == NULL) return 1;
-// 	ptrglSaveBufferRegionARB = goglGetProcAddress("glSaveBufferRegionARB");
-// 	if(ptrglSaveBufferRegionARB == NULL) return 1;
-// 	ptrglRestoreBufferRegionARB = goglGetProcAddress("glRestoreBufferRegionARB");
-// 	if(ptrglRestoreBufferRegionARB == NULL) return 1;
+// 	ptrwglCreateBufferRegionARB = gowglGetProcAddress("wglCreateBufferRegionARB");
+// 	if(ptrwglCreateBufferRegionARB == NULL) return 1;
+// 	ptrwglDeleteBufferRegionARB = gowglGetProcAddress("wglDeleteBufferRegionARB");
+// 	if(ptrwglDeleteBufferRegionARB == NULL) return 1;
+// 	ptrwglSaveBufferRegionARB = gowglGetProcAddress("wglSaveBufferRegionARB");
+// 	if(ptrwglSaveBufferRegionARB == NULL) return 1;
+// 	ptrwglRestoreBufferRegionARB = gowglGetProcAddress("wglRestoreBufferRegionARB");
+// 	if(ptrwglRestoreBufferRegionARB == NULL) return 1;
 // 	return 0;
 // }
 // int init_ARB_create_context() {
-// 	ptrglCreateContextAttribsARB = goglGetProcAddress("glCreateContextAttribsARB");
-// 	if(ptrglCreateContextAttribsARB == NULL) return 1;
+// 	ptrwglCreateContextAttribsARB = gowglGetProcAddress("wglCreateContextAttribsARB");
+// 	if(ptrwglCreateContextAttribsARB == NULL) return 1;
 // 	return 0;
 // }
 // int init_ARB_create_context_profile() {
@@ -889,55 +889,55 @@ package wgl
 // 	return 0;
 // }
 // int init_ARB_extensions_string() {
-// 	ptrglGetExtensionsStringARB = goglGetProcAddress("glGetExtensionsStringARB");
-// 	if(ptrglGetExtensionsStringARB == NULL) return 1;
+// 	ptrwglGetExtensionsStringARB = gowglGetProcAddress("wglGetExtensionsStringARB");
+// 	if(ptrwglGetExtensionsStringARB == NULL) return 1;
 // 	return 0;
 // }
 // int init_ARB_framebuffer_sRGB() {
 // 	return 0;
 // }
 // int init_ARB_make_current_read() {
-// 	ptrglMakeContextCurrentARB = goglGetProcAddress("glMakeContextCurrentARB");
-// 	if(ptrglMakeContextCurrentARB == NULL) return 1;
-// 	ptrglGetCurrentReadDCARB = goglGetProcAddress("glGetCurrentReadDCARB");
-// 	if(ptrglGetCurrentReadDCARB == NULL) return 1;
+// 	ptrwglMakeContextCurrentARB = gowglGetProcAddress("wglMakeContextCurrentARB");
+// 	if(ptrwglMakeContextCurrentARB == NULL) return 1;
+// 	ptrwglGetCurrentReadDCARB = gowglGetProcAddress("wglGetCurrentReadDCARB");
+// 	if(ptrwglGetCurrentReadDCARB == NULL) return 1;
 // 	return 0;
 // }
 // int init_ARB_multisample() {
 // 	return 0;
 // }
 // int init_ARB_pbuffer() {
-// 	ptrglCreatePbufferARB = goglGetProcAddress("glCreatePbufferARB");
-// 	if(ptrglCreatePbufferARB == NULL) return 1;
-// 	ptrglGetPbufferDCARB = goglGetProcAddress("glGetPbufferDCARB");
-// 	if(ptrglGetPbufferDCARB == NULL) return 1;
-// 	ptrglReleasePbufferDCARB = goglGetProcAddress("glReleasePbufferDCARB");
-// 	if(ptrglReleasePbufferDCARB == NULL) return 1;
-// 	ptrglDestroyPbufferARB = goglGetProcAddress("glDestroyPbufferARB");
-// 	if(ptrglDestroyPbufferARB == NULL) return 1;
-// 	ptrglQueryPbufferARB = goglGetProcAddress("glQueryPbufferARB");
-// 	if(ptrglQueryPbufferARB == NULL) return 1;
+// 	ptrwglCreatePbufferARB = gowglGetProcAddress("wglCreatePbufferARB");
+// 	if(ptrwglCreatePbufferARB == NULL) return 1;
+// 	ptrwglGetPbufferDCARB = gowglGetProcAddress("wglGetPbufferDCARB");
+// 	if(ptrwglGetPbufferDCARB == NULL) return 1;
+// 	ptrwglReleasePbufferDCARB = gowglGetProcAddress("wglReleasePbufferDCARB");
+// 	if(ptrwglReleasePbufferDCARB == NULL) return 1;
+// 	ptrwglDestroyPbufferARB = gowglGetProcAddress("wglDestroyPbufferARB");
+// 	if(ptrwglDestroyPbufferARB == NULL) return 1;
+// 	ptrwglQueryPbufferARB = gowglGetProcAddress("wglQueryPbufferARB");
+// 	if(ptrwglQueryPbufferARB == NULL) return 1;
 // 	return 0;
 // }
 // int init_ARB_pixel_format() {
-// 	ptrglGetPixelFormatAttribivARB = goglGetProcAddress("glGetPixelFormatAttribivARB");
-// 	if(ptrglGetPixelFormatAttribivARB == NULL) return 1;
-// 	ptrglGetPixelFormatAttribfvARB = goglGetProcAddress("glGetPixelFormatAttribfvARB");
-// 	if(ptrglGetPixelFormatAttribfvARB == NULL) return 1;
-// 	ptrglChoosePixelFormatARB = goglGetProcAddress("glChoosePixelFormatARB");
-// 	if(ptrglChoosePixelFormatARB == NULL) return 1;
+// 	ptrwglGetPixelFormatAttribivARB = gowglGetProcAddress("wglGetPixelFormatAttribivARB");
+// 	if(ptrwglGetPixelFormatAttribivARB == NULL) return 1;
+// 	ptrwglGetPixelFormatAttribfvARB = gowglGetProcAddress("wglGetPixelFormatAttribfvARB");
+// 	if(ptrwglGetPixelFormatAttribfvARB == NULL) return 1;
+// 	ptrwglChoosePixelFormatARB = gowglGetProcAddress("wglChoosePixelFormatARB");
+// 	if(ptrwglChoosePixelFormatARB == NULL) return 1;
 // 	return 0;
 // }
 // int init_ARB_pixel_format_float() {
 // 	return 0;
 // }
 // int init_ARB_render_texture() {
-// 	ptrglBindTexImageARB = goglGetProcAddress("glBindTexImageARB");
-// 	if(ptrglBindTexImageARB == NULL) return 1;
-// 	ptrglReleaseTexImageARB = goglGetProcAddress("glReleaseTexImageARB");
-// 	if(ptrglReleaseTexImageARB == NULL) return 1;
-// 	ptrglSetPbufferAttribARB = goglGetProcAddress("glSetPbufferAttribARB");
-// 	if(ptrglSetPbufferAttribARB == NULL) return 1;
+// 	ptrwglBindTexImageARB = gowglGetProcAddress("wglBindTexImageARB");
+// 	if(ptrwglBindTexImageARB == NULL) return 1;
+// 	ptrwglReleaseTexImageARB = gowglGetProcAddress("wglReleaseTexImageARB");
+// 	if(ptrwglReleaseTexImageARB == NULL) return 1;
+// 	ptrwglSetPbufferAttribARB = gowglGetProcAddress("wglSetPbufferAttribARB");
+// 	if(ptrwglSetPbufferAttribARB == NULL) return 1;
 // 	return 0;
 // }
 // int init_ATI_pixel_format_float() {
@@ -947,310 +947,310 @@ package wgl
 // 	return 0;
 // }
 // int init_EXT_display_color_table() {
-// 	ptrglCreateDisplayColorTableEXT = goglGetProcAddress("glCreateDisplayColorTableEXT");
-// 	if(ptrglCreateDisplayColorTableEXT == NULL) return 1;
-// 	ptrglLoadDisplayColorTableEXT = goglGetProcAddress("glLoadDisplayColorTableEXT");
-// 	if(ptrglLoadDisplayColorTableEXT == NULL) return 1;
-// 	ptrglBindDisplayColorTableEXT = goglGetProcAddress("glBindDisplayColorTableEXT");
-// 	if(ptrglBindDisplayColorTableEXT == NULL) return 1;
-// 	ptrglDestroyDisplayColorTableEXT = goglGetProcAddress("glDestroyDisplayColorTableEXT");
-// 	if(ptrglDestroyDisplayColorTableEXT == NULL) return 1;
+// 	ptrwglCreateDisplayColorTableEXT = gowglGetProcAddress("wglCreateDisplayColorTableEXT");
+// 	if(ptrwglCreateDisplayColorTableEXT == NULL) return 1;
+// 	ptrwglLoadDisplayColorTableEXT = gowglGetProcAddress("wglLoadDisplayColorTableEXT");
+// 	if(ptrwglLoadDisplayColorTableEXT == NULL) return 1;
+// 	ptrwglBindDisplayColorTableEXT = gowglGetProcAddress("wglBindDisplayColorTableEXT");
+// 	if(ptrwglBindDisplayColorTableEXT == NULL) return 1;
+// 	ptrwglDestroyDisplayColorTableEXT = gowglGetProcAddress("wglDestroyDisplayColorTableEXT");
+// 	if(ptrwglDestroyDisplayColorTableEXT == NULL) return 1;
 // 	return 0;
 // }
 // int init_EXT_extensions_string() {
-// 	ptrglGetExtensionsStringEXT = goglGetProcAddress("glGetExtensionsStringEXT");
-// 	if(ptrglGetExtensionsStringEXT == NULL) return 1;
+// 	ptrwglGetExtensionsStringEXT = gowglGetProcAddress("wglGetExtensionsStringEXT");
+// 	if(ptrwglGetExtensionsStringEXT == NULL) return 1;
 // 	return 0;
 // }
 // int init_EXT_framebuffer_sRGB() {
 // 	return 0;
 // }
 // int init_EXT_make_current_read() {
-// 	ptrglMakeContextCurrentEXT = goglGetProcAddress("glMakeContextCurrentEXT");
-// 	if(ptrglMakeContextCurrentEXT == NULL) return 1;
-// 	ptrglGetCurrentReadDCEXT = goglGetProcAddress("glGetCurrentReadDCEXT");
-// 	if(ptrglGetCurrentReadDCEXT == NULL) return 1;
+// 	ptrwglMakeContextCurrentEXT = gowglGetProcAddress("wglMakeContextCurrentEXT");
+// 	if(ptrwglMakeContextCurrentEXT == NULL) return 1;
+// 	ptrwglGetCurrentReadDCEXT = gowglGetProcAddress("wglGetCurrentReadDCEXT");
+// 	if(ptrwglGetCurrentReadDCEXT == NULL) return 1;
 // 	return 0;
 // }
 // int init_EXT_multisample() {
 // 	return 0;
 // }
 // int init_EXT_pbuffer() {
-// 	ptrglCreatePbufferEXT = goglGetProcAddress("glCreatePbufferEXT");
-// 	if(ptrglCreatePbufferEXT == NULL) return 1;
-// 	ptrglGetPbufferDCEXT = goglGetProcAddress("glGetPbufferDCEXT");
-// 	if(ptrglGetPbufferDCEXT == NULL) return 1;
-// 	ptrglReleasePbufferDCEXT = goglGetProcAddress("glReleasePbufferDCEXT");
-// 	if(ptrglReleasePbufferDCEXT == NULL) return 1;
-// 	ptrglDestroyPbufferEXT = goglGetProcAddress("glDestroyPbufferEXT");
-// 	if(ptrglDestroyPbufferEXT == NULL) return 1;
-// 	ptrglQueryPbufferEXT = goglGetProcAddress("glQueryPbufferEXT");
-// 	if(ptrglQueryPbufferEXT == NULL) return 1;
+// 	ptrwglCreatePbufferEXT = gowglGetProcAddress("wglCreatePbufferEXT");
+// 	if(ptrwglCreatePbufferEXT == NULL) return 1;
+// 	ptrwglGetPbufferDCEXT = gowglGetProcAddress("wglGetPbufferDCEXT");
+// 	if(ptrwglGetPbufferDCEXT == NULL) return 1;
+// 	ptrwglReleasePbufferDCEXT = gowglGetProcAddress("wglReleasePbufferDCEXT");
+// 	if(ptrwglReleasePbufferDCEXT == NULL) return 1;
+// 	ptrwglDestroyPbufferEXT = gowglGetProcAddress("wglDestroyPbufferEXT");
+// 	if(ptrwglDestroyPbufferEXT == NULL) return 1;
+// 	ptrwglQueryPbufferEXT = gowglGetProcAddress("wglQueryPbufferEXT");
+// 	if(ptrwglQueryPbufferEXT == NULL) return 1;
 // 	return 0;
 // }
 // int init_EXT_pixel_format() {
-// 	ptrglGetPixelFormatAttribivEXT = goglGetProcAddress("glGetPixelFormatAttribivEXT");
-// 	if(ptrglGetPixelFormatAttribivEXT == NULL) return 1;
-// 	ptrglGetPixelFormatAttribfvEXT = goglGetProcAddress("glGetPixelFormatAttribfvEXT");
-// 	if(ptrglGetPixelFormatAttribfvEXT == NULL) return 1;
-// 	ptrglChoosePixelFormatEXT = goglGetProcAddress("glChoosePixelFormatEXT");
-// 	if(ptrglChoosePixelFormatEXT == NULL) return 1;
+// 	ptrwglGetPixelFormatAttribivEXT = gowglGetProcAddress("wglGetPixelFormatAttribivEXT");
+// 	if(ptrwglGetPixelFormatAttribivEXT == NULL) return 1;
+// 	ptrwglGetPixelFormatAttribfvEXT = gowglGetProcAddress("wglGetPixelFormatAttribfvEXT");
+// 	if(ptrwglGetPixelFormatAttribfvEXT == NULL) return 1;
+// 	ptrwglChoosePixelFormatEXT = gowglGetProcAddress("wglChoosePixelFormatEXT");
+// 	if(ptrwglChoosePixelFormatEXT == NULL) return 1;
 // 	return 0;
 // }
 // int init_EXT_pixel_format_packed_float() {
 // 	return 0;
 // }
 // int init_EXT_swap_control() {
-// 	ptrglSwapIntervalEXT = goglGetProcAddress("glSwapIntervalEXT");
-// 	if(ptrglSwapIntervalEXT == NULL) return 1;
-// 	ptrglGetSwapIntervalEXT = goglGetProcAddress("glGetSwapIntervalEXT");
-// 	if(ptrglGetSwapIntervalEXT == NULL) return 1;
+// 	ptrwglSwapIntervalEXT = gowglGetProcAddress("wglSwapIntervalEXT");
+// 	if(ptrwglSwapIntervalEXT == NULL) return 1;
+// 	ptrwglGetSwapIntervalEXT = gowglGetProcAddress("wglGetSwapIntervalEXT");
+// 	if(ptrwglGetSwapIntervalEXT == NULL) return 1;
 // 	return 0;
 // }
 // int init_EXT_swap_control_tear() {
 // 	return 0;
 // }
 // int init_I3D_digital_video_control() {
-// 	ptrglGetDigitalVideoParametersI3D = goglGetProcAddress("glGetDigitalVideoParametersI3D");
-// 	if(ptrglGetDigitalVideoParametersI3D == NULL) return 1;
-// 	ptrglSetDigitalVideoParametersI3D = goglGetProcAddress("glSetDigitalVideoParametersI3D");
-// 	if(ptrglSetDigitalVideoParametersI3D == NULL) return 1;
+// 	ptrwglGetDigitalVideoParametersI3D = gowglGetProcAddress("wglGetDigitalVideoParametersI3D");
+// 	if(ptrwglGetDigitalVideoParametersI3D == NULL) return 1;
+// 	ptrwglSetDigitalVideoParametersI3D = gowglGetProcAddress("wglSetDigitalVideoParametersI3D");
+// 	if(ptrwglSetDigitalVideoParametersI3D == NULL) return 1;
 // 	return 0;
 // }
 // int init_I3D_gamma() {
-// 	ptrglGetGammaTableParametersI3D = goglGetProcAddress("glGetGammaTableParametersI3D");
-// 	if(ptrglGetGammaTableParametersI3D == NULL) return 1;
-// 	ptrglSetGammaTableParametersI3D = goglGetProcAddress("glSetGammaTableParametersI3D");
-// 	if(ptrglSetGammaTableParametersI3D == NULL) return 1;
-// 	ptrglGetGammaTableI3D = goglGetProcAddress("glGetGammaTableI3D");
-// 	if(ptrglGetGammaTableI3D == NULL) return 1;
-// 	ptrglSetGammaTableI3D = goglGetProcAddress("glSetGammaTableI3D");
-// 	if(ptrglSetGammaTableI3D == NULL) return 1;
+// 	ptrwglGetGammaTableParametersI3D = gowglGetProcAddress("wglGetGammaTableParametersI3D");
+// 	if(ptrwglGetGammaTableParametersI3D == NULL) return 1;
+// 	ptrwglSetGammaTableParametersI3D = gowglGetProcAddress("wglSetGammaTableParametersI3D");
+// 	if(ptrwglSetGammaTableParametersI3D == NULL) return 1;
+// 	ptrwglGetGammaTableI3D = gowglGetProcAddress("wglGetGammaTableI3D");
+// 	if(ptrwglGetGammaTableI3D == NULL) return 1;
+// 	ptrwglSetGammaTableI3D = gowglGetProcAddress("wglSetGammaTableI3D");
+// 	if(ptrwglSetGammaTableI3D == NULL) return 1;
 // 	return 0;
 // }
 // int init_I3D_genlock() {
-// 	ptrglEnableGenlockI3D = goglGetProcAddress("glEnableGenlockI3D");
-// 	if(ptrglEnableGenlockI3D == NULL) return 1;
-// 	ptrglDisableGenlockI3D = goglGetProcAddress("glDisableGenlockI3D");
-// 	if(ptrglDisableGenlockI3D == NULL) return 1;
-// 	ptrglIsEnabledGenlockI3D = goglGetProcAddress("glIsEnabledGenlockI3D");
-// 	if(ptrglIsEnabledGenlockI3D == NULL) return 1;
-// 	ptrglGenlockSourceI3D = goglGetProcAddress("glGenlockSourceI3D");
-// 	if(ptrglGenlockSourceI3D == NULL) return 1;
-// 	ptrglGetGenlockSourceI3D = goglGetProcAddress("glGetGenlockSourceI3D");
-// 	if(ptrglGetGenlockSourceI3D == NULL) return 1;
-// 	ptrglGenlockSourceEdgeI3D = goglGetProcAddress("glGenlockSourceEdgeI3D");
-// 	if(ptrglGenlockSourceEdgeI3D == NULL) return 1;
-// 	ptrglGetGenlockSourceEdgeI3D = goglGetProcAddress("glGetGenlockSourceEdgeI3D");
-// 	if(ptrglGetGenlockSourceEdgeI3D == NULL) return 1;
-// 	ptrglGenlockSampleRateI3D = goglGetProcAddress("glGenlockSampleRateI3D");
-// 	if(ptrglGenlockSampleRateI3D == NULL) return 1;
-// 	ptrglGetGenlockSampleRateI3D = goglGetProcAddress("glGetGenlockSampleRateI3D");
-// 	if(ptrglGetGenlockSampleRateI3D == NULL) return 1;
-// 	ptrglGenlockSourceDelayI3D = goglGetProcAddress("glGenlockSourceDelayI3D");
-// 	if(ptrglGenlockSourceDelayI3D == NULL) return 1;
-// 	ptrglGetGenlockSourceDelayI3D = goglGetProcAddress("glGetGenlockSourceDelayI3D");
-// 	if(ptrglGetGenlockSourceDelayI3D == NULL) return 1;
-// 	ptrglQueryGenlockMaxSourceDelayI3D = goglGetProcAddress("glQueryGenlockMaxSourceDelayI3D");
-// 	if(ptrglQueryGenlockMaxSourceDelayI3D == NULL) return 1;
+// 	ptrwglEnableGenlockI3D = gowglGetProcAddress("wglEnableGenlockI3D");
+// 	if(ptrwglEnableGenlockI3D == NULL) return 1;
+// 	ptrwglDisableGenlockI3D = gowglGetProcAddress("wglDisableGenlockI3D");
+// 	if(ptrwglDisableGenlockI3D == NULL) return 1;
+// 	ptrwglIsEnabledGenlockI3D = gowglGetProcAddress("wglIsEnabledGenlockI3D");
+// 	if(ptrwglIsEnabledGenlockI3D == NULL) return 1;
+// 	ptrwglGenlockSourceI3D = gowglGetProcAddress("wglGenlockSourceI3D");
+// 	if(ptrwglGenlockSourceI3D == NULL) return 1;
+// 	ptrwglGetGenlockSourceI3D = gowglGetProcAddress("wglGetGenlockSourceI3D");
+// 	if(ptrwglGetGenlockSourceI3D == NULL) return 1;
+// 	ptrwglGenlockSourceEdgeI3D = gowglGetProcAddress("wglGenlockSourceEdgeI3D");
+// 	if(ptrwglGenlockSourceEdgeI3D == NULL) return 1;
+// 	ptrwglGetGenlockSourceEdgeI3D = gowglGetProcAddress("wglGetGenlockSourceEdgeI3D");
+// 	if(ptrwglGetGenlockSourceEdgeI3D == NULL) return 1;
+// 	ptrwglGenlockSampleRateI3D = gowglGetProcAddress("wglGenlockSampleRateI3D");
+// 	if(ptrwglGenlockSampleRateI3D == NULL) return 1;
+// 	ptrwglGetGenlockSampleRateI3D = gowglGetProcAddress("wglGetGenlockSampleRateI3D");
+// 	if(ptrwglGetGenlockSampleRateI3D == NULL) return 1;
+// 	ptrwglGenlockSourceDelayI3D = gowglGetProcAddress("wglGenlockSourceDelayI3D");
+// 	if(ptrwglGenlockSourceDelayI3D == NULL) return 1;
+// 	ptrwglGetGenlockSourceDelayI3D = gowglGetProcAddress("wglGetGenlockSourceDelayI3D");
+// 	if(ptrwglGetGenlockSourceDelayI3D == NULL) return 1;
+// 	ptrwglQueryGenlockMaxSourceDelayI3D = gowglGetProcAddress("wglQueryGenlockMaxSourceDelayI3D");
+// 	if(ptrwglQueryGenlockMaxSourceDelayI3D == NULL) return 1;
 // 	return 0;
 // }
 // int init_I3D_image_buffer() {
-// 	ptrglCreateImageBufferI3D = goglGetProcAddress("glCreateImageBufferI3D");
-// 	if(ptrglCreateImageBufferI3D == NULL) return 1;
-// 	ptrglDestroyImageBufferI3D = goglGetProcAddress("glDestroyImageBufferI3D");
-// 	if(ptrglDestroyImageBufferI3D == NULL) return 1;
-// 	ptrglAssociateImageBufferEventsI3D = goglGetProcAddress("glAssociateImageBufferEventsI3D");
-// 	if(ptrglAssociateImageBufferEventsI3D == NULL) return 1;
-// 	ptrglReleaseImageBufferEventsI3D = goglGetProcAddress("glReleaseImageBufferEventsI3D");
-// 	if(ptrglReleaseImageBufferEventsI3D == NULL) return 1;
+// 	ptrwglCreateImageBufferI3D = gowglGetProcAddress("wglCreateImageBufferI3D");
+// 	if(ptrwglCreateImageBufferI3D == NULL) return 1;
+// 	ptrwglDestroyImageBufferI3D = gowglGetProcAddress("wglDestroyImageBufferI3D");
+// 	if(ptrwglDestroyImageBufferI3D == NULL) return 1;
+// 	ptrwglAssociateImageBufferEventsI3D = gowglGetProcAddress("wglAssociateImageBufferEventsI3D");
+// 	if(ptrwglAssociateImageBufferEventsI3D == NULL) return 1;
+// 	ptrwglReleaseImageBufferEventsI3D = gowglGetProcAddress("wglReleaseImageBufferEventsI3D");
+// 	if(ptrwglReleaseImageBufferEventsI3D == NULL) return 1;
 // 	return 0;
 // }
 // int init_I3D_swap_frame_lock() {
-// 	ptrglEnableFrameLockI3D = goglGetProcAddress("glEnableFrameLockI3D");
-// 	if(ptrglEnableFrameLockI3D == NULL) return 1;
-// 	ptrglDisableFrameLockI3D = goglGetProcAddress("glDisableFrameLockI3D");
-// 	if(ptrglDisableFrameLockI3D == NULL) return 1;
-// 	ptrglIsEnabledFrameLockI3D = goglGetProcAddress("glIsEnabledFrameLockI3D");
-// 	if(ptrglIsEnabledFrameLockI3D == NULL) return 1;
-// 	ptrglQueryFrameLockMasterI3D = goglGetProcAddress("glQueryFrameLockMasterI3D");
-// 	if(ptrglQueryFrameLockMasterI3D == NULL) return 1;
+// 	ptrwglEnableFrameLockI3D = gowglGetProcAddress("wglEnableFrameLockI3D");
+// 	if(ptrwglEnableFrameLockI3D == NULL) return 1;
+// 	ptrwglDisableFrameLockI3D = gowglGetProcAddress("wglDisableFrameLockI3D");
+// 	if(ptrwglDisableFrameLockI3D == NULL) return 1;
+// 	ptrwglIsEnabledFrameLockI3D = gowglGetProcAddress("wglIsEnabledFrameLockI3D");
+// 	if(ptrwglIsEnabledFrameLockI3D == NULL) return 1;
+// 	ptrwglQueryFrameLockMasterI3D = gowglGetProcAddress("wglQueryFrameLockMasterI3D");
+// 	if(ptrwglQueryFrameLockMasterI3D == NULL) return 1;
 // 	return 0;
 // }
 // int init_I3D_swap_frame_usage() {
-// 	ptrglGetFrameUsageI3D = goglGetProcAddress("glGetFrameUsageI3D");
-// 	if(ptrglGetFrameUsageI3D == NULL) return 1;
-// 	ptrglBeginFrameTrackingI3D = goglGetProcAddress("glBeginFrameTrackingI3D");
-// 	if(ptrglBeginFrameTrackingI3D == NULL) return 1;
-// 	ptrglEndFrameTrackingI3D = goglGetProcAddress("glEndFrameTrackingI3D");
-// 	if(ptrglEndFrameTrackingI3D == NULL) return 1;
-// 	ptrglQueryFrameTrackingI3D = goglGetProcAddress("glQueryFrameTrackingI3D");
-// 	if(ptrglQueryFrameTrackingI3D == NULL) return 1;
+// 	ptrwglGetFrameUsageI3D = gowglGetProcAddress("wglGetFrameUsageI3D");
+// 	if(ptrwglGetFrameUsageI3D == NULL) return 1;
+// 	ptrwglBeginFrameTrackingI3D = gowglGetProcAddress("wglBeginFrameTrackingI3D");
+// 	if(ptrwglBeginFrameTrackingI3D == NULL) return 1;
+// 	ptrwglEndFrameTrackingI3D = gowglGetProcAddress("wglEndFrameTrackingI3D");
+// 	if(ptrwglEndFrameTrackingI3D == NULL) return 1;
+// 	ptrwglQueryFrameTrackingI3D = gowglGetProcAddress("wglQueryFrameTrackingI3D");
+// 	if(ptrwglQueryFrameTrackingI3D == NULL) return 1;
 // 	return 0;
 // }
 // int init_NV_DX_interop() {
-// 	ptrglDXSetResourceShareHandleNV = goglGetProcAddress("glDXSetResourceShareHandleNV");
-// 	if(ptrglDXSetResourceShareHandleNV == NULL) return 1;
-// 	ptrglDXOpenDeviceNV = goglGetProcAddress("glDXOpenDeviceNV");
-// 	if(ptrglDXOpenDeviceNV == NULL) return 1;
-// 	ptrglDXCloseDeviceNV = goglGetProcAddress("glDXCloseDeviceNV");
-// 	if(ptrglDXCloseDeviceNV == NULL) return 1;
-// 	ptrglDXRegisterObjectNV = goglGetProcAddress("glDXRegisterObjectNV");
-// 	if(ptrglDXRegisterObjectNV == NULL) return 1;
-// 	ptrglDXUnregisterObjectNV = goglGetProcAddress("glDXUnregisterObjectNV");
-// 	if(ptrglDXUnregisterObjectNV == NULL) return 1;
-// 	ptrglDXObjectAccessNV = goglGetProcAddress("glDXObjectAccessNV");
-// 	if(ptrglDXObjectAccessNV == NULL) return 1;
-// 	ptrglDXLockObjectsNV = goglGetProcAddress("glDXLockObjectsNV");
-// 	if(ptrglDXLockObjectsNV == NULL) return 1;
-// 	ptrglDXUnlockObjectsNV = goglGetProcAddress("glDXUnlockObjectsNV");
-// 	if(ptrglDXUnlockObjectsNV == NULL) return 1;
+// 	ptrwglDXSetResourceShareHandleNV = gowglGetProcAddress("wglDXSetResourceShareHandleNV");
+// 	if(ptrwglDXSetResourceShareHandleNV == NULL) return 1;
+// 	ptrwglDXOpenDeviceNV = gowglGetProcAddress("wglDXOpenDeviceNV");
+// 	if(ptrwglDXOpenDeviceNV == NULL) return 1;
+// 	ptrwglDXCloseDeviceNV = gowglGetProcAddress("wglDXCloseDeviceNV");
+// 	if(ptrwglDXCloseDeviceNV == NULL) return 1;
+// 	ptrwglDXRegisterObjectNV = gowglGetProcAddress("wglDXRegisterObjectNV");
+// 	if(ptrwglDXRegisterObjectNV == NULL) return 1;
+// 	ptrwglDXUnregisterObjectNV = gowglGetProcAddress("wglDXUnregisterObjectNV");
+// 	if(ptrwglDXUnregisterObjectNV == NULL) return 1;
+// 	ptrwglDXObjectAccessNV = gowglGetProcAddress("wglDXObjectAccessNV");
+// 	if(ptrwglDXObjectAccessNV == NULL) return 1;
+// 	ptrwglDXLockObjectsNV = gowglGetProcAddress("wglDXLockObjectsNV");
+// 	if(ptrwglDXLockObjectsNV == NULL) return 1;
+// 	ptrwglDXUnlockObjectsNV = gowglGetProcAddress("wglDXUnlockObjectsNV");
+// 	if(ptrwglDXUnlockObjectsNV == NULL) return 1;
 // 	return 0;
 // }
 // int init_NV_DX_interop2() {
 // 	return 0;
 // }
 // int init_NV_copy_image() {
-// 	ptrglCopyImageSubDataNV = goglGetProcAddress("glCopyImageSubDataNV");
-// 	if(ptrglCopyImageSubDataNV == NULL) return 1;
+// 	ptrwglCopyImageSubDataNV = gowglGetProcAddress("wglCopyImageSubDataNV");
+// 	if(ptrwglCopyImageSubDataNV == NULL) return 1;
 // 	return 0;
 // }
 // int init_NV_float_buffer() {
 // 	return 0;
 // }
 // int init_NV_gpu_affinity() {
-// 	ptrglEnumGpusNV = goglGetProcAddress("glEnumGpusNV");
-// 	if(ptrglEnumGpusNV == NULL) return 1;
-// 	ptrglEnumGpuDevicesNV = goglGetProcAddress("glEnumGpuDevicesNV");
-// 	if(ptrglEnumGpuDevicesNV == NULL) return 1;
-// 	ptrglCreateAffinityDCNV = goglGetProcAddress("glCreateAffinityDCNV");
-// 	if(ptrglCreateAffinityDCNV == NULL) return 1;
-// 	ptrglEnumGpusFromAffinityDCNV = goglGetProcAddress("glEnumGpusFromAffinityDCNV");
-// 	if(ptrglEnumGpusFromAffinityDCNV == NULL) return 1;
-// 	ptrglDeleteDCNV = goglGetProcAddress("glDeleteDCNV");
-// 	if(ptrglDeleteDCNV == NULL) return 1;
+// 	ptrwglEnumGpusNV = gowglGetProcAddress("wglEnumGpusNV");
+// 	if(ptrwglEnumGpusNV == NULL) return 1;
+// 	ptrwglEnumGpuDevicesNV = gowglGetProcAddress("wglEnumGpuDevicesNV");
+// 	if(ptrwglEnumGpuDevicesNV == NULL) return 1;
+// 	ptrwglCreateAffinityDCNV = gowglGetProcAddress("wglCreateAffinityDCNV");
+// 	if(ptrwglCreateAffinityDCNV == NULL) return 1;
+// 	ptrwglEnumGpusFromAffinityDCNV = gowglGetProcAddress("wglEnumGpusFromAffinityDCNV");
+// 	if(ptrwglEnumGpusFromAffinityDCNV == NULL) return 1;
+// 	ptrwglDeleteDCNV = gowglGetProcAddress("wglDeleteDCNV");
+// 	if(ptrwglDeleteDCNV == NULL) return 1;
 // 	return 0;
 // }
 // int init_NV_multisample_coverage() {
 // 	return 0;
 // }
 // int init_NV_present_video() {
-// 	ptrglEnumerateVideoDevicesNV = goglGetProcAddress("glEnumerateVideoDevicesNV");
-// 	if(ptrglEnumerateVideoDevicesNV == NULL) return 1;
-// 	ptrglBindVideoDeviceNV = goglGetProcAddress("glBindVideoDeviceNV");
-// 	if(ptrglBindVideoDeviceNV == NULL) return 1;
-// 	ptrglQueryCurrentContextNV = goglGetProcAddress("glQueryCurrentContextNV");
-// 	if(ptrglQueryCurrentContextNV == NULL) return 1;
+// 	ptrwglEnumerateVideoDevicesNV = gowglGetProcAddress("wglEnumerateVideoDevicesNV");
+// 	if(ptrwglEnumerateVideoDevicesNV == NULL) return 1;
+// 	ptrwglBindVideoDeviceNV = gowglGetProcAddress("wglBindVideoDeviceNV");
+// 	if(ptrwglBindVideoDeviceNV == NULL) return 1;
+// 	ptrwglQueryCurrentContextNV = gowglGetProcAddress("wglQueryCurrentContextNV");
+// 	if(ptrwglQueryCurrentContextNV == NULL) return 1;
 // 	return 0;
 // }
 // int init_NV_swap_group() {
-// 	ptrglJoinSwapGroupNV = goglGetProcAddress("glJoinSwapGroupNV");
-// 	if(ptrglJoinSwapGroupNV == NULL) return 1;
-// 	ptrglBindSwapBarrierNV = goglGetProcAddress("glBindSwapBarrierNV");
-// 	if(ptrglBindSwapBarrierNV == NULL) return 1;
-// 	ptrglQuerySwapGroupNV = goglGetProcAddress("glQuerySwapGroupNV");
-// 	if(ptrglQuerySwapGroupNV == NULL) return 1;
-// 	ptrglQueryMaxSwapGroupsNV = goglGetProcAddress("glQueryMaxSwapGroupsNV");
-// 	if(ptrglQueryMaxSwapGroupsNV == NULL) return 1;
-// 	ptrglQueryFrameCountNV = goglGetProcAddress("glQueryFrameCountNV");
-// 	if(ptrglQueryFrameCountNV == NULL) return 1;
-// 	ptrglResetFrameCountNV = goglGetProcAddress("glResetFrameCountNV");
-// 	if(ptrglResetFrameCountNV == NULL) return 1;
+// 	ptrwglJoinSwapGroupNV = gowglGetProcAddress("wglJoinSwapGroupNV");
+// 	if(ptrwglJoinSwapGroupNV == NULL) return 1;
+// 	ptrwglBindSwapBarrierNV = gowglGetProcAddress("wglBindSwapBarrierNV");
+// 	if(ptrwglBindSwapBarrierNV == NULL) return 1;
+// 	ptrwglQuerySwapGroupNV = gowglGetProcAddress("wglQuerySwapGroupNV");
+// 	if(ptrwglQuerySwapGroupNV == NULL) return 1;
+// 	ptrwglQueryMaxSwapGroupsNV = gowglGetProcAddress("wglQueryMaxSwapGroupsNV");
+// 	if(ptrwglQueryMaxSwapGroupsNV == NULL) return 1;
+// 	ptrwglQueryFrameCountNV = gowglGetProcAddress("wglQueryFrameCountNV");
+// 	if(ptrwglQueryFrameCountNV == NULL) return 1;
+// 	ptrwglResetFrameCountNV = gowglGetProcAddress("wglResetFrameCountNV");
+// 	if(ptrwglResetFrameCountNV == NULL) return 1;
 // 	return 0;
 // }
 // int init_NV_vertex_array_range() {
-// 	ptrglAllocateMemoryNV = goglGetProcAddress("glAllocateMemoryNV");
-// 	if(ptrglAllocateMemoryNV == NULL) return 1;
-// 	ptrglFreeMemoryNV = goglGetProcAddress("glFreeMemoryNV");
-// 	if(ptrglFreeMemoryNV == NULL) return 1;
+// 	ptrwglAllocateMemoryNV = gowglGetProcAddress("wglAllocateMemoryNV");
+// 	if(ptrwglAllocateMemoryNV == NULL) return 1;
+// 	ptrwglFreeMemoryNV = gowglGetProcAddress("wglFreeMemoryNV");
+// 	if(ptrwglFreeMemoryNV == NULL) return 1;
 // 	return 0;
 // }
 // int init_NV_video_capture() {
-// 	ptrglBindVideoCaptureDeviceNV = goglGetProcAddress("glBindVideoCaptureDeviceNV");
-// 	if(ptrglBindVideoCaptureDeviceNV == NULL) return 1;
-// 	ptrglEnumerateVideoCaptureDevicesNV = goglGetProcAddress("glEnumerateVideoCaptureDevicesNV");
-// 	if(ptrglEnumerateVideoCaptureDevicesNV == NULL) return 1;
-// 	ptrglLockVideoCaptureDeviceNV = goglGetProcAddress("glLockVideoCaptureDeviceNV");
-// 	if(ptrglLockVideoCaptureDeviceNV == NULL) return 1;
-// 	ptrglQueryVideoCaptureDeviceNV = goglGetProcAddress("glQueryVideoCaptureDeviceNV");
-// 	if(ptrglQueryVideoCaptureDeviceNV == NULL) return 1;
-// 	ptrglReleaseVideoCaptureDeviceNV = goglGetProcAddress("glReleaseVideoCaptureDeviceNV");
-// 	if(ptrglReleaseVideoCaptureDeviceNV == NULL) return 1;
+// 	ptrwglBindVideoCaptureDeviceNV = gowglGetProcAddress("wglBindVideoCaptureDeviceNV");
+// 	if(ptrwglBindVideoCaptureDeviceNV == NULL) return 1;
+// 	ptrwglEnumerateVideoCaptureDevicesNV = gowglGetProcAddress("wglEnumerateVideoCaptureDevicesNV");
+// 	if(ptrwglEnumerateVideoCaptureDevicesNV == NULL) return 1;
+// 	ptrwglLockVideoCaptureDeviceNV = gowglGetProcAddress("wglLockVideoCaptureDeviceNV");
+// 	if(ptrwglLockVideoCaptureDeviceNV == NULL) return 1;
+// 	ptrwglQueryVideoCaptureDeviceNV = gowglGetProcAddress("wglQueryVideoCaptureDeviceNV");
+// 	if(ptrwglQueryVideoCaptureDeviceNV == NULL) return 1;
+// 	ptrwglReleaseVideoCaptureDeviceNV = gowglGetProcAddress("wglReleaseVideoCaptureDeviceNV");
+// 	if(ptrwglReleaseVideoCaptureDeviceNV == NULL) return 1;
 // 	return 0;
 // }
 // int init_NV_video_output() {
-// 	ptrglGetVideoDeviceNV = goglGetProcAddress("glGetVideoDeviceNV");
-// 	if(ptrglGetVideoDeviceNV == NULL) return 1;
-// 	ptrglReleaseVideoDeviceNV = goglGetProcAddress("glReleaseVideoDeviceNV");
-// 	if(ptrglReleaseVideoDeviceNV == NULL) return 1;
-// 	ptrglBindVideoImageNV = goglGetProcAddress("glBindVideoImageNV");
-// 	if(ptrglBindVideoImageNV == NULL) return 1;
-// 	ptrglReleaseVideoImageNV = goglGetProcAddress("glReleaseVideoImageNV");
-// 	if(ptrglReleaseVideoImageNV == NULL) return 1;
-// 	ptrglSendPbufferToVideoNV = goglGetProcAddress("glSendPbufferToVideoNV");
-// 	if(ptrglSendPbufferToVideoNV == NULL) return 1;
-// 	ptrglGetVideoInfoNV = goglGetProcAddress("glGetVideoInfoNV");
-// 	if(ptrglGetVideoInfoNV == NULL) return 1;
+// 	ptrwglGetVideoDeviceNV = gowglGetProcAddress("wglGetVideoDeviceNV");
+// 	if(ptrwglGetVideoDeviceNV == NULL) return 1;
+// 	ptrwglReleaseVideoDeviceNV = gowglGetProcAddress("wglReleaseVideoDeviceNV");
+// 	if(ptrwglReleaseVideoDeviceNV == NULL) return 1;
+// 	ptrwglBindVideoImageNV = gowglGetProcAddress("wglBindVideoImageNV");
+// 	if(ptrwglBindVideoImageNV == NULL) return 1;
+// 	ptrwglReleaseVideoImageNV = gowglGetProcAddress("wglReleaseVideoImageNV");
+// 	if(ptrwglReleaseVideoImageNV == NULL) return 1;
+// 	ptrwglSendPbufferToVideoNV = gowglGetProcAddress("wglSendPbufferToVideoNV");
+// 	if(ptrwglSendPbufferToVideoNV == NULL) return 1;
+// 	ptrwglGetVideoInfoNV = gowglGetProcAddress("wglGetVideoInfoNV");
+// 	if(ptrwglGetVideoInfoNV == NULL) return 1;
 // 	return 0;
 // }
 // int init_OML_sync_control() {
-// 	ptrglGetSyncValuesOML = goglGetProcAddress("glGetSyncValuesOML");
-// 	if(ptrglGetSyncValuesOML == NULL) return 1;
-// 	ptrglGetMscRateOML = goglGetProcAddress("glGetMscRateOML");
-// 	if(ptrglGetMscRateOML == NULL) return 1;
-// 	ptrglSwapBuffersMscOML = goglGetProcAddress("glSwapBuffersMscOML");
-// 	if(ptrglSwapBuffersMscOML == NULL) return 1;
-// 	ptrglSwapLayerBuffersMscOML = goglGetProcAddress("glSwapLayerBuffersMscOML");
-// 	if(ptrglSwapLayerBuffersMscOML == NULL) return 1;
-// 	ptrglWaitForMscOML = goglGetProcAddress("glWaitForMscOML");
-// 	if(ptrglWaitForMscOML == NULL) return 1;
-// 	ptrglWaitForSbcOML = goglGetProcAddress("glWaitForSbcOML");
-// 	if(ptrglWaitForSbcOML == NULL) return 1;
+// 	ptrwglGetSyncValuesOML = gowglGetProcAddress("wglGetSyncValuesOML");
+// 	if(ptrwglGetSyncValuesOML == NULL) return 1;
+// 	ptrwglGetMscRateOML = gowglGetProcAddress("wglGetMscRateOML");
+// 	if(ptrwglGetMscRateOML == NULL) return 1;
+// 	ptrwglSwapBuffersMscOML = gowglGetProcAddress("wglSwapBuffersMscOML");
+// 	if(ptrwglSwapBuffersMscOML == NULL) return 1;
+// 	ptrwglSwapLayerBuffersMscOML = gowglGetProcAddress("wglSwapLayerBuffersMscOML");
+// 	if(ptrwglSwapLayerBuffersMscOML == NULL) return 1;
+// 	ptrwglWaitForMscOML = gowglGetProcAddress("wglWaitForMscOML");
+// 	if(ptrwglWaitForMscOML == NULL) return 1;
+// 	ptrwglWaitForSbcOML = gowglGetProcAddress("wglWaitForSbcOML");
+// 	if(ptrwglWaitForSbcOML == NULL) return 1;
 // 	return 0;
 // }
 // int init_wgl() {
-// 	ptrglCreateContext = goglGetProcAddress("glCreateContext");
-// 	if(ptrglCreateContext == NULL) return 1;
-// 	ptrglDeleteContext = goglGetProcAddress("glDeleteContext");
-// 	if(ptrglDeleteContext == NULL) return 1;
-// 	ptrglGetCurrentContext = goglGetProcAddress("glGetCurrentContext");
-// 	if(ptrglGetCurrentContext == NULL) return 1;
-// 	ptrglMakeCurrent = goglGetProcAddress("glMakeCurrent");
-// 	if(ptrglMakeCurrent == NULL) return 1;
-// 	ptrglCopyContext = goglGetProcAddress("glCopyContext");
-// 	if(ptrglCopyContext == NULL) return 1;
-// 	ptrglChoosePixelFormat = goglGetProcAddress("glChoosePixelFormat");
-// 	if(ptrglChoosePixelFormat == NULL) return 1;
-// 	ptrglGetCurrentDC = goglGetProcAddress("glGetCurrentDC");
-// 	if(ptrglGetCurrentDC == NULL) return 1;
-// 	ptrglGetDefaultProcAddress = goglGetProcAddress("glGetDefaultProcAddress");
-// 	if(ptrglGetDefaultProcAddress == NULL) return 1;
-// 	ptrglGetProcAddress = goglGetProcAddress("glGetProcAddress");
-// 	if(ptrglGetProcAddress == NULL) return 1;
-// 	ptrglGetPixelFormat = goglGetProcAddress("glGetPixelFormat");
-// 	if(ptrglGetPixelFormat == NULL) return 1;
-// 	ptrglSetPixelFormat = goglGetProcAddress("glSetPixelFormat");
-// 	if(ptrglSetPixelFormat == NULL) return 1;
-// 	ptrglSwapBuffers = goglGetProcAddress("glSwapBuffers");
-// 	if(ptrglSwapBuffers == NULL) return 1;
-// 	ptrglShareLists = goglGetProcAddress("glShareLists");
-// 	if(ptrglShareLists == NULL) return 1;
-// 	ptrglCreateLayerContext = goglGetProcAddress("glCreateLayerContext");
-// 	if(ptrglCreateLayerContext == NULL) return 1;
-// 	ptrglDescribeLayerPlane = goglGetProcAddress("glDescribeLayerPlane");
-// 	if(ptrglDescribeLayerPlane == NULL) return 1;
-// 	ptrglSetLayerPaletteEntries = goglGetProcAddress("glSetLayerPaletteEntries");
-// 	if(ptrglSetLayerPaletteEntries == NULL) return 1;
-// 	ptrglGetLayerPaletteEntries = goglGetProcAddress("glGetLayerPaletteEntries");
-// 	if(ptrglGetLayerPaletteEntries == NULL) return 1;
-// 	ptrglRealizeLayerPalette = goglGetProcAddress("glRealizeLayerPalette");
-// 	if(ptrglRealizeLayerPalette == NULL) return 1;
-// 	ptrglSwapLayerBuffers = goglGetProcAddress("glSwapLayerBuffers");
-// 	if(ptrglSwapLayerBuffers == NULL) return 1;
-// 	ptrglUseFontBitmapsA = goglGetProcAddress("glUseFontBitmapsA");
-// 	if(ptrglUseFontBitmapsA == NULL) return 1;
-// 	ptrglUseFontBitmapsW = goglGetProcAddress("glUseFontBitmapsW");
-// 	if(ptrglUseFontBitmapsW == NULL) return 1;
+// 	ptrwglCreateContext = gowglGetProcAddress("wglCreateContext");
+// 	if(ptrwglCreateContext == NULL) return 1;
+// 	ptrwglDeleteContext = gowglGetProcAddress("wglDeleteContext");
+// 	if(ptrwglDeleteContext == NULL) return 1;
+// 	ptrwglGetCurrentContext = gowglGetProcAddress("wglGetCurrentContext");
+// 	if(ptrwglGetCurrentContext == NULL) return 1;
+// 	ptrwglMakeCurrent = gowglGetProcAddress("wglMakeCurrent");
+// 	if(ptrwglMakeCurrent == NULL) return 1;
+// 	ptrwglCopyContext = gowglGetProcAddress("wglCopyContext");
+// 	if(ptrwglCopyContext == NULL) return 1;
+// 	ptrwglChoosePixelFormat = gowglGetProcAddress("wglChoosePixelFormat");
+// 	if(ptrwglChoosePixelFormat == NULL) return 1;
+// 	ptrwglGetCurrentDC = gowglGetProcAddress("wglGetCurrentDC");
+// 	if(ptrwglGetCurrentDC == NULL) return 1;
+// 	ptrwglGetDefaultProcAddress = gowglGetProcAddress("wglGetDefaultProcAddress");
+// 	if(ptrwglGetDefaultProcAddress == NULL) return 1;
+// 	ptrwglGetProcAddress = gowglGetProcAddress("wglGetProcAddress");
+// 	if(ptrwglGetProcAddress == NULL) return 1;
+// 	ptrwglGetPixelFormat = gowglGetProcAddress("wglGetPixelFormat");
+// 	if(ptrwglGetPixelFormat == NULL) return 1;
+// 	ptrwglSetPixelFormat = gowglGetProcAddress("wglSetPixelFormat");
+// 	if(ptrwglSetPixelFormat == NULL) return 1;
+// 	ptrwglSwapBuffers = gowglGetProcAddress("wglSwapBuffers");
+// 	if(ptrwglSwapBuffers == NULL) return 1;
+// 	ptrwglShareLists = gowglGetProcAddress("wglShareLists");
+// 	if(ptrwglShareLists == NULL) return 1;
+// 	ptrwglCreateLayerContext = gowglGetProcAddress("wglCreateLayerContext");
+// 	if(ptrwglCreateLayerContext == NULL) return 1;
+// 	ptrwglDescribeLayerPlane = gowglGetProcAddress("wglDescribeLayerPlane");
+// 	if(ptrwglDescribeLayerPlane == NULL) return 1;
+// 	ptrwglSetLayerPaletteEntries = gowglGetProcAddress("wglSetLayerPaletteEntries");
+// 	if(ptrwglSetLayerPaletteEntries == NULL) return 1;
+// 	ptrwglGetLayerPaletteEntries = gowglGetProcAddress("wglGetLayerPaletteEntries");
+// 	if(ptrwglGetLayerPaletteEntries == NULL) return 1;
+// 	ptrwglRealizeLayerPalette = gowglGetProcAddress("wglRealizeLayerPalette");
+// 	if(ptrwglRealizeLayerPalette == NULL) return 1;
+// 	ptrwglSwapLayerBuffers = gowglGetProcAddress("wglSwapLayerBuffers");
+// 	if(ptrwglSwapLayerBuffers == NULL) return 1;
+// 	ptrwglUseFontBitmapsA = gowglGetProcAddress("wglUseFontBitmapsA");
+// 	if(ptrwglUseFontBitmapsA == NULL) return 1;
+// 	ptrwglUseFontBitmapsW = gowglGetProcAddress("wglUseFontBitmapsW");
+// 	if(ptrwglUseFontBitmapsW == NULL) return 1;
 // 	return 0;
 // }
 // 
@@ -1662,55 +1662,55 @@ const (
 // 3DL_stereo_control
 
 func SetStereoEmitterState3DL(hDC Pointer, uState uint32) int32 {
-	return (int32)(C.goglSetStereoEmitterState3DL((C.HDC)(hDC), (C.UINT)(uState)))
+	return (int32)(C.gowglSetStereoEmitterState3DL((C.HDC)(hDC), (C.UINT)(uState)))
 }
 // AMD_gpu_association
 
 func GetGPUIDsAMD(maxCount uint32, ids *uint32) uint32 {
-	return (uint32)(C.goglGetGPUIDsAMD((C.UINT)(maxCount), (*C.UINT)(ids)))
+	return (uint32)(C.gowglGetGPUIDsAMD((C.UINT)(maxCount), (*C.UINT)(ids)))
 }
 func GetGPUInfoAMD(id uint32, property Int, dataType Enum, size uint32, data Pointer) int32 {
-	return (int32)(C.goglGetGPUInfoAMD((C.UINT)(id), (C.int)(property), (C.GLenum)(dataType), (C.UINT)(size), (unsafe.Pointer)(data)))
+	return (int32)(C.gowglGetGPUInfoAMD((C.UINT)(id), (C.int)(property), (C.GLenum)(dataType), (C.UINT)(size), (unsafe.Pointer)(data)))
 }
 func GetContextGPUIDAMD(hglrc Pointer) uint32 {
-	return (uint32)(C.goglGetContextGPUIDAMD((C.HGLRC)(hglrc)))
+	return (uint32)(C.gowglGetContextGPUIDAMD((C.HGLRC)(hglrc)))
 }
 func CreateAssociatedContextAMD(id uint32) Pointer {
-	return (Pointer)(C.goglCreateAssociatedContextAMD((C.UINT)(id)))
+	return (Pointer)(C.gowglCreateAssociatedContextAMD((C.UINT)(id)))
 }
 func CreateAssociatedContextAttribsAMD(id uint32, hShareContext Pointer, attribList *Int) Pointer {
-	return (Pointer)(C.goglCreateAssociatedContextAttribsAMD((C.UINT)(id), (C.HGLRC)(hShareContext), (*C.int)(attribList)))
+	return (Pointer)(C.gowglCreateAssociatedContextAttribsAMD((C.UINT)(id), (C.HGLRC)(hShareContext), (*C.int)(attribList)))
 }
 func DeleteAssociatedContextAMD(hglrc Pointer) int32 {
-	return (int32)(C.goglDeleteAssociatedContextAMD((C.HGLRC)(hglrc)))
+	return (int32)(C.gowglDeleteAssociatedContextAMD((C.HGLRC)(hglrc)))
 }
 func MakeAssociatedContextCurrentAMD(hglrc Pointer) int32 {
-	return (int32)(C.goglMakeAssociatedContextCurrentAMD((C.HGLRC)(hglrc)))
+	return (int32)(C.gowglMakeAssociatedContextCurrentAMD((C.HGLRC)(hglrc)))
 }
 func GetCurrentAssociatedContextAMD() Pointer {
-	return (Pointer)(C.goglGetCurrentAssociatedContextAMD())
+	return (Pointer)(C.gowglGetCurrentAssociatedContextAMD())
 }
 func BlitContextFramebufferAMD(dstCtx Pointer, srcX0 Int, srcY0 Int, srcX1 Int, srcY1 Int, dstX0 Int, dstY0 Int, dstX1 Int, dstY1 Int, mask Bitfield, filter Enum)  {
-	C.goglBlitContextFramebufferAMD((C.HGLRC)(dstCtx), (C.GLint)(srcX0), (C.GLint)(srcY0), (C.GLint)(srcX1), (C.GLint)(srcY1), (C.GLint)(dstX0), (C.GLint)(dstY0), (C.GLint)(dstX1), (C.GLint)(dstY1), (C.GLbitfield)(mask), (C.GLenum)(filter))
+	C.gowglBlitContextFramebufferAMD((C.HGLRC)(dstCtx), (C.GLint)(srcX0), (C.GLint)(srcY0), (C.GLint)(srcX1), (C.GLint)(srcY1), (C.GLint)(dstX0), (C.GLint)(dstY0), (C.GLint)(dstX1), (C.GLint)(dstY1), (C.GLbitfield)(mask), (C.GLenum)(filter))
 }
 // ARB_buffer_region
 
 func CreateBufferRegionARB(hDC Pointer, iLayerPlane Int, uType uint32) Pointer {
-	return (Pointer)(C.goglCreateBufferRegionARB((C.HDC)(hDC), (C.int)(iLayerPlane), (C.UINT)(uType)))
+	return (Pointer)(C.gowglCreateBufferRegionARB((C.HDC)(hDC), (C.int)(iLayerPlane), (C.UINT)(uType)))
 }
 func DeleteBufferRegionARB(hRegion Pointer)  {
-	C.goglDeleteBufferRegionARB((C.HANDLE)(hRegion))
+	C.gowglDeleteBufferRegionARB((C.HANDLE)(hRegion))
 }
 func SaveBufferRegionARB(hRegion Pointer, x Int, y Int, width Int, height Int) int32 {
-	return (int32)(C.goglSaveBufferRegionARB((C.HANDLE)(hRegion), (C.int)(x), (C.int)(y), (C.int)(width), (C.int)(height)))
+	return (int32)(C.gowglSaveBufferRegionARB((C.HANDLE)(hRegion), (C.int)(x), (C.int)(y), (C.int)(width), (C.int)(height)))
 }
 func RestoreBufferRegionARB(hRegion Pointer, x Int, y Int, width Int, height Int, xSrc Int, ySrc Int) int32 {
-	return (int32)(C.goglRestoreBufferRegionARB((C.HANDLE)(hRegion), (C.int)(x), (C.int)(y), (C.int)(width), (C.int)(height), (C.int)(xSrc), (C.int)(ySrc)))
+	return (int32)(C.gowglRestoreBufferRegionARB((C.HANDLE)(hRegion), (C.int)(x), (C.int)(y), (C.int)(width), (C.int)(height), (C.int)(xSrc), (C.int)(ySrc)))
 }
 // ARB_create_context
 
 func CreateContextAttribsARB(hDC Pointer, hShareContext Pointer, attribList *Int) Pointer {
-	return (Pointer)(C.goglCreateContextAttribsARB((C.HDC)(hDC), (C.HGLRC)(hShareContext), (*C.int)(attribList)))
+	return (Pointer)(C.gowglCreateContextAttribsARB((C.HDC)(hDC), (C.HGLRC)(hShareContext), (*C.int)(attribList)))
 }
 // ARB_create_context_profile
 
@@ -1719,60 +1719,60 @@ func CreateContextAttribsARB(hDC Pointer, hShareContext Pointer, attribList *Int
 // ARB_extensions_string
 
 func GetExtensionsStringARB(hdc Pointer) *byte {
-	return (*byte)(C.goglGetExtensionsStringARB((C.HDC)(hdc)))
+	return (*byte)(C.gowglGetExtensionsStringARB((C.HDC)(hdc)))
 }
 // ARB_framebuffer_sRGB
 
 // ARB_make_current_read
 
 func MakeContextCurrentARB(hDrawDC Pointer, hReadDC Pointer, hglrc Pointer) int32 {
-	return (int32)(C.goglMakeContextCurrentARB((C.HDC)(hDrawDC), (C.HDC)(hReadDC), (C.HGLRC)(hglrc)))
+	return (int32)(C.gowglMakeContextCurrentARB((C.HDC)(hDrawDC), (C.HDC)(hReadDC), (C.HGLRC)(hglrc)))
 }
 func GetCurrentReadDCARB() Pointer {
-	return (Pointer)(C.goglGetCurrentReadDCARB())
+	return (Pointer)(C.gowglGetCurrentReadDCARB())
 }
 // ARB_multisample
 
 // ARB_pbuffer
 
 func CreatePbufferARB(hDC Pointer, iPixelFormat Int, iWidth Int, iHeight Int, piAttribList *Int) Pointer {
-	return (Pointer)(C.goglCreatePbufferARB((C.HDC)(hDC), (C.int)(iPixelFormat), (C.int)(iWidth), (C.int)(iHeight), (*C.int)(piAttribList)))
+	return (Pointer)(C.gowglCreatePbufferARB((C.HDC)(hDC), (C.int)(iPixelFormat), (C.int)(iWidth), (C.int)(iHeight), (*C.int)(piAttribList)))
 }
 func GetPbufferDCARB(hPbuffer Pointer) Pointer {
-	return (Pointer)(C.goglGetPbufferDCARB((C.HPBUFFERARB)(hPbuffer)))
+	return (Pointer)(C.gowglGetPbufferDCARB((C.HPBUFFERARB)(hPbuffer)))
 }
 func ReleasePbufferDCARB(hPbuffer Pointer, hDC Pointer) Int {
-	return (Int)(C.goglReleasePbufferDCARB((C.HPBUFFERARB)(hPbuffer), (C.HDC)(hDC)))
+	return (Int)(C.gowglReleasePbufferDCARB((C.HPBUFFERARB)(hPbuffer), (C.HDC)(hDC)))
 }
 func DestroyPbufferARB(hPbuffer Pointer) int32 {
-	return (int32)(C.goglDestroyPbufferARB((C.HPBUFFERARB)(hPbuffer)))
+	return (int32)(C.gowglDestroyPbufferARB((C.HPBUFFERARB)(hPbuffer)))
 }
 func QueryPbufferARB(hPbuffer Pointer, iAttribute Int, piValue *Int) int32 {
-	return (int32)(C.goglQueryPbufferARB((C.HPBUFFERARB)(hPbuffer), (C.int)(iAttribute), (*C.int)(piValue)))
+	return (int32)(C.gowglQueryPbufferARB((C.HPBUFFERARB)(hPbuffer), (C.int)(iAttribute), (*C.int)(piValue)))
 }
 // ARB_pixel_format
 
 func GetPixelFormatAttribivARB(hdc Pointer, iPixelFormat Int, iLayerPlane Int, nAttributes uint32, piAttributes *Int, piValues *Int) int32 {
-	return (int32)(C.goglGetPixelFormatAttribivARB((C.HDC)(hdc), (C.int)(iPixelFormat), (C.int)(iLayerPlane), (C.UINT)(nAttributes), (*C.int)(piAttributes), (*C.int)(piValues)))
+	return (int32)(C.gowglGetPixelFormatAttribivARB((C.HDC)(hdc), (C.int)(iPixelFormat), (C.int)(iLayerPlane), (C.UINT)(nAttributes), (*C.int)(piAttributes), (*C.int)(piValues)))
 }
 func GetPixelFormatAttribfvARB(hdc Pointer, iPixelFormat Int, iLayerPlane Int, nAttributes uint32, piAttributes *Int, pfValues *float32) int32 {
-	return (int32)(C.goglGetPixelFormatAttribfvARB((C.HDC)(hdc), (C.int)(iPixelFormat), (C.int)(iLayerPlane), (C.UINT)(nAttributes), (*C.int)(piAttributes), (*C.FLOAT)(pfValues)))
+	return (int32)(C.gowglGetPixelFormatAttribfvARB((C.HDC)(hdc), (C.int)(iPixelFormat), (C.int)(iLayerPlane), (C.UINT)(nAttributes), (*C.int)(piAttributes), (*C.FLOAT)(pfValues)))
 }
 func ChoosePixelFormatARB(hdc Pointer, piAttribIList *Int, pfAttribFList *float32, nMaxFormats uint32, piFormats *Int, nNumFormats *uint32) int32 {
-	return (int32)(C.goglChoosePixelFormatARB((C.HDC)(hdc), (*C.int)(piAttribIList), (*C.FLOAT)(pfAttribFList), (C.UINT)(nMaxFormats), (*C.int)(piFormats), (*C.UINT)(nNumFormats)))
+	return (int32)(C.gowglChoosePixelFormatARB((C.HDC)(hdc), (*C.int)(piAttribIList), (*C.FLOAT)(pfAttribFList), (C.UINT)(nMaxFormats), (*C.int)(piFormats), (*C.UINT)(nNumFormats)))
 }
 // ARB_pixel_format_float
 
 // ARB_render_texture
 
 func BindTexImageARB(hPbuffer Pointer, iBuffer Int) int32 {
-	return (int32)(C.goglBindTexImageARB((C.HPBUFFERARB)(hPbuffer), (C.int)(iBuffer)))
+	return (int32)(C.gowglBindTexImageARB((C.HPBUFFERARB)(hPbuffer), (C.int)(iBuffer)))
 }
 func ReleaseTexImageARB(hPbuffer Pointer, iBuffer Int) int32 {
-	return (int32)(C.goglReleaseTexImageARB((C.HPBUFFERARB)(hPbuffer), (C.int)(iBuffer)))
+	return (int32)(C.gowglReleaseTexImageARB((C.HPBUFFERARB)(hPbuffer), (C.int)(iBuffer)))
 }
 func SetPbufferAttribARB(hPbuffer Pointer, piAttribList *Int) int32 {
-	return (int32)(C.goglSetPbufferAttribARB((C.HPBUFFERARB)(hPbuffer), (*C.int)(piAttribList)))
+	return (int32)(C.gowglSetPbufferAttribARB((C.HPBUFFERARB)(hPbuffer), (*C.int)(piAttribList)))
 }
 // ATI_pixel_format_float
 
@@ -1781,390 +1781,390 @@ func SetPbufferAttribARB(hPbuffer Pointer, piAttribList *Int) int32 {
 // EXT_display_color_table
 
 func CreateDisplayColorTableEXT(id Ushort) Boolean {
-	return (Boolean)(C.goglCreateDisplayColorTableEXT((C.GLushort)(id)))
+	return (Boolean)(C.gowglCreateDisplayColorTableEXT((C.GLushort)(id)))
 }
 func LoadDisplayColorTableEXT(table *Ushort, length Uint) Boolean {
-	return (Boolean)(C.goglLoadDisplayColorTableEXT((*C.GLushort)(table), (C.GLuint)(length)))
+	return (Boolean)(C.gowglLoadDisplayColorTableEXT((*C.GLushort)(table), (C.GLuint)(length)))
 }
 func BindDisplayColorTableEXT(id Ushort) Boolean {
-	return (Boolean)(C.goglBindDisplayColorTableEXT((C.GLushort)(id)))
+	return (Boolean)(C.gowglBindDisplayColorTableEXT((C.GLushort)(id)))
 }
 func DestroyDisplayColorTableEXT(id Ushort)  {
-	C.goglDestroyDisplayColorTableEXT((C.GLushort)(id))
+	C.gowglDestroyDisplayColorTableEXT((C.GLushort)(id))
 }
 // EXT_extensions_string
 
 func GetExtensionsStringEXT() *byte {
-	return (*byte)(C.goglGetExtensionsStringEXT())
+	return (*byte)(C.gowglGetExtensionsStringEXT())
 }
 // EXT_framebuffer_sRGB
 
 // EXT_make_current_read
 
 func MakeContextCurrentEXT(hDrawDC Pointer, hReadDC Pointer, hglrc Pointer) int32 {
-	return (int32)(C.goglMakeContextCurrentEXT((C.HDC)(hDrawDC), (C.HDC)(hReadDC), (C.HGLRC)(hglrc)))
+	return (int32)(C.gowglMakeContextCurrentEXT((C.HDC)(hDrawDC), (C.HDC)(hReadDC), (C.HGLRC)(hglrc)))
 }
 func GetCurrentReadDCEXT() Pointer {
-	return (Pointer)(C.goglGetCurrentReadDCEXT())
+	return (Pointer)(C.gowglGetCurrentReadDCEXT())
 }
 // EXT_multisample
 
 // EXT_pbuffer
 
 func CreatePbufferEXT(hDC Pointer, iPixelFormat Int, iWidth Int, iHeight Int, piAttribList *Int) Pointer {
-	return (Pointer)(C.goglCreatePbufferEXT((C.HDC)(hDC), (C.int)(iPixelFormat), (C.int)(iWidth), (C.int)(iHeight), (*C.int)(piAttribList)))
+	return (Pointer)(C.gowglCreatePbufferEXT((C.HDC)(hDC), (C.int)(iPixelFormat), (C.int)(iWidth), (C.int)(iHeight), (*C.int)(piAttribList)))
 }
 func GetPbufferDCEXT(hPbuffer Pointer) Pointer {
-	return (Pointer)(C.goglGetPbufferDCEXT((C.HPBUFFEREXT)(hPbuffer)))
+	return (Pointer)(C.gowglGetPbufferDCEXT((C.HPBUFFEREXT)(hPbuffer)))
 }
 func ReleasePbufferDCEXT(hPbuffer Pointer, hDC Pointer) Int {
-	return (Int)(C.goglReleasePbufferDCEXT((C.HPBUFFEREXT)(hPbuffer), (C.HDC)(hDC)))
+	return (Int)(C.gowglReleasePbufferDCEXT((C.HPBUFFEREXT)(hPbuffer), (C.HDC)(hDC)))
 }
 func DestroyPbufferEXT(hPbuffer Pointer) int32 {
-	return (int32)(C.goglDestroyPbufferEXT((C.HPBUFFEREXT)(hPbuffer)))
+	return (int32)(C.gowglDestroyPbufferEXT((C.HPBUFFEREXT)(hPbuffer)))
 }
 func QueryPbufferEXT(hPbuffer Pointer, iAttribute Int, piValue *Int) int32 {
-	return (int32)(C.goglQueryPbufferEXT((C.HPBUFFEREXT)(hPbuffer), (C.int)(iAttribute), (*C.int)(piValue)))
+	return (int32)(C.gowglQueryPbufferEXT((C.HPBUFFEREXT)(hPbuffer), (C.int)(iAttribute), (*C.int)(piValue)))
 }
 // EXT_pixel_format
 
 func GetPixelFormatAttribivEXT(hdc Pointer, iPixelFormat Int, iLayerPlane Int, nAttributes uint32, piAttributes *Int, piValues *Int) int32 {
-	return (int32)(C.goglGetPixelFormatAttribivEXT((C.HDC)(hdc), (C.int)(iPixelFormat), (C.int)(iLayerPlane), (C.UINT)(nAttributes), (*C.int)(piAttributes), (*C.int)(piValues)))
+	return (int32)(C.gowglGetPixelFormatAttribivEXT((C.HDC)(hdc), (C.int)(iPixelFormat), (C.int)(iLayerPlane), (C.UINT)(nAttributes), (*C.int)(piAttributes), (*C.int)(piValues)))
 }
 func GetPixelFormatAttribfvEXT(hdc Pointer, iPixelFormat Int, iLayerPlane Int, nAttributes uint32, piAttributes *Int, pfValues *float32) int32 {
-	return (int32)(C.goglGetPixelFormatAttribfvEXT((C.HDC)(hdc), (C.int)(iPixelFormat), (C.int)(iLayerPlane), (C.UINT)(nAttributes), (*C.int)(piAttributes), (*C.FLOAT)(pfValues)))
+	return (int32)(C.gowglGetPixelFormatAttribfvEXT((C.HDC)(hdc), (C.int)(iPixelFormat), (C.int)(iLayerPlane), (C.UINT)(nAttributes), (*C.int)(piAttributes), (*C.FLOAT)(pfValues)))
 }
 func ChoosePixelFormatEXT(hdc Pointer, piAttribIList *Int, pfAttribFList *float32, nMaxFormats uint32, piFormats *Int, nNumFormats *uint32) int32 {
-	return (int32)(C.goglChoosePixelFormatEXT((C.HDC)(hdc), (*C.int)(piAttribIList), (*C.FLOAT)(pfAttribFList), (C.UINT)(nMaxFormats), (*C.int)(piFormats), (*C.UINT)(nNumFormats)))
+	return (int32)(C.gowglChoosePixelFormatEXT((C.HDC)(hdc), (*C.int)(piAttribIList), (*C.FLOAT)(pfAttribFList), (C.UINT)(nMaxFormats), (*C.int)(piFormats), (*C.UINT)(nNumFormats)))
 }
 // EXT_pixel_format_packed_float
 
 // EXT_swap_control
 
 func SwapIntervalEXT(interval Int) int32 {
-	return (int32)(C.goglSwapIntervalEXT((C.int)(interval)))
+	return (int32)(C.gowglSwapIntervalEXT((C.int)(interval)))
 }
 func GetSwapIntervalEXT() Int {
-	return (Int)(C.goglGetSwapIntervalEXT())
+	return (Int)(C.gowglGetSwapIntervalEXT())
 }
 // EXT_swap_control_tear
 
 // I3D_digital_video_control
 
 func GetDigitalVideoParametersI3D(hDC Pointer, iAttribute Int, piValue *Int) int32 {
-	return (int32)(C.goglGetDigitalVideoParametersI3D((C.HDC)(hDC), (C.int)(iAttribute), (*C.int)(piValue)))
+	return (int32)(C.gowglGetDigitalVideoParametersI3D((C.HDC)(hDC), (C.int)(iAttribute), (*C.int)(piValue)))
 }
 func SetDigitalVideoParametersI3D(hDC Pointer, iAttribute Int, piValue *Int) int32 {
-	return (int32)(C.goglSetDigitalVideoParametersI3D((C.HDC)(hDC), (C.int)(iAttribute), (*C.int)(piValue)))
+	return (int32)(C.gowglSetDigitalVideoParametersI3D((C.HDC)(hDC), (C.int)(iAttribute), (*C.int)(piValue)))
 }
 // I3D_gamma
 
 func GetGammaTableParametersI3D(hDC Pointer, iAttribute Int, piValue *Int) int32 {
-	return (int32)(C.goglGetGammaTableParametersI3D((C.HDC)(hDC), (C.int)(iAttribute), (*C.int)(piValue)))
+	return (int32)(C.gowglGetGammaTableParametersI3D((C.HDC)(hDC), (C.int)(iAttribute), (*C.int)(piValue)))
 }
 func SetGammaTableParametersI3D(hDC Pointer, iAttribute Int, piValue *Int) int32 {
-	return (int32)(C.goglSetGammaTableParametersI3D((C.HDC)(hDC), (C.int)(iAttribute), (*C.int)(piValue)))
+	return (int32)(C.gowglSetGammaTableParametersI3D((C.HDC)(hDC), (C.int)(iAttribute), (*C.int)(piValue)))
 }
 func GetGammaTableI3D(hDC Pointer, iEntries Int, puRed *uint16, puGreen *uint16, puBlue *uint16) int32 {
-	return (int32)(C.goglGetGammaTableI3D((C.HDC)(hDC), (C.int)(iEntries), (*C.USHORT)(puRed), (*C.USHORT)(puGreen), (*C.USHORT)(puBlue)))
+	return (int32)(C.gowglGetGammaTableI3D((C.HDC)(hDC), (C.int)(iEntries), (*C.USHORT)(puRed), (*C.USHORT)(puGreen), (*C.USHORT)(puBlue)))
 }
 func SetGammaTableI3D(hDC Pointer, iEntries Int, puRed *uint16, puGreen *uint16, puBlue *uint16) int32 {
-	return (int32)(C.goglSetGammaTableI3D((C.HDC)(hDC), (C.int)(iEntries), (*C.USHORT)(puRed), (*C.USHORT)(puGreen), (*C.USHORT)(puBlue)))
+	return (int32)(C.gowglSetGammaTableI3D((C.HDC)(hDC), (C.int)(iEntries), (*C.USHORT)(puRed), (*C.USHORT)(puGreen), (*C.USHORT)(puBlue)))
 }
 // I3D_genlock
 
 func EnableGenlockI3D(hDC Pointer) int32 {
-	return (int32)(C.goglEnableGenlockI3D((C.HDC)(hDC)))
+	return (int32)(C.gowglEnableGenlockI3D((C.HDC)(hDC)))
 }
 func DisableGenlockI3D(hDC Pointer) int32 {
-	return (int32)(C.goglDisableGenlockI3D((C.HDC)(hDC)))
+	return (int32)(C.gowglDisableGenlockI3D((C.HDC)(hDC)))
 }
 func IsEnabledGenlockI3D(hDC Pointer, pFlag *int32) int32 {
-	return (int32)(C.goglIsEnabledGenlockI3D((C.HDC)(hDC), (*C.BOOL)(pFlag)))
+	return (int32)(C.gowglIsEnabledGenlockI3D((C.HDC)(hDC), (*C.BOOL)(pFlag)))
 }
 func GenlockSourceI3D(hDC Pointer, uSource uint32) int32 {
-	return (int32)(C.goglGenlockSourceI3D((C.HDC)(hDC), (C.UINT)(uSource)))
+	return (int32)(C.gowglGenlockSourceI3D((C.HDC)(hDC), (C.UINT)(uSource)))
 }
 func GetGenlockSourceI3D(hDC Pointer, uSource *uint32) int32 {
-	return (int32)(C.goglGetGenlockSourceI3D((C.HDC)(hDC), (*C.UINT)(uSource)))
+	return (int32)(C.gowglGetGenlockSourceI3D((C.HDC)(hDC), (*C.UINT)(uSource)))
 }
 func GenlockSourceEdgeI3D(hDC Pointer, uEdge uint32) int32 {
-	return (int32)(C.goglGenlockSourceEdgeI3D((C.HDC)(hDC), (C.UINT)(uEdge)))
+	return (int32)(C.gowglGenlockSourceEdgeI3D((C.HDC)(hDC), (C.UINT)(uEdge)))
 }
 func GetGenlockSourceEdgeI3D(hDC Pointer, uEdge *uint32) int32 {
-	return (int32)(C.goglGetGenlockSourceEdgeI3D((C.HDC)(hDC), (*C.UINT)(uEdge)))
+	return (int32)(C.gowglGetGenlockSourceEdgeI3D((C.HDC)(hDC), (*C.UINT)(uEdge)))
 }
 func GenlockSampleRateI3D(hDC Pointer, uRate uint32) int32 {
-	return (int32)(C.goglGenlockSampleRateI3D((C.HDC)(hDC), (C.UINT)(uRate)))
+	return (int32)(C.gowglGenlockSampleRateI3D((C.HDC)(hDC), (C.UINT)(uRate)))
 }
 func GetGenlockSampleRateI3D(hDC Pointer, uRate *uint32) int32 {
-	return (int32)(C.goglGetGenlockSampleRateI3D((C.HDC)(hDC), (*C.UINT)(uRate)))
+	return (int32)(C.gowglGetGenlockSampleRateI3D((C.HDC)(hDC), (*C.UINT)(uRate)))
 }
 func GenlockSourceDelayI3D(hDC Pointer, uDelay uint32) int32 {
-	return (int32)(C.goglGenlockSourceDelayI3D((C.HDC)(hDC), (C.UINT)(uDelay)))
+	return (int32)(C.gowglGenlockSourceDelayI3D((C.HDC)(hDC), (C.UINT)(uDelay)))
 }
 func GetGenlockSourceDelayI3D(hDC Pointer, uDelay *uint32) int32 {
-	return (int32)(C.goglGetGenlockSourceDelayI3D((C.HDC)(hDC), (*C.UINT)(uDelay)))
+	return (int32)(C.gowglGetGenlockSourceDelayI3D((C.HDC)(hDC), (*C.UINT)(uDelay)))
 }
 func QueryGenlockMaxSourceDelayI3D(hDC Pointer, uMaxLineDelay *uint32, uMaxPixelDelay *uint32) int32 {
-	return (int32)(C.goglQueryGenlockMaxSourceDelayI3D((C.HDC)(hDC), (*C.UINT)(uMaxLineDelay), (*C.UINT)(uMaxPixelDelay)))
+	return (int32)(C.gowglQueryGenlockMaxSourceDelayI3D((C.HDC)(hDC), (*C.UINT)(uMaxLineDelay), (*C.UINT)(uMaxPixelDelay)))
 }
 // I3D_image_buffer
 
 func CreateImageBufferI3D(hDC Pointer, dwSize uint32, uFlags uint32) Pointer {
-	return (Pointer)(C.goglCreateImageBufferI3D((C.HDC)(hDC), (C.DWORD)(dwSize), (C.UINT)(uFlags)))
+	return (Pointer)(C.gowglCreateImageBufferI3D((C.HDC)(hDC), (C.DWORD)(dwSize), (C.UINT)(uFlags)))
 }
 func DestroyImageBufferI3D(hDC Pointer, pAddress Pointer) int32 {
-	return (int32)(C.goglDestroyImageBufferI3D((C.HDC)(hDC), (C.LPVOID)(pAddress)))
+	return (int32)(C.gowglDestroyImageBufferI3D((C.HDC)(hDC), (C.LPVOID)(pAddress)))
 }
 func AssociateImageBufferEventsI3D(hDC Pointer, pEvent Pointer, pAddress Pointer, pSize *uint32, count uint32) int32 {
-	return (int32)(C.goglAssociateImageBufferEventsI3D((C.HDC)(hDC), (C.HANDLE)(pEvent), (C.LPVOID)(pAddress), (*C.DWORD)(pSize), (C.UINT)(count)))
+	return (int32)(C.gowglAssociateImageBufferEventsI3D((C.HDC)(hDC), (C.HANDLE)(pEvent), (C.LPVOID)(pAddress), (*C.DWORD)(pSize), (C.UINT)(count)))
 }
 func ReleaseImageBufferEventsI3D(hDC Pointer, pAddress Pointer, count uint32) int32 {
-	return (int32)(C.goglReleaseImageBufferEventsI3D((C.HDC)(hDC), (C.LPVOID)(pAddress), (C.UINT)(count)))
+	return (int32)(C.gowglReleaseImageBufferEventsI3D((C.HDC)(hDC), (C.LPVOID)(pAddress), (C.UINT)(count)))
 }
 // I3D_swap_frame_lock
 
 func EnableFrameLockI3D() int32 {
-	return (int32)(C.goglEnableFrameLockI3D())
+	return (int32)(C.gowglEnableFrameLockI3D())
 }
 func DisableFrameLockI3D() int32 {
-	return (int32)(C.goglDisableFrameLockI3D())
+	return (int32)(C.gowglDisableFrameLockI3D())
 }
 func IsEnabledFrameLockI3D(pFlag *int32) int32 {
-	return (int32)(C.goglIsEnabledFrameLockI3D((*C.BOOL)(pFlag)))
+	return (int32)(C.gowglIsEnabledFrameLockI3D((*C.BOOL)(pFlag)))
 }
 func QueryFrameLockMasterI3D(pFlag *int32) int32 {
-	return (int32)(C.goglQueryFrameLockMasterI3D((*C.BOOL)(pFlag)))
+	return (int32)(C.gowglQueryFrameLockMasterI3D((*C.BOOL)(pFlag)))
 }
 // I3D_swap_frame_usage
 
 func GetFrameUsageI3D(pUsage *float32) int32 {
-	return (int32)(C.goglGetFrameUsageI3D((*C.float32)(pUsage)))
+	return (int32)(C.gowglGetFrameUsageI3D((*C.float32)(pUsage)))
 }
 func BeginFrameTrackingI3D() int32 {
-	return (int32)(C.goglBeginFrameTrackingI3D())
+	return (int32)(C.gowglBeginFrameTrackingI3D())
 }
 func EndFrameTrackingI3D() int32 {
-	return (int32)(C.goglEndFrameTrackingI3D())
+	return (int32)(C.gowglEndFrameTrackingI3D())
 }
 func QueryFrameTrackingI3D(pFrameCount *uint32, pMissedFrames *uint32, pLastMissedUsage *float32) int32 {
-	return (int32)(C.goglQueryFrameTrackingI3D((*C.DWORD)(pFrameCount), (*C.DWORD)(pMissedFrames), (*C.float32)(pLastMissedUsage)))
+	return (int32)(C.gowglQueryFrameTrackingI3D((*C.DWORD)(pFrameCount), (*C.DWORD)(pMissedFrames), (*C.float32)(pLastMissedUsage)))
 }
 // NV_DX_interop
 
 func DXSetResourceShareHandleNV(dxObject Pointer, shareHandle Pointer) int32 {
-	return (int32)(C.goglDXSetResourceShareHandleNV((unsafe.Pointer)(dxObject), (C.HANDLE)(shareHandle)))
+	return (int32)(C.gowglDXSetResourceShareHandleNV((unsafe.Pointer)(dxObject), (C.HANDLE)(shareHandle)))
 }
 func DXOpenDeviceNV(dxDevice Pointer) Pointer {
-	return (Pointer)(C.goglDXOpenDeviceNV((unsafe.Pointer)(dxDevice)))
+	return (Pointer)(C.gowglDXOpenDeviceNV((unsafe.Pointer)(dxDevice)))
 }
 func DXCloseDeviceNV(hDevice Pointer) int32 {
-	return (int32)(C.goglDXCloseDeviceNV((C.HANDLE)(hDevice)))
+	return (int32)(C.gowglDXCloseDeviceNV((C.HANDLE)(hDevice)))
 }
 func DXRegisterObjectNV(hDevice Pointer, dxObject Pointer, name Uint, type_ Enum, access Enum) Pointer {
-	return (Pointer)(C.goglDXRegisterObjectNV((C.HANDLE)(hDevice), (unsafe.Pointer)(dxObject), (C.GLuint)(name), (C.GLenum)(type_), (C.GLenum)(access)))
+	return (Pointer)(C.gowglDXRegisterObjectNV((C.HANDLE)(hDevice), (unsafe.Pointer)(dxObject), (C.GLuint)(name), (C.GLenum)(type_), (C.GLenum)(access)))
 }
 func DXUnregisterObjectNV(hDevice Pointer, hObject Pointer) int32 {
-	return (int32)(C.goglDXUnregisterObjectNV((C.HANDLE)(hDevice), (C.HANDLE)(hObject)))
+	return (int32)(C.gowglDXUnregisterObjectNV((C.HANDLE)(hDevice), (C.HANDLE)(hObject)))
 }
 func DXObjectAccessNV(hObject Pointer, access Enum) int32 {
-	return (int32)(C.goglDXObjectAccessNV((C.HANDLE)(hObject), (C.GLenum)(access)))
+	return (int32)(C.gowglDXObjectAccessNV((C.HANDLE)(hObject), (C.GLenum)(access)))
 }
 func DXLockObjectsNV(hDevice Pointer, count Int, hObjects Pointer) int32 {
-	return (int32)(C.goglDXLockObjectsNV((C.HANDLE)(hDevice), (C.GLint)(count), (C.HANDLE)(hObjects)))
+	return (int32)(C.gowglDXLockObjectsNV((C.HANDLE)(hDevice), (C.GLint)(count), (C.HANDLE)(hObjects)))
 }
 func DXUnlockObjectsNV(hDevice Pointer, count Int, hObjects Pointer) int32 {
-	return (int32)(C.goglDXUnlockObjectsNV((C.HANDLE)(hDevice), (C.GLint)(count), (C.HANDLE)(hObjects)))
+	return (int32)(C.gowglDXUnlockObjectsNV((C.HANDLE)(hDevice), (C.GLint)(count), (C.HANDLE)(hObjects)))
 }
 // NV_DX_interop2
 
 // NV_copy_image
 
 func CopyImageSubDataNV(hSrcRC Pointer, srcName Uint, srcTarget Enum, srcLevel Int, srcX Int, srcY Int, srcZ Int, hDstRC Pointer, dstName Uint, dstTarget Enum, dstLevel Int, dstX Int, dstY Int, dstZ Int, width Sizei, height Sizei, depth Sizei) int32 {
-	return (int32)(C.goglCopyImageSubDataNV((C.HGLRC)(hSrcRC), (C.GLuint)(srcName), (C.GLenum)(srcTarget), (C.GLint)(srcLevel), (C.GLint)(srcX), (C.GLint)(srcY), (C.GLint)(srcZ), (C.HGLRC)(hDstRC), (C.GLuint)(dstName), (C.GLenum)(dstTarget), (C.GLint)(dstLevel), (C.GLint)(dstX), (C.GLint)(dstY), (C.GLint)(dstZ), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLsizei)(depth)))
+	return (int32)(C.gowglCopyImageSubDataNV((C.HGLRC)(hSrcRC), (C.GLuint)(srcName), (C.GLenum)(srcTarget), (C.GLint)(srcLevel), (C.GLint)(srcX), (C.GLint)(srcY), (C.GLint)(srcZ), (C.HGLRC)(hDstRC), (C.GLuint)(dstName), (C.GLenum)(dstTarget), (C.GLint)(dstLevel), (C.GLint)(dstX), (C.GLint)(dstY), (C.GLint)(dstZ), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLsizei)(depth)))
 }
 // NV_float_buffer
 
 // NV_gpu_affinity
 
 func EnumGpusNV(iGpuIndex uint32, phGpu Pointer) int32 {
-	return (int32)(C.goglEnumGpusNV((C.UINT)(iGpuIndex), (C.HGPUNV)(phGpu)))
+	return (int32)(C.gowglEnumGpusNV((C.UINT)(iGpuIndex), (C.HGPUNV)(phGpu)))
 }
 func EnumGpuDevicesNV(hGpu Pointer, iDeviceIndex uint32, lpGpuDevice Pointer) int32 {
-	return (int32)(C.goglEnumGpuDevicesNV((C.HGPUNV)(hGpu), (C.UINT)(iDeviceIndex), (C.PGPU_DEVICE)(lpGpuDevice)))
+	return (int32)(C.gowglEnumGpuDevicesNV((C.HGPUNV)(hGpu), (C.UINT)(iDeviceIndex), (C.PGPU_DEVICE)(lpGpuDevice)))
 }
 func CreateAffinityDCNV(phGpuList Pointer) Pointer {
-	return (Pointer)(C.goglCreateAffinityDCNV((C.HGPUNV)(phGpuList)))
+	return (Pointer)(C.gowglCreateAffinityDCNV((C.HGPUNV)(phGpuList)))
 }
 func EnumGpusFromAffinityDCNV(hAffinityDC Pointer, iGpuIndex uint32, hGpu Pointer) int32 {
-	return (int32)(C.goglEnumGpusFromAffinityDCNV((C.HDC)(hAffinityDC), (C.UINT)(iGpuIndex), (C.HGPUNV)(hGpu)))
+	return (int32)(C.gowglEnumGpusFromAffinityDCNV((C.HDC)(hAffinityDC), (C.UINT)(iGpuIndex), (C.HGPUNV)(hGpu)))
 }
 func DeleteDCNV(hdc Pointer) int32 {
-	return (int32)(C.goglDeleteDCNV((C.HDC)(hdc)))
+	return (int32)(C.gowglDeleteDCNV((C.HDC)(hdc)))
 }
 // NV_multisample_coverage
 
 // NV_present_video
 
 func EnumerateVideoDevicesNV(hDC Pointer, phDeviceList Pointer) Int {
-	return (Int)(C.goglEnumerateVideoDevicesNV((C.HDC)(hDC), (C.HVIDEOOUTPUTDEVICENV)(phDeviceList)))
+	return (Int)(C.gowglEnumerateVideoDevicesNV((C.HDC)(hDC), (C.HVIDEOOUTPUTDEVICENV)(phDeviceList)))
 }
 func BindVideoDeviceNV(hDC Pointer, uVideoSlot uint32, hVideoDevice Pointer, piAttribList *Int) int32 {
-	return (int32)(C.goglBindVideoDeviceNV((C.HDC)(hDC), (C.uint32)(uVideoSlot), (C.HVIDEOOUTPUTDEVICENV)(hVideoDevice), (*C.int)(piAttribList)))
+	return (int32)(C.gowglBindVideoDeviceNV((C.HDC)(hDC), (C.uint32)(uVideoSlot), (C.HVIDEOOUTPUTDEVICENV)(hVideoDevice), (*C.int)(piAttribList)))
 }
 func QueryCurrentContextNV(iAttribute Int, piValue *Int) int32 {
-	return (int32)(C.goglQueryCurrentContextNV((C.int)(iAttribute), (*C.int)(piValue)))
+	return (int32)(C.gowglQueryCurrentContextNV((C.int)(iAttribute), (*C.int)(piValue)))
 }
 // NV_swap_group
 
 func JoinSwapGroupNV(hDC Pointer, group Uint) int32 {
-	return (int32)(C.goglJoinSwapGroupNV((C.HDC)(hDC), (C.GLuint)(group)))
+	return (int32)(C.gowglJoinSwapGroupNV((C.HDC)(hDC), (C.GLuint)(group)))
 }
 func BindSwapBarrierNV(group Uint, barrier Uint) int32 {
-	return (int32)(C.goglBindSwapBarrierNV((C.GLuint)(group), (C.GLuint)(barrier)))
+	return (int32)(C.gowglBindSwapBarrierNV((C.GLuint)(group), (C.GLuint)(barrier)))
 }
 func QuerySwapGroupNV(hDC Pointer, group *Uint, barrier *Uint) int32 {
-	return (int32)(C.goglQuerySwapGroupNV((C.HDC)(hDC), (*C.GLuint)(group), (*C.GLuint)(barrier)))
+	return (int32)(C.gowglQuerySwapGroupNV((C.HDC)(hDC), (*C.GLuint)(group), (*C.GLuint)(barrier)))
 }
 func QueryMaxSwapGroupsNV(hDC Pointer, maxGroups *Uint, maxBarriers *Uint) int32 {
-	return (int32)(C.goglQueryMaxSwapGroupsNV((C.HDC)(hDC), (*C.GLuint)(maxGroups), (*C.GLuint)(maxBarriers)))
+	return (int32)(C.gowglQueryMaxSwapGroupsNV((C.HDC)(hDC), (*C.GLuint)(maxGroups), (*C.GLuint)(maxBarriers)))
 }
 func QueryFrameCountNV(hDC Pointer, count *Uint) int32 {
-	return (int32)(C.goglQueryFrameCountNV((C.HDC)(hDC), (*C.GLuint)(count)))
+	return (int32)(C.gowglQueryFrameCountNV((C.HDC)(hDC), (*C.GLuint)(count)))
 }
 func ResetFrameCountNV(hDC Pointer) int32 {
-	return (int32)(C.goglResetFrameCountNV((C.HDC)(hDC)))
+	return (int32)(C.gowglResetFrameCountNV((C.HDC)(hDC)))
 }
 // NV_vertex_array_range
 
 func AllocateMemoryNV(size Sizei, readfreq Float, writefreq Float, priority Float) Pointer {
-	return (Pointer)(C.goglAllocateMemoryNV((C.GLsizei)(size), (C.GLfloat)(readfreq), (C.GLfloat)(writefreq), (C.GLfloat)(priority)))
+	return (Pointer)(C.gowglAllocateMemoryNV((C.GLsizei)(size), (C.GLfloat)(readfreq), (C.GLfloat)(writefreq), (C.GLfloat)(priority)))
 }
 func FreeMemoryNV(pointer Pointer)  {
-	C.goglFreeMemoryNV((unsafe.Pointer)(pointer))
+	C.gowglFreeMemoryNV((unsafe.Pointer)(pointer))
 }
 // NV_video_capture
 
 func BindVideoCaptureDeviceNV(uVideoSlot uint32, hDevice Pointer) int32 {
-	return (int32)(C.goglBindVideoCaptureDeviceNV((C.UINT)(uVideoSlot), (C.HVIDEOINPUTDEVICENV)(hDevice)))
+	return (int32)(C.gowglBindVideoCaptureDeviceNV((C.UINT)(uVideoSlot), (C.HVIDEOINPUTDEVICENV)(hDevice)))
 }
 func EnumerateVideoCaptureDevicesNV(hDc Pointer, phDeviceList Pointer) uint32 {
-	return (uint32)(C.goglEnumerateVideoCaptureDevicesNV((C.HDC)(hDc), (C.HVIDEOINPUTDEVICENV)(phDeviceList)))
+	return (uint32)(C.gowglEnumerateVideoCaptureDevicesNV((C.HDC)(hDc), (C.HVIDEOINPUTDEVICENV)(phDeviceList)))
 }
 func LockVideoCaptureDeviceNV(hDc Pointer, hDevice Pointer) int32 {
-	return (int32)(C.goglLockVideoCaptureDeviceNV((C.HDC)(hDc), (C.HVIDEOINPUTDEVICENV)(hDevice)))
+	return (int32)(C.gowglLockVideoCaptureDeviceNV((C.HDC)(hDc), (C.HVIDEOINPUTDEVICENV)(hDevice)))
 }
 func QueryVideoCaptureDeviceNV(hDc Pointer, hDevice Pointer, iAttribute Int, piValue *Int) int32 {
-	return (int32)(C.goglQueryVideoCaptureDeviceNV((C.HDC)(hDc), (C.HVIDEOINPUTDEVICENV)(hDevice), (C.int)(iAttribute), (*C.int)(piValue)))
+	return (int32)(C.gowglQueryVideoCaptureDeviceNV((C.HDC)(hDc), (C.HVIDEOINPUTDEVICENV)(hDevice), (C.int)(iAttribute), (*C.int)(piValue)))
 }
 func ReleaseVideoCaptureDeviceNV(hDc Pointer, hDevice Pointer) int32 {
-	return (int32)(C.goglReleaseVideoCaptureDeviceNV((C.HDC)(hDc), (C.HVIDEOINPUTDEVICENV)(hDevice)))
+	return (int32)(C.gowglReleaseVideoCaptureDeviceNV((C.HDC)(hDc), (C.HVIDEOINPUTDEVICENV)(hDevice)))
 }
 // NV_video_output
 
 func GetVideoDeviceNV(hDC Pointer, numDevices Int, hVideoDevice Pointer) int32 {
-	return (int32)(C.goglGetVideoDeviceNV((C.HDC)(hDC), (C.int)(numDevices), (C.HPVIDEODEV)(hVideoDevice)))
+	return (int32)(C.gowglGetVideoDeviceNV((C.HDC)(hDC), (C.int)(numDevices), (C.HPVIDEODEV)(hVideoDevice)))
 }
 func ReleaseVideoDeviceNV(hVideoDevice Pointer) int32 {
-	return (int32)(C.goglReleaseVideoDeviceNV((C.HPVIDEODEV)(hVideoDevice)))
+	return (int32)(C.gowglReleaseVideoDeviceNV((C.HPVIDEODEV)(hVideoDevice)))
 }
 func BindVideoImageNV(hVideoDevice Pointer, hPbuffer Pointer, iVideoBuffer Int) int32 {
-	return (int32)(C.goglBindVideoImageNV((C.HPVIDEODEV)(hVideoDevice), (C.HPBUFFERARB)(hPbuffer), (C.int)(iVideoBuffer)))
+	return (int32)(C.gowglBindVideoImageNV((C.HPVIDEODEV)(hVideoDevice), (C.HPBUFFERARB)(hPbuffer), (C.int)(iVideoBuffer)))
 }
 func ReleaseVideoImageNV(hPbuffer Pointer, iVideoBuffer Int) int32 {
-	return (int32)(C.goglReleaseVideoImageNV((C.HPBUFFERARB)(hPbuffer), (C.int)(iVideoBuffer)))
+	return (int32)(C.gowglReleaseVideoImageNV((C.HPBUFFERARB)(hPbuffer), (C.int)(iVideoBuffer)))
 }
 func SendPbufferToVideoNV(hPbuffer Pointer, iBufferType Int, pulCounterPbuffer *uint32, bBlock int32) int32 {
-	return (int32)(C.goglSendPbufferToVideoNV((C.HPBUFFERARB)(hPbuffer), (C.int)(iBufferType), (*C.unsigned_long)(pulCounterPbuffer), (C.BOOL)(bBlock)))
+	return (int32)(C.gowglSendPbufferToVideoNV((C.HPBUFFERARB)(hPbuffer), (C.int)(iBufferType), (*C.unsigned_long)(pulCounterPbuffer), (C.BOOL)(bBlock)))
 }
 func GetVideoInfoNV(hpVideoDevice Pointer, pulCounterOutputPbuffer *uint32, pulCounterOutputVideo *uint32) int32 {
-	return (int32)(C.goglGetVideoInfoNV((C.HPVIDEODEV)(hpVideoDevice), (*C.unsigned_long)(pulCounterOutputPbuffer), (*C.unsigned_long)(pulCounterOutputVideo)))
+	return (int32)(C.gowglGetVideoInfoNV((C.HPVIDEODEV)(hpVideoDevice), (*C.unsigned_long)(pulCounterOutputPbuffer), (*C.unsigned_long)(pulCounterOutputVideo)))
 }
 // OML_sync_control
 
 func GetSyncValuesOML(hdc Pointer, ust *int64, msc *int64, sbc *int64) int32 {
-	return (int32)(C.goglGetSyncValuesOML((C.HDC)(hdc), (*C.INT64)(ust), (*C.INT64)(msc), (*C.INT64)(sbc)))
+	return (int32)(C.gowglGetSyncValuesOML((C.HDC)(hdc), (*C.INT64)(ust), (*C.INT64)(msc), (*C.INT64)(sbc)))
 }
 func GetMscRateOML(hdc Pointer, numerator *int32, denominator *int32) int32 {
-	return (int32)(C.goglGetMscRateOML((C.HDC)(hdc), (*C.INT32)(numerator), (*C.INT32)(denominator)))
+	return (int32)(C.gowglGetMscRateOML((C.HDC)(hdc), (*C.INT32)(numerator), (*C.INT32)(denominator)))
 }
 func SwapBuffersMscOML(hdc Pointer, target_msc int64, divisor int64, remainder int64) int64 {
-	return (int64)(C.goglSwapBuffersMscOML((C.HDC)(hdc), (C.INT64)(target_msc), (C.INT64)(divisor), (C.INT64)(remainder)))
+	return (int64)(C.gowglSwapBuffersMscOML((C.HDC)(hdc), (C.INT64)(target_msc), (C.INT64)(divisor), (C.INT64)(remainder)))
 }
 func SwapLayerBuffersMscOML(hdc Pointer, fuPlanes Int, target_msc int64, divisor int64, remainder int64) int64 {
-	return (int64)(C.goglSwapLayerBuffersMscOML((C.HDC)(hdc), (C.int)(fuPlanes), (C.INT64)(target_msc), (C.INT64)(divisor), (C.INT64)(remainder)))
+	return (int64)(C.gowglSwapLayerBuffersMscOML((C.HDC)(hdc), (C.int)(fuPlanes), (C.INT64)(target_msc), (C.INT64)(divisor), (C.INT64)(remainder)))
 }
 func WaitForMscOML(hdc Pointer, target_msc int64, divisor int64, remainder int64, ust *int64, msc *int64, sbc *int64) int32 {
-	return (int32)(C.goglWaitForMscOML((C.HDC)(hdc), (C.INT64)(target_msc), (C.INT64)(divisor), (C.INT64)(remainder), (*C.INT64)(ust), (*C.INT64)(msc), (*C.INT64)(sbc)))
+	return (int32)(C.gowglWaitForMscOML((C.HDC)(hdc), (C.INT64)(target_msc), (C.INT64)(divisor), (C.INT64)(remainder), (*C.INT64)(ust), (*C.INT64)(msc), (*C.INT64)(sbc)))
 }
 func WaitForSbcOML(hdc Pointer, target_sbc int64, ust *int64, msc *int64, sbc *int64) int32 {
-	return (int32)(C.goglWaitForSbcOML((C.HDC)(hdc), (C.INT64)(target_sbc), (*C.INT64)(ust), (*C.INT64)(msc), (*C.INT64)(sbc)))
+	return (int32)(C.gowglWaitForSbcOML((C.HDC)(hdc), (C.INT64)(target_sbc), (*C.INT64)(ust), (*C.INT64)(msc), (*C.INT64)(sbc)))
 }
 // wgl
 
 func CreateContext(hDc Pointer) Pointer {
-	return (Pointer)(C.goglCreateContext((C.HDC)(hDc)))
+	return (Pointer)(C.gowglCreateContext((C.HDC)(hDc)))
 }
 func DeleteContext(oldContext Pointer) int32 {
-	return (int32)(C.goglDeleteContext((C.HGLRC)(oldContext)))
+	return (int32)(C.gowglDeleteContext((C.HGLRC)(oldContext)))
 }
 func GetCurrentContext() Pointer {
-	return (Pointer)(C.goglGetCurrentContext())
+	return (Pointer)(C.gowglGetCurrentContext())
 }
 func MakeCurrent(hDc Pointer, newContext Pointer) int32 {
-	return (int32)(C.goglMakeCurrent((C.HDC)(hDc), (C.HGLRC)(newContext)))
+	return (int32)(C.gowglMakeCurrent((C.HDC)(hDc), (C.HGLRC)(newContext)))
 }
 func CopyContext(hglrcSrc Pointer, hglrcDst Pointer, mask uint32) int32 {
-	return (int32)(C.goglCopyContext((C.HGLRC)(hglrcSrc), (C.HGLRC)(hglrcDst), (C.UINT)(mask)))
+	return (int32)(C.gowglCopyContext((C.HGLRC)(hglrcSrc), (C.HGLRC)(hglrcDst), (C.UINT)(mask)))
 }
 func ChoosePixelFormat(hDc Pointer, pPfd []byte) Int {
-	return (Int)(C.goglChoosePixelFormat((C.HDC)(hDc), (C.PIXELFORMATDESCRIPTOR)(pPfd)))
+	return (Int)(C.gowglChoosePixelFormat((C.HDC)(hDc), (C.PIXELFORMATDESCRIPTOR)(pPfd)))
 }
 func GetCurrentDC() Pointer {
-	return (Pointer)(C.goglGetCurrentDC())
+	return (Pointer)(C.gowglGetCurrentDC())
 }
 func GetDefaultProcAddress(lpszProc *byte) Pointer {
-	return (Pointer)(C.goglGetDefaultProcAddress((C.LPCSTR)(lpszProc)))
+	return (Pointer)(C.gowglGetDefaultProcAddress((C.LPCSTR)(lpszProc)))
 }
 func GetProcAddress(lpszProc *byte) Pointer {
-	return (Pointer)(C.goglGetProcAddress((C.LPCSTR)(lpszProc)))
+	return (Pointer)(C.gowglGetProcAddress((C.LPCSTR)(lpszProc)))
 }
 func GetPixelFormat(hdc Pointer) Int {
-	return (Int)(C.goglGetPixelFormat((C.HDC)(hdc)))
+	return (Int)(C.gowglGetPixelFormat((C.HDC)(hdc)))
 }
 func SetPixelFormat(hdc Pointer, ipfd Int, ppfd []byte) int32 {
-	return (int32)(C.goglSetPixelFormat((C.HDC)(hdc), (C.int)(ipfd), (C.PIXELFORMATDESCRIPTOR)(ppfd)))
+	return (int32)(C.gowglSetPixelFormat((C.HDC)(hdc), (C.int)(ipfd), (C.PIXELFORMATDESCRIPTOR)(ppfd)))
 }
 func SwapBuffers(hdc Pointer) int32 {
-	return (int32)(C.goglSwapBuffers((C.HDC)(hdc)))
+	return (int32)(C.gowglSwapBuffers((C.HDC)(hdc)))
 }
 func ShareLists(hrcSrvShare Pointer, hrcSrvSource Pointer) int32 {
-	return (int32)(C.goglShareLists((C.HGLRC)(hrcSrvShare), (C.HGLRC)(hrcSrvSource)))
+	return (int32)(C.gowglShareLists((C.HGLRC)(hrcSrvShare), (C.HGLRC)(hrcSrvSource)))
 }
 func CreateLayerContext(hDc Pointer, level Int) Pointer {
-	return (Pointer)(C.goglCreateLayerContext((C.HDC)(hDc), (C.int)(level)))
+	return (Pointer)(C.gowglCreateLayerContext((C.HDC)(hDc), (C.int)(level)))
 }
 func DescribeLayerPlane(hDc Pointer, pixelFormat Int, layerPlane Int, nBytes uint32, plpd []byte) int32 {
-	return (int32)(C.goglDescribeLayerPlane((C.HDC)(hDc), (C.int)(pixelFormat), (C.int)(layerPlane), (C.UINT)(nBytes), (C.LAYERPLANEDESCRIPTOR)(plpd)))
+	return (int32)(C.gowglDescribeLayerPlane((C.HDC)(hDc), (C.int)(pixelFormat), (C.int)(layerPlane), (C.UINT)(nBytes), (C.LAYERPLANEDESCRIPTOR)(plpd)))
 }
 func SetLayerPaletteEntries(hdc Pointer, iLayerPlane Int, iStart Int, cEntries Int, pcr Pointer) Int {
-	return (Int)(C.goglSetLayerPaletteEntries((C.HDC)(hdc), (C.int)(iLayerPlane), (C.int)(iStart), (C.int)(cEntries), (C.COLORREF)(pcr)))
+	return (Int)(C.gowglSetLayerPaletteEntries((C.HDC)(hdc), (C.int)(iLayerPlane), (C.int)(iStart), (C.int)(cEntries), (C.COLORREF)(pcr)))
 }
 func GetLayerPaletteEntries(hdc Pointer, iLayerPlane Int, iStart Int, cEntries Int, pcr Pointer) Int {
-	return (Int)(C.goglGetLayerPaletteEntries((C.HDC)(hdc), (C.int)(iLayerPlane), (C.int)(iStart), (C.int)(cEntries), (C.COLORREF)(pcr)))
+	return (Int)(C.gowglGetLayerPaletteEntries((C.HDC)(hdc), (C.int)(iLayerPlane), (C.int)(iStart), (C.int)(cEntries), (C.COLORREF)(pcr)))
 }
 func RealizeLayerPalette(hdc Pointer, iLayerPlane Int, bRealize int32) int32 {
-	return (int32)(C.goglRealizeLayerPalette((C.HDC)(hdc), (C.int)(iLayerPlane), (C.BOOL)(bRealize)))
+	return (int32)(C.gowglRealizeLayerPalette((C.HDC)(hdc), (C.int)(iLayerPlane), (C.BOOL)(bRealize)))
 }
 func SwapLayerBuffers(hdc Pointer, fuFlags uint32) int32 {
-	return (int32)(C.goglSwapLayerBuffers((C.HDC)(hdc), (C.UINT)(fuFlags)))
+	return (int32)(C.gowglSwapLayerBuffers((C.HDC)(hdc), (C.UINT)(fuFlags)))
 }
 func UseFontBitmapsA(hDC Pointer, first uint32, count uint32, listBase uint32) int32 {
-	return (int32)(C.goglUseFontBitmapsA((C.HDC)(hDC), (C.DWORD)(first), (C.DWORD)(count), (C.DWORD)(listBase)))
+	return (int32)(C.gowglUseFontBitmapsA((C.HDC)(hDC), (C.DWORD)(first), (C.DWORD)(count), (C.DWORD)(listBase)))
 }
 func UseFontBitmapsW(hDC Pointer, first uint32, count uint32, listBase uint32) int32 {
-	return (int32)(C.goglUseFontBitmapsW((C.HDC)(hDC), (C.DWORD)(first), (C.DWORD)(count), (C.DWORD)(listBase)))
+	return (int32)(C.gowglUseFontBitmapsW((C.HDC)(hDC), (C.DWORD)(first), (C.DWORD)(count), (C.DWORD)(listBase)))
 }
 func Init3dfxMultisample() error {
 	var ret C.int

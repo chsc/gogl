@@ -13,17 +13,17 @@ import (
 	"strings"
 )
 
-func GeneratePackages(packages Packages, functsInfo *FunctionsInfo, typeMap TypeMap) error {
+func GeneratePackages(packages Packages, functsInfo *FunctionsInfo, typeMap TypeMap, prefix string) error {
 	for packageName, pak := range packages {
 		fmt.Printf("Generating package %s ...\n", packageName)
-		if err := generatePackage(packageName, pak, functsInfo, typeMap); err != nil {
+		if err := generatePackage(packageName, pak, functsInfo, typeMap, prefix); err != nil {
 			return err
 		}
 	}
 	return nil
 }
 
-func generatePackage(packageName string, pak *Package, functsInfo *FunctionsInfo, typeMap TypeMap) error {
+func generatePackage(packageName string, pak *Package, functsInfo *FunctionsInfo, typeMap TypeMap, prefix string) error {
 	absPath, err := filepath.Abs(packageName)
 	if err != nil {
 		return err
@@ -37,10 +37,10 @@ func generatePackage(packageName string, pak *Package, functsInfo *FunctionsInfo
 		return err
 	}
 	defer w.Close()
-	return writePackage(w, packageName, pak, functsInfo, typeMap)
+	return writePackage(w, packageName, pak, functsInfo, typeMap, prefix)
 }
 
-func writePackage(w io.Writer, packageName string, pak *Package, functsInfo *FunctionsInfo, typeMap TypeMap) error {
+func writePackage(w io.Writer, packageName string, pak *Package, functsInfo *FunctionsInfo, typeMap TypeMap, prefix string) error {
 	highestMajorVersion := -1
 	isGLPackage := false
 
@@ -136,7 +136,7 @@ func writePackage(w io.Writer, packageName string, pak *Package, functsInfo *Fun
 	fmt.Fprintf(w, "// static HMODULE opengl32 = NULL;\n")
 	fmt.Fprintf(w, "// #endif\n// \n")
 
-	fmt.Fprintf(w, "// static void* goglGetProcAddress(const char* name) { \n")
+	fmt.Fprintf(w, "// static void* go%sGetProcAddress(const char* name) { \n", prefix)
 	fmt.Fprintf(w, "// #ifdef __APPLE__\n")
 	fmt.Fprintf(w, "// 	return dlsym(RTLD_DEFAULT, name);\n")
 	fmt.Fprintf(w, "// #elif _WIN32\n")
@@ -153,15 +153,15 @@ func writePackage(w io.Writer, packageName string, pak *Package, functsInfo *Fun
 	fmt.Fprintf(w, "// #endif\n")
 	fmt.Fprintf(w, "// }\n// \n")
 
-	if err := writeCFuncDeclarations(w, sortedFunctionCategories, pak.Functions, typeMap); err != nil {
+	if err := writeCFuncDeclarations(w, sortedFunctionCategories, pak.Functions, typeMap, prefix); err != nil {
 		return err
 	}
 
-	if err := writeCFuncDefinitions(w, sortedFunctionCategories, pak.Functions, typeMap); err != nil {
+	if err := writeCFuncDefinitions(w, sortedFunctionCategories, pak.Functions, typeMap, prefix); err != nil {
 		return err
 	}
 
-	if err := writeCFuncGetProcAddrs(w, sortedFunctionCategories, pak.Functions); err != nil {
+	if err := writeCFuncGetProcAddrs(w, sortedFunctionCategories, pak.Functions, prefix); err != nil {
 		return err
 	}
 
@@ -196,7 +196,7 @@ func writePackage(w io.Writer, packageName string, pak *Package, functsInfo *Fun
 
 	writeGoEnumDefinitions(w, sortedEnumCategories, pak.Enums)
 
-	if err := writeGoFuncDefinitions(w, sortedFunctionCategories, pak.Functions, typeMap, highestMajorVersion); err != nil {
+	if err := writeGoFuncDefinitions(w, sortedFunctionCategories, pak.Functions, typeMap, highestMajorVersion, prefix); err != nil {
 		return err
 	}
 
@@ -211,12 +211,12 @@ func writePackage(w io.Writer, packageName string, pak *Package, functsInfo *Fun
 	return nil
 }
 
-func writeCFuncDeclarations(w io.Writer, sortedFunctionCategories []string, functions FunctionCategories, typeMap TypeMap) error {
+func writeCFuncDeclarations(w io.Writer, sortedFunctionCategories []string, functions FunctionCategories, typeMap TypeMap, prefix string) error {
 	for _, cat := range sortedFunctionCategories {
 		fs := functions[cat]
 		fmt.Fprintf(w, "// //  %s\n", cat)
 		for _, f := range fs {
-			if err := writeCFuncDeclaration(w, f, typeMap, false); err != nil {
+			if err := writeCFuncDeclaration(w, f, typeMap, prefix, false); err != nil {
 				return err
 			}
 		}
@@ -225,15 +225,15 @@ func writeCFuncDeclarations(w io.Writer, sortedFunctionCategories []string, func
 	return nil
 }
 
-func writeCFuncDeclaration(w io.Writer, f *Function, typeMap TypeMap, prototype bool) error {
+func writeCFuncDeclaration(w io.Writer, f *Function, typeMap TypeMap, prefix string, prototype bool) error {
 	rtype, err := typeMap.Resolve(f.Return)
 	if err != nil {
 		return err
 	}
 	if prototype {
-		fmt.Fprintf(w, "// GLAPI %s APIENTRY gl%s(", rtype, f.Name)
+		fmt.Fprintf(w, "// GLAPI %s APIENTRY %s%s(", rtype, prefix, f.Name)
 	} else {
-		fmt.Fprintf(w, "// %s (APIENTRYP ptrgl%s)(", rtype, f.Name)
+		fmt.Fprintf(w, "// %s (APIENTRYP ptr%s%s)(", rtype, prefix, f.Name)
 	}
 	for i, _ := range f.Parameters {
 		p := &f.Parameters[i]
@@ -254,12 +254,12 @@ func writeCFuncDeclaration(w io.Writer, f *Function, typeMap TypeMap, prototype 
 	return nil
 }
 
-func writeCFuncDefinitions(w io.Writer, sortedFunctionCategories []string, functions FunctionCategories, typeMap TypeMap) error {
+func writeCFuncDefinitions(w io.Writer, sortedFunctionCategories []string, functions FunctionCategories, typeMap TypeMap, prefix string) error {
 	for _, cat := range sortedFunctionCategories {
 		fs := functions[cat]
 		fmt.Fprintf(w, "// //  %s\n", cat)
 		for _, f := range fs {
-			if err := writeCFuncDefinition(w, f, typeMap, false); err != nil {
+			if err := writeCFuncDefinition(w, f, typeMap, prefix, false); err != nil {
 				return err
 			}
 		}
@@ -268,12 +268,12 @@ func writeCFuncDefinitions(w io.Writer, sortedFunctionCategories []string, funct
 	return nil
 }
 
-func writeCFuncDefinition(w io.Writer, f *Function, typeMap TypeMap, prototype bool) error {
+func writeCFuncDefinition(w io.Writer, f *Function, typeMap TypeMap, prefix string, prototype bool) error {
 	rtype, err := typeMap.Resolve(f.Return)
 	if err != nil {
 		return err
 	}
-	fmt.Fprintf(w, "// %s gogl%s(", rtype, f.Name)
+	fmt.Fprintf(w, "// %s go%s%s(", rtype, prefix, f.Name)
 	for i, _ := range f.Parameters {
 		p := &f.Parameters[i]
 		ptype, err := typeMap.Resolve(p.Type)
@@ -290,15 +290,15 @@ func writeCFuncDefinition(w io.Writer, f *Function, typeMap TypeMap, prototype b
 		}
 	}
 	fmt.Fprintf(w, ") {\n")
-	if rtype == "void" {
+	if rtype == "void" || rtype == "VOID" {
 		fmt.Fprintf(w, "// 	")
 	} else {
 		fmt.Fprintf(w, "// 	return ")
 	}
 	if prototype {
-		fmt.Fprintf(w, "gl%s(", f.Name)
+		fmt.Fprintf(w, "%s%s(", prefix, f.Name)
 	} else {
-		fmt.Fprintf(w, "(*ptrgl%s)(", f.Name)
+		fmt.Fprintf(w, "(*ptr%s%s)(", prefix, f.Name)
 	}
 	for i, _ := range f.Parameters {
 		p := &f.Parameters[i]
@@ -311,13 +311,13 @@ func writeCFuncDefinition(w io.Writer, f *Function, typeMap TypeMap, prototype b
 	return nil
 }
 
-func writeCFuncGetProcAddrs(w io.Writer, sortedFunctionCategories []string, functions FunctionCategories) error {
+func writeCFuncGetProcAddrs(w io.Writer, sortedFunctionCategories []string, functions FunctionCategories, prefix string) error {
 	for _, cat := range sortedFunctionCategories {
 		fs := functions[cat]
 		fmt.Fprintf(w, "// int init_%s() {\n", cat)
 		for _, f := range fs {
-			fmt.Fprintf(w, "// 	ptrgl%s = goglGetProcAddress(\"gl%s\");\n", f.Name, f.Name)
-			fmt.Fprintf(w, "// 	if(ptrgl%s == NULL) return 1;\n", f.Name)
+			fmt.Fprintf(w, "// 	ptr%s%s = go%sGetProcAddress(\"%s%s\");\n", prefix, f.Name, prefix, prefix, f.Name)
+			fmt.Fprintf(w, "// 	if(ptr%s%s == NULL) return 1;\n", prefix, f.Name)
 		}
 		fmt.Fprintf(w, "// \treturn 0;\n")
 		fmt.Fprintf(w, "// }\n")
@@ -335,9 +335,6 @@ func writeGoEnumDefinitions(w io.Writer, sortedEnumCategories []string, enumCats
 		sortedEnums := make([]string, len(enums))
 		i := 0
 		for k, _ := range enums {
-			//if strings.HasPrefix(k, "COPY_READ") {
-			//	fmt.Println(k)
-			//}
 			sortedEnums[i] = k
 			i++
 		}
@@ -353,12 +350,12 @@ func writeGoEnumDefinitions(w io.Writer, sortedEnumCategories []string, enumCats
 	}
 }
 
-func writeGoFuncDefinitions(w io.Writer, sortedFunctionCategories []string, functions FunctionCategories, typeMap TypeMap, majorVersion int) error {
+func writeGoFuncDefinitions(w io.Writer, sortedFunctionCategories []string, functions FunctionCategories, typeMap TypeMap, majorVersion int, prefix string) error {
 	for _, cat := range sortedFunctionCategories {
 		fs := functions[cat]
 		fmt.Fprintf(w, "// %s\n\n", cat)
 		for _, f := range fs {
-			if err := writeGoFuncDefinition(w, f, typeMap, majorVersion, false); err != nil {
+			if err := writeGoFuncDefinition(w, f, typeMap, majorVersion, prefix, false); err != nil {
 				return err
 			}
 		}
@@ -366,7 +363,7 @@ func writeGoFuncDefinitions(w io.Writer, sortedFunctionCategories []string, func
 	return nil
 }
 
-func writeGoFuncDefinition(w io.Writer, f *Function, typeMap TypeMap, majorVersion int, prototype bool) error {
+func writeGoFuncDefinition(w io.Writer, f *Function, typeMap TypeMap, majorVersion int, prefix string, prototype bool) error {
 	if majorVersion > 0 {
 		fmt.Fprintf(w, "// %s\n", MakeFuncDocUrl(majorVersion, f.Name))
 	}
@@ -398,15 +395,15 @@ func writeGoFuncDefinition(w io.Writer, f *Function, typeMap TypeMap, majorVersi
 	fmt.Fprintf(w, ") %s {\n", goType)
 	if rtype == "void" || rtype == "VOID" {
 		if prototype {
-			fmt.Fprintf(w, "	C.gl%s(", f.Name)
+			fmt.Fprintf(w, "	C.%s%s(", prefix, f.Name)
 		} else {
-			fmt.Fprintf(w, "	C.gogl%s(", f.Name)
+			fmt.Fprintf(w, "	C.go%s%s(", prefix, f.Name)
 		}
 	} else {
 		if prototype {
-			fmt.Fprintf(w, "	return (%s)(C.gl%s(", goType, f.Name)
+			fmt.Fprintf(w, "	return (%s)(C.%s%s(", goType, prefix, f.Name)
 		} else {
-			fmt.Fprintf(w, "	return (%s)(C.gogl%s(", goType, f.Name)
+			fmt.Fprintf(w, "	return (%s)(C.go%s%s(", goType, prefix, f.Name)
 		}
 	}
 	for i, _ := range f.Parameters {

@@ -223,7 +223,7 @@ package glx
 // static HMODULE opengl32 = NULL;
 // #endif
 // 
-// static void* goglGetProcAddress(const char* name) { 
+// static void* goglxGetProcAddress(const char* name) { 
 // #ifdef __APPLE__
 // 	return dlsym(RTLD_DEFAULT, name);
 // #elif _WIN32
@@ -241,710 +241,710 @@ package glx
 // }
 // 
 // //  ARB_create_context
-// GLXContext (APIENTRYP ptrglCreateContextAttribsARB)(Display* dpy, GLXFBConfig config, GLXContext share_context, Bool direct, int* attrib_list);
+// GLXContext (APIENTRYP ptrglxCreateContextAttribsARB)(Display* dpy, GLXFBConfig config, GLXContext share_context, Bool direct, int* attrib_list);
 // //  ARB_create_context_profile
 // //  ARB_create_context_robustness
 // //  ARB_fbconfig_float
 // //  ARB_framebuffer_sRGB
 // //  ARB_get_proc_address
-// __GLXextFuncPtr (APIENTRYP ptrglGetProcAddressARB)(GLubyte* procName);
+// __GLXextFuncPtr (APIENTRYP ptrglxGetProcAddressARB)(GLubyte* procName);
 // //  ARB_multisample
 // //  EXT_fbconfig_packed_float
 // //  EXT_framebuffer_sRGB
 // //  EXT_import_context
-// Display * (APIENTRYP ptrglGetCurrentDisplayEXT)();
-// int (APIENTRYP ptrglQueryContextInfoEXT)(Display* dpy, GLXContext context, int attribute, int* value);
-// GLXContextID (APIENTRYP ptrglGetContextIDEXT)(const GLXContext context);
-// GLXContext (APIENTRYP ptrglImportContextEXT)(Display* dpy, GLXContextID contextID);
-// void (APIENTRYP ptrglFreeContextEXT)(Display* dpy, GLXContext context);
+// Display * (APIENTRYP ptrglxGetCurrentDisplayEXT)();
+// int (APIENTRYP ptrglxQueryContextInfoEXT)(Display* dpy, GLXContext context, int attribute, int* value);
+// GLXContextID (APIENTRYP ptrglxGetContextIDEXT)(const GLXContext context);
+// GLXContext (APIENTRYP ptrglxImportContextEXT)(Display* dpy, GLXContextID contextID);
+// void (APIENTRYP ptrglxFreeContextEXT)(Display* dpy, GLXContext context);
 // //  EXT_swap_control
-// void (APIENTRYP ptrglSwapIntervalEXT)(Display* dpy, GLXDrawable drawable, int interval);
+// void (APIENTRYP ptrglxSwapIntervalEXT)(Display* dpy, GLXDrawable drawable, int interval);
 // //  EXT_swap_control_tear
 // //  EXT_texture_from_pixmap
-// void (APIENTRYP ptrglBindTexImageEXT)(Display* dpy, GLXDrawable drawable, int buffer, int* attrib_list);
-// void (APIENTRYP ptrglReleaseTexImageEXT)(Display* dpy, GLXDrawable drawable, int buffer);
+// void (APIENTRYP ptrglxBindTexImageEXT)(Display* dpy, GLXDrawable drawable, int buffer, int* attrib_list);
+// void (APIENTRYP ptrglxReleaseTexImageEXT)(Display* dpy, GLXDrawable drawable, int buffer);
 // //  EXT_visual_info
 // //  EXT_visual_rating
 // //  INTEL_swap_event
 // //  MESA_agp_offset
-// unsigned int (APIENTRYP ptrglGetAGPOffsetMESA)(void* pointer);
+// unsigned int (APIENTRYP ptrglxGetAGPOffsetMESA)(void* pointer);
 // //  MESA_copy_sub_buffer
-// void (APIENTRYP ptrglCopySubBufferMESA)(Display* dpy, GLXDrawable drawable, int x, int y, int width, int height);
+// void (APIENTRYP ptrglxCopySubBufferMESA)(Display* dpy, GLXDrawable drawable, int x, int y, int width, int height);
 // //  MESA_pixmap_colormap
-// GLXPixmap (APIENTRYP ptrglCreateGLXPixmapMESA)(Display* dpy, XVisualInfo* visual, Pixmap pixmap, Colormap cmap);
+// GLXPixmap (APIENTRYP ptrglxCreateGLXPixmapMESA)(Display* dpy, XVisualInfo* visual, Pixmap pixmap, Colormap cmap);
 // //  MESA_release_buffers
-// Bool (APIENTRYP ptrglReleaseBuffersMESA)(Display* dpy, GLXDrawable drawable);
+// Bool (APIENTRYP ptrglxReleaseBuffersMESA)(Display* dpy, GLXDrawable drawable);
 // //  MESA_set_3dfx_mode
-// Bool (APIENTRYP ptrglSet3DfxModeMESA)(int mode);
+// Bool (APIENTRYP ptrglxSet3DfxModeMESA)(int mode);
 // //  NV_copy_image
-// void (APIENTRYP ptrglCopyImageSubDataNV)(Display* dpy, GLXContext srcCtx, GLuint srcName, GLenum srcTarget, GLint srcLevel, GLint srcX, GLint srcY, GLint srcZ, GLXContext dstCtx, GLuint dstName, GLenum dstTarget, GLint dstLevel, GLint dstX, GLint dstY, GLint dstZ, GLsizei width, GLsizei height, GLsizei depth);
+// void (APIENTRYP ptrglxCopyImageSubDataNV)(Display* dpy, GLXContext srcCtx, GLuint srcName, GLenum srcTarget, GLint srcLevel, GLint srcX, GLint srcY, GLint srcZ, GLXContext dstCtx, GLuint dstName, GLenum dstTarget, GLint dstLevel, GLint dstX, GLint dstY, GLint dstZ, GLsizei width, GLsizei height, GLsizei depth);
 // //  NV_float_buffer
 // //  NV_multisample_coverage
 // //  NV_present_video
-// unsigned int * (APIENTRYP ptrglEnumerateVideoDevicesNV)(Display* dpy, int screen, int* nelements);
-// int (APIENTRYP ptrglBindVideoDeviceNV)(Display* dpy, unsigned int video_slot, unsigned int video_device, int* attrib_list);
+// unsigned int * (APIENTRYP ptrglxEnumerateVideoDevicesNV)(Display* dpy, int screen, int* nelements);
+// int (APIENTRYP ptrglxBindVideoDeviceNV)(Display* dpy, unsigned int video_slot, unsigned int video_device, int* attrib_list);
 // //  NV_swap_group
-// Bool (APIENTRYP ptrglJoinSwapGroupNV)(Display* dpy, GLXDrawable drawable, GLuint group);
-// Bool (APIENTRYP ptrglBindSwapBarrierNV)(Display* dpy, GLuint group, GLuint barrier);
-// Bool (APIENTRYP ptrglQuerySwapGroupNV)(Display* dpy, GLXDrawable drawable, GLuint* group, GLuint* barrier);
-// Bool (APIENTRYP ptrglQueryMaxSwapGroupsNV)(Display* dpy, int screen, GLuint* maxGroups, GLuint* maxBarriers);
-// Bool (APIENTRYP ptrglQueryFrameCountNV)(Display* dpy, int screen, GLuint* count);
-// Bool (APIENTRYP ptrglResetFrameCountNV)(Display* dpy, int screen);
+// Bool (APIENTRYP ptrglxJoinSwapGroupNV)(Display* dpy, GLXDrawable drawable, GLuint group);
+// Bool (APIENTRYP ptrglxBindSwapBarrierNV)(Display* dpy, GLuint group, GLuint barrier);
+// Bool (APIENTRYP ptrglxQuerySwapGroupNV)(Display* dpy, GLXDrawable drawable, GLuint* group, GLuint* barrier);
+// Bool (APIENTRYP ptrglxQueryMaxSwapGroupsNV)(Display* dpy, int screen, GLuint* maxGroups, GLuint* maxBarriers);
+// Bool (APIENTRYP ptrglxQueryFrameCountNV)(Display* dpy, int screen, GLuint* count);
+// Bool (APIENTRYP ptrglxResetFrameCountNV)(Display* dpy, int screen);
 // //  NV_video_capture
-// int (APIENTRYP ptrglBindVideoCaptureDeviceNV)(Display* dpy, unsigned int video_capture_slot, GLXVideoCaptureDeviceNV device);
-// GLXVideoCaptureDeviceNV * (APIENTRYP ptrglEnumerateVideoCaptureDevicesNV)(Display* dpy, int screen, int* nelements);
-// void (APIENTRYP ptrglLockVideoCaptureDeviceNV)(Display* dpy, GLXVideoCaptureDeviceNV device);
-// int (APIENTRYP ptrglQueryVideoCaptureDeviceNV)(Display* dpy, GLXVideoCaptureDeviceNV device, int attribute, int* value);
-// void (APIENTRYP ptrglReleaseVideoCaptureDeviceNV)(Display* dpy, GLXVideoCaptureDeviceNV device);
+// int (APIENTRYP ptrglxBindVideoCaptureDeviceNV)(Display* dpy, unsigned int video_capture_slot, GLXVideoCaptureDeviceNV device);
+// GLXVideoCaptureDeviceNV * (APIENTRYP ptrglxEnumerateVideoCaptureDevicesNV)(Display* dpy, int screen, int* nelements);
+// void (APIENTRYP ptrglxLockVideoCaptureDeviceNV)(Display* dpy, GLXVideoCaptureDeviceNV device);
+// int (APIENTRYP ptrglxQueryVideoCaptureDeviceNV)(Display* dpy, GLXVideoCaptureDeviceNV device, int attribute, int* value);
+// void (APIENTRYP ptrglxReleaseVideoCaptureDeviceNV)(Display* dpy, GLXVideoCaptureDeviceNV device);
 // //  NV_video_output
-// int (APIENTRYP ptrglGetVideoDeviceNV)(Display* dpy, int screen, int numVideoDevices, GLXVideoDeviceNV* pVideoDevice);
-// int (APIENTRYP ptrglReleaseVideoDeviceNV)(Display* dpy, int screen, GLXVideoDeviceNV VideoDevice);
-// int (APIENTRYP ptrglBindVideoImageNV)(Display* dpy, GLXVideoDeviceNV VideoDevice, GLXPbuffer pbuf, int iVideoBuffer);
-// int (APIENTRYP ptrglReleaseVideoImageNV)(Display* dpy, GLXPbuffer pbuf);
-// int (APIENTRYP ptrglSendPbufferToVideoNV)(Display* dpy, GLXPbuffer pbuf, int iBufferType, unsigned long* pulCounterPbuffer, GLboolean bBlock);
-// int (APIENTRYP ptrglGetVideoInfoNV)(Display* dpy, int screen, GLXVideoDeviceNV VideoDevice, unsigned long* pulCounterOutputPbuffer, unsigned long* pulCounterOutputVideo);
+// int (APIENTRYP ptrglxGetVideoDeviceNV)(Display* dpy, int screen, int numVideoDevices, GLXVideoDeviceNV* pVideoDevice);
+// int (APIENTRYP ptrglxReleaseVideoDeviceNV)(Display* dpy, int screen, GLXVideoDeviceNV VideoDevice);
+// int (APIENTRYP ptrglxBindVideoImageNV)(Display* dpy, GLXVideoDeviceNV VideoDevice, GLXPbuffer pbuf, int iVideoBuffer);
+// int (APIENTRYP ptrglxReleaseVideoImageNV)(Display* dpy, GLXPbuffer pbuf);
+// int (APIENTRYP ptrglxSendPbufferToVideoNV)(Display* dpy, GLXPbuffer pbuf, int iBufferType, unsigned long* pulCounterPbuffer, GLboolean bBlock);
+// int (APIENTRYP ptrglxGetVideoInfoNV)(Display* dpy, int screen, GLXVideoDeviceNV VideoDevice, unsigned long* pulCounterOutputPbuffer, unsigned long* pulCounterOutputVideo);
 // //  OML_swap_method
 // //  OML_sync_control
-// Bool (APIENTRYP ptrglGetSyncValuesOML)(Display* dpy, GLXDrawable drawable, int64_t* ust, int64_t* msc, int64_t* sbc);
-// Bool (APIENTRYP ptrglGetMscRateOML)(Display* dpy, GLXDrawable drawable, int32_t* numerator, int32_t* denominator);
-// int64_t (APIENTRYP ptrglSwapBuffersMscOML)(Display* dpy, GLXDrawable drawable, int64_t target_msc, int64_t divisor, int64_t remainder);
-// Bool (APIENTRYP ptrglWaitForMscOML)(Display* dpy, GLXDrawable drawable, int64_t target_msc, int64_t divisor, int64_t remainder, int64_t* ust, int64_t* msc, int64_t* sbc);
-// Bool (APIENTRYP ptrglWaitForSbcOML)(Display* dpy, GLXDrawable drawable, int64_t target_sbc, int64_t* ust, int64_t* msc, int64_t* sbc);
+// Bool (APIENTRYP ptrglxGetSyncValuesOML)(Display* dpy, GLXDrawable drawable, int64_t* ust, int64_t* msc, int64_t* sbc);
+// Bool (APIENTRYP ptrglxGetMscRateOML)(Display* dpy, GLXDrawable drawable, int32_t* numerator, int32_t* denominator);
+// int64_t (APIENTRYP ptrglxSwapBuffersMscOML)(Display* dpy, GLXDrawable drawable, int64_t target_msc, int64_t divisor, int64_t remainder);
+// Bool (APIENTRYP ptrglxWaitForMscOML)(Display* dpy, GLXDrawable drawable, int64_t target_msc, int64_t divisor, int64_t remainder, int64_t* ust, int64_t* msc, int64_t* sbc);
+// Bool (APIENTRYP ptrglxWaitForSbcOML)(Display* dpy, GLXDrawable drawable, int64_t target_sbc, int64_t* ust, int64_t* msc, int64_t* sbc);
 // //  SGIS_multisample
 // //  SGIX_dmbuffer
-// Bool (APIENTRYP ptrglAssociateDMPbufferSGIX)(Display* dpy, GLXPbufferSGIX pbuffer, DMparams* params, DMbuffer dmbuffer);
+// Bool (APIENTRYP ptrglxAssociateDMPbufferSGIX)(Display* dpy, GLXPbufferSGIX pbuffer, DMparams* params, DMbuffer dmbuffer);
 // //  SGIX_fbconfig
-// int (APIENTRYP ptrglGetFBConfigAttribSGIX)(Display* dpy, GLXFBConfigSGIX config, int attribute, int* value);
-// GLXFBConfigSGIX * (APIENTRYP ptrglChooseFBConfigSGIX)(Display* dpy, int screen, int* attrib_list, int* nelements);
-// GLXPixmap (APIENTRYP ptrglCreateGLXPixmapWithConfigSGIX)(Display* dpy, GLXFBConfigSGIX config, Pixmap pixmap);
-// GLXContext (APIENTRYP ptrglCreateContextWithConfigSGIX)(Display* dpy, GLXFBConfigSGIX config, int render_type, GLXContext share_list, Bool direct);
-// XVisualInfo * (APIENTRYP ptrglGetVisualFromFBConfigSGIX)(Display* dpy, GLXFBConfigSGIX config);
-// GLXFBConfigSGIX (APIENTRYP ptrglGetFBConfigFromVisualSGIX)(Display* dpy, XVisualInfo* vis);
+// int (APIENTRYP ptrglxGetFBConfigAttribSGIX)(Display* dpy, GLXFBConfigSGIX config, int attribute, int* value);
+// GLXFBConfigSGIX * (APIENTRYP ptrglxChooseFBConfigSGIX)(Display* dpy, int screen, int* attrib_list, int* nelements);
+// GLXPixmap (APIENTRYP ptrglxCreateGLXPixmapWithConfigSGIX)(Display* dpy, GLXFBConfigSGIX config, Pixmap pixmap);
+// GLXContext (APIENTRYP ptrglxCreateContextWithConfigSGIX)(Display* dpy, GLXFBConfigSGIX config, int render_type, GLXContext share_list, Bool direct);
+// XVisualInfo * (APIENTRYP ptrglxGetVisualFromFBConfigSGIX)(Display* dpy, GLXFBConfigSGIX config);
+// GLXFBConfigSGIX (APIENTRYP ptrglxGetFBConfigFromVisualSGIX)(Display* dpy, XVisualInfo* vis);
 // //  SGIX_hyperpipe
-// GLXHyperpipeNetworkSGIX * (APIENTRYP ptrglQueryHyperpipeNetworkSGIX)(Display* dpy, int* npipes);
-// int (APIENTRYP ptrglHyperpipeConfigSGIX)(Display* dpy, int networkId, int npipes, GLXHyperpipeConfigSGIX* cfg, int* hpId);
-// GLXHyperpipeConfigSGIX * (APIENTRYP ptrglQueryHyperpipeConfigSGIX)(Display* dpy, int hpId, int* npipes);
-// int (APIENTRYP ptrglDestroyHyperpipeConfigSGIX)(Display* dpy, int hpId);
-// int (APIENTRYP ptrglBindHyperpipeSGIX)(Display* dpy, int hpId);
-// int (APIENTRYP ptrglQueryHyperpipeBestAttribSGIX)(Display* dpy, int timeSlice, int attrib, int size, void* attribList, void* returnAttribList);
-// int (APIENTRYP ptrglHyperpipeAttribSGIX)(Display* dpy, int timeSlice, int attrib, int size, void* attribList);
-// int (APIENTRYP ptrglQueryHyperpipeAttribSGIX)(Display* dpy, int timeSlice, int attrib, int size, void* returnAttribList);
+// GLXHyperpipeNetworkSGIX * (APIENTRYP ptrglxQueryHyperpipeNetworkSGIX)(Display* dpy, int* npipes);
+// int (APIENTRYP ptrglxHyperpipeConfigSGIX)(Display* dpy, int networkId, int npipes, GLXHyperpipeConfigSGIX* cfg, int* hpId);
+// GLXHyperpipeConfigSGIX * (APIENTRYP ptrglxQueryHyperpipeConfigSGIX)(Display* dpy, int hpId, int* npipes);
+// int (APIENTRYP ptrglxDestroyHyperpipeConfigSGIX)(Display* dpy, int hpId);
+// int (APIENTRYP ptrglxBindHyperpipeSGIX)(Display* dpy, int hpId);
+// int (APIENTRYP ptrglxQueryHyperpipeBestAttribSGIX)(Display* dpy, int timeSlice, int attrib, int size, void* attribList, void* returnAttribList);
+// int (APIENTRYP ptrglxHyperpipeAttribSGIX)(Display* dpy, int timeSlice, int attrib, int size, void* attribList);
+// int (APIENTRYP ptrglxQueryHyperpipeAttribSGIX)(Display* dpy, int timeSlice, int attrib, int size, void* returnAttribList);
 // //  SGIX_pbuffer
-// GLXPbufferSGIX (APIENTRYP ptrglCreateGLXPbufferSGIX)(Display* dpy, GLXFBConfigSGIX config, unsigned int width, unsigned int height, int* attrib_list);
-// void (APIENTRYP ptrglDestroyGLXPbufferSGIX)(Display* dpy, GLXPbufferSGIX pbuf);
-// int (APIENTRYP ptrglQueryGLXPbufferSGIX)(Display* dpy, GLXPbufferSGIX pbuf, int attribute, unsigned int* value);
-// void (APIENTRYP ptrglSelectEventSGIX)(Display* dpy, GLXDrawable drawable, unsigned long mask);
-// void (APIENTRYP ptrglGetSelectedEventSGIX)(Display* dpy, GLXDrawable drawable, unsigned long* mask);
+// GLXPbufferSGIX (APIENTRYP ptrglxCreateGLXPbufferSGIX)(Display* dpy, GLXFBConfigSGIX config, unsigned int width, unsigned int height, int* attrib_list);
+// void (APIENTRYP ptrglxDestroyGLXPbufferSGIX)(Display* dpy, GLXPbufferSGIX pbuf);
+// int (APIENTRYP ptrglxQueryGLXPbufferSGIX)(Display* dpy, GLXPbufferSGIX pbuf, int attribute, unsigned int* value);
+// void (APIENTRYP ptrglxSelectEventSGIX)(Display* dpy, GLXDrawable drawable, unsigned long mask);
+// void (APIENTRYP ptrglxGetSelectedEventSGIX)(Display* dpy, GLXDrawable drawable, unsigned long* mask);
 // //  SGIX_swap_barrier
-// void (APIENTRYP ptrglBindSwapBarrierSGIX)(Display* dpy, GLXDrawable drawable, int barrier);
-// Bool (APIENTRYP ptrglQueryMaxSwapBarriersSGIX)(Display* dpy, int screen, int* max);
+// void (APIENTRYP ptrglxBindSwapBarrierSGIX)(Display* dpy, GLXDrawable drawable, int barrier);
+// Bool (APIENTRYP ptrglxQueryMaxSwapBarriersSGIX)(Display* dpy, int screen, int* max);
 // //  SGIX_swap_group
-// void (APIENTRYP ptrglJoinSwapGroupSGIX)(Display* dpy, GLXDrawable drawable, GLXDrawable member);
+// void (APIENTRYP ptrglxJoinSwapGroupSGIX)(Display* dpy, GLXDrawable drawable, GLXDrawable member);
 // //  SGIX_video_resize
-// int (APIENTRYP ptrglBindChannelToWindowSGIX)(Display* display, int screen, int channel, Window window);
-// int (APIENTRYP ptrglChannelRectSGIX)(Display* display, int screen, int channel, int x, int y, int w, int h);
-// int (APIENTRYP ptrglQueryChannelRectSGIX)(Display* display, int screen, int channel, int* dx, int* dy, int* dw, int* dh);
-// int (APIENTRYP ptrglQueryChannelDeltasSGIX)(Display* display, int screen, int channel, int* x, int* y, int* w, int* h);
-// int (APIENTRYP ptrglChannelRectSyncSGIX)(Display* display, int screen, int channel, GLenum synctype);
+// int (APIENTRYP ptrglxBindChannelToWindowSGIX)(Display* display, int screen, int channel, Window window);
+// int (APIENTRYP ptrglxChannelRectSGIX)(Display* display, int screen, int channel, int x, int y, int w, int h);
+// int (APIENTRYP ptrglxQueryChannelRectSGIX)(Display* display, int screen, int channel, int* dx, int* dy, int* dw, int* dh);
+// int (APIENTRYP ptrglxQueryChannelDeltasSGIX)(Display* display, int screen, int channel, int* x, int* y, int* w, int* h);
+// int (APIENTRYP ptrglxChannelRectSyncSGIX)(Display* display, int screen, int channel, GLenum synctype);
 // //  SGIX_video_source
-// GLXVideoSourceSGIX (APIENTRYP ptrglCreateGLXVideoSourceSGIX)(Display* display, int screen, VLServer server, VLPath path, int nodeClass, VLNode drainNode);
-// void (APIENTRYP ptrglDestroyGLXVideoSourceSGIX)(Display* dpy, GLXVideoSourceSGIX glxvideosource);
+// GLXVideoSourceSGIX (APIENTRYP ptrglxCreateGLXVideoSourceSGIX)(Display* display, int screen, VLServer server, VLPath path, int nodeClass, VLNode drainNode);
+// void (APIENTRYP ptrglxDestroyGLXVideoSourceSGIX)(Display* dpy, GLXVideoSourceSGIX glxvideosource);
 // //  SGIX_visual_select_group
 // //  SGI_cushion
-// void (APIENTRYP ptrglCushionSGI)(Display* dpy, Window window, float cushion);
+// void (APIENTRYP ptrglxCushionSGI)(Display* dpy, Window window, float cushion);
 // //  SGI_make_current_read
-// Bool (APIENTRYP ptrglMakeCurrentReadSGI)(Display* dpy, GLXDrawable draw, GLXDrawable read, GLXContext ctx);
-// GLXDrawable (APIENTRYP ptrglGetCurrentReadDrawableSGI)();
+// Bool (APIENTRYP ptrglxMakeCurrentReadSGI)(Display* dpy, GLXDrawable draw, GLXDrawable read, GLXContext ctx);
+// GLXDrawable (APIENTRYP ptrglxGetCurrentReadDrawableSGI)();
 // //  SGI_swap_control
-// int (APIENTRYP ptrglSwapIntervalSGI)(int interval);
+// int (APIENTRYP ptrglxSwapIntervalSGI)(int interval);
 // //  SGI_video_sync
-// int (APIENTRYP ptrglGetVideoSyncSGI)(unsigned int* count);
-// int (APIENTRYP ptrglWaitVideoSyncSGI)(int divisor, int remainder, unsigned int* count);
+// int (APIENTRYP ptrglxGetVideoSyncSGI)(unsigned int* count);
+// int (APIENTRYP ptrglxWaitVideoSyncSGI)(int divisor, int remainder, unsigned int* count);
 // //  SUN_get_transparent_index
-// Status (APIENTRYP ptrglGetTransparentIndexSUN)(Display* dpy, Window overlay, Window underlay, long* pTransparentIndex);
+// Status (APIENTRYP ptrglxGetTransparentIndexSUN)(Display* dpy, Window overlay, Window underlay, long* pTransparentIndex);
 // //  VERSION_1_3
-// GLXFBConfig * (APIENTRYP ptrglGetFBConfigs)(Display* dpy, int screen, int* nelements);
-// GLXFBConfig * (APIENTRYP ptrglChooseFBConfig)(Display* dpy, int screen, int* attrib_list, int* nelements);
-// int (APIENTRYP ptrglGetFBConfigAttrib)(Display* dpy, GLXFBConfig config, int attribute, int* value);
-// XVisualInfo * (APIENTRYP ptrglGetVisualFromFBConfig)(Display* dpy, GLXFBConfig config);
-// GLXWindow (APIENTRYP ptrglCreateWindow)(Display* dpy, GLXFBConfig config, Window win, int* attrib_list);
-// void (APIENTRYP ptrglDestroyWindow)(Display* dpy, GLXWindow win);
-// GLXPixmap (APIENTRYP ptrglCreatePixmap)(Display* dpy, GLXFBConfig config, Pixmap pixmap, int* attrib_list);
-// void (APIENTRYP ptrglDestroyPixmap)(Display* dpy, GLXPixmap pixmap);
-// GLXPbuffer (APIENTRYP ptrglCreatePbuffer)(Display* dpy, GLXFBConfig config, int* attrib_list);
-// void (APIENTRYP ptrglDestroyPbuffer)(Display* dpy, GLXPbuffer pbuf);
-// void (APIENTRYP ptrglQueryDrawable)(Display* dpy, GLXDrawable draw, int attribute, unsigned int* value);
-// GLXContext (APIENTRYP ptrglCreateNewContext)(Display* dpy, GLXFBConfig config, int render_type, GLXContext share_list, Bool direct);
-// Bool (APIENTRYP ptrglMakeContextCurrent)(Display* dpy, GLXDrawable draw, GLXDrawable read, GLXContext ctx);
-// GLXDrawable (APIENTRYP ptrglGetCurrentReadDrawable)();
-// Display * (APIENTRYP ptrglGetCurrentDisplay)();
-// int (APIENTRYP ptrglQueryContext)(Display* dpy, GLXContext ctx, int attribute, int* value);
-// void (APIENTRYP ptrglSelectEvent)(Display* dpy, GLXDrawable draw, unsigned long event_mask);
-// void (APIENTRYP ptrglGetSelectedEvent)(Display* dpy, GLXDrawable draw, unsigned long* event_mask);
+// GLXFBConfig * (APIENTRYP ptrglxGetFBConfigs)(Display* dpy, int screen, int* nelements);
+// GLXFBConfig * (APIENTRYP ptrglxChooseFBConfig)(Display* dpy, int screen, int* attrib_list, int* nelements);
+// int (APIENTRYP ptrglxGetFBConfigAttrib)(Display* dpy, GLXFBConfig config, int attribute, int* value);
+// XVisualInfo * (APIENTRYP ptrglxGetVisualFromFBConfig)(Display* dpy, GLXFBConfig config);
+// GLXWindow (APIENTRYP ptrglxCreateWindow)(Display* dpy, GLXFBConfig config, Window win, int* attrib_list);
+// void (APIENTRYP ptrglxDestroyWindow)(Display* dpy, GLXWindow win);
+// GLXPixmap (APIENTRYP ptrglxCreatePixmap)(Display* dpy, GLXFBConfig config, Pixmap pixmap, int* attrib_list);
+// void (APIENTRYP ptrglxDestroyPixmap)(Display* dpy, GLXPixmap pixmap);
+// GLXPbuffer (APIENTRYP ptrglxCreatePbuffer)(Display* dpy, GLXFBConfig config, int* attrib_list);
+// void (APIENTRYP ptrglxDestroyPbuffer)(Display* dpy, GLXPbuffer pbuf);
+// void (APIENTRYP ptrglxQueryDrawable)(Display* dpy, GLXDrawable draw, int attribute, unsigned int* value);
+// GLXContext (APIENTRYP ptrglxCreateNewContext)(Display* dpy, GLXFBConfig config, int render_type, GLXContext share_list, Bool direct);
+// Bool (APIENTRYP ptrglxMakeContextCurrent)(Display* dpy, GLXDrawable draw, GLXDrawable read, GLXContext ctx);
+// GLXDrawable (APIENTRYP ptrglxGetCurrentReadDrawable)();
+// Display * (APIENTRYP ptrglxGetCurrentDisplay)();
+// int (APIENTRYP ptrglxQueryContext)(Display* dpy, GLXContext ctx, int attribute, int* value);
+// void (APIENTRYP ptrglxSelectEvent)(Display* dpy, GLXDrawable draw, unsigned long event_mask);
+// void (APIENTRYP ptrglxGetSelectedEvent)(Display* dpy, GLXDrawable draw, unsigned long* event_mask);
 // //  VERSION_1_4
-// __GLXextFuncPtr (APIENTRYP ptrglGetProcAddress)(GLubyte* procName);
+// __GLXextFuncPtr (APIENTRYP ptrglxGetProcAddress)(GLubyte* procName);
 // //  glx
-// void (APIENTRYP ptrglRender)();
-// void (APIENTRYP ptrglRenderLarge)();
-// void (APIENTRYP ptrglCreateContext)(GLint gc_id, GLint screen, GLint visual, GLint share_list);
-// void (APIENTRYP ptrglDestroyContext)(GLint context);
-// void (APIENTRYP ptrglMakeCurrent)(GLint drawable, GLint context);
-// void (APIENTRYP ptrglIsDirect)(GLint dpy, GLint context);
-// void (APIENTRYP ptrglQueryVersion)(GLint* major, GLint* minor);
-// void (APIENTRYP ptrglWaitGL)(GLint context);
-// void (APIENTRYP ptrglWaitX)();
-// void (APIENTRYP ptrglCopyContext)(GLint source, GLint dest, GLint mask);
-// void (APIENTRYP ptrglSwapBuffers)(GLint drawable);
-// void (APIENTRYP ptrglUseXFont)(GLint font, GLint first, GLint count, GLint list_base);
-// void (APIENTRYP ptrglCreateGLXPixmap)(GLint visual, GLint pixmap, GLint glxpixmap);
-// void (APIENTRYP ptrglGetVisualConfigs)();
-// void (APIENTRYP ptrglDestroyGLXPixmap)(GLint pixmap);
-// void (APIENTRYP ptrglVendorPrivate)();
-// void (APIENTRYP ptrglVendorPrivateWithReply)();
-// void (APIENTRYP ptrglQueryExtensionsString)(GLint screen);
-// void (APIENTRYP ptrglQueryServerString)(GLint screen, GLint name);
-// void (APIENTRYP ptrglClientInfo)();
-// void (APIENTRYP ptrglGetFBConfigs)();
-// void (APIENTRYP ptrglCreatePixmap)(GLint config, GLint pixmap, GLint glxpixmap);
-// void (APIENTRYP ptrglDestroyPixmap)(GLint glxpixmap);
-// void (APIENTRYP ptrglCreateNewContext)(GLint config, GLint render_type, GLint share_list, GLint direct);
-// void (APIENTRYP ptrglQueryContext)();
-// void (APIENTRYP ptrglMakeContextCurrent)(GLint drawable, GLint readdrawable, GLint context);
-// void (APIENTRYP ptrglCreatePbuffer)(GLint config, GLint pbuffer);
-// void (APIENTRYP ptrglDestroyPbuffer)(GLint pbuffer);
-// void (APIENTRYP ptrglGetDrawableAttributes)(GLint drawable);
-// void (APIENTRYP ptrglChangeDrawableAttributes)(GLint drawable);
-// void (APIENTRYP ptrglCreateWindow)(GLint config, GLint window, GLint glxwindow);
-// void (APIENTRYP ptrglDestroyWindow)(GLint glxwindow);
-// void (APIENTRYP ptrglSwapIntervalSGI)();
-// void (APIENTRYP ptrglMakeCurrentReadSGI)(GLint drawable, GLint readdrawable, GLint context);
-// void (APIENTRYP ptrglCreateGLXVideoSourceSGIX)(GLint dpy, GLint screen, GLint server, GLint path, GLint class, GLint node);
-// void (APIENTRYP ptrglDestroyGLXVideoSourceSGIX)(GLint dpy, GLint glxvideosource);
-// void (APIENTRYP ptrglQueryContextInfoEXT)();
-// void (APIENTRYP ptrglGetFBConfigsSGIX)();
-// void (APIENTRYP ptrglCreateContextWithConfigSGIX)(GLint gc_id, GLint screen, GLint config, GLint share_list);
-// void (APIENTRYP ptrglCreateGLXPixmapWithConfigSGIX)(GLint config, GLint pixmap, GLint glxpixmap);
-// void (APIENTRYP ptrglCreateGLXPbufferSGIX)(GLint config, GLint pbuffer);
-// void (APIENTRYP ptrglDestroyGLXPbufferSGIX)(GLint pbuffer);
-// void (APIENTRYP ptrglChangeDrawableAttributesSGIX)(GLint drawable);
-// void (APIENTRYP ptrglGetDrawableAttributesSGIX)(GLint drawable);
-// void (APIENTRYP ptrglJoinSwapGroupSGIX)(GLint window, GLint group);
-// void (APIENTRYP ptrglBindSwapBarrierSGIX)(GLint window, GLint barrier);
-// void (APIENTRYP ptrglQueryMaxSwapBarriersSGIX)();
-// GLXHyperpipeNetworkSGIX * (APIENTRYP ptrglQueryHyperpipeNetworkSGIX)(Display* dpy, int* npipes);
-// int (APIENTRYP ptrglHyperpipeConfigSGIX)(Display* dpy, int networkId, int npipes, GLXHyperpipeConfigSGIX* cfg, int* hpId);
-// GLXHyperpipeConfigSGIX * (APIENTRYP ptrglQueryHyperpipeConfigSGIX)(Display* dpy, int hpId, int* npipes);
-// int (APIENTRYP ptrglDestroyHyperpipeConfigSGIX)(Display* dpy, int hpId);
-// int (APIENTRYP ptrglBindHyperpipeSGIX)(Display* dpy, int hpId);
-// int (APIENTRYP ptrglQueryHyperpipeBestAttribSGIX)(Display* dpy, int timeSlice, int attrib, int size, GLvoid* attribList, GLvoid* returnAttribList);
-// int (APIENTRYP ptrglHyperpipeAttribSGIX)(Display* dpy, int timeSlice, int attrib, int size, void* attribList);
-// int (APIENTRYP ptrglQueryHyperpipeAttribSGIX)(Display* dpy, int timeSlice, int attrib, int size, void* returnAttribList);
+// void (APIENTRYP ptrglxRender)();
+// void (APIENTRYP ptrglxRenderLarge)();
+// void (APIENTRYP ptrglxCreateContext)(GLint gc_id, GLint screen, GLint visual, GLint share_list);
+// void (APIENTRYP ptrglxDestroyContext)(GLint context);
+// void (APIENTRYP ptrglxMakeCurrent)(GLint drawable, GLint context);
+// void (APIENTRYP ptrglxIsDirect)(GLint dpy, GLint context);
+// void (APIENTRYP ptrglxQueryVersion)(GLint* major, GLint* minor);
+// void (APIENTRYP ptrglxWaitGL)(GLint context);
+// void (APIENTRYP ptrglxWaitX)();
+// void (APIENTRYP ptrglxCopyContext)(GLint source, GLint dest, GLint mask);
+// void (APIENTRYP ptrglxSwapBuffers)(GLint drawable);
+// void (APIENTRYP ptrglxUseXFont)(GLint font, GLint first, GLint count, GLint list_base);
+// void (APIENTRYP ptrglxCreateGLXPixmap)(GLint visual, GLint pixmap, GLint glxpixmap);
+// void (APIENTRYP ptrglxGetVisualConfigs)();
+// void (APIENTRYP ptrglxDestroyGLXPixmap)(GLint pixmap);
+// void (APIENTRYP ptrglxVendorPrivate)();
+// void (APIENTRYP ptrglxVendorPrivateWithReply)();
+// void (APIENTRYP ptrglxQueryExtensionsString)(GLint screen);
+// void (APIENTRYP ptrglxQueryServerString)(GLint screen, GLint name);
+// void (APIENTRYP ptrglxClientInfo)();
+// void (APIENTRYP ptrglxGetFBConfigs)();
+// void (APIENTRYP ptrglxCreatePixmap)(GLint config, GLint pixmap, GLint glxpixmap);
+// void (APIENTRYP ptrglxDestroyPixmap)(GLint glxpixmap);
+// void (APIENTRYP ptrglxCreateNewContext)(GLint config, GLint render_type, GLint share_list, GLint direct);
+// void (APIENTRYP ptrglxQueryContext)();
+// void (APIENTRYP ptrglxMakeContextCurrent)(GLint drawable, GLint readdrawable, GLint context);
+// void (APIENTRYP ptrglxCreatePbuffer)(GLint config, GLint pbuffer);
+// void (APIENTRYP ptrglxDestroyPbuffer)(GLint pbuffer);
+// void (APIENTRYP ptrglxGetDrawableAttributes)(GLint drawable);
+// void (APIENTRYP ptrglxChangeDrawableAttributes)(GLint drawable);
+// void (APIENTRYP ptrglxCreateWindow)(GLint config, GLint window, GLint glxwindow);
+// void (APIENTRYP ptrglxDestroyWindow)(GLint glxwindow);
+// void (APIENTRYP ptrglxSwapIntervalSGI)();
+// void (APIENTRYP ptrglxMakeCurrentReadSGI)(GLint drawable, GLint readdrawable, GLint context);
+// void (APIENTRYP ptrglxCreateGLXVideoSourceSGIX)(GLint dpy, GLint screen, GLint server, GLint path, GLint class, GLint node);
+// void (APIENTRYP ptrglxDestroyGLXVideoSourceSGIX)(GLint dpy, GLint glxvideosource);
+// void (APIENTRYP ptrglxQueryContextInfoEXT)();
+// void (APIENTRYP ptrglxGetFBConfigsSGIX)();
+// void (APIENTRYP ptrglxCreateContextWithConfigSGIX)(GLint gc_id, GLint screen, GLint config, GLint share_list);
+// void (APIENTRYP ptrglxCreateGLXPixmapWithConfigSGIX)(GLint config, GLint pixmap, GLint glxpixmap);
+// void (APIENTRYP ptrglxCreateGLXPbufferSGIX)(GLint config, GLint pbuffer);
+// void (APIENTRYP ptrglxDestroyGLXPbufferSGIX)(GLint pbuffer);
+// void (APIENTRYP ptrglxChangeDrawableAttributesSGIX)(GLint drawable);
+// void (APIENTRYP ptrglxGetDrawableAttributesSGIX)(GLint drawable);
+// void (APIENTRYP ptrglxJoinSwapGroupSGIX)(GLint window, GLint group);
+// void (APIENTRYP ptrglxBindSwapBarrierSGIX)(GLint window, GLint barrier);
+// void (APIENTRYP ptrglxQueryMaxSwapBarriersSGIX)();
+// GLXHyperpipeNetworkSGIX * (APIENTRYP ptrglxQueryHyperpipeNetworkSGIX)(Display* dpy, int* npipes);
+// int (APIENTRYP ptrglxHyperpipeConfigSGIX)(Display* dpy, int networkId, int npipes, GLXHyperpipeConfigSGIX* cfg, int* hpId);
+// GLXHyperpipeConfigSGIX * (APIENTRYP ptrglxQueryHyperpipeConfigSGIX)(Display* dpy, int hpId, int* npipes);
+// int (APIENTRYP ptrglxDestroyHyperpipeConfigSGIX)(Display* dpy, int hpId);
+// int (APIENTRYP ptrglxBindHyperpipeSGIX)(Display* dpy, int hpId);
+// int (APIENTRYP ptrglxQueryHyperpipeBestAttribSGIX)(Display* dpy, int timeSlice, int attrib, int size, GLvoid* attribList, GLvoid* returnAttribList);
+// int (APIENTRYP ptrglxHyperpipeAttribSGIX)(Display* dpy, int timeSlice, int attrib, int size, void* attribList);
+// int (APIENTRYP ptrglxQueryHyperpipeAttribSGIX)(Display* dpy, int timeSlice, int attrib, int size, void* returnAttribList);
 // 
 // //  ARB_create_context
-// GLXContext goglCreateContextAttribsARB(Display* dpy, GLXFBConfig config, GLXContext share_context, Bool direct, int* attrib_list) {
-// 	return (*ptrglCreateContextAttribsARB)(dpy, config, share_context, direct, attrib_list);
+// GLXContext goglxCreateContextAttribsARB(Display* dpy, GLXFBConfig config, GLXContext share_context, Bool direct, int* attrib_list) {
+// 	return (*ptrglxCreateContextAttribsARB)(dpy, config, share_context, direct, attrib_list);
 // }
 // //  ARB_create_context_profile
 // //  ARB_create_context_robustness
 // //  ARB_fbconfig_float
 // //  ARB_framebuffer_sRGB
 // //  ARB_get_proc_address
-// __GLXextFuncPtr goglGetProcAddressARB(GLubyte* procName) {
-// 	return (*ptrglGetProcAddressARB)(procName);
+// __GLXextFuncPtr goglxGetProcAddressARB(GLubyte* procName) {
+// 	return (*ptrglxGetProcAddressARB)(procName);
 // }
 // //  ARB_multisample
 // //  EXT_fbconfig_packed_float
 // //  EXT_framebuffer_sRGB
 // //  EXT_import_context
-// Display * goglGetCurrentDisplayEXT() {
-// 	return (*ptrglGetCurrentDisplayEXT)();
+// Display * goglxGetCurrentDisplayEXT() {
+// 	return (*ptrglxGetCurrentDisplayEXT)();
 // }
-// int goglQueryContextInfoEXT(Display* dpy, GLXContext context, int attribute, int* value) {
-// 	return (*ptrglQueryContextInfoEXT)(dpy, context, attribute, value);
+// int goglxQueryContextInfoEXT(Display* dpy, GLXContext context, int attribute, int* value) {
+// 	return (*ptrglxQueryContextInfoEXT)(dpy, context, attribute, value);
 // }
-// GLXContextID goglGetContextIDEXT(const GLXContext context) {
-// 	return (*ptrglGetContextIDEXT)(context);
+// GLXContextID goglxGetContextIDEXT(const GLXContext context) {
+// 	return (*ptrglxGetContextIDEXT)(context);
 // }
-// GLXContext goglImportContextEXT(Display* dpy, GLXContextID contextID) {
-// 	return (*ptrglImportContextEXT)(dpy, contextID);
+// GLXContext goglxImportContextEXT(Display* dpy, GLXContextID contextID) {
+// 	return (*ptrglxImportContextEXT)(dpy, contextID);
 // }
-// void goglFreeContextEXT(Display* dpy, GLXContext context) {
-// 	(*ptrglFreeContextEXT)(dpy, context);
+// void goglxFreeContextEXT(Display* dpy, GLXContext context) {
+// 	(*ptrglxFreeContextEXT)(dpy, context);
 // }
 // //  EXT_swap_control
-// void goglSwapIntervalEXT(Display* dpy, GLXDrawable drawable, int interval) {
-// 	(*ptrglSwapIntervalEXT)(dpy, drawable, interval);
+// void goglxSwapIntervalEXT(Display* dpy, GLXDrawable drawable, int interval) {
+// 	(*ptrglxSwapIntervalEXT)(dpy, drawable, interval);
 // }
 // //  EXT_swap_control_tear
 // //  EXT_texture_from_pixmap
-// void goglBindTexImageEXT(Display* dpy, GLXDrawable drawable, int buffer, int* attrib_list) {
-// 	(*ptrglBindTexImageEXT)(dpy, drawable, buffer, attrib_list);
+// void goglxBindTexImageEXT(Display* dpy, GLXDrawable drawable, int buffer, int* attrib_list) {
+// 	(*ptrglxBindTexImageEXT)(dpy, drawable, buffer, attrib_list);
 // }
-// void goglReleaseTexImageEXT(Display* dpy, GLXDrawable drawable, int buffer) {
-// 	(*ptrglReleaseTexImageEXT)(dpy, drawable, buffer);
+// void goglxReleaseTexImageEXT(Display* dpy, GLXDrawable drawable, int buffer) {
+// 	(*ptrglxReleaseTexImageEXT)(dpy, drawable, buffer);
 // }
 // //  EXT_visual_info
 // //  EXT_visual_rating
 // //  INTEL_swap_event
 // //  MESA_agp_offset
-// unsigned int goglGetAGPOffsetMESA(void* pointer) {
-// 	return (*ptrglGetAGPOffsetMESA)(pointer);
+// unsigned int goglxGetAGPOffsetMESA(void* pointer) {
+// 	return (*ptrglxGetAGPOffsetMESA)(pointer);
 // }
 // //  MESA_copy_sub_buffer
-// void goglCopySubBufferMESA(Display* dpy, GLXDrawable drawable, int x, int y, int width, int height) {
-// 	(*ptrglCopySubBufferMESA)(dpy, drawable, x, y, width, height);
+// void goglxCopySubBufferMESA(Display* dpy, GLXDrawable drawable, int x, int y, int width, int height) {
+// 	(*ptrglxCopySubBufferMESA)(dpy, drawable, x, y, width, height);
 // }
 // //  MESA_pixmap_colormap
-// GLXPixmap goglCreateGLXPixmapMESA(Display* dpy, XVisualInfo* visual, Pixmap pixmap, Colormap cmap) {
-// 	return (*ptrglCreateGLXPixmapMESA)(dpy, visual, pixmap, cmap);
+// GLXPixmap goglxCreateGLXPixmapMESA(Display* dpy, XVisualInfo* visual, Pixmap pixmap, Colormap cmap) {
+// 	return (*ptrglxCreateGLXPixmapMESA)(dpy, visual, pixmap, cmap);
 // }
 // //  MESA_release_buffers
-// Bool goglReleaseBuffersMESA(Display* dpy, GLXDrawable drawable) {
-// 	return (*ptrglReleaseBuffersMESA)(dpy, drawable);
+// Bool goglxReleaseBuffersMESA(Display* dpy, GLXDrawable drawable) {
+// 	return (*ptrglxReleaseBuffersMESA)(dpy, drawable);
 // }
 // //  MESA_set_3dfx_mode
-// Bool goglSet3DfxModeMESA(int mode) {
-// 	return (*ptrglSet3DfxModeMESA)(mode);
+// Bool goglxSet3DfxModeMESA(int mode) {
+// 	return (*ptrglxSet3DfxModeMESA)(mode);
 // }
 // //  NV_copy_image
-// void goglCopyImageSubDataNV(Display* dpy, GLXContext srcCtx, GLuint srcName, GLenum srcTarget, GLint srcLevel, GLint srcX, GLint srcY, GLint srcZ, GLXContext dstCtx, GLuint dstName, GLenum dstTarget, GLint dstLevel, GLint dstX, GLint dstY, GLint dstZ, GLsizei width, GLsizei height, GLsizei depth) {
-// 	(*ptrglCopyImageSubDataNV)(dpy, srcCtx, srcName, srcTarget, srcLevel, srcX, srcY, srcZ, dstCtx, dstName, dstTarget, dstLevel, dstX, dstY, dstZ, width, height, depth);
+// void goglxCopyImageSubDataNV(Display* dpy, GLXContext srcCtx, GLuint srcName, GLenum srcTarget, GLint srcLevel, GLint srcX, GLint srcY, GLint srcZ, GLXContext dstCtx, GLuint dstName, GLenum dstTarget, GLint dstLevel, GLint dstX, GLint dstY, GLint dstZ, GLsizei width, GLsizei height, GLsizei depth) {
+// 	(*ptrglxCopyImageSubDataNV)(dpy, srcCtx, srcName, srcTarget, srcLevel, srcX, srcY, srcZ, dstCtx, dstName, dstTarget, dstLevel, dstX, dstY, dstZ, width, height, depth);
 // }
 // //  NV_float_buffer
 // //  NV_multisample_coverage
 // //  NV_present_video
-// unsigned int * goglEnumerateVideoDevicesNV(Display* dpy, int screen, int* nelements) {
-// 	return (*ptrglEnumerateVideoDevicesNV)(dpy, screen, nelements);
+// unsigned int * goglxEnumerateVideoDevicesNV(Display* dpy, int screen, int* nelements) {
+// 	return (*ptrglxEnumerateVideoDevicesNV)(dpy, screen, nelements);
 // }
-// int goglBindVideoDeviceNV(Display* dpy, unsigned int video_slot, unsigned int video_device, int* attrib_list) {
-// 	return (*ptrglBindVideoDeviceNV)(dpy, video_slot, video_device, attrib_list);
+// int goglxBindVideoDeviceNV(Display* dpy, unsigned int video_slot, unsigned int video_device, int* attrib_list) {
+// 	return (*ptrglxBindVideoDeviceNV)(dpy, video_slot, video_device, attrib_list);
 // }
 // //  NV_swap_group
-// Bool goglJoinSwapGroupNV(Display* dpy, GLXDrawable drawable, GLuint group) {
-// 	return (*ptrglJoinSwapGroupNV)(dpy, drawable, group);
+// Bool goglxJoinSwapGroupNV(Display* dpy, GLXDrawable drawable, GLuint group) {
+// 	return (*ptrglxJoinSwapGroupNV)(dpy, drawable, group);
 // }
-// Bool goglBindSwapBarrierNV(Display* dpy, GLuint group, GLuint barrier) {
-// 	return (*ptrglBindSwapBarrierNV)(dpy, group, barrier);
+// Bool goglxBindSwapBarrierNV(Display* dpy, GLuint group, GLuint barrier) {
+// 	return (*ptrglxBindSwapBarrierNV)(dpy, group, barrier);
 // }
-// Bool goglQuerySwapGroupNV(Display* dpy, GLXDrawable drawable, GLuint* group, GLuint* barrier) {
-// 	return (*ptrglQuerySwapGroupNV)(dpy, drawable, group, barrier);
+// Bool goglxQuerySwapGroupNV(Display* dpy, GLXDrawable drawable, GLuint* group, GLuint* barrier) {
+// 	return (*ptrglxQuerySwapGroupNV)(dpy, drawable, group, barrier);
 // }
-// Bool goglQueryMaxSwapGroupsNV(Display* dpy, int screen, GLuint* maxGroups, GLuint* maxBarriers) {
-// 	return (*ptrglQueryMaxSwapGroupsNV)(dpy, screen, maxGroups, maxBarriers);
+// Bool goglxQueryMaxSwapGroupsNV(Display* dpy, int screen, GLuint* maxGroups, GLuint* maxBarriers) {
+// 	return (*ptrglxQueryMaxSwapGroupsNV)(dpy, screen, maxGroups, maxBarriers);
 // }
-// Bool goglQueryFrameCountNV(Display* dpy, int screen, GLuint* count) {
-// 	return (*ptrglQueryFrameCountNV)(dpy, screen, count);
+// Bool goglxQueryFrameCountNV(Display* dpy, int screen, GLuint* count) {
+// 	return (*ptrglxQueryFrameCountNV)(dpy, screen, count);
 // }
-// Bool goglResetFrameCountNV(Display* dpy, int screen) {
-// 	return (*ptrglResetFrameCountNV)(dpy, screen);
+// Bool goglxResetFrameCountNV(Display* dpy, int screen) {
+// 	return (*ptrglxResetFrameCountNV)(dpy, screen);
 // }
 // //  NV_video_capture
-// int goglBindVideoCaptureDeviceNV(Display* dpy, unsigned int video_capture_slot, GLXVideoCaptureDeviceNV device) {
-// 	return (*ptrglBindVideoCaptureDeviceNV)(dpy, video_capture_slot, device);
+// int goglxBindVideoCaptureDeviceNV(Display* dpy, unsigned int video_capture_slot, GLXVideoCaptureDeviceNV device) {
+// 	return (*ptrglxBindVideoCaptureDeviceNV)(dpy, video_capture_slot, device);
 // }
-// GLXVideoCaptureDeviceNV * goglEnumerateVideoCaptureDevicesNV(Display* dpy, int screen, int* nelements) {
-// 	return (*ptrglEnumerateVideoCaptureDevicesNV)(dpy, screen, nelements);
+// GLXVideoCaptureDeviceNV * goglxEnumerateVideoCaptureDevicesNV(Display* dpy, int screen, int* nelements) {
+// 	return (*ptrglxEnumerateVideoCaptureDevicesNV)(dpy, screen, nelements);
 // }
-// void goglLockVideoCaptureDeviceNV(Display* dpy, GLXVideoCaptureDeviceNV device) {
-// 	(*ptrglLockVideoCaptureDeviceNV)(dpy, device);
+// void goglxLockVideoCaptureDeviceNV(Display* dpy, GLXVideoCaptureDeviceNV device) {
+// 	(*ptrglxLockVideoCaptureDeviceNV)(dpy, device);
 // }
-// int goglQueryVideoCaptureDeviceNV(Display* dpy, GLXVideoCaptureDeviceNV device, int attribute, int* value) {
-// 	return (*ptrglQueryVideoCaptureDeviceNV)(dpy, device, attribute, value);
+// int goglxQueryVideoCaptureDeviceNV(Display* dpy, GLXVideoCaptureDeviceNV device, int attribute, int* value) {
+// 	return (*ptrglxQueryVideoCaptureDeviceNV)(dpy, device, attribute, value);
 // }
-// void goglReleaseVideoCaptureDeviceNV(Display* dpy, GLXVideoCaptureDeviceNV device) {
-// 	(*ptrglReleaseVideoCaptureDeviceNV)(dpy, device);
+// void goglxReleaseVideoCaptureDeviceNV(Display* dpy, GLXVideoCaptureDeviceNV device) {
+// 	(*ptrglxReleaseVideoCaptureDeviceNV)(dpy, device);
 // }
 // //  NV_video_output
-// int goglGetVideoDeviceNV(Display* dpy, int screen, int numVideoDevices, GLXVideoDeviceNV* pVideoDevice) {
-// 	return (*ptrglGetVideoDeviceNV)(dpy, screen, numVideoDevices, pVideoDevice);
+// int goglxGetVideoDeviceNV(Display* dpy, int screen, int numVideoDevices, GLXVideoDeviceNV* pVideoDevice) {
+// 	return (*ptrglxGetVideoDeviceNV)(dpy, screen, numVideoDevices, pVideoDevice);
 // }
-// int goglReleaseVideoDeviceNV(Display* dpy, int screen, GLXVideoDeviceNV VideoDevice) {
-// 	return (*ptrglReleaseVideoDeviceNV)(dpy, screen, VideoDevice);
+// int goglxReleaseVideoDeviceNV(Display* dpy, int screen, GLXVideoDeviceNV VideoDevice) {
+// 	return (*ptrglxReleaseVideoDeviceNV)(dpy, screen, VideoDevice);
 // }
-// int goglBindVideoImageNV(Display* dpy, GLXVideoDeviceNV VideoDevice, GLXPbuffer pbuf, int iVideoBuffer) {
-// 	return (*ptrglBindVideoImageNV)(dpy, VideoDevice, pbuf, iVideoBuffer);
+// int goglxBindVideoImageNV(Display* dpy, GLXVideoDeviceNV VideoDevice, GLXPbuffer pbuf, int iVideoBuffer) {
+// 	return (*ptrglxBindVideoImageNV)(dpy, VideoDevice, pbuf, iVideoBuffer);
 // }
-// int goglReleaseVideoImageNV(Display* dpy, GLXPbuffer pbuf) {
-// 	return (*ptrglReleaseVideoImageNV)(dpy, pbuf);
+// int goglxReleaseVideoImageNV(Display* dpy, GLXPbuffer pbuf) {
+// 	return (*ptrglxReleaseVideoImageNV)(dpy, pbuf);
 // }
-// int goglSendPbufferToVideoNV(Display* dpy, GLXPbuffer pbuf, int iBufferType, unsigned long* pulCounterPbuffer, GLboolean bBlock) {
-// 	return (*ptrglSendPbufferToVideoNV)(dpy, pbuf, iBufferType, pulCounterPbuffer, bBlock);
+// int goglxSendPbufferToVideoNV(Display* dpy, GLXPbuffer pbuf, int iBufferType, unsigned long* pulCounterPbuffer, GLboolean bBlock) {
+// 	return (*ptrglxSendPbufferToVideoNV)(dpy, pbuf, iBufferType, pulCounterPbuffer, bBlock);
 // }
-// int goglGetVideoInfoNV(Display* dpy, int screen, GLXVideoDeviceNV VideoDevice, unsigned long* pulCounterOutputPbuffer, unsigned long* pulCounterOutputVideo) {
-// 	return (*ptrglGetVideoInfoNV)(dpy, screen, VideoDevice, pulCounterOutputPbuffer, pulCounterOutputVideo);
+// int goglxGetVideoInfoNV(Display* dpy, int screen, GLXVideoDeviceNV VideoDevice, unsigned long* pulCounterOutputPbuffer, unsigned long* pulCounterOutputVideo) {
+// 	return (*ptrglxGetVideoInfoNV)(dpy, screen, VideoDevice, pulCounterOutputPbuffer, pulCounterOutputVideo);
 // }
 // //  OML_swap_method
 // //  OML_sync_control
-// Bool goglGetSyncValuesOML(Display* dpy, GLXDrawable drawable, int64_t* ust, int64_t* msc, int64_t* sbc) {
-// 	return (*ptrglGetSyncValuesOML)(dpy, drawable, ust, msc, sbc);
+// Bool goglxGetSyncValuesOML(Display* dpy, GLXDrawable drawable, int64_t* ust, int64_t* msc, int64_t* sbc) {
+// 	return (*ptrglxGetSyncValuesOML)(dpy, drawable, ust, msc, sbc);
 // }
-// Bool goglGetMscRateOML(Display* dpy, GLXDrawable drawable, int32_t* numerator, int32_t* denominator) {
-// 	return (*ptrglGetMscRateOML)(dpy, drawable, numerator, denominator);
+// Bool goglxGetMscRateOML(Display* dpy, GLXDrawable drawable, int32_t* numerator, int32_t* denominator) {
+// 	return (*ptrglxGetMscRateOML)(dpy, drawable, numerator, denominator);
 // }
-// int64_t goglSwapBuffersMscOML(Display* dpy, GLXDrawable drawable, int64_t target_msc, int64_t divisor, int64_t remainder) {
-// 	return (*ptrglSwapBuffersMscOML)(dpy, drawable, target_msc, divisor, remainder);
+// int64_t goglxSwapBuffersMscOML(Display* dpy, GLXDrawable drawable, int64_t target_msc, int64_t divisor, int64_t remainder) {
+// 	return (*ptrglxSwapBuffersMscOML)(dpy, drawable, target_msc, divisor, remainder);
 // }
-// Bool goglWaitForMscOML(Display* dpy, GLXDrawable drawable, int64_t target_msc, int64_t divisor, int64_t remainder, int64_t* ust, int64_t* msc, int64_t* sbc) {
-// 	return (*ptrglWaitForMscOML)(dpy, drawable, target_msc, divisor, remainder, ust, msc, sbc);
+// Bool goglxWaitForMscOML(Display* dpy, GLXDrawable drawable, int64_t target_msc, int64_t divisor, int64_t remainder, int64_t* ust, int64_t* msc, int64_t* sbc) {
+// 	return (*ptrglxWaitForMscOML)(dpy, drawable, target_msc, divisor, remainder, ust, msc, sbc);
 // }
-// Bool goglWaitForSbcOML(Display* dpy, GLXDrawable drawable, int64_t target_sbc, int64_t* ust, int64_t* msc, int64_t* sbc) {
-// 	return (*ptrglWaitForSbcOML)(dpy, drawable, target_sbc, ust, msc, sbc);
+// Bool goglxWaitForSbcOML(Display* dpy, GLXDrawable drawable, int64_t target_sbc, int64_t* ust, int64_t* msc, int64_t* sbc) {
+// 	return (*ptrglxWaitForSbcOML)(dpy, drawable, target_sbc, ust, msc, sbc);
 // }
 // //  SGIS_multisample
 // //  SGIX_dmbuffer
-// Bool goglAssociateDMPbufferSGIX(Display* dpy, GLXPbufferSGIX pbuffer, DMparams* params, DMbuffer dmbuffer) {
-// 	return (*ptrglAssociateDMPbufferSGIX)(dpy, pbuffer, params, dmbuffer);
+// Bool goglxAssociateDMPbufferSGIX(Display* dpy, GLXPbufferSGIX pbuffer, DMparams* params, DMbuffer dmbuffer) {
+// 	return (*ptrglxAssociateDMPbufferSGIX)(dpy, pbuffer, params, dmbuffer);
 // }
 // //  SGIX_fbconfig
-// int goglGetFBConfigAttribSGIX(Display* dpy, GLXFBConfigSGIX config, int attribute, int* value) {
-// 	return (*ptrglGetFBConfigAttribSGIX)(dpy, config, attribute, value);
+// int goglxGetFBConfigAttribSGIX(Display* dpy, GLXFBConfigSGIX config, int attribute, int* value) {
+// 	return (*ptrglxGetFBConfigAttribSGIX)(dpy, config, attribute, value);
 // }
-// GLXFBConfigSGIX * goglChooseFBConfigSGIX(Display* dpy, int screen, int* attrib_list, int* nelements) {
-// 	return (*ptrglChooseFBConfigSGIX)(dpy, screen, attrib_list, nelements);
+// GLXFBConfigSGIX * goglxChooseFBConfigSGIX(Display* dpy, int screen, int* attrib_list, int* nelements) {
+// 	return (*ptrglxChooseFBConfigSGIX)(dpy, screen, attrib_list, nelements);
 // }
-// GLXPixmap goglCreateGLXPixmapWithConfigSGIX(Display* dpy, GLXFBConfigSGIX config, Pixmap pixmap) {
-// 	return (*ptrglCreateGLXPixmapWithConfigSGIX)(dpy, config, pixmap);
+// GLXPixmap goglxCreateGLXPixmapWithConfigSGIX(Display* dpy, GLXFBConfigSGIX config, Pixmap pixmap) {
+// 	return (*ptrglxCreateGLXPixmapWithConfigSGIX)(dpy, config, pixmap);
 // }
-// GLXContext goglCreateContextWithConfigSGIX(Display* dpy, GLXFBConfigSGIX config, int render_type, GLXContext share_list, Bool direct) {
-// 	return (*ptrglCreateContextWithConfigSGIX)(dpy, config, render_type, share_list, direct);
+// GLXContext goglxCreateContextWithConfigSGIX(Display* dpy, GLXFBConfigSGIX config, int render_type, GLXContext share_list, Bool direct) {
+// 	return (*ptrglxCreateContextWithConfigSGIX)(dpy, config, render_type, share_list, direct);
 // }
-// XVisualInfo * goglGetVisualFromFBConfigSGIX(Display* dpy, GLXFBConfigSGIX config) {
-// 	return (*ptrglGetVisualFromFBConfigSGIX)(dpy, config);
+// XVisualInfo * goglxGetVisualFromFBConfigSGIX(Display* dpy, GLXFBConfigSGIX config) {
+// 	return (*ptrglxGetVisualFromFBConfigSGIX)(dpy, config);
 // }
-// GLXFBConfigSGIX goglGetFBConfigFromVisualSGIX(Display* dpy, XVisualInfo* vis) {
-// 	return (*ptrglGetFBConfigFromVisualSGIX)(dpy, vis);
+// GLXFBConfigSGIX goglxGetFBConfigFromVisualSGIX(Display* dpy, XVisualInfo* vis) {
+// 	return (*ptrglxGetFBConfigFromVisualSGIX)(dpy, vis);
 // }
 // //  SGIX_hyperpipe
-// GLXHyperpipeNetworkSGIX * goglQueryHyperpipeNetworkSGIX(Display* dpy, int* npipes) {
-// 	return (*ptrglQueryHyperpipeNetworkSGIX)(dpy, npipes);
+// GLXHyperpipeNetworkSGIX * goglxQueryHyperpipeNetworkSGIX(Display* dpy, int* npipes) {
+// 	return (*ptrglxQueryHyperpipeNetworkSGIX)(dpy, npipes);
 // }
-// int goglHyperpipeConfigSGIX(Display* dpy, int networkId, int npipes, GLXHyperpipeConfigSGIX* cfg, int* hpId) {
-// 	return (*ptrglHyperpipeConfigSGIX)(dpy, networkId, npipes, cfg, hpId);
+// int goglxHyperpipeConfigSGIX(Display* dpy, int networkId, int npipes, GLXHyperpipeConfigSGIX* cfg, int* hpId) {
+// 	return (*ptrglxHyperpipeConfigSGIX)(dpy, networkId, npipes, cfg, hpId);
 // }
-// GLXHyperpipeConfigSGIX * goglQueryHyperpipeConfigSGIX(Display* dpy, int hpId, int* npipes) {
-// 	return (*ptrglQueryHyperpipeConfigSGIX)(dpy, hpId, npipes);
+// GLXHyperpipeConfigSGIX * goglxQueryHyperpipeConfigSGIX(Display* dpy, int hpId, int* npipes) {
+// 	return (*ptrglxQueryHyperpipeConfigSGIX)(dpy, hpId, npipes);
 // }
-// int goglDestroyHyperpipeConfigSGIX(Display* dpy, int hpId) {
-// 	return (*ptrglDestroyHyperpipeConfigSGIX)(dpy, hpId);
+// int goglxDestroyHyperpipeConfigSGIX(Display* dpy, int hpId) {
+// 	return (*ptrglxDestroyHyperpipeConfigSGIX)(dpy, hpId);
 // }
-// int goglBindHyperpipeSGIX(Display* dpy, int hpId) {
-// 	return (*ptrglBindHyperpipeSGIX)(dpy, hpId);
+// int goglxBindHyperpipeSGIX(Display* dpy, int hpId) {
+// 	return (*ptrglxBindHyperpipeSGIX)(dpy, hpId);
 // }
-// int goglQueryHyperpipeBestAttribSGIX(Display* dpy, int timeSlice, int attrib, int size, void* attribList, void* returnAttribList) {
-// 	return (*ptrglQueryHyperpipeBestAttribSGIX)(dpy, timeSlice, attrib, size, attribList, returnAttribList);
+// int goglxQueryHyperpipeBestAttribSGIX(Display* dpy, int timeSlice, int attrib, int size, void* attribList, void* returnAttribList) {
+// 	return (*ptrglxQueryHyperpipeBestAttribSGIX)(dpy, timeSlice, attrib, size, attribList, returnAttribList);
 // }
-// int goglHyperpipeAttribSGIX(Display* dpy, int timeSlice, int attrib, int size, void* attribList) {
-// 	return (*ptrglHyperpipeAttribSGIX)(dpy, timeSlice, attrib, size, attribList);
+// int goglxHyperpipeAttribSGIX(Display* dpy, int timeSlice, int attrib, int size, void* attribList) {
+// 	return (*ptrglxHyperpipeAttribSGIX)(dpy, timeSlice, attrib, size, attribList);
 // }
-// int goglQueryHyperpipeAttribSGIX(Display* dpy, int timeSlice, int attrib, int size, void* returnAttribList) {
-// 	return (*ptrglQueryHyperpipeAttribSGIX)(dpy, timeSlice, attrib, size, returnAttribList);
+// int goglxQueryHyperpipeAttribSGIX(Display* dpy, int timeSlice, int attrib, int size, void* returnAttribList) {
+// 	return (*ptrglxQueryHyperpipeAttribSGIX)(dpy, timeSlice, attrib, size, returnAttribList);
 // }
 // //  SGIX_pbuffer
-// GLXPbufferSGIX goglCreateGLXPbufferSGIX(Display* dpy, GLXFBConfigSGIX config, unsigned int width, unsigned int height, int* attrib_list) {
-// 	return (*ptrglCreateGLXPbufferSGIX)(dpy, config, width, height, attrib_list);
+// GLXPbufferSGIX goglxCreateGLXPbufferSGIX(Display* dpy, GLXFBConfigSGIX config, unsigned int width, unsigned int height, int* attrib_list) {
+// 	return (*ptrglxCreateGLXPbufferSGIX)(dpy, config, width, height, attrib_list);
 // }
-// void goglDestroyGLXPbufferSGIX(Display* dpy, GLXPbufferSGIX pbuf) {
-// 	(*ptrglDestroyGLXPbufferSGIX)(dpy, pbuf);
+// void goglxDestroyGLXPbufferSGIX(Display* dpy, GLXPbufferSGIX pbuf) {
+// 	(*ptrglxDestroyGLXPbufferSGIX)(dpy, pbuf);
 // }
-// int goglQueryGLXPbufferSGIX(Display* dpy, GLXPbufferSGIX pbuf, int attribute, unsigned int* value) {
-// 	return (*ptrglQueryGLXPbufferSGIX)(dpy, pbuf, attribute, value);
+// int goglxQueryGLXPbufferSGIX(Display* dpy, GLXPbufferSGIX pbuf, int attribute, unsigned int* value) {
+// 	return (*ptrglxQueryGLXPbufferSGIX)(dpy, pbuf, attribute, value);
 // }
-// void goglSelectEventSGIX(Display* dpy, GLXDrawable drawable, unsigned long mask) {
-// 	(*ptrglSelectEventSGIX)(dpy, drawable, mask);
+// void goglxSelectEventSGIX(Display* dpy, GLXDrawable drawable, unsigned long mask) {
+// 	(*ptrglxSelectEventSGIX)(dpy, drawable, mask);
 // }
-// void goglGetSelectedEventSGIX(Display* dpy, GLXDrawable drawable, unsigned long* mask) {
-// 	(*ptrglGetSelectedEventSGIX)(dpy, drawable, mask);
+// void goglxGetSelectedEventSGIX(Display* dpy, GLXDrawable drawable, unsigned long* mask) {
+// 	(*ptrglxGetSelectedEventSGIX)(dpy, drawable, mask);
 // }
 // //  SGIX_swap_barrier
-// void goglBindSwapBarrierSGIX(Display* dpy, GLXDrawable drawable, int barrier) {
-// 	(*ptrglBindSwapBarrierSGIX)(dpy, drawable, barrier);
+// void goglxBindSwapBarrierSGIX(Display* dpy, GLXDrawable drawable, int barrier) {
+// 	(*ptrglxBindSwapBarrierSGIX)(dpy, drawable, barrier);
 // }
-// Bool goglQueryMaxSwapBarriersSGIX(Display* dpy, int screen, int* max) {
-// 	return (*ptrglQueryMaxSwapBarriersSGIX)(dpy, screen, max);
+// Bool goglxQueryMaxSwapBarriersSGIX(Display* dpy, int screen, int* max) {
+// 	return (*ptrglxQueryMaxSwapBarriersSGIX)(dpy, screen, max);
 // }
 // //  SGIX_swap_group
-// void goglJoinSwapGroupSGIX(Display* dpy, GLXDrawable drawable, GLXDrawable member) {
-// 	(*ptrglJoinSwapGroupSGIX)(dpy, drawable, member);
+// void goglxJoinSwapGroupSGIX(Display* dpy, GLXDrawable drawable, GLXDrawable member) {
+// 	(*ptrglxJoinSwapGroupSGIX)(dpy, drawable, member);
 // }
 // //  SGIX_video_resize
-// int goglBindChannelToWindowSGIX(Display* display, int screen, int channel, Window window) {
-// 	return (*ptrglBindChannelToWindowSGIX)(display, screen, channel, window);
+// int goglxBindChannelToWindowSGIX(Display* display, int screen, int channel, Window window) {
+// 	return (*ptrglxBindChannelToWindowSGIX)(display, screen, channel, window);
 // }
-// int goglChannelRectSGIX(Display* display, int screen, int channel, int x, int y, int w, int h) {
-// 	return (*ptrglChannelRectSGIX)(display, screen, channel, x, y, w, h);
+// int goglxChannelRectSGIX(Display* display, int screen, int channel, int x, int y, int w, int h) {
+// 	return (*ptrglxChannelRectSGIX)(display, screen, channel, x, y, w, h);
 // }
-// int goglQueryChannelRectSGIX(Display* display, int screen, int channel, int* dx, int* dy, int* dw, int* dh) {
-// 	return (*ptrglQueryChannelRectSGIX)(display, screen, channel, dx, dy, dw, dh);
+// int goglxQueryChannelRectSGIX(Display* display, int screen, int channel, int* dx, int* dy, int* dw, int* dh) {
+// 	return (*ptrglxQueryChannelRectSGIX)(display, screen, channel, dx, dy, dw, dh);
 // }
-// int goglQueryChannelDeltasSGIX(Display* display, int screen, int channel, int* x, int* y, int* w, int* h) {
-// 	return (*ptrglQueryChannelDeltasSGIX)(display, screen, channel, x, y, w, h);
+// int goglxQueryChannelDeltasSGIX(Display* display, int screen, int channel, int* x, int* y, int* w, int* h) {
+// 	return (*ptrglxQueryChannelDeltasSGIX)(display, screen, channel, x, y, w, h);
 // }
-// int goglChannelRectSyncSGIX(Display* display, int screen, int channel, GLenum synctype) {
-// 	return (*ptrglChannelRectSyncSGIX)(display, screen, channel, synctype);
+// int goglxChannelRectSyncSGIX(Display* display, int screen, int channel, GLenum synctype) {
+// 	return (*ptrglxChannelRectSyncSGIX)(display, screen, channel, synctype);
 // }
 // //  SGIX_video_source
-// GLXVideoSourceSGIX goglCreateGLXVideoSourceSGIX(Display* display, int screen, VLServer server, VLPath path, int nodeClass, VLNode drainNode) {
-// 	return (*ptrglCreateGLXVideoSourceSGIX)(display, screen, server, path, nodeClass, drainNode);
+// GLXVideoSourceSGIX goglxCreateGLXVideoSourceSGIX(Display* display, int screen, VLServer server, VLPath path, int nodeClass, VLNode drainNode) {
+// 	return (*ptrglxCreateGLXVideoSourceSGIX)(display, screen, server, path, nodeClass, drainNode);
 // }
-// void goglDestroyGLXVideoSourceSGIX(Display* dpy, GLXVideoSourceSGIX glxvideosource) {
-// 	(*ptrglDestroyGLXVideoSourceSGIX)(dpy, glxvideosource);
+// void goglxDestroyGLXVideoSourceSGIX(Display* dpy, GLXVideoSourceSGIX glxvideosource) {
+// 	(*ptrglxDestroyGLXVideoSourceSGIX)(dpy, glxvideosource);
 // }
 // //  SGIX_visual_select_group
 // //  SGI_cushion
-// void goglCushionSGI(Display* dpy, Window window, float cushion) {
-// 	(*ptrglCushionSGI)(dpy, window, cushion);
+// void goglxCushionSGI(Display* dpy, Window window, float cushion) {
+// 	(*ptrglxCushionSGI)(dpy, window, cushion);
 // }
 // //  SGI_make_current_read
-// Bool goglMakeCurrentReadSGI(Display* dpy, GLXDrawable draw, GLXDrawable read, GLXContext ctx) {
-// 	return (*ptrglMakeCurrentReadSGI)(dpy, draw, read, ctx);
+// Bool goglxMakeCurrentReadSGI(Display* dpy, GLXDrawable draw, GLXDrawable read, GLXContext ctx) {
+// 	return (*ptrglxMakeCurrentReadSGI)(dpy, draw, read, ctx);
 // }
-// GLXDrawable goglGetCurrentReadDrawableSGI() {
-// 	return (*ptrglGetCurrentReadDrawableSGI)();
+// GLXDrawable goglxGetCurrentReadDrawableSGI() {
+// 	return (*ptrglxGetCurrentReadDrawableSGI)();
 // }
 // //  SGI_swap_control
-// int goglSwapIntervalSGI(int interval) {
-// 	return (*ptrglSwapIntervalSGI)(interval);
+// int goglxSwapIntervalSGI(int interval) {
+// 	return (*ptrglxSwapIntervalSGI)(interval);
 // }
 // //  SGI_video_sync
-// int goglGetVideoSyncSGI(unsigned int* count) {
-// 	return (*ptrglGetVideoSyncSGI)(count);
+// int goglxGetVideoSyncSGI(unsigned int* count) {
+// 	return (*ptrglxGetVideoSyncSGI)(count);
 // }
-// int goglWaitVideoSyncSGI(int divisor, int remainder, unsigned int* count) {
-// 	return (*ptrglWaitVideoSyncSGI)(divisor, remainder, count);
+// int goglxWaitVideoSyncSGI(int divisor, int remainder, unsigned int* count) {
+// 	return (*ptrglxWaitVideoSyncSGI)(divisor, remainder, count);
 // }
 // //  SUN_get_transparent_index
-// Status goglGetTransparentIndexSUN(Display* dpy, Window overlay, Window underlay, long* pTransparentIndex) {
-// 	return (*ptrglGetTransparentIndexSUN)(dpy, overlay, underlay, pTransparentIndex);
+// Status goglxGetTransparentIndexSUN(Display* dpy, Window overlay, Window underlay, long* pTransparentIndex) {
+// 	return (*ptrglxGetTransparentIndexSUN)(dpy, overlay, underlay, pTransparentIndex);
 // }
 // //  VERSION_1_3
-// GLXFBConfig * goglGetFBConfigs(Display* dpy, int screen, int* nelements) {
-// 	return (*ptrglGetFBConfigs)(dpy, screen, nelements);
+// GLXFBConfig * goglxGetFBConfigs(Display* dpy, int screen, int* nelements) {
+// 	return (*ptrglxGetFBConfigs)(dpy, screen, nelements);
 // }
-// GLXFBConfig * goglChooseFBConfig(Display* dpy, int screen, int* attrib_list, int* nelements) {
-// 	return (*ptrglChooseFBConfig)(dpy, screen, attrib_list, nelements);
+// GLXFBConfig * goglxChooseFBConfig(Display* dpy, int screen, int* attrib_list, int* nelements) {
+// 	return (*ptrglxChooseFBConfig)(dpy, screen, attrib_list, nelements);
 // }
-// int goglGetFBConfigAttrib(Display* dpy, GLXFBConfig config, int attribute, int* value) {
-// 	return (*ptrglGetFBConfigAttrib)(dpy, config, attribute, value);
+// int goglxGetFBConfigAttrib(Display* dpy, GLXFBConfig config, int attribute, int* value) {
+// 	return (*ptrglxGetFBConfigAttrib)(dpy, config, attribute, value);
 // }
-// XVisualInfo * goglGetVisualFromFBConfig(Display* dpy, GLXFBConfig config) {
-// 	return (*ptrglGetVisualFromFBConfig)(dpy, config);
+// XVisualInfo * goglxGetVisualFromFBConfig(Display* dpy, GLXFBConfig config) {
+// 	return (*ptrglxGetVisualFromFBConfig)(dpy, config);
 // }
-// GLXWindow goglCreateWindow(Display* dpy, GLXFBConfig config, Window win, int* attrib_list) {
-// 	return (*ptrglCreateWindow)(dpy, config, win, attrib_list);
+// GLXWindow goglxCreateWindow(Display* dpy, GLXFBConfig config, Window win, int* attrib_list) {
+// 	return (*ptrglxCreateWindow)(dpy, config, win, attrib_list);
 // }
-// void goglDestroyWindow(Display* dpy, GLXWindow win) {
-// 	(*ptrglDestroyWindow)(dpy, win);
+// void goglxDestroyWindow(Display* dpy, GLXWindow win) {
+// 	(*ptrglxDestroyWindow)(dpy, win);
 // }
-// GLXPixmap goglCreatePixmap(Display* dpy, GLXFBConfig config, Pixmap pixmap, int* attrib_list) {
-// 	return (*ptrglCreatePixmap)(dpy, config, pixmap, attrib_list);
+// GLXPixmap goglxCreatePixmap(Display* dpy, GLXFBConfig config, Pixmap pixmap, int* attrib_list) {
+// 	return (*ptrglxCreatePixmap)(dpy, config, pixmap, attrib_list);
 // }
-// void goglDestroyPixmap(Display* dpy, GLXPixmap pixmap) {
-// 	(*ptrglDestroyPixmap)(dpy, pixmap);
+// void goglxDestroyPixmap(Display* dpy, GLXPixmap pixmap) {
+// 	(*ptrglxDestroyPixmap)(dpy, pixmap);
 // }
-// GLXPbuffer goglCreatePbuffer(Display* dpy, GLXFBConfig config, int* attrib_list) {
-// 	return (*ptrglCreatePbuffer)(dpy, config, attrib_list);
+// GLXPbuffer goglxCreatePbuffer(Display* dpy, GLXFBConfig config, int* attrib_list) {
+// 	return (*ptrglxCreatePbuffer)(dpy, config, attrib_list);
 // }
-// void goglDestroyPbuffer(Display* dpy, GLXPbuffer pbuf) {
-// 	(*ptrglDestroyPbuffer)(dpy, pbuf);
+// void goglxDestroyPbuffer(Display* dpy, GLXPbuffer pbuf) {
+// 	(*ptrglxDestroyPbuffer)(dpy, pbuf);
 // }
-// void goglQueryDrawable(Display* dpy, GLXDrawable draw, int attribute, unsigned int* value) {
-// 	(*ptrglQueryDrawable)(dpy, draw, attribute, value);
+// void goglxQueryDrawable(Display* dpy, GLXDrawable draw, int attribute, unsigned int* value) {
+// 	(*ptrglxQueryDrawable)(dpy, draw, attribute, value);
 // }
-// GLXContext goglCreateNewContext(Display* dpy, GLXFBConfig config, int render_type, GLXContext share_list, Bool direct) {
-// 	return (*ptrglCreateNewContext)(dpy, config, render_type, share_list, direct);
+// GLXContext goglxCreateNewContext(Display* dpy, GLXFBConfig config, int render_type, GLXContext share_list, Bool direct) {
+// 	return (*ptrglxCreateNewContext)(dpy, config, render_type, share_list, direct);
 // }
-// Bool goglMakeContextCurrent(Display* dpy, GLXDrawable draw, GLXDrawable read, GLXContext ctx) {
-// 	return (*ptrglMakeContextCurrent)(dpy, draw, read, ctx);
+// Bool goglxMakeContextCurrent(Display* dpy, GLXDrawable draw, GLXDrawable read, GLXContext ctx) {
+// 	return (*ptrglxMakeContextCurrent)(dpy, draw, read, ctx);
 // }
-// GLXDrawable goglGetCurrentReadDrawable() {
-// 	return (*ptrglGetCurrentReadDrawable)();
+// GLXDrawable goglxGetCurrentReadDrawable() {
+// 	return (*ptrglxGetCurrentReadDrawable)();
 // }
-// Display * goglGetCurrentDisplay() {
-// 	return (*ptrglGetCurrentDisplay)();
+// Display * goglxGetCurrentDisplay() {
+// 	return (*ptrglxGetCurrentDisplay)();
 // }
-// int goglQueryContext(Display* dpy, GLXContext ctx, int attribute, int* value) {
-// 	return (*ptrglQueryContext)(dpy, ctx, attribute, value);
+// int goglxQueryContext(Display* dpy, GLXContext ctx, int attribute, int* value) {
+// 	return (*ptrglxQueryContext)(dpy, ctx, attribute, value);
 // }
-// void goglSelectEvent(Display* dpy, GLXDrawable draw, unsigned long event_mask) {
-// 	(*ptrglSelectEvent)(dpy, draw, event_mask);
+// void goglxSelectEvent(Display* dpy, GLXDrawable draw, unsigned long event_mask) {
+// 	(*ptrglxSelectEvent)(dpy, draw, event_mask);
 // }
-// void goglGetSelectedEvent(Display* dpy, GLXDrawable draw, unsigned long* event_mask) {
-// 	(*ptrglGetSelectedEvent)(dpy, draw, event_mask);
+// void goglxGetSelectedEvent(Display* dpy, GLXDrawable draw, unsigned long* event_mask) {
+// 	(*ptrglxGetSelectedEvent)(dpy, draw, event_mask);
 // }
 // //  VERSION_1_4
-// __GLXextFuncPtr goglGetProcAddress(GLubyte* procName) {
-// 	return (*ptrglGetProcAddress)(procName);
+// __GLXextFuncPtr goglxGetProcAddress(GLubyte* procName) {
+// 	return (*ptrglxGetProcAddress)(procName);
 // }
 // //  glx
-// void goglRender() {
-// 	(*ptrglRender)();
+// void goglxRender() {
+// 	(*ptrglxRender)();
 // }
-// void goglRenderLarge() {
-// 	(*ptrglRenderLarge)();
+// void goglxRenderLarge() {
+// 	(*ptrglxRenderLarge)();
 // }
-// void goglCreateContext(GLint gc_id, GLint screen, GLint visual, GLint share_list) {
-// 	(*ptrglCreateContext)(gc_id, screen, visual, share_list);
+// void goglxCreateContext(GLint gc_id, GLint screen, GLint visual, GLint share_list) {
+// 	(*ptrglxCreateContext)(gc_id, screen, visual, share_list);
 // }
-// void goglDestroyContext(GLint context) {
-// 	(*ptrglDestroyContext)(context);
+// void goglxDestroyContext(GLint context) {
+// 	(*ptrglxDestroyContext)(context);
 // }
-// void goglMakeCurrent(GLint drawable, GLint context) {
-// 	(*ptrglMakeCurrent)(drawable, context);
+// void goglxMakeCurrent(GLint drawable, GLint context) {
+// 	(*ptrglxMakeCurrent)(drawable, context);
 // }
-// void goglIsDirect(GLint dpy, GLint context) {
-// 	(*ptrglIsDirect)(dpy, context);
+// void goglxIsDirect(GLint dpy, GLint context) {
+// 	(*ptrglxIsDirect)(dpy, context);
 // }
-// void goglQueryVersion(GLint* major, GLint* minor) {
-// 	(*ptrglQueryVersion)(major, minor);
+// void goglxQueryVersion(GLint* major, GLint* minor) {
+// 	(*ptrglxQueryVersion)(major, minor);
 // }
-// void goglWaitGL(GLint context) {
-// 	(*ptrglWaitGL)(context);
+// void goglxWaitGL(GLint context) {
+// 	(*ptrglxWaitGL)(context);
 // }
-// void goglWaitX() {
-// 	(*ptrglWaitX)();
+// void goglxWaitX() {
+// 	(*ptrglxWaitX)();
 // }
-// void goglCopyContext(GLint source, GLint dest, GLint mask) {
-// 	(*ptrglCopyContext)(source, dest, mask);
+// void goglxCopyContext(GLint source, GLint dest, GLint mask) {
+// 	(*ptrglxCopyContext)(source, dest, mask);
 // }
-// void goglSwapBuffers(GLint drawable) {
-// 	(*ptrglSwapBuffers)(drawable);
+// void goglxSwapBuffers(GLint drawable) {
+// 	(*ptrglxSwapBuffers)(drawable);
 // }
-// void goglUseXFont(GLint font, GLint first, GLint count, GLint list_base) {
-// 	(*ptrglUseXFont)(font, first, count, list_base);
+// void goglxUseXFont(GLint font, GLint first, GLint count, GLint list_base) {
+// 	(*ptrglxUseXFont)(font, first, count, list_base);
 // }
-// void goglCreateGLXPixmap(GLint visual, GLint pixmap, GLint glxpixmap) {
-// 	(*ptrglCreateGLXPixmap)(visual, pixmap, glxpixmap);
+// void goglxCreateGLXPixmap(GLint visual, GLint pixmap, GLint glxpixmap) {
+// 	(*ptrglxCreateGLXPixmap)(visual, pixmap, glxpixmap);
 // }
-// void goglGetVisualConfigs() {
-// 	(*ptrglGetVisualConfigs)();
+// void goglxGetVisualConfigs() {
+// 	(*ptrglxGetVisualConfigs)();
 // }
-// void goglDestroyGLXPixmap(GLint pixmap) {
-// 	(*ptrglDestroyGLXPixmap)(pixmap);
+// void goglxDestroyGLXPixmap(GLint pixmap) {
+// 	(*ptrglxDestroyGLXPixmap)(pixmap);
 // }
-// void goglVendorPrivate() {
-// 	(*ptrglVendorPrivate)();
+// void goglxVendorPrivate() {
+// 	(*ptrglxVendorPrivate)();
 // }
-// void goglVendorPrivateWithReply() {
-// 	(*ptrglVendorPrivateWithReply)();
+// void goglxVendorPrivateWithReply() {
+// 	(*ptrglxVendorPrivateWithReply)();
 // }
-// void goglQueryExtensionsString(GLint screen) {
-// 	(*ptrglQueryExtensionsString)(screen);
+// void goglxQueryExtensionsString(GLint screen) {
+// 	(*ptrglxQueryExtensionsString)(screen);
 // }
-// void goglQueryServerString(GLint screen, GLint name) {
-// 	(*ptrglQueryServerString)(screen, name);
+// void goglxQueryServerString(GLint screen, GLint name) {
+// 	(*ptrglxQueryServerString)(screen, name);
 // }
-// void goglClientInfo() {
-// 	(*ptrglClientInfo)();
+// void goglxClientInfo() {
+// 	(*ptrglxClientInfo)();
 // }
-// void goglGetFBConfigs() {
-// 	(*ptrglGetFBConfigs)();
+// void goglxGetFBConfigs() {
+// 	(*ptrglxGetFBConfigs)();
 // }
-// void goglCreatePixmap(GLint config, GLint pixmap, GLint glxpixmap) {
-// 	(*ptrglCreatePixmap)(config, pixmap, glxpixmap);
+// void goglxCreatePixmap(GLint config, GLint pixmap, GLint glxpixmap) {
+// 	(*ptrglxCreatePixmap)(config, pixmap, glxpixmap);
 // }
-// void goglDestroyPixmap(GLint glxpixmap) {
-// 	(*ptrglDestroyPixmap)(glxpixmap);
+// void goglxDestroyPixmap(GLint glxpixmap) {
+// 	(*ptrglxDestroyPixmap)(glxpixmap);
 // }
-// void goglCreateNewContext(GLint config, GLint render_type, GLint share_list, GLint direct) {
-// 	(*ptrglCreateNewContext)(config, render_type, share_list, direct);
+// void goglxCreateNewContext(GLint config, GLint render_type, GLint share_list, GLint direct) {
+// 	(*ptrglxCreateNewContext)(config, render_type, share_list, direct);
 // }
-// void goglQueryContext() {
-// 	(*ptrglQueryContext)();
+// void goglxQueryContext() {
+// 	(*ptrglxQueryContext)();
 // }
-// void goglMakeContextCurrent(GLint drawable, GLint readdrawable, GLint context) {
-// 	(*ptrglMakeContextCurrent)(drawable, readdrawable, context);
+// void goglxMakeContextCurrent(GLint drawable, GLint readdrawable, GLint context) {
+// 	(*ptrglxMakeContextCurrent)(drawable, readdrawable, context);
 // }
-// void goglCreatePbuffer(GLint config, GLint pbuffer) {
-// 	(*ptrglCreatePbuffer)(config, pbuffer);
+// void goglxCreatePbuffer(GLint config, GLint pbuffer) {
+// 	(*ptrglxCreatePbuffer)(config, pbuffer);
 // }
-// void goglDestroyPbuffer(GLint pbuffer) {
-// 	(*ptrglDestroyPbuffer)(pbuffer);
+// void goglxDestroyPbuffer(GLint pbuffer) {
+// 	(*ptrglxDestroyPbuffer)(pbuffer);
 // }
-// void goglGetDrawableAttributes(GLint drawable) {
-// 	(*ptrglGetDrawableAttributes)(drawable);
+// void goglxGetDrawableAttributes(GLint drawable) {
+// 	(*ptrglxGetDrawableAttributes)(drawable);
 // }
-// void goglChangeDrawableAttributes(GLint drawable) {
-// 	(*ptrglChangeDrawableAttributes)(drawable);
+// void goglxChangeDrawableAttributes(GLint drawable) {
+// 	(*ptrglxChangeDrawableAttributes)(drawable);
 // }
-// void goglCreateWindow(GLint config, GLint window, GLint glxwindow) {
-// 	(*ptrglCreateWindow)(config, window, glxwindow);
+// void goglxCreateWindow(GLint config, GLint window, GLint glxwindow) {
+// 	(*ptrglxCreateWindow)(config, window, glxwindow);
 // }
-// void goglDestroyWindow(GLint glxwindow) {
-// 	(*ptrglDestroyWindow)(glxwindow);
+// void goglxDestroyWindow(GLint glxwindow) {
+// 	(*ptrglxDestroyWindow)(glxwindow);
 // }
-// void goglSwapIntervalSGI() {
-// 	(*ptrglSwapIntervalSGI)();
+// void goglxSwapIntervalSGI() {
+// 	(*ptrglxSwapIntervalSGI)();
 // }
-// void goglMakeCurrentReadSGI(GLint drawable, GLint readdrawable, GLint context) {
-// 	(*ptrglMakeCurrentReadSGI)(drawable, readdrawable, context);
+// void goglxMakeCurrentReadSGI(GLint drawable, GLint readdrawable, GLint context) {
+// 	(*ptrglxMakeCurrentReadSGI)(drawable, readdrawable, context);
 // }
-// void goglCreateGLXVideoSourceSGIX(GLint dpy, GLint screen, GLint server, GLint path, GLint class, GLint node) {
-// 	(*ptrglCreateGLXVideoSourceSGIX)(dpy, screen, server, path, class, node);
+// void goglxCreateGLXVideoSourceSGIX(GLint dpy, GLint screen, GLint server, GLint path, GLint class, GLint node) {
+// 	(*ptrglxCreateGLXVideoSourceSGIX)(dpy, screen, server, path, class, node);
 // }
-// void goglDestroyGLXVideoSourceSGIX(GLint dpy, GLint glxvideosource) {
-// 	(*ptrglDestroyGLXVideoSourceSGIX)(dpy, glxvideosource);
+// void goglxDestroyGLXVideoSourceSGIX(GLint dpy, GLint glxvideosource) {
+// 	(*ptrglxDestroyGLXVideoSourceSGIX)(dpy, glxvideosource);
 // }
-// void goglQueryContextInfoEXT() {
-// 	(*ptrglQueryContextInfoEXT)();
+// void goglxQueryContextInfoEXT() {
+// 	(*ptrglxQueryContextInfoEXT)();
 // }
-// void goglGetFBConfigsSGIX() {
-// 	(*ptrglGetFBConfigsSGIX)();
+// void goglxGetFBConfigsSGIX() {
+// 	(*ptrglxGetFBConfigsSGIX)();
 // }
-// void goglCreateContextWithConfigSGIX(GLint gc_id, GLint screen, GLint config, GLint share_list) {
-// 	(*ptrglCreateContextWithConfigSGIX)(gc_id, screen, config, share_list);
+// void goglxCreateContextWithConfigSGIX(GLint gc_id, GLint screen, GLint config, GLint share_list) {
+// 	(*ptrglxCreateContextWithConfigSGIX)(gc_id, screen, config, share_list);
 // }
-// void goglCreateGLXPixmapWithConfigSGIX(GLint config, GLint pixmap, GLint glxpixmap) {
-// 	(*ptrglCreateGLXPixmapWithConfigSGIX)(config, pixmap, glxpixmap);
+// void goglxCreateGLXPixmapWithConfigSGIX(GLint config, GLint pixmap, GLint glxpixmap) {
+// 	(*ptrglxCreateGLXPixmapWithConfigSGIX)(config, pixmap, glxpixmap);
 // }
-// void goglCreateGLXPbufferSGIX(GLint config, GLint pbuffer) {
-// 	(*ptrglCreateGLXPbufferSGIX)(config, pbuffer);
+// void goglxCreateGLXPbufferSGIX(GLint config, GLint pbuffer) {
+// 	(*ptrglxCreateGLXPbufferSGIX)(config, pbuffer);
 // }
-// void goglDestroyGLXPbufferSGIX(GLint pbuffer) {
-// 	(*ptrglDestroyGLXPbufferSGIX)(pbuffer);
+// void goglxDestroyGLXPbufferSGIX(GLint pbuffer) {
+// 	(*ptrglxDestroyGLXPbufferSGIX)(pbuffer);
 // }
-// void goglChangeDrawableAttributesSGIX(GLint drawable) {
-// 	(*ptrglChangeDrawableAttributesSGIX)(drawable);
+// void goglxChangeDrawableAttributesSGIX(GLint drawable) {
+// 	(*ptrglxChangeDrawableAttributesSGIX)(drawable);
 // }
-// void goglGetDrawableAttributesSGIX(GLint drawable) {
-// 	(*ptrglGetDrawableAttributesSGIX)(drawable);
+// void goglxGetDrawableAttributesSGIX(GLint drawable) {
+// 	(*ptrglxGetDrawableAttributesSGIX)(drawable);
 // }
-// void goglJoinSwapGroupSGIX(GLint window, GLint group) {
-// 	(*ptrglJoinSwapGroupSGIX)(window, group);
+// void goglxJoinSwapGroupSGIX(GLint window, GLint group) {
+// 	(*ptrglxJoinSwapGroupSGIX)(window, group);
 // }
-// void goglBindSwapBarrierSGIX(GLint window, GLint barrier) {
-// 	(*ptrglBindSwapBarrierSGIX)(window, barrier);
+// void goglxBindSwapBarrierSGIX(GLint window, GLint barrier) {
+// 	(*ptrglxBindSwapBarrierSGIX)(window, barrier);
 // }
-// void goglQueryMaxSwapBarriersSGIX() {
-// 	(*ptrglQueryMaxSwapBarriersSGIX)();
+// void goglxQueryMaxSwapBarriersSGIX() {
+// 	(*ptrglxQueryMaxSwapBarriersSGIX)();
 // }
-// GLXHyperpipeNetworkSGIX * goglQueryHyperpipeNetworkSGIX(Display* dpy, int* npipes) {
-// 	return (*ptrglQueryHyperpipeNetworkSGIX)(dpy, npipes);
+// GLXHyperpipeNetworkSGIX * goglxQueryHyperpipeNetworkSGIX(Display* dpy, int* npipes) {
+// 	return (*ptrglxQueryHyperpipeNetworkSGIX)(dpy, npipes);
 // }
-// int goglHyperpipeConfigSGIX(Display* dpy, int networkId, int npipes, GLXHyperpipeConfigSGIX* cfg, int* hpId) {
-// 	return (*ptrglHyperpipeConfigSGIX)(dpy, networkId, npipes, cfg, hpId);
+// int goglxHyperpipeConfigSGIX(Display* dpy, int networkId, int npipes, GLXHyperpipeConfigSGIX* cfg, int* hpId) {
+// 	return (*ptrglxHyperpipeConfigSGIX)(dpy, networkId, npipes, cfg, hpId);
 // }
-// GLXHyperpipeConfigSGIX * goglQueryHyperpipeConfigSGIX(Display* dpy, int hpId, int* npipes) {
-// 	return (*ptrglQueryHyperpipeConfigSGIX)(dpy, hpId, npipes);
+// GLXHyperpipeConfigSGIX * goglxQueryHyperpipeConfigSGIX(Display* dpy, int hpId, int* npipes) {
+// 	return (*ptrglxQueryHyperpipeConfigSGIX)(dpy, hpId, npipes);
 // }
-// int goglDestroyHyperpipeConfigSGIX(Display* dpy, int hpId) {
-// 	return (*ptrglDestroyHyperpipeConfigSGIX)(dpy, hpId);
+// int goglxDestroyHyperpipeConfigSGIX(Display* dpy, int hpId) {
+// 	return (*ptrglxDestroyHyperpipeConfigSGIX)(dpy, hpId);
 // }
-// int goglBindHyperpipeSGIX(Display* dpy, int hpId) {
-// 	return (*ptrglBindHyperpipeSGIX)(dpy, hpId);
+// int goglxBindHyperpipeSGIX(Display* dpy, int hpId) {
+// 	return (*ptrglxBindHyperpipeSGIX)(dpy, hpId);
 // }
-// int goglQueryHyperpipeBestAttribSGIX(Display* dpy, int timeSlice, int attrib, int size, GLvoid* attribList, GLvoid* returnAttribList) {
-// 	return (*ptrglQueryHyperpipeBestAttribSGIX)(dpy, timeSlice, attrib, size, attribList, returnAttribList);
+// int goglxQueryHyperpipeBestAttribSGIX(Display* dpy, int timeSlice, int attrib, int size, GLvoid* attribList, GLvoid* returnAttribList) {
+// 	return (*ptrglxQueryHyperpipeBestAttribSGIX)(dpy, timeSlice, attrib, size, attribList, returnAttribList);
 // }
-// int goglHyperpipeAttribSGIX(Display* dpy, int timeSlice, int attrib, int size, void* attribList) {
-// 	return (*ptrglHyperpipeAttribSGIX)(dpy, timeSlice, attrib, size, attribList);
+// int goglxHyperpipeAttribSGIX(Display* dpy, int timeSlice, int attrib, int size, void* attribList) {
+// 	return (*ptrglxHyperpipeAttribSGIX)(dpy, timeSlice, attrib, size, attribList);
 // }
-// int goglQueryHyperpipeAttribSGIX(Display* dpy, int timeSlice, int attrib, int size, void* returnAttribList) {
-// 	return (*ptrglQueryHyperpipeAttribSGIX)(dpy, timeSlice, attrib, size, returnAttribList);
+// int goglxQueryHyperpipeAttribSGIX(Display* dpy, int timeSlice, int attrib, int size, void* returnAttribList) {
+// 	return (*ptrglxQueryHyperpipeAttribSGIX)(dpy, timeSlice, attrib, size, returnAttribList);
 // }
 // 
 // int init_ARB_create_context() {
-// 	ptrglCreateContextAttribsARB = goglGetProcAddress("glCreateContextAttribsARB");
-// 	if(ptrglCreateContextAttribsARB == NULL) return 1;
+// 	ptrglxCreateContextAttribsARB = goglxGetProcAddress("glxCreateContextAttribsARB");
+// 	if(ptrglxCreateContextAttribsARB == NULL) return 1;
 // 	return 0;
 // }
 // int init_ARB_create_context_profile() {
@@ -960,8 +960,8 @@ package glx
 // 	return 0;
 // }
 // int init_ARB_get_proc_address() {
-// 	ptrglGetProcAddressARB = goglGetProcAddress("glGetProcAddressARB");
-// 	if(ptrglGetProcAddressARB == NULL) return 1;
+// 	ptrglxGetProcAddressARB = goglxGetProcAddress("glxGetProcAddressARB");
+// 	if(ptrglxGetProcAddressARB == NULL) return 1;
 // 	return 0;
 // }
 // int init_ARB_multisample() {
@@ -974,31 +974,31 @@ package glx
 // 	return 0;
 // }
 // int init_EXT_import_context() {
-// 	ptrglGetCurrentDisplayEXT = goglGetProcAddress("glGetCurrentDisplayEXT");
-// 	if(ptrglGetCurrentDisplayEXT == NULL) return 1;
-// 	ptrglQueryContextInfoEXT = goglGetProcAddress("glQueryContextInfoEXT");
-// 	if(ptrglQueryContextInfoEXT == NULL) return 1;
-// 	ptrglGetContextIDEXT = goglGetProcAddress("glGetContextIDEXT");
-// 	if(ptrglGetContextIDEXT == NULL) return 1;
-// 	ptrglImportContextEXT = goglGetProcAddress("glImportContextEXT");
-// 	if(ptrglImportContextEXT == NULL) return 1;
-// 	ptrglFreeContextEXT = goglGetProcAddress("glFreeContextEXT");
-// 	if(ptrglFreeContextEXT == NULL) return 1;
+// 	ptrglxGetCurrentDisplayEXT = goglxGetProcAddress("glxGetCurrentDisplayEXT");
+// 	if(ptrglxGetCurrentDisplayEXT == NULL) return 1;
+// 	ptrglxQueryContextInfoEXT = goglxGetProcAddress("glxQueryContextInfoEXT");
+// 	if(ptrglxQueryContextInfoEXT == NULL) return 1;
+// 	ptrglxGetContextIDEXT = goglxGetProcAddress("glxGetContextIDEXT");
+// 	if(ptrglxGetContextIDEXT == NULL) return 1;
+// 	ptrglxImportContextEXT = goglxGetProcAddress("glxImportContextEXT");
+// 	if(ptrglxImportContextEXT == NULL) return 1;
+// 	ptrglxFreeContextEXT = goglxGetProcAddress("glxFreeContextEXT");
+// 	if(ptrglxFreeContextEXT == NULL) return 1;
 // 	return 0;
 // }
 // int init_EXT_swap_control() {
-// 	ptrglSwapIntervalEXT = goglGetProcAddress("glSwapIntervalEXT");
-// 	if(ptrglSwapIntervalEXT == NULL) return 1;
+// 	ptrglxSwapIntervalEXT = goglxGetProcAddress("glxSwapIntervalEXT");
+// 	if(ptrglxSwapIntervalEXT == NULL) return 1;
 // 	return 0;
 // }
 // int init_EXT_swap_control_tear() {
 // 	return 0;
 // }
 // int init_EXT_texture_from_pixmap() {
-// 	ptrglBindTexImageEXT = goglGetProcAddress("glBindTexImageEXT");
-// 	if(ptrglBindTexImageEXT == NULL) return 1;
-// 	ptrglReleaseTexImageEXT = goglGetProcAddress("glReleaseTexImageEXT");
-// 	if(ptrglReleaseTexImageEXT == NULL) return 1;
+// 	ptrglxBindTexImageEXT = goglxGetProcAddress("glxBindTexImageEXT");
+// 	if(ptrglxBindTexImageEXT == NULL) return 1;
+// 	ptrglxReleaseTexImageEXT = goglxGetProcAddress("glxReleaseTexImageEXT");
+// 	if(ptrglxReleaseTexImageEXT == NULL) return 1;
 // 	return 0;
 // }
 // int init_EXT_visual_info() {
@@ -1011,33 +1011,33 @@ package glx
 // 	return 0;
 // }
 // int init_MESA_agp_offset() {
-// 	ptrglGetAGPOffsetMESA = goglGetProcAddress("glGetAGPOffsetMESA");
-// 	if(ptrglGetAGPOffsetMESA == NULL) return 1;
+// 	ptrglxGetAGPOffsetMESA = goglxGetProcAddress("glxGetAGPOffsetMESA");
+// 	if(ptrglxGetAGPOffsetMESA == NULL) return 1;
 // 	return 0;
 // }
 // int init_MESA_copy_sub_buffer() {
-// 	ptrglCopySubBufferMESA = goglGetProcAddress("glCopySubBufferMESA");
-// 	if(ptrglCopySubBufferMESA == NULL) return 1;
+// 	ptrglxCopySubBufferMESA = goglxGetProcAddress("glxCopySubBufferMESA");
+// 	if(ptrglxCopySubBufferMESA == NULL) return 1;
 // 	return 0;
 // }
 // int init_MESA_pixmap_colormap() {
-// 	ptrglCreateGLXPixmapMESA = goglGetProcAddress("glCreateGLXPixmapMESA");
-// 	if(ptrglCreateGLXPixmapMESA == NULL) return 1;
+// 	ptrglxCreateGLXPixmapMESA = goglxGetProcAddress("glxCreateGLXPixmapMESA");
+// 	if(ptrglxCreateGLXPixmapMESA == NULL) return 1;
 // 	return 0;
 // }
 // int init_MESA_release_buffers() {
-// 	ptrglReleaseBuffersMESA = goglGetProcAddress("glReleaseBuffersMESA");
-// 	if(ptrglReleaseBuffersMESA == NULL) return 1;
+// 	ptrglxReleaseBuffersMESA = goglxGetProcAddress("glxReleaseBuffersMESA");
+// 	if(ptrglxReleaseBuffersMESA == NULL) return 1;
 // 	return 0;
 // }
 // int init_MESA_set_3dfx_mode() {
-// 	ptrglSet3DfxModeMESA = goglGetProcAddress("glSet3DfxModeMESA");
-// 	if(ptrglSet3DfxModeMESA == NULL) return 1;
+// 	ptrglxSet3DfxModeMESA = goglxGetProcAddress("glxSet3DfxModeMESA");
+// 	if(ptrglxSet3DfxModeMESA == NULL) return 1;
 // 	return 0;
 // }
 // int init_NV_copy_image() {
-// 	ptrglCopyImageSubDataNV = goglGetProcAddress("glCopyImageSubDataNV");
-// 	if(ptrglCopyImageSubDataNV == NULL) return 1;
+// 	ptrglxCopyImageSubDataNV = goglxGetProcAddress("glxCopyImageSubDataNV");
+// 	if(ptrglxCopyImageSubDataNV == NULL) return 1;
 // 	return 0;
 // }
 // int init_NV_float_buffer() {
@@ -1047,345 +1047,345 @@ package glx
 // 	return 0;
 // }
 // int init_NV_present_video() {
-// 	ptrglEnumerateVideoDevicesNV = goglGetProcAddress("glEnumerateVideoDevicesNV");
-// 	if(ptrglEnumerateVideoDevicesNV == NULL) return 1;
-// 	ptrglBindVideoDeviceNV = goglGetProcAddress("glBindVideoDeviceNV");
-// 	if(ptrglBindVideoDeviceNV == NULL) return 1;
+// 	ptrglxEnumerateVideoDevicesNV = goglxGetProcAddress("glxEnumerateVideoDevicesNV");
+// 	if(ptrglxEnumerateVideoDevicesNV == NULL) return 1;
+// 	ptrglxBindVideoDeviceNV = goglxGetProcAddress("glxBindVideoDeviceNV");
+// 	if(ptrglxBindVideoDeviceNV == NULL) return 1;
 // 	return 0;
 // }
 // int init_NV_swap_group() {
-// 	ptrglJoinSwapGroupNV = goglGetProcAddress("glJoinSwapGroupNV");
-// 	if(ptrglJoinSwapGroupNV == NULL) return 1;
-// 	ptrglBindSwapBarrierNV = goglGetProcAddress("glBindSwapBarrierNV");
-// 	if(ptrglBindSwapBarrierNV == NULL) return 1;
-// 	ptrglQuerySwapGroupNV = goglGetProcAddress("glQuerySwapGroupNV");
-// 	if(ptrglQuerySwapGroupNV == NULL) return 1;
-// 	ptrglQueryMaxSwapGroupsNV = goglGetProcAddress("glQueryMaxSwapGroupsNV");
-// 	if(ptrglQueryMaxSwapGroupsNV == NULL) return 1;
-// 	ptrglQueryFrameCountNV = goglGetProcAddress("glQueryFrameCountNV");
-// 	if(ptrglQueryFrameCountNV == NULL) return 1;
-// 	ptrglResetFrameCountNV = goglGetProcAddress("glResetFrameCountNV");
-// 	if(ptrglResetFrameCountNV == NULL) return 1;
+// 	ptrglxJoinSwapGroupNV = goglxGetProcAddress("glxJoinSwapGroupNV");
+// 	if(ptrglxJoinSwapGroupNV == NULL) return 1;
+// 	ptrglxBindSwapBarrierNV = goglxGetProcAddress("glxBindSwapBarrierNV");
+// 	if(ptrglxBindSwapBarrierNV == NULL) return 1;
+// 	ptrglxQuerySwapGroupNV = goglxGetProcAddress("glxQuerySwapGroupNV");
+// 	if(ptrglxQuerySwapGroupNV == NULL) return 1;
+// 	ptrglxQueryMaxSwapGroupsNV = goglxGetProcAddress("glxQueryMaxSwapGroupsNV");
+// 	if(ptrglxQueryMaxSwapGroupsNV == NULL) return 1;
+// 	ptrglxQueryFrameCountNV = goglxGetProcAddress("glxQueryFrameCountNV");
+// 	if(ptrglxQueryFrameCountNV == NULL) return 1;
+// 	ptrglxResetFrameCountNV = goglxGetProcAddress("glxResetFrameCountNV");
+// 	if(ptrglxResetFrameCountNV == NULL) return 1;
 // 	return 0;
 // }
 // int init_NV_video_capture() {
-// 	ptrglBindVideoCaptureDeviceNV = goglGetProcAddress("glBindVideoCaptureDeviceNV");
-// 	if(ptrglBindVideoCaptureDeviceNV == NULL) return 1;
-// 	ptrglEnumerateVideoCaptureDevicesNV = goglGetProcAddress("glEnumerateVideoCaptureDevicesNV");
-// 	if(ptrglEnumerateVideoCaptureDevicesNV == NULL) return 1;
-// 	ptrglLockVideoCaptureDeviceNV = goglGetProcAddress("glLockVideoCaptureDeviceNV");
-// 	if(ptrglLockVideoCaptureDeviceNV == NULL) return 1;
-// 	ptrglQueryVideoCaptureDeviceNV = goglGetProcAddress("glQueryVideoCaptureDeviceNV");
-// 	if(ptrglQueryVideoCaptureDeviceNV == NULL) return 1;
-// 	ptrglReleaseVideoCaptureDeviceNV = goglGetProcAddress("glReleaseVideoCaptureDeviceNV");
-// 	if(ptrglReleaseVideoCaptureDeviceNV == NULL) return 1;
+// 	ptrglxBindVideoCaptureDeviceNV = goglxGetProcAddress("glxBindVideoCaptureDeviceNV");
+// 	if(ptrglxBindVideoCaptureDeviceNV == NULL) return 1;
+// 	ptrglxEnumerateVideoCaptureDevicesNV = goglxGetProcAddress("glxEnumerateVideoCaptureDevicesNV");
+// 	if(ptrglxEnumerateVideoCaptureDevicesNV == NULL) return 1;
+// 	ptrglxLockVideoCaptureDeviceNV = goglxGetProcAddress("glxLockVideoCaptureDeviceNV");
+// 	if(ptrglxLockVideoCaptureDeviceNV == NULL) return 1;
+// 	ptrglxQueryVideoCaptureDeviceNV = goglxGetProcAddress("glxQueryVideoCaptureDeviceNV");
+// 	if(ptrglxQueryVideoCaptureDeviceNV == NULL) return 1;
+// 	ptrglxReleaseVideoCaptureDeviceNV = goglxGetProcAddress("glxReleaseVideoCaptureDeviceNV");
+// 	if(ptrglxReleaseVideoCaptureDeviceNV == NULL) return 1;
 // 	return 0;
 // }
 // int init_NV_video_output() {
-// 	ptrglGetVideoDeviceNV = goglGetProcAddress("glGetVideoDeviceNV");
-// 	if(ptrglGetVideoDeviceNV == NULL) return 1;
-// 	ptrglReleaseVideoDeviceNV = goglGetProcAddress("glReleaseVideoDeviceNV");
-// 	if(ptrglReleaseVideoDeviceNV == NULL) return 1;
-// 	ptrglBindVideoImageNV = goglGetProcAddress("glBindVideoImageNV");
-// 	if(ptrglBindVideoImageNV == NULL) return 1;
-// 	ptrglReleaseVideoImageNV = goglGetProcAddress("glReleaseVideoImageNV");
-// 	if(ptrglReleaseVideoImageNV == NULL) return 1;
-// 	ptrglSendPbufferToVideoNV = goglGetProcAddress("glSendPbufferToVideoNV");
-// 	if(ptrglSendPbufferToVideoNV == NULL) return 1;
-// 	ptrglGetVideoInfoNV = goglGetProcAddress("glGetVideoInfoNV");
-// 	if(ptrglGetVideoInfoNV == NULL) return 1;
+// 	ptrglxGetVideoDeviceNV = goglxGetProcAddress("glxGetVideoDeviceNV");
+// 	if(ptrglxGetVideoDeviceNV == NULL) return 1;
+// 	ptrglxReleaseVideoDeviceNV = goglxGetProcAddress("glxReleaseVideoDeviceNV");
+// 	if(ptrglxReleaseVideoDeviceNV == NULL) return 1;
+// 	ptrglxBindVideoImageNV = goglxGetProcAddress("glxBindVideoImageNV");
+// 	if(ptrglxBindVideoImageNV == NULL) return 1;
+// 	ptrglxReleaseVideoImageNV = goglxGetProcAddress("glxReleaseVideoImageNV");
+// 	if(ptrglxReleaseVideoImageNV == NULL) return 1;
+// 	ptrglxSendPbufferToVideoNV = goglxGetProcAddress("glxSendPbufferToVideoNV");
+// 	if(ptrglxSendPbufferToVideoNV == NULL) return 1;
+// 	ptrglxGetVideoInfoNV = goglxGetProcAddress("glxGetVideoInfoNV");
+// 	if(ptrglxGetVideoInfoNV == NULL) return 1;
 // 	return 0;
 // }
 // int init_OML_swap_method() {
 // 	return 0;
 // }
 // int init_OML_sync_control() {
-// 	ptrglGetSyncValuesOML = goglGetProcAddress("glGetSyncValuesOML");
-// 	if(ptrglGetSyncValuesOML == NULL) return 1;
-// 	ptrglGetMscRateOML = goglGetProcAddress("glGetMscRateOML");
-// 	if(ptrglGetMscRateOML == NULL) return 1;
-// 	ptrglSwapBuffersMscOML = goglGetProcAddress("glSwapBuffersMscOML");
-// 	if(ptrglSwapBuffersMscOML == NULL) return 1;
-// 	ptrglWaitForMscOML = goglGetProcAddress("glWaitForMscOML");
-// 	if(ptrglWaitForMscOML == NULL) return 1;
-// 	ptrglWaitForSbcOML = goglGetProcAddress("glWaitForSbcOML");
-// 	if(ptrglWaitForSbcOML == NULL) return 1;
+// 	ptrglxGetSyncValuesOML = goglxGetProcAddress("glxGetSyncValuesOML");
+// 	if(ptrglxGetSyncValuesOML == NULL) return 1;
+// 	ptrglxGetMscRateOML = goglxGetProcAddress("glxGetMscRateOML");
+// 	if(ptrglxGetMscRateOML == NULL) return 1;
+// 	ptrglxSwapBuffersMscOML = goglxGetProcAddress("glxSwapBuffersMscOML");
+// 	if(ptrglxSwapBuffersMscOML == NULL) return 1;
+// 	ptrglxWaitForMscOML = goglxGetProcAddress("glxWaitForMscOML");
+// 	if(ptrglxWaitForMscOML == NULL) return 1;
+// 	ptrglxWaitForSbcOML = goglxGetProcAddress("glxWaitForSbcOML");
+// 	if(ptrglxWaitForSbcOML == NULL) return 1;
 // 	return 0;
 // }
 // int init_SGIS_multisample() {
 // 	return 0;
 // }
 // int init_SGIX_dmbuffer() {
-// 	ptrglAssociateDMPbufferSGIX = goglGetProcAddress("glAssociateDMPbufferSGIX");
-// 	if(ptrglAssociateDMPbufferSGIX == NULL) return 1;
+// 	ptrglxAssociateDMPbufferSGIX = goglxGetProcAddress("glxAssociateDMPbufferSGIX");
+// 	if(ptrglxAssociateDMPbufferSGIX == NULL) return 1;
 // 	return 0;
 // }
 // int init_SGIX_fbconfig() {
-// 	ptrglGetFBConfigAttribSGIX = goglGetProcAddress("glGetFBConfigAttribSGIX");
-// 	if(ptrglGetFBConfigAttribSGIX == NULL) return 1;
-// 	ptrglChooseFBConfigSGIX = goglGetProcAddress("glChooseFBConfigSGIX");
-// 	if(ptrglChooseFBConfigSGIX == NULL) return 1;
-// 	ptrglCreateGLXPixmapWithConfigSGIX = goglGetProcAddress("glCreateGLXPixmapWithConfigSGIX");
-// 	if(ptrglCreateGLXPixmapWithConfigSGIX == NULL) return 1;
-// 	ptrglCreateContextWithConfigSGIX = goglGetProcAddress("glCreateContextWithConfigSGIX");
-// 	if(ptrglCreateContextWithConfigSGIX == NULL) return 1;
-// 	ptrglGetVisualFromFBConfigSGIX = goglGetProcAddress("glGetVisualFromFBConfigSGIX");
-// 	if(ptrglGetVisualFromFBConfigSGIX == NULL) return 1;
-// 	ptrglGetFBConfigFromVisualSGIX = goglGetProcAddress("glGetFBConfigFromVisualSGIX");
-// 	if(ptrglGetFBConfigFromVisualSGIX == NULL) return 1;
+// 	ptrglxGetFBConfigAttribSGIX = goglxGetProcAddress("glxGetFBConfigAttribSGIX");
+// 	if(ptrglxGetFBConfigAttribSGIX == NULL) return 1;
+// 	ptrglxChooseFBConfigSGIX = goglxGetProcAddress("glxChooseFBConfigSGIX");
+// 	if(ptrglxChooseFBConfigSGIX == NULL) return 1;
+// 	ptrglxCreateGLXPixmapWithConfigSGIX = goglxGetProcAddress("glxCreateGLXPixmapWithConfigSGIX");
+// 	if(ptrglxCreateGLXPixmapWithConfigSGIX == NULL) return 1;
+// 	ptrglxCreateContextWithConfigSGIX = goglxGetProcAddress("glxCreateContextWithConfigSGIX");
+// 	if(ptrglxCreateContextWithConfigSGIX == NULL) return 1;
+// 	ptrglxGetVisualFromFBConfigSGIX = goglxGetProcAddress("glxGetVisualFromFBConfigSGIX");
+// 	if(ptrglxGetVisualFromFBConfigSGIX == NULL) return 1;
+// 	ptrglxGetFBConfigFromVisualSGIX = goglxGetProcAddress("glxGetFBConfigFromVisualSGIX");
+// 	if(ptrglxGetFBConfigFromVisualSGIX == NULL) return 1;
 // 	return 0;
 // }
 // int init_SGIX_hyperpipe() {
-// 	ptrglQueryHyperpipeNetworkSGIX = goglGetProcAddress("glQueryHyperpipeNetworkSGIX");
-// 	if(ptrglQueryHyperpipeNetworkSGIX == NULL) return 1;
-// 	ptrglHyperpipeConfigSGIX = goglGetProcAddress("glHyperpipeConfigSGIX");
-// 	if(ptrglHyperpipeConfigSGIX == NULL) return 1;
-// 	ptrglQueryHyperpipeConfigSGIX = goglGetProcAddress("glQueryHyperpipeConfigSGIX");
-// 	if(ptrglQueryHyperpipeConfigSGIX == NULL) return 1;
-// 	ptrglDestroyHyperpipeConfigSGIX = goglGetProcAddress("glDestroyHyperpipeConfigSGIX");
-// 	if(ptrglDestroyHyperpipeConfigSGIX == NULL) return 1;
-// 	ptrglBindHyperpipeSGIX = goglGetProcAddress("glBindHyperpipeSGIX");
-// 	if(ptrglBindHyperpipeSGIX == NULL) return 1;
-// 	ptrglQueryHyperpipeBestAttribSGIX = goglGetProcAddress("glQueryHyperpipeBestAttribSGIX");
-// 	if(ptrglQueryHyperpipeBestAttribSGIX == NULL) return 1;
-// 	ptrglHyperpipeAttribSGIX = goglGetProcAddress("glHyperpipeAttribSGIX");
-// 	if(ptrglHyperpipeAttribSGIX == NULL) return 1;
-// 	ptrglQueryHyperpipeAttribSGIX = goglGetProcAddress("glQueryHyperpipeAttribSGIX");
-// 	if(ptrglQueryHyperpipeAttribSGIX == NULL) return 1;
+// 	ptrglxQueryHyperpipeNetworkSGIX = goglxGetProcAddress("glxQueryHyperpipeNetworkSGIX");
+// 	if(ptrglxQueryHyperpipeNetworkSGIX == NULL) return 1;
+// 	ptrglxHyperpipeConfigSGIX = goglxGetProcAddress("glxHyperpipeConfigSGIX");
+// 	if(ptrglxHyperpipeConfigSGIX == NULL) return 1;
+// 	ptrglxQueryHyperpipeConfigSGIX = goglxGetProcAddress("glxQueryHyperpipeConfigSGIX");
+// 	if(ptrglxQueryHyperpipeConfigSGIX == NULL) return 1;
+// 	ptrglxDestroyHyperpipeConfigSGIX = goglxGetProcAddress("glxDestroyHyperpipeConfigSGIX");
+// 	if(ptrglxDestroyHyperpipeConfigSGIX == NULL) return 1;
+// 	ptrglxBindHyperpipeSGIX = goglxGetProcAddress("glxBindHyperpipeSGIX");
+// 	if(ptrglxBindHyperpipeSGIX == NULL) return 1;
+// 	ptrglxQueryHyperpipeBestAttribSGIX = goglxGetProcAddress("glxQueryHyperpipeBestAttribSGIX");
+// 	if(ptrglxQueryHyperpipeBestAttribSGIX == NULL) return 1;
+// 	ptrglxHyperpipeAttribSGIX = goglxGetProcAddress("glxHyperpipeAttribSGIX");
+// 	if(ptrglxHyperpipeAttribSGIX == NULL) return 1;
+// 	ptrglxQueryHyperpipeAttribSGIX = goglxGetProcAddress("glxQueryHyperpipeAttribSGIX");
+// 	if(ptrglxQueryHyperpipeAttribSGIX == NULL) return 1;
 // 	return 0;
 // }
 // int init_SGIX_pbuffer() {
-// 	ptrglCreateGLXPbufferSGIX = goglGetProcAddress("glCreateGLXPbufferSGIX");
-// 	if(ptrglCreateGLXPbufferSGIX == NULL) return 1;
-// 	ptrglDestroyGLXPbufferSGIX = goglGetProcAddress("glDestroyGLXPbufferSGIX");
-// 	if(ptrglDestroyGLXPbufferSGIX == NULL) return 1;
-// 	ptrglQueryGLXPbufferSGIX = goglGetProcAddress("glQueryGLXPbufferSGIX");
-// 	if(ptrglQueryGLXPbufferSGIX == NULL) return 1;
-// 	ptrglSelectEventSGIX = goglGetProcAddress("glSelectEventSGIX");
-// 	if(ptrglSelectEventSGIX == NULL) return 1;
-// 	ptrglGetSelectedEventSGIX = goglGetProcAddress("glGetSelectedEventSGIX");
-// 	if(ptrglGetSelectedEventSGIX == NULL) return 1;
+// 	ptrglxCreateGLXPbufferSGIX = goglxGetProcAddress("glxCreateGLXPbufferSGIX");
+// 	if(ptrglxCreateGLXPbufferSGIX == NULL) return 1;
+// 	ptrglxDestroyGLXPbufferSGIX = goglxGetProcAddress("glxDestroyGLXPbufferSGIX");
+// 	if(ptrglxDestroyGLXPbufferSGIX == NULL) return 1;
+// 	ptrglxQueryGLXPbufferSGIX = goglxGetProcAddress("glxQueryGLXPbufferSGIX");
+// 	if(ptrglxQueryGLXPbufferSGIX == NULL) return 1;
+// 	ptrglxSelectEventSGIX = goglxGetProcAddress("glxSelectEventSGIX");
+// 	if(ptrglxSelectEventSGIX == NULL) return 1;
+// 	ptrglxGetSelectedEventSGIX = goglxGetProcAddress("glxGetSelectedEventSGIX");
+// 	if(ptrglxGetSelectedEventSGIX == NULL) return 1;
 // 	return 0;
 // }
 // int init_SGIX_swap_barrier() {
-// 	ptrglBindSwapBarrierSGIX = goglGetProcAddress("glBindSwapBarrierSGIX");
-// 	if(ptrglBindSwapBarrierSGIX == NULL) return 1;
-// 	ptrglQueryMaxSwapBarriersSGIX = goglGetProcAddress("glQueryMaxSwapBarriersSGIX");
-// 	if(ptrglQueryMaxSwapBarriersSGIX == NULL) return 1;
+// 	ptrglxBindSwapBarrierSGIX = goglxGetProcAddress("glxBindSwapBarrierSGIX");
+// 	if(ptrglxBindSwapBarrierSGIX == NULL) return 1;
+// 	ptrglxQueryMaxSwapBarriersSGIX = goglxGetProcAddress("glxQueryMaxSwapBarriersSGIX");
+// 	if(ptrglxQueryMaxSwapBarriersSGIX == NULL) return 1;
 // 	return 0;
 // }
 // int init_SGIX_swap_group() {
-// 	ptrglJoinSwapGroupSGIX = goglGetProcAddress("glJoinSwapGroupSGIX");
-// 	if(ptrglJoinSwapGroupSGIX == NULL) return 1;
+// 	ptrglxJoinSwapGroupSGIX = goglxGetProcAddress("glxJoinSwapGroupSGIX");
+// 	if(ptrglxJoinSwapGroupSGIX == NULL) return 1;
 // 	return 0;
 // }
 // int init_SGIX_video_resize() {
-// 	ptrglBindChannelToWindowSGIX = goglGetProcAddress("glBindChannelToWindowSGIX");
-// 	if(ptrglBindChannelToWindowSGIX == NULL) return 1;
-// 	ptrglChannelRectSGIX = goglGetProcAddress("glChannelRectSGIX");
-// 	if(ptrglChannelRectSGIX == NULL) return 1;
-// 	ptrglQueryChannelRectSGIX = goglGetProcAddress("glQueryChannelRectSGIX");
-// 	if(ptrglQueryChannelRectSGIX == NULL) return 1;
-// 	ptrglQueryChannelDeltasSGIX = goglGetProcAddress("glQueryChannelDeltasSGIX");
-// 	if(ptrglQueryChannelDeltasSGIX == NULL) return 1;
-// 	ptrglChannelRectSyncSGIX = goglGetProcAddress("glChannelRectSyncSGIX");
-// 	if(ptrglChannelRectSyncSGIX == NULL) return 1;
+// 	ptrglxBindChannelToWindowSGIX = goglxGetProcAddress("glxBindChannelToWindowSGIX");
+// 	if(ptrglxBindChannelToWindowSGIX == NULL) return 1;
+// 	ptrglxChannelRectSGIX = goglxGetProcAddress("glxChannelRectSGIX");
+// 	if(ptrglxChannelRectSGIX == NULL) return 1;
+// 	ptrglxQueryChannelRectSGIX = goglxGetProcAddress("glxQueryChannelRectSGIX");
+// 	if(ptrglxQueryChannelRectSGIX == NULL) return 1;
+// 	ptrglxQueryChannelDeltasSGIX = goglxGetProcAddress("glxQueryChannelDeltasSGIX");
+// 	if(ptrglxQueryChannelDeltasSGIX == NULL) return 1;
+// 	ptrglxChannelRectSyncSGIX = goglxGetProcAddress("glxChannelRectSyncSGIX");
+// 	if(ptrglxChannelRectSyncSGIX == NULL) return 1;
 // 	return 0;
 // }
 // int init_SGIX_video_source() {
-// 	ptrglCreateGLXVideoSourceSGIX = goglGetProcAddress("glCreateGLXVideoSourceSGIX");
-// 	if(ptrglCreateGLXVideoSourceSGIX == NULL) return 1;
-// 	ptrglDestroyGLXVideoSourceSGIX = goglGetProcAddress("glDestroyGLXVideoSourceSGIX");
-// 	if(ptrglDestroyGLXVideoSourceSGIX == NULL) return 1;
+// 	ptrglxCreateGLXVideoSourceSGIX = goglxGetProcAddress("glxCreateGLXVideoSourceSGIX");
+// 	if(ptrglxCreateGLXVideoSourceSGIX == NULL) return 1;
+// 	ptrglxDestroyGLXVideoSourceSGIX = goglxGetProcAddress("glxDestroyGLXVideoSourceSGIX");
+// 	if(ptrglxDestroyGLXVideoSourceSGIX == NULL) return 1;
 // 	return 0;
 // }
 // int init_SGIX_visual_select_group() {
 // 	return 0;
 // }
 // int init_SGI_cushion() {
-// 	ptrglCushionSGI = goglGetProcAddress("glCushionSGI");
-// 	if(ptrglCushionSGI == NULL) return 1;
+// 	ptrglxCushionSGI = goglxGetProcAddress("glxCushionSGI");
+// 	if(ptrglxCushionSGI == NULL) return 1;
 // 	return 0;
 // }
 // int init_SGI_make_current_read() {
-// 	ptrglMakeCurrentReadSGI = goglGetProcAddress("glMakeCurrentReadSGI");
-// 	if(ptrglMakeCurrentReadSGI == NULL) return 1;
-// 	ptrglGetCurrentReadDrawableSGI = goglGetProcAddress("glGetCurrentReadDrawableSGI");
-// 	if(ptrglGetCurrentReadDrawableSGI == NULL) return 1;
+// 	ptrglxMakeCurrentReadSGI = goglxGetProcAddress("glxMakeCurrentReadSGI");
+// 	if(ptrglxMakeCurrentReadSGI == NULL) return 1;
+// 	ptrglxGetCurrentReadDrawableSGI = goglxGetProcAddress("glxGetCurrentReadDrawableSGI");
+// 	if(ptrglxGetCurrentReadDrawableSGI == NULL) return 1;
 // 	return 0;
 // }
 // int init_SGI_swap_control() {
-// 	ptrglSwapIntervalSGI = goglGetProcAddress("glSwapIntervalSGI");
-// 	if(ptrglSwapIntervalSGI == NULL) return 1;
+// 	ptrglxSwapIntervalSGI = goglxGetProcAddress("glxSwapIntervalSGI");
+// 	if(ptrglxSwapIntervalSGI == NULL) return 1;
 // 	return 0;
 // }
 // int init_SGI_video_sync() {
-// 	ptrglGetVideoSyncSGI = goglGetProcAddress("glGetVideoSyncSGI");
-// 	if(ptrglGetVideoSyncSGI == NULL) return 1;
-// 	ptrglWaitVideoSyncSGI = goglGetProcAddress("glWaitVideoSyncSGI");
-// 	if(ptrglWaitVideoSyncSGI == NULL) return 1;
+// 	ptrglxGetVideoSyncSGI = goglxGetProcAddress("glxGetVideoSyncSGI");
+// 	if(ptrglxGetVideoSyncSGI == NULL) return 1;
+// 	ptrglxWaitVideoSyncSGI = goglxGetProcAddress("glxWaitVideoSyncSGI");
+// 	if(ptrglxWaitVideoSyncSGI == NULL) return 1;
 // 	return 0;
 // }
 // int init_SUN_get_transparent_index() {
-// 	ptrglGetTransparentIndexSUN = goglGetProcAddress("glGetTransparentIndexSUN");
-// 	if(ptrglGetTransparentIndexSUN == NULL) return 1;
+// 	ptrglxGetTransparentIndexSUN = goglxGetProcAddress("glxGetTransparentIndexSUN");
+// 	if(ptrglxGetTransparentIndexSUN == NULL) return 1;
 // 	return 0;
 // }
 // int init_VERSION_1_3() {
-// 	ptrglGetFBConfigs = goglGetProcAddress("glGetFBConfigs");
-// 	if(ptrglGetFBConfigs == NULL) return 1;
-// 	ptrglChooseFBConfig = goglGetProcAddress("glChooseFBConfig");
-// 	if(ptrglChooseFBConfig == NULL) return 1;
-// 	ptrglGetFBConfigAttrib = goglGetProcAddress("glGetFBConfigAttrib");
-// 	if(ptrglGetFBConfigAttrib == NULL) return 1;
-// 	ptrglGetVisualFromFBConfig = goglGetProcAddress("glGetVisualFromFBConfig");
-// 	if(ptrglGetVisualFromFBConfig == NULL) return 1;
-// 	ptrglCreateWindow = goglGetProcAddress("glCreateWindow");
-// 	if(ptrglCreateWindow == NULL) return 1;
-// 	ptrglDestroyWindow = goglGetProcAddress("glDestroyWindow");
-// 	if(ptrglDestroyWindow == NULL) return 1;
-// 	ptrglCreatePixmap = goglGetProcAddress("glCreatePixmap");
-// 	if(ptrglCreatePixmap == NULL) return 1;
-// 	ptrglDestroyPixmap = goglGetProcAddress("glDestroyPixmap");
-// 	if(ptrglDestroyPixmap == NULL) return 1;
-// 	ptrglCreatePbuffer = goglGetProcAddress("glCreatePbuffer");
-// 	if(ptrglCreatePbuffer == NULL) return 1;
-// 	ptrglDestroyPbuffer = goglGetProcAddress("glDestroyPbuffer");
-// 	if(ptrglDestroyPbuffer == NULL) return 1;
-// 	ptrglQueryDrawable = goglGetProcAddress("glQueryDrawable");
-// 	if(ptrglQueryDrawable == NULL) return 1;
-// 	ptrglCreateNewContext = goglGetProcAddress("glCreateNewContext");
-// 	if(ptrglCreateNewContext == NULL) return 1;
-// 	ptrglMakeContextCurrent = goglGetProcAddress("glMakeContextCurrent");
-// 	if(ptrglMakeContextCurrent == NULL) return 1;
-// 	ptrglGetCurrentReadDrawable = goglGetProcAddress("glGetCurrentReadDrawable");
-// 	if(ptrglGetCurrentReadDrawable == NULL) return 1;
-// 	ptrglGetCurrentDisplay = goglGetProcAddress("glGetCurrentDisplay");
-// 	if(ptrglGetCurrentDisplay == NULL) return 1;
-// 	ptrglQueryContext = goglGetProcAddress("glQueryContext");
-// 	if(ptrglQueryContext == NULL) return 1;
-// 	ptrglSelectEvent = goglGetProcAddress("glSelectEvent");
-// 	if(ptrglSelectEvent == NULL) return 1;
-// 	ptrglGetSelectedEvent = goglGetProcAddress("glGetSelectedEvent");
-// 	if(ptrglGetSelectedEvent == NULL) return 1;
+// 	ptrglxGetFBConfigs = goglxGetProcAddress("glxGetFBConfigs");
+// 	if(ptrglxGetFBConfigs == NULL) return 1;
+// 	ptrglxChooseFBConfig = goglxGetProcAddress("glxChooseFBConfig");
+// 	if(ptrglxChooseFBConfig == NULL) return 1;
+// 	ptrglxGetFBConfigAttrib = goglxGetProcAddress("glxGetFBConfigAttrib");
+// 	if(ptrglxGetFBConfigAttrib == NULL) return 1;
+// 	ptrglxGetVisualFromFBConfig = goglxGetProcAddress("glxGetVisualFromFBConfig");
+// 	if(ptrglxGetVisualFromFBConfig == NULL) return 1;
+// 	ptrglxCreateWindow = goglxGetProcAddress("glxCreateWindow");
+// 	if(ptrglxCreateWindow == NULL) return 1;
+// 	ptrglxDestroyWindow = goglxGetProcAddress("glxDestroyWindow");
+// 	if(ptrglxDestroyWindow == NULL) return 1;
+// 	ptrglxCreatePixmap = goglxGetProcAddress("glxCreatePixmap");
+// 	if(ptrglxCreatePixmap == NULL) return 1;
+// 	ptrglxDestroyPixmap = goglxGetProcAddress("glxDestroyPixmap");
+// 	if(ptrglxDestroyPixmap == NULL) return 1;
+// 	ptrglxCreatePbuffer = goglxGetProcAddress("glxCreatePbuffer");
+// 	if(ptrglxCreatePbuffer == NULL) return 1;
+// 	ptrglxDestroyPbuffer = goglxGetProcAddress("glxDestroyPbuffer");
+// 	if(ptrglxDestroyPbuffer == NULL) return 1;
+// 	ptrglxQueryDrawable = goglxGetProcAddress("glxQueryDrawable");
+// 	if(ptrglxQueryDrawable == NULL) return 1;
+// 	ptrglxCreateNewContext = goglxGetProcAddress("glxCreateNewContext");
+// 	if(ptrglxCreateNewContext == NULL) return 1;
+// 	ptrglxMakeContextCurrent = goglxGetProcAddress("glxMakeContextCurrent");
+// 	if(ptrglxMakeContextCurrent == NULL) return 1;
+// 	ptrglxGetCurrentReadDrawable = goglxGetProcAddress("glxGetCurrentReadDrawable");
+// 	if(ptrglxGetCurrentReadDrawable == NULL) return 1;
+// 	ptrglxGetCurrentDisplay = goglxGetProcAddress("glxGetCurrentDisplay");
+// 	if(ptrglxGetCurrentDisplay == NULL) return 1;
+// 	ptrglxQueryContext = goglxGetProcAddress("glxQueryContext");
+// 	if(ptrglxQueryContext == NULL) return 1;
+// 	ptrglxSelectEvent = goglxGetProcAddress("glxSelectEvent");
+// 	if(ptrglxSelectEvent == NULL) return 1;
+// 	ptrglxGetSelectedEvent = goglxGetProcAddress("glxGetSelectedEvent");
+// 	if(ptrglxGetSelectedEvent == NULL) return 1;
 // 	return 0;
 // }
 // int init_VERSION_1_4() {
-// 	ptrglGetProcAddress = goglGetProcAddress("glGetProcAddress");
-// 	if(ptrglGetProcAddress == NULL) return 1;
+// 	ptrglxGetProcAddress = goglxGetProcAddress("glxGetProcAddress");
+// 	if(ptrglxGetProcAddress == NULL) return 1;
 // 	return 0;
 // }
 // int init_glx() {
-// 	ptrglRender = goglGetProcAddress("glRender");
-// 	if(ptrglRender == NULL) return 1;
-// 	ptrglRenderLarge = goglGetProcAddress("glRenderLarge");
-// 	if(ptrglRenderLarge == NULL) return 1;
-// 	ptrglCreateContext = goglGetProcAddress("glCreateContext");
-// 	if(ptrglCreateContext == NULL) return 1;
-// 	ptrglDestroyContext = goglGetProcAddress("glDestroyContext");
-// 	if(ptrglDestroyContext == NULL) return 1;
-// 	ptrglMakeCurrent = goglGetProcAddress("glMakeCurrent");
-// 	if(ptrglMakeCurrent == NULL) return 1;
-// 	ptrglIsDirect = goglGetProcAddress("glIsDirect");
-// 	if(ptrglIsDirect == NULL) return 1;
-// 	ptrglQueryVersion = goglGetProcAddress("glQueryVersion");
-// 	if(ptrglQueryVersion == NULL) return 1;
-// 	ptrglWaitGL = goglGetProcAddress("glWaitGL");
-// 	if(ptrglWaitGL == NULL) return 1;
-// 	ptrglWaitX = goglGetProcAddress("glWaitX");
-// 	if(ptrglWaitX == NULL) return 1;
-// 	ptrglCopyContext = goglGetProcAddress("glCopyContext");
-// 	if(ptrglCopyContext == NULL) return 1;
-// 	ptrglSwapBuffers = goglGetProcAddress("glSwapBuffers");
-// 	if(ptrglSwapBuffers == NULL) return 1;
-// 	ptrglUseXFont = goglGetProcAddress("glUseXFont");
-// 	if(ptrglUseXFont == NULL) return 1;
-// 	ptrglCreateGLXPixmap = goglGetProcAddress("glCreateGLXPixmap");
-// 	if(ptrglCreateGLXPixmap == NULL) return 1;
-// 	ptrglGetVisualConfigs = goglGetProcAddress("glGetVisualConfigs");
-// 	if(ptrglGetVisualConfigs == NULL) return 1;
-// 	ptrglDestroyGLXPixmap = goglGetProcAddress("glDestroyGLXPixmap");
-// 	if(ptrglDestroyGLXPixmap == NULL) return 1;
-// 	ptrglVendorPrivate = goglGetProcAddress("glVendorPrivate");
-// 	if(ptrglVendorPrivate == NULL) return 1;
-// 	ptrglVendorPrivateWithReply = goglGetProcAddress("glVendorPrivateWithReply");
-// 	if(ptrglVendorPrivateWithReply == NULL) return 1;
-// 	ptrglQueryExtensionsString = goglGetProcAddress("glQueryExtensionsString");
-// 	if(ptrglQueryExtensionsString == NULL) return 1;
-// 	ptrglQueryServerString = goglGetProcAddress("glQueryServerString");
-// 	if(ptrglQueryServerString == NULL) return 1;
-// 	ptrglClientInfo = goglGetProcAddress("glClientInfo");
-// 	if(ptrglClientInfo == NULL) return 1;
-// 	ptrglGetFBConfigs = goglGetProcAddress("glGetFBConfigs");
-// 	if(ptrglGetFBConfigs == NULL) return 1;
-// 	ptrglCreatePixmap = goglGetProcAddress("glCreatePixmap");
-// 	if(ptrglCreatePixmap == NULL) return 1;
-// 	ptrglDestroyPixmap = goglGetProcAddress("glDestroyPixmap");
-// 	if(ptrglDestroyPixmap == NULL) return 1;
-// 	ptrglCreateNewContext = goglGetProcAddress("glCreateNewContext");
-// 	if(ptrglCreateNewContext == NULL) return 1;
-// 	ptrglQueryContext = goglGetProcAddress("glQueryContext");
-// 	if(ptrglQueryContext == NULL) return 1;
-// 	ptrglMakeContextCurrent = goglGetProcAddress("glMakeContextCurrent");
-// 	if(ptrglMakeContextCurrent == NULL) return 1;
-// 	ptrglCreatePbuffer = goglGetProcAddress("glCreatePbuffer");
-// 	if(ptrglCreatePbuffer == NULL) return 1;
-// 	ptrglDestroyPbuffer = goglGetProcAddress("glDestroyPbuffer");
-// 	if(ptrglDestroyPbuffer == NULL) return 1;
-// 	ptrglGetDrawableAttributes = goglGetProcAddress("glGetDrawableAttributes");
-// 	if(ptrglGetDrawableAttributes == NULL) return 1;
-// 	ptrglChangeDrawableAttributes = goglGetProcAddress("glChangeDrawableAttributes");
-// 	if(ptrglChangeDrawableAttributes == NULL) return 1;
-// 	ptrglCreateWindow = goglGetProcAddress("glCreateWindow");
-// 	if(ptrglCreateWindow == NULL) return 1;
-// 	ptrglDestroyWindow = goglGetProcAddress("glDestroyWindow");
-// 	if(ptrglDestroyWindow == NULL) return 1;
-// 	ptrglSwapIntervalSGI = goglGetProcAddress("glSwapIntervalSGI");
-// 	if(ptrglSwapIntervalSGI == NULL) return 1;
-// 	ptrglMakeCurrentReadSGI = goglGetProcAddress("glMakeCurrentReadSGI");
-// 	if(ptrglMakeCurrentReadSGI == NULL) return 1;
-// 	ptrglCreateGLXVideoSourceSGIX = goglGetProcAddress("glCreateGLXVideoSourceSGIX");
-// 	if(ptrglCreateGLXVideoSourceSGIX == NULL) return 1;
-// 	ptrglDestroyGLXVideoSourceSGIX = goglGetProcAddress("glDestroyGLXVideoSourceSGIX");
-// 	if(ptrglDestroyGLXVideoSourceSGIX == NULL) return 1;
-// 	ptrglQueryContextInfoEXT = goglGetProcAddress("glQueryContextInfoEXT");
-// 	if(ptrglQueryContextInfoEXT == NULL) return 1;
-// 	ptrglGetFBConfigsSGIX = goglGetProcAddress("glGetFBConfigsSGIX");
-// 	if(ptrglGetFBConfigsSGIX == NULL) return 1;
-// 	ptrglCreateContextWithConfigSGIX = goglGetProcAddress("glCreateContextWithConfigSGIX");
-// 	if(ptrglCreateContextWithConfigSGIX == NULL) return 1;
-// 	ptrglCreateGLXPixmapWithConfigSGIX = goglGetProcAddress("glCreateGLXPixmapWithConfigSGIX");
-// 	if(ptrglCreateGLXPixmapWithConfigSGIX == NULL) return 1;
-// 	ptrglCreateGLXPbufferSGIX = goglGetProcAddress("glCreateGLXPbufferSGIX");
-// 	if(ptrglCreateGLXPbufferSGIX == NULL) return 1;
-// 	ptrglDestroyGLXPbufferSGIX = goglGetProcAddress("glDestroyGLXPbufferSGIX");
-// 	if(ptrglDestroyGLXPbufferSGIX == NULL) return 1;
-// 	ptrglChangeDrawableAttributesSGIX = goglGetProcAddress("glChangeDrawableAttributesSGIX");
-// 	if(ptrglChangeDrawableAttributesSGIX == NULL) return 1;
-// 	ptrglGetDrawableAttributesSGIX = goglGetProcAddress("glGetDrawableAttributesSGIX");
-// 	if(ptrglGetDrawableAttributesSGIX == NULL) return 1;
-// 	ptrglJoinSwapGroupSGIX = goglGetProcAddress("glJoinSwapGroupSGIX");
-// 	if(ptrglJoinSwapGroupSGIX == NULL) return 1;
-// 	ptrglBindSwapBarrierSGIX = goglGetProcAddress("glBindSwapBarrierSGIX");
-// 	if(ptrglBindSwapBarrierSGIX == NULL) return 1;
-// 	ptrglQueryMaxSwapBarriersSGIX = goglGetProcAddress("glQueryMaxSwapBarriersSGIX");
-// 	if(ptrglQueryMaxSwapBarriersSGIX == NULL) return 1;
-// 	ptrglQueryHyperpipeNetworkSGIX = goglGetProcAddress("glQueryHyperpipeNetworkSGIX");
-// 	if(ptrglQueryHyperpipeNetworkSGIX == NULL) return 1;
-// 	ptrglHyperpipeConfigSGIX = goglGetProcAddress("glHyperpipeConfigSGIX");
-// 	if(ptrglHyperpipeConfigSGIX == NULL) return 1;
-// 	ptrglQueryHyperpipeConfigSGIX = goglGetProcAddress("glQueryHyperpipeConfigSGIX");
-// 	if(ptrglQueryHyperpipeConfigSGIX == NULL) return 1;
-// 	ptrglDestroyHyperpipeConfigSGIX = goglGetProcAddress("glDestroyHyperpipeConfigSGIX");
-// 	if(ptrglDestroyHyperpipeConfigSGIX == NULL) return 1;
-// 	ptrglBindHyperpipeSGIX = goglGetProcAddress("glBindHyperpipeSGIX");
-// 	if(ptrglBindHyperpipeSGIX == NULL) return 1;
-// 	ptrglQueryHyperpipeBestAttribSGIX = goglGetProcAddress("glQueryHyperpipeBestAttribSGIX");
-// 	if(ptrglQueryHyperpipeBestAttribSGIX == NULL) return 1;
-// 	ptrglHyperpipeAttribSGIX = goglGetProcAddress("glHyperpipeAttribSGIX");
-// 	if(ptrglHyperpipeAttribSGIX == NULL) return 1;
-// 	ptrglQueryHyperpipeAttribSGIX = goglGetProcAddress("glQueryHyperpipeAttribSGIX");
-// 	if(ptrglQueryHyperpipeAttribSGIX == NULL) return 1;
+// 	ptrglxRender = goglxGetProcAddress("glxRender");
+// 	if(ptrglxRender == NULL) return 1;
+// 	ptrglxRenderLarge = goglxGetProcAddress("glxRenderLarge");
+// 	if(ptrglxRenderLarge == NULL) return 1;
+// 	ptrglxCreateContext = goglxGetProcAddress("glxCreateContext");
+// 	if(ptrglxCreateContext == NULL) return 1;
+// 	ptrglxDestroyContext = goglxGetProcAddress("glxDestroyContext");
+// 	if(ptrglxDestroyContext == NULL) return 1;
+// 	ptrglxMakeCurrent = goglxGetProcAddress("glxMakeCurrent");
+// 	if(ptrglxMakeCurrent == NULL) return 1;
+// 	ptrglxIsDirect = goglxGetProcAddress("glxIsDirect");
+// 	if(ptrglxIsDirect == NULL) return 1;
+// 	ptrglxQueryVersion = goglxGetProcAddress("glxQueryVersion");
+// 	if(ptrglxQueryVersion == NULL) return 1;
+// 	ptrglxWaitGL = goglxGetProcAddress("glxWaitGL");
+// 	if(ptrglxWaitGL == NULL) return 1;
+// 	ptrglxWaitX = goglxGetProcAddress("glxWaitX");
+// 	if(ptrglxWaitX == NULL) return 1;
+// 	ptrglxCopyContext = goglxGetProcAddress("glxCopyContext");
+// 	if(ptrglxCopyContext == NULL) return 1;
+// 	ptrglxSwapBuffers = goglxGetProcAddress("glxSwapBuffers");
+// 	if(ptrglxSwapBuffers == NULL) return 1;
+// 	ptrglxUseXFont = goglxGetProcAddress("glxUseXFont");
+// 	if(ptrglxUseXFont == NULL) return 1;
+// 	ptrglxCreateGLXPixmap = goglxGetProcAddress("glxCreateGLXPixmap");
+// 	if(ptrglxCreateGLXPixmap == NULL) return 1;
+// 	ptrglxGetVisualConfigs = goglxGetProcAddress("glxGetVisualConfigs");
+// 	if(ptrglxGetVisualConfigs == NULL) return 1;
+// 	ptrglxDestroyGLXPixmap = goglxGetProcAddress("glxDestroyGLXPixmap");
+// 	if(ptrglxDestroyGLXPixmap == NULL) return 1;
+// 	ptrglxVendorPrivate = goglxGetProcAddress("glxVendorPrivate");
+// 	if(ptrglxVendorPrivate == NULL) return 1;
+// 	ptrglxVendorPrivateWithReply = goglxGetProcAddress("glxVendorPrivateWithReply");
+// 	if(ptrglxVendorPrivateWithReply == NULL) return 1;
+// 	ptrglxQueryExtensionsString = goglxGetProcAddress("glxQueryExtensionsString");
+// 	if(ptrglxQueryExtensionsString == NULL) return 1;
+// 	ptrglxQueryServerString = goglxGetProcAddress("glxQueryServerString");
+// 	if(ptrglxQueryServerString == NULL) return 1;
+// 	ptrglxClientInfo = goglxGetProcAddress("glxClientInfo");
+// 	if(ptrglxClientInfo == NULL) return 1;
+// 	ptrglxGetFBConfigs = goglxGetProcAddress("glxGetFBConfigs");
+// 	if(ptrglxGetFBConfigs == NULL) return 1;
+// 	ptrglxCreatePixmap = goglxGetProcAddress("glxCreatePixmap");
+// 	if(ptrglxCreatePixmap == NULL) return 1;
+// 	ptrglxDestroyPixmap = goglxGetProcAddress("glxDestroyPixmap");
+// 	if(ptrglxDestroyPixmap == NULL) return 1;
+// 	ptrglxCreateNewContext = goglxGetProcAddress("glxCreateNewContext");
+// 	if(ptrglxCreateNewContext == NULL) return 1;
+// 	ptrglxQueryContext = goglxGetProcAddress("glxQueryContext");
+// 	if(ptrglxQueryContext == NULL) return 1;
+// 	ptrglxMakeContextCurrent = goglxGetProcAddress("glxMakeContextCurrent");
+// 	if(ptrglxMakeContextCurrent == NULL) return 1;
+// 	ptrglxCreatePbuffer = goglxGetProcAddress("glxCreatePbuffer");
+// 	if(ptrglxCreatePbuffer == NULL) return 1;
+// 	ptrglxDestroyPbuffer = goglxGetProcAddress("glxDestroyPbuffer");
+// 	if(ptrglxDestroyPbuffer == NULL) return 1;
+// 	ptrglxGetDrawableAttributes = goglxGetProcAddress("glxGetDrawableAttributes");
+// 	if(ptrglxGetDrawableAttributes == NULL) return 1;
+// 	ptrglxChangeDrawableAttributes = goglxGetProcAddress("glxChangeDrawableAttributes");
+// 	if(ptrglxChangeDrawableAttributes == NULL) return 1;
+// 	ptrglxCreateWindow = goglxGetProcAddress("glxCreateWindow");
+// 	if(ptrglxCreateWindow == NULL) return 1;
+// 	ptrglxDestroyWindow = goglxGetProcAddress("glxDestroyWindow");
+// 	if(ptrglxDestroyWindow == NULL) return 1;
+// 	ptrglxSwapIntervalSGI = goglxGetProcAddress("glxSwapIntervalSGI");
+// 	if(ptrglxSwapIntervalSGI == NULL) return 1;
+// 	ptrglxMakeCurrentReadSGI = goglxGetProcAddress("glxMakeCurrentReadSGI");
+// 	if(ptrglxMakeCurrentReadSGI == NULL) return 1;
+// 	ptrglxCreateGLXVideoSourceSGIX = goglxGetProcAddress("glxCreateGLXVideoSourceSGIX");
+// 	if(ptrglxCreateGLXVideoSourceSGIX == NULL) return 1;
+// 	ptrglxDestroyGLXVideoSourceSGIX = goglxGetProcAddress("glxDestroyGLXVideoSourceSGIX");
+// 	if(ptrglxDestroyGLXVideoSourceSGIX == NULL) return 1;
+// 	ptrglxQueryContextInfoEXT = goglxGetProcAddress("glxQueryContextInfoEXT");
+// 	if(ptrglxQueryContextInfoEXT == NULL) return 1;
+// 	ptrglxGetFBConfigsSGIX = goglxGetProcAddress("glxGetFBConfigsSGIX");
+// 	if(ptrglxGetFBConfigsSGIX == NULL) return 1;
+// 	ptrglxCreateContextWithConfigSGIX = goglxGetProcAddress("glxCreateContextWithConfigSGIX");
+// 	if(ptrglxCreateContextWithConfigSGIX == NULL) return 1;
+// 	ptrglxCreateGLXPixmapWithConfigSGIX = goglxGetProcAddress("glxCreateGLXPixmapWithConfigSGIX");
+// 	if(ptrglxCreateGLXPixmapWithConfigSGIX == NULL) return 1;
+// 	ptrglxCreateGLXPbufferSGIX = goglxGetProcAddress("glxCreateGLXPbufferSGIX");
+// 	if(ptrglxCreateGLXPbufferSGIX == NULL) return 1;
+// 	ptrglxDestroyGLXPbufferSGIX = goglxGetProcAddress("glxDestroyGLXPbufferSGIX");
+// 	if(ptrglxDestroyGLXPbufferSGIX == NULL) return 1;
+// 	ptrglxChangeDrawableAttributesSGIX = goglxGetProcAddress("glxChangeDrawableAttributesSGIX");
+// 	if(ptrglxChangeDrawableAttributesSGIX == NULL) return 1;
+// 	ptrglxGetDrawableAttributesSGIX = goglxGetProcAddress("glxGetDrawableAttributesSGIX");
+// 	if(ptrglxGetDrawableAttributesSGIX == NULL) return 1;
+// 	ptrglxJoinSwapGroupSGIX = goglxGetProcAddress("glxJoinSwapGroupSGIX");
+// 	if(ptrglxJoinSwapGroupSGIX == NULL) return 1;
+// 	ptrglxBindSwapBarrierSGIX = goglxGetProcAddress("glxBindSwapBarrierSGIX");
+// 	if(ptrglxBindSwapBarrierSGIX == NULL) return 1;
+// 	ptrglxQueryMaxSwapBarriersSGIX = goglxGetProcAddress("glxQueryMaxSwapBarriersSGIX");
+// 	if(ptrglxQueryMaxSwapBarriersSGIX == NULL) return 1;
+// 	ptrglxQueryHyperpipeNetworkSGIX = goglxGetProcAddress("glxQueryHyperpipeNetworkSGIX");
+// 	if(ptrglxQueryHyperpipeNetworkSGIX == NULL) return 1;
+// 	ptrglxHyperpipeConfigSGIX = goglxGetProcAddress("glxHyperpipeConfigSGIX");
+// 	if(ptrglxHyperpipeConfigSGIX == NULL) return 1;
+// 	ptrglxQueryHyperpipeConfigSGIX = goglxGetProcAddress("glxQueryHyperpipeConfigSGIX");
+// 	if(ptrglxQueryHyperpipeConfigSGIX == NULL) return 1;
+// 	ptrglxDestroyHyperpipeConfigSGIX = goglxGetProcAddress("glxDestroyHyperpipeConfigSGIX");
+// 	if(ptrglxDestroyHyperpipeConfigSGIX == NULL) return 1;
+// 	ptrglxBindHyperpipeSGIX = goglxGetProcAddress("glxBindHyperpipeSGIX");
+// 	if(ptrglxBindHyperpipeSGIX == NULL) return 1;
+// 	ptrglxQueryHyperpipeBestAttribSGIX = goglxGetProcAddress("glxQueryHyperpipeBestAttribSGIX");
+// 	if(ptrglxQueryHyperpipeBestAttribSGIX == NULL) return 1;
+// 	ptrglxHyperpipeAttribSGIX = goglxGetProcAddress("glxHyperpipeAttribSGIX");
+// 	if(ptrglxHyperpipeAttribSGIX == NULL) return 1;
+// 	ptrglxQueryHyperpipeAttribSGIX = goglxGetProcAddress("glxQueryHyperpipeAttribSGIX");
+// 	if(ptrglxQueryHyperpipeAttribSGIX == NULL) return 1;
 // 	return 0;
 // }
 // 
@@ -1810,7 +1810,7 @@ const (
 
 // http://www.opengl.org/sdk/docs/man/xhtml/glCreateContextAttribsARB.xml
 func CreateContextAttribsARB(dpy Pointer, config Pointer, share_context Pointer, direct int, attrib_list *Int) Pointer {
-	return (Pointer)(C.goglCreateContextAttribsARB((*C.Display)(dpy), (C.GLXFBConfig)(config), (C.GLXContext)(share_context), (C.int)(direct), (*C.int)(attrib_list)))
+	return (Pointer)(C.goglxCreateContextAttribsARB((*C.Display)(dpy), (C.GLXFBConfig)(config), (C.GLXContext)(share_context), (C.int)(direct), (*C.int)(attrib_list)))
 }
 // ARB_create_context_profile
 
@@ -1824,7 +1824,7 @@ func CreateContextAttribsARB(dpy Pointer, config Pointer, share_context Pointer,
 
 // http://www.opengl.org/sdk/docs/man/xhtml/glGetProcAddressARB.xml
 func GetProcAddressARB(procName *Ubyte) Pointer {
-	return (Pointer)(C.goglGetProcAddressARB((*C.GLubyte)(procName)))
+	return (Pointer)(C.goglxGetProcAddressARB((*C.GLubyte)(procName)))
 }
 // ARB_multisample
 
@@ -1836,29 +1836,29 @@ func GetProcAddressARB(procName *Ubyte) Pointer {
 
 // http://www.opengl.org/sdk/docs/man/xhtml/glGetCurrentDisplayEXT.xml
 func GetCurrentDisplayEXT() Pointer {
-	return (Pointer)(C.goglGetCurrentDisplayEXT())
+	return (Pointer)(C.goglxGetCurrentDisplayEXT())
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glQueryContextInfoEXT.xml
 func QueryContextInfoEXT(dpy Pointer, context Pointer, attribute Int, value *Int) Int {
-	return (Int)(C.goglQueryContextInfoEXT((*C.Display)(dpy), (C.GLXContext)(context), (C.int)(attribute), (*C.int)(value)))
+	return (Int)(C.goglxQueryContextInfoEXT((*C.Display)(dpy), (C.GLXContext)(context), (C.int)(attribute), (*C.int)(value)))
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glGetContextIDEXT.xml
 func GetContextIDEXT(context Pointer) uint32 {
-	return (uint32)(C.goglGetContextIDEXT((C.GLXContext)(context)))
+	return (uint32)(C.goglxGetContextIDEXT((C.GLXContext)(context)))
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glImportContextEXT.xml
 func ImportContextEXT(dpy Pointer, contextID uint32) Pointer {
-	return (Pointer)(C.goglImportContextEXT((*C.Display)(dpy), (C.GLXContextID)(contextID)))
+	return (Pointer)(C.goglxImportContextEXT((*C.Display)(dpy), (C.GLXContextID)(contextID)))
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glFreeContextEXT.xml
 func FreeContextEXT(dpy Pointer, context Pointer)  {
-	C.goglFreeContextEXT((*C.Display)(dpy), (C.GLXContext)(context))
+	C.goglxFreeContextEXT((*C.Display)(dpy), (C.GLXContext)(context))
 }
 // EXT_swap_control
 
 // http://www.opengl.org/sdk/docs/man/xhtml/glSwapIntervalEXT.xml
 func SwapIntervalEXT(dpy Pointer, drawable Pointer, interval Int)  {
-	C.goglSwapIntervalEXT((*C.Display)(dpy), (C.GLXDrawable)(drawable), (C.int)(interval))
+	C.goglxSwapIntervalEXT((*C.Display)(dpy), (C.GLXDrawable)(drawable), (C.int)(interval))
 }
 // EXT_swap_control_tear
 
@@ -1866,11 +1866,11 @@ func SwapIntervalEXT(dpy Pointer, drawable Pointer, interval Int)  {
 
 // http://www.opengl.org/sdk/docs/man/xhtml/glBindTexImageEXT.xml
 func BindTexImageEXT(dpy Pointer, drawable Pointer, buffer Int, attrib_list *Int)  {
-	C.goglBindTexImageEXT((*C.Display)(dpy), (C.GLXDrawable)(drawable), (C.int)(buffer), (*C.int)(attrib_list))
+	C.goglxBindTexImageEXT((*C.Display)(dpy), (C.GLXDrawable)(drawable), (C.int)(buffer), (*C.int)(attrib_list))
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glReleaseTexImageEXT.xml
 func ReleaseTexImageEXT(dpy Pointer, drawable Pointer, buffer Int)  {
-	C.goglReleaseTexImageEXT((*C.Display)(dpy), (C.GLXDrawable)(drawable), (C.int)(buffer))
+	C.goglxReleaseTexImageEXT((*C.Display)(dpy), (C.GLXDrawable)(drawable), (C.int)(buffer))
 }
 // EXT_visual_info
 
@@ -1882,37 +1882,37 @@ func ReleaseTexImageEXT(dpy Pointer, drawable Pointer, buffer Int)  {
 
 // http://www.opengl.org/sdk/docs/man/xhtml/glGetAGPOffsetMESA.xml
 func GetAGPOffsetMESA(pointer Pointer) uint32 {
-	return (uint32)(C.goglGetAGPOffsetMESA((unsafe.Pointer)(pointer)))
+	return (uint32)(C.goglxGetAGPOffsetMESA((unsafe.Pointer)(pointer)))
 }
 // MESA_copy_sub_buffer
 
 // http://www.opengl.org/sdk/docs/man/xhtml/glCopySubBufferMESA.xml
 func CopySubBufferMESA(dpy Pointer, drawable Pointer, x Int, y Int, width Int, height Int)  {
-	C.goglCopySubBufferMESA((*C.Display)(dpy), (C.GLXDrawable)(drawable), (C.int)(x), (C.int)(y), (C.int)(width), (C.int)(height))
+	C.goglxCopySubBufferMESA((*C.Display)(dpy), (C.GLXDrawable)(drawable), (C.int)(x), (C.int)(y), (C.int)(width), (C.int)(height))
 }
 // MESA_pixmap_colormap
 
 // http://www.opengl.org/sdk/docs/man/xhtml/glCreateGLXPixmapMESA.xml
 func CreateGLXPixmapMESA(dpy Pointer, visual Pointer, pixmap Pointer, cmap Pointer) Pointer {
-	return (Pointer)(C.goglCreateGLXPixmapMESA((*C.Display)(dpy), (C.XVisualInfo)(visual), (C.Pixmap)(pixmap), (C.Colormap)(cmap)))
+	return (Pointer)(C.goglxCreateGLXPixmapMESA((*C.Display)(dpy), (C.XVisualInfo)(visual), (C.Pixmap)(pixmap), (C.Colormap)(cmap)))
 }
 // MESA_release_buffers
 
 // http://www.opengl.org/sdk/docs/man/xhtml/glReleaseBuffersMESA.xml
 func ReleaseBuffersMESA(dpy Pointer, drawable Pointer) int {
-	return (int)(C.goglReleaseBuffersMESA((*C.Display)(dpy), (C.GLXDrawable)(drawable)))
+	return (int)(C.goglxReleaseBuffersMESA((*C.Display)(dpy), (C.GLXDrawable)(drawable)))
 }
 // MESA_set_3dfx_mode
 
 // http://www.opengl.org/sdk/docs/man/xhtml/glSet3DfxModeMESA.xml
 func Set3DfxModeMESA(mode Int) int {
-	return (int)(C.goglSet3DfxModeMESA((C.int)(mode)))
+	return (int)(C.goglxSet3DfxModeMESA((C.int)(mode)))
 }
 // NV_copy_image
 
 // http://www.opengl.org/sdk/docs/man/xhtml/glCopyImageSubDataNV.xml
 func CopyImageSubDataNV(dpy Pointer, srcCtx Pointer, srcName Uint, srcTarget Enum, srcLevel Int, srcX Int, srcY Int, srcZ Int, dstCtx Pointer, dstName Uint, dstTarget Enum, dstLevel Int, dstX Int, dstY Int, dstZ Int, width Sizei, height Sizei, depth Sizei)  {
-	C.goglCopyImageSubDataNV((*C.Display)(dpy), (C.GLXContext)(srcCtx), (C.GLuint)(srcName), (C.GLenum)(srcTarget), (C.GLint)(srcLevel), (C.GLint)(srcX), (C.GLint)(srcY), (C.GLint)(srcZ), (C.GLXContext)(dstCtx), (C.GLuint)(dstName), (C.GLenum)(dstTarget), (C.GLint)(dstLevel), (C.GLint)(dstX), (C.GLint)(dstY), (C.GLint)(dstZ), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLsizei)(depth))
+	C.goglxCopyImageSubDataNV((*C.Display)(dpy), (C.GLXContext)(srcCtx), (C.GLuint)(srcName), (C.GLenum)(srcTarget), (C.GLint)(srcLevel), (C.GLint)(srcX), (C.GLint)(srcY), (C.GLint)(srcZ), (C.GLXContext)(dstCtx), (C.GLuint)(dstName), (C.GLenum)(dstTarget), (C.GLint)(dstLevel), (C.GLint)(dstX), (C.GLint)(dstY), (C.GLint)(dstZ), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLsizei)(depth))
 }
 // NV_float_buffer
 
@@ -1922,85 +1922,85 @@ func CopyImageSubDataNV(dpy Pointer, srcCtx Pointer, srcName Uint, srcTarget Enu
 
 // http://www.opengl.org/sdk/docs/man/xhtml/glEnumerateVideoDevicesNV.xml
 func EnumerateVideoDevicesNV(dpy Pointer, screen Int, nelements *Int) *uint32 {
-	return (*uint32)(C.goglEnumerateVideoDevicesNV((*C.Display)(dpy), (C.int)(screen), (*C.int)(nelements)))
+	return (*uint32)(C.goglxEnumerateVideoDevicesNV((*C.Display)(dpy), (C.int)(screen), (*C.int)(nelements)))
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glBindVideoDeviceNV.xml
 func BindVideoDeviceNV(dpy Pointer, video_slot uint32, video_device uint32, attrib_list *Int) Int {
-	return (Int)(C.goglBindVideoDeviceNV((*C.Display)(dpy), (C.uint32)(video_slot), (C.uint32)(video_device), (*C.int)(attrib_list)))
+	return (Int)(C.goglxBindVideoDeviceNV((*C.Display)(dpy), (C.uint32)(video_slot), (C.uint32)(video_device), (*C.int)(attrib_list)))
 }
 // NV_swap_group
 
 // http://www.opengl.org/sdk/docs/man/xhtml/glJoinSwapGroupNV.xml
 func JoinSwapGroupNV(dpy Pointer, drawable Pointer, group Uint) int {
-	return (int)(C.goglJoinSwapGroupNV((*C.Display)(dpy), (C.GLXDrawable)(drawable), (C.GLuint)(group)))
+	return (int)(C.goglxJoinSwapGroupNV((*C.Display)(dpy), (C.GLXDrawable)(drawable), (C.GLuint)(group)))
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glBindSwapBarrierNV.xml
 func BindSwapBarrierNV(dpy Pointer, group Uint, barrier Uint) int {
-	return (int)(C.goglBindSwapBarrierNV((*C.Display)(dpy), (C.GLuint)(group), (C.GLuint)(barrier)))
+	return (int)(C.goglxBindSwapBarrierNV((*C.Display)(dpy), (C.GLuint)(group), (C.GLuint)(barrier)))
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glQuerySwapGroupNV.xml
 func QuerySwapGroupNV(dpy Pointer, drawable Pointer, group *Uint, barrier *Uint) int {
-	return (int)(C.goglQuerySwapGroupNV((*C.Display)(dpy), (C.GLXDrawable)(drawable), (*C.GLuint)(group), (*C.GLuint)(barrier)))
+	return (int)(C.goglxQuerySwapGroupNV((*C.Display)(dpy), (C.GLXDrawable)(drawable), (*C.GLuint)(group), (*C.GLuint)(barrier)))
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glQueryMaxSwapGroupsNV.xml
 func QueryMaxSwapGroupsNV(dpy Pointer, screen Int, maxGroups *Uint, maxBarriers *Uint) int {
-	return (int)(C.goglQueryMaxSwapGroupsNV((*C.Display)(dpy), (C.int)(screen), (*C.GLuint)(maxGroups), (*C.GLuint)(maxBarriers)))
+	return (int)(C.goglxQueryMaxSwapGroupsNV((*C.Display)(dpy), (C.int)(screen), (*C.GLuint)(maxGroups), (*C.GLuint)(maxBarriers)))
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glQueryFrameCountNV.xml
 func QueryFrameCountNV(dpy Pointer, screen Int, count *Uint) int {
-	return (int)(C.goglQueryFrameCountNV((*C.Display)(dpy), (C.int)(screen), (*C.GLuint)(count)))
+	return (int)(C.goglxQueryFrameCountNV((*C.Display)(dpy), (C.int)(screen), (*C.GLuint)(count)))
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glResetFrameCountNV.xml
 func ResetFrameCountNV(dpy Pointer, screen Int) int {
-	return (int)(C.goglResetFrameCountNV((*C.Display)(dpy), (C.int)(screen)))
+	return (int)(C.goglxResetFrameCountNV((*C.Display)(dpy), (C.int)(screen)))
 }
 // NV_video_capture
 
 // http://www.opengl.org/sdk/docs/man/xhtml/glBindVideoCaptureDeviceNV.xml
 func BindVideoCaptureDeviceNV(dpy Pointer, video_capture_slot uint32, device Pointer) Int {
-	return (Int)(C.goglBindVideoCaptureDeviceNV((*C.Display)(dpy), (C.uint32)(video_capture_slot), (C.GLXVideoCaptureDeviceNV)(device)))
+	return (Int)(C.goglxBindVideoCaptureDeviceNV((*C.Display)(dpy), (C.uint32)(video_capture_slot), (C.GLXVideoCaptureDeviceNV)(device)))
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glEnumerateVideoCaptureDevicesNV.xml
 func EnumerateVideoCaptureDevicesNV(dpy Pointer, screen Int, nelements *Int) Pointer {
-	return (Pointer)(C.goglEnumerateVideoCaptureDevicesNV((*C.Display)(dpy), (C.int)(screen), (*C.int)(nelements)))
+	return (Pointer)(C.goglxEnumerateVideoCaptureDevicesNV((*C.Display)(dpy), (C.int)(screen), (*C.int)(nelements)))
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glLockVideoCaptureDeviceNV.xml
 func LockVideoCaptureDeviceNV(dpy Pointer, device Pointer)  {
-	C.goglLockVideoCaptureDeviceNV((*C.Display)(dpy), (C.GLXVideoCaptureDeviceNV)(device))
+	C.goglxLockVideoCaptureDeviceNV((*C.Display)(dpy), (C.GLXVideoCaptureDeviceNV)(device))
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glQueryVideoCaptureDeviceNV.xml
 func QueryVideoCaptureDeviceNV(dpy Pointer, device Pointer, attribute Int, value *Int) Int {
-	return (Int)(C.goglQueryVideoCaptureDeviceNV((*C.Display)(dpy), (C.GLXVideoCaptureDeviceNV)(device), (C.int)(attribute), (*C.int)(value)))
+	return (Int)(C.goglxQueryVideoCaptureDeviceNV((*C.Display)(dpy), (C.GLXVideoCaptureDeviceNV)(device), (C.int)(attribute), (*C.int)(value)))
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glReleaseVideoCaptureDeviceNV.xml
 func ReleaseVideoCaptureDeviceNV(dpy Pointer, device Pointer)  {
-	C.goglReleaseVideoCaptureDeviceNV((*C.Display)(dpy), (C.GLXVideoCaptureDeviceNV)(device))
+	C.goglxReleaseVideoCaptureDeviceNV((*C.Display)(dpy), (C.GLXVideoCaptureDeviceNV)(device))
 }
 // NV_video_output
 
 // http://www.opengl.org/sdk/docs/man/xhtml/glGetVideoDeviceNV.xml
 func GetVideoDeviceNV(dpy Pointer, screen Int, numVideoDevices Int, pVideoDevice Pointer) Int {
-	return (Int)(C.goglGetVideoDeviceNV((*C.Display)(dpy), (C.int)(screen), (C.int)(numVideoDevices), (C.GLXVideoDeviceNV)(pVideoDevice)))
+	return (Int)(C.goglxGetVideoDeviceNV((*C.Display)(dpy), (C.int)(screen), (C.int)(numVideoDevices), (C.GLXVideoDeviceNV)(pVideoDevice)))
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glReleaseVideoDeviceNV.xml
 func ReleaseVideoDeviceNV(dpy Pointer, screen Int, VideoDevice Pointer) Int {
-	return (Int)(C.goglReleaseVideoDeviceNV((*C.Display)(dpy), (C.int)(screen), (C.GLXVideoDeviceNV)(VideoDevice)))
+	return (Int)(C.goglxReleaseVideoDeviceNV((*C.Display)(dpy), (C.int)(screen), (C.GLXVideoDeviceNV)(VideoDevice)))
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glBindVideoImageNV.xml
 func BindVideoImageNV(dpy Pointer, VideoDevice Pointer, pbuf Pointer, iVideoBuffer Int) Int {
-	return (Int)(C.goglBindVideoImageNV((*C.Display)(dpy), (C.GLXVideoDeviceNV)(VideoDevice), (C.GLXPbuffer)(pbuf), (C.int)(iVideoBuffer)))
+	return (Int)(C.goglxBindVideoImageNV((*C.Display)(dpy), (C.GLXVideoDeviceNV)(VideoDevice), (C.GLXPbuffer)(pbuf), (C.int)(iVideoBuffer)))
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glReleaseVideoImageNV.xml
 func ReleaseVideoImageNV(dpy Pointer, pbuf Pointer) Int {
-	return (Int)(C.goglReleaseVideoImageNV((*C.Display)(dpy), (C.GLXPbuffer)(pbuf)))
+	return (Int)(C.goglxReleaseVideoImageNV((*C.Display)(dpy), (C.GLXPbuffer)(pbuf)))
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glSendPbufferToVideoNV.xml
 func SendPbufferToVideoNV(dpy Pointer, pbuf Pointer, iBufferType Int, pulCounterPbuffer *uint32, bBlock Boolean) Int {
-	return (Int)(C.goglSendPbufferToVideoNV((*C.Display)(dpy), (C.GLXPbuffer)(pbuf), (C.int)(iBufferType), (*C.unsigned_long)(pulCounterPbuffer), (C.GLboolean)(bBlock)))
+	return (Int)(C.goglxSendPbufferToVideoNV((*C.Display)(dpy), (C.GLXPbuffer)(pbuf), (C.int)(iBufferType), (*C.unsigned_long)(pulCounterPbuffer), (C.GLboolean)(bBlock)))
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glGetVideoInfoNV.xml
 func GetVideoInfoNV(dpy Pointer, screen Int, VideoDevice Pointer, pulCounterOutputPbuffer *uint32, pulCounterOutputVideo *uint32) Int {
-	return (Int)(C.goglGetVideoInfoNV((*C.Display)(dpy), (C.int)(screen), (C.GLXVideoDeviceNV)(VideoDevice), (*C.unsigned_long)(pulCounterOutputPbuffer), (*C.unsigned_long)(pulCounterOutputVideo)))
+	return (Int)(C.goglxGetVideoInfoNV((*C.Display)(dpy), (C.int)(screen), (C.GLXVideoDeviceNV)(VideoDevice), (*C.unsigned_long)(pulCounterOutputPbuffer), (*C.unsigned_long)(pulCounterOutputVideo)))
 }
 // OML_swap_method
 
@@ -2008,23 +2008,23 @@ func GetVideoInfoNV(dpy Pointer, screen Int, VideoDevice Pointer, pulCounterOutp
 
 // http://www.opengl.org/sdk/docs/man/xhtml/glGetSyncValuesOML.xml
 func GetSyncValuesOML(dpy Pointer, drawable Pointer, ust *int64, msc *int64, sbc *int64) int {
-	return (int)(C.goglGetSyncValuesOML((*C.Display)(dpy), (C.GLXDrawable)(drawable), (*C.int64_t)(ust), (*C.int64_t)(msc), (*C.int64_t)(sbc)))
+	return (int)(C.goglxGetSyncValuesOML((*C.Display)(dpy), (C.GLXDrawable)(drawable), (*C.int64_t)(ust), (*C.int64_t)(msc), (*C.int64_t)(sbc)))
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glGetMscRateOML.xml
 func GetMscRateOML(dpy Pointer, drawable Pointer, numerator *int32, denominator *int32) int {
-	return (int)(C.goglGetMscRateOML((*C.Display)(dpy), (C.GLXDrawable)(drawable), (*C.int32_t)(numerator), (*C.int32_t)(denominator)))
+	return (int)(C.goglxGetMscRateOML((*C.Display)(dpy), (C.GLXDrawable)(drawable), (*C.int32_t)(numerator), (*C.int32_t)(denominator)))
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glSwapBuffersMscOML.xml
 func SwapBuffersMscOML(dpy Pointer, drawable Pointer, target_msc int64, divisor int64, remainder int64) int64 {
-	return (int64)(C.goglSwapBuffersMscOML((*C.Display)(dpy), (C.GLXDrawable)(drawable), (C.int64_t)(target_msc), (C.int64_t)(divisor), (C.int64_t)(remainder)))
+	return (int64)(C.goglxSwapBuffersMscOML((*C.Display)(dpy), (C.GLXDrawable)(drawable), (C.int64_t)(target_msc), (C.int64_t)(divisor), (C.int64_t)(remainder)))
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glWaitForMscOML.xml
 func WaitForMscOML(dpy Pointer, drawable Pointer, target_msc int64, divisor int64, remainder int64, ust *int64, msc *int64, sbc *int64) int {
-	return (int)(C.goglWaitForMscOML((*C.Display)(dpy), (C.GLXDrawable)(drawable), (C.int64_t)(target_msc), (C.int64_t)(divisor), (C.int64_t)(remainder), (*C.int64_t)(ust), (*C.int64_t)(msc), (*C.int64_t)(sbc)))
+	return (int)(C.goglxWaitForMscOML((*C.Display)(dpy), (C.GLXDrawable)(drawable), (C.int64_t)(target_msc), (C.int64_t)(divisor), (C.int64_t)(remainder), (*C.int64_t)(ust), (*C.int64_t)(msc), (*C.int64_t)(sbc)))
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glWaitForSbcOML.xml
 func WaitForSbcOML(dpy Pointer, drawable Pointer, target_sbc int64, ust *int64, msc *int64, sbc *int64) int {
-	return (int)(C.goglWaitForSbcOML((*C.Display)(dpy), (C.GLXDrawable)(drawable), (C.int64_t)(target_sbc), (*C.int64_t)(ust), (*C.int64_t)(msc), (*C.int64_t)(sbc)))
+	return (int)(C.goglxWaitForSbcOML((*C.Display)(dpy), (C.GLXDrawable)(drawable), (C.int64_t)(target_sbc), (*C.int64_t)(ust), (*C.int64_t)(msc), (*C.int64_t)(sbc)))
 }
 // SGIS_multisample
 
@@ -2032,137 +2032,137 @@ func WaitForSbcOML(dpy Pointer, drawable Pointer, target_sbc int64, ust *int64, 
 
 // http://www.opengl.org/sdk/docs/man/xhtml/glAssociateDMPbufferSGIX.xml
 func AssociateDMPbufferSGIX(dpy Pointer, pbuffer Pointer, params Pointer, dmbuffer Pointer) int {
-	return (int)(C.goglAssociateDMPbufferSGIX((*C.Display)(dpy), (C.GLXPbufferSGIX)(pbuffer), (C.DMparams)(params), (C.DMbuffer)(dmbuffer)))
+	return (int)(C.goglxAssociateDMPbufferSGIX((*C.Display)(dpy), (C.GLXPbufferSGIX)(pbuffer), (C.DMparams)(params), (C.DMbuffer)(dmbuffer)))
 }
 // SGIX_fbconfig
 
 // http://www.opengl.org/sdk/docs/man/xhtml/glGetFBConfigAttribSGIX.xml
 func GetFBConfigAttribSGIX(dpy Pointer, config Pointer, attribute Int, value *Int) Int {
-	return (Int)(C.goglGetFBConfigAttribSGIX((*C.Display)(dpy), (C.GLXFBConfigSGIX)(config), (C.int)(attribute), (*C.int)(value)))
+	return (Int)(C.goglxGetFBConfigAttribSGIX((*C.Display)(dpy), (C.GLXFBConfigSGIX)(config), (C.int)(attribute), (*C.int)(value)))
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glChooseFBConfigSGIX.xml
 func ChooseFBConfigSGIX(dpy Pointer, screen Int, attrib_list *Int, nelements *Int) Pointer {
-	return (Pointer)(C.goglChooseFBConfigSGIX((*C.Display)(dpy), (C.int)(screen), (*C.int)(attrib_list), (*C.int)(nelements)))
+	return (Pointer)(C.goglxChooseFBConfigSGIX((*C.Display)(dpy), (C.int)(screen), (*C.int)(attrib_list), (*C.int)(nelements)))
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glCreateGLXPixmapWithConfigSGIX.xml
 func CreateGLXPixmapWithConfigSGIX(dpy Pointer, config Pointer, pixmap Pointer) Pointer {
-	return (Pointer)(C.goglCreateGLXPixmapWithConfigSGIX((*C.Display)(dpy), (C.GLXFBConfigSGIX)(config), (C.Pixmap)(pixmap)))
+	return (Pointer)(C.goglxCreateGLXPixmapWithConfigSGIX((*C.Display)(dpy), (C.GLXFBConfigSGIX)(config), (C.Pixmap)(pixmap)))
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glCreateContextWithConfigSGIX.xml
 func CreateContextWithConfigSGIX(dpy Pointer, config Pointer, render_type Int, share_list Pointer, direct int) Pointer {
-	return (Pointer)(C.goglCreateContextWithConfigSGIX((*C.Display)(dpy), (C.GLXFBConfigSGIX)(config), (C.int)(render_type), (C.GLXContext)(share_list), (C.int)(direct)))
+	return (Pointer)(C.goglxCreateContextWithConfigSGIX((*C.Display)(dpy), (C.GLXFBConfigSGIX)(config), (C.int)(render_type), (C.GLXContext)(share_list), (C.int)(direct)))
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glGetVisualFromFBConfigSGIX.xml
 func GetVisualFromFBConfigSGIX(dpy Pointer, config Pointer) Pointer {
-	return (Pointer)(C.goglGetVisualFromFBConfigSGIX((*C.Display)(dpy), (C.GLXFBConfigSGIX)(config)))
+	return (Pointer)(C.goglxGetVisualFromFBConfigSGIX((*C.Display)(dpy), (C.GLXFBConfigSGIX)(config)))
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glGetFBConfigFromVisualSGIX.xml
 func GetFBConfigFromVisualSGIX(dpy Pointer, vis Pointer) Pointer {
-	return (Pointer)(C.goglGetFBConfigFromVisualSGIX((*C.Display)(dpy), (C.XVisualInfo)(vis)))
+	return (Pointer)(C.goglxGetFBConfigFromVisualSGIX((*C.Display)(dpy), (C.XVisualInfo)(vis)))
 }
 // SGIX_hyperpipe
 
 // http://www.opengl.org/sdk/docs/man/xhtml/glQueryHyperpipeNetworkSGIX.xml
 func QueryHyperpipeNetworkSGIX(dpy Pointer, npipes *Int) Pointer {
-	return (Pointer)(C.goglQueryHyperpipeNetworkSGIX((*C.Display)(dpy), (*C.int)(npipes)))
+	return (Pointer)(C.goglxQueryHyperpipeNetworkSGIX((*C.Display)(dpy), (*C.int)(npipes)))
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glHyperpipeConfigSGIX.xml
 func HyperpipeConfigSGIX(dpy Pointer, networkId Int, npipes Int, cfg Pointer, hpId *Int) Int {
-	return (Int)(C.goglHyperpipeConfigSGIX((*C.Display)(dpy), (C.int)(networkId), (C.int)(npipes), (*C.GLXHyperpipeConfigSGIX)(cfg), (*C.int)(hpId)))
+	return (Int)(C.goglxHyperpipeConfigSGIX((*C.Display)(dpy), (C.int)(networkId), (C.int)(npipes), (*C.GLXHyperpipeConfigSGIX)(cfg), (*C.int)(hpId)))
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glQueryHyperpipeConfigSGIX.xml
 func QueryHyperpipeConfigSGIX(dpy Pointer, hpId Int, npipes *Int) Pointer {
-	return (Pointer)(C.goglQueryHyperpipeConfigSGIX((*C.Display)(dpy), (C.int)(hpId), (*C.int)(npipes)))
+	return (Pointer)(C.goglxQueryHyperpipeConfigSGIX((*C.Display)(dpy), (C.int)(hpId), (*C.int)(npipes)))
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glDestroyHyperpipeConfigSGIX.xml
 func DestroyHyperpipeConfigSGIX(dpy Pointer, hpId Int) Int {
-	return (Int)(C.goglDestroyHyperpipeConfigSGIX((*C.Display)(dpy), (C.int)(hpId)))
+	return (Int)(C.goglxDestroyHyperpipeConfigSGIX((*C.Display)(dpy), (C.int)(hpId)))
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glBindHyperpipeSGIX.xml
 func BindHyperpipeSGIX(dpy Pointer, hpId Int) Int {
-	return (Int)(C.goglBindHyperpipeSGIX((*C.Display)(dpy), (C.int)(hpId)))
+	return (Int)(C.goglxBindHyperpipeSGIX((*C.Display)(dpy), (C.int)(hpId)))
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glQueryHyperpipeBestAttribSGIX.xml
 func QueryHyperpipeBestAttribSGIX(dpy Pointer, timeSlice Int, attrib Int, size Int, attribList Pointer, returnAttribList Pointer) Int {
-	return (Int)(C.goglQueryHyperpipeBestAttribSGIX((*C.Display)(dpy), (C.int)(timeSlice), (C.int)(attrib), (C.int)(size), (unsafe.Pointer)(attribList), (unsafe.Pointer)(returnAttribList)))
+	return (Int)(C.goglxQueryHyperpipeBestAttribSGIX((*C.Display)(dpy), (C.int)(timeSlice), (C.int)(attrib), (C.int)(size), (unsafe.Pointer)(attribList), (unsafe.Pointer)(returnAttribList)))
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glHyperpipeAttribSGIX.xml
 func HyperpipeAttribSGIX(dpy Pointer, timeSlice Int, attrib Int, size Int, attribList Pointer) Int {
-	return (Int)(C.goglHyperpipeAttribSGIX((*C.Display)(dpy), (C.int)(timeSlice), (C.int)(attrib), (C.int)(size), (unsafe.Pointer)(attribList)))
+	return (Int)(C.goglxHyperpipeAttribSGIX((*C.Display)(dpy), (C.int)(timeSlice), (C.int)(attrib), (C.int)(size), (unsafe.Pointer)(attribList)))
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glQueryHyperpipeAttribSGIX.xml
 func QueryHyperpipeAttribSGIX(dpy Pointer, timeSlice Int, attrib Int, size Int, returnAttribList Pointer) Int {
-	return (Int)(C.goglQueryHyperpipeAttribSGIX((*C.Display)(dpy), (C.int)(timeSlice), (C.int)(attrib), (C.int)(size), (unsafe.Pointer)(returnAttribList)))
+	return (Int)(C.goglxQueryHyperpipeAttribSGIX((*C.Display)(dpy), (C.int)(timeSlice), (C.int)(attrib), (C.int)(size), (unsafe.Pointer)(returnAttribList)))
 }
 // SGIX_pbuffer
 
 // http://www.opengl.org/sdk/docs/man/xhtml/glCreateGLXPbufferSGIX.xml
 func CreateGLXPbufferSGIX(dpy Pointer, config Pointer, width uint32, height uint32, attrib_list *Int) Pointer {
-	return (Pointer)(C.goglCreateGLXPbufferSGIX((*C.Display)(dpy), (C.GLXFBConfigSGIX)(config), (C.uint32)(width), (C.uint32)(height), (*C.int)(attrib_list)))
+	return (Pointer)(C.goglxCreateGLXPbufferSGIX((*C.Display)(dpy), (C.GLXFBConfigSGIX)(config), (C.uint32)(width), (C.uint32)(height), (*C.int)(attrib_list)))
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glDestroyGLXPbufferSGIX.xml
 func DestroyGLXPbufferSGIX(dpy Pointer, pbuf Pointer)  {
-	C.goglDestroyGLXPbufferSGIX((*C.Display)(dpy), (C.GLXPbufferSGIX)(pbuf))
+	C.goglxDestroyGLXPbufferSGIX((*C.Display)(dpy), (C.GLXPbufferSGIX)(pbuf))
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glQueryGLXPbufferSGIX.xml
 func QueryGLXPbufferSGIX(dpy Pointer, pbuf Pointer, attribute Int, value *uint32) Int {
-	return (Int)(C.goglQueryGLXPbufferSGIX((*C.Display)(dpy), (C.GLXPbufferSGIX)(pbuf), (C.int)(attribute), (*C.uint32)(value)))
+	return (Int)(C.goglxQueryGLXPbufferSGIX((*C.Display)(dpy), (C.GLXPbufferSGIX)(pbuf), (C.int)(attribute), (*C.uint32)(value)))
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glSelectEventSGIX.xml
 func SelectEventSGIX(dpy Pointer, drawable Pointer, mask uint32)  {
-	C.goglSelectEventSGIX((*C.Display)(dpy), (C.GLXDrawable)(drawable), (C.unsigned_long)(mask))
+	C.goglxSelectEventSGIX((*C.Display)(dpy), (C.GLXDrawable)(drawable), (C.unsigned_long)(mask))
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glGetSelectedEventSGIX.xml
 func GetSelectedEventSGIX(dpy Pointer, drawable Pointer, mask *uint32)  {
-	C.goglGetSelectedEventSGIX((*C.Display)(dpy), (C.GLXDrawable)(drawable), (*C.unsigned_long)(mask))
+	C.goglxGetSelectedEventSGIX((*C.Display)(dpy), (C.GLXDrawable)(drawable), (*C.unsigned_long)(mask))
 }
 // SGIX_swap_barrier
 
 // http://www.opengl.org/sdk/docs/man/xhtml/glBindSwapBarrierSGIX.xml
 func BindSwapBarrierSGIX(dpy Pointer, drawable Pointer, barrier Int)  {
-	C.goglBindSwapBarrierSGIX((*C.Display)(dpy), (C.GLXDrawable)(drawable), (C.int)(barrier))
+	C.goglxBindSwapBarrierSGIX((*C.Display)(dpy), (C.GLXDrawable)(drawable), (C.int)(barrier))
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glQueryMaxSwapBarriersSGIX.xml
 func QueryMaxSwapBarriersSGIX(dpy Pointer, screen Int, max *Int) int {
-	return (int)(C.goglQueryMaxSwapBarriersSGIX((*C.Display)(dpy), (C.int)(screen), (*C.int)(max)))
+	return (int)(C.goglxQueryMaxSwapBarriersSGIX((*C.Display)(dpy), (C.int)(screen), (*C.int)(max)))
 }
 // SGIX_swap_group
 
 // http://www.opengl.org/sdk/docs/man/xhtml/glJoinSwapGroupSGIX.xml
 func JoinSwapGroupSGIX(dpy Pointer, drawable Pointer, member Pointer)  {
-	C.goglJoinSwapGroupSGIX((*C.Display)(dpy), (C.GLXDrawable)(drawable), (C.GLXDrawable)(member))
+	C.goglxJoinSwapGroupSGIX((*C.Display)(dpy), (C.GLXDrawable)(drawable), (C.GLXDrawable)(member))
 }
 // SGIX_video_resize
 
 // http://www.opengl.org/sdk/docs/man/xhtml/glBindChannelToWindowSGIX.xml
 func BindChannelToWindowSGIX(display Pointer, screen Int, channel Int, window Pointer) Int {
-	return (Int)(C.goglBindChannelToWindowSGIX((*C.Display)(display), (C.int)(screen), (C.int)(channel), (C.Window)(window)))
+	return (Int)(C.goglxBindChannelToWindowSGIX((*C.Display)(display), (C.int)(screen), (C.int)(channel), (C.Window)(window)))
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glChannelRectSGIX.xml
 func ChannelRectSGIX(display Pointer, screen Int, channel Int, x Int, y Int, w Int, h Int) Int {
-	return (Int)(C.goglChannelRectSGIX((*C.Display)(display), (C.int)(screen), (C.int)(channel), (C.int)(x), (C.int)(y), (C.int)(w), (C.int)(h)))
+	return (Int)(C.goglxChannelRectSGIX((*C.Display)(display), (C.int)(screen), (C.int)(channel), (C.int)(x), (C.int)(y), (C.int)(w), (C.int)(h)))
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glQueryChannelRectSGIX.xml
 func QueryChannelRectSGIX(display Pointer, screen Int, channel Int, dx *Int, dy *Int, dw *Int, dh *Int) Int {
-	return (Int)(C.goglQueryChannelRectSGIX((*C.Display)(display), (C.int)(screen), (C.int)(channel), (*C.int)(dx), (*C.int)(dy), (*C.int)(dw), (*C.int)(dh)))
+	return (Int)(C.goglxQueryChannelRectSGIX((*C.Display)(display), (C.int)(screen), (C.int)(channel), (*C.int)(dx), (*C.int)(dy), (*C.int)(dw), (*C.int)(dh)))
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glQueryChannelDeltasSGIX.xml
 func QueryChannelDeltasSGIX(display Pointer, screen Int, channel Int, x *Int, y *Int, w *Int, h *Int) Int {
-	return (Int)(C.goglQueryChannelDeltasSGIX((*C.Display)(display), (C.int)(screen), (C.int)(channel), (*C.int)(x), (*C.int)(y), (*C.int)(w), (*C.int)(h)))
+	return (Int)(C.goglxQueryChannelDeltasSGIX((*C.Display)(display), (C.int)(screen), (C.int)(channel), (*C.int)(x), (*C.int)(y), (*C.int)(w), (*C.int)(h)))
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glChannelRectSyncSGIX.xml
 func ChannelRectSyncSGIX(display Pointer, screen Int, channel Int, synctype Enum) Int {
-	return (Int)(C.goglChannelRectSyncSGIX((*C.Display)(display), (C.int)(screen), (C.int)(channel), (C.GLenum)(synctype)))
+	return (Int)(C.goglxChannelRectSyncSGIX((*C.Display)(display), (C.int)(screen), (C.int)(channel), (C.GLenum)(synctype)))
 }
 // SGIX_video_source
 
 // http://www.opengl.org/sdk/docs/man/xhtml/glCreateGLXVideoSourceSGIX.xml
 func CreateGLXVideoSourceSGIX(display Pointer, screen Int, server Pointer, path Pointer, nodeClass Int, drainNode Pointer) Pointer {
-	return (Pointer)(C.goglCreateGLXVideoSourceSGIX((*C.Display)(display), (C.int)(screen), (C.VLServer)(server), (C.VLPath)(path), (C.int)(nodeClass), (C.VLNode)(drainNode)))
+	return (Pointer)(C.goglxCreateGLXVideoSourceSGIX((*C.Display)(display), (C.int)(screen), (C.VLServer)(server), (C.VLPath)(path), (C.int)(nodeClass), (C.VLNode)(drainNode)))
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glDestroyGLXVideoSourceSGIX.xml
 func DestroyGLXVideoSourceSGIX(dpy Pointer, glxvideosource Pointer)  {
-	C.goglDestroyGLXVideoSourceSGIX((*C.Display)(dpy), (*C.GGLXVideoSourceSGIX)(glxvideosource))
+	C.goglxDestroyGLXVideoSourceSGIX((*C.Display)(dpy), (*C.GGLXVideoSourceSGIX)(glxvideosource))
 }
 // SGIX_visual_select_group
 
@@ -2170,341 +2170,341 @@ func DestroyGLXVideoSourceSGIX(dpy Pointer, glxvideosource Pointer)  {
 
 // http://www.opengl.org/sdk/docs/man/xhtml/glCushionSGI.xml
 func CushionSGI(dpy Pointer, window Pointer, cushion float32)  {
-	C.goglCushionSGI((*C.Display)(dpy), (C.Window)(window), (C.float32)(cushion))
+	C.goglxCushionSGI((*C.Display)(dpy), (C.Window)(window), (C.float32)(cushion))
 }
 // SGI_make_current_read
 
 // http://www.opengl.org/sdk/docs/man/xhtml/glMakeCurrentReadSGI.xml
 func MakeCurrentReadSGI(dpy Pointer, draw Pointer, read Pointer, ctx Pointer) int {
-	return (int)(C.goglMakeCurrentReadSGI((*C.Display)(dpy), (C.GLXDrawable)(draw), (C.GLXDrawable)(read), (C.GLXContext)(ctx)))
+	return (int)(C.goglxMakeCurrentReadSGI((*C.Display)(dpy), (C.GLXDrawable)(draw), (C.GLXDrawable)(read), (C.GLXContext)(ctx)))
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glGetCurrentReadDrawableSGI.xml
 func GetCurrentReadDrawableSGI() Pointer {
-	return (Pointer)(C.goglGetCurrentReadDrawableSGI())
+	return (Pointer)(C.goglxGetCurrentReadDrawableSGI())
 }
 // SGI_swap_control
 
 // http://www.opengl.org/sdk/docs/man/xhtml/glSwapIntervalSGI.xml
 func SwapIntervalSGI(interval Int) Int {
-	return (Int)(C.goglSwapIntervalSGI((C.int)(interval)))
+	return (Int)(C.goglxSwapIntervalSGI((C.int)(interval)))
 }
 // SGI_video_sync
 
 // http://www.opengl.org/sdk/docs/man/xhtml/glGetVideoSyncSGI.xml
 func GetVideoSyncSGI(count *uint32) Int {
-	return (Int)(C.goglGetVideoSyncSGI((*C.uint32)(count)))
+	return (Int)(C.goglxGetVideoSyncSGI((*C.uint32)(count)))
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glWaitVideoSyncSGI.xml
 func WaitVideoSyncSGI(divisor Int, remainder Int, count *uint32) Int {
-	return (Int)(C.goglWaitVideoSyncSGI((C.int)(divisor), (C.int)(remainder), (*C.uint32)(count)))
+	return (Int)(C.goglxWaitVideoSyncSGI((C.int)(divisor), (C.int)(remainder), (*C.uint32)(count)))
 }
 // SUN_get_transparent_index
 
 // http://www.opengl.org/sdk/docs/man/xhtml/glGetTransparentIndexSUN.xml
 func GetTransparentIndexSUN(dpy Pointer, overlay Pointer, underlay Pointer, pTransparentIndex *int32) int {
-	return (int)(C.goglGetTransparentIndexSUN((*C.Display)(dpy), (C.Window)(overlay), (C.Window)(underlay), (*C.long)(pTransparentIndex)))
+	return (int)(C.goglxGetTransparentIndexSUN((*C.Display)(dpy), (C.Window)(overlay), (C.Window)(underlay), (*C.long)(pTransparentIndex)))
 }
 // VERSION_1_3
 
 // http://www.opengl.org/sdk/docs/man/xhtml/glGetFBConfigs.xml
 func GetFBConfigs(dpy Pointer, screen Int, nelements *Int) Pointer {
-	return (Pointer)(C.goglGetFBConfigs((*C.Display)(dpy), (C.int)(screen), (*C.int)(nelements)))
+	return (Pointer)(C.goglxGetFBConfigs((*C.Display)(dpy), (C.int)(screen), (*C.int)(nelements)))
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glChooseFBConfig.xml
 func ChooseFBConfig(dpy Pointer, screen Int, attrib_list *Int, nelements *Int) Pointer {
-	return (Pointer)(C.goglChooseFBConfig((*C.Display)(dpy), (C.int)(screen), (*C.int)(attrib_list), (*C.int)(nelements)))
+	return (Pointer)(C.goglxChooseFBConfig((*C.Display)(dpy), (C.int)(screen), (*C.int)(attrib_list), (*C.int)(nelements)))
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glGetFBConfigAttrib.xml
 func GetFBConfigAttrib(dpy Pointer, config Pointer, attribute Int, value *Int) Int {
-	return (Int)(C.goglGetFBConfigAttrib((*C.Display)(dpy), (C.GLXFBConfig)(config), (C.int)(attribute), (*C.int)(value)))
+	return (Int)(C.goglxGetFBConfigAttrib((*C.Display)(dpy), (C.GLXFBConfig)(config), (C.int)(attribute), (*C.int)(value)))
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glGetVisualFromFBConfig.xml
 func GetVisualFromFBConfig(dpy Pointer, config Pointer) Pointer {
-	return (Pointer)(C.goglGetVisualFromFBConfig((*C.Display)(dpy), (C.GLXFBConfig)(config)))
+	return (Pointer)(C.goglxGetVisualFromFBConfig((*C.Display)(dpy), (C.GLXFBConfig)(config)))
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glCreateWindow.xml
 func CreateWindow(dpy Pointer, config Pointer, win Pointer, attrib_list *Int) Pointer {
-	return (Pointer)(C.goglCreateWindow((*C.Display)(dpy), (C.GLXFBConfig)(config), (C.Window)(win), (*C.int)(attrib_list)))
+	return (Pointer)(C.goglxCreateWindow((*C.Display)(dpy), (C.GLXFBConfig)(config), (C.Window)(win), (*C.int)(attrib_list)))
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glDestroyWindow.xml
 func DestroyWindow(dpy Pointer, win Pointer)  {
-	C.goglDestroyWindow((*C.Display)(dpy), (C.GLXWindow)(win))
+	C.goglxDestroyWindow((*C.Display)(dpy), (C.GLXWindow)(win))
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glCreatePixmap.xml
 func CreatePixmap(dpy Pointer, config Pointer, pixmap Pointer, attrib_list *Int) Pointer {
-	return (Pointer)(C.goglCreatePixmap((*C.Display)(dpy), (C.GLXFBConfig)(config), (C.Pixmap)(pixmap), (*C.int)(attrib_list)))
+	return (Pointer)(C.goglxCreatePixmap((*C.Display)(dpy), (C.GLXFBConfig)(config), (C.Pixmap)(pixmap), (*C.int)(attrib_list)))
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glDestroyPixmap.xml
 func DestroyPixmap(dpy Pointer, pixmap Pointer)  {
-	C.goglDestroyPixmap((*C.Display)(dpy), (C.GLXPixmap)(pixmap))
+	C.goglxDestroyPixmap((*C.Display)(dpy), (C.GLXPixmap)(pixmap))
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glCreatePbuffer.xml
 func CreatePbuffer(dpy Pointer, config Pointer, attrib_list *Int) Pointer {
-	return (Pointer)(C.goglCreatePbuffer((*C.Display)(dpy), (C.GLXFBConfig)(config), (*C.int)(attrib_list)))
+	return (Pointer)(C.goglxCreatePbuffer((*C.Display)(dpy), (C.GLXFBConfig)(config), (*C.int)(attrib_list)))
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glDestroyPbuffer.xml
 func DestroyPbuffer(dpy Pointer, pbuf Pointer)  {
-	C.goglDestroyPbuffer((*C.Display)(dpy), (C.GLXPbuffer)(pbuf))
+	C.goglxDestroyPbuffer((*C.Display)(dpy), (C.GLXPbuffer)(pbuf))
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glQueryDrawable.xml
 func QueryDrawable(dpy Pointer, draw Pointer, attribute Int, value *uint32)  {
-	C.goglQueryDrawable((*C.Display)(dpy), (C.GLXDrawable)(draw), (C.int)(attribute), (*C.uint32)(value))
+	C.goglxQueryDrawable((*C.Display)(dpy), (C.GLXDrawable)(draw), (C.int)(attribute), (*C.uint32)(value))
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glCreateNewContext.xml
 func CreateNewContext(dpy Pointer, config Pointer, render_type Int, share_list Pointer, direct int) Pointer {
-	return (Pointer)(C.goglCreateNewContext((*C.Display)(dpy), (C.GLXFBConfig)(config), (C.int)(render_type), (C.GLXContext)(share_list), (C.int)(direct)))
+	return (Pointer)(C.goglxCreateNewContext((*C.Display)(dpy), (C.GLXFBConfig)(config), (C.int)(render_type), (C.GLXContext)(share_list), (C.int)(direct)))
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glMakeContextCurrent.xml
 func MakeContextCurrent(dpy Pointer, draw Pointer, read Pointer, ctx Pointer) int {
-	return (int)(C.goglMakeContextCurrent((*C.Display)(dpy), (C.GLXDrawable)(draw), (C.GLXDrawable)(read), (C.GLXContext)(ctx)))
+	return (int)(C.goglxMakeContextCurrent((*C.Display)(dpy), (C.GLXDrawable)(draw), (C.GLXDrawable)(read), (C.GLXContext)(ctx)))
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glGetCurrentReadDrawable.xml
 func GetCurrentReadDrawable() Pointer {
-	return (Pointer)(C.goglGetCurrentReadDrawable())
+	return (Pointer)(C.goglxGetCurrentReadDrawable())
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glGetCurrentDisplay.xml
 func GetCurrentDisplay() Pointer {
-	return (Pointer)(C.goglGetCurrentDisplay())
+	return (Pointer)(C.goglxGetCurrentDisplay())
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glQueryContext.xml
 func QueryContext(dpy Pointer, ctx Pointer, attribute Int, value *Int) Int {
-	return (Int)(C.goglQueryContext((*C.Display)(dpy), (C.GLXContext)(ctx), (C.int)(attribute), (*C.int)(value)))
+	return (Int)(C.goglxQueryContext((*C.Display)(dpy), (C.GLXContext)(ctx), (C.int)(attribute), (*C.int)(value)))
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glSelectEvent.xml
 func SelectEvent(dpy Pointer, draw Pointer, event_mask uint32)  {
-	C.goglSelectEvent((*C.Display)(dpy), (C.GLXDrawable)(draw), (C.unsigned_long)(event_mask))
+	C.goglxSelectEvent((*C.Display)(dpy), (C.GLXDrawable)(draw), (C.unsigned_long)(event_mask))
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glGetSelectedEvent.xml
 func GetSelectedEvent(dpy Pointer, draw Pointer, event_mask *uint32)  {
-	C.goglGetSelectedEvent((*C.Display)(dpy), (C.GLXDrawable)(draw), (*C.unsigned_long)(event_mask))
+	C.goglxGetSelectedEvent((*C.Display)(dpy), (C.GLXDrawable)(draw), (*C.unsigned_long)(event_mask))
 }
 // VERSION_1_4
 
 // http://www.opengl.org/sdk/docs/man/xhtml/glGetProcAddress.xml
 func GetProcAddress(procName *Ubyte) Pointer {
-	return (Pointer)(C.goglGetProcAddress((*C.GLubyte)(procName)))
+	return (Pointer)(C.goglxGetProcAddress((*C.GLubyte)(procName)))
 }
 // glx
 
 // http://www.opengl.org/sdk/docs/man/xhtml/glRender.xml
 func Render()  {
-	C.goglRender()
+	C.goglxRender()
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glRenderLarge.xml
 func RenderLarge()  {
-	C.goglRenderLarge()
+	C.goglxRenderLarge()
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glCreateContext.xml
 func CreateContext(gc_id Int, screen Int, visual Int, share_list Int)  {
-	C.goglCreateContext((C.GLint)(gc_id), (C.GLint)(screen), (C.GLint)(visual), (C.GLint)(share_list))
+	C.goglxCreateContext((C.GLint)(gc_id), (C.GLint)(screen), (C.GLint)(visual), (C.GLint)(share_list))
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glDestroyContext.xml
 func DestroyContext(context Int)  {
-	C.goglDestroyContext((C.GLint)(context))
+	C.goglxDestroyContext((C.GLint)(context))
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glMakeCurrent.xml
 func MakeCurrent(drawable Int, context Int)  {
-	C.goglMakeCurrent((C.GLint)(drawable), (C.GLint)(context))
+	C.goglxMakeCurrent((C.GLint)(drawable), (C.GLint)(context))
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glIsDirect.xml
 func IsDirect(dpy Int, context Int)  {
-	C.goglIsDirect((C.GLint)(dpy), (C.GLint)(context))
+	C.goglxIsDirect((C.GLint)(dpy), (C.GLint)(context))
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glQueryVersion.xml
 func QueryVersion(major *Int, minor *Int)  {
-	C.goglQueryVersion((*C.GLint)(major), (*C.GLint)(minor))
+	C.goglxQueryVersion((*C.GLint)(major), (*C.GLint)(minor))
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glWaitGL.xml
 func WaitGL(context Int)  {
-	C.goglWaitGL((C.GLint)(context))
+	C.goglxWaitGL((C.GLint)(context))
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glWaitX.xml
 func WaitX()  {
-	C.goglWaitX()
+	C.goglxWaitX()
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glCopyContext.xml
 func CopyContext(source Int, dest Int, mask Int)  {
-	C.goglCopyContext((C.GLint)(source), (C.GLint)(dest), (C.GLint)(mask))
+	C.goglxCopyContext((C.GLint)(source), (C.GLint)(dest), (C.GLint)(mask))
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glSwapBuffers.xml
 func SwapBuffers(drawable Int)  {
-	C.goglSwapBuffers((C.GLint)(drawable))
+	C.goglxSwapBuffers((C.GLint)(drawable))
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glUseXFont.xml
 func UseXFont(font Int, first Int, count Int, list_base Int)  {
-	C.goglUseXFont((C.GLint)(font), (C.GLint)(first), (C.GLint)(count), (C.GLint)(list_base))
+	C.goglxUseXFont((C.GLint)(font), (C.GLint)(first), (C.GLint)(count), (C.GLint)(list_base))
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glCreateGLXPixmap.xml
 func CreateGLXPixmap(visual Int, pixmap Int, glxpixmap Int)  {
-	C.goglCreateGLXPixmap((C.GLint)(visual), (C.GLint)(pixmap), (C.GLint)(glxpixmap))
+	C.goglxCreateGLXPixmap((C.GLint)(visual), (C.GLint)(pixmap), (C.GLint)(glxpixmap))
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glGetVisualConfigs.xml
 func GetVisualConfigs()  {
-	C.goglGetVisualConfigs()
+	C.goglxGetVisualConfigs()
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glDestroyGLXPixmap.xml
 func DestroyGLXPixmap(pixmap Int)  {
-	C.goglDestroyGLXPixmap((C.GLint)(pixmap))
+	C.goglxDestroyGLXPixmap((C.GLint)(pixmap))
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glVendorPrivate.xml
 func VendorPrivate()  {
-	C.goglVendorPrivate()
+	C.goglxVendorPrivate()
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glVendorPrivateWithReply.xml
 func VendorPrivateWithReply()  {
-	C.goglVendorPrivateWithReply()
+	C.goglxVendorPrivateWithReply()
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glQueryExtensionsString.xml
 func QueryExtensionsString(screen Int)  {
-	C.goglQueryExtensionsString((C.GLint)(screen))
+	C.goglxQueryExtensionsString((C.GLint)(screen))
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glQueryServerString.xml
 func QueryServerString(screen Int, name Int)  {
-	C.goglQueryServerString((C.GLint)(screen), (C.GLint)(name))
+	C.goglxQueryServerString((C.GLint)(screen), (C.GLint)(name))
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glClientInfo.xml
 func ClientInfo()  {
-	C.goglClientInfo()
+	C.goglxClientInfo()
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glGetFBConfigs.xml
 func GetFBConfigs()  {
-	C.goglGetFBConfigs()
+	C.goglxGetFBConfigs()
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glCreatePixmap.xml
 func CreatePixmap(config Int, pixmap Int, glxpixmap Int)  {
-	C.goglCreatePixmap((C.GLint)(config), (C.GLint)(pixmap), (C.GLint)(glxpixmap))
+	C.goglxCreatePixmap((C.GLint)(config), (C.GLint)(pixmap), (C.GLint)(glxpixmap))
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glDestroyPixmap.xml
 func DestroyPixmap(glxpixmap Int)  {
-	C.goglDestroyPixmap((C.GLint)(glxpixmap))
+	C.goglxDestroyPixmap((C.GLint)(glxpixmap))
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glCreateNewContext.xml
 func CreateNewContext(config Int, render_type Int, share_list Int, direct Int)  {
-	C.goglCreateNewContext((C.GLint)(config), (C.GLint)(render_type), (C.GLint)(share_list), (C.GLint)(direct))
+	C.goglxCreateNewContext((C.GLint)(config), (C.GLint)(render_type), (C.GLint)(share_list), (C.GLint)(direct))
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glQueryContext.xml
 func QueryContext()  {
-	C.goglQueryContext()
+	C.goglxQueryContext()
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glMakeContextCurrent.xml
 func MakeContextCurrent(drawable Int, readdrawable Int, context Int)  {
-	C.goglMakeContextCurrent((C.GLint)(drawable), (C.GLint)(readdrawable), (C.GLint)(context))
+	C.goglxMakeContextCurrent((C.GLint)(drawable), (C.GLint)(readdrawable), (C.GLint)(context))
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glCreatePbuffer.xml
 func CreatePbuffer(config Int, pbuffer Int)  {
-	C.goglCreatePbuffer((C.GLint)(config), (C.GLint)(pbuffer))
+	C.goglxCreatePbuffer((C.GLint)(config), (C.GLint)(pbuffer))
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glDestroyPbuffer.xml
 func DestroyPbuffer(pbuffer Int)  {
-	C.goglDestroyPbuffer((C.GLint)(pbuffer))
+	C.goglxDestroyPbuffer((C.GLint)(pbuffer))
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glGetDrawableAttributes.xml
 func GetDrawableAttributes(drawable Int)  {
-	C.goglGetDrawableAttributes((C.GLint)(drawable))
+	C.goglxGetDrawableAttributes((C.GLint)(drawable))
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glChangeDrawableAttributes.xml
 func ChangeDrawableAttributes(drawable Int)  {
-	C.goglChangeDrawableAttributes((C.GLint)(drawable))
+	C.goglxChangeDrawableAttributes((C.GLint)(drawable))
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glCreateWindow.xml
 func CreateWindow(config Int, window Int, glxwindow Int)  {
-	C.goglCreateWindow((C.GLint)(config), (C.GLint)(window), (C.GLint)(glxwindow))
+	C.goglxCreateWindow((C.GLint)(config), (C.GLint)(window), (C.GLint)(glxwindow))
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glDestroyWindow.xml
 func DestroyWindow(glxwindow Int)  {
-	C.goglDestroyWindow((C.GLint)(glxwindow))
+	C.goglxDestroyWindow((C.GLint)(glxwindow))
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glSwapIntervalSGI.xml
 func SwapIntervalSGI()  {
-	C.goglSwapIntervalSGI()
+	C.goglxSwapIntervalSGI()
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glMakeCurrentReadSGI.xml
 func MakeCurrentReadSGI(drawable Int, readdrawable Int, context Int)  {
-	C.goglMakeCurrentReadSGI((C.GLint)(drawable), (C.GLint)(readdrawable), (C.GLint)(context))
+	C.goglxMakeCurrentReadSGI((C.GLint)(drawable), (C.GLint)(readdrawable), (C.GLint)(context))
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glCreateGLXVideoSourceSGIX.xml
 func CreateGLXVideoSourceSGIX(dpy Int, screen Int, server Int, path Int, class Int, node Int)  {
-	C.goglCreateGLXVideoSourceSGIX((C.GLint)(dpy), (C.GLint)(screen), (C.GLint)(server), (C.GLint)(path), (C.GLint)(class), (C.GLint)(node))
+	C.goglxCreateGLXVideoSourceSGIX((C.GLint)(dpy), (C.GLint)(screen), (C.GLint)(server), (C.GLint)(path), (C.GLint)(class), (C.GLint)(node))
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glDestroyGLXVideoSourceSGIX.xml
 func DestroyGLXVideoSourceSGIX(dpy Int, glxvideosource Int)  {
-	C.goglDestroyGLXVideoSourceSGIX((C.GLint)(dpy), (C.GLint)(glxvideosource))
+	C.goglxDestroyGLXVideoSourceSGIX((C.GLint)(dpy), (C.GLint)(glxvideosource))
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glQueryContextInfoEXT.xml
 func QueryContextInfoEXT()  {
-	C.goglQueryContextInfoEXT()
+	C.goglxQueryContextInfoEXT()
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glGetFBConfigsSGIX.xml
 func GetFBConfigsSGIX()  {
-	C.goglGetFBConfigsSGIX()
+	C.goglxGetFBConfigsSGIX()
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glCreateContextWithConfigSGIX.xml
 func CreateContextWithConfigSGIX(gc_id Int, screen Int, config Int, share_list Int)  {
-	C.goglCreateContextWithConfigSGIX((C.GLint)(gc_id), (C.GLint)(screen), (C.GLint)(config), (C.GLint)(share_list))
+	C.goglxCreateContextWithConfigSGIX((C.GLint)(gc_id), (C.GLint)(screen), (C.GLint)(config), (C.GLint)(share_list))
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glCreateGLXPixmapWithConfigSGIX.xml
 func CreateGLXPixmapWithConfigSGIX(config Int, pixmap Int, glxpixmap Int)  {
-	C.goglCreateGLXPixmapWithConfigSGIX((C.GLint)(config), (C.GLint)(pixmap), (C.GLint)(glxpixmap))
+	C.goglxCreateGLXPixmapWithConfigSGIX((C.GLint)(config), (C.GLint)(pixmap), (C.GLint)(glxpixmap))
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glCreateGLXPbufferSGIX.xml
 func CreateGLXPbufferSGIX(config Int, pbuffer Int)  {
-	C.goglCreateGLXPbufferSGIX((C.GLint)(config), (C.GLint)(pbuffer))
+	C.goglxCreateGLXPbufferSGIX((C.GLint)(config), (C.GLint)(pbuffer))
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glDestroyGLXPbufferSGIX.xml
 func DestroyGLXPbufferSGIX(pbuffer Int)  {
-	C.goglDestroyGLXPbufferSGIX((C.GLint)(pbuffer))
+	C.goglxDestroyGLXPbufferSGIX((C.GLint)(pbuffer))
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glChangeDrawableAttributesSGIX.xml
 func ChangeDrawableAttributesSGIX(drawable Int)  {
-	C.goglChangeDrawableAttributesSGIX((C.GLint)(drawable))
+	C.goglxChangeDrawableAttributesSGIX((C.GLint)(drawable))
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glGetDrawableAttributesSGIX.xml
 func GetDrawableAttributesSGIX(drawable Int)  {
-	C.goglGetDrawableAttributesSGIX((C.GLint)(drawable))
+	C.goglxGetDrawableAttributesSGIX((C.GLint)(drawable))
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glJoinSwapGroupSGIX.xml
 func JoinSwapGroupSGIX(window Int, group Int)  {
-	C.goglJoinSwapGroupSGIX((C.GLint)(window), (C.GLint)(group))
+	C.goglxJoinSwapGroupSGIX((C.GLint)(window), (C.GLint)(group))
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glBindSwapBarrierSGIX.xml
 func BindSwapBarrierSGIX(window Int, barrier Int)  {
-	C.goglBindSwapBarrierSGIX((C.GLint)(window), (C.GLint)(barrier))
+	C.goglxBindSwapBarrierSGIX((C.GLint)(window), (C.GLint)(barrier))
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glQueryMaxSwapBarriersSGIX.xml
 func QueryMaxSwapBarriersSGIX()  {
-	C.goglQueryMaxSwapBarriersSGIX()
+	C.goglxQueryMaxSwapBarriersSGIX()
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glQueryHyperpipeNetworkSGIX.xml
 func QueryHyperpipeNetworkSGIX(dpy Pointer, npipes *Int) Pointer {
-	return (Pointer)(C.goglQueryHyperpipeNetworkSGIX((*C.Display)(dpy), (*C.int)(npipes)))
+	return (Pointer)(C.goglxQueryHyperpipeNetworkSGIX((*C.Display)(dpy), (*C.int)(npipes)))
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glHyperpipeConfigSGIX.xml
 func HyperpipeConfigSGIX(dpy Pointer, networkId Int, npipes Int, cfg Pointer, hpId *Int) Int {
-	return (Int)(C.goglHyperpipeConfigSGIX((*C.Display)(dpy), (C.int)(networkId), (C.int)(npipes), (*C.GLXHyperpipeConfigSGIX)(cfg), (*C.int)(hpId)))
+	return (Int)(C.goglxHyperpipeConfigSGIX((*C.Display)(dpy), (C.int)(networkId), (C.int)(npipes), (*C.GLXHyperpipeConfigSGIX)(cfg), (*C.int)(hpId)))
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glQueryHyperpipeConfigSGIX.xml
 func QueryHyperpipeConfigSGIX(dpy Pointer, hpId Int, npipes *Int) Pointer {
-	return (Pointer)(C.goglQueryHyperpipeConfigSGIX((*C.Display)(dpy), (C.int)(hpId), (*C.int)(npipes)))
+	return (Pointer)(C.goglxQueryHyperpipeConfigSGIX((*C.Display)(dpy), (C.int)(hpId), (*C.int)(npipes)))
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glDestroyHyperpipeConfigSGIX.xml
 func DestroyHyperpipeConfigSGIX(dpy Pointer, hpId Int) Int {
-	return (Int)(C.goglDestroyHyperpipeConfigSGIX((*C.Display)(dpy), (C.int)(hpId)))
+	return (Int)(C.goglxDestroyHyperpipeConfigSGIX((*C.Display)(dpy), (C.int)(hpId)))
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glBindHyperpipeSGIX.xml
 func BindHyperpipeSGIX(dpy Pointer, hpId Int) Int {
-	return (Int)(C.goglBindHyperpipeSGIX((*C.Display)(dpy), (C.int)(hpId)))
+	return (Int)(C.goglxBindHyperpipeSGIX((*C.Display)(dpy), (C.int)(hpId)))
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glQueryHyperpipeBestAttribSGIX.xml
 func QueryHyperpipeBestAttribSGIX(dpy Pointer, timeSlice Int, attrib Int, size Int, attribList Pointer, returnAttribList Pointer) Int {
-	return (Int)(C.goglQueryHyperpipeBestAttribSGIX((*C.Display)(dpy), (C.int)(timeSlice), (C.int)(attrib), (C.int)(size), (unsafe.Pointer)(attribList), (unsafe.Pointer)(returnAttribList)))
+	return (Int)(C.goglxQueryHyperpipeBestAttribSGIX((*C.Display)(dpy), (C.int)(timeSlice), (C.int)(attrib), (C.int)(size), (unsafe.Pointer)(attribList), (unsafe.Pointer)(returnAttribList)))
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glHyperpipeAttribSGIX.xml
 func HyperpipeAttribSGIX(dpy Pointer, timeSlice Int, attrib Int, size Int, attribList Pointer) Int {
-	return (Int)(C.goglHyperpipeAttribSGIX((*C.Display)(dpy), (C.int)(timeSlice), (C.int)(attrib), (C.int)(size), (unsafe.Pointer)(attribList)))
+	return (Int)(C.goglxHyperpipeAttribSGIX((*C.Display)(dpy), (C.int)(timeSlice), (C.int)(attrib), (C.int)(size), (unsafe.Pointer)(attribList)))
 }
 // http://www.opengl.org/sdk/docs/man/xhtml/glQueryHyperpipeAttribSGIX.xml
 func QueryHyperpipeAttribSGIX(dpy Pointer, timeSlice Int, attrib Int, size Int, returnAttribList Pointer) Int {
-	return (Int)(C.goglQueryHyperpipeAttribSGIX((*C.Display)(dpy), (C.int)(timeSlice), (C.int)(attrib), (C.int)(size), (unsafe.Pointer)(returnAttribList)))
+	return (Int)(C.goglxQueryHyperpipeAttribSGIX((*C.Display)(dpy), (C.int)(timeSlice), (C.int)(attrib), (C.int)(size), (unsafe.Pointer)(returnAttribList)))
 }
 func InitArbCreateContext() error {
 	var ret C.int
