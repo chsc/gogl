@@ -1691,7 +1691,7 @@ func GetCurrentAssociatedContextAMD() Pointer {
 	return (Pointer)(C.goglGetCurrentAssociatedContextAMD())
 }
 func BlitContextFramebufferAMD(dstCtx Pointer, srcX0 Int, srcY0 Int, srcX1 Int, srcY1 Int, dstX0 Int, dstY0 Int, dstX1 Int, dstY1 Int, mask Bitfield, filter Enum)  {
-	return ()(C.goglBlitContextFramebufferAMD((C.HGLRC)(dstCtx), (C.GLint)(srcX0), (C.GLint)(srcY0), (C.GLint)(srcX1), (C.GLint)(srcY1), (C.GLint)(dstX0), (C.GLint)(dstY0), (C.GLint)(dstX1), (C.GLint)(dstY1), (C.GLbitfield)(mask), (C.GLenum)(filter)))
+	C.goglBlitContextFramebufferAMD((C.HGLRC)(dstCtx), (C.GLint)(srcX0), (C.GLint)(srcY0), (C.GLint)(srcX1), (C.GLint)(srcY1), (C.GLint)(dstX0), (C.GLint)(dstY0), (C.GLint)(dstX1), (C.GLint)(dstY1), (C.GLbitfield)(mask), (C.GLenum)(filter))
 }
 // ARB_buffer_region
 
@@ -1699,7 +1699,7 @@ func CreateBufferRegionARB(hDC Pointer, iLayerPlane Int, uType uint32) Pointer {
 	return (Pointer)(C.goglCreateBufferRegionARB((C.HDC)(hDC), (C.int)(iLayerPlane), (C.UINT)(uType)))
 }
 func DeleteBufferRegionARB(hRegion Pointer)  {
-	return ()(C.goglDeleteBufferRegionARB((C.HANDLE)(hRegion)))
+	C.goglDeleteBufferRegionARB((C.HANDLE)(hRegion))
 }
 func SaveBufferRegionARB(hRegion Pointer, x Int, y Int, width Int, height Int) int32 {
 	return (int32)(C.goglSaveBufferRegionARB((C.HANDLE)(hRegion), (C.int)(x), (C.int)(y), (C.int)(width), (C.int)(height)))
@@ -1790,7 +1790,7 @@ func BindDisplayColorTableEXT(id Ushort) Boolean {
 	return (Boolean)(C.goglBindDisplayColorTableEXT((C.GLushort)(id)))
 }
 func DestroyDisplayColorTableEXT(id Ushort)  {
-	return ()(C.goglDestroyDisplayColorTableEXT((C.GLushort)(id)))
+	C.goglDestroyDisplayColorTableEXT((C.GLushort)(id))
 }
 // EXT_extensions_string
 

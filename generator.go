@@ -396,7 +396,7 @@ func writeGoFuncDefinition(w io.Writer, f *Function, typeMap TypeMap, majorVersi
 		return err
 	}
 	fmt.Fprintf(w, ") %s {\n", goType)
-	if rtype == "void" {
+	if rtype == "void" || rtype == "VOID" {
 		if prototype {
 			fmt.Fprintf(w, "	C.gl%s(", f.Name)
 		} else {
@@ -429,7 +429,7 @@ func writeGoFuncDefinition(w io.Writer, f *Function, typeMap TypeMap, majorVersi
 			fmt.Fprintf(w, ", ")
 		}
 	}
-	if rtype == "void" {
+	if rtype == "void" || rtype == "VOID" {
 		fmt.Fprintf(w, ")\n}\n")
 	} else {
 		fmt.Fprintf(w, "))\n}\n")
