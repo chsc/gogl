@@ -35,7 +35,7 @@ func main() {
 
 	glfw.OpenWindowHint(glfw.WindowNoResize, 1)
 
-	if err := glfw.OpenWindow(Width, Height, 0, 0, 0, 0, 0, 0, glfw.Windowed); err != nil {
+	if err := glfw.OpenWindow(Width, Height, 0, 0, 0, 0, 16, 0, glfw.Windowed); err != nil {
 		fmt.Fprintf(os.Stderr, "glfw: %s\n", err)
 		return
 	}
