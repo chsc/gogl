@@ -580,7 +580,7 @@ func CTypeToGoType(cType string, out bool, mod ParamModifier) (goType, cgoType s
 }
 
 func MakeExtensionSpecDocUrl(vendor, extension string) string {
-	return fmt.Sprintf("http://www.opengl.org/registry/specs/%s/%s.txt", vendor, extension)
+	return fmt.Sprintf("https://www.opengl.org/registry/specs/%s/%s.txt", vendor, extension)
 }
 
 func MakeGLDocUrl(majorVersion int) string {
@@ -588,7 +588,7 @@ func MakeGLDocUrl(majorVersion int) string {
 	if majorVersion >= 3 {
 		manVer = strconv.Itoa(majorVersion)
 	}
-	return fmt.Sprintf("http://www.opengl.org/sdk/docs/man%s", manVer)
+	return fmt.Sprintf("https://www.opengl.org/sdk/docs/man%s", manVer)
 }
 
 func MakeFuncDocUrl(majorVersion int, fName string) string {
@@ -596,5 +596,5 @@ func MakeFuncDocUrl(majorVersion int, fName string) string {
 	if majorVersion >= 3 {
 		manVer = strconv.Itoa(majorVersion)
 	}
-	return fmt.Sprintf("http://www.opengl.org/sdk/docs/man%s/xhtml/gl%s.xml", manVer, fName)
+	return fmt.Sprintf("https://www.opengl.org/sdk/docs/man%s/xhtml/gl%s.xml", manVer, fName)
 }
