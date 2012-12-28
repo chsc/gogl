@@ -13,7 +13,7 @@ import (
 )
 
 const (
-	KhronosRegistryBaseURL = "http://www.opengl.org/registry/api"
+	KhronosRegistryBaseURL = "https://www.opengl.org/registry/api"
 	OpenGLEnumSpecFile     = "enum.spec"
 	OpenGLEnumExtSpecFile  = "enumext.spec"
 	OpenGLSpecFile         = "gl.spec"
