@@ -6,7 +6,7 @@ download_khronos:
 
 # TODO: Get rid of revision number. How to get the newest revision from bitbucket? 
 download_alfonse:
-	./gogl -download -url=https://bitbucket.org/alfonse/gl-xml-specs/raw/7f5be712aebb/glspecs -dir=alfonse_specs 
+	./gogl -download -url=https://bitbucket.org/alfonse/gl-xml-specs/raw/tip/glspecs -dir=alfonse_specs 
 
 gen_khronos:
 	./gogl
