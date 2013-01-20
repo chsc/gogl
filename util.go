@@ -187,6 +187,13 @@ func CTypeToGoType(cType string, out bool, mod ParamModifier) (goType, cgoType s
 			err = errors.New("Unsupported type.")
 		}
 		return
+	case "GLDEBUGPROC":
+		goType = "Pointer" // TODO: Debug callback support?
+		cgoType = "*[0]byte"
+		if mod == ParamModifierArray || mod == ParamModifierReference || out {
+			err = errors.New("Unsupported type.")
+		}
+		return
 	case "GLvdpauSurfaceNV":
 		goType = "Intptr" // TODO: vdpau support?
 		cgoType = "C.GLvdpauSurfaceNV"
@@ -424,8 +431,6 @@ func CTypeToGoType(cType string, out bool, mod ParamModifier) (goType, cgoType s
 		goType = "*byte"
 		cgoType = "*C.char"
 		return
-
-	
 	}
 	// standard cases for primitive data types:
 	switch cType {

@@ -2,67 +2,67 @@
 // 
 // Categories in this package: 
 // 
-// 3DL_stereo_control: http://www.opengl.org/registry/specs/3DL/stereo_control.txt
+// 3DL_stereo_control: https://www.opengl.org/registry/specs/3DL/stereo_control.txt
 // 
-// AMD_gpu_association: http://www.opengl.org/registry/specs/AMD/gpu_association.txt
+// AMD_gpu_association: https://www.opengl.org/registry/specs/AMD/gpu_association.txt
 // 
-// ARB_buffer_region: http://www.opengl.org/registry/specs/ARB/buffer_region.txt
+// ARB_buffer_region: https://www.opengl.org/registry/specs/ARB/buffer_region.txt
 // 
-// ARB_create_context: http://www.opengl.org/registry/specs/ARB/create_context.txt
+// ARB_create_context: https://www.opengl.org/registry/specs/ARB/create_context.txt
 // 
-// ARB_extensions_string: http://www.opengl.org/registry/specs/ARB/extensions_string.txt
+// ARB_extensions_string: https://www.opengl.org/registry/specs/ARB/extensions_string.txt
 // 
-// ARB_make_current_read: http://www.opengl.org/registry/specs/ARB/make_current_read.txt
+// ARB_make_current_read: https://www.opengl.org/registry/specs/ARB/make_current_read.txt
 // 
-// ARB_pbuffer: http://www.opengl.org/registry/specs/ARB/pbuffer.txt
+// ARB_pbuffer: https://www.opengl.org/registry/specs/ARB/pbuffer.txt
 // 
-// ARB_pixel_format: http://www.opengl.org/registry/specs/ARB/pixel_format.txt
+// ARB_pixel_format: https://www.opengl.org/registry/specs/ARB/pixel_format.txt
 // 
-// ARB_render_texture: http://www.opengl.org/registry/specs/ARB/render_texture.txt
+// ARB_render_texture: https://www.opengl.org/registry/specs/ARB/render_texture.txt
 // 
-// EXT_display_color_table: http://www.opengl.org/registry/specs/EXT/display_color_table.txt
+// EXT_display_color_table: https://www.opengl.org/registry/specs/EXT/display_color_table.txt
 // 
-// EXT_extensions_string: http://www.opengl.org/registry/specs/EXT/extensions_string.txt
+// EXT_extensions_string: https://www.opengl.org/registry/specs/EXT/extensions_string.txt
 // 
-// EXT_make_current_read: http://www.opengl.org/registry/specs/EXT/make_current_read.txt
+// EXT_make_current_read: https://www.opengl.org/registry/specs/EXT/make_current_read.txt
 // 
-// EXT_pbuffer: http://www.opengl.org/registry/specs/EXT/pbuffer.txt
+// EXT_pbuffer: https://www.opengl.org/registry/specs/EXT/pbuffer.txt
 // 
-// EXT_pixel_format: http://www.opengl.org/registry/specs/EXT/pixel_format.txt
+// EXT_pixel_format: https://www.opengl.org/registry/specs/EXT/pixel_format.txt
 // 
-// EXT_swap_control: http://www.opengl.org/registry/specs/EXT/swap_control.txt
+// EXT_swap_control: https://www.opengl.org/registry/specs/EXT/swap_control.txt
 // 
-// I3D_digital_video_control: http://www.opengl.org/registry/specs/I3D/digital_video_control.txt
+// I3D_digital_video_control: https://www.opengl.org/registry/specs/I3D/digital_video_control.txt
 // 
-// I3D_gamma: http://www.opengl.org/registry/specs/I3D/gamma.txt
+// I3D_gamma: https://www.opengl.org/registry/specs/I3D/gamma.txt
 // 
-// I3D_genlock: http://www.opengl.org/registry/specs/I3D/genlock.txt
+// I3D_genlock: https://www.opengl.org/registry/specs/I3D/genlock.txt
 // 
-// I3D_image_buffer: http://www.opengl.org/registry/specs/I3D/image_buffer.txt
+// I3D_image_buffer: https://www.opengl.org/registry/specs/I3D/image_buffer.txt
 // 
-// I3D_swap_frame_lock: http://www.opengl.org/registry/specs/I3D/swap_frame_lock.txt
+// I3D_swap_frame_lock: https://www.opengl.org/registry/specs/I3D/swap_frame_lock.txt
 // 
-// I3D_swap_frame_usage: http://www.opengl.org/registry/specs/I3D/swap_frame_usage.txt
+// I3D_swap_frame_usage: https://www.opengl.org/registry/specs/I3D/swap_frame_usage.txt
 // 
-// NV_DX_interop: http://www.opengl.org/registry/specs/NV/DX_interop.txt
+// NV_DX_interop: https://www.opengl.org/registry/specs/NV/DX_interop.txt
 // 
-// NV_copy_image: http://www.opengl.org/registry/specs/NV/copy_image.txt
+// NV_copy_image: https://www.opengl.org/registry/specs/NV/copy_image.txt
 // 
-// NV_gpu_affinity: http://www.opengl.org/registry/specs/NV/gpu_affinity.txt
+// NV_gpu_affinity: https://www.opengl.org/registry/specs/NV/gpu_affinity.txt
 // 
-// NV_present_video: http://www.opengl.org/registry/specs/NV/present_video.txt
+// NV_present_video: https://www.opengl.org/registry/specs/NV/present_video.txt
 // 
-// NV_swap_group: http://www.opengl.org/registry/specs/NV/swap_group.txt
+// NV_swap_group: https://www.opengl.org/registry/specs/NV/swap_group.txt
 // 
-// NV_vertex_array_range: http://www.opengl.org/registry/specs/NV/vertex_array_range.txt
+// NV_vertex_array_range: https://www.opengl.org/registry/specs/NV/vertex_array_range.txt
 // 
-// NV_video_capture: http://www.opengl.org/registry/specs/NV/video_capture.txt
+// NV_video_capture: https://www.opengl.org/registry/specs/NV/video_capture.txt
 // 
-// NV_video_output: http://www.opengl.org/registry/specs/NV/video_output.txt
+// NV_video_output: https://www.opengl.org/registry/specs/NV/video_output.txt
 // 
-// OML_sync_control: http://www.opengl.org/registry/specs/OML/sync_control.txt
+// OML_sync_control: https://www.opengl.org/registry/specs/OML/sync_control.txt
 // 
-// wgl: http://www.opengl.org/registry/specs/wgl/.txt
+// wgl: https://www.opengl.org/registry/specs/wgl/.txt
 // 
 package wgl
 

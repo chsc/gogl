@@ -28,7 +28,7 @@ func GroupEnumsAndFunctions(enums EnumCategories, functions FunctionCategories, 
 			}
 		}
 	}
-	for category, catFunctions := range functions {
+	for _, catFunctions := range functions {
 		for _, function := range catFunctions {
 			if packageNames := sortFuncFuncts(function); packageNames != nil {
 				for _, packageName := range packageNames {
@@ -40,7 +40,7 @@ func GroupEnumsAndFunctions(enums EnumCategories, functions FunctionCategories, 
 						}
 					} else {
 						p := &Package{make(EnumCategories), make(FunctionCategories)}
-						p.Functions[category] = []*Function{function}
+						p.Functions[function.Category] = []*Function{function}
 						packages[packageName] = p
 					}
 				}
@@ -68,6 +68,7 @@ func GroupEnumsByVendorAndVersion(category string, supportedVersions []Version) 
 	case CategoryVersion:
 		for _, ver := range supportedVersions {
 			if ver.Compare(pc.Version) >= 0 {
+				fmt.Println("++", ver, pc)
 				packages = append(packages, fmt.Sprintf("gl%d%d", ver.Major, ver.Minor))
 			}
 		}

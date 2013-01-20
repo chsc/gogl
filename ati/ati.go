@@ -2,25 +2,25 @@
 // 
 // Categories in this package: 
 // 
-// ATI_draw_buffers: http://www.opengl.org/registry/specs/ATI/draw_buffers.txt
+// ATI_draw_buffers: https://www.opengl.org/registry/specs/ATI/draw_buffers.txt
 // 
-// ATI_element_array: http://www.opengl.org/registry/specs/ATI/element_array.txt
+// ATI_element_array: https://www.opengl.org/registry/specs/ATI/element_array.txt
 // 
-// ATI_envmap_bumpmap: http://www.opengl.org/registry/specs/ATI/envmap_bumpmap.txt
+// ATI_envmap_bumpmap: https://www.opengl.org/registry/specs/ATI/envmap_bumpmap.txt
 // 
-// ATI_fragment_shader: http://www.opengl.org/registry/specs/ATI/fragment_shader.txt
+// ATI_fragment_shader: https://www.opengl.org/registry/specs/ATI/fragment_shader.txt
 // 
-// ATI_map_object_buffer: http://www.opengl.org/registry/specs/ATI/map_object_buffer.txt
+// ATI_map_object_buffer: https://www.opengl.org/registry/specs/ATI/map_object_buffer.txt
 // 
-// ATI_pn_triangles: http://www.opengl.org/registry/specs/ATI/pn_triangles.txt
+// ATI_pn_triangles: https://www.opengl.org/registry/specs/ATI/pn_triangles.txt
 // 
-// ATI_separate_stencil: http://www.opengl.org/registry/specs/ATI/separate_stencil.txt
+// ATI_separate_stencil: https://www.opengl.org/registry/specs/ATI/separate_stencil.txt
 // 
-// ATI_vertex_array_object: http://www.opengl.org/registry/specs/ATI/vertex_array_object.txt
+// ATI_vertex_array_object: https://www.opengl.org/registry/specs/ATI/vertex_array_object.txt
 // 
-// ATI_vertex_attrib_array_object: http://www.opengl.org/registry/specs/ATI/vertex_attrib_array_object.txt
+// ATI_vertex_attrib_array_object: https://www.opengl.org/registry/specs/ATI/vertex_attrib_array_object.txt
 // 
-// ATI_vertex_streams: http://www.opengl.org/registry/specs/ATI/vertex_streams.txt
+// ATI_vertex_streams: https://www.opengl.org/registry/specs/ATI/vertex_streams.txt
 // 
 package ati
 

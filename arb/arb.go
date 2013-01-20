@@ -2,141 +2,141 @@
 // 
 // Categories in this package: 
 // 
-// ARB_ES2_compatibility: http://www.opengl.org/registry/specs/ARB/ES2_compatibility.txt
+// ARB_ES2_compatibility: https://www.opengl.org/registry/specs/ARB/ES2_compatibility.txt
 // 
-// ARB_base_instance: http://www.opengl.org/registry/specs/ARB/base_instance.txt
+// ARB_base_instance: https://www.opengl.org/registry/specs/ARB/base_instance.txt
 // 
-// ARB_blend_func_extended: http://www.opengl.org/registry/specs/ARB/blend_func_extended.txt
+// ARB_blend_func_extended: https://www.opengl.org/registry/specs/ARB/blend_func_extended.txt
 // 
-// ARB_cl_event: http://www.opengl.org/registry/specs/ARB/cl_event.txt
+// ARB_cl_event: https://www.opengl.org/registry/specs/ARB/cl_event.txt
 // 
-// ARB_clear_buffer_object: http://www.opengl.org/registry/specs/ARB/clear_buffer_object.txt
+// ARB_clear_buffer_object: https://www.opengl.org/registry/specs/ARB/clear_buffer_object.txt
 // 
-// ARB_color_buffer_float: http://www.opengl.org/registry/specs/ARB/color_buffer_float.txt
+// ARB_color_buffer_float: https://www.opengl.org/registry/specs/ARB/color_buffer_float.txt
 // 
-// ARB_compute_shader: http://www.opengl.org/registry/specs/ARB/compute_shader.txt
+// ARB_compute_shader: https://www.opengl.org/registry/specs/ARB/compute_shader.txt
 // 
-// ARB_copy_buffer: http://www.opengl.org/registry/specs/ARB/copy_buffer.txt
+// ARB_copy_buffer: https://www.opengl.org/registry/specs/ARB/copy_buffer.txt
 // 
-// ARB_copy_image: http://www.opengl.org/registry/specs/ARB/copy_image.txt
+// ARB_copy_image: https://www.opengl.org/registry/specs/ARB/copy_image.txt
 // 
-// ARB_debug_output: http://www.opengl.org/registry/specs/ARB/debug_output.txt
+// ARB_debug_output: https://www.opengl.org/registry/specs/ARB/debug_output.txt
 // 
-// ARB_draw_buffers: http://www.opengl.org/registry/specs/ARB/draw_buffers.txt
+// ARB_draw_buffers: https://www.opengl.org/registry/specs/ARB/draw_buffers.txt
 // 
-// ARB_draw_buffers_blend: http://www.opengl.org/registry/specs/ARB/draw_buffers_blend.txt
+// ARB_draw_buffers_blend: https://www.opengl.org/registry/specs/ARB/draw_buffers_blend.txt
 // 
-// ARB_draw_elements_base_vertex: http://www.opengl.org/registry/specs/ARB/draw_elements_base_vertex.txt
+// ARB_draw_elements_base_vertex: https://www.opengl.org/registry/specs/ARB/draw_elements_base_vertex.txt
 // 
-// ARB_draw_indirect: http://www.opengl.org/registry/specs/ARB/draw_indirect.txt
+// ARB_draw_indirect: https://www.opengl.org/registry/specs/ARB/draw_indirect.txt
 // 
-// ARB_draw_instanced: http://www.opengl.org/registry/specs/ARB/draw_instanced.txt
+// ARB_draw_instanced: https://www.opengl.org/registry/specs/ARB/draw_instanced.txt
 // 
-// ARB_framebuffer_no_attachments: http://www.opengl.org/registry/specs/ARB/framebuffer_no_attachments.txt
+// ARB_framebuffer_no_attachments: https://www.opengl.org/registry/specs/ARB/framebuffer_no_attachments.txt
 // 
-// ARB_framebuffer_object: http://www.opengl.org/registry/specs/ARB/framebuffer_object.txt
+// ARB_framebuffer_object: https://www.opengl.org/registry/specs/ARB/framebuffer_object.txt
 // 
-// ARB_geometry_shader4: http://www.opengl.org/registry/specs/ARB/geometry_shader4.txt
+// ARB_geometry_shader4: https://www.opengl.org/registry/specs/ARB/geometry_shader4.txt
 // 
-// ARB_get_program_binary: http://www.opengl.org/registry/specs/ARB/get_program_binary.txt
+// ARB_get_program_binary: https://www.opengl.org/registry/specs/ARB/get_program_binary.txt
 // 
-// ARB_gpu_shader_fp64: http://www.opengl.org/registry/specs/ARB/gpu_shader_fp64.txt
+// ARB_gpu_shader_fp64: https://www.opengl.org/registry/specs/ARB/gpu_shader_fp64.txt
 // 
-// ARB_instanced_arrays: http://www.opengl.org/registry/specs/ARB/instanced_arrays.txt
+// ARB_instanced_arrays: https://www.opengl.org/registry/specs/ARB/instanced_arrays.txt
 // 
-// ARB_internalformat_query: http://www.opengl.org/registry/specs/ARB/internalformat_query.txt
+// ARB_internalformat_query: https://www.opengl.org/registry/specs/ARB/internalformat_query.txt
 // 
-// ARB_internalformat_query2: http://www.opengl.org/registry/specs/ARB/internalformat_query2.txt
+// ARB_internalformat_query2: https://www.opengl.org/registry/specs/ARB/internalformat_query2.txt
 // 
-// ARB_invalidate_subdata: http://www.opengl.org/registry/specs/ARB/invalidate_subdata.txt
+// ARB_invalidate_subdata: https://www.opengl.org/registry/specs/ARB/invalidate_subdata.txt
 // 
-// ARB_map_buffer_range: http://www.opengl.org/registry/specs/ARB/map_buffer_range.txt
+// ARB_map_buffer_range: https://www.opengl.org/registry/specs/ARB/map_buffer_range.txt
 // 
-// ARB_matrix_palette: http://www.opengl.org/registry/specs/ARB/matrix_palette.txt
+// ARB_matrix_palette: https://www.opengl.org/registry/specs/ARB/matrix_palette.txt
 // 
-// ARB_multi_draw_indirect: http://www.opengl.org/registry/specs/ARB/multi_draw_indirect.txt
+// ARB_multi_draw_indirect: https://www.opengl.org/registry/specs/ARB/multi_draw_indirect.txt
 // 
-// ARB_multisample: http://www.opengl.org/registry/specs/ARB/multisample.txt
+// ARB_multisample: https://www.opengl.org/registry/specs/ARB/multisample.txt
 // 
-// ARB_multitexture: http://www.opengl.org/registry/specs/ARB/multitexture.txt
+// ARB_multitexture: https://www.opengl.org/registry/specs/ARB/multitexture.txt
 // 
-// ARB_occlusion_query: http://www.opengl.org/registry/specs/ARB/occlusion_query.txt
+// ARB_occlusion_query: https://www.opengl.org/registry/specs/ARB/occlusion_query.txt
 // 
-// ARB_point_parameters: http://www.opengl.org/registry/specs/ARB/point_parameters.txt
+// ARB_point_parameters: https://www.opengl.org/registry/specs/ARB/point_parameters.txt
 // 
-// ARB_program_interface_query: http://www.opengl.org/registry/specs/ARB/program_interface_query.txt
+// ARB_program_interface_query: https://www.opengl.org/registry/specs/ARB/program_interface_query.txt
 // 
-// ARB_provoking_vertex: http://www.opengl.org/registry/specs/ARB/provoking_vertex.txt
+// ARB_provoking_vertex: https://www.opengl.org/registry/specs/ARB/provoking_vertex.txt
 // 
-// ARB_robustness: http://www.opengl.org/registry/specs/ARB/robustness.txt
+// ARB_robustness: https://www.opengl.org/registry/specs/ARB/robustness.txt
 // 
-// ARB_sample_shading: http://www.opengl.org/registry/specs/ARB/sample_shading.txt
+// ARB_sample_shading: https://www.opengl.org/registry/specs/ARB/sample_shading.txt
 // 
-// ARB_sampler_objects: http://www.opengl.org/registry/specs/ARB/sampler_objects.txt
+// ARB_sampler_objects: https://www.opengl.org/registry/specs/ARB/sampler_objects.txt
 // 
-// ARB_separate_shader_objects: http://www.opengl.org/registry/specs/ARB/separate_shader_objects.txt
+// ARB_separate_shader_objects: https://www.opengl.org/registry/specs/ARB/separate_shader_objects.txt
 // 
-// ARB_shader_atomic_counters: http://www.opengl.org/registry/specs/ARB/shader_atomic_counters.txt
+// ARB_shader_atomic_counters: https://www.opengl.org/registry/specs/ARB/shader_atomic_counters.txt
 // 
-// ARB_shader_image_load_store: http://www.opengl.org/registry/specs/ARB/shader_image_load_store.txt
+// ARB_shader_image_load_store: https://www.opengl.org/registry/specs/ARB/shader_image_load_store.txt
 // 
-// ARB_shader_objects: http://www.opengl.org/registry/specs/ARB/shader_objects.txt
+// ARB_shader_objects: https://www.opengl.org/registry/specs/ARB/shader_objects.txt
 // 
-// ARB_shader_storage_buffer_object: http://www.opengl.org/registry/specs/ARB/shader_storage_buffer_object.txt
+// ARB_shader_storage_buffer_object: https://www.opengl.org/registry/specs/ARB/shader_storage_buffer_object.txt
 // 
-// ARB_shader_subroutine: http://www.opengl.org/registry/specs/ARB/shader_subroutine.txt
+// ARB_shader_subroutine: https://www.opengl.org/registry/specs/ARB/shader_subroutine.txt
 // 
-// ARB_shading_language_include: http://www.opengl.org/registry/specs/ARB/shading_language_include.txt
+// ARB_shading_language_include: https://www.opengl.org/registry/specs/ARB/shading_language_include.txt
 // 
-// ARB_sync: http://www.opengl.org/registry/specs/ARB/sync.txt
+// ARB_sync: https://www.opengl.org/registry/specs/ARB/sync.txt
 // 
-// ARB_tessellation_shader: http://www.opengl.org/registry/specs/ARB/tessellation_shader.txt
+// ARB_tessellation_shader: https://www.opengl.org/registry/specs/ARB/tessellation_shader.txt
 // 
-// ARB_texture_buffer_object: http://www.opengl.org/registry/specs/ARB/texture_buffer_object.txt
+// ARB_texture_buffer_object: https://www.opengl.org/registry/specs/ARB/texture_buffer_object.txt
 // 
-// ARB_texture_buffer_range: http://www.opengl.org/registry/specs/ARB/texture_buffer_range.txt
+// ARB_texture_buffer_range: https://www.opengl.org/registry/specs/ARB/texture_buffer_range.txt
 // 
-// ARB_texture_compression: http://www.opengl.org/registry/specs/ARB/texture_compression.txt
+// ARB_texture_compression: https://www.opengl.org/registry/specs/ARB/texture_compression.txt
 // 
-// ARB_texture_multisample: http://www.opengl.org/registry/specs/ARB/texture_multisample.txt
+// ARB_texture_multisample: https://www.opengl.org/registry/specs/ARB/texture_multisample.txt
 // 
-// ARB_texture_storage: http://www.opengl.org/registry/specs/ARB/texture_storage.txt
+// ARB_texture_storage: https://www.opengl.org/registry/specs/ARB/texture_storage.txt
 // 
-// ARB_texture_storage_multisample: http://www.opengl.org/registry/specs/ARB/texture_storage_multisample.txt
+// ARB_texture_storage_multisample: https://www.opengl.org/registry/specs/ARB/texture_storage_multisample.txt
 // 
-// ARB_texture_view: http://www.opengl.org/registry/specs/ARB/texture_view.txt
+// ARB_texture_view: https://www.opengl.org/registry/specs/ARB/texture_view.txt
 // 
-// ARB_timer_query: http://www.opengl.org/registry/specs/ARB/timer_query.txt
+// ARB_timer_query: https://www.opengl.org/registry/specs/ARB/timer_query.txt
 // 
-// ARB_transform_feedback2: http://www.opengl.org/registry/specs/ARB/transform_feedback2.txt
+// ARB_transform_feedback2: https://www.opengl.org/registry/specs/ARB/transform_feedback2.txt
 // 
-// ARB_transform_feedback3: http://www.opengl.org/registry/specs/ARB/transform_feedback3.txt
+// ARB_transform_feedback3: https://www.opengl.org/registry/specs/ARB/transform_feedback3.txt
 // 
-// ARB_transform_feedback_instanced: http://www.opengl.org/registry/specs/ARB/transform_feedback_instanced.txt
+// ARB_transform_feedback_instanced: https://www.opengl.org/registry/specs/ARB/transform_feedback_instanced.txt
 // 
-// ARB_transpose_matrix: http://www.opengl.org/registry/specs/ARB/transpose_matrix.txt
+// ARB_transpose_matrix: https://www.opengl.org/registry/specs/ARB/transpose_matrix.txt
 // 
-// ARB_uniform_buffer_object: http://www.opengl.org/registry/specs/ARB/uniform_buffer_object.txt
+// ARB_uniform_buffer_object: https://www.opengl.org/registry/specs/ARB/uniform_buffer_object.txt
 // 
-// ARB_vertex_array_object: http://www.opengl.org/registry/specs/ARB/vertex_array_object.txt
+// ARB_vertex_array_object: https://www.opengl.org/registry/specs/ARB/vertex_array_object.txt
 // 
-// ARB_vertex_attrib_64bit: http://www.opengl.org/registry/specs/ARB/vertex_attrib_64bit.txt
+// ARB_vertex_attrib_64bit: https://www.opengl.org/registry/specs/ARB/vertex_attrib_64bit.txt
 // 
-// ARB_vertex_attrib_binding: http://www.opengl.org/registry/specs/ARB/vertex_attrib_binding.txt
+// ARB_vertex_attrib_binding: https://www.opengl.org/registry/specs/ARB/vertex_attrib_binding.txt
 // 
-// ARB_vertex_blend: http://www.opengl.org/registry/specs/ARB/vertex_blend.txt
+// ARB_vertex_blend: https://www.opengl.org/registry/specs/ARB/vertex_blend.txt
 // 
-// ARB_vertex_buffer_object: http://www.opengl.org/registry/specs/ARB/vertex_buffer_object.txt
+// ARB_vertex_buffer_object: https://www.opengl.org/registry/specs/ARB/vertex_buffer_object.txt
 // 
-// ARB_vertex_program: http://www.opengl.org/registry/specs/ARB/vertex_program.txt
+// ARB_vertex_program: https://www.opengl.org/registry/specs/ARB/vertex_program.txt
 // 
-// ARB_vertex_shader: http://www.opengl.org/registry/specs/ARB/vertex_shader.txt
+// ARB_vertex_shader: https://www.opengl.org/registry/specs/ARB/vertex_shader.txt
 // 
-// ARB_vertex_type_2_10_10_10_rev: http://www.opengl.org/registry/specs/ARB/vertex_type_2_10_10_10_rev.txt
+// ARB_vertex_type_2_10_10_10_rev: https://www.opengl.org/registry/specs/ARB/vertex_type_2_10_10_10_rev.txt
 // 
-// ARB_viewport_array: http://www.opengl.org/registry/specs/ARB/viewport_array.txt
+// ARB_viewport_array: https://www.opengl.org/registry/specs/ARB/viewport_array.txt
 // 
-// ARB_window_pos: http://www.opengl.org/registry/specs/ARB/window_pos.txt
+// ARB_window_pos: https://www.opengl.org/registry/specs/ARB/window_pos.txt
 // 
 package arb
 

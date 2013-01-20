@@ -2,23 +2,23 @@
 // 
 // Categories in this package: 
 // 
-// AMD_debug_output: http://www.opengl.org/registry/specs/AMD/debug_output.txt
+// AMD_debug_output: https://www.opengl.org/registry/specs/AMD/debug_output.txt
 // 
-// AMD_draw_buffers_blend: http://www.opengl.org/registry/specs/AMD/draw_buffers_blend.txt
+// AMD_draw_buffers_blend: https://www.opengl.org/registry/specs/AMD/draw_buffers_blend.txt
 // 
-// AMD_multi_draw_indirect: http://www.opengl.org/registry/specs/AMD/multi_draw_indirect.txt
+// AMD_multi_draw_indirect: https://www.opengl.org/registry/specs/AMD/multi_draw_indirect.txt
 // 
-// AMD_name_gen_delete: http://www.opengl.org/registry/specs/AMD/name_gen_delete.txt
+// AMD_name_gen_delete: https://www.opengl.org/registry/specs/AMD/name_gen_delete.txt
 // 
-// AMD_performance_monitor: http://www.opengl.org/registry/specs/AMD/performance_monitor.txt
+// AMD_performance_monitor: https://www.opengl.org/registry/specs/AMD/performance_monitor.txt
 // 
-// AMD_sample_positions: http://www.opengl.org/registry/specs/AMD/sample_positions.txt
+// AMD_sample_positions: https://www.opengl.org/registry/specs/AMD/sample_positions.txt
 // 
-// AMD_sparse_texture: http://www.opengl.org/registry/specs/AMD/sparse_texture.txt
+// AMD_sparse_texture: https://www.opengl.org/registry/specs/AMD/sparse_texture.txt
 // 
-// AMD_stencil_operation_extended: http://www.opengl.org/registry/specs/AMD/stencil_operation_extended.txt
+// AMD_stencil_operation_extended: https://www.opengl.org/registry/specs/AMD/stencil_operation_extended.txt
 // 
-// AMD_vertex_shader_tessellator: http://www.opengl.org/registry/specs/AMD/vertex_shader_tessellator.txt
+// AMD_vertex_shader_tessellator: https://www.opengl.org/registry/specs/AMD/vertex_shader_tessellator.txt
 // 
 package amd
 

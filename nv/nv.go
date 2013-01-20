@@ -2,75 +2,75 @@
 // 
 // Categories in this package: 
 // 
-// NV_bindless_texture: http://www.opengl.org/registry/specs/NV/bindless_texture.txt
+// NV_bindless_texture: https://www.opengl.org/registry/specs/NV/bindless_texture.txt
 // 
-// NV_conditional_render: http://www.opengl.org/registry/specs/NV/conditional_render.txt
+// NV_conditional_render: https://www.opengl.org/registry/specs/NV/conditional_render.txt
 // 
-// NV_copy_image: http://www.opengl.org/registry/specs/NV/copy_image.txt
+// NV_copy_image: https://www.opengl.org/registry/specs/NV/copy_image.txt
 // 
-// NV_depth_buffer_float: http://www.opengl.org/registry/specs/NV/depth_buffer_float.txt
+// NV_depth_buffer_float: https://www.opengl.org/registry/specs/NV/depth_buffer_float.txt
 // 
-// NV_evaluators: http://www.opengl.org/registry/specs/NV/evaluators.txt
+// NV_evaluators: https://www.opengl.org/registry/specs/NV/evaluators.txt
 // 
-// NV_explicit_multisample: http://www.opengl.org/registry/specs/NV/explicit_multisample.txt
+// NV_explicit_multisample: https://www.opengl.org/registry/specs/NV/explicit_multisample.txt
 // 
-// NV_fence: http://www.opengl.org/registry/specs/NV/fence.txt
+// NV_fence: https://www.opengl.org/registry/specs/NV/fence.txt
 // 
-// NV_fragment_program: http://www.opengl.org/registry/specs/NV/fragment_program.txt
+// NV_fragment_program: https://www.opengl.org/registry/specs/NV/fragment_program.txt
 // 
-// NV_framebuffer_multisample_coverage: http://www.opengl.org/registry/specs/NV/framebuffer_multisample_coverage.txt
+// NV_framebuffer_multisample_coverage: https://www.opengl.org/registry/specs/NV/framebuffer_multisample_coverage.txt
 // 
-// NV_geometry_program4: http://www.opengl.org/registry/specs/NV/geometry_program4.txt
+// NV_geometry_program4: https://www.opengl.org/registry/specs/NV/geometry_program4.txt
 // 
-// NV_gpu_program4: http://www.opengl.org/registry/specs/NV/gpu_program4.txt
+// NV_gpu_program4: https://www.opengl.org/registry/specs/NV/gpu_program4.txt
 // 
-// NV_gpu_program5: http://www.opengl.org/registry/specs/NV/gpu_program5.txt
+// NV_gpu_program5: https://www.opengl.org/registry/specs/NV/gpu_program5.txt
 // 
-// NV_gpu_shader5: http://www.opengl.org/registry/specs/NV/gpu_shader5.txt
+// NV_gpu_shader5: https://www.opengl.org/registry/specs/NV/gpu_shader5.txt
 // 
-// NV_half_float: http://www.opengl.org/registry/specs/NV/half_float.txt
+// NV_half_float: https://www.opengl.org/registry/specs/NV/half_float.txt
 // 
-// NV_occlusion_query: http://www.opengl.org/registry/specs/NV/occlusion_query.txt
+// NV_occlusion_query: https://www.opengl.org/registry/specs/NV/occlusion_query.txt
 // 
-// NV_parameter_buffer_object: http://www.opengl.org/registry/specs/NV/parameter_buffer_object.txt
+// NV_parameter_buffer_object: https://www.opengl.org/registry/specs/NV/parameter_buffer_object.txt
 // 
-// NV_path_rendering: http://www.opengl.org/registry/specs/NV/path_rendering.txt
+// NV_path_rendering: https://www.opengl.org/registry/specs/NV/path_rendering.txt
 // 
-// NV_pixel_data_range: http://www.opengl.org/registry/specs/NV/pixel_data_range.txt
+// NV_pixel_data_range: https://www.opengl.org/registry/specs/NV/pixel_data_range.txt
 // 
-// NV_point_sprite: http://www.opengl.org/registry/specs/NV/point_sprite.txt
+// NV_point_sprite: https://www.opengl.org/registry/specs/NV/point_sprite.txt
 // 
-// NV_present_video: http://www.opengl.org/registry/specs/NV/present_video.txt
+// NV_present_video: https://www.opengl.org/registry/specs/NV/present_video.txt
 // 
-// NV_primitive_restart: http://www.opengl.org/registry/specs/NV/primitive_restart.txt
+// NV_primitive_restart: https://www.opengl.org/registry/specs/NV/primitive_restart.txt
 // 
-// NV_register_combiners: http://www.opengl.org/registry/specs/NV/register_combiners.txt
+// NV_register_combiners: https://www.opengl.org/registry/specs/NV/register_combiners.txt
 // 
-// NV_register_combiners2: http://www.opengl.org/registry/specs/NV/register_combiners2.txt
+// NV_register_combiners2: https://www.opengl.org/registry/specs/NV/register_combiners2.txt
 // 
-// NV_shader_buffer_load: http://www.opengl.org/registry/specs/NV/shader_buffer_load.txt
+// NV_shader_buffer_load: https://www.opengl.org/registry/specs/NV/shader_buffer_load.txt
 // 
-// NV_texture_barrier: http://www.opengl.org/registry/specs/NV/texture_barrier.txt
+// NV_texture_barrier: https://www.opengl.org/registry/specs/NV/texture_barrier.txt
 // 
-// NV_texture_multisample: http://www.opengl.org/registry/specs/NV/texture_multisample.txt
+// NV_texture_multisample: https://www.opengl.org/registry/specs/NV/texture_multisample.txt
 // 
-// NV_transform_feedback: http://www.opengl.org/registry/specs/NV/transform_feedback.txt
+// NV_transform_feedback: https://www.opengl.org/registry/specs/NV/transform_feedback.txt
 // 
-// NV_transform_feedback2: http://www.opengl.org/registry/specs/NV/transform_feedback2.txt
+// NV_transform_feedback2: https://www.opengl.org/registry/specs/NV/transform_feedback2.txt
 // 
-// NV_vdpau_interop: http://www.opengl.org/registry/specs/NV/vdpau_interop.txt
+// NV_vdpau_interop: https://www.opengl.org/registry/specs/NV/vdpau_interop.txt
 // 
-// NV_vertex_array_range: http://www.opengl.org/registry/specs/NV/vertex_array_range.txt
+// NV_vertex_array_range: https://www.opengl.org/registry/specs/NV/vertex_array_range.txt
 // 
-// NV_vertex_attrib_integer_64bit: http://www.opengl.org/registry/specs/NV/vertex_attrib_integer_64bit.txt
+// NV_vertex_attrib_integer_64bit: https://www.opengl.org/registry/specs/NV/vertex_attrib_integer_64bit.txt
 // 
-// NV_vertex_buffer_unified_memory: http://www.opengl.org/registry/specs/NV/vertex_buffer_unified_memory.txt
+// NV_vertex_buffer_unified_memory: https://www.opengl.org/registry/specs/NV/vertex_buffer_unified_memory.txt
 // 
-// NV_vertex_program: http://www.opengl.org/registry/specs/NV/vertex_program.txt
+// NV_vertex_program: https://www.opengl.org/registry/specs/NV/vertex_program.txt
 // 
-// NV_vertex_program4: http://www.opengl.org/registry/specs/NV/vertex_program4.txt
+// NV_vertex_program4: https://www.opengl.org/registry/specs/NV/vertex_program4.txt
 // 
-// NV_video_capture: http://www.opengl.org/registry/specs/NV/video_capture.txt
+// NV_video_capture: https://www.opengl.org/registry/specs/NV/video_capture.txt
 // 
 package nv
 

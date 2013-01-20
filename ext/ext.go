@@ -2,109 +2,109 @@
 // 
 // Categories in this package: 
 // 
-// EXT_bindable_uniform: http://www.opengl.org/registry/specs/EXT/bindable_uniform.txt
+// EXT_bindable_uniform: https://www.opengl.org/registry/specs/EXT/bindable_uniform.txt
 // 
-// EXT_blend_color: http://www.opengl.org/registry/specs/EXT/blend_color.txt
+// EXT_blend_color: https://www.opengl.org/registry/specs/EXT/blend_color.txt
 // 
-// EXT_blend_equation_separate: http://www.opengl.org/registry/specs/EXT/blend_equation_separate.txt
+// EXT_blend_equation_separate: https://www.opengl.org/registry/specs/EXT/blend_equation_separate.txt
 // 
-// EXT_blend_func_separate: http://www.opengl.org/registry/specs/EXT/blend_func_separate.txt
+// EXT_blend_func_separate: https://www.opengl.org/registry/specs/EXT/blend_func_separate.txt
 // 
-// EXT_blend_minmax: http://www.opengl.org/registry/specs/EXT/blend_minmax.txt
+// EXT_blend_minmax: https://www.opengl.org/registry/specs/EXT/blend_minmax.txt
 // 
-// EXT_color_subtable: http://www.opengl.org/registry/specs/EXT/color_subtable.txt
+// EXT_color_subtable: https://www.opengl.org/registry/specs/EXT/color_subtable.txt
 // 
-// EXT_compiled_vertex_array: http://www.opengl.org/registry/specs/EXT/compiled_vertex_array.txt
+// EXT_compiled_vertex_array: https://www.opengl.org/registry/specs/EXT/compiled_vertex_array.txt
 // 
-// EXT_convolution: http://www.opengl.org/registry/specs/EXT/convolution.txt
+// EXT_convolution: https://www.opengl.org/registry/specs/EXT/convolution.txt
 // 
-// EXT_coordinate_frame: http://www.opengl.org/registry/specs/EXT/coordinate_frame.txt
+// EXT_coordinate_frame: https://www.opengl.org/registry/specs/EXT/coordinate_frame.txt
 // 
-// EXT_copy_texture: http://www.opengl.org/registry/specs/EXT/copy_texture.txt
+// EXT_copy_texture: https://www.opengl.org/registry/specs/EXT/copy_texture.txt
 // 
-// EXT_cull_vertex: http://www.opengl.org/registry/specs/EXT/cull_vertex.txt
+// EXT_cull_vertex: https://www.opengl.org/registry/specs/EXT/cull_vertex.txt
 // 
-// EXT_depth_bounds_test: http://www.opengl.org/registry/specs/EXT/depth_bounds_test.txt
+// EXT_depth_bounds_test: https://www.opengl.org/registry/specs/EXT/depth_bounds_test.txt
 // 
-// EXT_direct_state_access: http://www.opengl.org/registry/specs/EXT/direct_state_access.txt
+// EXT_direct_state_access: https://www.opengl.org/registry/specs/EXT/direct_state_access.txt
 // 
-// EXT_draw_buffers2: http://www.opengl.org/registry/specs/EXT/draw_buffers2.txt
+// EXT_draw_buffers2: https://www.opengl.org/registry/specs/EXT/draw_buffers2.txt
 // 
-// EXT_draw_instanced: http://www.opengl.org/registry/specs/EXT/draw_instanced.txt
+// EXT_draw_instanced: https://www.opengl.org/registry/specs/EXT/draw_instanced.txt
 // 
-// EXT_draw_range_elements: http://www.opengl.org/registry/specs/EXT/draw_range_elements.txt
+// EXT_draw_range_elements: https://www.opengl.org/registry/specs/EXT/draw_range_elements.txt
 // 
-// EXT_fog_coord: http://www.opengl.org/registry/specs/EXT/fog_coord.txt
+// EXT_fog_coord: https://www.opengl.org/registry/specs/EXT/fog_coord.txt
 // 
-// EXT_framebuffer_blit: http://www.opengl.org/registry/specs/EXT/framebuffer_blit.txt
+// EXT_framebuffer_blit: https://www.opengl.org/registry/specs/EXT/framebuffer_blit.txt
 // 
-// EXT_framebuffer_multisample: http://www.opengl.org/registry/specs/EXT/framebuffer_multisample.txt
+// EXT_framebuffer_multisample: https://www.opengl.org/registry/specs/EXT/framebuffer_multisample.txt
 // 
-// EXT_framebuffer_object: http://www.opengl.org/registry/specs/EXT/framebuffer_object.txt
+// EXT_framebuffer_object: https://www.opengl.org/registry/specs/EXT/framebuffer_object.txt
 // 
-// EXT_geometry_shader4: http://www.opengl.org/registry/specs/EXT/geometry_shader4.txt
+// EXT_geometry_shader4: https://www.opengl.org/registry/specs/EXT/geometry_shader4.txt
 // 
-// EXT_gpu_program_parameters: http://www.opengl.org/registry/specs/EXT/gpu_program_parameters.txt
+// EXT_gpu_program_parameters: https://www.opengl.org/registry/specs/EXT/gpu_program_parameters.txt
 // 
-// EXT_gpu_shader4: http://www.opengl.org/registry/specs/EXT/gpu_shader4.txt
+// EXT_gpu_shader4: https://www.opengl.org/registry/specs/EXT/gpu_shader4.txt
 // 
-// EXT_histogram: http://www.opengl.org/registry/specs/EXT/histogram.txt
+// EXT_histogram: https://www.opengl.org/registry/specs/EXT/histogram.txt
 // 
-// EXT_index_func: http://www.opengl.org/registry/specs/EXT/index_func.txt
+// EXT_index_func: https://www.opengl.org/registry/specs/EXT/index_func.txt
 // 
-// EXT_index_material: http://www.opengl.org/registry/specs/EXT/index_material.txt
+// EXT_index_material: https://www.opengl.org/registry/specs/EXT/index_material.txt
 // 
-// EXT_light_texture: http://www.opengl.org/registry/specs/EXT/light_texture.txt
+// EXT_light_texture: https://www.opengl.org/registry/specs/EXT/light_texture.txt
 // 
-// EXT_multi_draw_arrays: http://www.opengl.org/registry/specs/EXT/multi_draw_arrays.txt
+// EXT_multi_draw_arrays: https://www.opengl.org/registry/specs/EXT/multi_draw_arrays.txt
 // 
-// EXT_multisample: http://www.opengl.org/registry/specs/EXT/multisample.txt
+// EXT_multisample: https://www.opengl.org/registry/specs/EXT/multisample.txt
 // 
-// EXT_paletted_texture: http://www.opengl.org/registry/specs/EXT/paletted_texture.txt
+// EXT_paletted_texture: https://www.opengl.org/registry/specs/EXT/paletted_texture.txt
 // 
-// EXT_pixel_transform: http://www.opengl.org/registry/specs/EXT/pixel_transform.txt
+// EXT_pixel_transform: https://www.opengl.org/registry/specs/EXT/pixel_transform.txt
 // 
-// EXT_point_parameters: http://www.opengl.org/registry/specs/EXT/point_parameters.txt
+// EXT_point_parameters: https://www.opengl.org/registry/specs/EXT/point_parameters.txt
 // 
-// EXT_polygon_offset: http://www.opengl.org/registry/specs/EXT/polygon_offset.txt
+// EXT_polygon_offset: https://www.opengl.org/registry/specs/EXT/polygon_offset.txt
 // 
-// EXT_provoking_vertex: http://www.opengl.org/registry/specs/EXT/provoking_vertex.txt
+// EXT_provoking_vertex: https://www.opengl.org/registry/specs/EXT/provoking_vertex.txt
 // 
-// EXT_secondary_color: http://www.opengl.org/registry/specs/EXT/secondary_color.txt
+// EXT_secondary_color: https://www.opengl.org/registry/specs/EXT/secondary_color.txt
 // 
-// EXT_separate_shader_objects: http://www.opengl.org/registry/specs/EXT/separate_shader_objects.txt
+// EXT_separate_shader_objects: https://www.opengl.org/registry/specs/EXT/separate_shader_objects.txt
 // 
-// EXT_shader_image_load_store: http://www.opengl.org/registry/specs/EXT/shader_image_load_store.txt
+// EXT_shader_image_load_store: https://www.opengl.org/registry/specs/EXT/shader_image_load_store.txt
 // 
-// EXT_stencil_clear_tag: http://www.opengl.org/registry/specs/EXT/stencil_clear_tag.txt
+// EXT_stencil_clear_tag: https://www.opengl.org/registry/specs/EXT/stencil_clear_tag.txt
 // 
-// EXT_stencil_two_side: http://www.opengl.org/registry/specs/EXT/stencil_two_side.txt
+// EXT_stencil_two_side: https://www.opengl.org/registry/specs/EXT/stencil_two_side.txt
 // 
-// EXT_subtexture: http://www.opengl.org/registry/specs/EXT/subtexture.txt
+// EXT_subtexture: https://www.opengl.org/registry/specs/EXT/subtexture.txt
 // 
-// EXT_texture3D: http://www.opengl.org/registry/specs/EXT/texture3D.txt
+// EXT_texture3D: https://www.opengl.org/registry/specs/EXT/texture3D.txt
 // 
-// EXT_texture_buffer_object: http://www.opengl.org/registry/specs/EXT/texture_buffer_object.txt
+// EXT_texture_buffer_object: https://www.opengl.org/registry/specs/EXT/texture_buffer_object.txt
 // 
-// EXT_texture_integer: http://www.opengl.org/registry/specs/EXT/texture_integer.txt
+// EXT_texture_integer: https://www.opengl.org/registry/specs/EXT/texture_integer.txt
 // 
-// EXT_texture_object: http://www.opengl.org/registry/specs/EXT/texture_object.txt
+// EXT_texture_object: https://www.opengl.org/registry/specs/EXT/texture_object.txt
 // 
-// EXT_texture_perturb_normal: http://www.opengl.org/registry/specs/EXT/texture_perturb_normal.txt
+// EXT_texture_perturb_normal: https://www.opengl.org/registry/specs/EXT/texture_perturb_normal.txt
 // 
-// EXT_timer_query: http://www.opengl.org/registry/specs/EXT/timer_query.txt
+// EXT_timer_query: https://www.opengl.org/registry/specs/EXT/timer_query.txt
 // 
-// EXT_transform_feedback: http://www.opengl.org/registry/specs/EXT/transform_feedback.txt
+// EXT_transform_feedback: https://www.opengl.org/registry/specs/EXT/transform_feedback.txt
 // 
-// EXT_vertex_array: http://www.opengl.org/registry/specs/EXT/vertex_array.txt
+// EXT_vertex_array: https://www.opengl.org/registry/specs/EXT/vertex_array.txt
 // 
-// EXT_vertex_attrib_64bit: http://www.opengl.org/registry/specs/EXT/vertex_attrib_64bit.txt
+// EXT_vertex_attrib_64bit: https://www.opengl.org/registry/specs/EXT/vertex_attrib_64bit.txt
 // 
-// EXT_vertex_shader: http://www.opengl.org/registry/specs/EXT/vertex_shader.txt
+// EXT_vertex_shader: https://www.opengl.org/registry/specs/EXT/vertex_shader.txt
 // 
-// EXT_vertex_weighting: http://www.opengl.org/registry/specs/EXT/vertex_weighting.txt
+// EXT_vertex_weighting: https://www.opengl.org/registry/specs/EXT/vertex_weighting.txt
 // 
-// EXT_x11_sync_object: http://www.opengl.org/registry/specs/EXT/x11_sync_object.txt
+// EXT_x11_sync_object: https://www.opengl.org/registry/specs/EXT/x11_sync_object.txt
 // 
 package ext
 

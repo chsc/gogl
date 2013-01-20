@@ -2,71 +2,71 @@
 // 
 // Categories in this package: 
 // 
-// ARB_create_context: http://www.opengl.org/registry/specs/ARB/create_context.txt
+// ARB_create_context: https://www.opengl.org/registry/specs/ARB/create_context.txt
 // 
-// ARB_get_proc_address: http://www.opengl.org/registry/specs/ARB/get_proc_address.txt
+// ARB_get_proc_address: https://www.opengl.org/registry/specs/ARB/get_proc_address.txt
 // 
-// EXT_import_context: http://www.opengl.org/registry/specs/EXT/import_context.txt
+// EXT_import_context: https://www.opengl.org/registry/specs/EXT/import_context.txt
 // 
-// EXT_swap_control: http://www.opengl.org/registry/specs/EXT/swap_control.txt
+// EXT_swap_control: https://www.opengl.org/registry/specs/EXT/swap_control.txt
 // 
-// EXT_texture_from_pixmap: http://www.opengl.org/registry/specs/EXT/texture_from_pixmap.txt
+// EXT_texture_from_pixmap: https://www.opengl.org/registry/specs/EXT/texture_from_pixmap.txt
 // 
-// MESA_agp_offset: http://www.opengl.org/registry/specs/MESA/agp_offset.txt
+// MESA_agp_offset: https://www.opengl.org/registry/specs/MESA/agp_offset.txt
 // 
-// MESA_copy_sub_buffer: http://www.opengl.org/registry/specs/MESA/copy_sub_buffer.txt
+// MESA_copy_sub_buffer: https://www.opengl.org/registry/specs/MESA/copy_sub_buffer.txt
 // 
-// MESA_pixmap_colormap: http://www.opengl.org/registry/specs/MESA/pixmap_colormap.txt
+// MESA_pixmap_colormap: https://www.opengl.org/registry/specs/MESA/pixmap_colormap.txt
 // 
-// MESA_release_buffers: http://www.opengl.org/registry/specs/MESA/release_buffers.txt
+// MESA_release_buffers: https://www.opengl.org/registry/specs/MESA/release_buffers.txt
 // 
-// MESA_set_3dfx_mode: http://www.opengl.org/registry/specs/MESA/set_3dfx_mode.txt
+// MESA_set_3dfx_mode: https://www.opengl.org/registry/specs/MESA/set_3dfx_mode.txt
 // 
-// NV_copy_image: http://www.opengl.org/registry/specs/NV/copy_image.txt
+// NV_copy_image: https://www.opengl.org/registry/specs/NV/copy_image.txt
 // 
-// NV_present_video: http://www.opengl.org/registry/specs/NV/present_video.txt
+// NV_present_video: https://www.opengl.org/registry/specs/NV/present_video.txt
 // 
-// NV_swap_group: http://www.opengl.org/registry/specs/NV/swap_group.txt
+// NV_swap_group: https://www.opengl.org/registry/specs/NV/swap_group.txt
 // 
-// NV_video_capture: http://www.opengl.org/registry/specs/NV/video_capture.txt
+// NV_video_capture: https://www.opengl.org/registry/specs/NV/video_capture.txt
 // 
-// NV_video_output: http://www.opengl.org/registry/specs/NV/video_output.txt
+// NV_video_output: https://www.opengl.org/registry/specs/NV/video_output.txt
 // 
-// OML_sync_control: http://www.opengl.org/registry/specs/OML/sync_control.txt
+// OML_sync_control: https://www.opengl.org/registry/specs/OML/sync_control.txt
 // 
-// SGIX_dmbuffer: http://www.opengl.org/registry/specs/SGIX/dmbuffer.txt
+// SGIX_dmbuffer: https://www.opengl.org/registry/specs/SGIX/dmbuffer.txt
 // 
-// SGIX_fbconfig: http://www.opengl.org/registry/specs/SGIX/fbconfig.txt
+// SGIX_fbconfig: https://www.opengl.org/registry/specs/SGIX/fbconfig.txt
 // 
-// SGIX_hyperpipe: http://www.opengl.org/registry/specs/SGIX/hyperpipe.txt
+// SGIX_hyperpipe: https://www.opengl.org/registry/specs/SGIX/hyperpipe.txt
 // 
-// SGIX_pbuffer: http://www.opengl.org/registry/specs/SGIX/pbuffer.txt
+// SGIX_pbuffer: https://www.opengl.org/registry/specs/SGIX/pbuffer.txt
 // 
-// SGIX_swap_barrier: http://www.opengl.org/registry/specs/SGIX/swap_barrier.txt
+// SGIX_swap_barrier: https://www.opengl.org/registry/specs/SGIX/swap_barrier.txt
 // 
-// SGIX_swap_group: http://www.opengl.org/registry/specs/SGIX/swap_group.txt
+// SGIX_swap_group: https://www.opengl.org/registry/specs/SGIX/swap_group.txt
 // 
-// SGIX_video_resize: http://www.opengl.org/registry/specs/SGIX/video_resize.txt
+// SGIX_video_resize: https://www.opengl.org/registry/specs/SGIX/video_resize.txt
 // 
-// SGIX_video_source: http://www.opengl.org/registry/specs/SGIX/video_source.txt
+// SGIX_video_source: https://www.opengl.org/registry/specs/SGIX/video_source.txt
 // 
-// SGI_cushion: http://www.opengl.org/registry/specs/SGI/cushion.txt
+// SGI_cushion: https://www.opengl.org/registry/specs/SGI/cushion.txt
 // 
-// SGI_make_current_read: http://www.opengl.org/registry/specs/SGI/make_current_read.txt
+// SGI_make_current_read: https://www.opengl.org/registry/specs/SGI/make_current_read.txt
 // 
-// SGI_swap_control: http://www.opengl.org/registry/specs/SGI/swap_control.txt
+// SGI_swap_control: https://www.opengl.org/registry/specs/SGI/swap_control.txt
 // 
-// SGI_video_sync: http://www.opengl.org/registry/specs/SGI/video_sync.txt
+// SGI_video_sync: https://www.opengl.org/registry/specs/SGI/video_sync.txt
 // 
-// SUN_get_transparent_index: http://www.opengl.org/registry/specs/SUN/get_transparent_index.txt
+// SUN_get_transparent_index: https://www.opengl.org/registry/specs/SUN/get_transparent_index.txt
 // 
 // VERSION_1_3
 // 
 // VERSION_1_4
 // 
-// glx: http://www.opengl.org/registry/specs/glx/.txt
+// glx: https://www.opengl.org/registry/specs/glx/.txt
 // 
-// http://www.opengl.org/sdk/docs/man
+// https://www.opengl.org/sdk/docs/man
 // 
 package glx
 
@@ -1700,669 +1700,669 @@ const (
 )
 // ARB_create_context
 
-// http://www.opengl.org/sdk/docs/man/xhtml/glCreateContextAttribsARB.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glCreateContextAttribsARB.xml
 func CreateContextAttribsARB(dpy Pointer, config Pointer, share_context Pointer, direct int, attrib_list *Int) Pointer {
 	return (Pointer)(C.goglxCreateContextAttribsARB((*C.Display)(dpy), (C.GLXFBConfig)(config), (C.GLXContext)(share_context), (C.int)(direct), (*C.int)(attrib_list)))
 }
 // ARB_get_proc_address
 
-// http://www.opengl.org/sdk/docs/man/xhtml/glGetProcAddressARB.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glGetProcAddressARB.xml
 func GetProcAddressARB(procName *Ubyte) Pointer {
 	return (Pointer)(C.goglxGetProcAddressARB((*C.GLubyte)(procName)))
 }
 // EXT_import_context
 
-// http://www.opengl.org/sdk/docs/man/xhtml/glGetCurrentDisplayEXT.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glGetCurrentDisplayEXT.xml
 func GetCurrentDisplayEXT() Pointer {
 	return (Pointer)(C.goglxGetCurrentDisplayEXT())
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glQueryContextInfoEXT.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glQueryContextInfoEXT.xml
 func QueryContextInfoEXT(dpy Pointer, context Pointer, attribute Int, value *Int) Int {
 	return (Int)(C.goglxQueryContextInfoEXT((*C.Display)(dpy), (C.GLXContext)(context), (C.int)(attribute), (*C.int)(value)))
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glGetContextIDEXT.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glGetContextIDEXT.xml
 func GetContextIDEXT(context Pointer) uint32 {
 	return (uint32)(C.goglxGetContextIDEXT((C.GLXContext)(context)))
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glImportContextEXT.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glImportContextEXT.xml
 func ImportContextEXT(dpy Pointer, contextID uint32) Pointer {
 	return (Pointer)(C.goglxImportContextEXT((*C.Display)(dpy), (C.GLXContextID)(contextID)))
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glFreeContextEXT.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glFreeContextEXT.xml
 func FreeContextEXT(dpy Pointer, context Pointer)  {
 	C.goglxFreeContextEXT((*C.Display)(dpy), (C.GLXContext)(context))
 }
 // EXT_swap_control
 
-// http://www.opengl.org/sdk/docs/man/xhtml/glSwapIntervalEXT.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glSwapIntervalEXT.xml
 func SwapIntervalEXT(dpy Pointer, drawable Pointer, interval Int)  {
 	C.goglxSwapIntervalEXT((*C.Display)(dpy), (C.GLXDrawable)(drawable), (C.int)(interval))
 }
 // EXT_texture_from_pixmap
 
-// http://www.opengl.org/sdk/docs/man/xhtml/glBindTexImageEXT.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glBindTexImageEXT.xml
 func BindTexImageEXT(dpy Pointer, drawable Pointer, buffer Int, attrib_list *Int)  {
 	C.goglxBindTexImageEXT((*C.Display)(dpy), (C.GLXDrawable)(drawable), (C.int)(buffer), (*C.int)(attrib_list))
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glReleaseTexImageEXT.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glReleaseTexImageEXT.xml
 func ReleaseTexImageEXT(dpy Pointer, drawable Pointer, buffer Int)  {
 	C.goglxReleaseTexImageEXT((*C.Display)(dpy), (C.GLXDrawable)(drawable), (C.int)(buffer))
 }
 // MESA_agp_offset
 
-// http://www.opengl.org/sdk/docs/man/xhtml/glGetAGPOffsetMESA.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glGetAGPOffsetMESA.xml
 func GetAGPOffsetMESA(pointer Pointer) uint32 {
 	return (uint32)(C.goglxGetAGPOffsetMESA((unsafe.Pointer)(pointer)))
 }
 // MESA_copy_sub_buffer
 
-// http://www.opengl.org/sdk/docs/man/xhtml/glCopySubBufferMESA.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glCopySubBufferMESA.xml
 func CopySubBufferMESA(dpy Pointer, drawable Pointer, x Int, y Int, width Int, height Int)  {
 	C.goglxCopySubBufferMESA((*C.Display)(dpy), (C.GLXDrawable)(drawable), (C.int)(x), (C.int)(y), (C.int)(width), (C.int)(height))
 }
 // MESA_pixmap_colormap
 
-// http://www.opengl.org/sdk/docs/man/xhtml/glCreateGLXPixmapMESA.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glCreateGLXPixmapMESA.xml
 func CreateGLXPixmapMESA(dpy Pointer, visual Pointer, pixmap Pointer, cmap Pointer) Pointer {
 	return (Pointer)(C.goglxCreateGLXPixmapMESA((*C.Display)(dpy), (C.XVisualInfo)(visual), (C.Pixmap)(pixmap), (C.Colormap)(cmap)))
 }
 // MESA_release_buffers
 
-// http://www.opengl.org/sdk/docs/man/xhtml/glReleaseBuffersMESA.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glReleaseBuffersMESA.xml
 func ReleaseBuffersMESA(dpy Pointer, drawable Pointer) int {
 	return (int)(C.goglxReleaseBuffersMESA((*C.Display)(dpy), (C.GLXDrawable)(drawable)))
 }
 // MESA_set_3dfx_mode
 
-// http://www.opengl.org/sdk/docs/man/xhtml/glSet3DfxModeMESA.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glSet3DfxModeMESA.xml
 func Set3DfxModeMESA(mode Int) int {
 	return (int)(C.goglxSet3DfxModeMESA((C.int)(mode)))
 }
 // NV_copy_image
 
-// http://www.opengl.org/sdk/docs/man/xhtml/glCopyImageSubDataNV.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glCopyImageSubDataNV.xml
 func CopyImageSubDataNV(dpy Pointer, srcCtx Pointer, srcName Uint, srcTarget Enum, srcLevel Int, srcX Int, srcY Int, srcZ Int, dstCtx Pointer, dstName Uint, dstTarget Enum, dstLevel Int, dstX Int, dstY Int, dstZ Int, width Sizei, height Sizei, depth Sizei)  {
 	C.goglxCopyImageSubDataNV((*C.Display)(dpy), (C.GLXContext)(srcCtx), (C.GLuint)(srcName), (C.GLenum)(srcTarget), (C.GLint)(srcLevel), (C.GLint)(srcX), (C.GLint)(srcY), (C.GLint)(srcZ), (C.GLXContext)(dstCtx), (C.GLuint)(dstName), (C.GLenum)(dstTarget), (C.GLint)(dstLevel), (C.GLint)(dstX), (C.GLint)(dstY), (C.GLint)(dstZ), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLsizei)(depth))
 }
 // NV_present_video
 
-// http://www.opengl.org/sdk/docs/man/xhtml/glEnumerateVideoDevicesNV.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glEnumerateVideoDevicesNV.xml
 func EnumerateVideoDevicesNV(dpy Pointer, screen Int, nelements *Int) *uint32 {
 	return (*uint32)(C.goglxEnumerateVideoDevicesNV((*C.Display)(dpy), (C.int)(screen), (*C.int)(nelements)))
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glBindVideoDeviceNV.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glBindVideoDeviceNV.xml
 func BindVideoDeviceNV(dpy Pointer, video_slot uint32, video_device uint32, attrib_list *Int) Int {
 	return (Int)(C.goglxBindVideoDeviceNV((*C.Display)(dpy), (C.uint32)(video_slot), (C.uint32)(video_device), (*C.int)(attrib_list)))
 }
 // NV_swap_group
 
-// http://www.opengl.org/sdk/docs/man/xhtml/glJoinSwapGroupNV.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glJoinSwapGroupNV.xml
 func JoinSwapGroupNV(dpy Pointer, drawable Pointer, group Uint) int {
 	return (int)(C.goglxJoinSwapGroupNV((*C.Display)(dpy), (C.GLXDrawable)(drawable), (C.GLuint)(group)))
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glBindSwapBarrierNV.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glBindSwapBarrierNV.xml
 func BindSwapBarrierNV(dpy Pointer, group Uint, barrier Uint) int {
 	return (int)(C.goglxBindSwapBarrierNV((*C.Display)(dpy), (C.GLuint)(group), (C.GLuint)(barrier)))
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glQuerySwapGroupNV.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glQuerySwapGroupNV.xml
 func QuerySwapGroupNV(dpy Pointer, drawable Pointer, group *Uint, barrier *Uint) int {
 	return (int)(C.goglxQuerySwapGroupNV((*C.Display)(dpy), (C.GLXDrawable)(drawable), (*C.GLuint)(group), (*C.GLuint)(barrier)))
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glQueryMaxSwapGroupsNV.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glQueryMaxSwapGroupsNV.xml
 func QueryMaxSwapGroupsNV(dpy Pointer, screen Int, maxGroups *Uint, maxBarriers *Uint) int {
 	return (int)(C.goglxQueryMaxSwapGroupsNV((*C.Display)(dpy), (C.int)(screen), (*C.GLuint)(maxGroups), (*C.GLuint)(maxBarriers)))
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glQueryFrameCountNV.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glQueryFrameCountNV.xml
 func QueryFrameCountNV(dpy Pointer, screen Int, count *Uint) int {
 	return (int)(C.goglxQueryFrameCountNV((*C.Display)(dpy), (C.int)(screen), (*C.GLuint)(count)))
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glResetFrameCountNV.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glResetFrameCountNV.xml
 func ResetFrameCountNV(dpy Pointer, screen Int) int {
 	return (int)(C.goglxResetFrameCountNV((*C.Display)(dpy), (C.int)(screen)))
 }
 // NV_video_capture
 
-// http://www.opengl.org/sdk/docs/man/xhtml/glBindVideoCaptureDeviceNV.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glBindVideoCaptureDeviceNV.xml
 func BindVideoCaptureDeviceNV(dpy Pointer, video_capture_slot uint32, device Pointer) Int {
 	return (Int)(C.goglxBindVideoCaptureDeviceNV((*C.Display)(dpy), (C.uint32)(video_capture_slot), (C.GLXVideoCaptureDeviceNV)(device)))
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glEnumerateVideoCaptureDevicesNV.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glEnumerateVideoCaptureDevicesNV.xml
 func EnumerateVideoCaptureDevicesNV(dpy Pointer, screen Int, nelements *Int) Pointer {
 	return (Pointer)(C.goglxEnumerateVideoCaptureDevicesNV((*C.Display)(dpy), (C.int)(screen), (*C.int)(nelements)))
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glLockVideoCaptureDeviceNV.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glLockVideoCaptureDeviceNV.xml
 func LockVideoCaptureDeviceNV(dpy Pointer, device Pointer)  {
 	C.goglxLockVideoCaptureDeviceNV((*C.Display)(dpy), (C.GLXVideoCaptureDeviceNV)(device))
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glQueryVideoCaptureDeviceNV.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glQueryVideoCaptureDeviceNV.xml
 func QueryVideoCaptureDeviceNV(dpy Pointer, device Pointer, attribute Int, value *Int) Int {
 	return (Int)(C.goglxQueryVideoCaptureDeviceNV((*C.Display)(dpy), (C.GLXVideoCaptureDeviceNV)(device), (C.int)(attribute), (*C.int)(value)))
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glReleaseVideoCaptureDeviceNV.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glReleaseVideoCaptureDeviceNV.xml
 func ReleaseVideoCaptureDeviceNV(dpy Pointer, device Pointer)  {
 	C.goglxReleaseVideoCaptureDeviceNV((*C.Display)(dpy), (C.GLXVideoCaptureDeviceNV)(device))
 }
 // NV_video_output
 
-// http://www.opengl.org/sdk/docs/man/xhtml/glGetVideoDeviceNV.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glGetVideoDeviceNV.xml
 func GetVideoDeviceNV(dpy Pointer, screen Int, numVideoDevices Int, pVideoDevice Pointer) Int {
 	return (Int)(C.goglxGetVideoDeviceNV((*C.Display)(dpy), (C.int)(screen), (C.int)(numVideoDevices), (C.GLXVideoDeviceNV)(pVideoDevice)))
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glReleaseVideoDeviceNV.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glReleaseVideoDeviceNV.xml
 func ReleaseVideoDeviceNV(dpy Pointer, screen Int, VideoDevice Pointer) Int {
 	return (Int)(C.goglxReleaseVideoDeviceNV((*C.Display)(dpy), (C.int)(screen), (C.GLXVideoDeviceNV)(VideoDevice)))
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glBindVideoImageNV.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glBindVideoImageNV.xml
 func BindVideoImageNV(dpy Pointer, VideoDevice Pointer, pbuf Pointer, iVideoBuffer Int) Int {
 	return (Int)(C.goglxBindVideoImageNV((*C.Display)(dpy), (C.GLXVideoDeviceNV)(VideoDevice), (C.GLXPbuffer)(pbuf), (C.int)(iVideoBuffer)))
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glReleaseVideoImageNV.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glReleaseVideoImageNV.xml
 func ReleaseVideoImageNV(dpy Pointer, pbuf Pointer) Int {
 	return (Int)(C.goglxReleaseVideoImageNV((*C.Display)(dpy), (C.GLXPbuffer)(pbuf)))
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glSendPbufferToVideoNV.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glSendPbufferToVideoNV.xml
 func SendPbufferToVideoNV(dpy Pointer, pbuf Pointer, iBufferType Int, pulCounterPbuffer *uint32, bBlock Boolean) Int {
 	return (Int)(C.goglxSendPbufferToVideoNV((*C.Display)(dpy), (C.GLXPbuffer)(pbuf), (C.int)(iBufferType), (*C.unsigned_long)(pulCounterPbuffer), (C.GLboolean)(bBlock)))
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glGetVideoInfoNV.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glGetVideoInfoNV.xml
 func GetVideoInfoNV(dpy Pointer, screen Int, VideoDevice Pointer, pulCounterOutputPbuffer *uint32, pulCounterOutputVideo *uint32) Int {
 	return (Int)(C.goglxGetVideoInfoNV((*C.Display)(dpy), (C.int)(screen), (C.GLXVideoDeviceNV)(VideoDevice), (*C.unsigned_long)(pulCounterOutputPbuffer), (*C.unsigned_long)(pulCounterOutputVideo)))
 }
 // OML_sync_control
 
-// http://www.opengl.org/sdk/docs/man/xhtml/glGetSyncValuesOML.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glGetSyncValuesOML.xml
 func GetSyncValuesOML(dpy Pointer, drawable Pointer, ust *int64, msc *int64, sbc *int64) int {
 	return (int)(C.goglxGetSyncValuesOML((*C.Display)(dpy), (C.GLXDrawable)(drawable), (*C.int64_t)(ust), (*C.int64_t)(msc), (*C.int64_t)(sbc)))
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glGetMscRateOML.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glGetMscRateOML.xml
 func GetMscRateOML(dpy Pointer, drawable Pointer, numerator *int32, denominator *int32) int {
 	return (int)(C.goglxGetMscRateOML((*C.Display)(dpy), (C.GLXDrawable)(drawable), (*C.int32_t)(numerator), (*C.int32_t)(denominator)))
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glSwapBuffersMscOML.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glSwapBuffersMscOML.xml
 func SwapBuffersMscOML(dpy Pointer, drawable Pointer, target_msc int64, divisor int64, remainder int64) int64 {
 	return (int64)(C.goglxSwapBuffersMscOML((*C.Display)(dpy), (C.GLXDrawable)(drawable), (C.int64_t)(target_msc), (C.int64_t)(divisor), (C.int64_t)(remainder)))
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glWaitForMscOML.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glWaitForMscOML.xml
 func WaitForMscOML(dpy Pointer, drawable Pointer, target_msc int64, divisor int64, remainder int64, ust *int64, msc *int64, sbc *int64) int {
 	return (int)(C.goglxWaitForMscOML((*C.Display)(dpy), (C.GLXDrawable)(drawable), (C.int64_t)(target_msc), (C.int64_t)(divisor), (C.int64_t)(remainder), (*C.int64_t)(ust), (*C.int64_t)(msc), (*C.int64_t)(sbc)))
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glWaitForSbcOML.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glWaitForSbcOML.xml
 func WaitForSbcOML(dpy Pointer, drawable Pointer, target_sbc int64, ust *int64, msc *int64, sbc *int64) int {
 	return (int)(C.goglxWaitForSbcOML((*C.Display)(dpy), (C.GLXDrawable)(drawable), (C.int64_t)(target_sbc), (*C.int64_t)(ust), (*C.int64_t)(msc), (*C.int64_t)(sbc)))
 }
 // SGIX_dmbuffer
 
-// http://www.opengl.org/sdk/docs/man/xhtml/glAssociateDMPbufferSGIX.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glAssociateDMPbufferSGIX.xml
 func AssociateDMPbufferSGIX(dpy Pointer, pbuffer Pointer, params Pointer, dmbuffer Pointer) int {
 	return (int)(C.goglxAssociateDMPbufferSGIX((*C.Display)(dpy), (C.GLXPbufferSGIX)(pbuffer), (C.DMparams)(params), (C.DMbuffer)(dmbuffer)))
 }
 // SGIX_fbconfig
 
-// http://www.opengl.org/sdk/docs/man/xhtml/glGetFBConfigAttribSGIX.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glGetFBConfigAttribSGIX.xml
 func GetFBConfigAttribSGIX(dpy Pointer, config Pointer, attribute Int, value *Int) Int {
 	return (Int)(C.goglxGetFBConfigAttribSGIX((*C.Display)(dpy), (C.GLXFBConfigSGIX)(config), (C.int)(attribute), (*C.int)(value)))
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glChooseFBConfigSGIX.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glChooseFBConfigSGIX.xml
 func ChooseFBConfigSGIX(dpy Pointer, screen Int, attrib_list *Int, nelements *Int) Pointer {
 	return (Pointer)(C.goglxChooseFBConfigSGIX((*C.Display)(dpy), (C.int)(screen), (*C.int)(attrib_list), (*C.int)(nelements)))
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glCreateGLXPixmapWithConfigSGIX.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glCreateGLXPixmapWithConfigSGIX.xml
 func CreateGLXPixmapWithConfigSGIX(dpy Pointer, config Pointer, pixmap Pointer) Pointer {
 	return (Pointer)(C.goglxCreateGLXPixmapWithConfigSGIX((*C.Display)(dpy), (C.GLXFBConfigSGIX)(config), (C.Pixmap)(pixmap)))
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glCreateContextWithConfigSGIX.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glCreateContextWithConfigSGIX.xml
 func CreateContextWithConfigSGIX(dpy Pointer, config Pointer, render_type Int, share_list Pointer, direct int) Pointer {
 	return (Pointer)(C.goglxCreateContextWithConfigSGIX((*C.Display)(dpy), (C.GLXFBConfigSGIX)(config), (C.int)(render_type), (C.GLXContext)(share_list), (C.int)(direct)))
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glGetVisualFromFBConfigSGIX.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glGetVisualFromFBConfigSGIX.xml
 func GetVisualFromFBConfigSGIX(dpy Pointer, config Pointer) Pointer {
 	return (Pointer)(C.goglxGetVisualFromFBConfigSGIX((*C.Display)(dpy), (C.GLXFBConfigSGIX)(config)))
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glGetFBConfigFromVisualSGIX.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glGetFBConfigFromVisualSGIX.xml
 func GetFBConfigFromVisualSGIX(dpy Pointer, vis Pointer) Pointer {
 	return (Pointer)(C.goglxGetFBConfigFromVisualSGIX((*C.Display)(dpy), (C.XVisualInfo)(vis)))
 }
 // SGIX_hyperpipe
 
-// http://www.opengl.org/sdk/docs/man/xhtml/glQueryHyperpipeNetworkSGIX.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glQueryHyperpipeNetworkSGIX.xml
 func QueryHyperpipeNetworkSGIX(dpy Pointer, npipes *Int) Pointer {
 	return (Pointer)(C.goglxQueryHyperpipeNetworkSGIX((*C.Display)(dpy), (*C.int)(npipes)))
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glHyperpipeConfigSGIX.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glHyperpipeConfigSGIX.xml
 func HyperpipeConfigSGIX(dpy Pointer, networkId Int, npipes Int, cfg Pointer, hpId *Int) Int {
 	return (Int)(C.goglxHyperpipeConfigSGIX((*C.Display)(dpy), (C.int)(networkId), (C.int)(npipes), (*C.GLXHyperpipeConfigSGIX)(cfg), (*C.int)(hpId)))
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glQueryHyperpipeConfigSGIX.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glQueryHyperpipeConfigSGIX.xml
 func QueryHyperpipeConfigSGIX(dpy Pointer, hpId Int, npipes *Int) Pointer {
 	return (Pointer)(C.goglxQueryHyperpipeConfigSGIX((*C.Display)(dpy), (C.int)(hpId), (*C.int)(npipes)))
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glDestroyHyperpipeConfigSGIX.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glDestroyHyperpipeConfigSGIX.xml
 func DestroyHyperpipeConfigSGIX(dpy Pointer, hpId Int) Int {
 	return (Int)(C.goglxDestroyHyperpipeConfigSGIX((*C.Display)(dpy), (C.int)(hpId)))
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glBindHyperpipeSGIX.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glBindHyperpipeSGIX.xml
 func BindHyperpipeSGIX(dpy Pointer, hpId Int) Int {
 	return (Int)(C.goglxBindHyperpipeSGIX((*C.Display)(dpy), (C.int)(hpId)))
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glQueryHyperpipeBestAttribSGIX.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glQueryHyperpipeBestAttribSGIX.xml
 func QueryHyperpipeBestAttribSGIX(dpy Pointer, timeSlice Int, attrib Int, size Int, attribList Pointer, returnAttribList Pointer) Int {
 	return (Int)(C.goglxQueryHyperpipeBestAttribSGIX((*C.Display)(dpy), (C.int)(timeSlice), (C.int)(attrib), (C.int)(size), (unsafe.Pointer)(attribList), (unsafe.Pointer)(returnAttribList)))
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glHyperpipeAttribSGIX.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glHyperpipeAttribSGIX.xml
 func HyperpipeAttribSGIX(dpy Pointer, timeSlice Int, attrib Int, size Int, attribList Pointer) Int {
 	return (Int)(C.goglxHyperpipeAttribSGIX((*C.Display)(dpy), (C.int)(timeSlice), (C.int)(attrib), (C.int)(size), (unsafe.Pointer)(attribList)))
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glQueryHyperpipeAttribSGIX.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glQueryHyperpipeAttribSGIX.xml
 func QueryHyperpipeAttribSGIX(dpy Pointer, timeSlice Int, attrib Int, size Int, returnAttribList Pointer) Int {
 	return (Int)(C.goglxQueryHyperpipeAttribSGIX((*C.Display)(dpy), (C.int)(timeSlice), (C.int)(attrib), (C.int)(size), (unsafe.Pointer)(returnAttribList)))
 }
 // SGIX_pbuffer
 
-// http://www.opengl.org/sdk/docs/man/xhtml/glCreateGLXPbufferSGIX.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glCreateGLXPbufferSGIX.xml
 func CreateGLXPbufferSGIX(dpy Pointer, config Pointer, width uint32, height uint32, attrib_list *Int) Pointer {
 	return (Pointer)(C.goglxCreateGLXPbufferSGIX((*C.Display)(dpy), (C.GLXFBConfigSGIX)(config), (C.uint32)(width), (C.uint32)(height), (*C.int)(attrib_list)))
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glDestroyGLXPbufferSGIX.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glDestroyGLXPbufferSGIX.xml
 func DestroyGLXPbufferSGIX(dpy Pointer, pbuf Pointer)  {
 	C.goglxDestroyGLXPbufferSGIX((*C.Display)(dpy), (C.GLXPbufferSGIX)(pbuf))
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glQueryGLXPbufferSGIX.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glQueryGLXPbufferSGIX.xml
 func QueryGLXPbufferSGIX(dpy Pointer, pbuf Pointer, attribute Int, value *uint32) Int {
 	return (Int)(C.goglxQueryGLXPbufferSGIX((*C.Display)(dpy), (C.GLXPbufferSGIX)(pbuf), (C.int)(attribute), (*C.uint32)(value)))
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glSelectEventSGIX.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glSelectEventSGIX.xml
 func SelectEventSGIX(dpy Pointer, drawable Pointer, mask uint32)  {
 	C.goglxSelectEventSGIX((*C.Display)(dpy), (C.GLXDrawable)(drawable), (C.unsigned_long)(mask))
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glGetSelectedEventSGIX.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glGetSelectedEventSGIX.xml
 func GetSelectedEventSGIX(dpy Pointer, drawable Pointer, mask *uint32)  {
 	C.goglxGetSelectedEventSGIX((*C.Display)(dpy), (C.GLXDrawable)(drawable), (*C.unsigned_long)(mask))
 }
 // SGIX_swap_barrier
 
-// http://www.opengl.org/sdk/docs/man/xhtml/glBindSwapBarrierSGIX.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glBindSwapBarrierSGIX.xml
 func BindSwapBarrierSGIX(dpy Pointer, drawable Pointer, barrier Int)  {
 	C.goglxBindSwapBarrierSGIX((*C.Display)(dpy), (C.GLXDrawable)(drawable), (C.int)(barrier))
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glQueryMaxSwapBarriersSGIX.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glQueryMaxSwapBarriersSGIX.xml
 func QueryMaxSwapBarriersSGIX(dpy Pointer, screen Int, max *Int) int {
 	return (int)(C.goglxQueryMaxSwapBarriersSGIX((*C.Display)(dpy), (C.int)(screen), (*C.int)(max)))
 }
 // SGIX_swap_group
 
-// http://www.opengl.org/sdk/docs/man/xhtml/glJoinSwapGroupSGIX.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glJoinSwapGroupSGIX.xml
 func JoinSwapGroupSGIX(dpy Pointer, drawable Pointer, member Pointer)  {
 	C.goglxJoinSwapGroupSGIX((*C.Display)(dpy), (C.GLXDrawable)(drawable), (C.GLXDrawable)(member))
 }
 // SGIX_video_resize
 
-// http://www.opengl.org/sdk/docs/man/xhtml/glBindChannelToWindowSGIX.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glBindChannelToWindowSGIX.xml
 func BindChannelToWindowSGIX(display Pointer, screen Int, channel Int, window Pointer) Int {
 	return (Int)(C.goglxBindChannelToWindowSGIX((*C.Display)(display), (C.int)(screen), (C.int)(channel), (C.Window)(window)))
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glChannelRectSGIX.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glChannelRectSGIX.xml
 func ChannelRectSGIX(display Pointer, screen Int, channel Int, x Int, y Int, w Int, h Int) Int {
 	return (Int)(C.goglxChannelRectSGIX((*C.Display)(display), (C.int)(screen), (C.int)(channel), (C.int)(x), (C.int)(y), (C.int)(w), (C.int)(h)))
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glQueryChannelRectSGIX.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glQueryChannelRectSGIX.xml
 func QueryChannelRectSGIX(display Pointer, screen Int, channel Int, dx *Int, dy *Int, dw *Int, dh *Int) Int {
 	return (Int)(C.goglxQueryChannelRectSGIX((*C.Display)(display), (C.int)(screen), (C.int)(channel), (*C.int)(dx), (*C.int)(dy), (*C.int)(dw), (*C.int)(dh)))
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glQueryChannelDeltasSGIX.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glQueryChannelDeltasSGIX.xml
 func QueryChannelDeltasSGIX(display Pointer, screen Int, channel Int, x *Int, y *Int, w *Int, h *Int) Int {
 	return (Int)(C.goglxQueryChannelDeltasSGIX((*C.Display)(display), (C.int)(screen), (C.int)(channel), (*C.int)(x), (*C.int)(y), (*C.int)(w), (*C.int)(h)))
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glChannelRectSyncSGIX.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glChannelRectSyncSGIX.xml
 func ChannelRectSyncSGIX(display Pointer, screen Int, channel Int, synctype Enum) Int {
 	return (Int)(C.goglxChannelRectSyncSGIX((*C.Display)(display), (C.int)(screen), (C.int)(channel), (C.GLenum)(synctype)))
 }
 // SGIX_video_source
 
-// http://www.opengl.org/sdk/docs/man/xhtml/glCreateGLXVideoSourceSGIX.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glCreateGLXVideoSourceSGIX.xml
 func CreateGLXVideoSourceSGIX(display Pointer, screen Int, server Pointer, path Pointer, nodeClass Int, drainNode Pointer) Pointer {
 	return (Pointer)(C.goglxCreateGLXVideoSourceSGIX((*C.Display)(display), (C.int)(screen), (C.VLServer)(server), (C.VLPath)(path), (C.int)(nodeClass), (C.VLNode)(drainNode)))
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glDestroyGLXVideoSourceSGIX.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glDestroyGLXVideoSourceSGIX.xml
 func DestroyGLXVideoSourceSGIX(dpy Pointer, glxvideosource Pointer)  {
 	C.goglxDestroyGLXVideoSourceSGIX((*C.Display)(dpy), (*C.GGLXVideoSourceSGIX)(glxvideosource))
 }
 // SGI_cushion
 
-// http://www.opengl.org/sdk/docs/man/xhtml/glCushionSGI.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glCushionSGI.xml
 func CushionSGI(dpy Pointer, window Pointer, cushion float32)  {
 	C.goglxCushionSGI((*C.Display)(dpy), (C.Window)(window), (C.float32)(cushion))
 }
 // SGI_make_current_read
 
-// http://www.opengl.org/sdk/docs/man/xhtml/glMakeCurrentReadSGI.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glMakeCurrentReadSGI.xml
 func MakeCurrentReadSGI(dpy Pointer, draw Pointer, read Pointer, ctx Pointer) int {
 	return (int)(C.goglxMakeCurrentReadSGI((*C.Display)(dpy), (C.GLXDrawable)(draw), (C.GLXDrawable)(read), (C.GLXContext)(ctx)))
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glGetCurrentReadDrawableSGI.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glGetCurrentReadDrawableSGI.xml
 func GetCurrentReadDrawableSGI() Pointer {
 	return (Pointer)(C.goglxGetCurrentReadDrawableSGI())
 }
 // SGI_swap_control
 
-// http://www.opengl.org/sdk/docs/man/xhtml/glSwapIntervalSGI.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glSwapIntervalSGI.xml
 func SwapIntervalSGI(interval Int) Int {
 	return (Int)(C.goglxSwapIntervalSGI((C.int)(interval)))
 }
 // SGI_video_sync
 
-// http://www.opengl.org/sdk/docs/man/xhtml/glGetVideoSyncSGI.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glGetVideoSyncSGI.xml
 func GetVideoSyncSGI(count *uint32) Int {
 	return (Int)(C.goglxGetVideoSyncSGI((*C.uint32)(count)))
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glWaitVideoSyncSGI.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glWaitVideoSyncSGI.xml
 func WaitVideoSyncSGI(divisor Int, remainder Int, count *uint32) Int {
 	return (Int)(C.goglxWaitVideoSyncSGI((C.int)(divisor), (C.int)(remainder), (*C.uint32)(count)))
 }
 // SUN_get_transparent_index
 
-// http://www.opengl.org/sdk/docs/man/xhtml/glGetTransparentIndexSUN.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glGetTransparentIndexSUN.xml
 func GetTransparentIndexSUN(dpy Pointer, overlay Pointer, underlay Pointer, pTransparentIndex *int32) int {
 	return (int)(C.goglxGetTransparentIndexSUN((*C.Display)(dpy), (C.Window)(overlay), (C.Window)(underlay), (*C.long)(pTransparentIndex)))
 }
 // VERSION_1_3
 
-// http://www.opengl.org/sdk/docs/man/xhtml/glGetFBConfigs.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glGetFBConfigs.xml
 func GetFBConfigs(dpy Pointer, screen Int, nelements *Int) Pointer {
 	return (Pointer)(C.goglxGetFBConfigs((*C.Display)(dpy), (C.int)(screen), (*C.int)(nelements)))
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glChooseFBConfig.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glChooseFBConfig.xml
 func ChooseFBConfig(dpy Pointer, screen Int, attrib_list *Int, nelements *Int) Pointer {
 	return (Pointer)(C.goglxChooseFBConfig((*C.Display)(dpy), (C.int)(screen), (*C.int)(attrib_list), (*C.int)(nelements)))
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glGetFBConfigAttrib.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glGetFBConfigAttrib.xml
 func GetFBConfigAttrib(dpy Pointer, config Pointer, attribute Int, value *Int) Int {
 	return (Int)(C.goglxGetFBConfigAttrib((*C.Display)(dpy), (C.GLXFBConfig)(config), (C.int)(attribute), (*C.int)(value)))
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glGetVisualFromFBConfig.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glGetVisualFromFBConfig.xml
 func GetVisualFromFBConfig(dpy Pointer, config Pointer) Pointer {
 	return (Pointer)(C.goglxGetVisualFromFBConfig((*C.Display)(dpy), (C.GLXFBConfig)(config)))
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glCreateWindow.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glCreateWindow.xml
 func CreateWindow(dpy Pointer, config Pointer, win Pointer, attrib_list *Int) Pointer {
 	return (Pointer)(C.goglxCreateWindow((*C.Display)(dpy), (C.GLXFBConfig)(config), (C.Window)(win), (*C.int)(attrib_list)))
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glDestroyWindow.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glDestroyWindow.xml
 func DestroyWindow(dpy Pointer, win Pointer)  {
 	C.goglxDestroyWindow((*C.Display)(dpy), (C.GLXWindow)(win))
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glCreatePixmap.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glCreatePixmap.xml
 func CreatePixmap(dpy Pointer, config Pointer, pixmap Pointer, attrib_list *Int) Pointer {
 	return (Pointer)(C.goglxCreatePixmap((*C.Display)(dpy), (C.GLXFBConfig)(config), (C.Pixmap)(pixmap), (*C.int)(attrib_list)))
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glDestroyPixmap.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glDestroyPixmap.xml
 func DestroyPixmap(dpy Pointer, pixmap Pointer)  {
 	C.goglxDestroyPixmap((*C.Display)(dpy), (C.GLXPixmap)(pixmap))
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glCreatePbuffer.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glCreatePbuffer.xml
 func CreatePbuffer(dpy Pointer, config Pointer, attrib_list *Int) Pointer {
 	return (Pointer)(C.goglxCreatePbuffer((*C.Display)(dpy), (C.GLXFBConfig)(config), (*C.int)(attrib_list)))
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glDestroyPbuffer.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glDestroyPbuffer.xml
 func DestroyPbuffer(dpy Pointer, pbuf Pointer)  {
 	C.goglxDestroyPbuffer((*C.Display)(dpy), (C.GLXPbuffer)(pbuf))
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glQueryDrawable.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glQueryDrawable.xml
 func QueryDrawable(dpy Pointer, draw Pointer, attribute Int, value *uint32)  {
 	C.goglxQueryDrawable((*C.Display)(dpy), (C.GLXDrawable)(draw), (C.int)(attribute), (*C.uint32)(value))
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glCreateNewContext.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glCreateNewContext.xml
 func CreateNewContext(dpy Pointer, config Pointer, render_type Int, share_list Pointer, direct int) Pointer {
 	return (Pointer)(C.goglxCreateNewContext((*C.Display)(dpy), (C.GLXFBConfig)(config), (C.int)(render_type), (C.GLXContext)(share_list), (C.int)(direct)))
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glMakeContextCurrent.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glMakeContextCurrent.xml
 func MakeContextCurrent(dpy Pointer, draw Pointer, read Pointer, ctx Pointer) int {
 	return (int)(C.goglxMakeContextCurrent((*C.Display)(dpy), (C.GLXDrawable)(draw), (C.GLXDrawable)(read), (C.GLXContext)(ctx)))
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glGetCurrentReadDrawable.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glGetCurrentReadDrawable.xml
 func GetCurrentReadDrawable() Pointer {
 	return (Pointer)(C.goglxGetCurrentReadDrawable())
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glGetCurrentDisplay.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glGetCurrentDisplay.xml
 func GetCurrentDisplay() Pointer {
 	return (Pointer)(C.goglxGetCurrentDisplay())
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glQueryContext.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glQueryContext.xml
 func QueryContext(dpy Pointer, ctx Pointer, attribute Int, value *Int) Int {
 	return (Int)(C.goglxQueryContext((*C.Display)(dpy), (C.GLXContext)(ctx), (C.int)(attribute), (*C.int)(value)))
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glSelectEvent.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glSelectEvent.xml
 func SelectEvent(dpy Pointer, draw Pointer, event_mask uint32)  {
 	C.goglxSelectEvent((*C.Display)(dpy), (C.GLXDrawable)(draw), (C.unsigned_long)(event_mask))
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glGetSelectedEvent.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glGetSelectedEvent.xml
 func GetSelectedEvent(dpy Pointer, draw Pointer, event_mask *uint32)  {
 	C.goglxGetSelectedEvent((*C.Display)(dpy), (C.GLXDrawable)(draw), (*C.unsigned_long)(event_mask))
 }
 // VERSION_1_4
 
-// http://www.opengl.org/sdk/docs/man/xhtml/glGetProcAddress.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glGetProcAddress.xml
 func GetProcAddress(procName *Ubyte) Pointer {
 	return (Pointer)(C.goglxGetProcAddress((*C.GLubyte)(procName)))
 }
 // glx
 
-// http://www.opengl.org/sdk/docs/man/xhtml/glRender.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glRender.xml
 func Render()  {
 	C.goglxRender()
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glRenderLarge.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glRenderLarge.xml
 func RenderLarge()  {
 	C.goglxRenderLarge()
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glCreateContext.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glCreateContext.xml
 func CreateContext(gc_id Int, screen Int, visual Int, share_list Int)  {
 	C.goglxCreateContext((C.GLint)(gc_id), (C.GLint)(screen), (C.GLint)(visual), (C.GLint)(share_list))
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glDestroyContext.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glDestroyContext.xml
 func DestroyContext(context Int)  {
 	C.goglxDestroyContext((C.GLint)(context))
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glMakeCurrent.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glMakeCurrent.xml
 func MakeCurrent(drawable Int, context Int)  {
 	C.goglxMakeCurrent((C.GLint)(drawable), (C.GLint)(context))
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glIsDirect.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glIsDirect.xml
 func IsDirect(dpy Int, context Int)  {
 	C.goglxIsDirect((C.GLint)(dpy), (C.GLint)(context))
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glQueryVersion.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glQueryVersion.xml
 func QueryVersion(major *Int, minor *Int)  {
 	C.goglxQueryVersion((*C.GLint)(major), (*C.GLint)(minor))
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glWaitGL.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glWaitGL.xml
 func WaitGL(context Int)  {
 	C.goglxWaitGL((C.GLint)(context))
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glWaitX.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glWaitX.xml
 func WaitX()  {
 	C.goglxWaitX()
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glCopyContext.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glCopyContext.xml
 func CopyContext(source Int, dest Int, mask Int)  {
 	C.goglxCopyContext((C.GLint)(source), (C.GLint)(dest), (C.GLint)(mask))
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glSwapBuffers.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glSwapBuffers.xml
 func SwapBuffers(drawable Int)  {
 	C.goglxSwapBuffers((C.GLint)(drawable))
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glUseXFont.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glUseXFont.xml
 func UseXFont(font Int, first Int, count Int, list_base Int)  {
 	C.goglxUseXFont((C.GLint)(font), (C.GLint)(first), (C.GLint)(count), (C.GLint)(list_base))
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glCreateGLXPixmap.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glCreateGLXPixmap.xml
 func CreateGLXPixmap(visual Int, pixmap Int, glxpixmap Int)  {
 	C.goglxCreateGLXPixmap((C.GLint)(visual), (C.GLint)(pixmap), (C.GLint)(glxpixmap))
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glGetVisualConfigs.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glGetVisualConfigs.xml
 func GetVisualConfigs()  {
 	C.goglxGetVisualConfigs()
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glDestroyGLXPixmap.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glDestroyGLXPixmap.xml
 func DestroyGLXPixmap(pixmap Int)  {
 	C.goglxDestroyGLXPixmap((C.GLint)(pixmap))
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glVendorPrivate.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glVendorPrivate.xml
 func VendorPrivate()  {
 	C.goglxVendorPrivate()
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glVendorPrivateWithReply.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glVendorPrivateWithReply.xml
 func VendorPrivateWithReply()  {
 	C.goglxVendorPrivateWithReply()
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glQueryExtensionsString.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glQueryExtensionsString.xml
 func QueryExtensionsString(screen Int)  {
 	C.goglxQueryExtensionsString((C.GLint)(screen))
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glQueryServerString.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glQueryServerString.xml
 func QueryServerString(screen Int, name Int)  {
 	C.goglxQueryServerString((C.GLint)(screen), (C.GLint)(name))
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glClientInfo.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glClientInfo.xml
 func ClientInfo()  {
 	C.goglxClientInfo()
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glGetFBConfigs.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glGetFBConfigs.xml
 func GetFBConfigs()  {
 	C.goglxGetFBConfigs()
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glCreatePixmap.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glCreatePixmap.xml
 func CreatePixmap(config Int, pixmap Int, glxpixmap Int)  {
 	C.goglxCreatePixmap((C.GLint)(config), (C.GLint)(pixmap), (C.GLint)(glxpixmap))
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glDestroyPixmap.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glDestroyPixmap.xml
 func DestroyPixmap(glxpixmap Int)  {
 	C.goglxDestroyPixmap((C.GLint)(glxpixmap))
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glCreateNewContext.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glCreateNewContext.xml
 func CreateNewContext(config Int, render_type Int, share_list Int, direct Int)  {
 	C.goglxCreateNewContext((C.GLint)(config), (C.GLint)(render_type), (C.GLint)(share_list), (C.GLint)(direct))
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glQueryContext.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glQueryContext.xml
 func QueryContext()  {
 	C.goglxQueryContext()
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glMakeContextCurrent.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glMakeContextCurrent.xml
 func MakeContextCurrent(drawable Int, readdrawable Int, context Int)  {
 	C.goglxMakeContextCurrent((C.GLint)(drawable), (C.GLint)(readdrawable), (C.GLint)(context))
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glCreatePbuffer.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glCreatePbuffer.xml
 func CreatePbuffer(config Int, pbuffer Int)  {
 	C.goglxCreatePbuffer((C.GLint)(config), (C.GLint)(pbuffer))
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glDestroyPbuffer.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glDestroyPbuffer.xml
 func DestroyPbuffer(pbuffer Int)  {
 	C.goglxDestroyPbuffer((C.GLint)(pbuffer))
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glGetDrawableAttributes.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glGetDrawableAttributes.xml
 func GetDrawableAttributes(drawable Int)  {
 	C.goglxGetDrawableAttributes((C.GLint)(drawable))
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glChangeDrawableAttributes.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glChangeDrawableAttributes.xml
 func ChangeDrawableAttributes(drawable Int)  {
 	C.goglxChangeDrawableAttributes((C.GLint)(drawable))
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glCreateWindow.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glCreateWindow.xml
 func CreateWindow(config Int, window Int, glxwindow Int)  {
 	C.goglxCreateWindow((C.GLint)(config), (C.GLint)(window), (C.GLint)(glxwindow))
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glDestroyWindow.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glDestroyWindow.xml
 func DestroyWindow(glxwindow Int)  {
 	C.goglxDestroyWindow((C.GLint)(glxwindow))
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glSwapIntervalSGI.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glSwapIntervalSGI.xml
 func SwapIntervalSGI()  {
 	C.goglxSwapIntervalSGI()
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glMakeCurrentReadSGI.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glMakeCurrentReadSGI.xml
 func MakeCurrentReadSGI(drawable Int, readdrawable Int, context Int)  {
 	C.goglxMakeCurrentReadSGI((C.GLint)(drawable), (C.GLint)(readdrawable), (C.GLint)(context))
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glCreateGLXVideoSourceSGIX.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glCreateGLXVideoSourceSGIX.xml
 func CreateGLXVideoSourceSGIX(dpy Int, screen Int, server Int, path Int, class Int, node Int)  {
 	C.goglxCreateGLXVideoSourceSGIX((C.GLint)(dpy), (C.GLint)(screen), (C.GLint)(server), (C.GLint)(path), (C.GLint)(class), (C.GLint)(node))
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glDestroyGLXVideoSourceSGIX.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glDestroyGLXVideoSourceSGIX.xml
 func DestroyGLXVideoSourceSGIX(dpy Int, glxvideosource Int)  {
 	C.goglxDestroyGLXVideoSourceSGIX((C.GLint)(dpy), (C.GLint)(glxvideosource))
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glQueryContextInfoEXT.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glQueryContextInfoEXT.xml
 func QueryContextInfoEXT()  {
 	C.goglxQueryContextInfoEXT()
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glGetFBConfigsSGIX.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glGetFBConfigsSGIX.xml
 func GetFBConfigsSGIX()  {
 	C.goglxGetFBConfigsSGIX()
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glCreateContextWithConfigSGIX.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glCreateContextWithConfigSGIX.xml
 func CreateContextWithConfigSGIX(gc_id Int, screen Int, config Int, share_list Int)  {
 	C.goglxCreateContextWithConfigSGIX((C.GLint)(gc_id), (C.GLint)(screen), (C.GLint)(config), (C.GLint)(share_list))
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glCreateGLXPixmapWithConfigSGIX.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glCreateGLXPixmapWithConfigSGIX.xml
 func CreateGLXPixmapWithConfigSGIX(config Int, pixmap Int, glxpixmap Int)  {
 	C.goglxCreateGLXPixmapWithConfigSGIX((C.GLint)(config), (C.GLint)(pixmap), (C.GLint)(glxpixmap))
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glCreateGLXPbufferSGIX.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glCreateGLXPbufferSGIX.xml
 func CreateGLXPbufferSGIX(config Int, pbuffer Int)  {
 	C.goglxCreateGLXPbufferSGIX((C.GLint)(config), (C.GLint)(pbuffer))
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glDestroyGLXPbufferSGIX.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glDestroyGLXPbufferSGIX.xml
 func DestroyGLXPbufferSGIX(pbuffer Int)  {
 	C.goglxDestroyGLXPbufferSGIX((C.GLint)(pbuffer))
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glChangeDrawableAttributesSGIX.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glChangeDrawableAttributesSGIX.xml
 func ChangeDrawableAttributesSGIX(drawable Int)  {
 	C.goglxChangeDrawableAttributesSGIX((C.GLint)(drawable))
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glGetDrawableAttributesSGIX.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glGetDrawableAttributesSGIX.xml
 func GetDrawableAttributesSGIX(drawable Int)  {
 	C.goglxGetDrawableAttributesSGIX((C.GLint)(drawable))
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glJoinSwapGroupSGIX.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glJoinSwapGroupSGIX.xml
 func JoinSwapGroupSGIX(window Int, group Int)  {
 	C.goglxJoinSwapGroupSGIX((C.GLint)(window), (C.GLint)(group))
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glBindSwapBarrierSGIX.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glBindSwapBarrierSGIX.xml
 func BindSwapBarrierSGIX(window Int, barrier Int)  {
 	C.goglxBindSwapBarrierSGIX((C.GLint)(window), (C.GLint)(barrier))
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glQueryMaxSwapBarriersSGIX.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glQueryMaxSwapBarriersSGIX.xml
 func QueryMaxSwapBarriersSGIX()  {
 	C.goglxQueryMaxSwapBarriersSGIX()
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glQueryHyperpipeNetworkSGIX.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glQueryHyperpipeNetworkSGIX.xml
 func QueryHyperpipeNetworkSGIX(dpy Pointer, npipes *Int) Pointer {
 	return (Pointer)(C.goglxQueryHyperpipeNetworkSGIX((*C.Display)(dpy), (*C.int)(npipes)))
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glHyperpipeConfigSGIX.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glHyperpipeConfigSGIX.xml
 func HyperpipeConfigSGIX(dpy Pointer, networkId Int, npipes Int, cfg Pointer, hpId *Int) Int {
 	return (Int)(C.goglxHyperpipeConfigSGIX((*C.Display)(dpy), (C.int)(networkId), (C.int)(npipes), (*C.GLXHyperpipeConfigSGIX)(cfg), (*C.int)(hpId)))
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glQueryHyperpipeConfigSGIX.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glQueryHyperpipeConfigSGIX.xml
 func QueryHyperpipeConfigSGIX(dpy Pointer, hpId Int, npipes *Int) Pointer {
 	return (Pointer)(C.goglxQueryHyperpipeConfigSGIX((*C.Display)(dpy), (C.int)(hpId), (*C.int)(npipes)))
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glDestroyHyperpipeConfigSGIX.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glDestroyHyperpipeConfigSGIX.xml
 func DestroyHyperpipeConfigSGIX(dpy Pointer, hpId Int) Int {
 	return (Int)(C.goglxDestroyHyperpipeConfigSGIX((*C.Display)(dpy), (C.int)(hpId)))
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glBindHyperpipeSGIX.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glBindHyperpipeSGIX.xml
 func BindHyperpipeSGIX(dpy Pointer, hpId Int) Int {
 	return (Int)(C.goglxBindHyperpipeSGIX((*C.Display)(dpy), (C.int)(hpId)))
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glQueryHyperpipeBestAttribSGIX.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glQueryHyperpipeBestAttribSGIX.xml
 func QueryHyperpipeBestAttribSGIX(dpy Pointer, timeSlice Int, attrib Int, size Int, attribList Pointer, returnAttribList Pointer) Int {
 	return (Int)(C.goglxQueryHyperpipeBestAttribSGIX((*C.Display)(dpy), (C.int)(timeSlice), (C.int)(attrib), (C.int)(size), (unsafe.Pointer)(attribList), (unsafe.Pointer)(returnAttribList)))
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glHyperpipeAttribSGIX.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glHyperpipeAttribSGIX.xml
 func HyperpipeAttribSGIX(dpy Pointer, timeSlice Int, attrib Int, size Int, attribList Pointer) Int {
 	return (Int)(C.goglxHyperpipeAttribSGIX((*C.Display)(dpy), (C.int)(timeSlice), (C.int)(attrib), (C.int)(size), (unsafe.Pointer)(attribList)))
 }
-// http://www.opengl.org/sdk/docs/man/xhtml/glQueryHyperpipeAttribSGIX.xml
+// https://www.opengl.org/sdk/docs/man/xhtml/glQueryHyperpipeAttribSGIX.xml
 func QueryHyperpipeAttribSGIX(dpy Pointer, timeSlice Int, attrib Int, size Int, returnAttribList Pointer) Int {
 	return (Int)(C.goglxQueryHyperpipeAttribSGIX((*C.Display)(dpy), (C.int)(timeSlice), (C.int)(attrib), (C.int)(size), (unsafe.Pointer)(returnAttribList)))
 }

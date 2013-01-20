@@ -32,7 +32,7 @@
 // 
 // VERSION_4_2
 // 
-// http://www.opengl.org/sdk/docs/man4
+// https://www.opengl.org/sdk/docs/man4
 // 
 package gl42
 
@@ -4721,1987 +4721,1987 @@ const (
 )
 // VERSION_1_0
 
-// http://www.opengl.org/sdk/docs/man4/xhtml/glCullFace.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glCullFace.xml
 func CullFace(mode Enum)  {
 	C.goglCullFace((C.GLenum)(mode))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glFrontFace.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glFrontFace.xml
 func FrontFace(mode Enum)  {
 	C.goglFrontFace((C.GLenum)(mode))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glHint.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glHint.xml
 func Hint(target Enum, mode Enum)  {
 	C.goglHint((C.GLenum)(target), (C.GLenum)(mode))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glLineWidth.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glLineWidth.xml
 func LineWidth(width Float)  {
 	C.goglLineWidth((C.GLfloat)(width))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glPointSize.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glPointSize.xml
 func PointSize(size Float)  {
 	C.goglPointSize((C.GLfloat)(size))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glPolygonMode.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glPolygonMode.xml
 func PolygonMode(face Enum, mode Enum)  {
 	C.goglPolygonMode((C.GLenum)(face), (C.GLenum)(mode))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glScissor.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glScissor.xml
 func Scissor(x Int, y Int, width Sizei, height Sizei)  {
 	C.goglScissor((C.GLint)(x), (C.GLint)(y), (C.GLsizei)(width), (C.GLsizei)(height))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glTexParameterf.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glTexParameterf.xml
 func TexParameterf(target Enum, pname Enum, param Float)  {
 	C.goglTexParameterf((C.GLenum)(target), (C.GLenum)(pname), (C.GLfloat)(param))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glTexParameterfv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glTexParameterfv.xml
 func TexParameterfv(target Enum, pname Enum, params *Float)  {
 	C.goglTexParameterfv((C.GLenum)(target), (C.GLenum)(pname), (*C.GLfloat)(params))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glTexParameteri.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glTexParameteri.xml
 func TexParameteri(target Enum, pname Enum, param Int)  {
 	C.goglTexParameteri((C.GLenum)(target), (C.GLenum)(pname), (C.GLint)(param))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glTexParameteriv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glTexParameteriv.xml
 func TexParameteriv(target Enum, pname Enum, params *Int)  {
 	C.goglTexParameteriv((C.GLenum)(target), (C.GLenum)(pname), (*C.GLint)(params))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glTexImage1D.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glTexImage1D.xml
 func TexImage1D(target Enum, level Int, internalformat Int, width Sizei, border Int, format Enum, type_ Enum, pixels Pointer)  {
 	C.goglTexImage1D((C.GLenum)(target), (C.GLint)(level), (C.GLint)(internalformat), (C.GLsizei)(width), (C.GLint)(border), (C.GLenum)(format), (C.GLenum)(type_), (unsafe.Pointer)(pixels))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glTexImage2D.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glTexImage2D.xml
 func TexImage2D(target Enum, level Int, internalformat Int, width Sizei, height Sizei, border Int, format Enum, type_ Enum, pixels Pointer)  {
 	C.goglTexImage2D((C.GLenum)(target), (C.GLint)(level), (C.GLint)(internalformat), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLint)(border), (C.GLenum)(format), (C.GLenum)(type_), (unsafe.Pointer)(pixels))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glDrawBuffer.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glDrawBuffer.xml
 func DrawBuffer(mode Enum)  {
 	C.goglDrawBuffer((C.GLenum)(mode))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glClear.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glClear.xml
 func Clear(mask Bitfield)  {
 	C.goglClear((C.GLbitfield)(mask))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glClearColor.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glClearColor.xml
 func ClearColor(red Float, green Float, blue Float, alpha Float)  {
 	C.goglClearColor((C.GLfloat)(red), (C.GLfloat)(green), (C.GLfloat)(blue), (C.GLfloat)(alpha))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glClearStencil.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glClearStencil.xml
 func ClearStencil(s Int)  {
 	C.goglClearStencil((C.GLint)(s))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glClearDepth.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glClearDepth.xml
 func ClearDepth(depth Double)  {
 	C.goglClearDepth((C.GLdouble)(depth))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glStencilMask.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glStencilMask.xml
 func StencilMask(mask Uint)  {
 	C.goglStencilMask((C.GLuint)(mask))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glColorMask.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glColorMask.xml
 func ColorMask(red Boolean, green Boolean, blue Boolean, alpha Boolean)  {
 	C.goglColorMask((C.GLboolean)(red), (C.GLboolean)(green), (C.GLboolean)(blue), (C.GLboolean)(alpha))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glDepthMask.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glDepthMask.xml
 func DepthMask(flag Boolean)  {
 	C.goglDepthMask((C.GLboolean)(flag))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glDisable.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glDisable.xml
 func Disable(cap Enum)  {
 	C.goglDisable((C.GLenum)(cap))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glEnable.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glEnable.xml
 func Enable(cap Enum)  {
 	C.goglEnable((C.GLenum)(cap))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glFinish.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glFinish.xml
 func Finish()  {
 	C.goglFinish()
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glFlush.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glFlush.xml
 func Flush()  {
 	C.goglFlush()
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glBlendFunc.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glBlendFunc.xml
 func BlendFunc(sfactor Enum, dfactor Enum)  {
 	C.goglBlendFunc((C.GLenum)(sfactor), (C.GLenum)(dfactor))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glLogicOp.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glLogicOp.xml
 func LogicOp(opcode Enum)  {
 	C.goglLogicOp((C.GLenum)(opcode))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glStencilFunc.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glStencilFunc.xml
 func StencilFunc(func_ Enum, ref Int, mask Uint)  {
 	C.goglStencilFunc((C.GLenum)(func_), (C.GLint)(ref), (C.GLuint)(mask))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glStencilOp.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glStencilOp.xml
 func StencilOp(fail Enum, zfail Enum, zpass Enum)  {
 	C.goglStencilOp((C.GLenum)(fail), (C.GLenum)(zfail), (C.GLenum)(zpass))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glDepthFunc.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glDepthFunc.xml
 func DepthFunc(func_ Enum)  {
 	C.goglDepthFunc((C.GLenum)(func_))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glPixelStoref.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glPixelStoref.xml
 func PixelStoref(pname Enum, param Float)  {
 	C.goglPixelStoref((C.GLenum)(pname), (C.GLfloat)(param))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glPixelStorei.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glPixelStorei.xml
 func PixelStorei(pname Enum, param Int)  {
 	C.goglPixelStorei((C.GLenum)(pname), (C.GLint)(param))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glReadBuffer.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glReadBuffer.xml
 func ReadBuffer(mode Enum)  {
 	C.goglReadBuffer((C.GLenum)(mode))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glReadPixels.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glReadPixels.xml
 func ReadPixels(x Int, y Int, width Sizei, height Sizei, format Enum, type_ Enum, pixels Pointer)  {
 	C.goglReadPixels((C.GLint)(x), (C.GLint)(y), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLenum)(format), (C.GLenum)(type_), (unsafe.Pointer)(pixels))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glGetBooleanv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glGetBooleanv.xml
 func GetBooleanv(pname Enum, params *Boolean)  {
 	C.goglGetBooleanv((C.GLenum)(pname), (*C.GLboolean)(params))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glGetDoublev.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glGetDoublev.xml
 func GetDoublev(pname Enum, params *Double)  {
 	C.goglGetDoublev((C.GLenum)(pname), (*C.GLdouble)(params))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glGetError.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glGetError.xml
 func GetError() Enum {
 	return (Enum)(C.goglGetError())
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glGetFloatv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glGetFloatv.xml
 func GetFloatv(pname Enum, params *Float)  {
 	C.goglGetFloatv((C.GLenum)(pname), (*C.GLfloat)(params))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glGetIntegerv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glGetIntegerv.xml
 func GetIntegerv(pname Enum, params *Int)  {
 	C.goglGetIntegerv((C.GLenum)(pname), (*C.GLint)(params))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glGetString.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glGetString.xml
 func GetString(name Enum) *Ubyte {
 	return (*Ubyte)(C.goglGetString((C.GLenum)(name)))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glGetTexImage.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glGetTexImage.xml
 func GetTexImage(target Enum, level Int, format Enum, type_ Enum, pixels Pointer)  {
 	C.goglGetTexImage((C.GLenum)(target), (C.GLint)(level), (C.GLenum)(format), (C.GLenum)(type_), (unsafe.Pointer)(pixels))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glGetTexParameterfv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glGetTexParameterfv.xml
 func GetTexParameterfv(target Enum, pname Enum, params *Float)  {
 	C.goglGetTexParameterfv((C.GLenum)(target), (C.GLenum)(pname), (*C.GLfloat)(params))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glGetTexParameteriv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glGetTexParameteriv.xml
 func GetTexParameteriv(target Enum, pname Enum, params *Int)  {
 	C.goglGetTexParameteriv((C.GLenum)(target), (C.GLenum)(pname), (*C.GLint)(params))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glGetTexLevelParameterfv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glGetTexLevelParameterfv.xml
 func GetTexLevelParameterfv(target Enum, level Int, pname Enum, params *Float)  {
 	C.goglGetTexLevelParameterfv((C.GLenum)(target), (C.GLint)(level), (C.GLenum)(pname), (*C.GLfloat)(params))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glGetTexLevelParameteriv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glGetTexLevelParameteriv.xml
 func GetTexLevelParameteriv(target Enum, level Int, pname Enum, params *Int)  {
 	C.goglGetTexLevelParameteriv((C.GLenum)(target), (C.GLint)(level), (C.GLenum)(pname), (*C.GLint)(params))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glIsEnabled.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glIsEnabled.xml
 func IsEnabled(cap Enum) Boolean {
 	return (Boolean)(C.goglIsEnabled((C.GLenum)(cap)))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glDepthRange.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glDepthRange.xml
 func DepthRange(near_ Double, far_ Double)  {
 	C.goglDepthRange((C.GLdouble)(near_), (C.GLdouble)(far_))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glViewport.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glViewport.xml
 func Viewport(x Int, y Int, width Sizei, height Sizei)  {
 	C.goglViewport((C.GLint)(x), (C.GLint)(y), (C.GLsizei)(width), (C.GLsizei)(height))
 }
 // VERSION_1_1
 
-// http://www.opengl.org/sdk/docs/man4/xhtml/glDrawArrays.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glDrawArrays.xml
 func DrawArrays(mode Enum, first Int, count Sizei)  {
 	C.goglDrawArrays((C.GLenum)(mode), (C.GLint)(first), (C.GLsizei)(count))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glDrawElements.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glDrawElements.xml
 func DrawElements(mode Enum, count Sizei, type_ Enum, indices Pointer)  {
 	C.goglDrawElements((C.GLenum)(mode), (C.GLsizei)(count), (C.GLenum)(type_), (unsafe.Pointer)(indices))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glGetPointerv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glGetPointerv.xml
 func GetPointerv(pname Enum, params *Pointer)  {
 	C.goglGetPointerv((C.GLenum)(pname), (*unsafe.Pointer)(params))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glPolygonOffset.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glPolygonOffset.xml
 func PolygonOffset(factor Float, units Float)  {
 	C.goglPolygonOffset((C.GLfloat)(factor), (C.GLfloat)(units))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glCopyTexImage1D.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glCopyTexImage1D.xml
 func CopyTexImage1D(target Enum, level Int, internalformat Enum, x Int, y Int, width Sizei, border Int)  {
 	C.goglCopyTexImage1D((C.GLenum)(target), (C.GLint)(level), (C.GLenum)(internalformat), (C.GLint)(x), (C.GLint)(y), (C.GLsizei)(width), (C.GLint)(border))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glCopyTexImage2D.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glCopyTexImage2D.xml
 func CopyTexImage2D(target Enum, level Int, internalformat Enum, x Int, y Int, width Sizei, height Sizei, border Int)  {
 	C.goglCopyTexImage2D((C.GLenum)(target), (C.GLint)(level), (C.GLenum)(internalformat), (C.GLint)(x), (C.GLint)(y), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLint)(border))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glCopyTexSubImage1D.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glCopyTexSubImage1D.xml
 func CopyTexSubImage1D(target Enum, level Int, xoffset Int, x Int, y Int, width Sizei)  {
 	C.goglCopyTexSubImage1D((C.GLenum)(target), (C.GLint)(level), (C.GLint)(xoffset), (C.GLint)(x), (C.GLint)(y), (C.GLsizei)(width))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glCopyTexSubImage2D.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glCopyTexSubImage2D.xml
 func CopyTexSubImage2D(target Enum, level Int, xoffset Int, yoffset Int, x Int, y Int, width Sizei, height Sizei)  {
 	C.goglCopyTexSubImage2D((C.GLenum)(target), (C.GLint)(level), (C.GLint)(xoffset), (C.GLint)(yoffset), (C.GLint)(x), (C.GLint)(y), (C.GLsizei)(width), (C.GLsizei)(height))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glTexSubImage1D.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glTexSubImage1D.xml
 func TexSubImage1D(target Enum, level Int, xoffset Int, width Sizei, format Enum, type_ Enum, pixels Pointer)  {
 	C.goglTexSubImage1D((C.GLenum)(target), (C.GLint)(level), (C.GLint)(xoffset), (C.GLsizei)(width), (C.GLenum)(format), (C.GLenum)(type_), (unsafe.Pointer)(pixels))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glTexSubImage2D.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glTexSubImage2D.xml
 func TexSubImage2D(target Enum, level Int, xoffset Int, yoffset Int, width Sizei, height Sizei, format Enum, type_ Enum, pixels Pointer)  {
 	C.goglTexSubImage2D((C.GLenum)(target), (C.GLint)(level), (C.GLint)(xoffset), (C.GLint)(yoffset), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLenum)(format), (C.GLenum)(type_), (unsafe.Pointer)(pixels))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glBindTexture.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glBindTexture.xml
 func BindTexture(target Enum, texture Uint)  {
 	C.goglBindTexture((C.GLenum)(target), (C.GLuint)(texture))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glDeleteTextures.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glDeleteTextures.xml
 func DeleteTextures(n Sizei, textures *Uint)  {
 	C.goglDeleteTextures((C.GLsizei)(n), (*C.GLuint)(textures))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glGenTextures.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glGenTextures.xml
 func GenTextures(n Sizei, textures *Uint)  {
 	C.goglGenTextures((C.GLsizei)(n), (*C.GLuint)(textures))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glIsTexture.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glIsTexture.xml
 func IsTexture(texture Uint) Boolean {
 	return (Boolean)(C.goglIsTexture((C.GLuint)(texture)))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glIndexub.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glIndexub.xml
 func Indexub(c Ubyte)  {
 	C.goglIndexub((C.GLubyte)(c))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glIndexubv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glIndexubv.xml
 func Indexubv(c *Ubyte)  {
 	C.goglIndexubv((*C.GLubyte)(c))
 }
 // VERSION_1_2
 
-// http://www.opengl.org/sdk/docs/man4/xhtml/glBlendColor.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glBlendColor.xml
 func BlendColor(red Float, green Float, blue Float, alpha Float)  {
 	C.goglBlendColor((C.GLfloat)(red), (C.GLfloat)(green), (C.GLfloat)(blue), (C.GLfloat)(alpha))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glBlendEquation.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glBlendEquation.xml
 func BlendEquation(mode Enum)  {
 	C.goglBlendEquation((C.GLenum)(mode))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glDrawRangeElements.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glDrawRangeElements.xml
 func DrawRangeElements(mode Enum, start Uint, end Uint, count Sizei, type_ Enum, indices Pointer)  {
 	C.goglDrawRangeElements((C.GLenum)(mode), (C.GLuint)(start), (C.GLuint)(end), (C.GLsizei)(count), (C.GLenum)(type_), (unsafe.Pointer)(indices))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glTexSubImage3D.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glTexSubImage3D.xml
 func TexSubImage3D(target Enum, level Int, xoffset Int, yoffset Int, zoffset Int, width Sizei, height Sizei, depth Sizei, format Enum, type_ Enum, pixels Pointer)  {
 	C.goglTexSubImage3D((C.GLenum)(target), (C.GLint)(level), (C.GLint)(xoffset), (C.GLint)(yoffset), (C.GLint)(zoffset), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLsizei)(depth), (C.GLenum)(format), (C.GLenum)(type_), (unsafe.Pointer)(pixels))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glCopyTexSubImage3D.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glCopyTexSubImage3D.xml
 func CopyTexSubImage3D(target Enum, level Int, xoffset Int, yoffset Int, zoffset Int, x Int, y Int, width Sizei, height Sizei)  {
 	C.goglCopyTexSubImage3D((C.GLenum)(target), (C.GLint)(level), (C.GLint)(xoffset), (C.GLint)(yoffset), (C.GLint)(zoffset), (C.GLint)(x), (C.GLint)(y), (C.GLsizei)(width), (C.GLsizei)(height))
 }
 // VERSION_1_3
 
-// http://www.opengl.org/sdk/docs/man4/xhtml/glActiveTexture.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glActiveTexture.xml
 func ActiveTexture(texture Enum)  {
 	C.goglActiveTexture((C.GLenum)(texture))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glSampleCoverage.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glSampleCoverage.xml
 func SampleCoverage(value Float, invert Boolean)  {
 	C.goglSampleCoverage((C.GLfloat)(value), (C.GLboolean)(invert))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glCompressedTexImage3D.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glCompressedTexImage3D.xml
 func CompressedTexImage3D(target Enum, level Int, internalformat Enum, width Sizei, height Sizei, depth Sizei, border Int, imageSize Sizei, data Pointer)  {
 	C.goglCompressedTexImage3D((C.GLenum)(target), (C.GLint)(level), (C.GLenum)(internalformat), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLsizei)(depth), (C.GLint)(border), (C.GLsizei)(imageSize), (unsafe.Pointer)(data))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glCompressedTexImage2D.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glCompressedTexImage2D.xml
 func CompressedTexImage2D(target Enum, level Int, internalformat Enum, width Sizei, height Sizei, border Int, imageSize Sizei, data Pointer)  {
 	C.goglCompressedTexImage2D((C.GLenum)(target), (C.GLint)(level), (C.GLenum)(internalformat), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLint)(border), (C.GLsizei)(imageSize), (unsafe.Pointer)(data))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glCompressedTexImage1D.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glCompressedTexImage1D.xml
 func CompressedTexImage1D(target Enum, level Int, internalformat Enum, width Sizei, border Int, imageSize Sizei, data Pointer)  {
 	C.goglCompressedTexImage1D((C.GLenum)(target), (C.GLint)(level), (C.GLenum)(internalformat), (C.GLsizei)(width), (C.GLint)(border), (C.GLsizei)(imageSize), (unsafe.Pointer)(data))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glCompressedTexSubImage3D.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glCompressedTexSubImage3D.xml
 func CompressedTexSubImage3D(target Enum, level Int, xoffset Int, yoffset Int, zoffset Int, width Sizei, height Sizei, depth Sizei, format Enum, imageSize Sizei, data Pointer)  {
 	C.goglCompressedTexSubImage3D((C.GLenum)(target), (C.GLint)(level), (C.GLint)(xoffset), (C.GLint)(yoffset), (C.GLint)(zoffset), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLsizei)(depth), (C.GLenum)(format), (C.GLsizei)(imageSize), (unsafe.Pointer)(data))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glCompressedTexSubImage2D.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glCompressedTexSubImage2D.xml
 func CompressedTexSubImage2D(target Enum, level Int, xoffset Int, yoffset Int, width Sizei, height Sizei, format Enum, imageSize Sizei, data Pointer)  {
 	C.goglCompressedTexSubImage2D((C.GLenum)(target), (C.GLint)(level), (C.GLint)(xoffset), (C.GLint)(yoffset), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLenum)(format), (C.GLsizei)(imageSize), (unsafe.Pointer)(data))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glCompressedTexSubImage1D.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glCompressedTexSubImage1D.xml
 func CompressedTexSubImage1D(target Enum, level Int, xoffset Int, width Sizei, format Enum, imageSize Sizei, data Pointer)  {
 	C.goglCompressedTexSubImage1D((C.GLenum)(target), (C.GLint)(level), (C.GLint)(xoffset), (C.GLsizei)(width), (C.GLenum)(format), (C.GLsizei)(imageSize), (unsafe.Pointer)(data))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glGetCompressedTexImage.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glGetCompressedTexImage.xml
 func GetCompressedTexImage(target Enum, level Int, img Pointer)  {
 	C.goglGetCompressedTexImage((C.GLenum)(target), (C.GLint)(level), (unsafe.Pointer)(img))
 }
 // VERSION_1_4
 
-// http://www.opengl.org/sdk/docs/man4/xhtml/glBlendFuncSeparate.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glBlendFuncSeparate.xml
 func BlendFuncSeparate(sfactorRGB Enum, dfactorRGB Enum, sfactorAlpha Enum, dfactorAlpha Enum)  {
 	C.goglBlendFuncSeparate((C.GLenum)(sfactorRGB), (C.GLenum)(dfactorRGB), (C.GLenum)(sfactorAlpha), (C.GLenum)(dfactorAlpha))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glMultiDrawArrays.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glMultiDrawArrays.xml
 func MultiDrawArrays(mode Enum, first *Int, count *Sizei, drawcount Sizei)  {
 	C.goglMultiDrawArrays((C.GLenum)(mode), (*C.GLint)(first), (*C.GLsizei)(count), (C.GLsizei)(drawcount))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glMultiDrawElements.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glMultiDrawElements.xml
 func MultiDrawElements(mode Enum, count *Sizei, type_ Enum, indices *Pointer, drawcount Sizei)  {
 	C.goglMultiDrawElements((C.GLenum)(mode), (*C.GLsizei)(count), (C.GLenum)(type_), (*unsafe.Pointer)(indices), (C.GLsizei)(drawcount))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glPointParameterf.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glPointParameterf.xml
 func PointParameterf(pname Enum, param Float)  {
 	C.goglPointParameterf((C.GLenum)(pname), (C.GLfloat)(param))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glPointParameterfv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glPointParameterfv.xml
 func PointParameterfv(pname Enum, params *Float)  {
 	C.goglPointParameterfv((C.GLenum)(pname), (*C.GLfloat)(params))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glPointParameteri.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glPointParameteri.xml
 func PointParameteri(pname Enum, param Int)  {
 	C.goglPointParameteri((C.GLenum)(pname), (C.GLint)(param))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glPointParameteriv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glPointParameteriv.xml
 func PointParameteriv(pname Enum, params *Int)  {
 	C.goglPointParameteriv((C.GLenum)(pname), (*C.GLint)(params))
 }
 // VERSION_1_5
 
-// http://www.opengl.org/sdk/docs/man4/xhtml/glGenQueries.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glGenQueries.xml
 func GenQueries(n Sizei, ids *Uint)  {
 	C.goglGenQueries((C.GLsizei)(n), (*C.GLuint)(ids))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glDeleteQueries.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glDeleteQueries.xml
 func DeleteQueries(n Sizei, ids *Uint)  {
 	C.goglDeleteQueries((C.GLsizei)(n), (*C.GLuint)(ids))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glIsQuery.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glIsQuery.xml
 func IsQuery(id Uint) Boolean {
 	return (Boolean)(C.goglIsQuery((C.GLuint)(id)))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glBeginQuery.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glBeginQuery.xml
 func BeginQuery(target Enum, id Uint)  {
 	C.goglBeginQuery((C.GLenum)(target), (C.GLuint)(id))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glEndQuery.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glEndQuery.xml
 func EndQuery(target Enum)  {
 	C.goglEndQuery((C.GLenum)(target))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glGetQueryiv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glGetQueryiv.xml
 func GetQueryiv(target Enum, pname Enum, params *Int)  {
 	C.goglGetQueryiv((C.GLenum)(target), (C.GLenum)(pname), (*C.GLint)(params))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glGetQueryObjectiv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glGetQueryObjectiv.xml
 func GetQueryObjectiv(id Uint, pname Enum, params *Int)  {
 	C.goglGetQueryObjectiv((C.GLuint)(id), (C.GLenum)(pname), (*C.GLint)(params))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glGetQueryObjectuiv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glGetQueryObjectuiv.xml
 func GetQueryObjectuiv(id Uint, pname Enum, params *Uint)  {
 	C.goglGetQueryObjectuiv((C.GLuint)(id), (C.GLenum)(pname), (*C.GLuint)(params))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glBindBuffer.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glBindBuffer.xml
 func BindBuffer(target Enum, buffer Uint)  {
 	C.goglBindBuffer((C.GLenum)(target), (C.GLuint)(buffer))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glDeleteBuffers.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glDeleteBuffers.xml
 func DeleteBuffers(n Sizei, buffers *Uint)  {
 	C.goglDeleteBuffers((C.GLsizei)(n), (*C.GLuint)(buffers))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glGenBuffers.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glGenBuffers.xml
 func GenBuffers(n Sizei, buffers *Uint)  {
 	C.goglGenBuffers((C.GLsizei)(n), (*C.GLuint)(buffers))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glIsBuffer.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glIsBuffer.xml
 func IsBuffer(buffer Uint) Boolean {
 	return (Boolean)(C.goglIsBuffer((C.GLuint)(buffer)))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glBufferData.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glBufferData.xml
 func BufferData(target Enum, size Sizeiptr, data Pointer, usage Enum)  {
 	C.goglBufferData((C.GLenum)(target), (C.GLsizeiptr)(size), (unsafe.Pointer)(data), (C.GLenum)(usage))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glBufferSubData.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glBufferSubData.xml
 func BufferSubData(target Enum, offset Intptr, size Sizeiptr, data Pointer)  {
 	C.goglBufferSubData((C.GLenum)(target), (C.GLintptr)(offset), (C.GLsizeiptr)(size), (unsafe.Pointer)(data))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glGetBufferSubData.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glGetBufferSubData.xml
 func GetBufferSubData(target Enum, offset Intptr, size Sizeiptr, data Pointer)  {
 	C.goglGetBufferSubData((C.GLenum)(target), (C.GLintptr)(offset), (C.GLsizeiptr)(size), (unsafe.Pointer)(data))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glMapBuffer.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glMapBuffer.xml
 func MapBuffer(target Enum, access Enum) Pointer {
 	return (Pointer)(C.goglMapBuffer((C.GLenum)(target), (C.GLenum)(access)))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glUnmapBuffer.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glUnmapBuffer.xml
 func UnmapBuffer(target Enum) Boolean {
 	return (Boolean)(C.goglUnmapBuffer((C.GLenum)(target)))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glGetBufferParameteriv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glGetBufferParameteriv.xml
 func GetBufferParameteriv(target Enum, pname Enum, params *Int)  {
 	C.goglGetBufferParameteriv((C.GLenum)(target), (C.GLenum)(pname), (*C.GLint)(params))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glGetBufferPointerv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glGetBufferPointerv.xml
 func GetBufferPointerv(target Enum, pname Enum, params *Pointer)  {
 	C.goglGetBufferPointerv((C.GLenum)(target), (C.GLenum)(pname), (*unsafe.Pointer)(params))
 }
 // VERSION_2_0
 
-// http://www.opengl.org/sdk/docs/man4/xhtml/glBlendEquationSeparate.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glBlendEquationSeparate.xml
 func BlendEquationSeparate(modeRGB Enum, modeAlpha Enum)  {
 	C.goglBlendEquationSeparate((C.GLenum)(modeRGB), (C.GLenum)(modeAlpha))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glDrawBuffers.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glDrawBuffers.xml
 func DrawBuffers(n Sizei, bufs *Enum)  {
 	C.goglDrawBuffers((C.GLsizei)(n), (*C.GLenum)(bufs))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glStencilOpSeparate.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glStencilOpSeparate.xml
 func StencilOpSeparate(face Enum, sfail Enum, dpfail Enum, dppass Enum)  {
 	C.goglStencilOpSeparate((C.GLenum)(face), (C.GLenum)(sfail), (C.GLenum)(dpfail), (C.GLenum)(dppass))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glStencilFuncSeparate.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glStencilFuncSeparate.xml
 func StencilFuncSeparate(face Enum, func_ Enum, ref Int, mask Uint)  {
 	C.goglStencilFuncSeparate((C.GLenum)(face), (C.GLenum)(func_), (C.GLint)(ref), (C.GLuint)(mask))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glStencilMaskSeparate.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glStencilMaskSeparate.xml
 func StencilMaskSeparate(face Enum, mask Uint)  {
 	C.goglStencilMaskSeparate((C.GLenum)(face), (C.GLuint)(mask))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glAttachShader.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glAttachShader.xml
 func AttachShader(program Uint, shader Uint)  {
 	C.goglAttachShader((C.GLuint)(program), (C.GLuint)(shader))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glBindAttribLocation.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glBindAttribLocation.xml
 func BindAttribLocation(program Uint, index Uint, name *Char)  {
 	C.goglBindAttribLocation((C.GLuint)(program), (C.GLuint)(index), (*C.GLchar)(name))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glCompileShader.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glCompileShader.xml
 func CompileShader(shader Uint)  {
 	C.goglCompileShader((C.GLuint)(shader))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glCreateProgram.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glCreateProgram.xml
 func CreateProgram() Uint {
 	return (Uint)(C.goglCreateProgram())
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glCreateShader.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glCreateShader.xml
 func CreateShader(type_ Enum) Uint {
 	return (Uint)(C.goglCreateShader((C.GLenum)(type_)))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glDeleteProgram.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glDeleteProgram.xml
 func DeleteProgram(program Uint)  {
 	C.goglDeleteProgram((C.GLuint)(program))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glDeleteShader.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glDeleteShader.xml
 func DeleteShader(shader Uint)  {
 	C.goglDeleteShader((C.GLuint)(shader))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glDetachShader.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glDetachShader.xml
 func DetachShader(program Uint, shader Uint)  {
 	C.goglDetachShader((C.GLuint)(program), (C.GLuint)(shader))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glDisableVertexAttribArray.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glDisableVertexAttribArray.xml
 func DisableVertexAttribArray(index Uint)  {
 	C.goglDisableVertexAttribArray((C.GLuint)(index))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glEnableVertexAttribArray.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glEnableVertexAttribArray.xml
 func EnableVertexAttribArray(index Uint)  {
 	C.goglEnableVertexAttribArray((C.GLuint)(index))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glGetActiveAttrib.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glGetActiveAttrib.xml
 func GetActiveAttrib(program Uint, index Uint, bufSize Sizei, length *Sizei, size *Int, type_ *Enum, name *Char)  {
 	C.goglGetActiveAttrib((C.GLuint)(program), (C.GLuint)(index), (C.GLsizei)(bufSize), (*C.GLsizei)(length), (*C.GLint)(size), (*C.GLenum)(type_), (*C.GLchar)(name))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glGetActiveUniform.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glGetActiveUniform.xml
 func GetActiveUniform(program Uint, index Uint, bufSize Sizei, length *Sizei, size *Int, type_ *Enum, name *Char)  {
 	C.goglGetActiveUniform((C.GLuint)(program), (C.GLuint)(index), (C.GLsizei)(bufSize), (*C.GLsizei)(length), (*C.GLint)(size), (*C.GLenum)(type_), (*C.GLchar)(name))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glGetAttachedShaders.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glGetAttachedShaders.xml
 func GetAttachedShaders(program Uint, maxCount Sizei, count *Sizei, obj *Uint)  {
 	C.goglGetAttachedShaders((C.GLuint)(program), (C.GLsizei)(maxCount), (*C.GLsizei)(count), (*C.GLuint)(obj))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glGetAttribLocation.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glGetAttribLocation.xml
 func GetAttribLocation(program Uint, name *Char) Int {
 	return (Int)(C.goglGetAttribLocation((C.GLuint)(program), (*C.GLchar)(name)))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glGetProgramiv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glGetProgramiv.xml
 func GetProgramiv(program Uint, pname Enum, params *Int)  {
 	C.goglGetProgramiv((C.GLuint)(program), (C.GLenum)(pname), (*C.GLint)(params))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glGetProgramInfoLog.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glGetProgramInfoLog.xml
 func GetProgramInfoLog(program Uint, bufSize Sizei, length *Sizei, infoLog *Char)  {
 	C.goglGetProgramInfoLog((C.GLuint)(program), (C.GLsizei)(bufSize), (*C.GLsizei)(length), (*C.GLchar)(infoLog))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glGetShaderiv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glGetShaderiv.xml
 func GetShaderiv(shader Uint, pname Enum, params *Int)  {
 	C.goglGetShaderiv((C.GLuint)(shader), (C.GLenum)(pname), (*C.GLint)(params))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glGetShaderInfoLog.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glGetShaderInfoLog.xml
 func GetShaderInfoLog(shader Uint, bufSize Sizei, length *Sizei, infoLog *Char)  {
 	C.goglGetShaderInfoLog((C.GLuint)(shader), (C.GLsizei)(bufSize), (*C.GLsizei)(length), (*C.GLchar)(infoLog))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glGetShaderSource.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glGetShaderSource.xml
 func GetShaderSource(shader Uint, bufSize Sizei, length *Sizei, source *Char)  {
 	C.goglGetShaderSource((C.GLuint)(shader), (C.GLsizei)(bufSize), (*C.GLsizei)(length), (*C.GLchar)(source))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glGetUniformLocation.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glGetUniformLocation.xml
 func GetUniformLocation(program Uint, name *Char) Int {
 	return (Int)(C.goglGetUniformLocation((C.GLuint)(program), (*C.GLchar)(name)))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glGetUniformfv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glGetUniformfv.xml
 func GetUniformfv(program Uint, location Int, params *Float)  {
 	C.goglGetUniformfv((C.GLuint)(program), (C.GLint)(location), (*C.GLfloat)(params))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glGetUniformiv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glGetUniformiv.xml
 func GetUniformiv(program Uint, location Int, params *Int)  {
 	C.goglGetUniformiv((C.GLuint)(program), (C.GLint)(location), (*C.GLint)(params))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glGetVertexAttribdv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glGetVertexAttribdv.xml
 func GetVertexAttribdv(index Uint, pname Enum, params *Double)  {
 	C.goglGetVertexAttribdv((C.GLuint)(index), (C.GLenum)(pname), (*C.GLdouble)(params))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glGetVertexAttribfv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glGetVertexAttribfv.xml
 func GetVertexAttribfv(index Uint, pname Enum, params *Float)  {
 	C.goglGetVertexAttribfv((C.GLuint)(index), (C.GLenum)(pname), (*C.GLfloat)(params))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glGetVertexAttribiv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glGetVertexAttribiv.xml
 func GetVertexAttribiv(index Uint, pname Enum, params *Int)  {
 	C.goglGetVertexAttribiv((C.GLuint)(index), (C.GLenum)(pname), (*C.GLint)(params))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glGetVertexAttribPointerv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glGetVertexAttribPointerv.xml
 func GetVertexAttribPointerv(index Uint, pname Enum, pointer *Pointer)  {
 	C.goglGetVertexAttribPointerv((C.GLuint)(index), (C.GLenum)(pname), (*unsafe.Pointer)(pointer))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glIsProgram.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glIsProgram.xml
 func IsProgram(program Uint) Boolean {
 	return (Boolean)(C.goglIsProgram((C.GLuint)(program)))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glIsShader.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glIsShader.xml
 func IsShader(shader Uint) Boolean {
 	return (Boolean)(C.goglIsShader((C.GLuint)(shader)))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glLinkProgram.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glLinkProgram.xml
 func LinkProgram(program Uint)  {
 	C.goglLinkProgram((C.GLuint)(program))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glShaderSource.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glShaderSource.xml
 func ShaderSource(shader Uint, count Sizei, string_ **Char, length *Int)  {
 	C.goglShaderSource((C.GLuint)(shader), (C.GLsizei)(count), (**C.GLchar)(unsafe.Pointer(string_)), (*C.GLint)(length))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glUseProgram.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glUseProgram.xml
 func UseProgram(program Uint)  {
 	C.goglUseProgram((C.GLuint)(program))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glUniform1f.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glUniform1f.xml
 func Uniform1f(location Int, v0 Float)  {
 	C.goglUniform1f((C.GLint)(location), (C.GLfloat)(v0))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glUniform2f.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glUniform2f.xml
 func Uniform2f(location Int, v0 Float, v1 Float)  {
 	C.goglUniform2f((C.GLint)(location), (C.GLfloat)(v0), (C.GLfloat)(v1))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glUniform3f.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glUniform3f.xml
 func Uniform3f(location Int, v0 Float, v1 Float, v2 Float)  {
 	C.goglUniform3f((C.GLint)(location), (C.GLfloat)(v0), (C.GLfloat)(v1), (C.GLfloat)(v2))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glUniform4f.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glUniform4f.xml
 func Uniform4f(location Int, v0 Float, v1 Float, v2 Float, v3 Float)  {
 	C.goglUniform4f((C.GLint)(location), (C.GLfloat)(v0), (C.GLfloat)(v1), (C.GLfloat)(v2), (C.GLfloat)(v3))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glUniform1i.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glUniform1i.xml
 func Uniform1i(location Int, v0 Int)  {
 	C.goglUniform1i((C.GLint)(location), (C.GLint)(v0))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glUniform2i.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glUniform2i.xml
 func Uniform2i(location Int, v0 Int, v1 Int)  {
 	C.goglUniform2i((C.GLint)(location), (C.GLint)(v0), (C.GLint)(v1))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glUniform3i.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glUniform3i.xml
 func Uniform3i(location Int, v0 Int, v1 Int, v2 Int)  {
 	C.goglUniform3i((C.GLint)(location), (C.GLint)(v0), (C.GLint)(v1), (C.GLint)(v2))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glUniform4i.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glUniform4i.xml
 func Uniform4i(location Int, v0 Int, v1 Int, v2 Int, v3 Int)  {
 	C.goglUniform4i((C.GLint)(location), (C.GLint)(v0), (C.GLint)(v1), (C.GLint)(v2), (C.GLint)(v3))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glUniform1fv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glUniform1fv.xml
 func Uniform1fv(location Int, count Sizei, value *Float)  {
 	C.goglUniform1fv((C.GLint)(location), (C.GLsizei)(count), (*C.GLfloat)(value))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glUniform2fv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glUniform2fv.xml
 func Uniform2fv(location Int, count Sizei, value *Float)  {
 	C.goglUniform2fv((C.GLint)(location), (C.GLsizei)(count), (*C.GLfloat)(value))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glUniform3fv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glUniform3fv.xml
 func Uniform3fv(location Int, count Sizei, value *Float)  {
 	C.goglUniform3fv((C.GLint)(location), (C.GLsizei)(count), (*C.GLfloat)(value))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glUniform4fv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glUniform4fv.xml
 func Uniform4fv(location Int, count Sizei, value *Float)  {
 	C.goglUniform4fv((C.GLint)(location), (C.GLsizei)(count), (*C.GLfloat)(value))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glUniform1iv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glUniform1iv.xml
 func Uniform1iv(location Int, count Sizei, value *Int)  {
 	C.goglUniform1iv((C.GLint)(location), (C.GLsizei)(count), (*C.GLint)(value))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glUniform2iv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glUniform2iv.xml
 func Uniform2iv(location Int, count Sizei, value *Int)  {
 	C.goglUniform2iv((C.GLint)(location), (C.GLsizei)(count), (*C.GLint)(value))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glUniform3iv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glUniform3iv.xml
 func Uniform3iv(location Int, count Sizei, value *Int)  {
 	C.goglUniform3iv((C.GLint)(location), (C.GLsizei)(count), (*C.GLint)(value))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glUniform4iv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glUniform4iv.xml
 func Uniform4iv(location Int, count Sizei, value *Int)  {
 	C.goglUniform4iv((C.GLint)(location), (C.GLsizei)(count), (*C.GLint)(value))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glUniformMatrix2fv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glUniformMatrix2fv.xml
 func UniformMatrix2fv(location Int, count Sizei, transpose Boolean, value *Float)  {
 	C.goglUniformMatrix2fv((C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(transpose), (*C.GLfloat)(value))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glUniformMatrix3fv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glUniformMatrix3fv.xml
 func UniformMatrix3fv(location Int, count Sizei, transpose Boolean, value *Float)  {
 	C.goglUniformMatrix3fv((C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(transpose), (*C.GLfloat)(value))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glUniformMatrix4fv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glUniformMatrix4fv.xml
 func UniformMatrix4fv(location Int, count Sizei, transpose Boolean, value *Float)  {
 	C.goglUniformMatrix4fv((C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(transpose), (*C.GLfloat)(value))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glValidateProgram.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glValidateProgram.xml
 func ValidateProgram(program Uint)  {
 	C.goglValidateProgram((C.GLuint)(program))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttribPointer.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttribPointer.xml
 func VertexAttribPointer(index Uint, size Int, type_ Enum, normalized Boolean, stride Sizei, pointer Pointer)  {
 	C.goglVertexAttribPointer((C.GLuint)(index), (C.GLint)(size), (C.GLenum)(type_), (C.GLboolean)(normalized), (C.GLsizei)(stride), (unsafe.Pointer)(pointer))
 }
 // VERSION_2_1
 
-// http://www.opengl.org/sdk/docs/man4/xhtml/glUniformMatrix2x3fv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glUniformMatrix2x3fv.xml
 func UniformMatrix2x3fv(location Int, count Sizei, transpose Boolean, value *Float)  {
 	C.goglUniformMatrix2x3fv((C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(transpose), (*C.GLfloat)(value))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glUniformMatrix3x2fv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glUniformMatrix3x2fv.xml
 func UniformMatrix3x2fv(location Int, count Sizei, transpose Boolean, value *Float)  {
 	C.goglUniformMatrix3x2fv((C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(transpose), (*C.GLfloat)(value))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glUniformMatrix2x4fv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glUniformMatrix2x4fv.xml
 func UniformMatrix2x4fv(location Int, count Sizei, transpose Boolean, value *Float)  {
 	C.goglUniformMatrix2x4fv((C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(transpose), (*C.GLfloat)(value))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glUniformMatrix4x2fv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glUniformMatrix4x2fv.xml
 func UniformMatrix4x2fv(location Int, count Sizei, transpose Boolean, value *Float)  {
 	C.goglUniformMatrix4x2fv((C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(transpose), (*C.GLfloat)(value))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glUniformMatrix3x4fv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glUniformMatrix3x4fv.xml
 func UniformMatrix3x4fv(location Int, count Sizei, transpose Boolean, value *Float)  {
 	C.goglUniformMatrix3x4fv((C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(transpose), (*C.GLfloat)(value))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glUniformMatrix4x3fv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glUniformMatrix4x3fv.xml
 func UniformMatrix4x3fv(location Int, count Sizei, transpose Boolean, value *Float)  {
 	C.goglUniformMatrix4x3fv((C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(transpose), (*C.GLfloat)(value))
 }
 // VERSION_3_0
 
-// http://www.opengl.org/sdk/docs/man4/xhtml/glColorMaski.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glColorMaski.xml
 func ColorMaski(index Uint, r Boolean, g Boolean, b Boolean, a Boolean)  {
 	C.goglColorMaski((C.GLuint)(index), (C.GLboolean)(r), (C.GLboolean)(g), (C.GLboolean)(b), (C.GLboolean)(a))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glGetBooleani_v.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glGetBooleani_v.xml
 func GetBooleani_v(target Enum, index Uint, data *Boolean)  {
 	C.goglGetBooleani_v((C.GLenum)(target), (C.GLuint)(index), (*C.GLboolean)(data))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glGetIntegeri_v.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glGetIntegeri_v.xml
 func GetIntegeri_v(target Enum, index Uint, data *Int)  {
 	C.goglGetIntegeri_v((C.GLenum)(target), (C.GLuint)(index), (*C.GLint)(data))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glEnablei.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glEnablei.xml
 func Enablei(target Enum, index Uint)  {
 	C.goglEnablei((C.GLenum)(target), (C.GLuint)(index))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glDisablei.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glDisablei.xml
 func Disablei(target Enum, index Uint)  {
 	C.goglDisablei((C.GLenum)(target), (C.GLuint)(index))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glIsEnabledi.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glIsEnabledi.xml
 func IsEnabledi(target Enum, index Uint) Boolean {
 	return (Boolean)(C.goglIsEnabledi((C.GLenum)(target), (C.GLuint)(index)))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glBeginTransformFeedback.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glBeginTransformFeedback.xml
 func BeginTransformFeedback(primitiveMode Enum)  {
 	C.goglBeginTransformFeedback((C.GLenum)(primitiveMode))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glEndTransformFeedback.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glEndTransformFeedback.xml
 func EndTransformFeedback()  {
 	C.goglEndTransformFeedback()
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glBindBufferRange.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glBindBufferRange.xml
 func BindBufferRange(target Enum, index Uint, buffer Uint, offset Intptr, size Sizeiptr)  {
 	C.goglBindBufferRange((C.GLenum)(target), (C.GLuint)(index), (C.GLuint)(buffer), (C.GLintptr)(offset), (C.GLsizeiptr)(size))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glBindBufferBase.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glBindBufferBase.xml
 func BindBufferBase(target Enum, index Uint, buffer Uint)  {
 	C.goglBindBufferBase((C.GLenum)(target), (C.GLuint)(index), (C.GLuint)(buffer))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glTransformFeedbackVaryings.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glTransformFeedbackVaryings.xml
 func TransformFeedbackVaryings(program Uint, count Sizei, varyings **Char, bufferMode Enum)  {
 	C.goglTransformFeedbackVaryings((C.GLuint)(program), (C.GLsizei)(count), (**C.GLchar)(unsafe.Pointer(varyings)), (C.GLenum)(bufferMode))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glGetTransformFeedbackVarying.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glGetTransformFeedbackVarying.xml
 func GetTransformFeedbackVarying(program Uint, index Uint, bufSize Sizei, length *Sizei, size *Sizei, type_ *Enum, name *Char)  {
 	C.goglGetTransformFeedbackVarying((C.GLuint)(program), (C.GLuint)(index), (C.GLsizei)(bufSize), (*C.GLsizei)(length), (*C.GLsizei)(size), (*C.GLenum)(type_), (*C.GLchar)(name))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glClampColor.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glClampColor.xml
 func ClampColor(target Enum, clamp Enum)  {
 	C.goglClampColor((C.GLenum)(target), (C.GLenum)(clamp))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glBeginConditionalRender.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glBeginConditionalRender.xml
 func BeginConditionalRender(id Uint, mode Enum)  {
 	C.goglBeginConditionalRender((C.GLuint)(id), (C.GLenum)(mode))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glEndConditionalRender.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glEndConditionalRender.xml
 func EndConditionalRender()  {
 	C.goglEndConditionalRender()
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttribIPointer.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttribIPointer.xml
 func VertexAttribIPointer(index Uint, size Int, type_ Enum, stride Sizei, pointer Pointer)  {
 	C.goglVertexAttribIPointer((C.GLuint)(index), (C.GLint)(size), (C.GLenum)(type_), (C.GLsizei)(stride), (unsafe.Pointer)(pointer))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glGetVertexAttribIiv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glGetVertexAttribIiv.xml
 func GetVertexAttribIiv(index Uint, pname Enum, params *Int)  {
 	C.goglGetVertexAttribIiv((C.GLuint)(index), (C.GLenum)(pname), (*C.GLint)(params))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glGetVertexAttribIuiv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glGetVertexAttribIuiv.xml
 func GetVertexAttribIuiv(index Uint, pname Enum, params *Uint)  {
 	C.goglGetVertexAttribIuiv((C.GLuint)(index), (C.GLenum)(pname), (*C.GLuint)(params))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttribI1i.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttribI1i.xml
 func VertexAttribI1i(index Uint, x Int)  {
 	C.goglVertexAttribI1i((C.GLuint)(index), (C.GLint)(x))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttribI2i.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttribI2i.xml
 func VertexAttribI2i(index Uint, x Int, y Int)  {
 	C.goglVertexAttribI2i((C.GLuint)(index), (C.GLint)(x), (C.GLint)(y))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttribI3i.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttribI3i.xml
 func VertexAttribI3i(index Uint, x Int, y Int, z Int)  {
 	C.goglVertexAttribI3i((C.GLuint)(index), (C.GLint)(x), (C.GLint)(y), (C.GLint)(z))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttribI4i.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttribI4i.xml
 func VertexAttribI4i(index Uint, x Int, y Int, z Int, w Int)  {
 	C.goglVertexAttribI4i((C.GLuint)(index), (C.GLint)(x), (C.GLint)(y), (C.GLint)(z), (C.GLint)(w))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttribI1ui.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttribI1ui.xml
 func VertexAttribI1ui(index Uint, x Uint)  {
 	C.goglVertexAttribI1ui((C.GLuint)(index), (C.GLuint)(x))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttribI2ui.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttribI2ui.xml
 func VertexAttribI2ui(index Uint, x Uint, y Uint)  {
 	C.goglVertexAttribI2ui((C.GLuint)(index), (C.GLuint)(x), (C.GLuint)(y))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttribI3ui.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttribI3ui.xml
 func VertexAttribI3ui(index Uint, x Uint, y Uint, z Uint)  {
 	C.goglVertexAttribI3ui((C.GLuint)(index), (C.GLuint)(x), (C.GLuint)(y), (C.GLuint)(z))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttribI4ui.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttribI4ui.xml
 func VertexAttribI4ui(index Uint, x Uint, y Uint, z Uint, w Uint)  {
 	C.goglVertexAttribI4ui((C.GLuint)(index), (C.GLuint)(x), (C.GLuint)(y), (C.GLuint)(z), (C.GLuint)(w))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttribI1iv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttribI1iv.xml
 func VertexAttribI1iv(index Uint, v *Int)  {
 	C.goglVertexAttribI1iv((C.GLuint)(index), (*C.GLint)(v))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttribI2iv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttribI2iv.xml
 func VertexAttribI2iv(index Uint, v *Int)  {
 	C.goglVertexAttribI2iv((C.GLuint)(index), (*C.GLint)(v))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttribI3iv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttribI3iv.xml
 func VertexAttribI3iv(index Uint, v *Int)  {
 	C.goglVertexAttribI3iv((C.GLuint)(index), (*C.GLint)(v))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttribI4iv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttribI4iv.xml
 func VertexAttribI4iv(index Uint, v *Int)  {
 	C.goglVertexAttribI4iv((C.GLuint)(index), (*C.GLint)(v))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttribI1uiv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttribI1uiv.xml
 func VertexAttribI1uiv(index Uint, v *Uint)  {
 	C.goglVertexAttribI1uiv((C.GLuint)(index), (*C.GLuint)(v))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttribI2uiv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttribI2uiv.xml
 func VertexAttribI2uiv(index Uint, v *Uint)  {
 	C.goglVertexAttribI2uiv((C.GLuint)(index), (*C.GLuint)(v))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttribI3uiv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttribI3uiv.xml
 func VertexAttribI3uiv(index Uint, v *Uint)  {
 	C.goglVertexAttribI3uiv((C.GLuint)(index), (*C.GLuint)(v))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttribI4uiv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttribI4uiv.xml
 func VertexAttribI4uiv(index Uint, v *Uint)  {
 	C.goglVertexAttribI4uiv((C.GLuint)(index), (*C.GLuint)(v))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttribI4bv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttribI4bv.xml
 func VertexAttribI4bv(index Uint, v *Byte)  {
 	C.goglVertexAttribI4bv((C.GLuint)(index), (*C.GLbyte)(v))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttribI4sv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttribI4sv.xml
 func VertexAttribI4sv(index Uint, v *Short)  {
 	C.goglVertexAttribI4sv((C.GLuint)(index), (*C.GLshort)(v))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttribI4ubv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttribI4ubv.xml
 func VertexAttribI4ubv(index Uint, v *Ubyte)  {
 	C.goglVertexAttribI4ubv((C.GLuint)(index), (*C.GLubyte)(v))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttribI4usv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttribI4usv.xml
 func VertexAttribI4usv(index Uint, v *Ushort)  {
 	C.goglVertexAttribI4usv((C.GLuint)(index), (*C.GLushort)(v))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glGetUniformuiv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glGetUniformuiv.xml
 func GetUniformuiv(program Uint, location Int, params *Uint)  {
 	C.goglGetUniformuiv((C.GLuint)(program), (C.GLint)(location), (*C.GLuint)(params))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glBindFragDataLocation.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glBindFragDataLocation.xml
 func BindFragDataLocation(program Uint, color Uint, name *Char)  {
 	C.goglBindFragDataLocation((C.GLuint)(program), (C.GLuint)(color), (*C.GLchar)(name))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glGetFragDataLocation.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glGetFragDataLocation.xml
 func GetFragDataLocation(program Uint, name *Char) Int {
 	return (Int)(C.goglGetFragDataLocation((C.GLuint)(program), (*C.GLchar)(name)))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glUniform1ui.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glUniform1ui.xml
 func Uniform1ui(location Int, v0 Uint)  {
 	C.goglUniform1ui((C.GLint)(location), (C.GLuint)(v0))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glUniform2ui.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glUniform2ui.xml
 func Uniform2ui(location Int, v0 Uint, v1 Uint)  {
 	C.goglUniform2ui((C.GLint)(location), (C.GLuint)(v0), (C.GLuint)(v1))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glUniform3ui.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glUniform3ui.xml
 func Uniform3ui(location Int, v0 Uint, v1 Uint, v2 Uint)  {
 	C.goglUniform3ui((C.GLint)(location), (C.GLuint)(v0), (C.GLuint)(v1), (C.GLuint)(v2))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glUniform4ui.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glUniform4ui.xml
 func Uniform4ui(location Int, v0 Uint, v1 Uint, v2 Uint, v3 Uint)  {
 	C.goglUniform4ui((C.GLint)(location), (C.GLuint)(v0), (C.GLuint)(v1), (C.GLuint)(v2), (C.GLuint)(v3))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glUniform1uiv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glUniform1uiv.xml
 func Uniform1uiv(location Int, count Sizei, value *Uint)  {
 	C.goglUniform1uiv((C.GLint)(location), (C.GLsizei)(count), (*C.GLuint)(value))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glUniform2uiv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glUniform2uiv.xml
 func Uniform2uiv(location Int, count Sizei, value *Uint)  {
 	C.goglUniform2uiv((C.GLint)(location), (C.GLsizei)(count), (*C.GLuint)(value))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glUniform3uiv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glUniform3uiv.xml
 func Uniform3uiv(location Int, count Sizei, value *Uint)  {
 	C.goglUniform3uiv((C.GLint)(location), (C.GLsizei)(count), (*C.GLuint)(value))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glUniform4uiv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glUniform4uiv.xml
 func Uniform4uiv(location Int, count Sizei, value *Uint)  {
 	C.goglUniform4uiv((C.GLint)(location), (C.GLsizei)(count), (*C.GLuint)(value))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glTexParameterIiv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glTexParameterIiv.xml
 func TexParameterIiv(target Enum, pname Enum, params *Int)  {
 	C.goglTexParameterIiv((C.GLenum)(target), (C.GLenum)(pname), (*C.GLint)(params))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glTexParameterIuiv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glTexParameterIuiv.xml
 func TexParameterIuiv(target Enum, pname Enum, params *Uint)  {
 	C.goglTexParameterIuiv((C.GLenum)(target), (C.GLenum)(pname), (*C.GLuint)(params))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glGetTexParameterIiv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glGetTexParameterIiv.xml
 func GetTexParameterIiv(target Enum, pname Enum, params *Int)  {
 	C.goglGetTexParameterIiv((C.GLenum)(target), (C.GLenum)(pname), (*C.GLint)(params))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glGetTexParameterIuiv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glGetTexParameterIuiv.xml
 func GetTexParameterIuiv(target Enum, pname Enum, params *Uint)  {
 	C.goglGetTexParameterIuiv((C.GLenum)(target), (C.GLenum)(pname), (*C.GLuint)(params))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glClearBufferiv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glClearBufferiv.xml
 func ClearBufferiv(buffer Enum, drawbuffer Int, value *Int)  {
 	C.goglClearBufferiv((C.GLenum)(buffer), (C.GLint)(drawbuffer), (*C.GLint)(value))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glClearBufferuiv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glClearBufferuiv.xml
 func ClearBufferuiv(buffer Enum, drawbuffer Int, value *Uint)  {
 	C.goglClearBufferuiv((C.GLenum)(buffer), (C.GLint)(drawbuffer), (*C.GLuint)(value))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glClearBufferfv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glClearBufferfv.xml
 func ClearBufferfv(buffer Enum, drawbuffer Int, value *Float)  {
 	C.goglClearBufferfv((C.GLenum)(buffer), (C.GLint)(drawbuffer), (*C.GLfloat)(value))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glClearBufferfi.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glClearBufferfi.xml
 func ClearBufferfi(buffer Enum, drawbuffer Int, depth Float, stencil Int)  {
 	C.goglClearBufferfi((C.GLenum)(buffer), (C.GLint)(drawbuffer), (C.GLfloat)(depth), (C.GLint)(stencil))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glGetStringi.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glGetStringi.xml
 func GetStringi(name Enum, index Uint) *Ubyte {
 	return (*Ubyte)(C.goglGetStringi((C.GLenum)(name), (C.GLuint)(index)))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glIsRenderbuffer.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glIsRenderbuffer.xml
 func IsRenderbuffer(renderbuffer Uint) Boolean {
 	return (Boolean)(C.goglIsRenderbuffer((C.GLuint)(renderbuffer)))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glBindRenderbuffer.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glBindRenderbuffer.xml
 func BindRenderbuffer(target Enum, renderbuffer Uint)  {
 	C.goglBindRenderbuffer((C.GLenum)(target), (C.GLuint)(renderbuffer))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glDeleteRenderbuffers.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glDeleteRenderbuffers.xml
 func DeleteRenderbuffers(n Sizei, renderbuffers *Uint)  {
 	C.goglDeleteRenderbuffers((C.GLsizei)(n), (*C.GLuint)(renderbuffers))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glGenRenderbuffers.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glGenRenderbuffers.xml
 func GenRenderbuffers(n Sizei, renderbuffers *Uint)  {
 	C.goglGenRenderbuffers((C.GLsizei)(n), (*C.GLuint)(renderbuffers))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glRenderbufferStorage.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glRenderbufferStorage.xml
 func RenderbufferStorage(target Enum, internalformat Enum, width Sizei, height Sizei)  {
 	C.goglRenderbufferStorage((C.GLenum)(target), (C.GLenum)(internalformat), (C.GLsizei)(width), (C.GLsizei)(height))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glGetRenderbufferParameteriv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glGetRenderbufferParameteriv.xml
 func GetRenderbufferParameteriv(target Enum, pname Enum, params *Int)  {
 	C.goglGetRenderbufferParameteriv((C.GLenum)(target), (C.GLenum)(pname), (*C.GLint)(params))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glIsFramebuffer.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glIsFramebuffer.xml
 func IsFramebuffer(framebuffer Uint) Boolean {
 	return (Boolean)(C.goglIsFramebuffer((C.GLuint)(framebuffer)))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glBindFramebuffer.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glBindFramebuffer.xml
 func BindFramebuffer(target Enum, framebuffer Uint)  {
 	C.goglBindFramebuffer((C.GLenum)(target), (C.GLuint)(framebuffer))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glDeleteFramebuffers.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glDeleteFramebuffers.xml
 func DeleteFramebuffers(n Sizei, framebuffers *Uint)  {
 	C.goglDeleteFramebuffers((C.GLsizei)(n), (*C.GLuint)(framebuffers))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glGenFramebuffers.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glGenFramebuffers.xml
 func GenFramebuffers(n Sizei, framebuffers *Uint)  {
 	C.goglGenFramebuffers((C.GLsizei)(n), (*C.GLuint)(framebuffers))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glCheckFramebufferStatus.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glCheckFramebufferStatus.xml
 func CheckFramebufferStatus(target Enum) Enum {
 	return (Enum)(C.goglCheckFramebufferStatus((C.GLenum)(target)))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glFramebufferTexture1D.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glFramebufferTexture1D.xml
 func FramebufferTexture1D(target Enum, attachment Enum, textarget Enum, texture Uint, level Int)  {
 	C.goglFramebufferTexture1D((C.GLenum)(target), (C.GLenum)(attachment), (C.GLenum)(textarget), (C.GLuint)(texture), (C.GLint)(level))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glFramebufferTexture2D.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glFramebufferTexture2D.xml
 func FramebufferTexture2D(target Enum, attachment Enum, textarget Enum, texture Uint, level Int)  {
 	C.goglFramebufferTexture2D((C.GLenum)(target), (C.GLenum)(attachment), (C.GLenum)(textarget), (C.GLuint)(texture), (C.GLint)(level))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glFramebufferTexture3D.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glFramebufferTexture3D.xml
 func FramebufferTexture3D(target Enum, attachment Enum, textarget Enum, texture Uint, level Int, zoffset Int)  {
 	C.goglFramebufferTexture3D((C.GLenum)(target), (C.GLenum)(attachment), (C.GLenum)(textarget), (C.GLuint)(texture), (C.GLint)(level), (C.GLint)(zoffset))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glFramebufferRenderbuffer.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glFramebufferRenderbuffer.xml
 func FramebufferRenderbuffer(target Enum, attachment Enum, renderbuffertarget Enum, renderbuffer Uint)  {
 	C.goglFramebufferRenderbuffer((C.GLenum)(target), (C.GLenum)(attachment), (C.GLenum)(renderbuffertarget), (C.GLuint)(renderbuffer))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glGetFramebufferAttachmentParameteriv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glGetFramebufferAttachmentParameteriv.xml
 func GetFramebufferAttachmentParameteriv(target Enum, attachment Enum, pname Enum, params *Int)  {
 	C.goglGetFramebufferAttachmentParameteriv((C.GLenum)(target), (C.GLenum)(attachment), (C.GLenum)(pname), (*C.GLint)(params))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glGenerateMipmap.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glGenerateMipmap.xml
 func GenerateMipmap(target Enum)  {
 	C.goglGenerateMipmap((C.GLenum)(target))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glBlitFramebuffer.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glBlitFramebuffer.xml
 func BlitFramebuffer(srcX0 Int, srcY0 Int, srcX1 Int, srcY1 Int, dstX0 Int, dstY0 Int, dstX1 Int, dstY1 Int, mask Bitfield, filter Enum)  {
 	C.goglBlitFramebuffer((C.GLint)(srcX0), (C.GLint)(srcY0), (C.GLint)(srcX1), (C.GLint)(srcY1), (C.GLint)(dstX0), (C.GLint)(dstY0), (C.GLint)(dstX1), (C.GLint)(dstY1), (C.GLbitfield)(mask), (C.GLenum)(filter))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glRenderbufferStorageMultisample.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glRenderbufferStorageMultisample.xml
 func RenderbufferStorageMultisample(target Enum, samples Sizei, internalformat Enum, width Sizei, height Sizei)  {
 	C.goglRenderbufferStorageMultisample((C.GLenum)(target), (C.GLsizei)(samples), (C.GLenum)(internalformat), (C.GLsizei)(width), (C.GLsizei)(height))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glFramebufferTextureLayer.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glFramebufferTextureLayer.xml
 func FramebufferTextureLayer(target Enum, attachment Enum, texture Uint, level Int, layer Int)  {
 	C.goglFramebufferTextureLayer((C.GLenum)(target), (C.GLenum)(attachment), (C.GLuint)(texture), (C.GLint)(level), (C.GLint)(layer))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glMapBufferRange.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glMapBufferRange.xml
 func MapBufferRange(target Enum, offset Intptr, length Sizeiptr, access Bitfield) Pointer {
 	return (Pointer)(C.goglMapBufferRange((C.GLenum)(target), (C.GLintptr)(offset), (C.GLsizeiptr)(length), (C.GLbitfield)(access)))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glFlushMappedBufferRange.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glFlushMappedBufferRange.xml
 func FlushMappedBufferRange(target Enum, offset Intptr, length Sizeiptr)  {
 	C.goglFlushMappedBufferRange((C.GLenum)(target), (C.GLintptr)(offset), (C.GLsizeiptr)(length))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glBindVertexArray.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glBindVertexArray.xml
 func BindVertexArray(array Uint)  {
 	C.goglBindVertexArray((C.GLuint)(array))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glDeleteVertexArrays.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glDeleteVertexArrays.xml
 func DeleteVertexArrays(n Sizei, arrays *Uint)  {
 	C.goglDeleteVertexArrays((C.GLsizei)(n), (*C.GLuint)(arrays))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glGenVertexArrays.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glGenVertexArrays.xml
 func GenVertexArrays(n Sizei, arrays *Uint)  {
 	C.goglGenVertexArrays((C.GLsizei)(n), (*C.GLuint)(arrays))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glIsVertexArray.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glIsVertexArray.xml
 func IsVertexArray(array Uint) Boolean {
 	return (Boolean)(C.goglIsVertexArray((C.GLuint)(array)))
 }
 // VERSION_3_1
 
-// http://www.opengl.org/sdk/docs/man4/xhtml/glDrawArraysInstanced.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glDrawArraysInstanced.xml
 func DrawArraysInstanced(mode Enum, first Int, count Sizei, instancecount Sizei)  {
 	C.goglDrawArraysInstanced((C.GLenum)(mode), (C.GLint)(first), (C.GLsizei)(count), (C.GLsizei)(instancecount))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glDrawElementsInstanced.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glDrawElementsInstanced.xml
 func DrawElementsInstanced(mode Enum, count Sizei, type_ Enum, indices Pointer, instancecount Sizei)  {
 	C.goglDrawElementsInstanced((C.GLenum)(mode), (C.GLsizei)(count), (C.GLenum)(type_), (unsafe.Pointer)(indices), (C.GLsizei)(instancecount))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glTexBuffer.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glTexBuffer.xml
 func TexBuffer(target Enum, internalformat Enum, buffer Uint)  {
 	C.goglTexBuffer((C.GLenum)(target), (C.GLenum)(internalformat), (C.GLuint)(buffer))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glPrimitiveRestartIndex.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glPrimitiveRestartIndex.xml
 func PrimitiveRestartIndex(index Uint)  {
 	C.goglPrimitiveRestartIndex((C.GLuint)(index))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glCopyBufferSubData.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glCopyBufferSubData.xml
 func CopyBufferSubData(readTarget Enum, writeTarget Enum, readOffset Intptr, writeOffset Intptr, size Sizeiptr)  {
 	C.goglCopyBufferSubData((C.GLenum)(readTarget), (C.GLenum)(writeTarget), (C.GLintptr)(readOffset), (C.GLintptr)(writeOffset), (C.GLsizeiptr)(size))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glGetUniformIndices.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glGetUniformIndices.xml
 func GetUniformIndices(program Uint, uniformCount Sizei, uniformNames **Char, uniformIndices *Uint)  {
 	C.goglGetUniformIndices((C.GLuint)(program), (C.GLsizei)(uniformCount), (**C.GLchar)(unsafe.Pointer(uniformNames)), (*C.GLuint)(uniformIndices))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glGetActiveUniformsiv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glGetActiveUniformsiv.xml
 func GetActiveUniformsiv(program Uint, uniformCount Sizei, uniformIndices *Uint, pname Enum, params *Int)  {
 	C.goglGetActiveUniformsiv((C.GLuint)(program), (C.GLsizei)(uniformCount), (*C.GLuint)(uniformIndices), (C.GLenum)(pname), (*C.GLint)(params))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glGetActiveUniformName.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glGetActiveUniformName.xml
 func GetActiveUniformName(program Uint, uniformIndex Uint, bufSize Sizei, length *Sizei, uniformName *Char)  {
 	C.goglGetActiveUniformName((C.GLuint)(program), (C.GLuint)(uniformIndex), (C.GLsizei)(bufSize), (*C.GLsizei)(length), (*C.GLchar)(uniformName))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glGetUniformBlockIndex.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glGetUniformBlockIndex.xml
 func GetUniformBlockIndex(program Uint, uniformBlockName *Char) Uint {
 	return (Uint)(C.goglGetUniformBlockIndex((C.GLuint)(program), (*C.GLchar)(uniformBlockName)))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glGetActiveUniformBlockiv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glGetActiveUniformBlockiv.xml
 func GetActiveUniformBlockiv(program Uint, uniformBlockIndex Uint, pname Enum, params *Int)  {
 	C.goglGetActiveUniformBlockiv((C.GLuint)(program), (C.GLuint)(uniformBlockIndex), (C.GLenum)(pname), (*C.GLint)(params))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glGetActiveUniformBlockName.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glGetActiveUniformBlockName.xml
 func GetActiveUniformBlockName(program Uint, uniformBlockIndex Uint, bufSize Sizei, length *Sizei, uniformBlockName *Char)  {
 	C.goglGetActiveUniformBlockName((C.GLuint)(program), (C.GLuint)(uniformBlockIndex), (C.GLsizei)(bufSize), (*C.GLsizei)(length), (*C.GLchar)(uniformBlockName))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glUniformBlockBinding.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glUniformBlockBinding.xml
 func UniformBlockBinding(program Uint, uniformBlockIndex Uint, uniformBlockBinding Uint)  {
 	C.goglUniformBlockBinding((C.GLuint)(program), (C.GLuint)(uniformBlockIndex), (C.GLuint)(uniformBlockBinding))
 }
 // VERSION_3_2
 
-// http://www.opengl.org/sdk/docs/man4/xhtml/glGetInteger64i_v.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glGetInteger64i_v.xml
 func GetInteger64i_v(target Enum, index Uint, data *Int64)  {
 	C.goglGetInteger64i_v((C.GLenum)(target), (C.GLuint)(index), (*C.GLint64)(data))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glGetBufferParameteri64v.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glGetBufferParameteri64v.xml
 func GetBufferParameteri64v(target Enum, pname Enum, params *Int64)  {
 	C.goglGetBufferParameteri64v((C.GLenum)(target), (C.GLenum)(pname), (*C.GLint64)(params))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glFramebufferTexture.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glFramebufferTexture.xml
 func FramebufferTexture(target Enum, attachment Enum, texture Uint, level Int)  {
 	C.goglFramebufferTexture((C.GLenum)(target), (C.GLenum)(attachment), (C.GLuint)(texture), (C.GLint)(level))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glDrawElementsBaseVertex.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glDrawElementsBaseVertex.xml
 func DrawElementsBaseVertex(mode Enum, count Sizei, type_ Enum, indices Pointer, basevertex Int)  {
 	C.goglDrawElementsBaseVertex((C.GLenum)(mode), (C.GLsizei)(count), (C.GLenum)(type_), (unsafe.Pointer)(indices), (C.GLint)(basevertex))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glDrawRangeElementsBaseVertex.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glDrawRangeElementsBaseVertex.xml
 func DrawRangeElementsBaseVertex(mode Enum, start Uint, end Uint, count Sizei, type_ Enum, indices Pointer, basevertex Int)  {
 	C.goglDrawRangeElementsBaseVertex((C.GLenum)(mode), (C.GLuint)(start), (C.GLuint)(end), (C.GLsizei)(count), (C.GLenum)(type_), (unsafe.Pointer)(indices), (C.GLint)(basevertex))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glDrawElementsInstancedBaseVertex.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glDrawElementsInstancedBaseVertex.xml
 func DrawElementsInstancedBaseVertex(mode Enum, count Sizei, type_ Enum, indices Pointer, instancecount Sizei, basevertex Int)  {
 	C.goglDrawElementsInstancedBaseVertex((C.GLenum)(mode), (C.GLsizei)(count), (C.GLenum)(type_), (unsafe.Pointer)(indices), (C.GLsizei)(instancecount), (C.GLint)(basevertex))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glMultiDrawElementsBaseVertex.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glMultiDrawElementsBaseVertex.xml
 func MultiDrawElementsBaseVertex(mode Enum, count *Sizei, type_ Enum, indices *Pointer, drawcount Sizei, basevertex *Int)  {
 	C.goglMultiDrawElementsBaseVertex((C.GLenum)(mode), (*C.GLsizei)(count), (C.GLenum)(type_), (*unsafe.Pointer)(indices), (C.GLsizei)(drawcount), (*C.GLint)(basevertex))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glProvokingVertex.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glProvokingVertex.xml
 func ProvokingVertex(mode Enum)  {
 	C.goglProvokingVertex((C.GLenum)(mode))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glFenceSync.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glFenceSync.xml
 func FenceSync(condition Enum, flags Bitfield) Sync {
 	return (Sync)(C.goglFenceSync((C.GLenum)(condition), (C.GLbitfield)(flags)))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glIsSync.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glIsSync.xml
 func IsSync(sync Sync) Boolean {
 	return (Boolean)(C.goglIsSync((C.GLsync)(sync)))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glDeleteSync.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glDeleteSync.xml
 func DeleteSync(sync Sync)  {
 	C.goglDeleteSync((C.GLsync)(sync))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glClientWaitSync.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glClientWaitSync.xml
 func ClientWaitSync(sync Sync, flags Bitfield, timeout Uint64) Enum {
 	return (Enum)(C.goglClientWaitSync((C.GLsync)(sync), (C.GLbitfield)(flags), (C.GLuint64)(timeout)))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glWaitSync.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glWaitSync.xml
 func WaitSync(sync Sync, flags Bitfield, timeout Uint64)  {
 	C.goglWaitSync((C.GLsync)(sync), (C.GLbitfield)(flags), (C.GLuint64)(timeout))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glGetInteger64v.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glGetInteger64v.xml
 func GetInteger64v(pname Enum, params *Int64)  {
 	C.goglGetInteger64v((C.GLenum)(pname), (*C.GLint64)(params))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glGetSynciv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glGetSynciv.xml
 func GetSynciv(sync Sync, pname Enum, bufSize Sizei, length *Sizei, values *Int)  {
 	C.goglGetSynciv((C.GLsync)(sync), (C.GLenum)(pname), (C.GLsizei)(bufSize), (*C.GLsizei)(length), (*C.GLint)(values))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glTexImage2DMultisample.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glTexImage2DMultisample.xml
 func TexImage2DMultisample(target Enum, samples Sizei, internalformat Int, width Sizei, height Sizei, fixedsamplelocations Boolean)  {
 	C.goglTexImage2DMultisample((C.GLenum)(target), (C.GLsizei)(samples), (C.GLint)(internalformat), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLboolean)(fixedsamplelocations))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glTexImage3DMultisample.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glTexImage3DMultisample.xml
 func TexImage3DMultisample(target Enum, samples Sizei, internalformat Int, width Sizei, height Sizei, depth Sizei, fixedsamplelocations Boolean)  {
 	C.goglTexImage3DMultisample((C.GLenum)(target), (C.GLsizei)(samples), (C.GLint)(internalformat), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLsizei)(depth), (C.GLboolean)(fixedsamplelocations))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glGetMultisamplefv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glGetMultisamplefv.xml
 func GetMultisamplefv(pname Enum, index Uint, val *Float)  {
 	C.goglGetMultisamplefv((C.GLenum)(pname), (C.GLuint)(index), (*C.GLfloat)(val))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glSampleMaski.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glSampleMaski.xml
 func SampleMaski(index Uint, mask Bitfield)  {
 	C.goglSampleMaski((C.GLuint)(index), (C.GLbitfield)(mask))
 }
 // VERSION_3_3
 
-// http://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttribDivisor.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttribDivisor.xml
 func VertexAttribDivisor(index Uint, divisor Uint)  {
 	C.goglVertexAttribDivisor((C.GLuint)(index), (C.GLuint)(divisor))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glBindFragDataLocationIndexed.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glBindFragDataLocationIndexed.xml
 func BindFragDataLocationIndexed(program Uint, colorNumber Uint, index Uint, name *Char)  {
 	C.goglBindFragDataLocationIndexed((C.GLuint)(program), (C.GLuint)(colorNumber), (C.GLuint)(index), (*C.GLchar)(name))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glGetFragDataIndex.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glGetFragDataIndex.xml
 func GetFragDataIndex(program Uint, name *Char) Int {
 	return (Int)(C.goglGetFragDataIndex((C.GLuint)(program), (*C.GLchar)(name)))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glGenSamplers.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glGenSamplers.xml
 func GenSamplers(count Sizei, samplers *Uint)  {
 	C.goglGenSamplers((C.GLsizei)(count), (*C.GLuint)(samplers))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glDeleteSamplers.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glDeleteSamplers.xml
 func DeleteSamplers(count Sizei, samplers *Uint)  {
 	C.goglDeleteSamplers((C.GLsizei)(count), (*C.GLuint)(samplers))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glIsSampler.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glIsSampler.xml
 func IsSampler(sampler Uint) Boolean {
 	return (Boolean)(C.goglIsSampler((C.GLuint)(sampler)))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glBindSampler.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glBindSampler.xml
 func BindSampler(unit Uint, sampler Uint)  {
 	C.goglBindSampler((C.GLuint)(unit), (C.GLuint)(sampler))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glSamplerParameteri.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glSamplerParameteri.xml
 func SamplerParameteri(sampler Uint, pname Enum, param Int)  {
 	C.goglSamplerParameteri((C.GLuint)(sampler), (C.GLenum)(pname), (C.GLint)(param))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glSamplerParameteriv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glSamplerParameteriv.xml
 func SamplerParameteriv(sampler Uint, pname Enum, param *Int)  {
 	C.goglSamplerParameteriv((C.GLuint)(sampler), (C.GLenum)(pname), (*C.GLint)(param))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glSamplerParameterf.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glSamplerParameterf.xml
 func SamplerParameterf(sampler Uint, pname Enum, param Float)  {
 	C.goglSamplerParameterf((C.GLuint)(sampler), (C.GLenum)(pname), (C.GLfloat)(param))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glSamplerParameterfv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glSamplerParameterfv.xml
 func SamplerParameterfv(sampler Uint, pname Enum, param *Float)  {
 	C.goglSamplerParameterfv((C.GLuint)(sampler), (C.GLenum)(pname), (*C.GLfloat)(param))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glSamplerParameterIiv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glSamplerParameterIiv.xml
 func SamplerParameterIiv(sampler Uint, pname Enum, param *Int)  {
 	C.goglSamplerParameterIiv((C.GLuint)(sampler), (C.GLenum)(pname), (*C.GLint)(param))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glSamplerParameterIuiv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glSamplerParameterIuiv.xml
 func SamplerParameterIuiv(sampler Uint, pname Enum, param *Uint)  {
 	C.goglSamplerParameterIuiv((C.GLuint)(sampler), (C.GLenum)(pname), (*C.GLuint)(param))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glGetSamplerParameteriv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glGetSamplerParameteriv.xml
 func GetSamplerParameteriv(sampler Uint, pname Enum, params *Int)  {
 	C.goglGetSamplerParameteriv((C.GLuint)(sampler), (C.GLenum)(pname), (*C.GLint)(params))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glGetSamplerParameterIiv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glGetSamplerParameterIiv.xml
 func GetSamplerParameterIiv(sampler Uint, pname Enum, params *Int)  {
 	C.goglGetSamplerParameterIiv((C.GLuint)(sampler), (C.GLenum)(pname), (*C.GLint)(params))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glGetSamplerParameterfv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glGetSamplerParameterfv.xml
 func GetSamplerParameterfv(sampler Uint, pname Enum, params *Float)  {
 	C.goglGetSamplerParameterfv((C.GLuint)(sampler), (C.GLenum)(pname), (*C.GLfloat)(params))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glGetSamplerParameterIuiv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glGetSamplerParameterIuiv.xml
 func GetSamplerParameterIuiv(sampler Uint, pname Enum, params *Uint)  {
 	C.goglGetSamplerParameterIuiv((C.GLuint)(sampler), (C.GLenum)(pname), (*C.GLuint)(params))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glQueryCounter.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glQueryCounter.xml
 func QueryCounter(id Uint, target Enum)  {
 	C.goglQueryCounter((C.GLuint)(id), (C.GLenum)(target))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glGetQueryObjecti64v.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glGetQueryObjecti64v.xml
 func GetQueryObjecti64v(id Uint, pname Enum, params *Int64)  {
 	C.goglGetQueryObjecti64v((C.GLuint)(id), (C.GLenum)(pname), (*C.GLint64)(params))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glGetQueryObjectui64v.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glGetQueryObjectui64v.xml
 func GetQueryObjectui64v(id Uint, pname Enum, params *Uint64)  {
 	C.goglGetQueryObjectui64v((C.GLuint)(id), (C.GLenum)(pname), (*C.GLuint64)(params))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glVertexP2ui.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glVertexP2ui.xml
 func VertexP2ui(type_ Enum, value Uint)  {
 	C.goglVertexP2ui((C.GLenum)(type_), (C.GLuint)(value))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glVertexP2uiv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glVertexP2uiv.xml
 func VertexP2uiv(type_ Enum, value *Uint)  {
 	C.goglVertexP2uiv((C.GLenum)(type_), (*C.GLuint)(value))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glVertexP3ui.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glVertexP3ui.xml
 func VertexP3ui(type_ Enum, value Uint)  {
 	C.goglVertexP3ui((C.GLenum)(type_), (C.GLuint)(value))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glVertexP3uiv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glVertexP3uiv.xml
 func VertexP3uiv(type_ Enum, value *Uint)  {
 	C.goglVertexP3uiv((C.GLenum)(type_), (*C.GLuint)(value))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glVertexP4ui.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glVertexP4ui.xml
 func VertexP4ui(type_ Enum, value Uint)  {
 	C.goglVertexP4ui((C.GLenum)(type_), (C.GLuint)(value))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glVertexP4uiv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glVertexP4uiv.xml
 func VertexP4uiv(type_ Enum, value *Uint)  {
 	C.goglVertexP4uiv((C.GLenum)(type_), (*C.GLuint)(value))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glTexCoordP1ui.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glTexCoordP1ui.xml
 func TexCoordP1ui(type_ Enum, coords Uint)  {
 	C.goglTexCoordP1ui((C.GLenum)(type_), (C.GLuint)(coords))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glTexCoordP1uiv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glTexCoordP1uiv.xml
 func TexCoordP1uiv(type_ Enum, coords *Uint)  {
 	C.goglTexCoordP1uiv((C.GLenum)(type_), (*C.GLuint)(coords))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glTexCoordP2ui.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glTexCoordP2ui.xml
 func TexCoordP2ui(type_ Enum, coords Uint)  {
 	C.goglTexCoordP2ui((C.GLenum)(type_), (C.GLuint)(coords))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glTexCoordP2uiv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glTexCoordP2uiv.xml
 func TexCoordP2uiv(type_ Enum, coords *Uint)  {
 	C.goglTexCoordP2uiv((C.GLenum)(type_), (*C.GLuint)(coords))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glTexCoordP3ui.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glTexCoordP3ui.xml
 func TexCoordP3ui(type_ Enum, coords Uint)  {
 	C.goglTexCoordP3ui((C.GLenum)(type_), (C.GLuint)(coords))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glTexCoordP3uiv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glTexCoordP3uiv.xml
 func TexCoordP3uiv(type_ Enum, coords *Uint)  {
 	C.goglTexCoordP3uiv((C.GLenum)(type_), (*C.GLuint)(coords))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glTexCoordP4ui.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glTexCoordP4ui.xml
 func TexCoordP4ui(type_ Enum, coords Uint)  {
 	C.goglTexCoordP4ui((C.GLenum)(type_), (C.GLuint)(coords))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glTexCoordP4uiv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glTexCoordP4uiv.xml
 func TexCoordP4uiv(type_ Enum, coords *Uint)  {
 	C.goglTexCoordP4uiv((C.GLenum)(type_), (*C.GLuint)(coords))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glMultiTexCoordP1ui.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glMultiTexCoordP1ui.xml
 func MultiTexCoordP1ui(texture Enum, type_ Enum, coords Uint)  {
 	C.goglMultiTexCoordP1ui((C.GLenum)(texture), (C.GLenum)(type_), (C.GLuint)(coords))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glMultiTexCoordP1uiv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glMultiTexCoordP1uiv.xml
 func MultiTexCoordP1uiv(texture Enum, type_ Enum, coords *Uint)  {
 	C.goglMultiTexCoordP1uiv((C.GLenum)(texture), (C.GLenum)(type_), (*C.GLuint)(coords))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glMultiTexCoordP2ui.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glMultiTexCoordP2ui.xml
 func MultiTexCoordP2ui(texture Enum, type_ Enum, coords Uint)  {
 	C.goglMultiTexCoordP2ui((C.GLenum)(texture), (C.GLenum)(type_), (C.GLuint)(coords))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glMultiTexCoordP2uiv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glMultiTexCoordP2uiv.xml
 func MultiTexCoordP2uiv(texture Enum, type_ Enum, coords *Uint)  {
 	C.goglMultiTexCoordP2uiv((C.GLenum)(texture), (C.GLenum)(type_), (*C.GLuint)(coords))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glMultiTexCoordP3ui.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glMultiTexCoordP3ui.xml
 func MultiTexCoordP3ui(texture Enum, type_ Enum, coords Uint)  {
 	C.goglMultiTexCoordP3ui((C.GLenum)(texture), (C.GLenum)(type_), (C.GLuint)(coords))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glMultiTexCoordP3uiv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glMultiTexCoordP3uiv.xml
 func MultiTexCoordP3uiv(texture Enum, type_ Enum, coords *Uint)  {
 	C.goglMultiTexCoordP3uiv((C.GLenum)(texture), (C.GLenum)(type_), (*C.GLuint)(coords))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glMultiTexCoordP4ui.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glMultiTexCoordP4ui.xml
 func MultiTexCoordP4ui(texture Enum, type_ Enum, coords Uint)  {
 	C.goglMultiTexCoordP4ui((C.GLenum)(texture), (C.GLenum)(type_), (C.GLuint)(coords))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glMultiTexCoordP4uiv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glMultiTexCoordP4uiv.xml
 func MultiTexCoordP4uiv(texture Enum, type_ Enum, coords *Uint)  {
 	C.goglMultiTexCoordP4uiv((C.GLenum)(texture), (C.GLenum)(type_), (*C.GLuint)(coords))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glNormalP3ui.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glNormalP3ui.xml
 func NormalP3ui(type_ Enum, coords Uint)  {
 	C.goglNormalP3ui((C.GLenum)(type_), (C.GLuint)(coords))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glNormalP3uiv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glNormalP3uiv.xml
 func NormalP3uiv(type_ Enum, coords *Uint)  {
 	C.goglNormalP3uiv((C.GLenum)(type_), (*C.GLuint)(coords))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glColorP3ui.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glColorP3ui.xml
 func ColorP3ui(type_ Enum, color Uint)  {
 	C.goglColorP3ui((C.GLenum)(type_), (C.GLuint)(color))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glColorP3uiv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glColorP3uiv.xml
 func ColorP3uiv(type_ Enum, color *Uint)  {
 	C.goglColorP3uiv((C.GLenum)(type_), (*C.GLuint)(color))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glColorP4ui.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glColorP4ui.xml
 func ColorP4ui(type_ Enum, color Uint)  {
 	C.goglColorP4ui((C.GLenum)(type_), (C.GLuint)(color))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glColorP4uiv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glColorP4uiv.xml
 func ColorP4uiv(type_ Enum, color *Uint)  {
 	C.goglColorP4uiv((C.GLenum)(type_), (*C.GLuint)(color))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glSecondaryColorP3ui.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glSecondaryColorP3ui.xml
 func SecondaryColorP3ui(type_ Enum, color Uint)  {
 	C.goglSecondaryColorP3ui((C.GLenum)(type_), (C.GLuint)(color))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glSecondaryColorP3uiv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glSecondaryColorP3uiv.xml
 func SecondaryColorP3uiv(type_ Enum, color *Uint)  {
 	C.goglSecondaryColorP3uiv((C.GLenum)(type_), (*C.GLuint)(color))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttribP1ui.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttribP1ui.xml
 func VertexAttribP1ui(index Uint, type_ Enum, normalized Boolean, value Uint)  {
 	C.goglVertexAttribP1ui((C.GLuint)(index), (C.GLenum)(type_), (C.GLboolean)(normalized), (C.GLuint)(value))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttribP1uiv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttribP1uiv.xml
 func VertexAttribP1uiv(index Uint, type_ Enum, normalized Boolean, value *Uint)  {
 	C.goglVertexAttribP1uiv((C.GLuint)(index), (C.GLenum)(type_), (C.GLboolean)(normalized), (*C.GLuint)(value))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttribP2ui.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttribP2ui.xml
 func VertexAttribP2ui(index Uint, type_ Enum, normalized Boolean, value Uint)  {
 	C.goglVertexAttribP2ui((C.GLuint)(index), (C.GLenum)(type_), (C.GLboolean)(normalized), (C.GLuint)(value))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttribP2uiv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttribP2uiv.xml
 func VertexAttribP2uiv(index Uint, type_ Enum, normalized Boolean, value *Uint)  {
 	C.goglVertexAttribP2uiv((C.GLuint)(index), (C.GLenum)(type_), (C.GLboolean)(normalized), (*C.GLuint)(value))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttribP3ui.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttribP3ui.xml
 func VertexAttribP3ui(index Uint, type_ Enum, normalized Boolean, value Uint)  {
 	C.goglVertexAttribP3ui((C.GLuint)(index), (C.GLenum)(type_), (C.GLboolean)(normalized), (C.GLuint)(value))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttribP3uiv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttribP3uiv.xml
 func VertexAttribP3uiv(index Uint, type_ Enum, normalized Boolean, value *Uint)  {
 	C.goglVertexAttribP3uiv((C.GLuint)(index), (C.GLenum)(type_), (C.GLboolean)(normalized), (*C.GLuint)(value))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttribP4ui.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttribP4ui.xml
 func VertexAttribP4ui(index Uint, type_ Enum, normalized Boolean, value Uint)  {
 	C.goglVertexAttribP4ui((C.GLuint)(index), (C.GLenum)(type_), (C.GLboolean)(normalized), (C.GLuint)(value))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttribP4uiv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttribP4uiv.xml
 func VertexAttribP4uiv(index Uint, type_ Enum, normalized Boolean, value *Uint)  {
 	C.goglVertexAttribP4uiv((C.GLuint)(index), (C.GLenum)(type_), (C.GLboolean)(normalized), (*C.GLuint)(value))
 }
 // VERSION_4_0
 
-// http://www.opengl.org/sdk/docs/man4/xhtml/glMinSampleShading.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glMinSampleShading.xml
 func MinSampleShading(value Float)  {
 	C.goglMinSampleShading((C.GLfloat)(value))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glBlendEquationi.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glBlendEquationi.xml
 func BlendEquationi(buf Uint, mode Enum)  {
 	C.goglBlendEquationi((C.GLuint)(buf), (C.GLenum)(mode))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glBlendEquationSeparatei.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glBlendEquationSeparatei.xml
 func BlendEquationSeparatei(buf Uint, modeRGB Enum, modeAlpha Enum)  {
 	C.goglBlendEquationSeparatei((C.GLuint)(buf), (C.GLenum)(modeRGB), (C.GLenum)(modeAlpha))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glBlendFunci.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glBlendFunci.xml
 func BlendFunci(buf Uint, src Enum, dst Enum)  {
 	C.goglBlendFunci((C.GLuint)(buf), (C.GLenum)(src), (C.GLenum)(dst))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glBlendFuncSeparatei.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glBlendFuncSeparatei.xml
 func BlendFuncSeparatei(buf Uint, srcRGB Enum, dstRGB Enum, srcAlpha Enum, dstAlpha Enum)  {
 	C.goglBlendFuncSeparatei((C.GLuint)(buf), (C.GLenum)(srcRGB), (C.GLenum)(dstRGB), (C.GLenum)(srcAlpha), (C.GLenum)(dstAlpha))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glDrawArraysIndirect.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glDrawArraysIndirect.xml
 func DrawArraysIndirect(mode Enum, indirect Pointer)  {
 	C.goglDrawArraysIndirect((C.GLenum)(mode), (unsafe.Pointer)(indirect))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glDrawElementsIndirect.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glDrawElementsIndirect.xml
 func DrawElementsIndirect(mode Enum, type_ Enum, indirect Pointer)  {
 	C.goglDrawElementsIndirect((C.GLenum)(mode), (C.GLenum)(type_), (unsafe.Pointer)(indirect))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glUniform1d.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glUniform1d.xml
 func Uniform1d(location Int, x Double)  {
 	C.goglUniform1d((C.GLint)(location), (C.GLdouble)(x))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glUniform2d.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glUniform2d.xml
 func Uniform2d(location Int, x Double, y Double)  {
 	C.goglUniform2d((C.GLint)(location), (C.GLdouble)(x), (C.GLdouble)(y))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glUniform3d.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glUniform3d.xml
 func Uniform3d(location Int, x Double, y Double, z Double)  {
 	C.goglUniform3d((C.GLint)(location), (C.GLdouble)(x), (C.GLdouble)(y), (C.GLdouble)(z))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glUniform4d.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glUniform4d.xml
 func Uniform4d(location Int, x Double, y Double, z Double, w Double)  {
 	C.goglUniform4d((C.GLint)(location), (C.GLdouble)(x), (C.GLdouble)(y), (C.GLdouble)(z), (C.GLdouble)(w))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glUniform1dv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glUniform1dv.xml
 func Uniform1dv(location Int, count Sizei, value *Double)  {
 	C.goglUniform1dv((C.GLint)(location), (C.GLsizei)(count), (*C.GLdouble)(value))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glUniform2dv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glUniform2dv.xml
 func Uniform2dv(location Int, count Sizei, value *Double)  {
 	C.goglUniform2dv((C.GLint)(location), (C.GLsizei)(count), (*C.GLdouble)(value))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glUniform3dv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glUniform3dv.xml
 func Uniform3dv(location Int, count Sizei, value *Double)  {
 	C.goglUniform3dv((C.GLint)(location), (C.GLsizei)(count), (*C.GLdouble)(value))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glUniform4dv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glUniform4dv.xml
 func Uniform4dv(location Int, count Sizei, value *Double)  {
 	C.goglUniform4dv((C.GLint)(location), (C.GLsizei)(count), (*C.GLdouble)(value))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glUniformMatrix2dv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glUniformMatrix2dv.xml
 func UniformMatrix2dv(location Int, count Sizei, transpose Boolean, value *Double)  {
 	C.goglUniformMatrix2dv((C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(transpose), (*C.GLdouble)(value))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glUniformMatrix3dv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glUniformMatrix3dv.xml
 func UniformMatrix3dv(location Int, count Sizei, transpose Boolean, value *Double)  {
 	C.goglUniformMatrix3dv((C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(transpose), (*C.GLdouble)(value))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glUniformMatrix4dv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glUniformMatrix4dv.xml
 func UniformMatrix4dv(location Int, count Sizei, transpose Boolean, value *Double)  {
 	C.goglUniformMatrix4dv((C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(transpose), (*C.GLdouble)(value))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glUniformMatrix2x3dv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glUniformMatrix2x3dv.xml
 func UniformMatrix2x3dv(location Int, count Sizei, transpose Boolean, value *Double)  {
 	C.goglUniformMatrix2x3dv((C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(transpose), (*C.GLdouble)(value))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glUniformMatrix2x4dv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glUniformMatrix2x4dv.xml
 func UniformMatrix2x4dv(location Int, count Sizei, transpose Boolean, value *Double)  {
 	C.goglUniformMatrix2x4dv((C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(transpose), (*C.GLdouble)(value))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glUniformMatrix3x2dv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glUniformMatrix3x2dv.xml
 func UniformMatrix3x2dv(location Int, count Sizei, transpose Boolean, value *Double)  {
 	C.goglUniformMatrix3x2dv((C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(transpose), (*C.GLdouble)(value))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glUniformMatrix3x4dv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glUniformMatrix3x4dv.xml
 func UniformMatrix3x4dv(location Int, count Sizei, transpose Boolean, value *Double)  {
 	C.goglUniformMatrix3x4dv((C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(transpose), (*C.GLdouble)(value))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glUniformMatrix4x2dv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glUniformMatrix4x2dv.xml
 func UniformMatrix4x2dv(location Int, count Sizei, transpose Boolean, value *Double)  {
 	C.goglUniformMatrix4x2dv((C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(transpose), (*C.GLdouble)(value))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glUniformMatrix4x3dv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glUniformMatrix4x3dv.xml
 func UniformMatrix4x3dv(location Int, count Sizei, transpose Boolean, value *Double)  {
 	C.goglUniformMatrix4x3dv((C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(transpose), (*C.GLdouble)(value))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glGetUniformdv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glGetUniformdv.xml
 func GetUniformdv(program Uint, location Int, params *Double)  {
 	C.goglGetUniformdv((C.GLuint)(program), (C.GLint)(location), (*C.GLdouble)(params))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glGetSubroutineUniformLocation.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glGetSubroutineUniformLocation.xml
 func GetSubroutineUniformLocation(program Uint, shadertype Enum, name *Char) Int {
 	return (Int)(C.goglGetSubroutineUniformLocation((C.GLuint)(program), (C.GLenum)(shadertype), (*C.GLchar)(name)))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glGetSubroutineIndex.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glGetSubroutineIndex.xml
 func GetSubroutineIndex(program Uint, shadertype Enum, name *Char) Uint {
 	return (Uint)(C.goglGetSubroutineIndex((C.GLuint)(program), (C.GLenum)(shadertype), (*C.GLchar)(name)))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glGetActiveSubroutineUniformiv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glGetActiveSubroutineUniformiv.xml
 func GetActiveSubroutineUniformiv(program Uint, shadertype Enum, index Uint, pname Enum, values *Int)  {
 	C.goglGetActiveSubroutineUniformiv((C.GLuint)(program), (C.GLenum)(shadertype), (C.GLuint)(index), (C.GLenum)(pname), (*C.GLint)(values))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glGetActiveSubroutineUniformName.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glGetActiveSubroutineUniformName.xml
 func GetActiveSubroutineUniformName(program Uint, shadertype Enum, index Uint, bufsize Sizei, length *Sizei, name *Char)  {
 	C.goglGetActiveSubroutineUniformName((C.GLuint)(program), (C.GLenum)(shadertype), (C.GLuint)(index), (C.GLsizei)(bufsize), (*C.GLsizei)(length), (*C.GLchar)(name))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glGetActiveSubroutineName.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glGetActiveSubroutineName.xml
 func GetActiveSubroutineName(program Uint, shadertype Enum, index Uint, bufsize Sizei, length *Sizei, name *Char)  {
 	C.goglGetActiveSubroutineName((C.GLuint)(program), (C.GLenum)(shadertype), (C.GLuint)(index), (C.GLsizei)(bufsize), (*C.GLsizei)(length), (*C.GLchar)(name))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glUniformSubroutinesuiv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glUniformSubroutinesuiv.xml
 func UniformSubroutinesuiv(shadertype Enum, count Sizei, indices *Uint)  {
 	C.goglUniformSubroutinesuiv((C.GLenum)(shadertype), (C.GLsizei)(count), (*C.GLuint)(indices))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glGetUniformSubroutineuiv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glGetUniformSubroutineuiv.xml
 func GetUniformSubroutineuiv(shadertype Enum, location Int, params *Uint)  {
 	C.goglGetUniformSubroutineuiv((C.GLenum)(shadertype), (C.GLint)(location), (*C.GLuint)(params))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glGetProgramStageiv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glGetProgramStageiv.xml
 func GetProgramStageiv(program Uint, shadertype Enum, pname Enum, values *Int)  {
 	C.goglGetProgramStageiv((C.GLuint)(program), (C.GLenum)(shadertype), (C.GLenum)(pname), (*C.GLint)(values))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glPatchParameteri.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glPatchParameteri.xml
 func PatchParameteri(pname Enum, value Int)  {
 	C.goglPatchParameteri((C.GLenum)(pname), (C.GLint)(value))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glPatchParameterfv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glPatchParameterfv.xml
 func PatchParameterfv(pname Enum, values *Float)  {
 	C.goglPatchParameterfv((C.GLenum)(pname), (*C.GLfloat)(values))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glBindTransformFeedback.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glBindTransformFeedback.xml
 func BindTransformFeedback(target Enum, id Uint)  {
 	C.goglBindTransformFeedback((C.GLenum)(target), (C.GLuint)(id))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glDeleteTransformFeedbacks.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glDeleteTransformFeedbacks.xml
 func DeleteTransformFeedbacks(n Sizei, ids *Uint)  {
 	C.goglDeleteTransformFeedbacks((C.GLsizei)(n), (*C.GLuint)(ids))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glGenTransformFeedbacks.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glGenTransformFeedbacks.xml
 func GenTransformFeedbacks(n Sizei, ids *Uint)  {
 	C.goglGenTransformFeedbacks((C.GLsizei)(n), (*C.GLuint)(ids))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glIsTransformFeedback.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glIsTransformFeedback.xml
 func IsTransformFeedback(id Uint) Boolean {
 	return (Boolean)(C.goglIsTransformFeedback((C.GLuint)(id)))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glPauseTransformFeedback.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glPauseTransformFeedback.xml
 func PauseTransformFeedback()  {
 	C.goglPauseTransformFeedback()
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glResumeTransformFeedback.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glResumeTransformFeedback.xml
 func ResumeTransformFeedback()  {
 	C.goglResumeTransformFeedback()
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glDrawTransformFeedback.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glDrawTransformFeedback.xml
 func DrawTransformFeedback(mode Enum, id Uint)  {
 	C.goglDrawTransformFeedback((C.GLenum)(mode), (C.GLuint)(id))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glDrawTransformFeedbackStream.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glDrawTransformFeedbackStream.xml
 func DrawTransformFeedbackStream(mode Enum, id Uint, stream Uint)  {
 	C.goglDrawTransformFeedbackStream((C.GLenum)(mode), (C.GLuint)(id), (C.GLuint)(stream))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glBeginQueryIndexed.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glBeginQueryIndexed.xml
 func BeginQueryIndexed(target Enum, index Uint, id Uint)  {
 	C.goglBeginQueryIndexed((C.GLenum)(target), (C.GLuint)(index), (C.GLuint)(id))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glEndQueryIndexed.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glEndQueryIndexed.xml
 func EndQueryIndexed(target Enum, index Uint)  {
 	C.goglEndQueryIndexed((C.GLenum)(target), (C.GLuint)(index))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glGetQueryIndexediv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glGetQueryIndexediv.xml
 func GetQueryIndexediv(target Enum, index Uint, pname Enum, params *Int)  {
 	C.goglGetQueryIndexediv((C.GLenum)(target), (C.GLuint)(index), (C.GLenum)(pname), (*C.GLint)(params))
 }
 // VERSION_4_1
 
-// http://www.opengl.org/sdk/docs/man4/xhtml/glReleaseShaderCompiler.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glReleaseShaderCompiler.xml
 func ReleaseShaderCompiler()  {
 	C.goglReleaseShaderCompiler()
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glShaderBinary.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glShaderBinary.xml
 func ShaderBinary(count Sizei, shaders *Uint, binaryformat Enum, binary Pointer, length Sizei)  {
 	C.goglShaderBinary((C.GLsizei)(count), (*C.GLuint)(shaders), (C.GLenum)(binaryformat), (unsafe.Pointer)(binary), (C.GLsizei)(length))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glGetShaderPrecisionFormat.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glGetShaderPrecisionFormat.xml
 func GetShaderPrecisionFormat(shadertype Enum, precisiontype Enum, range_ *Int, precision *Int)  {
 	C.goglGetShaderPrecisionFormat((C.GLenum)(shadertype), (C.GLenum)(precisiontype), (*C.GLint)(range_), (*C.GLint)(precision))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glDepthRangef.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glDepthRangef.xml
 func DepthRangef(n Float, f Float)  {
 	C.goglDepthRangef((C.GLfloat)(n), (C.GLfloat)(f))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glClearDepthf.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glClearDepthf.xml
 func ClearDepthf(d Float)  {
 	C.goglClearDepthf((C.GLfloat)(d))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glGetProgramBinary.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glGetProgramBinary.xml
 func GetProgramBinary(program Uint, bufSize Sizei, length *Sizei, binaryFormat *Enum, binary Pointer)  {
 	C.goglGetProgramBinary((C.GLuint)(program), (C.GLsizei)(bufSize), (*C.GLsizei)(length), (*C.GLenum)(binaryFormat), (unsafe.Pointer)(binary))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glProgramBinary.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glProgramBinary.xml
 func ProgramBinary(program Uint, binaryFormat Enum, binary Pointer, length Sizei)  {
 	C.goglProgramBinary((C.GLuint)(program), (C.GLenum)(binaryFormat), (unsafe.Pointer)(binary), (C.GLsizei)(length))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glProgramParameteri.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glProgramParameteri.xml
 func ProgramParameteri(program Uint, pname Enum, value Int)  {
 	C.goglProgramParameteri((C.GLuint)(program), (C.GLenum)(pname), (C.GLint)(value))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glUseProgramStages.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glUseProgramStages.xml
 func UseProgramStages(pipeline Uint, stages Bitfield, program Uint)  {
 	C.goglUseProgramStages((C.GLuint)(pipeline), (C.GLbitfield)(stages), (C.GLuint)(program))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glActiveShaderProgram.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glActiveShaderProgram.xml
 func ActiveShaderProgram(pipeline Uint, program Uint)  {
 	C.goglActiveShaderProgram((C.GLuint)(pipeline), (C.GLuint)(program))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glCreateShaderProgramv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glCreateShaderProgramv.xml
 func CreateShaderProgramv(type_ Enum, count Sizei, strings **Char) Uint {
 	return (Uint)(C.goglCreateShaderProgramv((C.GLenum)(type_), (C.GLsizei)(count), (**C.GLchar)(unsafe.Pointer(strings))))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glBindProgramPipeline.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glBindProgramPipeline.xml
 func BindProgramPipeline(pipeline Uint)  {
 	C.goglBindProgramPipeline((C.GLuint)(pipeline))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glDeleteProgramPipelines.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glDeleteProgramPipelines.xml
 func DeleteProgramPipelines(n Sizei, pipelines *Uint)  {
 	C.goglDeleteProgramPipelines((C.GLsizei)(n), (*C.GLuint)(pipelines))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glGenProgramPipelines.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glGenProgramPipelines.xml
 func GenProgramPipelines(n Sizei, pipelines *Uint)  {
 	C.goglGenProgramPipelines((C.GLsizei)(n), (*C.GLuint)(pipelines))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glIsProgramPipeline.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glIsProgramPipeline.xml
 func IsProgramPipeline(pipeline Uint) Boolean {
 	return (Boolean)(C.goglIsProgramPipeline((C.GLuint)(pipeline)))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glGetProgramPipelineiv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glGetProgramPipelineiv.xml
 func GetProgramPipelineiv(pipeline Uint, pname Enum, params *Int)  {
 	C.goglGetProgramPipelineiv((C.GLuint)(pipeline), (C.GLenum)(pname), (*C.GLint)(params))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniform1i.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniform1i.xml
 func ProgramUniform1i(program Uint, location Int, v0 Int)  {
 	C.goglProgramUniform1i((C.GLuint)(program), (C.GLint)(location), (C.GLint)(v0))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniform1iv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniform1iv.xml
 func ProgramUniform1iv(program Uint, location Int, count Sizei, value *Int)  {
 	C.goglProgramUniform1iv((C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLint)(value))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniform1f.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniform1f.xml
 func ProgramUniform1f(program Uint, location Int, v0 Float)  {
 	C.goglProgramUniform1f((C.GLuint)(program), (C.GLint)(location), (C.GLfloat)(v0))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniform1fv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniform1fv.xml
 func ProgramUniform1fv(program Uint, location Int, count Sizei, value *Float)  {
 	C.goglProgramUniform1fv((C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLfloat)(value))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniform1d.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniform1d.xml
 func ProgramUniform1d(program Uint, location Int, v0 Double)  {
 	C.goglProgramUniform1d((C.GLuint)(program), (C.GLint)(location), (C.GLdouble)(v0))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniform1dv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniform1dv.xml
 func ProgramUniform1dv(program Uint, location Int, count Sizei, value *Double)  {
 	C.goglProgramUniform1dv((C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLdouble)(value))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniform1ui.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniform1ui.xml
 func ProgramUniform1ui(program Uint, location Int, v0 Uint)  {
 	C.goglProgramUniform1ui((C.GLuint)(program), (C.GLint)(location), (C.GLuint)(v0))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniform1uiv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniform1uiv.xml
 func ProgramUniform1uiv(program Uint, location Int, count Sizei, value *Uint)  {
 	C.goglProgramUniform1uiv((C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLuint)(value))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniform2i.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniform2i.xml
 func ProgramUniform2i(program Uint, location Int, v0 Int, v1 Int)  {
 	C.goglProgramUniform2i((C.GLuint)(program), (C.GLint)(location), (C.GLint)(v0), (C.GLint)(v1))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniform2iv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniform2iv.xml
 func ProgramUniform2iv(program Uint, location Int, count Sizei, value *Int)  {
 	C.goglProgramUniform2iv((C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLint)(value))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniform2f.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniform2f.xml
 func ProgramUniform2f(program Uint, location Int, v0 Float, v1 Float)  {
 	C.goglProgramUniform2f((C.GLuint)(program), (C.GLint)(location), (C.GLfloat)(v0), (C.GLfloat)(v1))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniform2fv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniform2fv.xml
 func ProgramUniform2fv(program Uint, location Int, count Sizei, value *Float)  {
 	C.goglProgramUniform2fv((C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLfloat)(value))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniform2d.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniform2d.xml
 func ProgramUniform2d(program Uint, location Int, v0 Double, v1 Double)  {
 	C.goglProgramUniform2d((C.GLuint)(program), (C.GLint)(location), (C.GLdouble)(v0), (C.GLdouble)(v1))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniform2dv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniform2dv.xml
 func ProgramUniform2dv(program Uint, location Int, count Sizei, value *Double)  {
 	C.goglProgramUniform2dv((C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLdouble)(value))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniform2ui.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniform2ui.xml
 func ProgramUniform2ui(program Uint, location Int, v0 Uint, v1 Uint)  {
 	C.goglProgramUniform2ui((C.GLuint)(program), (C.GLint)(location), (C.GLuint)(v0), (C.GLuint)(v1))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniform2uiv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniform2uiv.xml
 func ProgramUniform2uiv(program Uint, location Int, count Sizei, value *Uint)  {
 	C.goglProgramUniform2uiv((C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLuint)(value))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniform3i.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniform3i.xml
 func ProgramUniform3i(program Uint, location Int, v0 Int, v1 Int, v2 Int)  {
 	C.goglProgramUniform3i((C.GLuint)(program), (C.GLint)(location), (C.GLint)(v0), (C.GLint)(v1), (C.GLint)(v2))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniform3iv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniform3iv.xml
 func ProgramUniform3iv(program Uint, location Int, count Sizei, value *Int)  {
 	C.goglProgramUniform3iv((C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLint)(value))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniform3f.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniform3f.xml
 func ProgramUniform3f(program Uint, location Int, v0 Float, v1 Float, v2 Float)  {
 	C.goglProgramUniform3f((C.GLuint)(program), (C.GLint)(location), (C.GLfloat)(v0), (C.GLfloat)(v1), (C.GLfloat)(v2))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniform3fv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniform3fv.xml
 func ProgramUniform3fv(program Uint, location Int, count Sizei, value *Float)  {
 	C.goglProgramUniform3fv((C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLfloat)(value))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniform3d.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniform3d.xml
 func ProgramUniform3d(program Uint, location Int, v0 Double, v1 Double, v2 Double)  {
 	C.goglProgramUniform3d((C.GLuint)(program), (C.GLint)(location), (C.GLdouble)(v0), (C.GLdouble)(v1), (C.GLdouble)(v2))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniform3dv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniform3dv.xml
 func ProgramUniform3dv(program Uint, location Int, count Sizei, value *Double)  {
 	C.goglProgramUniform3dv((C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLdouble)(value))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniform3ui.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniform3ui.xml
 func ProgramUniform3ui(program Uint, location Int, v0 Uint, v1 Uint, v2 Uint)  {
 	C.goglProgramUniform3ui((C.GLuint)(program), (C.GLint)(location), (C.GLuint)(v0), (C.GLuint)(v1), (C.GLuint)(v2))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniform3uiv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniform3uiv.xml
 func ProgramUniform3uiv(program Uint, location Int, count Sizei, value *Uint)  {
 	C.goglProgramUniform3uiv((C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLuint)(value))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniform4i.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniform4i.xml
 func ProgramUniform4i(program Uint, location Int, v0 Int, v1 Int, v2 Int, v3 Int)  {
 	C.goglProgramUniform4i((C.GLuint)(program), (C.GLint)(location), (C.GLint)(v0), (C.GLint)(v1), (C.GLint)(v2), (C.GLint)(v3))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniform4iv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniform4iv.xml
 func ProgramUniform4iv(program Uint, location Int, count Sizei, value *Int)  {
 	C.goglProgramUniform4iv((C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLint)(value))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniform4f.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniform4f.xml
 func ProgramUniform4f(program Uint, location Int, v0 Float, v1 Float, v2 Float, v3 Float)  {
 	C.goglProgramUniform4f((C.GLuint)(program), (C.GLint)(location), (C.GLfloat)(v0), (C.GLfloat)(v1), (C.GLfloat)(v2), (C.GLfloat)(v3))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniform4fv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniform4fv.xml
 func ProgramUniform4fv(program Uint, location Int, count Sizei, value *Float)  {
 	C.goglProgramUniform4fv((C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLfloat)(value))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniform4d.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniform4d.xml
 func ProgramUniform4d(program Uint, location Int, v0 Double, v1 Double, v2 Double, v3 Double)  {
 	C.goglProgramUniform4d((C.GLuint)(program), (C.GLint)(location), (C.GLdouble)(v0), (C.GLdouble)(v1), (C.GLdouble)(v2), (C.GLdouble)(v3))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniform4dv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniform4dv.xml
 func ProgramUniform4dv(program Uint, location Int, count Sizei, value *Double)  {
 	C.goglProgramUniform4dv((C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLdouble)(value))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniform4ui.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniform4ui.xml
 func ProgramUniform4ui(program Uint, location Int, v0 Uint, v1 Uint, v2 Uint, v3 Uint)  {
 	C.goglProgramUniform4ui((C.GLuint)(program), (C.GLint)(location), (C.GLuint)(v0), (C.GLuint)(v1), (C.GLuint)(v2), (C.GLuint)(v3))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniform4uiv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniform4uiv.xml
 func ProgramUniform4uiv(program Uint, location Int, count Sizei, value *Uint)  {
 	C.goglProgramUniform4uiv((C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLuint)(value))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniformMatrix2fv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniformMatrix2fv.xml
 func ProgramUniformMatrix2fv(program Uint, location Int, count Sizei, transpose Boolean, value *Float)  {
 	C.goglProgramUniformMatrix2fv((C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(transpose), (*C.GLfloat)(value))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniformMatrix3fv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniformMatrix3fv.xml
 func ProgramUniformMatrix3fv(program Uint, location Int, count Sizei, transpose Boolean, value *Float)  {
 	C.goglProgramUniformMatrix3fv((C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(transpose), (*C.GLfloat)(value))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniformMatrix4fv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniformMatrix4fv.xml
 func ProgramUniformMatrix4fv(program Uint, location Int, count Sizei, transpose Boolean, value *Float)  {
 	C.goglProgramUniformMatrix4fv((C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(transpose), (*C.GLfloat)(value))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniformMatrix2dv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniformMatrix2dv.xml
 func ProgramUniformMatrix2dv(program Uint, location Int, count Sizei, transpose Boolean, value *Double)  {
 	C.goglProgramUniformMatrix2dv((C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(transpose), (*C.GLdouble)(value))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniformMatrix3dv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniformMatrix3dv.xml
 func ProgramUniformMatrix3dv(program Uint, location Int, count Sizei, transpose Boolean, value *Double)  {
 	C.goglProgramUniformMatrix3dv((C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(transpose), (*C.GLdouble)(value))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniformMatrix4dv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniformMatrix4dv.xml
 func ProgramUniformMatrix4dv(program Uint, location Int, count Sizei, transpose Boolean, value *Double)  {
 	C.goglProgramUniformMatrix4dv((C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(transpose), (*C.GLdouble)(value))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniformMatrix2x3fv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniformMatrix2x3fv.xml
 func ProgramUniformMatrix2x3fv(program Uint, location Int, count Sizei, transpose Boolean, value *Float)  {
 	C.goglProgramUniformMatrix2x3fv((C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(transpose), (*C.GLfloat)(value))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniformMatrix3x2fv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniformMatrix3x2fv.xml
 func ProgramUniformMatrix3x2fv(program Uint, location Int, count Sizei, transpose Boolean, value *Float)  {
 	C.goglProgramUniformMatrix3x2fv((C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(transpose), (*C.GLfloat)(value))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniformMatrix2x4fv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniformMatrix2x4fv.xml
 func ProgramUniformMatrix2x4fv(program Uint, location Int, count Sizei, transpose Boolean, value *Float)  {
 	C.goglProgramUniformMatrix2x4fv((C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(transpose), (*C.GLfloat)(value))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniformMatrix4x2fv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniformMatrix4x2fv.xml
 func ProgramUniformMatrix4x2fv(program Uint, location Int, count Sizei, transpose Boolean, value *Float)  {
 	C.goglProgramUniformMatrix4x2fv((C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(transpose), (*C.GLfloat)(value))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniformMatrix3x4fv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniformMatrix3x4fv.xml
 func ProgramUniformMatrix3x4fv(program Uint, location Int, count Sizei, transpose Boolean, value *Float)  {
 	C.goglProgramUniformMatrix3x4fv((C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(transpose), (*C.GLfloat)(value))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniformMatrix4x3fv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniformMatrix4x3fv.xml
 func ProgramUniformMatrix4x3fv(program Uint, location Int, count Sizei, transpose Boolean, value *Float)  {
 	C.goglProgramUniformMatrix4x3fv((C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(transpose), (*C.GLfloat)(value))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniformMatrix2x3dv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniformMatrix2x3dv.xml
 func ProgramUniformMatrix2x3dv(program Uint, location Int, count Sizei, transpose Boolean, value *Double)  {
 	C.goglProgramUniformMatrix2x3dv((C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(transpose), (*C.GLdouble)(value))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniformMatrix3x2dv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniformMatrix3x2dv.xml
 func ProgramUniformMatrix3x2dv(program Uint, location Int, count Sizei, transpose Boolean, value *Double)  {
 	C.goglProgramUniformMatrix3x2dv((C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(transpose), (*C.GLdouble)(value))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniformMatrix2x4dv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniformMatrix2x4dv.xml
 func ProgramUniformMatrix2x4dv(program Uint, location Int, count Sizei, transpose Boolean, value *Double)  {
 	C.goglProgramUniformMatrix2x4dv((C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(transpose), (*C.GLdouble)(value))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniformMatrix4x2dv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniformMatrix4x2dv.xml
 func ProgramUniformMatrix4x2dv(program Uint, location Int, count Sizei, transpose Boolean, value *Double)  {
 	C.goglProgramUniformMatrix4x2dv((C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(transpose), (*C.GLdouble)(value))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniformMatrix3x4dv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniformMatrix3x4dv.xml
 func ProgramUniformMatrix3x4dv(program Uint, location Int, count Sizei, transpose Boolean, value *Double)  {
 	C.goglProgramUniformMatrix3x4dv((C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(transpose), (*C.GLdouble)(value))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniformMatrix4x3dv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniformMatrix4x3dv.xml
 func ProgramUniformMatrix4x3dv(program Uint, location Int, count Sizei, transpose Boolean, value *Double)  {
 	C.goglProgramUniformMatrix4x3dv((C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (C.GLboolean)(transpose), (*C.GLdouble)(value))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glValidateProgramPipeline.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glValidateProgramPipeline.xml
 func ValidateProgramPipeline(pipeline Uint)  {
 	C.goglValidateProgramPipeline((C.GLuint)(pipeline))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glGetProgramPipelineInfoLog.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glGetProgramPipelineInfoLog.xml
 func GetProgramPipelineInfoLog(pipeline Uint, bufSize Sizei, length *Sizei, infoLog *Char)  {
 	C.goglGetProgramPipelineInfoLog((C.GLuint)(pipeline), (C.GLsizei)(bufSize), (*C.GLsizei)(length), (*C.GLchar)(infoLog))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttribL1d.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttribL1d.xml
 func VertexAttribL1d(index Uint, x Double)  {
 	C.goglVertexAttribL1d((C.GLuint)(index), (C.GLdouble)(x))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttribL2d.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttribL2d.xml
 func VertexAttribL2d(index Uint, x Double, y Double)  {
 	C.goglVertexAttribL2d((C.GLuint)(index), (C.GLdouble)(x), (C.GLdouble)(y))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttribL3d.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttribL3d.xml
 func VertexAttribL3d(index Uint, x Double, y Double, z Double)  {
 	C.goglVertexAttribL3d((C.GLuint)(index), (C.GLdouble)(x), (C.GLdouble)(y), (C.GLdouble)(z))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttribL4d.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttribL4d.xml
 func VertexAttribL4d(index Uint, x Double, y Double, z Double, w Double)  {
 	C.goglVertexAttribL4d((C.GLuint)(index), (C.GLdouble)(x), (C.GLdouble)(y), (C.GLdouble)(z), (C.GLdouble)(w))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttribL1dv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttribL1dv.xml
 func VertexAttribL1dv(index Uint, v *Double)  {
 	C.goglVertexAttribL1dv((C.GLuint)(index), (*C.GLdouble)(v))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttribL2dv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttribL2dv.xml
 func VertexAttribL2dv(index Uint, v *Double)  {
 	C.goglVertexAttribL2dv((C.GLuint)(index), (*C.GLdouble)(v))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttribL3dv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttribL3dv.xml
 func VertexAttribL3dv(index Uint, v *Double)  {
 	C.goglVertexAttribL3dv((C.GLuint)(index), (*C.GLdouble)(v))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttribL4dv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttribL4dv.xml
 func VertexAttribL4dv(index Uint, v *Double)  {
 	C.goglVertexAttribL4dv((C.GLuint)(index), (*C.GLdouble)(v))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttribLPointer.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttribLPointer.xml
 func VertexAttribLPointer(index Uint, size Int, type_ Enum, stride Sizei, pointer Pointer)  {
 	C.goglVertexAttribLPointer((C.GLuint)(index), (C.GLint)(size), (C.GLenum)(type_), (C.GLsizei)(stride), (unsafe.Pointer)(pointer))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glGetVertexAttribLdv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glGetVertexAttribLdv.xml
 func GetVertexAttribLdv(index Uint, pname Enum, params *Double)  {
 	C.goglGetVertexAttribLdv((C.GLuint)(index), (C.GLenum)(pname), (*C.GLdouble)(params))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glViewportArrayv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glViewportArrayv.xml
 func ViewportArrayv(first Uint, count Sizei, v *Float)  {
 	C.goglViewportArrayv((C.GLuint)(first), (C.GLsizei)(count), (*C.GLfloat)(v))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glViewportIndexedf.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glViewportIndexedf.xml
 func ViewportIndexedf(index Uint, x Float, y Float, w Float, h Float)  {
 	C.goglViewportIndexedf((C.GLuint)(index), (C.GLfloat)(x), (C.GLfloat)(y), (C.GLfloat)(w), (C.GLfloat)(h))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glViewportIndexedfv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glViewportIndexedfv.xml
 func ViewportIndexedfv(index Uint, v *Float)  {
 	C.goglViewportIndexedfv((C.GLuint)(index), (*C.GLfloat)(v))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glScissorArrayv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glScissorArrayv.xml
 func ScissorArrayv(first Uint, count Sizei, v *Int)  {
 	C.goglScissorArrayv((C.GLuint)(first), (C.GLsizei)(count), (*C.GLint)(v))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glScissorIndexed.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glScissorIndexed.xml
 func ScissorIndexed(index Uint, left Int, bottom Int, width Sizei, height Sizei)  {
 	C.goglScissorIndexed((C.GLuint)(index), (C.GLint)(left), (C.GLint)(bottom), (C.GLsizei)(width), (C.GLsizei)(height))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glScissorIndexedv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glScissorIndexedv.xml
 func ScissorIndexedv(index Uint, v *Int)  {
 	C.goglScissorIndexedv((C.GLuint)(index), (*C.GLint)(v))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glDepthRangeArrayv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glDepthRangeArrayv.xml
 func DepthRangeArrayv(first Uint, count Sizei, v *Double)  {
 	C.goglDepthRangeArrayv((C.GLuint)(first), (C.GLsizei)(count), (*C.GLdouble)(v))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glDepthRangeIndexed.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glDepthRangeIndexed.xml
 func DepthRangeIndexed(index Uint, n Double, f Double)  {
 	C.goglDepthRangeIndexed((C.GLuint)(index), (C.GLdouble)(n), (C.GLdouble)(f))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glGetFloati_v.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glGetFloati_v.xml
 func GetFloati_v(target Enum, index Uint, data *Float)  {
 	C.goglGetFloati_v((C.GLenum)(target), (C.GLuint)(index), (*C.GLfloat)(data))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glGetDoublei_v.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glGetDoublei_v.xml
 func GetDoublei_v(target Enum, index Uint, data *Double)  {
 	C.goglGetDoublei_v((C.GLenum)(target), (C.GLuint)(index), (*C.GLdouble)(data))
 }
 // VERSION_4_2
 
-// http://www.opengl.org/sdk/docs/man4/xhtml/glDrawArraysInstancedBaseInstance.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glDrawArraysInstancedBaseInstance.xml
 func DrawArraysInstancedBaseInstance(mode Enum, first Int, count Sizei, instancecount Sizei, baseinstance Uint)  {
 	C.goglDrawArraysInstancedBaseInstance((C.GLenum)(mode), (C.GLint)(first), (C.GLsizei)(count), (C.GLsizei)(instancecount), (C.GLuint)(baseinstance))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glDrawElementsInstancedBaseInstance.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glDrawElementsInstancedBaseInstance.xml
 func DrawElementsInstancedBaseInstance(mode Enum, count Sizei, type_ Enum, indices Pointer, instancecount Sizei, baseinstance Uint)  {
 	C.goglDrawElementsInstancedBaseInstance((C.GLenum)(mode), (C.GLsizei)(count), (C.GLenum)(type_), (unsafe.Pointer)(indices), (C.GLsizei)(instancecount), (C.GLuint)(baseinstance))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glDrawElementsInstancedBaseVertexBaseInstance.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glDrawElementsInstancedBaseVertexBaseInstance.xml
 func DrawElementsInstancedBaseVertexBaseInstance(mode Enum, count Sizei, type_ Enum, indices Pointer, instancecount Sizei, basevertex Int, baseinstance Uint)  {
 	C.goglDrawElementsInstancedBaseVertexBaseInstance((C.GLenum)(mode), (C.GLsizei)(count), (C.GLenum)(type_), (unsafe.Pointer)(indices), (C.GLsizei)(instancecount), (C.GLint)(basevertex), (C.GLuint)(baseinstance))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glDrawTransformFeedbackInstanced.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glDrawTransformFeedbackInstanced.xml
 func DrawTransformFeedbackInstanced(mode Enum, id Uint, instancecount Sizei)  {
 	C.goglDrawTransformFeedbackInstanced((C.GLenum)(mode), (C.GLuint)(id), (C.GLsizei)(instancecount))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glDrawTransformFeedbackStreamInstanced.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glDrawTransformFeedbackStreamInstanced.xml
 func DrawTransformFeedbackStreamInstanced(mode Enum, id Uint, stream Uint, instancecount Sizei)  {
 	C.goglDrawTransformFeedbackStreamInstanced((C.GLenum)(mode), (C.GLuint)(id), (C.GLuint)(stream), (C.GLsizei)(instancecount))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glGetInternalformativ.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glGetInternalformativ.xml
 func GetInternalformativ(target Enum, internalformat Enum, pname Enum, bufSize Sizei, params *Int)  {
 	C.goglGetInternalformativ((C.GLenum)(target), (C.GLenum)(internalformat), (C.GLenum)(pname), (C.GLsizei)(bufSize), (*C.GLint)(params))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glGetActiveAtomicCounterBufferiv.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glGetActiveAtomicCounterBufferiv.xml
 func GetActiveAtomicCounterBufferiv(program Uint, bufferIndex Uint, pname Enum, params *Int)  {
 	C.goglGetActiveAtomicCounterBufferiv((C.GLuint)(program), (C.GLuint)(bufferIndex), (C.GLenum)(pname), (*C.GLint)(params))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glBindImageTexture.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glBindImageTexture.xml
 func BindImageTexture(unit Uint, texture Uint, level Int, layered Boolean, layer Int, access Enum, format Enum)  {
 	C.goglBindImageTexture((C.GLuint)(unit), (C.GLuint)(texture), (C.GLint)(level), (C.GLboolean)(layered), (C.GLint)(layer), (C.GLenum)(access), (C.GLenum)(format))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glMemoryBarrier.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glMemoryBarrier.xml
 func MemoryBarrier(barriers Bitfield)  {
 	C.goglMemoryBarrier((C.GLbitfield)(barriers))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glTexStorage1D.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glTexStorage1D.xml
 func TexStorage1D(target Enum, levels Sizei, internalformat Enum, width Sizei)  {
 	C.goglTexStorage1D((C.GLenum)(target), (C.GLsizei)(levels), (C.GLenum)(internalformat), (C.GLsizei)(width))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glTexStorage2D.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glTexStorage2D.xml
 func TexStorage2D(target Enum, levels Sizei, internalformat Enum, width Sizei, height Sizei)  {
 	C.goglTexStorage2D((C.GLenum)(target), (C.GLsizei)(levels), (C.GLenum)(internalformat), (C.GLsizei)(width), (C.GLsizei)(height))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glTexStorage3D.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glTexStorage3D.xml
 func TexStorage3D(target Enum, levels Sizei, internalformat Enum, width Sizei, height Sizei, depth Sizei)  {
 	C.goglTexStorage3D((C.GLenum)(target), (C.GLsizei)(levels), (C.GLenum)(internalformat), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLsizei)(depth))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glTextureStorage1DEXT.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glTextureStorage1DEXT.xml
 func TextureStorage1DEXT(texture Uint, target Enum, levels Sizei, internalformat Enum, width Sizei)  {
 	C.goglTextureStorage1DEXT((C.GLuint)(texture), (C.GLenum)(target), (C.GLsizei)(levels), (C.GLenum)(internalformat), (C.GLsizei)(width))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glTextureStorage2DEXT.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glTextureStorage2DEXT.xml
 func TextureStorage2DEXT(texture Uint, target Enum, levels Sizei, internalformat Enum, width Sizei, height Sizei)  {
 	C.goglTextureStorage2DEXT((C.GLuint)(texture), (C.GLenum)(target), (C.GLsizei)(levels), (C.GLenum)(internalformat), (C.GLsizei)(width), (C.GLsizei)(height))
 }
-// http://www.opengl.org/sdk/docs/man4/xhtml/glTextureStorage3DEXT.xml
+// https://www.opengl.org/sdk/docs/man4/xhtml/glTextureStorage3DEXT.xml
 func TextureStorage3DEXT(texture Uint, target Enum, levels Sizei, internalformat Enum, width Sizei, height Sizei, depth Sizei)  {
 	C.goglTextureStorage3DEXT((C.GLuint)(texture), (C.GLenum)(target), (C.GLsizei)(levels), (C.GLenum)(internalformat), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLsizei)(depth))
 }
