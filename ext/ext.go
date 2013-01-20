@@ -2,12 +2,6 @@
 // 
 // Categories in this package: 
 // 
-// EXT_422_pixels: http://www.opengl.org/registry/specs/EXT/422_pixels.txt
-// 
-// EXT_abgr: http://www.opengl.org/registry/specs/EXT/abgr.txt
-// 
-// EXT_bgra: http://www.opengl.org/registry/specs/EXT/bgra.txt
-// 
 // EXT_bindable_uniform: http://www.opengl.org/registry/specs/EXT/bindable_uniform.txt
 // 
 // EXT_blend_color: http://www.opengl.org/registry/specs/EXT/blend_color.txt
@@ -16,15 +10,7 @@
 // 
 // EXT_blend_func_separate: http://www.opengl.org/registry/specs/EXT/blend_func_separate.txt
 // 
-// EXT_blend_logic_op: http://www.opengl.org/registry/specs/EXT/blend_logic_op.txt
-// 
 // EXT_blend_minmax: http://www.opengl.org/registry/specs/EXT/blend_minmax.txt
-// 
-// EXT_blend_subtract: http://www.opengl.org/registry/specs/EXT/blend_subtract.txt
-// 
-// EXT_clip_volume_hint: http://www.opengl.org/registry/specs/EXT/clip_volume_hint.txt
-// 
-// EXT_cmyka: http://www.opengl.org/registry/specs/EXT/cmyka.txt
 // 
 // EXT_color_subtable: http://www.opengl.org/registry/specs/EXT/color_subtable.txt
 // 
@@ -54,11 +40,7 @@
 // 
 // EXT_framebuffer_multisample: http://www.opengl.org/registry/specs/EXT/framebuffer_multisample.txt
 // 
-// EXT_framebuffer_multisample_blit_scaled: http://www.opengl.org/registry/specs/EXT/framebuffer_multisample_blit_scaled.txt
-// 
 // EXT_framebuffer_object: http://www.opengl.org/registry/specs/EXT/framebuffer_object.txt
-// 
-// EXT_framebuffer_sRGB: http://www.opengl.org/registry/specs/EXT/framebuffer_sRGB.txt
 // 
 // EXT_geometry_shader4: http://www.opengl.org/registry/specs/EXT/geometry_shader4.txt
 // 
@@ -68,35 +50,19 @@
 // 
 // EXT_histogram: http://www.opengl.org/registry/specs/EXT/histogram.txt
 // 
-// EXT_index_array_formats: http://www.opengl.org/registry/specs/EXT/index_array_formats.txt
-// 
 // EXT_index_func: http://www.opengl.org/registry/specs/EXT/index_func.txt
 // 
 // EXT_index_material: http://www.opengl.org/registry/specs/EXT/index_material.txt
 // 
-// EXT_index_texture: http://www.opengl.org/registry/specs/EXT/index_texture.txt
-// 
 // EXT_light_texture: http://www.opengl.org/registry/specs/EXT/light_texture.txt
-// 
-// EXT_misc_attribute: http://www.opengl.org/registry/specs/EXT/misc_attribute.txt
 // 
 // EXT_multi_draw_arrays: http://www.opengl.org/registry/specs/EXT/multi_draw_arrays.txt
 // 
 // EXT_multisample: http://www.opengl.org/registry/specs/EXT/multisample.txt
 // 
-// EXT_packed_depth_stencil: http://www.opengl.org/registry/specs/EXT/packed_depth_stencil.txt
-// 
-// EXT_packed_float: http://www.opengl.org/registry/specs/EXT/packed_float.txt
-// 
-// EXT_packed_pixels: http://www.opengl.org/registry/specs/EXT/packed_pixels.txt
-// 
 // EXT_paletted_texture: http://www.opengl.org/registry/specs/EXT/paletted_texture.txt
 // 
-// EXT_pixel_buffer_object: http://www.opengl.org/registry/specs/EXT/pixel_buffer_object.txt
-// 
 // EXT_pixel_transform: http://www.opengl.org/registry/specs/EXT/pixel_transform.txt
-// 
-// EXT_pixel_transform_color_table: http://www.opengl.org/registry/specs/EXT/pixel_transform_color_table.txt
 // 
 // EXT_point_parameters: http://www.opengl.org/registry/specs/EXT/point_parameters.txt
 // 
@@ -104,75 +70,33 @@
 // 
 // EXT_provoking_vertex: http://www.opengl.org/registry/specs/EXT/provoking_vertex.txt
 // 
-// EXT_rescale_normal: http://www.opengl.org/registry/specs/EXT/rescale_normal.txt
-// 
 // EXT_secondary_color: http://www.opengl.org/registry/specs/EXT/secondary_color.txt
 // 
 // EXT_separate_shader_objects: http://www.opengl.org/registry/specs/EXT/separate_shader_objects.txt
 // 
-// EXT_separate_specular_color: http://www.opengl.org/registry/specs/EXT/separate_specular_color.txt
-// 
 // EXT_shader_image_load_store: http://www.opengl.org/registry/specs/EXT/shader_image_load_store.txt
-// 
-// EXT_shadow_funcs: http://www.opengl.org/registry/specs/EXT/shadow_funcs.txt
-// 
-// EXT_shared_texture_palette: http://www.opengl.org/registry/specs/EXT/shared_texture_palette.txt
 // 
 // EXT_stencil_clear_tag: http://www.opengl.org/registry/specs/EXT/stencil_clear_tag.txt
 // 
 // EXT_stencil_two_side: http://www.opengl.org/registry/specs/EXT/stencil_two_side.txt
 // 
-// EXT_stencil_wrap: http://www.opengl.org/registry/specs/EXT/stencil_wrap.txt
-// 
 // EXT_subtexture: http://www.opengl.org/registry/specs/EXT/subtexture.txt
-// 
-// EXT_texture: http://www.opengl.org/registry/specs/EXT/texture.txt
 // 
 // EXT_texture3D: http://www.opengl.org/registry/specs/EXT/texture3D.txt
 // 
-// EXT_texture_array: http://www.opengl.org/registry/specs/EXT/texture_array.txt
-// 
 // EXT_texture_buffer_object: http://www.opengl.org/registry/specs/EXT/texture_buffer_object.txt
 // 
-// EXT_texture_compression_latc: http://www.opengl.org/registry/specs/EXT/texture_compression_latc.txt
-// 
-// EXT_texture_compression_rgtc: http://www.opengl.org/registry/specs/EXT/texture_compression_rgtc.txt
-// 
-// EXT_texture_env_add: http://www.opengl.org/registry/specs/EXT/texture_env_add.txt
-// 
-// EXT_texture_env_combine: http://www.opengl.org/registry/specs/EXT/texture_env_combine.txt
-// 
-// EXT_texture_env_dot3: http://www.opengl.org/registry/specs/EXT/texture_env_dot3.txt
-// 
-// EXT_texture_filter_anisotropic: http://www.opengl.org/registry/specs/EXT/texture_filter_anisotropic.txt
-// 
 // EXT_texture_integer: http://www.opengl.org/registry/specs/EXT/texture_integer.txt
-// 
-// EXT_texture_lod_bias: http://www.opengl.org/registry/specs/EXT/texture_lod_bias.txt
-// 
-// EXT_texture_mirror_clamp: http://www.opengl.org/registry/specs/EXT/texture_mirror_clamp.txt
 // 
 // EXT_texture_object: http://www.opengl.org/registry/specs/EXT/texture_object.txt
 // 
 // EXT_texture_perturb_normal: http://www.opengl.org/registry/specs/EXT/texture_perturb_normal.txt
-// 
-// EXT_texture_sRGB: http://www.opengl.org/registry/specs/EXT/texture_sRGB.txt
-// 
-// EXT_texture_sRGB_decode: http://www.opengl.org/registry/specs/EXT/texture_sRGB_decode.txt
-// 
-// EXT_texture_shared_exponent: http://www.opengl.org/registry/specs/EXT/texture_shared_exponent.txt
-// 
-// EXT_texture_snorm: http://www.opengl.org/registry/specs/EXT/texture_snorm.txt
-// 
-// EXT_texture_swizzle: http://www.opengl.org/registry/specs/EXT/texture_swizzle.txt
 // 
 // EXT_timer_query: http://www.opengl.org/registry/specs/EXT/timer_query.txt
 // 
 // EXT_transform_feedback: http://www.opengl.org/registry/specs/EXT/transform_feedback.txt
 // 
 // EXT_vertex_array: http://www.opengl.org/registry/specs/EXT/vertex_array.txt
-// 
-// EXT_vertex_array_bgra: http://www.opengl.org/registry/specs/EXT/vertex_array_bgra.txt
 // 
 // EXT_vertex_attrib_64bit: http://www.opengl.org/registry/specs/EXT/vertex_attrib_64bit.txt
 // 
@@ -322,6 +246,10 @@ package ext
 // typedef void (APIENTRY *GLDEBUGPROCAMD)(GLuint id,GLenum category,GLenum severity,GLsizei length,const GLchar *message,GLvoid *userParam);
 // #endif
 // 
+// #ifndef GL_KHR_debug
+// typedef void (APIENTRY *GLDEBUGPROC)(GLenum source,GLenum type,GLuint id,GLenum severity,GLsizei length,const GLchar *message,GLvoid *userParam);
+// #endif
+// 
 // #ifndef GL_NV_vdpau_interop
 // typedef GLintptr GLvdpauSurfaceNV;
 // #endif
@@ -347,9 +275,6 @@ package ext
 // #endif
 // }
 // 
-// //  EXT_422_pixels
-// //  EXT_abgr
-// //  EXT_bgra
 // //  EXT_bindable_uniform
 // void (APIENTRYP ptrglUniformBufferEXT)(GLuint program, GLint location, GLuint buffer);
 // GLint (APIENTRYP ptrglGetUniformBufferSizeEXT)(GLuint program, GLint location);
@@ -360,12 +285,8 @@ package ext
 // void (APIENTRYP ptrglBlendEquationSeparateEXT)(GLenum modeRGB, GLenum modeAlpha);
 // //  EXT_blend_func_separate
 // void (APIENTRYP ptrglBlendFuncSeparateEXT)(GLenum sfactorRGB, GLenum dfactorRGB, GLenum sfactorAlpha, GLenum dfactorAlpha);
-// //  EXT_blend_logic_op
 // //  EXT_blend_minmax
 // void (APIENTRYP ptrglBlendEquationEXT)(GLenum mode);
-// //  EXT_blend_subtract
-// //  EXT_clip_volume_hint
-// //  EXT_cmyka
 // //  EXT_color_subtable
 // void (APIENTRYP ptrglColorSubTableEXT)(GLenum target, GLsizei start, GLsizei count, GLenum format, GLenum type, GLvoid* data);
 // void (APIENTRYP ptrglCopyColorSubTableEXT)(GLenum target, GLsizei start, GLint x, GLint y, GLsizei width);
@@ -646,7 +567,7 @@ package ext
 // void (APIENTRYP ptrglVertexArrayTexCoordOffsetEXT)(GLuint vaobj, GLuint buffer, GLint size, GLenum type, GLsizei stride, GLintptr offset);
 // void (APIENTRYP ptrglVertexArrayVertexOffsetEXT)(GLuint vaobj, GLuint buffer, GLint size, GLenum type, GLsizei stride, GLintptr offset);
 // void (APIENTRYP ptrglVertexArrayVertexAttribIOffsetEXT)(GLuint vaobj, GLuint buffer, GLuint index, GLint size, GLenum type, GLsizei stride, GLintptr offset);
-// void (APIENTRYP ptrglglVertexArrayVertexAttribOffsetEXT)(GLuint vaobj, GLuint buffer, GLuint index, GLint size, GLenum type, GLboolean normalized, GLsizei stride, GLintptr offset);
+// void (APIENTRYP ptrglVertexArrayVertexAttribOffsetEXT)(GLuint vaobj, GLuint buffer, GLuint index, GLint size, GLenum type, GLboolean normalized, GLsizei stride, GLintptr offset);
 // void (APIENTRYP ptrglGetVertexArrayIntegervEXT)(GLuint vaobj, GLenum pname, GLint* param);
 // void (APIENTRYP ptrglGetVertexArrayPointervEXT)(GLuint vaobj, GLenum pname, GLvoid** param);
 // void (APIENTRYP ptrglGetVertexArrayIntegeri_vEXT)(GLuint vaobj, GLuint index, GLenum pname, GLint* param);
@@ -673,7 +594,6 @@ package ext
 // void (APIENTRYP ptrglBlitFramebufferEXT)(GLint srcX0, GLint srcY0, GLint srcX1, GLint srcY1, GLint dstX0, GLint dstY0, GLint dstX1, GLint dstY1, GLbitfield mask, GLenum filter);
 // //  EXT_framebuffer_multisample
 // void (APIENTRYP ptrglRenderbufferStorageMultisampleEXT)(GLenum target, GLsizei samples, GLenum internalformat, GLsizei width, GLsizei height);
-// //  EXT_framebuffer_multisample_blit_scaled
 // //  EXT_framebuffer_object
 // GLboolean (APIENTRYP ptrglIsRenderbufferEXT)(GLuint renderbuffer);
 // void (APIENTRYP ptrglBindRenderbufferEXT)(GLenum target, GLuint renderbuffer);
@@ -692,7 +612,6 @@ package ext
 // void (APIENTRYP ptrglFramebufferRenderbufferEXT)(GLenum target, GLenum attachment, GLenum renderbuffertarget, GLuint renderbuffer);
 // void (APIENTRYP ptrglGetFramebufferAttachmentParameterivEXT)(GLenum target, GLenum attachment, GLenum pname, GLint* params);
 // void (APIENTRYP ptrglGenerateMipmapEXT)(GLenum target);
-// //  EXT_framebuffer_sRGB
 // //  EXT_geometry_shader4
 // void (APIENTRYP ptrglProgramParameteriEXT)(GLuint program, GLenum pname, GLint value);
 // //  EXT_gpu_program_parameters
@@ -721,32 +640,25 @@ package ext
 // void (APIENTRYP ptrglMinmaxEXT)(GLenum target, GLenum internalformat, GLboolean sink);
 // void (APIENTRYP ptrglResetHistogramEXT)(GLenum target);
 // void (APIENTRYP ptrglResetMinmaxEXT)(GLenum target);
-// //  EXT_index_array_formats
 // //  EXT_index_func
 // void (APIENTRYP ptrglIndexFuncEXT)(GLenum func, GLclampf ref);
 // //  EXT_index_material
 // void (APIENTRYP ptrglIndexMaterialEXT)(GLenum face, GLenum mode);
-// //  EXT_index_texture
 // //  EXT_light_texture
 // void (APIENTRYP ptrglApplyTextureEXT)(GLenum mode);
 // void (APIENTRYP ptrglTextureLightEXT)(GLenum pname);
 // void (APIENTRYP ptrglTextureMaterialEXT)(GLenum face, GLenum mode);
-// //  EXT_misc_attribute
 // //  EXT_multi_draw_arrays
 // void (APIENTRYP ptrglMultiDrawArraysEXT)(GLenum mode, GLint* first, GLsizei* count, GLsizei primcount);
 // void (APIENTRYP ptrglMultiDrawElementsEXT)(GLenum mode, GLsizei* count, GLenum type, GLvoid** indices, GLsizei primcount);
 // //  EXT_multisample
 // void (APIENTRYP ptrglSampleMaskEXT)(GLclampf value, GLboolean invert);
 // void (APIENTRYP ptrglSamplePatternEXT)(GLenum pattern);
-// //  EXT_packed_depth_stencil
-// //  EXT_packed_float
-// //  EXT_packed_pixels
 // //  EXT_paletted_texture
 // void (APIENTRYP ptrglColorTableEXT)(GLenum target, GLenum internalFormat, GLsizei width, GLenum format, GLenum type, GLvoid* table);
 // void (APIENTRYP ptrglGetColorTableEXT)(GLenum target, GLenum format, GLenum type, GLvoid* data);
 // void (APIENTRYP ptrglGetColorTableParameterivEXT)(GLenum target, GLenum pname, GLint* params);
 // void (APIENTRYP ptrglGetColorTableParameterfvEXT)(GLenum target, GLenum pname, GLfloat* params);
-// //  EXT_pixel_buffer_object
 // //  EXT_pixel_transform
 // void (APIENTRYP ptrglPixelTransformParameteriEXT)(GLenum target, GLenum pname, GLint param);
 // void (APIENTRYP ptrglPixelTransformParameterfEXT)(GLenum target, GLenum pname, GLfloat param);
@@ -754,7 +666,6 @@ package ext
 // void (APIENTRYP ptrglPixelTransformParameterfvEXT)(GLenum target, GLenum pname, GLfloat* params);
 // void (APIENTRYP ptrglGetPixelTransformParameterivEXT)(GLenum target, GLenum pname, GLint* params);
 // void (APIENTRYP ptrglGetPixelTransformParameterfvEXT)(GLenum target, GLenum pname, GLfloat* params);
-// //  EXT_pixel_transform_color_table
 // //  EXT_point_parameters
 // void (APIENTRYP ptrglPointParameterfEXT)(GLenum pname, GLfloat param);
 // void (APIENTRYP ptrglPointParameterfvEXT)(GLenum pname, GLfloat* params);
@@ -762,7 +673,6 @@ package ext
 // void (APIENTRYP ptrglPolygonOffsetEXT)(GLfloat factor, GLfloat bias);
 // //  EXT_provoking_vertex
 // void (APIENTRYP ptrglProvokingVertexEXT)(GLenum mode);
-// //  EXT_rescale_normal
 // //  EXT_secondary_color
 // void (APIENTRYP ptrglSecondaryColor3bEXT)(GLbyte red, GLbyte green, GLbyte blue);
 // void (APIENTRYP ptrglSecondaryColor3bvEXT)(GLbyte* v);
@@ -785,33 +695,21 @@ package ext
 // void (APIENTRYP ptrglUseShaderProgramEXT)(GLenum type, GLuint program);
 // void (APIENTRYP ptrglActiveProgramEXT)(GLuint program);
 // GLuint (APIENTRYP ptrglCreateShaderProgramEXT)(GLenum type, GLchar* string);
-// //  EXT_separate_specular_color
 // //  EXT_shader_image_load_store
 // void (APIENTRYP ptrglBindImageTextureEXT)(GLuint index, GLuint texture, GLint level, GLboolean layered, GLint layer, GLenum access, GLint format);
 // void (APIENTRYP ptrglMemoryBarrierEXT)(GLbitfield barriers);
-// //  EXT_shadow_funcs
-// //  EXT_shared_texture_palette
 // //  EXT_stencil_clear_tag
 // void (APIENTRYP ptrglStencilClearTagEXT)(GLsizei stencilTagBits, GLuint stencilClearTag);
 // //  EXT_stencil_two_side
 // void (APIENTRYP ptrglActiveStencilFaceEXT)(GLenum face);
-// //  EXT_stencil_wrap
 // //  EXT_subtexture
 // void (APIENTRYP ptrglTexSubImage1DEXT)(GLenum target, GLint level, GLint xoffset, GLsizei width, GLenum format, GLenum type, GLvoid* pixels);
 // void (APIENTRYP ptrglTexSubImage2DEXT)(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLsizei width, GLsizei height, GLenum format, GLenum type, GLvoid* pixels);
-// //  EXT_texture
 // //  EXT_texture3D
 // void (APIENTRYP ptrglTexImage3DEXT)(GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLsizei depth, GLint border, GLenum format, GLenum type, GLvoid* pixels);
 // void (APIENTRYP ptrglTexSubImage3DEXT)(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLenum format, GLenum type, GLvoid* pixels);
-// //  EXT_texture_array
 // //  EXT_texture_buffer_object
 // void (APIENTRYP ptrglTexBufferEXT)(GLenum target, GLenum internalformat, GLuint buffer);
-// //  EXT_texture_compression_latc
-// //  EXT_texture_compression_rgtc
-// //  EXT_texture_env_add
-// //  EXT_texture_env_combine
-// //  EXT_texture_env_dot3
-// //  EXT_texture_filter_anisotropic
 // //  EXT_texture_integer
 // void (APIENTRYP ptrglTexParameterIivEXT)(GLenum target, GLenum pname, GLint* params);
 // void (APIENTRYP ptrglTexParameterIuivEXT)(GLenum target, GLenum pname, GLuint* params);
@@ -819,8 +717,6 @@ package ext
 // void (APIENTRYP ptrglGetTexParameterIuivEXT)(GLenum target, GLenum pname, GLuint* params);
 // void (APIENTRYP ptrglClearColorIiEXT)(GLint red, GLint green, GLint blue, GLint alpha);
 // void (APIENTRYP ptrglClearColorIuiEXT)(GLuint red, GLuint green, GLuint blue, GLuint alpha);
-// //  EXT_texture_lod_bias
-// //  EXT_texture_mirror_clamp
 // //  EXT_texture_object
 // GLboolean (APIENTRYP ptrglAreTexturesResidentEXT)(GLsizei n, GLuint* textures, GLboolean* residences);
 // void (APIENTRYP ptrglBindTextureEXT)(GLenum target, GLuint texture);
@@ -830,11 +726,6 @@ package ext
 // void (APIENTRYP ptrglPrioritizeTexturesEXT)(GLsizei n, GLuint* textures, GLclampf* priorities);
 // //  EXT_texture_perturb_normal
 // void (APIENTRYP ptrglTextureNormalEXT)(GLenum mode);
-// //  EXT_texture_sRGB
-// //  EXT_texture_sRGB_decode
-// //  EXT_texture_shared_exponent
-// //  EXT_texture_snorm
-// //  EXT_texture_swizzle
 // //  EXT_timer_query
 // void (APIENTRYP ptrglGetQueryObjecti64vEXT)(GLuint id, GLenum pname, GLint64EXT* params);
 // void (APIENTRYP ptrglGetQueryObjectui64vEXT)(GLuint id, GLenum pname, GLuint64EXT* params);
@@ -856,7 +747,6 @@ package ext
 // void (APIENTRYP ptrglNormalPointerEXT)(GLenum type, GLsizei stride, GLsizei count, GLvoid* pointer);
 // void (APIENTRYP ptrglTexCoordPointerEXT)(GLint size, GLenum type, GLsizei stride, GLsizei count, GLvoid* pointer);
 // void (APIENTRYP ptrglVertexPointerEXT)(GLint size, GLenum type, GLsizei stride, GLsizei count, GLvoid* pointer);
-// //  EXT_vertex_array_bgra
 // //  EXT_vertex_attrib_64bit
 // void (APIENTRYP ptrglVertexAttribL1dEXT)(GLuint index, GLdouble x);
 // void (APIENTRYP ptrglVertexAttribL2dEXT)(GLuint index, GLdouble x, GLdouble y);
@@ -919,9 +809,6 @@ package ext
 // //  EXT_x11_sync_object
 // GLsync (APIENTRYP ptrglImportSyncEXT)(GLenum external_sync_type, GLintptr external_sync, GLbitfield flags);
 // 
-// //  EXT_422_pixels
-// //  EXT_abgr
-// //  EXT_bgra
 // //  EXT_bindable_uniform
 // void goglUniformBufferEXT(GLuint program, GLint location, GLuint buffer) {
 // 	(*ptrglUniformBufferEXT)(program, location, buffer);
@@ -944,14 +831,10 @@ package ext
 // void goglBlendFuncSeparateEXT(GLenum sfactorRGB, GLenum dfactorRGB, GLenum sfactorAlpha, GLenum dfactorAlpha) {
 // 	(*ptrglBlendFuncSeparateEXT)(sfactorRGB, dfactorRGB, sfactorAlpha, dfactorAlpha);
 // }
-// //  EXT_blend_logic_op
 // //  EXT_blend_minmax
 // void goglBlendEquationEXT(GLenum mode) {
 // 	(*ptrglBlendEquationEXT)(mode);
 // }
-// //  EXT_blend_subtract
-// //  EXT_clip_volume_hint
-// //  EXT_cmyka
 // //  EXT_color_subtable
 // void goglColorSubTableEXT(GLenum target, GLsizei start, GLsizei count, GLenum format, GLenum type_, GLvoid* data) {
 // 	(*ptrglColorSubTableEXT)(target, start, count, format, type_, data);
@@ -1776,8 +1659,8 @@ package ext
 // void goglVertexArrayVertexAttribIOffsetEXT(GLuint vaobj, GLuint buffer, GLuint index, GLint size, GLenum type_, GLsizei stride, GLintptr offset) {
 // 	(*ptrglVertexArrayVertexAttribIOffsetEXT)(vaobj, buffer, index, size, type_, stride, offset);
 // }
-// void goglglVertexArrayVertexAttribOffsetEXT(GLuint vaobj, GLuint buffer, GLuint index, GLint size, GLenum type_, GLboolean normalized, GLsizei stride, GLintptr offset) {
-// 	(*ptrglglVertexArrayVertexAttribOffsetEXT)(vaobj, buffer, index, size, type_, normalized, stride, offset);
+// void goglVertexArrayVertexAttribOffsetEXT(GLuint vaobj, GLuint buffer, GLuint index, GLint size, GLenum type_, GLboolean normalized, GLsizei stride, GLintptr offset) {
+// 	(*ptrglVertexArrayVertexAttribOffsetEXT)(vaobj, buffer, index, size, type_, normalized, stride, offset);
 // }
 // void goglGetVertexArrayIntegervEXT(GLuint vaobj, GLenum pname, GLint* param) {
 // 	(*ptrglGetVertexArrayIntegervEXT)(vaobj, pname, param);
@@ -1845,7 +1728,6 @@ package ext
 // void goglRenderbufferStorageMultisampleEXT(GLenum target, GLsizei samples, GLenum internalformat, GLsizei width, GLsizei height) {
 // 	(*ptrglRenderbufferStorageMultisampleEXT)(target, samples, internalformat, width, height);
 // }
-// //  EXT_framebuffer_multisample_blit_scaled
 // //  EXT_framebuffer_object
 // GLboolean goglIsRenderbufferEXT(GLuint renderbuffer) {
 // 	return (*ptrglIsRenderbufferEXT)(renderbuffer);
@@ -1898,7 +1780,6 @@ package ext
 // void goglGenerateMipmapEXT(GLenum target) {
 // 	(*ptrglGenerateMipmapEXT)(target);
 // }
-// //  EXT_framebuffer_sRGB
 // //  EXT_geometry_shader4
 // void goglProgramParameteriEXT(GLuint program, GLenum pname, GLint value) {
 // 	(*ptrglProgramParameteriEXT)(program, pname, value);
@@ -1975,7 +1856,6 @@ package ext
 // void goglResetMinmaxEXT(GLenum target) {
 // 	(*ptrglResetMinmaxEXT)(target);
 // }
-// //  EXT_index_array_formats
 // //  EXT_index_func
 // void goglIndexFuncEXT(GLenum func_, GLclampf ref) {
 // 	(*ptrglIndexFuncEXT)(func_, ref);
@@ -1984,7 +1864,6 @@ package ext
 // void goglIndexMaterialEXT(GLenum face, GLenum mode) {
 // 	(*ptrglIndexMaterialEXT)(face, mode);
 // }
-// //  EXT_index_texture
 // //  EXT_light_texture
 // void goglApplyTextureEXT(GLenum mode) {
 // 	(*ptrglApplyTextureEXT)(mode);
@@ -1995,7 +1874,6 @@ package ext
 // void goglTextureMaterialEXT(GLenum face, GLenum mode) {
 // 	(*ptrglTextureMaterialEXT)(face, mode);
 // }
-// //  EXT_misc_attribute
 // //  EXT_multi_draw_arrays
 // void goglMultiDrawArraysEXT(GLenum mode, GLint* first, GLsizei* count, GLsizei primcount) {
 // 	(*ptrglMultiDrawArraysEXT)(mode, first, count, primcount);
@@ -2010,9 +1888,6 @@ package ext
 // void goglSamplePatternEXT(GLenum pattern) {
 // 	(*ptrglSamplePatternEXT)(pattern);
 // }
-// //  EXT_packed_depth_stencil
-// //  EXT_packed_float
-// //  EXT_packed_pixels
 // //  EXT_paletted_texture
 // void goglColorTableEXT(GLenum target, GLenum internalFormat, GLsizei width, GLenum format, GLenum type_, GLvoid* table) {
 // 	(*ptrglColorTableEXT)(target, internalFormat, width, format, type_, table);
@@ -2026,7 +1901,6 @@ package ext
 // void goglGetColorTableParameterfvEXT(GLenum target, GLenum pname, GLfloat* params) {
 // 	(*ptrglGetColorTableParameterfvEXT)(target, pname, params);
 // }
-// //  EXT_pixel_buffer_object
 // //  EXT_pixel_transform
 // void goglPixelTransformParameteriEXT(GLenum target, GLenum pname, GLint param) {
 // 	(*ptrglPixelTransformParameteriEXT)(target, pname, param);
@@ -2046,7 +1920,6 @@ package ext
 // void goglGetPixelTransformParameterfvEXT(GLenum target, GLenum pname, GLfloat* params) {
 // 	(*ptrglGetPixelTransformParameterfvEXT)(target, pname, params);
 // }
-// //  EXT_pixel_transform_color_table
 // //  EXT_point_parameters
 // void goglPointParameterfEXT(GLenum pname, GLfloat param) {
 // 	(*ptrglPointParameterfEXT)(pname, param);
@@ -2062,7 +1935,6 @@ package ext
 // void goglProvokingVertexEXT(GLenum mode) {
 // 	(*ptrglProvokingVertexEXT)(mode);
 // }
-// //  EXT_rescale_normal
 // //  EXT_secondary_color
 // void goglSecondaryColor3bEXT(GLbyte red, GLbyte green, GLbyte blue) {
 // 	(*ptrglSecondaryColor3bEXT)(red, green, blue);
@@ -2125,7 +1997,6 @@ package ext
 // GLuint goglCreateShaderProgramEXT(GLenum type_, GLchar* string_) {
 // 	return (*ptrglCreateShaderProgramEXT)(type_, string_);
 // }
-// //  EXT_separate_specular_color
 // //  EXT_shader_image_load_store
 // void goglBindImageTextureEXT(GLuint index, GLuint texture, GLint level, GLboolean layered, GLint layer, GLenum access, GLint format) {
 // 	(*ptrglBindImageTextureEXT)(index, texture, level, layered, layer, access, format);
@@ -2133,8 +2004,6 @@ package ext
 // void goglMemoryBarrierEXT(GLbitfield barriers) {
 // 	(*ptrglMemoryBarrierEXT)(barriers);
 // }
-// //  EXT_shadow_funcs
-// //  EXT_shared_texture_palette
 // //  EXT_stencil_clear_tag
 // void goglStencilClearTagEXT(GLsizei stencilTagBits, GLuint stencilClearTag) {
 // 	(*ptrglStencilClearTagEXT)(stencilTagBits, stencilClearTag);
@@ -2143,7 +2012,6 @@ package ext
 // void goglActiveStencilFaceEXT(GLenum face) {
 // 	(*ptrglActiveStencilFaceEXT)(face);
 // }
-// //  EXT_stencil_wrap
 // //  EXT_subtexture
 // void goglTexSubImage1DEXT(GLenum target, GLint level, GLint xoffset, GLsizei width, GLenum format, GLenum type_, GLvoid* pixels) {
 // 	(*ptrglTexSubImage1DEXT)(target, level, xoffset, width, format, type_, pixels);
@@ -2151,7 +2019,6 @@ package ext
 // void goglTexSubImage2DEXT(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLsizei width, GLsizei height, GLenum format, GLenum type_, GLvoid* pixels) {
 // 	(*ptrglTexSubImage2DEXT)(target, level, xoffset, yoffset, width, height, format, type_, pixels);
 // }
-// //  EXT_texture
 // //  EXT_texture3D
 // void goglTexImage3DEXT(GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLsizei depth, GLint border, GLenum format, GLenum type_, GLvoid* pixels) {
 // 	(*ptrglTexImage3DEXT)(target, level, internalformat, width, height, depth, border, format, type_, pixels);
@@ -2159,17 +2026,10 @@ package ext
 // void goglTexSubImage3DEXT(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLenum format, GLenum type_, GLvoid* pixels) {
 // 	(*ptrglTexSubImage3DEXT)(target, level, xoffset, yoffset, zoffset, width, height, depth, format, type_, pixels);
 // }
-// //  EXT_texture_array
 // //  EXT_texture_buffer_object
 // void goglTexBufferEXT(GLenum target, GLenum internalformat, GLuint buffer) {
 // 	(*ptrglTexBufferEXT)(target, internalformat, buffer);
 // }
-// //  EXT_texture_compression_latc
-// //  EXT_texture_compression_rgtc
-// //  EXT_texture_env_add
-// //  EXT_texture_env_combine
-// //  EXT_texture_env_dot3
-// //  EXT_texture_filter_anisotropic
 // //  EXT_texture_integer
 // void goglTexParameterIivEXT(GLenum target, GLenum pname, GLint* params) {
 // 	(*ptrglTexParameterIivEXT)(target, pname, params);
@@ -2189,8 +2049,6 @@ package ext
 // void goglClearColorIuiEXT(GLuint red, GLuint green, GLuint blue, GLuint alpha) {
 // 	(*ptrglClearColorIuiEXT)(red, green, blue, alpha);
 // }
-// //  EXT_texture_lod_bias
-// //  EXT_texture_mirror_clamp
 // //  EXT_texture_object
 // GLboolean goglAreTexturesResidentEXT(GLsizei n, GLuint* textures, GLboolean* residences) {
 // 	return (*ptrglAreTexturesResidentEXT)(n, textures, residences);
@@ -2214,11 +2072,6 @@ package ext
 // void goglTextureNormalEXT(GLenum mode) {
 // 	(*ptrglTextureNormalEXT)(mode);
 // }
-// //  EXT_texture_sRGB
-// //  EXT_texture_sRGB_decode
-// //  EXT_texture_shared_exponent
-// //  EXT_texture_snorm
-// //  EXT_texture_swizzle
 // //  EXT_timer_query
 // void goglGetQueryObjecti64vEXT(GLuint id, GLenum pname, GLint64EXT* params) {
 // 	(*ptrglGetQueryObjecti64vEXT)(id, pname, params);
@@ -2276,7 +2129,6 @@ package ext
 // void goglVertexPointerEXT(GLint size, GLenum type_, GLsizei stride, GLsizei count, GLvoid* pointer) {
 // 	(*ptrglVertexPointerEXT)(size, type_, stride, count, pointer);
 // }
-// //  EXT_vertex_array_bgra
 // //  EXT_vertex_attrib_64bit
 // void goglVertexAttribL1dEXT(GLuint index, GLdouble x) {
 // 	(*ptrglVertexAttribL1dEXT)(index, x);
@@ -2453,15 +2305,6 @@ package ext
 // 	return (*ptrglImportSyncEXT)(external_sync_type, external_sync, flags);
 // }
 // 
-// int init_EXT_422_pixels() {
-// 	return 0;
-// }
-// int init_EXT_abgr() {
-// 	return 0;
-// }
-// int init_EXT_bgra() {
-// 	return 0;
-// }
 // int init_EXT_bindable_uniform() {
 // 	ptrglUniformBufferEXT = goglGetProcAddress("glUniformBufferEXT");
 // 	if(ptrglUniformBufferEXT == NULL) return 1;
@@ -2486,21 +2329,9 @@ package ext
 // 	if(ptrglBlendFuncSeparateEXT == NULL) return 1;
 // 	return 0;
 // }
-// int init_EXT_blend_logic_op() {
-// 	return 0;
-// }
 // int init_EXT_blend_minmax() {
 // 	ptrglBlendEquationEXT = goglGetProcAddress("glBlendEquationEXT");
 // 	if(ptrglBlendEquationEXT == NULL) return 1;
-// 	return 0;
-// }
-// int init_EXT_blend_subtract() {
-// 	return 0;
-// }
-// int init_EXT_clip_volume_hint() {
-// 	return 0;
-// }
-// int init_EXT_cmyka() {
 // 	return 0;
 // }
 // int init_EXT_color_subtable() {
@@ -3069,8 +2900,8 @@ package ext
 // 	if(ptrglVertexArrayVertexOffsetEXT == NULL) return 1;
 // 	ptrglVertexArrayVertexAttribIOffsetEXT = goglGetProcAddress("glVertexArrayVertexAttribIOffsetEXT");
 // 	if(ptrglVertexArrayVertexAttribIOffsetEXT == NULL) return 1;
-// 	ptrglglVertexArrayVertexAttribOffsetEXT = goglGetProcAddress("glglVertexArrayVertexAttribOffsetEXT");
-// 	if(ptrglglVertexArrayVertexAttribOffsetEXT == NULL) return 1;
+// 	ptrglVertexArrayVertexAttribOffsetEXT = goglGetProcAddress("glVertexArrayVertexAttribOffsetEXT");
+// 	if(ptrglVertexArrayVertexAttribOffsetEXT == NULL) return 1;
 // 	ptrglGetVertexArrayIntegervEXT = goglGetProcAddress("glGetVertexArrayIntegervEXT");
 // 	if(ptrglGetVertexArrayIntegervEXT == NULL) return 1;
 // 	ptrglGetVertexArrayPointervEXT = goglGetProcAddress("glGetVertexArrayPointervEXT");
@@ -3131,9 +2962,6 @@ package ext
 // 	if(ptrglRenderbufferStorageMultisampleEXT == NULL) return 1;
 // 	return 0;
 // }
-// int init_EXT_framebuffer_multisample_blit_scaled() {
-// 	return 0;
-// }
 // int init_EXT_framebuffer_object() {
 // 	ptrglIsRenderbufferEXT = goglGetProcAddress("glIsRenderbufferEXT");
 // 	if(ptrglIsRenderbufferEXT == NULL) return 1;
@@ -3169,9 +2997,6 @@ package ext
 // 	if(ptrglGetFramebufferAttachmentParameterivEXT == NULL) return 1;
 // 	ptrglGenerateMipmapEXT = goglGetProcAddress("glGenerateMipmapEXT");
 // 	if(ptrglGenerateMipmapEXT == NULL) return 1;
-// 	return 0;
-// }
-// int init_EXT_framebuffer_sRGB() {
 // 	return 0;
 // }
 // int init_EXT_geometry_shader4() {
@@ -3234,9 +3059,6 @@ package ext
 // 	if(ptrglResetMinmaxEXT == NULL) return 1;
 // 	return 0;
 // }
-// int init_EXT_index_array_formats() {
-// 	return 0;
-// }
 // int init_EXT_index_func() {
 // 	ptrglIndexFuncEXT = goglGetProcAddress("glIndexFuncEXT");
 // 	if(ptrglIndexFuncEXT == NULL) return 1;
@@ -3247,9 +3069,6 @@ package ext
 // 	if(ptrglIndexMaterialEXT == NULL) return 1;
 // 	return 0;
 // }
-// int init_EXT_index_texture() {
-// 	return 0;
-// }
 // int init_EXT_light_texture() {
 // 	ptrglApplyTextureEXT = goglGetProcAddress("glApplyTextureEXT");
 // 	if(ptrglApplyTextureEXT == NULL) return 1;
@@ -3257,9 +3076,6 @@ package ext
 // 	if(ptrglTextureLightEXT == NULL) return 1;
 // 	ptrglTextureMaterialEXT = goglGetProcAddress("glTextureMaterialEXT");
 // 	if(ptrglTextureMaterialEXT == NULL) return 1;
-// 	return 0;
-// }
-// int init_EXT_misc_attribute() {
 // 	return 0;
 // }
 // int init_EXT_multi_draw_arrays() {
@@ -3276,15 +3092,6 @@ package ext
 // 	if(ptrglSamplePatternEXT == NULL) return 1;
 // 	return 0;
 // }
-// int init_EXT_packed_depth_stencil() {
-// 	return 0;
-// }
-// int init_EXT_packed_float() {
-// 	return 0;
-// }
-// int init_EXT_packed_pixels() {
-// 	return 0;
-// }
 // int init_EXT_paletted_texture() {
 // 	ptrglColorTableEXT = goglGetProcAddress("glColorTableEXT");
 // 	if(ptrglColorTableEXT == NULL) return 1;
@@ -3294,9 +3101,6 @@ package ext
 // 	if(ptrglGetColorTableParameterivEXT == NULL) return 1;
 // 	ptrglGetColorTableParameterfvEXT = goglGetProcAddress("glGetColorTableParameterfvEXT");
 // 	if(ptrglGetColorTableParameterfvEXT == NULL) return 1;
-// 	return 0;
-// }
-// int init_EXT_pixel_buffer_object() {
 // 	return 0;
 // }
 // int init_EXT_pixel_transform() {
@@ -3314,9 +3118,6 @@ package ext
 // 	if(ptrglGetPixelTransformParameterfvEXT == NULL) return 1;
 // 	return 0;
 // }
-// int init_EXT_pixel_transform_color_table() {
-// 	return 0;
-// }
 // int init_EXT_point_parameters() {
 // 	ptrglPointParameterfEXT = goglGetProcAddress("glPointParameterfEXT");
 // 	if(ptrglPointParameterfEXT == NULL) return 1;
@@ -3332,9 +3133,6 @@ package ext
 // int init_EXT_provoking_vertex() {
 // 	ptrglProvokingVertexEXT = goglGetProcAddress("glProvokingVertexEXT");
 // 	if(ptrglProvokingVertexEXT == NULL) return 1;
-// 	return 0;
-// }
-// int init_EXT_rescale_normal() {
 // 	return 0;
 // }
 // int init_EXT_secondary_color() {
@@ -3383,20 +3181,11 @@ package ext
 // 	if(ptrglCreateShaderProgramEXT == NULL) return 1;
 // 	return 0;
 // }
-// int init_EXT_separate_specular_color() {
-// 	return 0;
-// }
 // int init_EXT_shader_image_load_store() {
 // 	ptrglBindImageTextureEXT = goglGetProcAddress("glBindImageTextureEXT");
 // 	if(ptrglBindImageTextureEXT == NULL) return 1;
 // 	ptrglMemoryBarrierEXT = goglGetProcAddress("glMemoryBarrierEXT");
 // 	if(ptrglMemoryBarrierEXT == NULL) return 1;
-// 	return 0;
-// }
-// int init_EXT_shadow_funcs() {
-// 	return 0;
-// }
-// int init_EXT_shared_texture_palette() {
 // 	return 0;
 // }
 // int init_EXT_stencil_clear_tag() {
@@ -3409,17 +3198,11 @@ package ext
 // 	if(ptrglActiveStencilFaceEXT == NULL) return 1;
 // 	return 0;
 // }
-// int init_EXT_stencil_wrap() {
-// 	return 0;
-// }
 // int init_EXT_subtexture() {
 // 	ptrglTexSubImage1DEXT = goglGetProcAddress("glTexSubImage1DEXT");
 // 	if(ptrglTexSubImage1DEXT == NULL) return 1;
 // 	ptrglTexSubImage2DEXT = goglGetProcAddress("glTexSubImage2DEXT");
 // 	if(ptrglTexSubImage2DEXT == NULL) return 1;
-// 	return 0;
-// }
-// int init_EXT_texture() {
 // 	return 0;
 // }
 // int init_EXT_texture3D() {
@@ -3429,30 +3212,9 @@ package ext
 // 	if(ptrglTexSubImage3DEXT == NULL) return 1;
 // 	return 0;
 // }
-// int init_EXT_texture_array() {
-// 	return 0;
-// }
 // int init_EXT_texture_buffer_object() {
 // 	ptrglTexBufferEXT = goglGetProcAddress("glTexBufferEXT");
 // 	if(ptrglTexBufferEXT == NULL) return 1;
-// 	return 0;
-// }
-// int init_EXT_texture_compression_latc() {
-// 	return 0;
-// }
-// int init_EXT_texture_compression_rgtc() {
-// 	return 0;
-// }
-// int init_EXT_texture_env_add() {
-// 	return 0;
-// }
-// int init_EXT_texture_env_combine() {
-// 	return 0;
-// }
-// int init_EXT_texture_env_dot3() {
-// 	return 0;
-// }
-// int init_EXT_texture_filter_anisotropic() {
 // 	return 0;
 // }
 // int init_EXT_texture_integer() {
@@ -3468,12 +3230,6 @@ package ext
 // 	if(ptrglClearColorIiEXT == NULL) return 1;
 // 	ptrglClearColorIuiEXT = goglGetProcAddress("glClearColorIuiEXT");
 // 	if(ptrglClearColorIuiEXT == NULL) return 1;
-// 	return 0;
-// }
-// int init_EXT_texture_lod_bias() {
-// 	return 0;
-// }
-// int init_EXT_texture_mirror_clamp() {
 // 	return 0;
 // }
 // int init_EXT_texture_object() {
@@ -3494,21 +3250,6 @@ package ext
 // int init_EXT_texture_perturb_normal() {
 // 	ptrglTextureNormalEXT = goglGetProcAddress("glTextureNormalEXT");
 // 	if(ptrglTextureNormalEXT == NULL) return 1;
-// 	return 0;
-// }
-// int init_EXT_texture_sRGB() {
-// 	return 0;
-// }
-// int init_EXT_texture_sRGB_decode() {
-// 	return 0;
-// }
-// int init_EXT_texture_shared_exponent() {
-// 	return 0;
-// }
-// int init_EXT_texture_snorm() {
-// 	return 0;
-// }
-// int init_EXT_texture_swizzle() {
 // 	return 0;
 // }
 // int init_EXT_timer_query() {
@@ -3554,9 +3295,6 @@ package ext
 // 	if(ptrglTexCoordPointerEXT == NULL) return 1;
 // 	ptrglVertexPointerEXT = goglGetProcAddress("glVertexPointerEXT");
 // 	if(ptrglVertexPointerEXT == NULL) return 1;
-// 	return 0;
-// }
-// int init_EXT_vertex_array_bgra() {
 // 	return 0;
 // }
 // int init_EXT_vertex_attrib_64bit() {
@@ -4768,12 +4506,6 @@ const (
 const (
 	SYNC_X11_FENCE_EXT = 0x90E1
 )
-// EXT_422_pixels
-
-// EXT_abgr
-
-// EXT_bgra
-
 // EXT_bindable_uniform
 
 func UniformBufferEXT(program Uint, location Int, buffer Uint)  {
@@ -4800,19 +4532,11 @@ func BlendEquationSeparateEXT(modeRGB Enum, modeAlpha Enum)  {
 func BlendFuncSeparateEXT(sfactorRGB Enum, dfactorRGB Enum, sfactorAlpha Enum, dfactorAlpha Enum)  {
 	C.goglBlendFuncSeparateEXT((C.GLenum)(sfactorRGB), (C.GLenum)(dfactorRGB), (C.GLenum)(sfactorAlpha), (C.GLenum)(dfactorAlpha))
 }
-// EXT_blend_logic_op
-
 // EXT_blend_minmax
 
 func BlendEquationEXT(mode Enum)  {
 	C.goglBlendEquationEXT((C.GLenum)(mode))
 }
-// EXT_blend_subtract
-
-// EXT_clip_volume_hint
-
-// EXT_cmyka
-
 // EXT_color_subtable
 
 func ColorSubTableEXT(target Enum, start Sizei, count Sizei, format Enum, type_ Enum, data Pointer)  {
@@ -5645,8 +5369,8 @@ func VertexArrayVertexOffsetEXT(vaobj Uint, buffer Uint, size Int, type_ Enum, s
 func VertexArrayVertexAttribIOffsetEXT(vaobj Uint, buffer Uint, index Uint, size Int, type_ Enum, stride Sizei, offset Intptr)  {
 	C.goglVertexArrayVertexAttribIOffsetEXT((C.GLuint)(vaobj), (C.GLuint)(buffer), (C.GLuint)(index), (C.GLint)(size), (C.GLenum)(type_), (C.GLsizei)(stride), (C.GLintptr)(offset))
 }
-func glVertexArrayVertexAttribOffsetEXT(vaobj Uint, buffer Uint, index Uint, size Int, type_ Enum, normalized Boolean, stride Sizei, offset Intptr)  {
-	C.goglglVertexArrayVertexAttribOffsetEXT((C.GLuint)(vaobj), (C.GLuint)(buffer), (C.GLuint)(index), (C.GLint)(size), (C.GLenum)(type_), (C.GLboolean)(normalized), (C.GLsizei)(stride), (C.GLintptr)(offset))
+func VertexArrayVertexAttribOffsetEXT(vaobj Uint, buffer Uint, index Uint, size Int, type_ Enum, normalized Boolean, stride Sizei, offset Intptr)  {
+	C.goglVertexArrayVertexAttribOffsetEXT((C.GLuint)(vaobj), (C.GLuint)(buffer), (C.GLuint)(index), (C.GLint)(size), (C.GLenum)(type_), (C.GLboolean)(normalized), (C.GLsizei)(stride), (C.GLintptr)(offset))
 }
 func GetVertexArrayIntegervEXT(vaobj Uint, pname Enum, param *Int)  {
 	C.goglGetVertexArrayIntegervEXT((C.GLuint)(vaobj), (C.GLenum)(pname), (*C.GLint)(param))
@@ -5720,8 +5444,6 @@ func BlitFramebufferEXT(srcX0 Int, srcY0 Int, srcX1 Int, srcY1 Int, dstX0 Int, d
 func RenderbufferStorageMultisampleEXT(target Enum, samples Sizei, internalformat Enum, width Sizei, height Sizei)  {
 	C.goglRenderbufferStorageMultisampleEXT((C.GLenum)(target), (C.GLsizei)(samples), (C.GLenum)(internalformat), (C.GLsizei)(width), (C.GLsizei)(height))
 }
-// EXT_framebuffer_multisample_blit_scaled
-
 // EXT_framebuffer_object
 
 func IsRenderbufferEXT(renderbuffer Uint) Boolean {
@@ -5775,8 +5497,6 @@ func GetFramebufferAttachmentParameterivEXT(target Enum, attachment Enum, pname 
 func GenerateMipmapEXT(target Enum)  {
 	C.goglGenerateMipmapEXT((C.GLenum)(target))
 }
-// EXT_framebuffer_sRGB
-
 // EXT_geometry_shader4
 
 func ProgramParameteriEXT(program Uint, pname Enum, value Int)  {
@@ -5857,8 +5577,6 @@ func ResetHistogramEXT(target Enum)  {
 func ResetMinmaxEXT(target Enum)  {
 	C.goglResetMinmaxEXT((C.GLenum)(target))
 }
-// EXT_index_array_formats
-
 // EXT_index_func
 
 func IndexFuncEXT(func_ Enum, ref Clampf)  {
@@ -5869,8 +5587,6 @@ func IndexFuncEXT(func_ Enum, ref Clampf)  {
 func IndexMaterialEXT(face Enum, mode Enum)  {
 	C.goglIndexMaterialEXT((C.GLenum)(face), (C.GLenum)(mode))
 }
-// EXT_index_texture
-
 // EXT_light_texture
 
 func ApplyTextureEXT(mode Enum)  {
@@ -5882,8 +5598,6 @@ func TextureLightEXT(pname Enum)  {
 func TextureMaterialEXT(face Enum, mode Enum)  {
 	C.goglTextureMaterialEXT((C.GLenum)(face), (C.GLenum)(mode))
 }
-// EXT_misc_attribute
-
 // EXT_multi_draw_arrays
 
 func MultiDrawArraysEXT(mode Enum, first *Int, count *Sizei, primcount Sizei)  {
@@ -5900,12 +5614,6 @@ func SampleMaskEXT(value Clampf, invert Boolean)  {
 func SamplePatternEXT(pattern Enum)  {
 	C.goglSamplePatternEXT((C.GLenum)(pattern))
 }
-// EXT_packed_depth_stencil
-
-// EXT_packed_float
-
-// EXT_packed_pixels
-
 // EXT_paletted_texture
 
 func ColorTableEXT(target Enum, internalFormat Enum, width Sizei, format Enum, type_ Enum, table Pointer)  {
@@ -5920,8 +5628,6 @@ func GetColorTableParameterivEXT(target Enum, pname Enum, params *Int)  {
 func GetColorTableParameterfvEXT(target Enum, pname Enum, params *Float)  {
 	C.goglGetColorTableParameterfvEXT((C.GLenum)(target), (C.GLenum)(pname), (*C.GLfloat)(params))
 }
-// EXT_pixel_buffer_object
-
 // EXT_pixel_transform
 
 func PixelTransformParameteriEXT(target Enum, pname Enum, param Int)  {
@@ -5942,8 +5648,6 @@ func GetPixelTransformParameterivEXT(target Enum, pname Enum, params *Int)  {
 func GetPixelTransformParameterfvEXT(target Enum, pname Enum, params *Float)  {
 	C.goglGetPixelTransformParameterfvEXT((C.GLenum)(target), (C.GLenum)(pname), (*C.GLfloat)(params))
 }
-// EXT_pixel_transform_color_table
-
 // EXT_point_parameters
 
 func PointParameterfEXT(pname Enum, param Float)  {
@@ -5962,8 +5666,6 @@ func PolygonOffsetEXT(factor Float, bias Float)  {
 func ProvokingVertexEXT(mode Enum)  {
 	C.goglProvokingVertexEXT((C.GLenum)(mode))
 }
-// EXT_rescale_normal
-
 // EXT_secondary_color
 
 func SecondaryColor3bEXT(red Byte, green Byte, blue Byte)  {
@@ -6028,8 +5730,6 @@ func ActiveProgramEXT(program Uint)  {
 func CreateShaderProgramEXT(type_ Enum, string_ *Char) Uint {
 	return (Uint)(C.goglCreateShaderProgramEXT((C.GLenum)(type_), (*C.GLchar)(string_)))
 }
-// EXT_separate_specular_color
-
 // EXT_shader_image_load_store
 
 func BindImageTextureEXT(index Uint, texture Uint, level Int, layered Boolean, layer Int, access Enum, format Int)  {
@@ -6038,10 +5738,6 @@ func BindImageTextureEXT(index Uint, texture Uint, level Int, layered Boolean, l
 func MemoryBarrierEXT(barriers Bitfield)  {
 	C.goglMemoryBarrierEXT((C.GLbitfield)(barriers))
 }
-// EXT_shadow_funcs
-
-// EXT_shared_texture_palette
-
 // EXT_stencil_clear_tag
 
 func StencilClearTagEXT(stencilTagBits Sizei, stencilClearTag Uint)  {
@@ -6052,8 +5748,6 @@ func StencilClearTagEXT(stencilTagBits Sizei, stencilClearTag Uint)  {
 func ActiveStencilFaceEXT(face Enum)  {
 	C.goglActiveStencilFaceEXT((C.GLenum)(face))
 }
-// EXT_stencil_wrap
-
 // EXT_subtexture
 
 func TexSubImage1DEXT(target Enum, level Int, xoffset Int, width Sizei, format Enum, type_ Enum, pixels Pointer)  {
@@ -6062,8 +5756,6 @@ func TexSubImage1DEXT(target Enum, level Int, xoffset Int, width Sizei, format E
 func TexSubImage2DEXT(target Enum, level Int, xoffset Int, yoffset Int, width Sizei, height Sizei, format Enum, type_ Enum, pixels Pointer)  {
 	C.goglTexSubImage2DEXT((C.GLenum)(target), (C.GLint)(level), (C.GLint)(xoffset), (C.GLint)(yoffset), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLenum)(format), (C.GLenum)(type_), (unsafe.Pointer)(pixels))
 }
-// EXT_texture
-
 // EXT_texture3D
 
 func TexImage3DEXT(target Enum, level Int, internalformat Enum, width Sizei, height Sizei, depth Sizei, border Int, format Enum, type_ Enum, pixels Pointer)  {
@@ -6072,25 +5764,11 @@ func TexImage3DEXT(target Enum, level Int, internalformat Enum, width Sizei, hei
 func TexSubImage3DEXT(target Enum, level Int, xoffset Int, yoffset Int, zoffset Int, width Sizei, height Sizei, depth Sizei, format Enum, type_ Enum, pixels Pointer)  {
 	C.goglTexSubImage3DEXT((C.GLenum)(target), (C.GLint)(level), (C.GLint)(xoffset), (C.GLint)(yoffset), (C.GLint)(zoffset), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLsizei)(depth), (C.GLenum)(format), (C.GLenum)(type_), (unsafe.Pointer)(pixels))
 }
-// EXT_texture_array
-
 // EXT_texture_buffer_object
 
 func TexBufferEXT(target Enum, internalformat Enum, buffer Uint)  {
 	C.goglTexBufferEXT((C.GLenum)(target), (C.GLenum)(internalformat), (C.GLuint)(buffer))
 }
-// EXT_texture_compression_latc
-
-// EXT_texture_compression_rgtc
-
-// EXT_texture_env_add
-
-// EXT_texture_env_combine
-
-// EXT_texture_env_dot3
-
-// EXT_texture_filter_anisotropic
-
 // EXT_texture_integer
 
 func TexParameterIivEXT(target Enum, pname Enum, params *Int)  {
@@ -6111,10 +5789,6 @@ func ClearColorIiEXT(red Int, green Int, blue Int, alpha Int)  {
 func ClearColorIuiEXT(red Uint, green Uint, blue Uint, alpha Uint)  {
 	C.goglClearColorIuiEXT((C.GLuint)(red), (C.GLuint)(green), (C.GLuint)(blue), (C.GLuint)(alpha))
 }
-// EXT_texture_lod_bias
-
-// EXT_texture_mirror_clamp
-
 // EXT_texture_object
 
 func AreTexturesResidentEXT(n Sizei, textures *Uint, residences *Boolean) Boolean {
@@ -6140,16 +5814,6 @@ func PrioritizeTexturesEXT(n Sizei, textures *Uint, priorities *Clampf)  {
 func TextureNormalEXT(mode Enum)  {
 	C.goglTextureNormalEXT((C.GLenum)(mode))
 }
-// EXT_texture_sRGB
-
-// EXT_texture_sRGB_decode
-
-// EXT_texture_shared_exponent
-
-// EXT_texture_snorm
-
-// EXT_texture_swizzle
-
 // EXT_timer_query
 
 func GetQueryObjecti64vEXT(id Uint, pname Enum, params *Int64)  {
@@ -6210,8 +5874,6 @@ func TexCoordPointerEXT(size Int, type_ Enum, stride Sizei, count Sizei, pointer
 func VertexPointerEXT(size Int, type_ Enum, stride Sizei, count Sizei, pointer Pointer)  {
 	C.goglVertexPointerEXT((C.GLint)(size), (C.GLenum)(type_), (C.GLsizei)(stride), (C.GLsizei)(count), (unsafe.Pointer)(pointer))
 }
-// EXT_vertex_array_bgra
-
 // EXT_vertex_attrib_64bit
 
 func VertexAttribL1dEXT(index Uint, x Double)  {
@@ -6391,27 +6053,6 @@ func VertexWeightPointerEXT(size Int, type_ Enum, stride Sizei, pointer Pointer)
 func ImportSyncEXT(external_sync_type Enum, external_sync Intptr, flags Bitfield) Sync {
 	return (Sync)(C.goglImportSyncEXT((C.GLenum)(external_sync_type), (C.GLintptr)(external_sync), (C.GLbitfield)(flags)))
 }
-func InitExt422Pixels() error {
-	var ret C.int
-	if ret = C.init_EXT_422_pixels(); ret != 0 {
-		return errors.New("unable to initialize EXT_422_pixels")
-	}
-	return nil
-}
-func InitExtAbgr() error {
-	var ret C.int
-	if ret = C.init_EXT_abgr(); ret != 0 {
-		return errors.New("unable to initialize EXT_abgr")
-	}
-	return nil
-}
-func InitExtBgra() error {
-	var ret C.int
-	if ret = C.init_EXT_bgra(); ret != 0 {
-		return errors.New("unable to initialize EXT_bgra")
-	}
-	return nil
-}
 func InitExtBindableUniform() error {
 	var ret C.int
 	if ret = C.init_EXT_bindable_uniform(); ret != 0 {
@@ -6440,38 +6081,10 @@ func InitExtBlendFuncSeparate() error {
 	}
 	return nil
 }
-func InitExtBlendLogicOp() error {
-	var ret C.int
-	if ret = C.init_EXT_blend_logic_op(); ret != 0 {
-		return errors.New("unable to initialize EXT_blend_logic_op")
-	}
-	return nil
-}
 func InitExtBlendMinmax() error {
 	var ret C.int
 	if ret = C.init_EXT_blend_minmax(); ret != 0 {
 		return errors.New("unable to initialize EXT_blend_minmax")
-	}
-	return nil
-}
-func InitExtBlendSubtract() error {
-	var ret C.int
-	if ret = C.init_EXT_blend_subtract(); ret != 0 {
-		return errors.New("unable to initialize EXT_blend_subtract")
-	}
-	return nil
-}
-func InitExtClipVolumeHint() error {
-	var ret C.int
-	if ret = C.init_EXT_clip_volume_hint(); ret != 0 {
-		return errors.New("unable to initialize EXT_clip_volume_hint")
-	}
-	return nil
-}
-func InitExtCmyka() error {
-	var ret C.int
-	if ret = C.init_EXT_cmyka(); ret != 0 {
-		return errors.New("unable to initialize EXT_cmyka")
 	}
 	return nil
 }
@@ -6573,24 +6186,10 @@ func InitExtFramebufferMultisample() error {
 	}
 	return nil
 }
-func InitExtFramebufferMultisampleBlitScaled() error {
-	var ret C.int
-	if ret = C.init_EXT_framebuffer_multisample_blit_scaled(); ret != 0 {
-		return errors.New("unable to initialize EXT_framebuffer_multisample_blit_scaled")
-	}
-	return nil
-}
 func InitExtFramebufferObject() error {
 	var ret C.int
 	if ret = C.init_EXT_framebuffer_object(); ret != 0 {
 		return errors.New("unable to initialize EXT_framebuffer_object")
-	}
-	return nil
-}
-func InitExtFramebufferSrgb() error {
-	var ret C.int
-	if ret = C.init_EXT_framebuffer_sRGB(); ret != 0 {
-		return errors.New("unable to initialize EXT_framebuffer_sRGB")
 	}
 	return nil
 }
@@ -6622,13 +6221,6 @@ func InitExtHistogram() error {
 	}
 	return nil
 }
-func InitExtIndexArrayFormats() error {
-	var ret C.int
-	if ret = C.init_EXT_index_array_formats(); ret != 0 {
-		return errors.New("unable to initialize EXT_index_array_formats")
-	}
-	return nil
-}
 func InitExtIndexFunc() error {
 	var ret C.int
 	if ret = C.init_EXT_index_func(); ret != 0 {
@@ -6643,24 +6235,10 @@ func InitExtIndexMaterial() error {
 	}
 	return nil
 }
-func InitExtIndexTexture() error {
-	var ret C.int
-	if ret = C.init_EXT_index_texture(); ret != 0 {
-		return errors.New("unable to initialize EXT_index_texture")
-	}
-	return nil
-}
 func InitExtLightTexture() error {
 	var ret C.int
 	if ret = C.init_EXT_light_texture(); ret != 0 {
 		return errors.New("unable to initialize EXT_light_texture")
-	}
-	return nil
-}
-func InitExtMiscAttribute() error {
-	var ret C.int
-	if ret = C.init_EXT_misc_attribute(); ret != 0 {
-		return errors.New("unable to initialize EXT_misc_attribute")
 	}
 	return nil
 }
@@ -6678,27 +6256,6 @@ func InitExtMultisample() error {
 	}
 	return nil
 }
-func InitExtPackedDepthStencil() error {
-	var ret C.int
-	if ret = C.init_EXT_packed_depth_stencil(); ret != 0 {
-		return errors.New("unable to initialize EXT_packed_depth_stencil")
-	}
-	return nil
-}
-func InitExtPackedFloat() error {
-	var ret C.int
-	if ret = C.init_EXT_packed_float(); ret != 0 {
-		return errors.New("unable to initialize EXT_packed_float")
-	}
-	return nil
-}
-func InitExtPackedPixels() error {
-	var ret C.int
-	if ret = C.init_EXT_packed_pixels(); ret != 0 {
-		return errors.New("unable to initialize EXT_packed_pixels")
-	}
-	return nil
-}
 func InitExtPalettedTexture() error {
 	var ret C.int
 	if ret = C.init_EXT_paletted_texture(); ret != 0 {
@@ -6706,24 +6263,10 @@ func InitExtPalettedTexture() error {
 	}
 	return nil
 }
-func InitExtPixelBufferObject() error {
-	var ret C.int
-	if ret = C.init_EXT_pixel_buffer_object(); ret != 0 {
-		return errors.New("unable to initialize EXT_pixel_buffer_object")
-	}
-	return nil
-}
 func InitExtPixelTransform() error {
 	var ret C.int
 	if ret = C.init_EXT_pixel_transform(); ret != 0 {
 		return errors.New("unable to initialize EXT_pixel_transform")
-	}
-	return nil
-}
-func InitExtPixelTransformColorTable() error {
-	var ret C.int
-	if ret = C.init_EXT_pixel_transform_color_table(); ret != 0 {
-		return errors.New("unable to initialize EXT_pixel_transform_color_table")
 	}
 	return nil
 }
@@ -6748,13 +6291,6 @@ func InitExtProvokingVertex() error {
 	}
 	return nil
 }
-func InitExtRescaleNormal() error {
-	var ret C.int
-	if ret = C.init_EXT_rescale_normal(); ret != 0 {
-		return errors.New("unable to initialize EXT_rescale_normal")
-	}
-	return nil
-}
 func InitExtSecondaryColor() error {
 	var ret C.int
 	if ret = C.init_EXT_secondary_color(); ret != 0 {
@@ -6769,31 +6305,10 @@ func InitExtSeparateShaderObjects() error {
 	}
 	return nil
 }
-func InitExtSeparateSpecularColor() error {
-	var ret C.int
-	if ret = C.init_EXT_separate_specular_color(); ret != 0 {
-		return errors.New("unable to initialize EXT_separate_specular_color")
-	}
-	return nil
-}
 func InitExtShaderImageLoadStore() error {
 	var ret C.int
 	if ret = C.init_EXT_shader_image_load_store(); ret != 0 {
 		return errors.New("unable to initialize EXT_shader_image_load_store")
-	}
-	return nil
-}
-func InitExtShadowFuncs() error {
-	var ret C.int
-	if ret = C.init_EXT_shadow_funcs(); ret != 0 {
-		return errors.New("unable to initialize EXT_shadow_funcs")
-	}
-	return nil
-}
-func InitExtSharedTexturePalette() error {
-	var ret C.int
-	if ret = C.init_EXT_shared_texture_palette(); ret != 0 {
-		return errors.New("unable to initialize EXT_shared_texture_palette")
 	}
 	return nil
 }
@@ -6811,24 +6326,10 @@ func InitExtStencilTwoSide() error {
 	}
 	return nil
 }
-func InitExtStencilWrap() error {
-	var ret C.int
-	if ret = C.init_EXT_stencil_wrap(); ret != 0 {
-		return errors.New("unable to initialize EXT_stencil_wrap")
-	}
-	return nil
-}
 func InitExtSubtexture() error {
 	var ret C.int
 	if ret = C.init_EXT_subtexture(); ret != 0 {
 		return errors.New("unable to initialize EXT_subtexture")
-	}
-	return nil
-}
-func InitExtTexture() error {
-	var ret C.int
-	if ret = C.init_EXT_texture(); ret != 0 {
-		return errors.New("unable to initialize EXT_texture")
 	}
 	return nil
 }
@@ -6839,13 +6340,6 @@ func InitExtTexture3d() error {
 	}
 	return nil
 }
-func InitExtTextureArray() error {
-	var ret C.int
-	if ret = C.init_EXT_texture_array(); ret != 0 {
-		return errors.New("unable to initialize EXT_texture_array")
-	}
-	return nil
-}
 func InitExtTextureBufferObject() error {
 	var ret C.int
 	if ret = C.init_EXT_texture_buffer_object(); ret != 0 {
@@ -6853,66 +6347,10 @@ func InitExtTextureBufferObject() error {
 	}
 	return nil
 }
-func InitExtTextureCompressionLatc() error {
-	var ret C.int
-	if ret = C.init_EXT_texture_compression_latc(); ret != 0 {
-		return errors.New("unable to initialize EXT_texture_compression_latc")
-	}
-	return nil
-}
-func InitExtTextureCompressionRgtc() error {
-	var ret C.int
-	if ret = C.init_EXT_texture_compression_rgtc(); ret != 0 {
-		return errors.New("unable to initialize EXT_texture_compression_rgtc")
-	}
-	return nil
-}
-func InitExtTextureEnvAdd() error {
-	var ret C.int
-	if ret = C.init_EXT_texture_env_add(); ret != 0 {
-		return errors.New("unable to initialize EXT_texture_env_add")
-	}
-	return nil
-}
-func InitExtTextureEnvCombine() error {
-	var ret C.int
-	if ret = C.init_EXT_texture_env_combine(); ret != 0 {
-		return errors.New("unable to initialize EXT_texture_env_combine")
-	}
-	return nil
-}
-func InitExtTextureEnvDot3() error {
-	var ret C.int
-	if ret = C.init_EXT_texture_env_dot3(); ret != 0 {
-		return errors.New("unable to initialize EXT_texture_env_dot3")
-	}
-	return nil
-}
-func InitExtTextureFilterAnisotropic() error {
-	var ret C.int
-	if ret = C.init_EXT_texture_filter_anisotropic(); ret != 0 {
-		return errors.New("unable to initialize EXT_texture_filter_anisotropic")
-	}
-	return nil
-}
 func InitExtTextureInteger() error {
 	var ret C.int
 	if ret = C.init_EXT_texture_integer(); ret != 0 {
 		return errors.New("unable to initialize EXT_texture_integer")
-	}
-	return nil
-}
-func InitExtTextureLodBias() error {
-	var ret C.int
-	if ret = C.init_EXT_texture_lod_bias(); ret != 0 {
-		return errors.New("unable to initialize EXT_texture_lod_bias")
-	}
-	return nil
-}
-func InitExtTextureMirrorClamp() error {
-	var ret C.int
-	if ret = C.init_EXT_texture_mirror_clamp(); ret != 0 {
-		return errors.New("unable to initialize EXT_texture_mirror_clamp")
 	}
 	return nil
 }
@@ -6927,41 +6365,6 @@ func InitExtTexturePerturbNormal() error {
 	var ret C.int
 	if ret = C.init_EXT_texture_perturb_normal(); ret != 0 {
 		return errors.New("unable to initialize EXT_texture_perturb_normal")
-	}
-	return nil
-}
-func InitExtTextureSrgb() error {
-	var ret C.int
-	if ret = C.init_EXT_texture_sRGB(); ret != 0 {
-		return errors.New("unable to initialize EXT_texture_sRGB")
-	}
-	return nil
-}
-func InitExtTextureSrgbDecode() error {
-	var ret C.int
-	if ret = C.init_EXT_texture_sRGB_decode(); ret != 0 {
-		return errors.New("unable to initialize EXT_texture_sRGB_decode")
-	}
-	return nil
-}
-func InitExtTextureSharedExponent() error {
-	var ret C.int
-	if ret = C.init_EXT_texture_shared_exponent(); ret != 0 {
-		return errors.New("unable to initialize EXT_texture_shared_exponent")
-	}
-	return nil
-}
-func InitExtTextureSnorm() error {
-	var ret C.int
-	if ret = C.init_EXT_texture_snorm(); ret != 0 {
-		return errors.New("unable to initialize EXT_texture_snorm")
-	}
-	return nil
-}
-func InitExtTextureSwizzle() error {
-	var ret C.int
-	if ret = C.init_EXT_texture_swizzle(); ret != 0 {
-		return errors.New("unable to initialize EXT_texture_swizzle")
 	}
 	return nil
 }
@@ -6983,13 +6386,6 @@ func InitExtVertexArray() error {
 	var ret C.int
 	if ret = C.init_EXT_vertex_array(); ret != 0 {
 		return errors.New("unable to initialize EXT_vertex_array")
-	}
-	return nil
-}
-func InitExtVertexArrayBgra() error {
-	var ret C.int
-	if ret = C.init_EXT_vertex_array_bgra(); ret != 0 {
-		return errors.New("unable to initialize EXT_vertex_array_bgra")
 	}
 	return nil
 }

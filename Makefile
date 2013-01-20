@@ -6,7 +6,7 @@ download_khronos:
 
 # TODO: Get rid of revision number. How to get the newest revision from bitbucket? 
 download_alfonse:
-	./gogl -download -url=https://bitbucket.org/alfonse/gl-xml-specs/raw/7f5be712aebb/glspecs -dir=alfonse_specs 
+	./gogl -download -url=https://bitbucket.org/alfonse/gl-xml-specs/raw/963cd14e86d11e87be7cc976faee511fd008c038/glspecs -dir=alfonse_specs 
 
 gen_khronos:
 	./gogl
@@ -18,7 +18,7 @@ gen_alfonse:
 install_all:
 	go install ./gl21
 #	go install ./gl30
-#	go install ./gl31
+	go install ./gl31
 #	go install ./gl31c
 #	go install ./gl32
 #	go install ./gl32c
@@ -30,6 +30,7 @@ install_all:
 #	go install ./gl41c
 	go install ./gl42
 #	go install ./gl42c
+	go install ./gl43
 	go install ./arb
 	go install ./ext
 	go install ./ati

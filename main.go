@@ -51,22 +51,32 @@ func generatePackages(
 	}
 
 	fmt.Printf("Grouping extensions ...\n")
-	var gf PackageGroupFunc
+	var egf EnumGroupFunc
+	var fgf FunctionGroupFunc
 	if len(singlePackage) == 0 {
-		gf = func(category string) (packageNames []string) {
-			return GroupCategoriesByVendorAndVersion(
+		egf = func(category string) (packageNames []string) {
+			return GroupEnumsByVendorAndVersion(
 				category,
-				funcInfo.Versions,
-				funcInfo.DeprecatedVersions)
+				funcInfo.Versions)
+		}
+		fgf = func(function *Function) (packageNames []string) {
+			return GroupFunctionsByVendorAndVersion(
+				function,
+				funcInfo.Versions)
 		}
 	} else {
-		gf = func(category string) (packageNames []string) {
-			return GroupCategoriesIntoOnePackage(
+		egf = func(category string) (packageNames []string) {
+			return GroupAllEnumsIntoOnePackage(
 				category,
 				singlePackage)
 		}
+		fgf = func(function *Function) (packageNames []string) {
+			return GroupAllFunctionsIntoOnePackage(
+				function,
+				singlePackage)
+		}
 	}
-	packages := GroupEnumsAndFunctions(enumCategories, funcCategories, gf)
+	packages := GroupEnumsAndFunctions(enumCategories, funcCategories, egf, fgf)
 
 	// TODO: This output is temporary for debugging
 	if false {

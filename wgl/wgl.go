@@ -2,8 +2,6 @@
 // 
 // Categories in this package: 
 // 
-// 3DFX_multisample: http://www.opengl.org/registry/specs/3DFX/multisample.txt
-// 
 // 3DL_stereo_control: http://www.opengl.org/registry/specs/3DL/stereo_control.txt
 // 
 // AMD_gpu_association: http://www.opengl.org/registry/specs/AMD/gpu_association.txt
@@ -12,49 +10,27 @@
 // 
 // ARB_create_context: http://www.opengl.org/registry/specs/ARB/create_context.txt
 // 
-// ARB_create_context_profile: http://www.opengl.org/registry/specs/ARB/create_context_profile.txt
-// 
-// ARB_create_context_robustness: http://www.opengl.org/registry/specs/ARB/create_context_robustness.txt
-// 
 // ARB_extensions_string: http://www.opengl.org/registry/specs/ARB/extensions_string.txt
 // 
-// ARB_framebuffer_sRGB: http://www.opengl.org/registry/specs/ARB/framebuffer_sRGB.txt
-// 
 // ARB_make_current_read: http://www.opengl.org/registry/specs/ARB/make_current_read.txt
-// 
-// ARB_multisample: http://www.opengl.org/registry/specs/ARB/multisample.txt
 // 
 // ARB_pbuffer: http://www.opengl.org/registry/specs/ARB/pbuffer.txt
 // 
 // ARB_pixel_format: http://www.opengl.org/registry/specs/ARB/pixel_format.txt
 // 
-// ARB_pixel_format_float: http://www.opengl.org/registry/specs/ARB/pixel_format_float.txt
-// 
 // ARB_render_texture: http://www.opengl.org/registry/specs/ARB/render_texture.txt
-// 
-// ATI_pixel_format_float: http://www.opengl.org/registry/specs/ATI/pixel_format_float.txt
-// 
-// EXT_depth_float: http://www.opengl.org/registry/specs/EXT/depth_float.txt
 // 
 // EXT_display_color_table: http://www.opengl.org/registry/specs/EXT/display_color_table.txt
 // 
 // EXT_extensions_string: http://www.opengl.org/registry/specs/EXT/extensions_string.txt
 // 
-// EXT_framebuffer_sRGB: http://www.opengl.org/registry/specs/EXT/framebuffer_sRGB.txt
-// 
 // EXT_make_current_read: http://www.opengl.org/registry/specs/EXT/make_current_read.txt
-// 
-// EXT_multisample: http://www.opengl.org/registry/specs/EXT/multisample.txt
 // 
 // EXT_pbuffer: http://www.opengl.org/registry/specs/EXT/pbuffer.txt
 // 
 // EXT_pixel_format: http://www.opengl.org/registry/specs/EXT/pixel_format.txt
 // 
-// EXT_pixel_format_packed_float: http://www.opengl.org/registry/specs/EXT/pixel_format_packed_float.txt
-// 
 // EXT_swap_control: http://www.opengl.org/registry/specs/EXT/swap_control.txt
-// 
-// EXT_swap_control_tear: http://www.opengl.org/registry/specs/EXT/swap_control_tear.txt
 // 
 // I3D_digital_video_control: http://www.opengl.org/registry/specs/I3D/digital_video_control.txt
 // 
@@ -70,15 +46,9 @@
 // 
 // NV_DX_interop: http://www.opengl.org/registry/specs/NV/DX_interop.txt
 // 
-// NV_DX_interop2: http://www.opengl.org/registry/specs/NV/DX_interop2.txt
-// 
 // NV_copy_image: http://www.opengl.org/registry/specs/NV/copy_image.txt
 // 
-// NV_float_buffer: http://www.opengl.org/registry/specs/NV/float_buffer.txt
-// 
 // NV_gpu_affinity: http://www.opengl.org/registry/specs/NV/gpu_affinity.txt
-// 
-// NV_multisample_coverage: http://www.opengl.org/registry/specs/NV/multisample_coverage.txt
 // 
 // NV_present_video: http://www.opengl.org/registry/specs/NV/present_video.txt
 // 
@@ -187,7 +157,6 @@ package wgl
 // #endif
 // }
 // 
-// //  3DFX_multisample
 // //  3DL_stereo_control
 // BOOL (APIENTRYP ptrwglSetStereoEmitterState3DL)(HDC hDC, UINT uState);
 // //  AMD_gpu_association
@@ -207,15 +176,11 @@ package wgl
 // BOOL (APIENTRYP ptrwglRestoreBufferRegionARB)(HANDLE hRegion, int x, int y, int width, int height, int xSrc, int ySrc);
 // //  ARB_create_context
 // HGLRC (APIENTRYP ptrwglCreateContextAttribsARB)(HDC hDC, HGLRC hShareContext, int* attribList);
-// //  ARB_create_context_profile
-// //  ARB_create_context_robustness
 // //  ARB_extensions_string
 // const char * (APIENTRYP ptrwglGetExtensionsStringARB)(HDC hdc);
-// //  ARB_framebuffer_sRGB
 // //  ARB_make_current_read
 // BOOL (APIENTRYP ptrwglMakeContextCurrentARB)(HDC hDrawDC, HDC hReadDC, HGLRC hglrc);
 // HDC (APIENTRYP ptrwglGetCurrentReadDCARB)();
-// //  ARB_multisample
 // //  ARB_pbuffer
 // HPBUFFERARB (APIENTRYP ptrwglCreatePbufferARB)(HDC hDC, int iPixelFormat, int iWidth, int iHeight, int* piAttribList);
 // HDC (APIENTRYP ptrwglGetPbufferDCARB)(HPBUFFERARB hPbuffer);
@@ -226,13 +191,10 @@ package wgl
 // BOOL (APIENTRYP ptrwglGetPixelFormatAttribivARB)(HDC hdc, int iPixelFormat, int iLayerPlane, UINT nAttributes, int* piAttributes, int* piValues);
 // BOOL (APIENTRYP ptrwglGetPixelFormatAttribfvARB)(HDC hdc, int iPixelFormat, int iLayerPlane, UINT nAttributes, int* piAttributes, FLOAT* pfValues);
 // BOOL (APIENTRYP ptrwglChoosePixelFormatARB)(HDC hdc, int* piAttribIList, FLOAT* pfAttribFList, UINT nMaxFormats, int* piFormats, UINT* nNumFormats);
-// //  ARB_pixel_format_float
 // //  ARB_render_texture
 // BOOL (APIENTRYP ptrwglBindTexImageARB)(HPBUFFERARB hPbuffer, int iBuffer);
 // BOOL (APIENTRYP ptrwglReleaseTexImageARB)(HPBUFFERARB hPbuffer, int iBuffer);
 // BOOL (APIENTRYP ptrwglSetPbufferAttribARB)(HPBUFFERARB hPbuffer, int* piAttribList);
-// //  ATI_pixel_format_float
-// //  EXT_depth_float
 // //  EXT_display_color_table
 // GLboolean (APIENTRYP ptrwglCreateDisplayColorTableEXT)(GLushort id);
 // GLboolean (APIENTRYP ptrwglLoadDisplayColorTableEXT)(GLushort* table, GLuint length);
@@ -240,11 +202,9 @@ package wgl
 // VOID (APIENTRYP ptrwglDestroyDisplayColorTableEXT)(GLushort id);
 // //  EXT_extensions_string
 // const char * (APIENTRYP ptrwglGetExtensionsStringEXT)();
-// //  EXT_framebuffer_sRGB
 // //  EXT_make_current_read
 // BOOL (APIENTRYP ptrwglMakeContextCurrentEXT)(HDC hDrawDC, HDC hReadDC, HGLRC hglrc);
 // HDC (APIENTRYP ptrwglGetCurrentReadDCEXT)();
-// //  EXT_multisample
 // //  EXT_pbuffer
 // HPBUFFEREXT (APIENTRYP ptrwglCreatePbufferEXT)(HDC hDC, int iPixelFormat, int iWidth, int iHeight, int* piAttribList);
 // HDC (APIENTRYP ptrwglGetPbufferDCEXT)(HPBUFFEREXT hPbuffer);
@@ -255,11 +215,9 @@ package wgl
 // BOOL (APIENTRYP ptrwglGetPixelFormatAttribivEXT)(HDC hdc, int iPixelFormat, int iLayerPlane, UINT nAttributes, int* piAttributes, int* piValues);
 // BOOL (APIENTRYP ptrwglGetPixelFormatAttribfvEXT)(HDC hdc, int iPixelFormat, int iLayerPlane, UINT nAttributes, int* piAttributes, FLOAT* pfValues);
 // BOOL (APIENTRYP ptrwglChoosePixelFormatEXT)(HDC hdc, int* piAttribIList, FLOAT* pfAttribFList, UINT nMaxFormats, int* piFormats, UINT* nNumFormats);
-// //  EXT_pixel_format_packed_float
 // //  EXT_swap_control
 // BOOL (APIENTRYP ptrwglSwapIntervalEXT)(int interval);
 // int (APIENTRYP ptrwglGetSwapIntervalEXT)();
-// //  EXT_swap_control_tear
 // //  I3D_digital_video_control
 // BOOL (APIENTRYP ptrwglGetDigitalVideoParametersI3D)(HDC hDC, int iAttribute, int* piValue);
 // BOOL (APIENTRYP ptrwglSetDigitalVideoParametersI3D)(HDC hDC, int iAttribute, int* piValue);
@@ -305,17 +263,14 @@ package wgl
 // BOOL (APIENTRYP ptrwglDXObjectAccessNV)(HANDLE hObject, GLenum access);
 // BOOL (APIENTRYP ptrwglDXLockObjectsNV)(HANDLE hDevice, GLint count, HANDLE* hObjects);
 // BOOL (APIENTRYP ptrwglDXUnlockObjectsNV)(HANDLE hDevice, GLint count, HANDLE* hObjects);
-// //  NV_DX_interop2
 // //  NV_copy_image
 // BOOL (APIENTRYP ptrwglCopyImageSubDataNV)(HGLRC hSrcRC, GLuint srcName, GLenum srcTarget, GLint srcLevel, GLint srcX, GLint srcY, GLint srcZ, HGLRC hDstRC, GLuint dstName, GLenum dstTarget, GLint dstLevel, GLint dstX, GLint dstY, GLint dstZ, GLsizei width, GLsizei height, GLsizei depth);
-// //  NV_float_buffer
 // //  NV_gpu_affinity
 // BOOL (APIENTRYP ptrwglEnumGpusNV)(UINT iGpuIndex, HGPUNV* phGpu);
 // BOOL (APIENTRYP ptrwglEnumGpuDevicesNV)(HGPUNV hGpu, UINT iDeviceIndex, PGPU_DEVICE lpGpuDevice);
 // HDC (APIENTRYP ptrwglCreateAffinityDCNV)(HGPUNV* phGpuList);
 // BOOL (APIENTRYP ptrwglEnumGpusFromAffinityDCNV)(HDC hAffinityDC, UINT iGpuIndex, HGPUNV* hGpu);
 // BOOL (APIENTRYP ptrwglDeleteDCNV)(HDC hdc);
-// //  NV_multisample_coverage
 // //  NV_present_video
 // int (APIENTRYP ptrwglEnumerateVideoDevicesNV)(HDC hDC, HVIDEOOUTPUTDEVICENV* phDeviceList);
 // BOOL (APIENTRYP ptrwglBindVideoDeviceNV)(HDC hDC, unsigned int uVideoSlot, HVIDEOOUTPUTDEVICENV hVideoDevice, int* piAttribList);
@@ -373,7 +328,6 @@ package wgl
 // BOOL (APIENTRYP ptrwglUseFontBitmapsA)(HDC hDC, DWORD first, DWORD count, DWORD listBase);
 // BOOL (APIENTRYP ptrwglUseFontBitmapsW)(HDC hDC, DWORD first, DWORD count, DWORD listBase);
 // 
-// //  3DFX_multisample
 // //  3DL_stereo_control
 // BOOL gowglSetStereoEmitterState3DL(HDC hDC, UINT uState) {
 // 	return (*ptrwglSetStereoEmitterState3DL)(hDC, uState);
@@ -423,13 +377,10 @@ package wgl
 // HGLRC gowglCreateContextAttribsARB(HDC hDC, HGLRC hShareContext, int* attribList) {
 // 	return (*ptrwglCreateContextAttribsARB)(hDC, hShareContext, attribList);
 // }
-// //  ARB_create_context_profile
-// //  ARB_create_context_robustness
 // //  ARB_extensions_string
 // const char * gowglGetExtensionsStringARB(HDC hdc) {
 // 	return (*ptrwglGetExtensionsStringARB)(hdc);
 // }
-// //  ARB_framebuffer_sRGB
 // //  ARB_make_current_read
 // BOOL gowglMakeContextCurrentARB(HDC hDrawDC, HDC hReadDC, HGLRC hglrc) {
 // 	return (*ptrwglMakeContextCurrentARB)(hDrawDC, hReadDC, hglrc);
@@ -437,7 +388,6 @@ package wgl
 // HDC gowglGetCurrentReadDCARB() {
 // 	return (*ptrwglGetCurrentReadDCARB)();
 // }
-// //  ARB_multisample
 // //  ARB_pbuffer
 // HPBUFFERARB gowglCreatePbufferARB(HDC hDC, int iPixelFormat, int iWidth, int iHeight, int* piAttribList) {
 // 	return (*ptrwglCreatePbufferARB)(hDC, iPixelFormat, iWidth, iHeight, piAttribList);
@@ -464,7 +414,6 @@ package wgl
 // BOOL gowglChoosePixelFormatARB(HDC hdc, int* piAttribIList, FLOAT* pfAttribFList, UINT nMaxFormats, int* piFormats, UINT* nNumFormats) {
 // 	return (*ptrwglChoosePixelFormatARB)(hdc, piAttribIList, pfAttribFList, nMaxFormats, piFormats, nNumFormats);
 // }
-// //  ARB_pixel_format_float
 // //  ARB_render_texture
 // BOOL gowglBindTexImageARB(HPBUFFERARB hPbuffer, int iBuffer) {
 // 	return (*ptrwglBindTexImageARB)(hPbuffer, iBuffer);
@@ -475,8 +424,6 @@ package wgl
 // BOOL gowglSetPbufferAttribARB(HPBUFFERARB hPbuffer, int* piAttribList) {
 // 	return (*ptrwglSetPbufferAttribARB)(hPbuffer, piAttribList);
 // }
-// //  ATI_pixel_format_float
-// //  EXT_depth_float
 // //  EXT_display_color_table
 // GLboolean gowglCreateDisplayColorTableEXT(GLushort id) {
 // 	return (*ptrwglCreateDisplayColorTableEXT)(id);
@@ -494,7 +441,6 @@ package wgl
 // const char * gowglGetExtensionsStringEXT() {
 // 	return (*ptrwglGetExtensionsStringEXT)();
 // }
-// //  EXT_framebuffer_sRGB
 // //  EXT_make_current_read
 // BOOL gowglMakeContextCurrentEXT(HDC hDrawDC, HDC hReadDC, HGLRC hglrc) {
 // 	return (*ptrwglMakeContextCurrentEXT)(hDrawDC, hReadDC, hglrc);
@@ -502,7 +448,6 @@ package wgl
 // HDC gowglGetCurrentReadDCEXT() {
 // 	return (*ptrwglGetCurrentReadDCEXT)();
 // }
-// //  EXT_multisample
 // //  EXT_pbuffer
 // HPBUFFEREXT gowglCreatePbufferEXT(HDC hDC, int iPixelFormat, int iWidth, int iHeight, int* piAttribList) {
 // 	return (*ptrwglCreatePbufferEXT)(hDC, iPixelFormat, iWidth, iHeight, piAttribList);
@@ -529,7 +474,6 @@ package wgl
 // BOOL gowglChoosePixelFormatEXT(HDC hdc, int* piAttribIList, FLOAT* pfAttribFList, UINT nMaxFormats, int* piFormats, UINT* nNumFormats) {
 // 	return (*ptrwglChoosePixelFormatEXT)(hdc, piAttribIList, pfAttribFList, nMaxFormats, piFormats, nNumFormats);
 // }
-// //  EXT_pixel_format_packed_float
 // //  EXT_swap_control
 // BOOL gowglSwapIntervalEXT(int interval) {
 // 	return (*ptrwglSwapIntervalEXT)(interval);
@@ -537,7 +481,6 @@ package wgl
 // int gowglGetSwapIntervalEXT() {
 // 	return (*ptrwglGetSwapIntervalEXT)();
 // }
-// //  EXT_swap_control_tear
 // //  I3D_digital_video_control
 // BOOL gowglGetDigitalVideoParametersI3D(HDC hDC, int iAttribute, int* piValue) {
 // 	return (*ptrwglGetDigitalVideoParametersI3D)(hDC, iAttribute, piValue);
@@ -659,12 +602,10 @@ package wgl
 // BOOL gowglDXUnlockObjectsNV(HANDLE hDevice, GLint count, HANDLE* hObjects) {
 // 	return (*ptrwglDXUnlockObjectsNV)(hDevice, count, hObjects);
 // }
-// //  NV_DX_interop2
 // //  NV_copy_image
 // BOOL gowglCopyImageSubDataNV(HGLRC hSrcRC, GLuint srcName, GLenum srcTarget, GLint srcLevel, GLint srcX, GLint srcY, GLint srcZ, HGLRC hDstRC, GLuint dstName, GLenum dstTarget, GLint dstLevel, GLint dstX, GLint dstY, GLint dstZ, GLsizei width, GLsizei height, GLsizei depth) {
 // 	return (*ptrwglCopyImageSubDataNV)(hSrcRC, srcName, srcTarget, srcLevel, srcX, srcY, srcZ, hDstRC, dstName, dstTarget, dstLevel, dstX, dstY, dstZ, width, height, depth);
 // }
-// //  NV_float_buffer
 // //  NV_gpu_affinity
 // BOOL gowglEnumGpusNV(UINT iGpuIndex, HGPUNV* phGpu) {
 // 	return (*ptrwglEnumGpusNV)(iGpuIndex, phGpu);
@@ -681,7 +622,6 @@ package wgl
 // BOOL gowglDeleteDCNV(HDC hdc) {
 // 	return (*ptrwglDeleteDCNV)(hdc);
 // }
-// //  NV_multisample_coverage
 // //  NV_present_video
 // int gowglEnumerateVideoDevicesNV(HDC hDC, HVIDEOOUTPUTDEVICENV* phDeviceList) {
 // 	return (*ptrwglEnumerateVideoDevicesNV)(hDC, phDeviceList);
@@ -837,9 +777,6 @@ package wgl
 // 	return (*ptrwglUseFontBitmapsW)(hDC, first, count, listBase);
 // }
 // 
-// int init_3DFX_multisample() {
-// 	return 0;
-// }
 // int init_3DL_stereo_control() {
 // 	ptrwglSetStereoEmitterState3DL = gowglGetProcAddress("wglSetStereoEmitterState3DL");
 // 	if(ptrwglSetStereoEmitterState3DL == NULL) return 1;
@@ -882,18 +819,9 @@ package wgl
 // 	if(ptrwglCreateContextAttribsARB == NULL) return 1;
 // 	return 0;
 // }
-// int init_ARB_create_context_profile() {
-// 	return 0;
-// }
-// int init_ARB_create_context_robustness() {
-// 	return 0;
-// }
 // int init_ARB_extensions_string() {
 // 	ptrwglGetExtensionsStringARB = gowglGetProcAddress("wglGetExtensionsStringARB");
 // 	if(ptrwglGetExtensionsStringARB == NULL) return 1;
-// 	return 0;
-// }
-// int init_ARB_framebuffer_sRGB() {
 // 	return 0;
 // }
 // int init_ARB_make_current_read() {
@@ -901,9 +829,6 @@ package wgl
 // 	if(ptrwglMakeContextCurrentARB == NULL) return 1;
 // 	ptrwglGetCurrentReadDCARB = gowglGetProcAddress("wglGetCurrentReadDCARB");
 // 	if(ptrwglGetCurrentReadDCARB == NULL) return 1;
-// 	return 0;
-// }
-// int init_ARB_multisample() {
 // 	return 0;
 // }
 // int init_ARB_pbuffer() {
@@ -928,9 +853,6 @@ package wgl
 // 	if(ptrwglChoosePixelFormatARB == NULL) return 1;
 // 	return 0;
 // }
-// int init_ARB_pixel_format_float() {
-// 	return 0;
-// }
 // int init_ARB_render_texture() {
 // 	ptrwglBindTexImageARB = gowglGetProcAddress("wglBindTexImageARB");
 // 	if(ptrwglBindTexImageARB == NULL) return 1;
@@ -938,12 +860,6 @@ package wgl
 // 	if(ptrwglReleaseTexImageARB == NULL) return 1;
 // 	ptrwglSetPbufferAttribARB = gowglGetProcAddress("wglSetPbufferAttribARB");
 // 	if(ptrwglSetPbufferAttribARB == NULL) return 1;
-// 	return 0;
-// }
-// int init_ATI_pixel_format_float() {
-// 	return 0;
-// }
-// int init_EXT_depth_float() {
 // 	return 0;
 // }
 // int init_EXT_display_color_table() {
@@ -962,17 +878,11 @@ package wgl
 // 	if(ptrwglGetExtensionsStringEXT == NULL) return 1;
 // 	return 0;
 // }
-// int init_EXT_framebuffer_sRGB() {
-// 	return 0;
-// }
 // int init_EXT_make_current_read() {
 // 	ptrwglMakeContextCurrentEXT = gowglGetProcAddress("wglMakeContextCurrentEXT");
 // 	if(ptrwglMakeContextCurrentEXT == NULL) return 1;
 // 	ptrwglGetCurrentReadDCEXT = gowglGetProcAddress("wglGetCurrentReadDCEXT");
 // 	if(ptrwglGetCurrentReadDCEXT == NULL) return 1;
-// 	return 0;
-// }
-// int init_EXT_multisample() {
 // 	return 0;
 // }
 // int init_EXT_pbuffer() {
@@ -997,17 +907,11 @@ package wgl
 // 	if(ptrwglChoosePixelFormatEXT == NULL) return 1;
 // 	return 0;
 // }
-// int init_EXT_pixel_format_packed_float() {
-// 	return 0;
-// }
 // int init_EXT_swap_control() {
 // 	ptrwglSwapIntervalEXT = gowglGetProcAddress("wglSwapIntervalEXT");
 // 	if(ptrwglSwapIntervalEXT == NULL) return 1;
 // 	ptrwglGetSwapIntervalEXT = gowglGetProcAddress("wglGetSwapIntervalEXT");
 // 	if(ptrwglGetSwapIntervalEXT == NULL) return 1;
-// 	return 0;
-// }
-// int init_EXT_swap_control_tear() {
 // 	return 0;
 // }
 // int init_I3D_digital_video_control() {
@@ -1107,15 +1011,9 @@ package wgl
 // 	if(ptrwglDXUnlockObjectsNV == NULL) return 1;
 // 	return 0;
 // }
-// int init_NV_DX_interop2() {
-// 	return 0;
-// }
 // int init_NV_copy_image() {
 // 	ptrwglCopyImageSubDataNV = gowglGetProcAddress("wglCopyImageSubDataNV");
 // 	if(ptrwglCopyImageSubDataNV == NULL) return 1;
-// 	return 0;
-// }
-// int init_NV_float_buffer() {
 // 	return 0;
 // }
 // int init_NV_gpu_affinity() {
@@ -1129,9 +1027,6 @@ package wgl
 // 	if(ptrwglEnumGpusFromAffinityDCNV == NULL) return 1;
 // 	ptrwglDeleteDCNV = gowglGetProcAddress("wglDeleteDCNV");
 // 	if(ptrwglDeleteDCNV == NULL) return 1;
-// 	return 0;
-// }
-// int init_NV_multisample_coverage() {
 // 	return 0;
 // }
 // int init_NV_present_video() {
@@ -1657,8 +1552,6 @@ const (
 	WGL_VIDEO_OUT_STACKED_FIELDS_1_2 = 0x20CB
 	WGL_VIDEO_OUT_STACKED_FIELDS_2_1 = 0x20CC
 )
-// 3DFX_multisample
-
 // 3DL_stereo_control
 
 func SetStereoEmitterState3DL(hDC Pointer, uState uint32) int32 {
@@ -1712,17 +1605,11 @@ func RestoreBufferRegionARB(hRegion Pointer, x Int, y Int, width Int, height Int
 func CreateContextAttribsARB(hDC Pointer, hShareContext Pointer, attribList *Int) Pointer {
 	return (Pointer)(C.gowglCreateContextAttribsARB((C.HDC)(hDC), (C.HGLRC)(hShareContext), (*C.int)(attribList)))
 }
-// ARB_create_context_profile
-
-// ARB_create_context_robustness
-
 // ARB_extensions_string
 
 func GetExtensionsStringARB(hdc Pointer) *byte {
 	return (*byte)(C.gowglGetExtensionsStringARB((C.HDC)(hdc)))
 }
-// ARB_framebuffer_sRGB
-
 // ARB_make_current_read
 
 func MakeContextCurrentARB(hDrawDC Pointer, hReadDC Pointer, hglrc Pointer) int32 {
@@ -1731,8 +1618,6 @@ func MakeContextCurrentARB(hDrawDC Pointer, hReadDC Pointer, hglrc Pointer) int3
 func GetCurrentReadDCARB() Pointer {
 	return (Pointer)(C.gowglGetCurrentReadDCARB())
 }
-// ARB_multisample
-
 // ARB_pbuffer
 
 func CreatePbufferARB(hDC Pointer, iPixelFormat Int, iWidth Int, iHeight Int, piAttribList *Int) Pointer {
@@ -1761,8 +1646,6 @@ func GetPixelFormatAttribfvARB(hdc Pointer, iPixelFormat Int, iLayerPlane Int, n
 func ChoosePixelFormatARB(hdc Pointer, piAttribIList *Int, pfAttribFList *float32, nMaxFormats uint32, piFormats *Int, nNumFormats *uint32) int32 {
 	return (int32)(C.gowglChoosePixelFormatARB((C.HDC)(hdc), (*C.int)(piAttribIList), (*C.FLOAT)(pfAttribFList), (C.UINT)(nMaxFormats), (*C.int)(piFormats), (*C.UINT)(nNumFormats)))
 }
-// ARB_pixel_format_float
-
 // ARB_render_texture
 
 func BindTexImageARB(hPbuffer Pointer, iBuffer Int) int32 {
@@ -1774,10 +1657,6 @@ func ReleaseTexImageARB(hPbuffer Pointer, iBuffer Int) int32 {
 func SetPbufferAttribARB(hPbuffer Pointer, piAttribList *Int) int32 {
 	return (int32)(C.gowglSetPbufferAttribARB((C.HPBUFFERARB)(hPbuffer), (*C.int)(piAttribList)))
 }
-// ATI_pixel_format_float
-
-// EXT_depth_float
-
 // EXT_display_color_table
 
 func CreateDisplayColorTableEXT(id Ushort) Boolean {
@@ -1797,8 +1676,6 @@ func DestroyDisplayColorTableEXT(id Ushort)  {
 func GetExtensionsStringEXT() *byte {
 	return (*byte)(C.gowglGetExtensionsStringEXT())
 }
-// EXT_framebuffer_sRGB
-
 // EXT_make_current_read
 
 func MakeContextCurrentEXT(hDrawDC Pointer, hReadDC Pointer, hglrc Pointer) int32 {
@@ -1807,8 +1684,6 @@ func MakeContextCurrentEXT(hDrawDC Pointer, hReadDC Pointer, hglrc Pointer) int3
 func GetCurrentReadDCEXT() Pointer {
 	return (Pointer)(C.gowglGetCurrentReadDCEXT())
 }
-// EXT_multisample
-
 // EXT_pbuffer
 
 func CreatePbufferEXT(hDC Pointer, iPixelFormat Int, iWidth Int, iHeight Int, piAttribList *Int) Pointer {
@@ -1837,8 +1712,6 @@ func GetPixelFormatAttribfvEXT(hdc Pointer, iPixelFormat Int, iLayerPlane Int, n
 func ChoosePixelFormatEXT(hdc Pointer, piAttribIList *Int, pfAttribFList *float32, nMaxFormats uint32, piFormats *Int, nNumFormats *uint32) int32 {
 	return (int32)(C.gowglChoosePixelFormatEXT((C.HDC)(hdc), (*C.int)(piAttribIList), (*C.FLOAT)(pfAttribFList), (C.UINT)(nMaxFormats), (*C.int)(piFormats), (*C.UINT)(nNumFormats)))
 }
-// EXT_pixel_format_packed_float
-
 // EXT_swap_control
 
 func SwapIntervalEXT(interval Int) int32 {
@@ -1847,8 +1720,6 @@ func SwapIntervalEXT(interval Int) int32 {
 func GetSwapIntervalEXT() Int {
 	return (Int)(C.gowglGetSwapIntervalEXT())
 }
-// EXT_swap_control_tear
-
 // I3D_digital_video_control
 
 func GetDigitalVideoParametersI3D(hDC Pointer, iAttribute Int, piValue *Int) int32 {
@@ -1977,15 +1848,11 @@ func DXLockObjectsNV(hDevice Pointer, count Int, hObjects Pointer) int32 {
 func DXUnlockObjectsNV(hDevice Pointer, count Int, hObjects Pointer) int32 {
 	return (int32)(C.gowglDXUnlockObjectsNV((C.HANDLE)(hDevice), (C.GLint)(count), (C.HANDLE)(hObjects)))
 }
-// NV_DX_interop2
-
 // NV_copy_image
 
 func CopyImageSubDataNV(hSrcRC Pointer, srcName Uint, srcTarget Enum, srcLevel Int, srcX Int, srcY Int, srcZ Int, hDstRC Pointer, dstName Uint, dstTarget Enum, dstLevel Int, dstX Int, dstY Int, dstZ Int, width Sizei, height Sizei, depth Sizei) int32 {
 	return (int32)(C.gowglCopyImageSubDataNV((C.HGLRC)(hSrcRC), (C.GLuint)(srcName), (C.GLenum)(srcTarget), (C.GLint)(srcLevel), (C.GLint)(srcX), (C.GLint)(srcY), (C.GLint)(srcZ), (C.HGLRC)(hDstRC), (C.GLuint)(dstName), (C.GLenum)(dstTarget), (C.GLint)(dstLevel), (C.GLint)(dstX), (C.GLint)(dstY), (C.GLint)(dstZ), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLsizei)(depth)))
 }
-// NV_float_buffer
-
 // NV_gpu_affinity
 
 func EnumGpusNV(iGpuIndex uint32, phGpu Pointer) int32 {
@@ -2003,8 +1870,6 @@ func EnumGpusFromAffinityDCNV(hAffinityDC Pointer, iGpuIndex uint32, hGpu Pointe
 func DeleteDCNV(hdc Pointer) int32 {
 	return (int32)(C.gowglDeleteDCNV((C.HDC)(hdc)))
 }
-// NV_multisample_coverage
-
 // NV_present_video
 
 func EnumerateVideoDevicesNV(hDC Pointer, phDeviceList Pointer) Int {
@@ -2166,13 +2031,6 @@ func UseFontBitmapsA(hDC Pointer, first uint32, count uint32, listBase uint32) i
 func UseFontBitmapsW(hDC Pointer, first uint32, count uint32, listBase uint32) int32 {
 	return (int32)(C.gowglUseFontBitmapsW((C.HDC)(hDC), (C.DWORD)(first), (C.DWORD)(count), (C.DWORD)(listBase)))
 }
-func Init3dfxMultisample() error {
-	var ret C.int
-	if ret = C.init_3DFX_multisample(); ret != 0 {
-		return errors.New("unable to initialize 3DFX_multisample")
-	}
-	return nil
-}
 func Init3dlStereoControl() error {
 	var ret C.int
 	if ret = C.init_3DL_stereo_control(); ret != 0 {
@@ -2201,20 +2059,6 @@ func InitArbCreateContext() error {
 	}
 	return nil
 }
-func InitArbCreateContextProfile() error {
-	var ret C.int
-	if ret = C.init_ARB_create_context_profile(); ret != 0 {
-		return errors.New("unable to initialize ARB_create_context_profile")
-	}
-	return nil
-}
-func InitArbCreateContextRobustness() error {
-	var ret C.int
-	if ret = C.init_ARB_create_context_robustness(); ret != 0 {
-		return errors.New("unable to initialize ARB_create_context_robustness")
-	}
-	return nil
-}
 func InitArbExtensionsString() error {
 	var ret C.int
 	if ret = C.init_ARB_extensions_string(); ret != 0 {
@@ -2222,24 +2066,10 @@ func InitArbExtensionsString() error {
 	}
 	return nil
 }
-func InitArbFramebufferSrgb() error {
-	var ret C.int
-	if ret = C.init_ARB_framebuffer_sRGB(); ret != 0 {
-		return errors.New("unable to initialize ARB_framebuffer_sRGB")
-	}
-	return nil
-}
 func InitArbMakeCurrentRead() error {
 	var ret C.int
 	if ret = C.init_ARB_make_current_read(); ret != 0 {
 		return errors.New("unable to initialize ARB_make_current_read")
-	}
-	return nil
-}
-func InitArbMultisample() error {
-	var ret C.int
-	if ret = C.init_ARB_multisample(); ret != 0 {
-		return errors.New("unable to initialize ARB_multisample")
 	}
 	return nil
 }
@@ -2257,31 +2087,10 @@ func InitArbPixelFormat() error {
 	}
 	return nil
 }
-func InitArbPixelFormatFloat() error {
-	var ret C.int
-	if ret = C.init_ARB_pixel_format_float(); ret != 0 {
-		return errors.New("unable to initialize ARB_pixel_format_float")
-	}
-	return nil
-}
 func InitArbRenderTexture() error {
 	var ret C.int
 	if ret = C.init_ARB_render_texture(); ret != 0 {
 		return errors.New("unable to initialize ARB_render_texture")
-	}
-	return nil
-}
-func InitAtiPixelFormatFloat() error {
-	var ret C.int
-	if ret = C.init_ATI_pixel_format_float(); ret != 0 {
-		return errors.New("unable to initialize ATI_pixel_format_float")
-	}
-	return nil
-}
-func InitExtDepthFloat() error {
-	var ret C.int
-	if ret = C.init_EXT_depth_float(); ret != 0 {
-		return errors.New("unable to initialize EXT_depth_float")
 	}
 	return nil
 }
@@ -2299,24 +2108,10 @@ func InitExtExtensionsString() error {
 	}
 	return nil
 }
-func InitExtFramebufferSrgb() error {
-	var ret C.int
-	if ret = C.init_EXT_framebuffer_sRGB(); ret != 0 {
-		return errors.New("unable to initialize EXT_framebuffer_sRGB")
-	}
-	return nil
-}
 func InitExtMakeCurrentRead() error {
 	var ret C.int
 	if ret = C.init_EXT_make_current_read(); ret != 0 {
 		return errors.New("unable to initialize EXT_make_current_read")
-	}
-	return nil
-}
-func InitExtMultisample() error {
-	var ret C.int
-	if ret = C.init_EXT_multisample(); ret != 0 {
-		return errors.New("unable to initialize EXT_multisample")
 	}
 	return nil
 }
@@ -2334,24 +2129,10 @@ func InitExtPixelFormat() error {
 	}
 	return nil
 }
-func InitExtPixelFormatPackedFloat() error {
-	var ret C.int
-	if ret = C.init_EXT_pixel_format_packed_float(); ret != 0 {
-		return errors.New("unable to initialize EXT_pixel_format_packed_float")
-	}
-	return nil
-}
 func InitExtSwapControl() error {
 	var ret C.int
 	if ret = C.init_EXT_swap_control(); ret != 0 {
 		return errors.New("unable to initialize EXT_swap_control")
-	}
-	return nil
-}
-func InitExtSwapControlTear() error {
-	var ret C.int
-	if ret = C.init_EXT_swap_control_tear(); ret != 0 {
-		return errors.New("unable to initialize EXT_swap_control_tear")
 	}
 	return nil
 }
@@ -2404,13 +2185,6 @@ func InitNvDxInterop() error {
 	}
 	return nil
 }
-func InitNvDxInterop2() error {
-	var ret C.int
-	if ret = C.init_NV_DX_interop2(); ret != 0 {
-		return errors.New("unable to initialize NV_DX_interop2")
-	}
-	return nil
-}
 func InitNvCopyImage() error {
 	var ret C.int
 	if ret = C.init_NV_copy_image(); ret != 0 {
@@ -2418,24 +2192,10 @@ func InitNvCopyImage() error {
 	}
 	return nil
 }
-func InitNvFloatBuffer() error {
-	var ret C.int
-	if ret = C.init_NV_float_buffer(); ret != 0 {
-		return errors.New("unable to initialize NV_float_buffer")
-	}
-	return nil
-}
 func InitNvGpuAffinity() error {
 	var ret C.int
 	if ret = C.init_NV_gpu_affinity(); ret != 0 {
 		return errors.New("unable to initialize NV_gpu_affinity")
-	}
-	return nil
-}
-func InitNvMultisampleCoverage() error {
-	var ret C.int
-	if ret = C.init_NV_multisample_coverage(); ret != 0 {
-		return errors.New("unable to initialize NV_multisample_coverage")
 	}
 	return nil
 }

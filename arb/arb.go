@@ -10,23 +10,17 @@
 // 
 // ARB_cl_event: http://www.opengl.org/registry/specs/ARB/cl_event.txt
 // 
+// ARB_clear_buffer_object: http://www.opengl.org/registry/specs/ARB/clear_buffer_object.txt
+// 
 // ARB_color_buffer_float: http://www.opengl.org/registry/specs/ARB/color_buffer_float.txt
 // 
-// ARB_compatibility: http://www.opengl.org/registry/specs/ARB/compatibility.txt
-// 
-// ARB_compressed_texture_pixel_storage: http://www.opengl.org/registry/specs/ARB/compressed_texture_pixel_storage.txt
-// 
-// ARB_conservative_depth: http://www.opengl.org/registry/specs/ARB/conservative_depth.txt
+// ARB_compute_shader: http://www.opengl.org/registry/specs/ARB/compute_shader.txt
 // 
 // ARB_copy_buffer: http://www.opengl.org/registry/specs/ARB/copy_buffer.txt
 // 
+// ARB_copy_image: http://www.opengl.org/registry/specs/ARB/copy_image.txt
+// 
 // ARB_debug_output: http://www.opengl.org/registry/specs/ARB/debug_output.txt
-// 
-// ARB_depth_buffer_float: http://www.opengl.org/registry/specs/ARB/depth_buffer_float.txt
-// 
-// ARB_depth_clamp: http://www.opengl.org/registry/specs/ARB/depth_clamp.txt
-// 
-// ARB_depth_texture: http://www.opengl.org/registry/specs/ARB/depth_texture.txt
 // 
 // ARB_draw_buffers: http://www.opengl.org/registry/specs/ARB/draw_buffers.txt
 // 
@@ -38,41 +32,29 @@
 // 
 // ARB_draw_instanced: http://www.opengl.org/registry/specs/ARB/draw_instanced.txt
 // 
-// ARB_explicit_attrib_location: http://www.opengl.org/registry/specs/ARB/explicit_attrib_location.txt
-// 
-// ARB_fragment_coord_conventions: http://www.opengl.org/registry/specs/ARB/fragment_coord_conventions.txt
-// 
-// ARB_fragment_program: http://www.opengl.org/registry/specs/ARB/fragment_program.txt
-// 
-// ARB_fragment_program_shadow: http://www.opengl.org/registry/specs/ARB/fragment_program_shadow.txt
-// 
-// ARB_fragment_shader: http://www.opengl.org/registry/specs/ARB/fragment_shader.txt
+// ARB_framebuffer_no_attachments: http://www.opengl.org/registry/specs/ARB/framebuffer_no_attachments.txt
 // 
 // ARB_framebuffer_object: http://www.opengl.org/registry/specs/ARB/framebuffer_object.txt
-// 
-// ARB_framebuffer_sRGB: http://www.opengl.org/registry/specs/ARB/framebuffer_sRGB.txt
 // 
 // ARB_geometry_shader4: http://www.opengl.org/registry/specs/ARB/geometry_shader4.txt
 // 
 // ARB_get_program_binary: http://www.opengl.org/registry/specs/ARB/get_program_binary.txt
 // 
-// ARB_gpu_shader5: http://www.opengl.org/registry/specs/ARB/gpu_shader5.txt
-// 
 // ARB_gpu_shader_fp64: http://www.opengl.org/registry/specs/ARB/gpu_shader_fp64.txt
-// 
-// ARB_half_float_pixel: http://www.opengl.org/registry/specs/ARB/half_float_pixel.txt
-// 
-// ARB_half_float_vertex: http://www.opengl.org/registry/specs/ARB/half_float_vertex.txt
 // 
 // ARB_instanced_arrays: http://www.opengl.org/registry/specs/ARB/instanced_arrays.txt
 // 
 // ARB_internalformat_query: http://www.opengl.org/registry/specs/ARB/internalformat_query.txt
 // 
-// ARB_map_buffer_alignment: http://www.opengl.org/registry/specs/ARB/map_buffer_alignment.txt
+// ARB_internalformat_query2: http://www.opengl.org/registry/specs/ARB/internalformat_query2.txt
+// 
+// ARB_invalidate_subdata: http://www.opengl.org/registry/specs/ARB/invalidate_subdata.txt
 // 
 // ARB_map_buffer_range: http://www.opengl.org/registry/specs/ARB/map_buffer_range.txt
 // 
 // ARB_matrix_palette: http://www.opengl.org/registry/specs/ARB/matrix_palette.txt
+// 
+// ARB_multi_draw_indirect: http://www.opengl.org/registry/specs/ARB/multi_draw_indirect.txt
 // 
 // ARB_multisample: http://www.opengl.org/registry/specs/ARB/multisample.txt
 // 
@@ -80,13 +62,9 @@
 // 
 // ARB_occlusion_query: http://www.opengl.org/registry/specs/ARB/occlusion_query.txt
 // 
-// ARB_occlusion_query2: http://www.opengl.org/registry/specs/ARB/occlusion_query2.txt
-// 
-// ARB_pixel_buffer_object: http://www.opengl.org/registry/specs/ARB/pixel_buffer_object.txt
-// 
 // ARB_point_parameters: http://www.opengl.org/registry/specs/ARB/point_parameters.txt
 // 
-// ARB_point_sprite: http://www.opengl.org/registry/specs/ARB/point_sprite.txt
+// ARB_program_interface_query: http://www.opengl.org/registry/specs/ARB/program_interface_query.txt
 // 
 // ARB_provoking_vertex: http://www.opengl.org/registry/specs/ARB/provoking_vertex.txt
 // 
@@ -96,85 +74,37 @@
 // 
 // ARB_sampler_objects: http://www.opengl.org/registry/specs/ARB/sampler_objects.txt
 // 
-// ARB_seamless_cube_map: http://www.opengl.org/registry/specs/ARB/seamless_cube_map.txt
-// 
 // ARB_separate_shader_objects: http://www.opengl.org/registry/specs/ARB/separate_shader_objects.txt
 // 
 // ARB_shader_atomic_counters: http://www.opengl.org/registry/specs/ARB/shader_atomic_counters.txt
-// 
-// ARB_shader_bit_encoding: http://www.opengl.org/registry/specs/ARB/shader_bit_encoding.txt
 // 
 // ARB_shader_image_load_store: http://www.opengl.org/registry/specs/ARB/shader_image_load_store.txt
 // 
 // ARB_shader_objects: http://www.opengl.org/registry/specs/ARB/shader_objects.txt
 // 
-// ARB_shader_stencil_export: http://www.opengl.org/registry/specs/ARB/shader_stencil_export.txt
+// ARB_shader_storage_buffer_object: http://www.opengl.org/registry/specs/ARB/shader_storage_buffer_object.txt
 // 
 // ARB_shader_subroutine: http://www.opengl.org/registry/specs/ARB/shader_subroutine.txt
 // 
-// ARB_shader_texture_lod: http://www.opengl.org/registry/specs/ARB/shader_texture_lod.txt
-// 
-// ARB_shading_language_100: http://www.opengl.org/registry/specs/ARB/shading_language_100.txt
-// 
-// ARB_shading_language_420pack: http://www.opengl.org/registry/specs/ARB/shading_language_420pack.txt
-// 
 // ARB_shading_language_include: http://www.opengl.org/registry/specs/ARB/shading_language_include.txt
-// 
-// ARB_shading_language_packing: http://www.opengl.org/registry/specs/ARB/shading_language_packing.txt
-// 
-// ARB_shadow: http://www.opengl.org/registry/specs/ARB/shadow.txt
-// 
-// ARB_shadow_ambient: http://www.opengl.org/registry/specs/ARB/shadow_ambient.txt
 // 
 // ARB_sync: http://www.opengl.org/registry/specs/ARB/sync.txt
 // 
 // ARB_tessellation_shader: http://www.opengl.org/registry/specs/ARB/tessellation_shader.txt
 // 
-// ARB_texture_border_clamp: http://www.opengl.org/registry/specs/ARB/texture_border_clamp.txt
-// 
 // ARB_texture_buffer_object: http://www.opengl.org/registry/specs/ARB/texture_buffer_object.txt
 // 
-// ARB_texture_buffer_object_rgb32: http://www.opengl.org/registry/specs/ARB/texture_buffer_object_rgb32.txt
+// ARB_texture_buffer_range: http://www.opengl.org/registry/specs/ARB/texture_buffer_range.txt
 // 
 // ARB_texture_compression: http://www.opengl.org/registry/specs/ARB/texture_compression.txt
 // 
-// ARB_texture_compression_bptc: http://www.opengl.org/registry/specs/ARB/texture_compression_bptc.txt
-// 
-// ARB_texture_compression_rgtc: http://www.opengl.org/registry/specs/ARB/texture_compression_rgtc.txt
-// 
-// ARB_texture_cube_map: http://www.opengl.org/registry/specs/ARB/texture_cube_map.txt
-// 
-// ARB_texture_cube_map_array: http://www.opengl.org/registry/specs/ARB/texture_cube_map_array.txt
-// 
-// ARB_texture_env_add: http://www.opengl.org/registry/specs/ARB/texture_env_add.txt
-// 
-// ARB_texture_env_combine: http://www.opengl.org/registry/specs/ARB/texture_env_combine.txt
-// 
-// ARB_texture_env_crossbar: http://www.opengl.org/registry/specs/ARB/texture_env_crossbar.txt
-// 
-// ARB_texture_env_dot3: http://www.opengl.org/registry/specs/ARB/texture_env_dot3.txt
-// 
-// ARB_texture_float: http://www.opengl.org/registry/specs/ARB/texture_float.txt
-// 
-// ARB_texture_gather: http://www.opengl.org/registry/specs/ARB/texture_gather.txt
-// 
-// ARB_texture_mirrored_repeat: http://www.opengl.org/registry/specs/ARB/texture_mirrored_repeat.txt
-// 
 // ARB_texture_multisample: http://www.opengl.org/registry/specs/ARB/texture_multisample.txt
-// 
-// ARB_texture_non_power_of_two: http://www.opengl.org/registry/specs/ARB/texture_non_power_of_two.txt
-// 
-// ARB_texture_query_lod: http://www.opengl.org/registry/specs/ARB/texture_query_lod.txt
-// 
-// ARB_texture_rectangle: http://www.opengl.org/registry/specs/ARB/texture_rectangle.txt
-// 
-// ARB_texture_rg: http://www.opengl.org/registry/specs/ARB/texture_rg.txt
-// 
-// ARB_texture_rgb10_a2ui: http://www.opengl.org/registry/specs/ARB/texture_rgb10_a2ui.txt
 // 
 // ARB_texture_storage: http://www.opengl.org/registry/specs/ARB/texture_storage.txt
 // 
-// ARB_texture_swizzle: http://www.opengl.org/registry/specs/ARB/texture_swizzle.txt
+// ARB_texture_storage_multisample: http://www.opengl.org/registry/specs/ARB/texture_storage_multisample.txt
+// 
+// ARB_texture_view: http://www.opengl.org/registry/specs/ARB/texture_view.txt
 // 
 // ARB_timer_query: http://www.opengl.org/registry/specs/ARB/timer_query.txt
 // 
@@ -188,11 +118,11 @@
 // 
 // ARB_uniform_buffer_object: http://www.opengl.org/registry/specs/ARB/uniform_buffer_object.txt
 // 
-// ARB_vertex_array_bgra: http://www.opengl.org/registry/specs/ARB/vertex_array_bgra.txt
-// 
 // ARB_vertex_array_object: http://www.opengl.org/registry/specs/ARB/vertex_array_object.txt
 // 
 // ARB_vertex_attrib_64bit: http://www.opengl.org/registry/specs/ARB/vertex_attrib_64bit.txt
+// 
+// ARB_vertex_attrib_binding: http://www.opengl.org/registry/specs/ARB/vertex_attrib_binding.txt
 // 
 // ARB_vertex_blend: http://www.opengl.org/registry/specs/ARB/vertex_blend.txt
 // 
@@ -348,6 +278,10 @@ package arb
 // typedef void (APIENTRY *GLDEBUGPROCAMD)(GLuint id,GLenum category,GLenum severity,GLsizei length,const GLchar *message,GLvoid *userParam);
 // #endif
 // 
+// #ifndef GL_KHR_debug
+// typedef void (APIENTRY *GLDEBUGPROC)(GLenum source,GLenum type,GLuint id,GLenum severity,GLsizei length,const GLchar *message,GLvoid *userParam);
+// #endif
+// 
 // #ifndef GL_NV_vdpau_interop
 // typedef GLintptr GLvdpauSurfaceNV;
 // #endif
@@ -380,29 +314,33 @@ package arb
 // void (APIENTRYP ptrglDepthRangef)(GLfloat n, GLfloat f);
 // void (APIENTRYP ptrglClearDepthf)(GLfloat d);
 // //  ARB_base_instance
-// void (APIENTRYP ptrglDrawArraysInstancedBaseInstance)(GLenum mode, GLint first, GLsizei count, GLsizei primcount, GLuint baseinstance);
-// void (APIENTRYP ptrglDrawElementsInstancedBaseInstance)(GLenum mode, GLsizei count, GLenum type, void* indices, GLsizei primcount, GLuint baseinstance);
-// void (APIENTRYP ptrglDrawElementsInstancedBaseVertexBaseInstance)(GLenum mode, GLsizei count, GLenum type, void* indices, GLsizei primcount, GLint basevertex, GLuint baseinstance);
+// void (APIENTRYP ptrglDrawArraysInstancedBaseInstance)(GLenum mode, GLint first, GLsizei count, GLsizei instancecount, GLuint baseinstance);
+// void (APIENTRYP ptrglDrawElementsInstancedBaseInstance)(GLenum mode, GLsizei count, GLenum type, void* indices, GLsizei instancecount, GLuint baseinstance);
+// void (APIENTRYP ptrglDrawElementsInstancedBaseVertexBaseInstance)(GLenum mode, GLsizei count, GLenum type, void* indices, GLsizei instancecount, GLint basevertex, GLuint baseinstance);
 // //  ARB_blend_func_extended
 // void (APIENTRYP ptrglBindFragDataLocationIndexed)(GLuint program, GLuint colorNumber, GLuint index, GLchar* name);
 // GLint (APIENTRYP ptrglGetFragDataIndex)(GLuint program, GLchar* name);
 // //  ARB_cl_event
 // GLsync (APIENTRYP ptrglCreateSyncFromCLeventARB)(struct _cl_context * context, struct _cl_event * event, GLbitfield flags);
+// //  ARB_clear_buffer_object
+// void (APIENTRYP ptrglClearBufferData)(GLenum target, GLenum internalformat, GLenum format, GLenum type, void* data);
+// void (APIENTRYP ptrglClearBufferSubData)(GLenum target, GLenum internalformat, GLintptr offset, GLsizeiptr size, GLenum format, GLenum type, void* data);
+// void (APIENTRYP ptrglClearNamedBufferDataEXT)(GLuint buffer, GLenum internalformat, GLenum format, GLenum type, void* data);
+// void (APIENTRYP ptrglClearNamedBufferSubDataEXT)(GLuint buffer, GLenum internalformat, GLsizeiptr offset, GLsizeiptr size, GLenum format, GLenum type, void* data);
 // //  ARB_color_buffer_float
 // void (APIENTRYP ptrglClampColorARB)(GLenum target, GLenum clamp);
-// //  ARB_compatibility
-// //  ARB_compressed_texture_pixel_storage
-// //  ARB_conservative_depth
+// //  ARB_compute_shader
+// void (APIENTRYP ptrglDispatchCompute)(GLuint num_groups_x, GLuint num_groups_y, GLuint num_groups_z);
+// void (APIENTRYP ptrglDispatchComputeIndirect)(GLintptr indirect);
 // //  ARB_copy_buffer
 // void (APIENTRYP ptrglCopyBufferSubData)(GLenum readTarget, GLenum writeTarget, GLintptr readOffset, GLintptr writeOffset, GLsizeiptr size);
+// //  ARB_copy_image
+// void (APIENTRYP ptrglCopyImageSubData)(GLuint srcName, GLenum srcTarget, GLint srcLevel, GLint srcX, GLint srcY, GLint srcZ, GLuint dstName, GLenum dstTarget, GLint dstLevel, GLint dstX, GLint dstY, GLint dstZ, GLsizei srcWidth, GLsizei srcHeight, GLsizei srcDepth);
 // //  ARB_debug_output
 // void (APIENTRYP ptrglDebugMessageControlARB)(GLenum source, GLenum type, GLenum severity, GLsizei count, GLuint* ids, GLboolean enabled);
 // void (APIENTRYP ptrglDebugMessageInsertARB)(GLenum source, GLenum type, GLuint id, GLenum severity, GLsizei length, GLchar* buf);
 // void (APIENTRYP ptrglDebugMessageCallbackARB)(GLDEBUGPROCARB callback, GLvoid* userParam);
 // GLuint (APIENTRYP ptrglGetDebugMessageLogARB)(GLuint count, GLsizei bufsize, GLenum* sources, GLenum* types, GLuint* ids, GLenum* severities, GLsizei* lengths, GLchar* messageLog);
-// //  ARB_depth_buffer_float
-// //  ARB_depth_clamp
-// //  ARB_depth_texture
 // //  ARB_draw_buffers
 // void (APIENTRYP ptrglDrawBuffersARB)(GLsizei n, GLenum* bufs);
 // //  ARB_draw_buffers_blend
@@ -413,19 +351,19 @@ package arb
 // //  ARB_draw_elements_base_vertex
 // void (APIENTRYP ptrglDrawElementsBaseVertex)(GLenum mode, GLsizei count, GLenum type, GLvoid* indices, GLint basevertex);
 // void (APIENTRYP ptrglDrawRangeElementsBaseVertex)(GLenum mode, GLuint start, GLuint end, GLsizei count, GLenum type, GLvoid* indices, GLint basevertex);
-// void (APIENTRYP ptrglDrawElementsInstancedBaseVertex)(GLenum mode, GLsizei count, GLenum type, GLvoid* indices, GLsizei primcount, GLint basevertex);
-// void (APIENTRYP ptrglMultiDrawElementsBaseVertex)(GLenum mode, GLsizei* count, GLenum type, GLvoid* const* indices, GLsizei primcount, GLint* basevertex);
+// void (APIENTRYP ptrglDrawElementsInstancedBaseVertex)(GLenum mode, GLsizei count, GLenum type, GLvoid* indices, GLsizei instancecount, GLint basevertex);
+// void (APIENTRYP ptrglMultiDrawElementsBaseVertex)(GLenum mode, GLsizei* count, GLenum type, GLvoid* const* indices, GLsizei drawcount, GLint* basevertex);
 // //  ARB_draw_indirect
 // void (APIENTRYP ptrglDrawArraysIndirect)(GLenum mode, GLvoid* indirect);
 // void (APIENTRYP ptrglDrawElementsIndirect)(GLenum mode, GLenum type, GLvoid* indirect);
 // //  ARB_draw_instanced
 // void (APIENTRYP ptrglDrawArraysInstancedARB)(GLenum mode, GLint first, GLsizei count, GLsizei primcount);
 // void (APIENTRYP ptrglDrawElementsInstancedARB)(GLenum mode, GLsizei count, GLenum type, GLvoid* indices, GLsizei primcount);
-// //  ARB_explicit_attrib_location
-// //  ARB_fragment_coord_conventions
-// //  ARB_fragment_program
-// //  ARB_fragment_program_shadow
-// //  ARB_fragment_shader
+// //  ARB_framebuffer_no_attachments
+// void (APIENTRYP ptrglFramebufferParameteri)(GLenum target, GLenum pname, GLint param);
+// void (APIENTRYP ptrglGetFramebufferParameteriv)(GLenum target, GLenum pname, GLint* params);
+// void (APIENTRYP ptrglNamedFramebufferParameteriEXT)(GLuint framebuffer, GLenum pname, GLint param);
+// void (APIENTRYP ptrglGetNamedFramebufferParameterivEXT)(GLuint framebuffer, GLenum pname, GLint* params);
 // //  ARB_framebuffer_object
 // GLboolean (APIENTRYP ptrglIsRenderbuffer)(GLuint renderbuffer);
 // void (APIENTRYP ptrglBindRenderbuffer)(GLenum target, GLuint renderbuffer);
@@ -447,7 +385,6 @@ package arb
 // void (APIENTRYP ptrglBlitFramebuffer)(GLint srcX0, GLint srcY0, GLint srcX1, GLint srcY1, GLint dstX0, GLint dstY0, GLint dstX1, GLint dstY1, GLbitfield mask, GLenum filter);
 // void (APIENTRYP ptrglRenderbufferStorageMultisample)(GLenum target, GLsizei samples, GLenum internalformat, GLsizei width, GLsizei height);
 // void (APIENTRYP ptrglFramebufferTextureLayer)(GLenum target, GLenum attachment, GLuint texture, GLint level, GLint layer);
-// //  ARB_framebuffer_sRGB
 // //  ARB_geometry_shader4
 // void (APIENTRYP ptrglProgramParameteriARB)(GLuint program, GLenum pname, GLint value);
 // void (APIENTRYP ptrglFramebufferTextureARB)(GLenum target, GLenum attachment, GLuint texture, GLint level);
@@ -457,7 +394,6 @@ package arb
 // void (APIENTRYP ptrglGetProgramBinary)(GLuint program, GLsizei bufSize, GLsizei* length, GLenum* binaryFormat, GLvoid* binary);
 // void (APIENTRYP ptrglProgramBinary)(GLuint program, GLenum binaryFormat, GLvoid* binary, GLsizei length);
 // void (APIENTRYP ptrglProgramParameteri)(GLuint program, GLenum pname, GLint value);
-// //  ARB_gpu_shader5
 // //  ARB_gpu_shader_fp64
 // void (APIENTRYP ptrglUniform1d)(GLint location, GLdouble x);
 // void (APIENTRYP ptrglUniform2d)(GLint location, GLdouble x, GLdouble y);
@@ -477,13 +413,19 @@ package arb
 // void (APIENTRYP ptrglUniformMatrix4x2dv)(GLint location, GLsizei count, GLboolean transpose, GLdouble* value);
 // void (APIENTRYP ptrglUniformMatrix4x3dv)(GLint location, GLsizei count, GLboolean transpose, GLdouble* value);
 // void (APIENTRYP ptrglGetUniformdv)(GLuint program, GLint location, GLdouble* params);
-// //  ARB_half_float_pixel
-// //  ARB_half_float_vertex
 // //  ARB_instanced_arrays
 // void (APIENTRYP ptrglVertexAttribDivisorARB)(GLuint index, GLuint divisor);
 // //  ARB_internalformat_query
 // void (APIENTRYP ptrglGetInternalformativ)(GLenum target, GLenum internalformat, GLenum pname, GLsizei bufSize, GLint* params);
-// //  ARB_map_buffer_alignment
+// //  ARB_internalformat_query2
+// void (APIENTRYP ptrglGetInternalformati64v)(GLenum target, GLenum internalformat, GLenum pname, GLsizei bufSize, GLint64* params);
+// //  ARB_invalidate_subdata
+// void (APIENTRYP ptrglInvalidateTexSubImage)(GLuint texture, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth);
+// void (APIENTRYP ptrglInvalidateTexImage)(GLuint texture, GLint level);
+// void (APIENTRYP ptrglInvalidateBufferSubData)(GLuint buffer, GLintptr offset, GLsizeiptr length);
+// void (APIENTRYP ptrglInvalidateBufferData)(GLuint buffer);
+// void (APIENTRYP ptrglInvalidateFramebuffer)(GLenum target, GLsizei numAttachments, GLenum* attachments);
+// void (APIENTRYP ptrglInvalidateSubFramebuffer)(GLenum target, GLsizei numAttachments, GLenum* attachments, GLint x, GLint y, GLsizei width, GLsizei height);
 // //  ARB_map_buffer_range
 // GLvoid* (APIENTRYP ptrglMapBufferRange)(GLenum target, GLintptr offset, GLsizeiptr length, GLbitfield access);
 // void (APIENTRYP ptrglFlushMappedBufferRange)(GLenum target, GLintptr offset, GLsizeiptr length);
@@ -493,6 +435,9 @@ package arb
 // void (APIENTRYP ptrglMatrixIndexusvARB)(GLint size, GLushort* indices);
 // void (APIENTRYP ptrglMatrixIndexuivARB)(GLint size, GLuint* indices);
 // void (APIENTRYP ptrglMatrixIndexPointerARB)(GLint size, GLenum type, GLsizei stride, GLvoid* pointer);
+// //  ARB_multi_draw_indirect
+// void (APIENTRYP ptrglMultiDrawArraysIndirect)(GLenum mode, void* indirect, GLsizei drawcount, GLsizei stride);
+// void (APIENTRYP ptrglMultiDrawElementsIndirect)(GLenum mode, GLenum type, void* indirect, GLsizei drawcount, GLsizei stride);
 // //  ARB_multisample
 // void (APIENTRYP ptrglSampleCoverageARB)(GLfloat value, GLboolean invert);
 // //  ARB_multitexture
@@ -539,12 +484,16 @@ package arb
 // void (APIENTRYP ptrglGetQueryivARB)(GLenum target, GLenum pname, GLint* params);
 // void (APIENTRYP ptrglGetQueryObjectivARB)(GLuint id, GLenum pname, GLint* params);
 // void (APIENTRYP ptrglGetQueryObjectuivARB)(GLuint id, GLenum pname, GLuint* params);
-// //  ARB_occlusion_query2
-// //  ARB_pixel_buffer_object
 // //  ARB_point_parameters
 // void (APIENTRYP ptrglPointParameterfARB)(GLenum pname, GLfloat param);
 // void (APIENTRYP ptrglPointParameterfvARB)(GLenum pname, GLfloat* params);
-// //  ARB_point_sprite
+// //  ARB_program_interface_query
+// void (APIENTRYP ptrglGetProgramInterfaceiv)(GLuint program, GLenum programInterface, GLenum pname, GLint* params);
+// GLuint (APIENTRYP ptrglGetProgramResourceIndex)(GLuint program, GLenum programInterface, GLchar* name);
+// void (APIENTRYP ptrglGetProgramResourceName)(GLuint program, GLenum programInterface, GLuint index, GLsizei bufSize, GLsizei* length, GLchar* name);
+// void (APIENTRYP ptrglGetProgramResourceiv)(GLuint program, GLenum programInterface, GLuint index, GLsizei propCount, GLenum* props, GLsizei bufSize, GLsizei* length, GLint* params);
+// GLint (APIENTRYP ptrglGetProgramResourceLocation)(GLuint program, GLenum programInterface, GLchar* name);
+// GLint (APIENTRYP ptrglGetProgramResourceLocationIndex)(GLuint program, GLenum programInterface, GLchar* name);
 // //  ARB_provoking_vertex
 // void (APIENTRYP ptrglProvokingVertex)(GLenum mode);
 // //  ARB_robustness
@@ -585,7 +534,6 @@ package arb
 // void (APIENTRYP ptrglGetSamplerParameterIiv)(GLuint sampler, GLenum pname, GLint* params);
 // void (APIENTRYP ptrglGetSamplerParameterfv)(GLuint sampler, GLenum pname, GLfloat* params);
 // void (APIENTRYP ptrglGetSamplerParameterIuiv)(GLuint sampler, GLenum pname, GLuint* params);
-// //  ARB_seamless_cube_map
 // //  ARB_separate_shader_objects
 // void (APIENTRYP ptrglUseProgramStages)(GLuint pipeline, GLbitfield stages, GLuint program);
 // void (APIENTRYP ptrglActiveShaderProgram)(GLuint pipeline, GLuint program);
@@ -649,7 +597,6 @@ package arb
 // void (APIENTRYP ptrglGetProgramPipelineInfoLog)(GLuint pipeline, GLsizei bufSize, GLsizei* length, GLchar* infoLog);
 // //  ARB_shader_atomic_counters
 // void (APIENTRYP ptrglGetActiveAtomicCounterBufferiv)(GLuint program, GLuint bufferIndex, GLenum pname, GLint* params);
-// //  ARB_shader_bit_encoding
 // //  ARB_shader_image_load_store
 // void (APIENTRYP ptrglBindImageTexture)(GLuint unit, GLuint texture, GLint level, GLboolean layered, GLint layer, GLenum access, GLenum format);
 // void (APIENTRYP ptrglMemoryBarrier)(GLbitfield barriers);
@@ -693,7 +640,8 @@ package arb
 // void (APIENTRYP ptrglGetUniformfvARB)(GLhandleARB programObj, GLint location, GLfloat* params);
 // void (APIENTRYP ptrglGetUniformivARB)(GLhandleARB programObj, GLint location, GLint* params);
 // void (APIENTRYP ptrglGetShaderSourceARB)(GLhandleARB obj, GLsizei maxLength, GLsizei* length, GLcharARB* source);
-// //  ARB_shader_stencil_export
+// //  ARB_shader_storage_buffer_object
+// void (APIENTRYP ptrglShaderStorageBlockBinding)(GLuint program, GLuint storageBlockIndex, GLuint storageBlockBinding);
 // //  ARB_shader_subroutine
 // GLint (APIENTRYP ptrglGetSubroutineUniformLocation)(GLuint program, GLenum shadertype, GLchar* name);
 // GLuint (APIENTRYP ptrglGetSubroutineIndex)(GLuint program, GLenum shadertype, GLchar* name);
@@ -703,9 +651,6 @@ package arb
 // void (APIENTRYP ptrglUniformSubroutinesuiv)(GLenum shadertype, GLsizei count, GLuint* indices);
 // void (APIENTRYP ptrglGetUniformSubroutineuiv)(GLenum shadertype, GLint location, GLuint* params);
 // void (APIENTRYP ptrglGetProgramStageiv)(GLuint program, GLenum shadertype, GLenum pname, GLint* values);
-// //  ARB_shader_texture_lod
-// //  ARB_shading_language_100
-// //  ARB_shading_language_420pack
 // //  ARB_shading_language_include
 // void (APIENTRYP ptrglNamedStringARB)(GLenum type, GLint namelen, GLchar* name, GLint stringlen, GLchar* string);
 // void (APIENTRYP ptrglDeleteNamedStringARB)(GLint namelen, GLchar* name);
@@ -713,9 +658,6 @@ package arb
 // GLboolean (APIENTRYP ptrglIsNamedStringARB)(GLint namelen, GLchar* name);
 // void (APIENTRYP ptrglGetNamedStringARB)(GLint namelen, GLchar* name, GLsizei bufSize, GLint* stringlen, GLchar* string);
 // void (APIENTRYP ptrglGetNamedStringivARB)(GLint namelen, GLchar* name, GLenum pname, GLint* params);
-// //  ARB_shading_language_packing
-// //  ARB_shadow
-// //  ARB_shadow_ambient
 // //  ARB_sync
 // GLsync (APIENTRYP ptrglFenceSync)(GLenum condition, GLbitfield flags);
 // GLboolean (APIENTRYP ptrglIsSync)(GLsync sync);
@@ -727,10 +669,11 @@ package arb
 // //  ARB_tessellation_shader
 // void (APIENTRYP ptrglPatchParameteri)(GLenum pname, GLint value);
 // void (APIENTRYP ptrglPatchParameterfv)(GLenum pname, GLfloat* values);
-// //  ARB_texture_border_clamp
 // //  ARB_texture_buffer_object
 // void (APIENTRYP ptrglTexBufferARB)(GLenum target, GLenum internalformat, GLuint buffer);
-// //  ARB_texture_buffer_object_rgb32
+// //  ARB_texture_buffer_range
+// void (APIENTRYP ptrglTexBufferRange)(GLenum target, GLenum internalformat, GLuint buffer, GLintptr offset, GLsizeiptr size);
+// void (APIENTRYP ptrglTextureBufferRangeEXT)(GLuint texture, GLenum target, GLenum internalformat, GLuint buffer, GLintptr offset, GLsizeiptr size);
 // //  ARB_texture_compression
 // void (APIENTRYP ptrglCompressedTexImage3DARB)(GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLsizei depth, GLint border, GLsizei imageSize, GLvoid* data);
 // void (APIENTRYP ptrglCompressedTexImage2DARB)(GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLint border, GLsizei imageSize, GLvoid* data);
@@ -739,27 +682,11 @@ package arb
 // void (APIENTRYP ptrglCompressedTexSubImage2DARB)(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLsizei width, GLsizei height, GLenum format, GLsizei imageSize, GLvoid* data);
 // void (APIENTRYP ptrglCompressedTexSubImage1DARB)(GLenum target, GLint level, GLint xoffset, GLsizei width, GLenum format, GLsizei imageSize, GLvoid* data);
 // void (APIENTRYP ptrglGetCompressedTexImageARB)(GLenum target, GLint level, GLvoid* img);
-// //  ARB_texture_compression_bptc
-// //  ARB_texture_compression_rgtc
-// //  ARB_texture_cube_map
-// //  ARB_texture_cube_map_array
-// //  ARB_texture_env_add
-// //  ARB_texture_env_combine
-// //  ARB_texture_env_crossbar
-// //  ARB_texture_env_dot3
-// //  ARB_texture_float
-// //  ARB_texture_gather
-// //  ARB_texture_mirrored_repeat
 // //  ARB_texture_multisample
 // void (APIENTRYP ptrglTexImage2DMultisample)(GLenum target, GLsizei samples, GLint internalformat, GLsizei width, GLsizei height, GLboolean fixedsamplelocations);
 // void (APIENTRYP ptrglTexImage3DMultisample)(GLenum target, GLsizei samples, GLint internalformat, GLsizei width, GLsizei height, GLsizei depth, GLboolean fixedsamplelocations);
 // void (APIENTRYP ptrglGetMultisamplefv)(GLenum pname, GLuint index, GLfloat* val);
 // void (APIENTRYP ptrglSampleMaski)(GLuint index, GLbitfield mask);
-// //  ARB_texture_non_power_of_two
-// //  ARB_texture_query_lod
-// //  ARB_texture_rectangle
-// //  ARB_texture_rg
-// //  ARB_texture_rgb10_a2ui
 // //  ARB_texture_storage
 // void (APIENTRYP ptrglTexStorage1D)(GLenum target, GLsizei levels, GLenum internalformat, GLsizei width);
 // void (APIENTRYP ptrglTexStorage2D)(GLenum target, GLsizei levels, GLenum internalformat, GLsizei width, GLsizei height);
@@ -767,7 +694,13 @@ package arb
 // void (APIENTRYP ptrglTextureStorage1DEXT)(GLuint texture, GLenum target, GLsizei levels, GLenum internalformat, GLsizei width);
 // void (APIENTRYP ptrglTextureStorage2DEXT)(GLuint texture, GLenum target, GLsizei levels, GLenum internalformat, GLsizei width, GLsizei height);
 // void (APIENTRYP ptrglTextureStorage3DEXT)(GLuint texture, GLenum target, GLsizei levels, GLenum internalformat, GLsizei width, GLsizei height, GLsizei depth);
-// //  ARB_texture_swizzle
+// //  ARB_texture_storage_multisample
+// void (APIENTRYP ptrglTexStorage2DMultisample)(GLenum target, GLsizei samples, GLenum internalformat, GLsizei width, GLsizei height, GLboolean fixedsamplelocations);
+// void (APIENTRYP ptrglTexStorage3DMultisample)(GLenum target, GLsizei samples, GLenum internalformat, GLsizei width, GLsizei height, GLsizei depth, GLboolean fixedsamplelocations);
+// void (APIENTRYP ptrglTextureStorage2DMultisampleEXT)(GLuint texture, GLenum target, GLsizei samples, GLenum internalformat, GLsizei width, GLsizei height, GLboolean fixedsamplelocations);
+// void (APIENTRYP ptrglTextureStorage3DMultisampleEXT)(GLuint texture, GLenum target, GLsizei samples, GLenum internalformat, GLsizei width, GLsizei height, GLsizei depth, GLboolean fixedsamplelocations);
+// //  ARB_texture_view
+// void (APIENTRYP ptrglTextureView)(GLuint texture, GLenum target, GLuint origtexture, GLenum internalformat, GLuint minlevel, GLuint numlevels, GLuint minlayer, GLuint numlayers);
 // //  ARB_timer_query
 // void (APIENTRYP ptrglQueryCounter)(GLuint id, GLenum target);
 // void (APIENTRYP ptrglGetQueryObjecti64v)(GLuint id, GLenum pname, GLint64* params);
@@ -786,8 +719,8 @@ package arb
 // void (APIENTRYP ptrglEndQueryIndexed)(GLenum target, GLuint index);
 // void (APIENTRYP ptrglGetQueryIndexediv)(GLenum target, GLuint index, GLenum pname, GLint* params);
 // //  ARB_transform_feedback_instanced
-// void (APIENTRYP ptrglDrawTransformFeedbackInstanced)(GLenum mode, GLuint id, GLsizei primcount);
-// void (APIENTRYP ptrglDrawTransformFeedbackStreamInstanced)(GLenum mode, GLuint id, GLuint stream, GLsizei primcount);
+// void (APIENTRYP ptrglDrawTransformFeedbackInstanced)(GLenum mode, GLuint id, GLsizei instancecount);
+// void (APIENTRYP ptrglDrawTransformFeedbackStreamInstanced)(GLenum mode, GLuint id, GLuint stream, GLsizei instancecount);
 // //  ARB_transpose_matrix
 // void (APIENTRYP ptrglLoadTransposeMatrixfARB)(GLfloat* m);
 // void (APIENTRYP ptrglLoadTransposeMatrixdARB)(GLdouble* m);
@@ -801,7 +734,6 @@ package arb
 // void (APIENTRYP ptrglGetActiveUniformBlockiv)(GLuint program, GLuint uniformBlockIndex, GLenum pname, GLint* params);
 // void (APIENTRYP ptrglGetActiveUniformBlockName)(GLuint program, GLuint uniformBlockIndex, GLsizei bufSize, GLsizei* length, GLchar* uniformBlockName);
 // void (APIENTRYP ptrglUniformBlockBinding)(GLuint program, GLuint uniformBlockIndex, GLuint uniformBlockBinding);
-// //  ARB_vertex_array_bgra
 // //  ARB_vertex_array_object
 // void (APIENTRYP ptrglBindVertexArray)(GLuint array);
 // void (APIENTRYP ptrglDeleteVertexArrays)(GLsizei n, GLuint* arrays);
@@ -818,6 +750,19 @@ package arb
 // void (APIENTRYP ptrglVertexAttribL4dv)(GLuint index, GLdouble* v);
 // void (APIENTRYP ptrglVertexAttribLPointer)(GLuint index, GLint size, GLenum type, GLsizei stride, GLvoid* pointer);
 // void (APIENTRYP ptrglGetVertexAttribLdv)(GLuint index, GLenum pname, GLdouble* params);
+// //  ARB_vertex_attrib_binding
+// void (APIENTRYP ptrglBindVertexBuffer)(GLuint bindingindex, GLuint buffer, GLintptr offset, GLsizei stride);
+// void (APIENTRYP ptrglVertexAttribFormat)(GLuint attribindex, GLint size, GLenum type, GLboolean normalized, GLuint relativeoffset);
+// void (APIENTRYP ptrglVertexAttribIFormat)(GLuint attribindex, GLint size, GLenum type, GLuint relativeoffset);
+// void (APIENTRYP ptrglVertexAttribLFormat)(GLuint attribindex, GLint size, GLenum type, GLuint relativeoffset);
+// void (APIENTRYP ptrglVertexAttribBinding)(GLuint attribindex, GLuint bindingindex);
+// void (APIENTRYP ptrglVertexBindingDivisor)(GLuint bindingindex, GLuint divisor);
+// void (APIENTRYP ptrglVertexArrayBindVertexBufferEXT)(GLuint vaobj, GLuint bindingindex, GLuint buffer, GLintptr offset, GLsizei stride);
+// void (APIENTRYP ptrglVertexArrayVertexAttribFormatEXT)(GLuint vaobj, GLuint attribindex, GLint size, GLenum type, GLboolean normalized, GLuint relativeoffset);
+// void (APIENTRYP ptrglVertexArrayVertexAttribIFormatEXT)(GLuint vaobj, GLuint attribindex, GLint size, GLenum type, GLuint relativeoffset);
+// void (APIENTRYP ptrglVertexArrayVertexAttribLFormatEXT)(GLuint vaobj, GLuint attribindex, GLint size, GLenum type, GLuint relativeoffset);
+// void (APIENTRYP ptrglVertexArrayVertexAttribBindingEXT)(GLuint vaobj, GLuint attribindex, GLuint bindingindex);
+// void (APIENTRYP ptrglVertexArrayVertexBindingDivisorEXT)(GLuint vaobj, GLuint bindingindex, GLuint divisor);
 // //  ARB_vertex_blend
 // void (APIENTRYP ptrglWeightbvARB)(GLint size, GLbyte* weights);
 // void (APIENTRYP ptrglWeightsvARB)(GLint size, GLshort* weights);
@@ -993,14 +938,14 @@ package arb
 // 	(*ptrglClearDepthf)(d);
 // }
 // //  ARB_base_instance
-// void goglDrawArraysInstancedBaseInstance(GLenum mode, GLint first, GLsizei count, GLsizei primcount, GLuint baseinstance) {
-// 	(*ptrglDrawArraysInstancedBaseInstance)(mode, first, count, primcount, baseinstance);
+// void goglDrawArraysInstancedBaseInstance(GLenum mode, GLint first, GLsizei count, GLsizei instancecount, GLuint baseinstance) {
+// 	(*ptrglDrawArraysInstancedBaseInstance)(mode, first, count, instancecount, baseinstance);
 // }
-// void goglDrawElementsInstancedBaseInstance(GLenum mode, GLsizei count, GLenum type_, void* indices, GLsizei primcount, GLuint baseinstance) {
-// 	(*ptrglDrawElementsInstancedBaseInstance)(mode, count, type_, indices, primcount, baseinstance);
+// void goglDrawElementsInstancedBaseInstance(GLenum mode, GLsizei count, GLenum type_, void* indices, GLsizei instancecount, GLuint baseinstance) {
+// 	(*ptrglDrawElementsInstancedBaseInstance)(mode, count, type_, indices, instancecount, baseinstance);
 // }
-// void goglDrawElementsInstancedBaseVertexBaseInstance(GLenum mode, GLsizei count, GLenum type_, void* indices, GLsizei primcount, GLint basevertex, GLuint baseinstance) {
-// 	(*ptrglDrawElementsInstancedBaseVertexBaseInstance)(mode, count, type_, indices, primcount, basevertex, baseinstance);
+// void goglDrawElementsInstancedBaseVertexBaseInstance(GLenum mode, GLsizei count, GLenum type_, void* indices, GLsizei instancecount, GLint basevertex, GLuint baseinstance) {
+// 	(*ptrglDrawElementsInstancedBaseVertexBaseInstance)(mode, count, type_, indices, instancecount, basevertex, baseinstance);
 // }
 // //  ARB_blend_func_extended
 // void goglBindFragDataLocationIndexed(GLuint program, GLuint colorNumber, GLuint index, GLchar* name) {
@@ -1013,16 +958,37 @@ package arb
 // GLsync goglCreateSyncFromCLeventARB(struct _cl_context * context, struct _cl_event * event, GLbitfield flags) {
 // 	return (*ptrglCreateSyncFromCLeventARB)(context, event, flags);
 // }
+// //  ARB_clear_buffer_object
+// void goglClearBufferData(GLenum target, GLenum internalformat, GLenum format, GLenum type_, void* data) {
+// 	(*ptrglClearBufferData)(target, internalformat, format, type_, data);
+// }
+// void goglClearBufferSubData(GLenum target, GLenum internalformat, GLintptr offset, GLsizeiptr size, GLenum format, GLenum type_, void* data) {
+// 	(*ptrglClearBufferSubData)(target, internalformat, offset, size, format, type_, data);
+// }
+// void goglClearNamedBufferDataEXT(GLuint buffer, GLenum internalformat, GLenum format, GLenum type_, void* data) {
+// 	(*ptrglClearNamedBufferDataEXT)(buffer, internalformat, format, type_, data);
+// }
+// void goglClearNamedBufferSubDataEXT(GLuint buffer, GLenum internalformat, GLsizeiptr offset, GLsizeiptr size, GLenum format, GLenum type_, void* data) {
+// 	(*ptrglClearNamedBufferSubDataEXT)(buffer, internalformat, offset, size, format, type_, data);
+// }
 // //  ARB_color_buffer_float
 // void goglClampColorARB(GLenum target, GLenum clamp) {
 // 	(*ptrglClampColorARB)(target, clamp);
 // }
-// //  ARB_compatibility
-// //  ARB_compressed_texture_pixel_storage
-// //  ARB_conservative_depth
+// //  ARB_compute_shader
+// void goglDispatchCompute(GLuint num_groups_x, GLuint num_groups_y, GLuint num_groups_z) {
+// 	(*ptrglDispatchCompute)(num_groups_x, num_groups_y, num_groups_z);
+// }
+// void goglDispatchComputeIndirect(GLintptr indirect) {
+// 	(*ptrglDispatchComputeIndirect)(indirect);
+// }
 // //  ARB_copy_buffer
 // void goglCopyBufferSubData(GLenum readTarget, GLenum writeTarget, GLintptr readOffset, GLintptr writeOffset, GLsizeiptr size) {
 // 	(*ptrglCopyBufferSubData)(readTarget, writeTarget, readOffset, writeOffset, size);
+// }
+// //  ARB_copy_image
+// void goglCopyImageSubData(GLuint srcName, GLenum srcTarget, GLint srcLevel, GLint srcX, GLint srcY, GLint srcZ, GLuint dstName, GLenum dstTarget, GLint dstLevel, GLint dstX, GLint dstY, GLint dstZ, GLsizei srcWidth, GLsizei srcHeight, GLsizei srcDepth) {
+// 	(*ptrglCopyImageSubData)(srcName, srcTarget, srcLevel, srcX, srcY, srcZ, dstName, dstTarget, dstLevel, dstX, dstY, dstZ, srcWidth, srcHeight, srcDepth);
 // }
 // //  ARB_debug_output
 // void goglDebugMessageControlARB(GLenum source, GLenum type_, GLenum severity, GLsizei count, GLuint* ids, GLboolean enabled) {
@@ -1037,9 +1003,6 @@ package arb
 // GLuint goglGetDebugMessageLogARB(GLuint count, GLsizei bufsize, GLenum* sources, GLenum* types, GLuint* ids, GLenum* severities, GLsizei* lengths, GLchar* messageLog) {
 // 	return (*ptrglGetDebugMessageLogARB)(count, bufsize, sources, types, ids, severities, lengths, messageLog);
 // }
-// //  ARB_depth_buffer_float
-// //  ARB_depth_clamp
-// //  ARB_depth_texture
 // //  ARB_draw_buffers
 // void goglDrawBuffersARB(GLsizei n, GLenum* bufs) {
 // 	(*ptrglDrawBuffersARB)(n, bufs);
@@ -1064,11 +1027,11 @@ package arb
 // void goglDrawRangeElementsBaseVertex(GLenum mode, GLuint start, GLuint end, GLsizei count, GLenum type_, GLvoid* indices, GLint basevertex) {
 // 	(*ptrglDrawRangeElementsBaseVertex)(mode, start, end, count, type_, indices, basevertex);
 // }
-// void goglDrawElementsInstancedBaseVertex(GLenum mode, GLsizei count, GLenum type_, GLvoid* indices, GLsizei primcount, GLint basevertex) {
-// 	(*ptrglDrawElementsInstancedBaseVertex)(mode, count, type_, indices, primcount, basevertex);
+// void goglDrawElementsInstancedBaseVertex(GLenum mode, GLsizei count, GLenum type_, GLvoid* indices, GLsizei instancecount, GLint basevertex) {
+// 	(*ptrglDrawElementsInstancedBaseVertex)(mode, count, type_, indices, instancecount, basevertex);
 // }
-// void goglMultiDrawElementsBaseVertex(GLenum mode, GLsizei* count, GLenum type_, GLvoid* const* indices, GLsizei primcount, GLint* basevertex) {
-// 	(*ptrglMultiDrawElementsBaseVertex)(mode, count, type_, indices, primcount, basevertex);
+// void goglMultiDrawElementsBaseVertex(GLenum mode, GLsizei* count, GLenum type_, GLvoid* const* indices, GLsizei drawcount, GLint* basevertex) {
+// 	(*ptrglMultiDrawElementsBaseVertex)(mode, count, type_, indices, drawcount, basevertex);
 // }
 // //  ARB_draw_indirect
 // void goglDrawArraysIndirect(GLenum mode, GLvoid* indirect) {
@@ -1084,11 +1047,19 @@ package arb
 // void goglDrawElementsInstancedARB(GLenum mode, GLsizei count, GLenum type_, GLvoid* indices, GLsizei primcount) {
 // 	(*ptrglDrawElementsInstancedARB)(mode, count, type_, indices, primcount);
 // }
-// //  ARB_explicit_attrib_location
-// //  ARB_fragment_coord_conventions
-// //  ARB_fragment_program
-// //  ARB_fragment_program_shadow
-// //  ARB_fragment_shader
+// //  ARB_framebuffer_no_attachments
+// void goglFramebufferParameteri(GLenum target, GLenum pname, GLint param) {
+// 	(*ptrglFramebufferParameteri)(target, pname, param);
+// }
+// void goglGetFramebufferParameteriv(GLenum target, GLenum pname, GLint* params) {
+// 	(*ptrglGetFramebufferParameteriv)(target, pname, params);
+// }
+// void goglNamedFramebufferParameteriEXT(GLuint framebuffer, GLenum pname, GLint param) {
+// 	(*ptrglNamedFramebufferParameteriEXT)(framebuffer, pname, param);
+// }
+// void goglGetNamedFramebufferParameterivEXT(GLuint framebuffer, GLenum pname, GLint* params) {
+// 	(*ptrglGetNamedFramebufferParameterivEXT)(framebuffer, pname, params);
+// }
 // //  ARB_framebuffer_object
 // GLboolean goglIsRenderbuffer(GLuint renderbuffer) {
 // 	return (*ptrglIsRenderbuffer)(renderbuffer);
@@ -1150,7 +1121,6 @@ package arb
 // void goglFramebufferTextureLayer(GLenum target, GLenum attachment, GLuint texture, GLint level, GLint layer) {
 // 	(*ptrglFramebufferTextureLayer)(target, attachment, texture, level, layer);
 // }
-// //  ARB_framebuffer_sRGB
 // //  ARB_geometry_shader4
 // void goglProgramParameteriARB(GLuint program, GLenum pname, GLint value) {
 // 	(*ptrglProgramParameteriARB)(program, pname, value);
@@ -1174,7 +1144,6 @@ package arb
 // void goglProgramParameteri(GLuint program, GLenum pname, GLint value) {
 // 	(*ptrglProgramParameteri)(program, pname, value);
 // }
-// //  ARB_gpu_shader5
 // //  ARB_gpu_shader_fp64
 // void goglUniform1d(GLint location, GLdouble x) {
 // 	(*ptrglUniform1d)(location, x);
@@ -1230,8 +1199,6 @@ package arb
 // void goglGetUniformdv(GLuint program, GLint location, GLdouble* params) {
 // 	(*ptrglGetUniformdv)(program, location, params);
 // }
-// //  ARB_half_float_pixel
-// //  ARB_half_float_vertex
 // //  ARB_instanced_arrays
 // void goglVertexAttribDivisorARB(GLuint index, GLuint divisor) {
 // 	(*ptrglVertexAttribDivisorARB)(index, divisor);
@@ -1240,7 +1207,29 @@ package arb
 // void goglGetInternalformativ(GLenum target, GLenum internalformat, GLenum pname, GLsizei bufSize, GLint* params) {
 // 	(*ptrglGetInternalformativ)(target, internalformat, pname, bufSize, params);
 // }
-// //  ARB_map_buffer_alignment
+// //  ARB_internalformat_query2
+// void goglGetInternalformati64v(GLenum target, GLenum internalformat, GLenum pname, GLsizei bufSize, GLint64* params) {
+// 	(*ptrglGetInternalformati64v)(target, internalformat, pname, bufSize, params);
+// }
+// //  ARB_invalidate_subdata
+// void goglInvalidateTexSubImage(GLuint texture, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth) {
+// 	(*ptrglInvalidateTexSubImage)(texture, level, xoffset, yoffset, zoffset, width, height, depth);
+// }
+// void goglInvalidateTexImage(GLuint texture, GLint level) {
+// 	(*ptrglInvalidateTexImage)(texture, level);
+// }
+// void goglInvalidateBufferSubData(GLuint buffer, GLintptr offset, GLsizeiptr length) {
+// 	(*ptrglInvalidateBufferSubData)(buffer, offset, length);
+// }
+// void goglInvalidateBufferData(GLuint buffer) {
+// 	(*ptrglInvalidateBufferData)(buffer);
+// }
+// void goglInvalidateFramebuffer(GLenum target, GLsizei numAttachments, GLenum* attachments) {
+// 	(*ptrglInvalidateFramebuffer)(target, numAttachments, attachments);
+// }
+// void goglInvalidateSubFramebuffer(GLenum target, GLsizei numAttachments, GLenum* attachments, GLint x, GLint y, GLsizei width, GLsizei height) {
+// 	(*ptrglInvalidateSubFramebuffer)(target, numAttachments, attachments, x, y, width, height);
+// }
 // //  ARB_map_buffer_range
 // GLvoid* goglMapBufferRange(GLenum target, GLintptr offset, GLsizeiptr length, GLbitfield access) {
 // 	return (*ptrglMapBufferRange)(target, offset, length, access);
@@ -1263,6 +1252,13 @@ package arb
 // }
 // void goglMatrixIndexPointerARB(GLint size, GLenum type_, GLsizei stride, GLvoid* pointer) {
 // 	(*ptrglMatrixIndexPointerARB)(size, type_, stride, pointer);
+// }
+// //  ARB_multi_draw_indirect
+// void goglMultiDrawArraysIndirect(GLenum mode, void* indirect, GLsizei drawcount, GLsizei stride) {
+// 	(*ptrglMultiDrawArraysIndirect)(mode, indirect, drawcount, stride);
+// }
+// void goglMultiDrawElementsIndirect(GLenum mode, GLenum type_, void* indirect, GLsizei drawcount, GLsizei stride) {
+// 	(*ptrglMultiDrawElementsIndirect)(mode, type_, indirect, drawcount, stride);
 // }
 // //  ARB_multisample
 // void goglSampleCoverageARB(GLfloat value, GLboolean invert) {
@@ -1396,8 +1392,6 @@ package arb
 // void goglGetQueryObjectuivARB(GLuint id, GLenum pname, GLuint* params) {
 // 	(*ptrglGetQueryObjectuivARB)(id, pname, params);
 // }
-// //  ARB_occlusion_query2
-// //  ARB_pixel_buffer_object
 // //  ARB_point_parameters
 // void goglPointParameterfARB(GLenum pname, GLfloat param) {
 // 	(*ptrglPointParameterfARB)(pname, param);
@@ -1405,7 +1399,25 @@ package arb
 // void goglPointParameterfvARB(GLenum pname, GLfloat* params) {
 // 	(*ptrglPointParameterfvARB)(pname, params);
 // }
-// //  ARB_point_sprite
+// //  ARB_program_interface_query
+// void goglGetProgramInterfaceiv(GLuint program, GLenum programInterface, GLenum pname, GLint* params) {
+// 	(*ptrglGetProgramInterfaceiv)(program, programInterface, pname, params);
+// }
+// GLuint goglGetProgramResourceIndex(GLuint program, GLenum programInterface, GLchar* name) {
+// 	return (*ptrglGetProgramResourceIndex)(program, programInterface, name);
+// }
+// void goglGetProgramResourceName(GLuint program, GLenum programInterface, GLuint index, GLsizei bufSize, GLsizei* length, GLchar* name) {
+// 	(*ptrglGetProgramResourceName)(program, programInterface, index, bufSize, length, name);
+// }
+// void goglGetProgramResourceiv(GLuint program, GLenum programInterface, GLuint index, GLsizei propCount, GLenum* props, GLsizei bufSize, GLsizei* length, GLint* params) {
+// 	(*ptrglGetProgramResourceiv)(program, programInterface, index, propCount, props, bufSize, length, params);
+// }
+// GLint goglGetProgramResourceLocation(GLuint program, GLenum programInterface, GLchar* name) {
+// 	return (*ptrglGetProgramResourceLocation)(program, programInterface, name);
+// }
+// GLint goglGetProgramResourceLocationIndex(GLuint program, GLenum programInterface, GLchar* name) {
+// 	return (*ptrglGetProgramResourceLocationIndex)(program, programInterface, name);
+// }
 // //  ARB_provoking_vertex
 // void goglProvokingVertex(GLenum mode) {
 // 	(*ptrglProvokingVertex)(mode);
@@ -1518,7 +1530,6 @@ package arb
 // void goglGetSamplerParameterIuiv(GLuint sampler, GLenum pname, GLuint* params) {
 // 	(*ptrglGetSamplerParameterIuiv)(sampler, pname, params);
 // }
-// //  ARB_seamless_cube_map
 // //  ARB_separate_shader_objects
 // void goglUseProgramStages(GLuint pipeline, GLbitfield stages, GLuint program) {
 // 	(*ptrglUseProgramStages)(pipeline, stages, program);
@@ -1704,7 +1715,6 @@ package arb
 // void goglGetActiveAtomicCounterBufferiv(GLuint program, GLuint bufferIndex, GLenum pname, GLint* params) {
 // 	(*ptrglGetActiveAtomicCounterBufferiv)(program, bufferIndex, pname, params);
 // }
-// //  ARB_shader_bit_encoding
 // //  ARB_shader_image_load_store
 // void goglBindImageTexture(GLuint unit, GLuint texture, GLint level, GLboolean layered, GLint layer, GLenum access, GLenum format) {
 // 	(*ptrglBindImageTexture)(unit, texture, level, layered, layer, access, format);
@@ -1830,7 +1840,10 @@ package arb
 // void goglGetShaderSourceARB(GLhandleARB obj, GLsizei maxLength, GLsizei* length, GLcharARB* source) {
 // 	(*ptrglGetShaderSourceARB)(obj, maxLength, length, source);
 // }
-// //  ARB_shader_stencil_export
+// //  ARB_shader_storage_buffer_object
+// void goglShaderStorageBlockBinding(GLuint program, GLuint storageBlockIndex, GLuint storageBlockBinding) {
+// 	(*ptrglShaderStorageBlockBinding)(program, storageBlockIndex, storageBlockBinding);
+// }
 // //  ARB_shader_subroutine
 // GLint goglGetSubroutineUniformLocation(GLuint program, GLenum shadertype, GLchar* name) {
 // 	return (*ptrglGetSubroutineUniformLocation)(program, shadertype, name);
@@ -1856,9 +1869,6 @@ package arb
 // void goglGetProgramStageiv(GLuint program, GLenum shadertype, GLenum pname, GLint* values) {
 // 	(*ptrglGetProgramStageiv)(program, shadertype, pname, values);
 // }
-// //  ARB_shader_texture_lod
-// //  ARB_shading_language_100
-// //  ARB_shading_language_420pack
 // //  ARB_shading_language_include
 // void goglNamedStringARB(GLenum type_, GLint namelen, GLchar* name, GLint stringlen, GLchar* string_) {
 // 	(*ptrglNamedStringARB)(type_, namelen, name, stringlen, string_);
@@ -1878,9 +1888,6 @@ package arb
 // void goglGetNamedStringivARB(GLint namelen, GLchar* name, GLenum pname, GLint* params) {
 // 	(*ptrglGetNamedStringivARB)(namelen, name, pname, params);
 // }
-// //  ARB_shading_language_packing
-// //  ARB_shadow
-// //  ARB_shadow_ambient
 // //  ARB_sync
 // GLsync goglFenceSync(GLenum condition, GLbitfield flags) {
 // 	return (*ptrglFenceSync)(condition, flags);
@@ -1910,12 +1917,17 @@ package arb
 // void goglPatchParameterfv(GLenum pname, GLfloat* values) {
 // 	(*ptrglPatchParameterfv)(pname, values);
 // }
-// //  ARB_texture_border_clamp
 // //  ARB_texture_buffer_object
 // void goglTexBufferARB(GLenum target, GLenum internalformat, GLuint buffer) {
 // 	(*ptrglTexBufferARB)(target, internalformat, buffer);
 // }
-// //  ARB_texture_buffer_object_rgb32
+// //  ARB_texture_buffer_range
+// void goglTexBufferRange(GLenum target, GLenum internalformat, GLuint buffer, GLintptr offset, GLsizeiptr size) {
+// 	(*ptrglTexBufferRange)(target, internalformat, buffer, offset, size);
+// }
+// void goglTextureBufferRangeEXT(GLuint texture, GLenum target, GLenum internalformat, GLuint buffer, GLintptr offset, GLsizeiptr size) {
+// 	(*ptrglTextureBufferRangeEXT)(texture, target, internalformat, buffer, offset, size);
+// }
 // //  ARB_texture_compression
 // void goglCompressedTexImage3DARB(GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLsizei depth, GLint border, GLsizei imageSize, GLvoid* data) {
 // 	(*ptrglCompressedTexImage3DARB)(target, level, internalformat, width, height, depth, border, imageSize, data);
@@ -1938,17 +1950,6 @@ package arb
 // void goglGetCompressedTexImageARB(GLenum target, GLint level, GLvoid* img) {
 // 	(*ptrglGetCompressedTexImageARB)(target, level, img);
 // }
-// //  ARB_texture_compression_bptc
-// //  ARB_texture_compression_rgtc
-// //  ARB_texture_cube_map
-// //  ARB_texture_cube_map_array
-// //  ARB_texture_env_add
-// //  ARB_texture_env_combine
-// //  ARB_texture_env_crossbar
-// //  ARB_texture_env_dot3
-// //  ARB_texture_float
-// //  ARB_texture_gather
-// //  ARB_texture_mirrored_repeat
 // //  ARB_texture_multisample
 // void goglTexImage2DMultisample(GLenum target, GLsizei samples, GLint internalformat, GLsizei width, GLsizei height, GLboolean fixedsamplelocations) {
 // 	(*ptrglTexImage2DMultisample)(target, samples, internalformat, width, height, fixedsamplelocations);
@@ -1962,11 +1963,6 @@ package arb
 // void goglSampleMaski(GLuint index, GLbitfield mask) {
 // 	(*ptrglSampleMaski)(index, mask);
 // }
-// //  ARB_texture_non_power_of_two
-// //  ARB_texture_query_lod
-// //  ARB_texture_rectangle
-// //  ARB_texture_rg
-// //  ARB_texture_rgb10_a2ui
 // //  ARB_texture_storage
 // void goglTexStorage1D(GLenum target, GLsizei levels, GLenum internalformat, GLsizei width) {
 // 	(*ptrglTexStorage1D)(target, levels, internalformat, width);
@@ -1986,7 +1982,23 @@ package arb
 // void goglTextureStorage3DEXT(GLuint texture, GLenum target, GLsizei levels, GLenum internalformat, GLsizei width, GLsizei height, GLsizei depth) {
 // 	(*ptrglTextureStorage3DEXT)(texture, target, levels, internalformat, width, height, depth);
 // }
-// //  ARB_texture_swizzle
+// //  ARB_texture_storage_multisample
+// void goglTexStorage2DMultisample(GLenum target, GLsizei samples, GLenum internalformat, GLsizei width, GLsizei height, GLboolean fixedsamplelocations) {
+// 	(*ptrglTexStorage2DMultisample)(target, samples, internalformat, width, height, fixedsamplelocations);
+// }
+// void goglTexStorage3DMultisample(GLenum target, GLsizei samples, GLenum internalformat, GLsizei width, GLsizei height, GLsizei depth, GLboolean fixedsamplelocations) {
+// 	(*ptrglTexStorage3DMultisample)(target, samples, internalformat, width, height, depth, fixedsamplelocations);
+// }
+// void goglTextureStorage2DMultisampleEXT(GLuint texture, GLenum target, GLsizei samples, GLenum internalformat, GLsizei width, GLsizei height, GLboolean fixedsamplelocations) {
+// 	(*ptrglTextureStorage2DMultisampleEXT)(texture, target, samples, internalformat, width, height, fixedsamplelocations);
+// }
+// void goglTextureStorage3DMultisampleEXT(GLuint texture, GLenum target, GLsizei samples, GLenum internalformat, GLsizei width, GLsizei height, GLsizei depth, GLboolean fixedsamplelocations) {
+// 	(*ptrglTextureStorage3DMultisampleEXT)(texture, target, samples, internalformat, width, height, depth, fixedsamplelocations);
+// }
+// //  ARB_texture_view
+// void goglTextureView(GLuint texture, GLenum target, GLuint origtexture, GLenum internalformat, GLuint minlevel, GLuint numlevels, GLuint minlayer, GLuint numlayers) {
+// 	(*ptrglTextureView)(texture, target, origtexture, internalformat, minlevel, numlevels, minlayer, numlayers);
+// }
 // //  ARB_timer_query
 // void goglQueryCounter(GLuint id, GLenum target) {
 // 	(*ptrglQueryCounter)(id, target);
@@ -2033,11 +2045,11 @@ package arb
 // 	(*ptrglGetQueryIndexediv)(target, index, pname, params);
 // }
 // //  ARB_transform_feedback_instanced
-// void goglDrawTransformFeedbackInstanced(GLenum mode, GLuint id, GLsizei primcount) {
-// 	(*ptrglDrawTransformFeedbackInstanced)(mode, id, primcount);
+// void goglDrawTransformFeedbackInstanced(GLenum mode, GLuint id, GLsizei instancecount) {
+// 	(*ptrglDrawTransformFeedbackInstanced)(mode, id, instancecount);
 // }
-// void goglDrawTransformFeedbackStreamInstanced(GLenum mode, GLuint id, GLuint stream, GLsizei primcount) {
-// 	(*ptrglDrawTransformFeedbackStreamInstanced)(mode, id, stream, primcount);
+// void goglDrawTransformFeedbackStreamInstanced(GLenum mode, GLuint id, GLuint stream, GLsizei instancecount) {
+// 	(*ptrglDrawTransformFeedbackStreamInstanced)(mode, id, stream, instancecount);
 // }
 // //  ARB_transpose_matrix
 // void goglLoadTransposeMatrixfARB(GLfloat* m) {
@@ -2074,7 +2086,6 @@ package arb
 // void goglUniformBlockBinding(GLuint program, GLuint uniformBlockIndex, GLuint uniformBlockBinding) {
 // 	(*ptrglUniformBlockBinding)(program, uniformBlockIndex, uniformBlockBinding);
 // }
-// //  ARB_vertex_array_bgra
 // //  ARB_vertex_array_object
 // void goglBindVertexArray(GLuint array) {
 // 	(*ptrglBindVertexArray)(array);
@@ -2118,6 +2129,43 @@ package arb
 // }
 // void goglGetVertexAttribLdv(GLuint index, GLenum pname, GLdouble* params) {
 // 	(*ptrglGetVertexAttribLdv)(index, pname, params);
+// }
+// //  ARB_vertex_attrib_binding
+// void goglBindVertexBuffer(GLuint bindingindex, GLuint buffer, GLintptr offset, GLsizei stride) {
+// 	(*ptrglBindVertexBuffer)(bindingindex, buffer, offset, stride);
+// }
+// void goglVertexAttribFormat(GLuint attribindex, GLint size, GLenum type_, GLboolean normalized, GLuint relativeoffset) {
+// 	(*ptrglVertexAttribFormat)(attribindex, size, type_, normalized, relativeoffset);
+// }
+// void goglVertexAttribIFormat(GLuint attribindex, GLint size, GLenum type_, GLuint relativeoffset) {
+// 	(*ptrglVertexAttribIFormat)(attribindex, size, type_, relativeoffset);
+// }
+// void goglVertexAttribLFormat(GLuint attribindex, GLint size, GLenum type_, GLuint relativeoffset) {
+// 	(*ptrglVertexAttribLFormat)(attribindex, size, type_, relativeoffset);
+// }
+// void goglVertexAttribBinding(GLuint attribindex, GLuint bindingindex) {
+// 	(*ptrglVertexAttribBinding)(attribindex, bindingindex);
+// }
+// void goglVertexBindingDivisor(GLuint bindingindex, GLuint divisor) {
+// 	(*ptrglVertexBindingDivisor)(bindingindex, divisor);
+// }
+// void goglVertexArrayBindVertexBufferEXT(GLuint vaobj, GLuint bindingindex, GLuint buffer, GLintptr offset, GLsizei stride) {
+// 	(*ptrglVertexArrayBindVertexBufferEXT)(vaobj, bindingindex, buffer, offset, stride);
+// }
+// void goglVertexArrayVertexAttribFormatEXT(GLuint vaobj, GLuint attribindex, GLint size, GLenum type_, GLboolean normalized, GLuint relativeoffset) {
+// 	(*ptrglVertexArrayVertexAttribFormatEXT)(vaobj, attribindex, size, type_, normalized, relativeoffset);
+// }
+// void goglVertexArrayVertexAttribIFormatEXT(GLuint vaobj, GLuint attribindex, GLint size, GLenum type_, GLuint relativeoffset) {
+// 	(*ptrglVertexArrayVertexAttribIFormatEXT)(vaobj, attribindex, size, type_, relativeoffset);
+// }
+// void goglVertexArrayVertexAttribLFormatEXT(GLuint vaobj, GLuint attribindex, GLint size, GLenum type_, GLuint relativeoffset) {
+// 	(*ptrglVertexArrayVertexAttribLFormatEXT)(vaobj, attribindex, size, type_, relativeoffset);
+// }
+// void goglVertexArrayVertexAttribBindingEXT(GLuint vaobj, GLuint attribindex, GLuint bindingindex) {
+// 	(*ptrglVertexArrayVertexAttribBindingEXT)(vaobj, attribindex, bindingindex);
+// }
+// void goglVertexArrayVertexBindingDivisorEXT(GLuint vaobj, GLuint bindingindex, GLuint divisor) {
+// 	(*ptrglVertexArrayVertexBindingDivisorEXT)(vaobj, bindingindex, divisor);
 // }
 // //  ARB_vertex_blend
 // void goglWeightbvARB(GLint size, GLbyte* weights) {
@@ -2611,23 +2659,37 @@ package arb
 // 	if(ptrglCreateSyncFromCLeventARB == NULL) return 1;
 // 	return 0;
 // }
+// int init_ARB_clear_buffer_object() {
+// 	ptrglClearBufferData = goglGetProcAddress("glClearBufferData");
+// 	if(ptrglClearBufferData == NULL) return 1;
+// 	ptrglClearBufferSubData = goglGetProcAddress("glClearBufferSubData");
+// 	if(ptrglClearBufferSubData == NULL) return 1;
+// 	ptrglClearNamedBufferDataEXT = goglGetProcAddress("glClearNamedBufferDataEXT");
+// 	if(ptrglClearNamedBufferDataEXT == NULL) return 1;
+// 	ptrglClearNamedBufferSubDataEXT = goglGetProcAddress("glClearNamedBufferSubDataEXT");
+// 	if(ptrglClearNamedBufferSubDataEXT == NULL) return 1;
+// 	return 0;
+// }
 // int init_ARB_color_buffer_float() {
 // 	ptrglClampColorARB = goglGetProcAddress("glClampColorARB");
 // 	if(ptrglClampColorARB == NULL) return 1;
 // 	return 0;
 // }
-// int init_ARB_compatibility() {
-// 	return 0;
-// }
-// int init_ARB_compressed_texture_pixel_storage() {
-// 	return 0;
-// }
-// int init_ARB_conservative_depth() {
+// int init_ARB_compute_shader() {
+// 	ptrglDispatchCompute = goglGetProcAddress("glDispatchCompute");
+// 	if(ptrglDispatchCompute == NULL) return 1;
+// 	ptrglDispatchComputeIndirect = goglGetProcAddress("glDispatchComputeIndirect");
+// 	if(ptrglDispatchComputeIndirect == NULL) return 1;
 // 	return 0;
 // }
 // int init_ARB_copy_buffer() {
 // 	ptrglCopyBufferSubData = goglGetProcAddress("glCopyBufferSubData");
 // 	if(ptrglCopyBufferSubData == NULL) return 1;
+// 	return 0;
+// }
+// int init_ARB_copy_image() {
+// 	ptrglCopyImageSubData = goglGetProcAddress("glCopyImageSubData");
+// 	if(ptrglCopyImageSubData == NULL) return 1;
 // 	return 0;
 // }
 // int init_ARB_debug_output() {
@@ -2639,15 +2701,6 @@ package arb
 // 	if(ptrglDebugMessageCallbackARB == NULL) return 1;
 // 	ptrglGetDebugMessageLogARB = goglGetProcAddress("glGetDebugMessageLogARB");
 // 	if(ptrglGetDebugMessageLogARB == NULL) return 1;
-// 	return 0;
-// }
-// int init_ARB_depth_buffer_float() {
-// 	return 0;
-// }
-// int init_ARB_depth_clamp() {
-// 	return 0;
-// }
-// int init_ARB_depth_texture() {
 // 	return 0;
 // }
 // int init_ARB_draw_buffers() {
@@ -2691,19 +2744,15 @@ package arb
 // 	if(ptrglDrawElementsInstancedARB == NULL) return 1;
 // 	return 0;
 // }
-// int init_ARB_explicit_attrib_location() {
-// 	return 0;
-// }
-// int init_ARB_fragment_coord_conventions() {
-// 	return 0;
-// }
-// int init_ARB_fragment_program() {
-// 	return 0;
-// }
-// int init_ARB_fragment_program_shadow() {
-// 	return 0;
-// }
-// int init_ARB_fragment_shader() {
+// int init_ARB_framebuffer_no_attachments() {
+// 	ptrglFramebufferParameteri = goglGetProcAddress("glFramebufferParameteri");
+// 	if(ptrglFramebufferParameteri == NULL) return 1;
+// 	ptrglGetFramebufferParameteriv = goglGetProcAddress("glGetFramebufferParameteriv");
+// 	if(ptrglGetFramebufferParameteriv == NULL) return 1;
+// 	ptrglNamedFramebufferParameteriEXT = goglGetProcAddress("glNamedFramebufferParameteriEXT");
+// 	if(ptrglNamedFramebufferParameteriEXT == NULL) return 1;
+// 	ptrglGetNamedFramebufferParameterivEXT = goglGetProcAddress("glGetNamedFramebufferParameterivEXT");
+// 	if(ptrglGetNamedFramebufferParameterivEXT == NULL) return 1;
 // 	return 0;
 // }
 // int init_ARB_framebuffer_object() {
@@ -2749,9 +2798,6 @@ package arb
 // 	if(ptrglFramebufferTextureLayer == NULL) return 1;
 // 	return 0;
 // }
-// int init_ARB_framebuffer_sRGB() {
-// 	return 0;
-// }
 // int init_ARB_geometry_shader4() {
 // 	ptrglProgramParameteriARB = goglGetProcAddress("glProgramParameteriARB");
 // 	if(ptrglProgramParameteriARB == NULL) return 1;
@@ -2770,9 +2816,6 @@ package arb
 // 	if(ptrglProgramBinary == NULL) return 1;
 // 	ptrglProgramParameteri = goglGetProcAddress("glProgramParameteri");
 // 	if(ptrglProgramParameteri == NULL) return 1;
-// 	return 0;
-// }
-// int init_ARB_gpu_shader5() {
 // 	return 0;
 // }
 // int init_ARB_gpu_shader_fp64() {
@@ -2814,12 +2857,6 @@ package arb
 // 	if(ptrglGetUniformdv == NULL) return 1;
 // 	return 0;
 // }
-// int init_ARB_half_float_pixel() {
-// 	return 0;
-// }
-// int init_ARB_half_float_vertex() {
-// 	return 0;
-// }
 // int init_ARB_instanced_arrays() {
 // 	ptrglVertexAttribDivisorARB = goglGetProcAddress("glVertexAttribDivisorARB");
 // 	if(ptrglVertexAttribDivisorARB == NULL) return 1;
@@ -2830,7 +2867,24 @@ package arb
 // 	if(ptrglGetInternalformativ == NULL) return 1;
 // 	return 0;
 // }
-// int init_ARB_map_buffer_alignment() {
+// int init_ARB_internalformat_query2() {
+// 	ptrglGetInternalformati64v = goglGetProcAddress("glGetInternalformati64v");
+// 	if(ptrglGetInternalformati64v == NULL) return 1;
+// 	return 0;
+// }
+// int init_ARB_invalidate_subdata() {
+// 	ptrglInvalidateTexSubImage = goglGetProcAddress("glInvalidateTexSubImage");
+// 	if(ptrglInvalidateTexSubImage == NULL) return 1;
+// 	ptrglInvalidateTexImage = goglGetProcAddress("glInvalidateTexImage");
+// 	if(ptrglInvalidateTexImage == NULL) return 1;
+// 	ptrglInvalidateBufferSubData = goglGetProcAddress("glInvalidateBufferSubData");
+// 	if(ptrglInvalidateBufferSubData == NULL) return 1;
+// 	ptrglInvalidateBufferData = goglGetProcAddress("glInvalidateBufferData");
+// 	if(ptrglInvalidateBufferData == NULL) return 1;
+// 	ptrglInvalidateFramebuffer = goglGetProcAddress("glInvalidateFramebuffer");
+// 	if(ptrglInvalidateFramebuffer == NULL) return 1;
+// 	ptrglInvalidateSubFramebuffer = goglGetProcAddress("glInvalidateSubFramebuffer");
+// 	if(ptrglInvalidateSubFramebuffer == NULL) return 1;
 // 	return 0;
 // }
 // int init_ARB_map_buffer_range() {
@@ -2851,6 +2905,13 @@ package arb
 // 	if(ptrglMatrixIndexuivARB == NULL) return 1;
 // 	ptrglMatrixIndexPointerARB = goglGetProcAddress("glMatrixIndexPointerARB");
 // 	if(ptrglMatrixIndexPointerARB == NULL) return 1;
+// 	return 0;
+// }
+// int init_ARB_multi_draw_indirect() {
+// 	ptrglMultiDrawArraysIndirect = goglGetProcAddress("glMultiDrawArraysIndirect");
+// 	if(ptrglMultiDrawArraysIndirect == NULL) return 1;
+// 	ptrglMultiDrawElementsIndirect = goglGetProcAddress("glMultiDrawElementsIndirect");
+// 	if(ptrglMultiDrawElementsIndirect == NULL) return 1;
 // 	return 0;
 // }
 // int init_ARB_multisample() {
@@ -2948,12 +3009,6 @@ package arb
 // 	if(ptrglGetQueryObjectuivARB == NULL) return 1;
 // 	return 0;
 // }
-// int init_ARB_occlusion_query2() {
-// 	return 0;
-// }
-// int init_ARB_pixel_buffer_object() {
-// 	return 0;
-// }
 // int init_ARB_point_parameters() {
 // 	ptrglPointParameterfARB = goglGetProcAddress("glPointParameterfARB");
 // 	if(ptrglPointParameterfARB == NULL) return 1;
@@ -2961,7 +3016,19 @@ package arb
 // 	if(ptrglPointParameterfvARB == NULL) return 1;
 // 	return 0;
 // }
-// int init_ARB_point_sprite() {
+// int init_ARB_program_interface_query() {
+// 	ptrglGetProgramInterfaceiv = goglGetProcAddress("glGetProgramInterfaceiv");
+// 	if(ptrglGetProgramInterfaceiv == NULL) return 1;
+// 	ptrglGetProgramResourceIndex = goglGetProcAddress("glGetProgramResourceIndex");
+// 	if(ptrglGetProgramResourceIndex == NULL) return 1;
+// 	ptrglGetProgramResourceName = goglGetProcAddress("glGetProgramResourceName");
+// 	if(ptrglGetProgramResourceName == NULL) return 1;
+// 	ptrglGetProgramResourceiv = goglGetProcAddress("glGetProgramResourceiv");
+// 	if(ptrglGetProgramResourceiv == NULL) return 1;
+// 	ptrglGetProgramResourceLocation = goglGetProcAddress("glGetProgramResourceLocation");
+// 	if(ptrglGetProgramResourceLocation == NULL) return 1;
+// 	ptrglGetProgramResourceLocationIndex = goglGetProcAddress("glGetProgramResourceLocationIndex");
+// 	if(ptrglGetProgramResourceLocationIndex == NULL) return 1;
 // 	return 0;
 // }
 // int init_ARB_provoking_vertex() {
@@ -3046,9 +3113,6 @@ package arb
 // 	if(ptrglGetSamplerParameterfv == NULL) return 1;
 // 	ptrglGetSamplerParameterIuiv = goglGetProcAddress("glGetSamplerParameterIuiv");
 // 	if(ptrglGetSamplerParameterIuiv == NULL) return 1;
-// 	return 0;
-// }
-// int init_ARB_seamless_cube_map() {
 // 	return 0;
 // }
 // int init_ARB_separate_shader_objects() {
@@ -3179,9 +3243,6 @@ package arb
 // 	if(ptrglGetActiveAtomicCounterBufferiv == NULL) return 1;
 // 	return 0;
 // }
-// int init_ARB_shader_bit_encoding() {
-// 	return 0;
-// }
 // int init_ARB_shader_image_load_store() {
 // 	ptrglBindImageTexture = goglGetProcAddress("glBindImageTexture");
 // 	if(ptrglBindImageTexture == NULL) return 1;
@@ -3270,7 +3331,9 @@ package arb
 // 	if(ptrglGetShaderSourceARB == NULL) return 1;
 // 	return 0;
 // }
-// int init_ARB_shader_stencil_export() {
+// int init_ARB_shader_storage_buffer_object() {
+// 	ptrglShaderStorageBlockBinding = goglGetProcAddress("glShaderStorageBlockBinding");
+// 	if(ptrglShaderStorageBlockBinding == NULL) return 1;
 // 	return 0;
 // }
 // int init_ARB_shader_subroutine() {
@@ -3292,15 +3355,6 @@ package arb
 // 	if(ptrglGetProgramStageiv == NULL) return 1;
 // 	return 0;
 // }
-// int init_ARB_shader_texture_lod() {
-// 	return 0;
-// }
-// int init_ARB_shading_language_100() {
-// 	return 0;
-// }
-// int init_ARB_shading_language_420pack() {
-// 	return 0;
-// }
 // int init_ARB_shading_language_include() {
 // 	ptrglNamedStringARB = goglGetProcAddress("glNamedStringARB");
 // 	if(ptrglNamedStringARB == NULL) return 1;
@@ -3314,15 +3368,6 @@ package arb
 // 	if(ptrglGetNamedStringARB == NULL) return 1;
 // 	ptrglGetNamedStringivARB = goglGetProcAddress("glGetNamedStringivARB");
 // 	if(ptrglGetNamedStringivARB == NULL) return 1;
-// 	return 0;
-// }
-// int init_ARB_shading_language_packing() {
-// 	return 0;
-// }
-// int init_ARB_shadow() {
-// 	return 0;
-// }
-// int init_ARB_shadow_ambient() {
 // 	return 0;
 // }
 // int init_ARB_sync() {
@@ -3349,15 +3394,16 @@ package arb
 // 	if(ptrglPatchParameterfv == NULL) return 1;
 // 	return 0;
 // }
-// int init_ARB_texture_border_clamp() {
-// 	return 0;
-// }
 // int init_ARB_texture_buffer_object() {
 // 	ptrglTexBufferARB = goglGetProcAddress("glTexBufferARB");
 // 	if(ptrglTexBufferARB == NULL) return 1;
 // 	return 0;
 // }
-// int init_ARB_texture_buffer_object_rgb32() {
+// int init_ARB_texture_buffer_range() {
+// 	ptrglTexBufferRange = goglGetProcAddress("glTexBufferRange");
+// 	if(ptrglTexBufferRange == NULL) return 1;
+// 	ptrglTextureBufferRangeEXT = goglGetProcAddress("glTextureBufferRangeEXT");
+// 	if(ptrglTextureBufferRangeEXT == NULL) return 1;
 // 	return 0;
 // }
 // int init_ARB_texture_compression() {
@@ -3377,39 +3423,6 @@ package arb
 // 	if(ptrglGetCompressedTexImageARB == NULL) return 1;
 // 	return 0;
 // }
-// int init_ARB_texture_compression_bptc() {
-// 	return 0;
-// }
-// int init_ARB_texture_compression_rgtc() {
-// 	return 0;
-// }
-// int init_ARB_texture_cube_map() {
-// 	return 0;
-// }
-// int init_ARB_texture_cube_map_array() {
-// 	return 0;
-// }
-// int init_ARB_texture_env_add() {
-// 	return 0;
-// }
-// int init_ARB_texture_env_combine() {
-// 	return 0;
-// }
-// int init_ARB_texture_env_crossbar() {
-// 	return 0;
-// }
-// int init_ARB_texture_env_dot3() {
-// 	return 0;
-// }
-// int init_ARB_texture_float() {
-// 	return 0;
-// }
-// int init_ARB_texture_gather() {
-// 	return 0;
-// }
-// int init_ARB_texture_mirrored_repeat() {
-// 	return 0;
-// }
 // int init_ARB_texture_multisample() {
 // 	ptrglTexImage2DMultisample = goglGetProcAddress("glTexImage2DMultisample");
 // 	if(ptrglTexImage2DMultisample == NULL) return 1;
@@ -3419,21 +3432,6 @@ package arb
 // 	if(ptrglGetMultisamplefv == NULL) return 1;
 // 	ptrglSampleMaski = goglGetProcAddress("glSampleMaski");
 // 	if(ptrglSampleMaski == NULL) return 1;
-// 	return 0;
-// }
-// int init_ARB_texture_non_power_of_two() {
-// 	return 0;
-// }
-// int init_ARB_texture_query_lod() {
-// 	return 0;
-// }
-// int init_ARB_texture_rectangle() {
-// 	return 0;
-// }
-// int init_ARB_texture_rg() {
-// 	return 0;
-// }
-// int init_ARB_texture_rgb10_a2ui() {
 // 	return 0;
 // }
 // int init_ARB_texture_storage() {
@@ -3451,7 +3449,20 @@ package arb
 // 	if(ptrglTextureStorage3DEXT == NULL) return 1;
 // 	return 0;
 // }
-// int init_ARB_texture_swizzle() {
+// int init_ARB_texture_storage_multisample() {
+// 	ptrglTexStorage2DMultisample = goglGetProcAddress("glTexStorage2DMultisample");
+// 	if(ptrglTexStorage2DMultisample == NULL) return 1;
+// 	ptrglTexStorage3DMultisample = goglGetProcAddress("glTexStorage3DMultisample");
+// 	if(ptrglTexStorage3DMultisample == NULL) return 1;
+// 	ptrglTextureStorage2DMultisampleEXT = goglGetProcAddress("glTextureStorage2DMultisampleEXT");
+// 	if(ptrglTextureStorage2DMultisampleEXT == NULL) return 1;
+// 	ptrglTextureStorage3DMultisampleEXT = goglGetProcAddress("glTextureStorage3DMultisampleEXT");
+// 	if(ptrglTextureStorage3DMultisampleEXT == NULL) return 1;
+// 	return 0;
+// }
+// int init_ARB_texture_view() {
+// 	ptrglTextureView = goglGetProcAddress("glTextureView");
+// 	if(ptrglTextureView == NULL) return 1;
 // 	return 0;
 // }
 // int init_ARB_timer_query() {
@@ -3526,9 +3537,6 @@ package arb
 // 	if(ptrglUniformBlockBinding == NULL) return 1;
 // 	return 0;
 // }
-// int init_ARB_vertex_array_bgra() {
-// 	return 0;
-// }
 // int init_ARB_vertex_array_object() {
 // 	ptrglBindVertexArray = goglGetProcAddress("glBindVertexArray");
 // 	if(ptrglBindVertexArray == NULL) return 1;
@@ -3561,6 +3569,33 @@ package arb
 // 	if(ptrglVertexAttribLPointer == NULL) return 1;
 // 	ptrglGetVertexAttribLdv = goglGetProcAddress("glGetVertexAttribLdv");
 // 	if(ptrglGetVertexAttribLdv == NULL) return 1;
+// 	return 0;
+// }
+// int init_ARB_vertex_attrib_binding() {
+// 	ptrglBindVertexBuffer = goglGetProcAddress("glBindVertexBuffer");
+// 	if(ptrglBindVertexBuffer == NULL) return 1;
+// 	ptrglVertexAttribFormat = goglGetProcAddress("glVertexAttribFormat");
+// 	if(ptrglVertexAttribFormat == NULL) return 1;
+// 	ptrglVertexAttribIFormat = goglGetProcAddress("glVertexAttribIFormat");
+// 	if(ptrglVertexAttribIFormat == NULL) return 1;
+// 	ptrglVertexAttribLFormat = goglGetProcAddress("glVertexAttribLFormat");
+// 	if(ptrglVertexAttribLFormat == NULL) return 1;
+// 	ptrglVertexAttribBinding = goglGetProcAddress("glVertexAttribBinding");
+// 	if(ptrglVertexAttribBinding == NULL) return 1;
+// 	ptrglVertexBindingDivisor = goglGetProcAddress("glVertexBindingDivisor");
+// 	if(ptrglVertexBindingDivisor == NULL) return 1;
+// 	ptrglVertexArrayBindVertexBufferEXT = goglGetProcAddress("glVertexArrayBindVertexBufferEXT");
+// 	if(ptrglVertexArrayBindVertexBufferEXT == NULL) return 1;
+// 	ptrglVertexArrayVertexAttribFormatEXT = goglGetProcAddress("glVertexArrayVertexAttribFormatEXT");
+// 	if(ptrglVertexArrayVertexAttribFormatEXT == NULL) return 1;
+// 	ptrglVertexArrayVertexAttribIFormatEXT = goglGetProcAddress("glVertexArrayVertexAttribIFormatEXT");
+// 	if(ptrglVertexArrayVertexAttribIFormatEXT == NULL) return 1;
+// 	ptrglVertexArrayVertexAttribLFormatEXT = goglGetProcAddress("glVertexArrayVertexAttribLFormatEXT");
+// 	if(ptrglVertexArrayVertexAttribLFormatEXT == NULL) return 1;
+// 	ptrglVertexArrayVertexAttribBindingEXT = goglGetProcAddress("glVertexArrayVertexAttribBindingEXT");
+// 	if(ptrglVertexArrayVertexAttribBindingEXT == NULL) return 1;
+// 	ptrglVertexArrayVertexBindingDivisorEXT = goglGetProcAddress("glVertexArrayVertexBindingDivisorEXT");
+// 	if(ptrglVertexArrayVertexBindingDivisorEXT == NULL) return 1;
 // 	return 0;
 // }
 // int init_ARB_vertex_blend() {
@@ -3933,6 +3968,25 @@ const (
 	SHADER_BINARY_FORMATS = 0x8DF8
 	SHADER_COMPILER = 0x8DFA
 )
+// ARB_ES3_compatibility
+const (
+	ANY_SAMPLES_PASSED_CONSERVATIVE = 0x8D6A
+	COMPRESSED_R11_EAC = 0x9270
+	COMPRESSED_RG11_EAC = 0x9272
+	COMPRESSED_RGB8_ETC2 = 0x9274
+	COMPRESSED_RGB8_PUNCHTHROUGH_ALPHA1_ETC2 = 0x9276
+	COMPRESSED_RGBA8_ETC2_EAC = 0x9278
+	COMPRESSED_SIGNED_R11_EAC = 0x9271
+	COMPRESSED_SIGNED_RG11_EAC = 0x9273
+	COMPRESSED_SRGB8_ALPHA8_ETC2_EAC = 0x9279
+	COMPRESSED_SRGB8_ETC2 = 0x9275
+	COMPRESSED_SRGB8_PUNCHTHROUGH_ALPHA1_ETC2 = 0x9277
+	MAX_ELEMENT_INDEX = 0x8D6B
+	PRIMITIVE_RESTART_FIXED_INDEX = 0x8D69
+)
+// ARB_arrays_of_arrays
+const (
+)
 // ARB_base_instance
 const (
 )
@@ -3948,6 +4002,9 @@ const (
 const (
 	SYNC_CL_EVENT_ARB = 0x8240
 	SYNC_CL_EVENT_COMPLETE_ARB = 0x8241
+)
+// ARB_clear_buffer_object
+const (
 )
 // ARB_color_buffer_float
 const (
@@ -3971,6 +4028,27 @@ const (
 	UNPACK_COMPRESSED_BLOCK_SIZE = 0x912A
 	UNPACK_COMPRESSED_BLOCK_WIDTH = 0x9127
 )
+// ARB_compute_shader
+const (
+	ATOMIC_COUNTER_BUFFER_REFERENCED_BY_COMPUTE_SHADER = 0x90ED
+	COMPUTE_LOCAL_WORK_SIZE = 0x8267
+	COMPUTE_SHADER = 0x91B9
+	COMPUTE_SHADER_BIT = 0x00000020
+	DISPATCH_INDIRECT_BUFFER = 0x90EE
+	DISPATCH_INDIRECT_BUFFER_BINDING = 0x90EF
+	MAX_COMBINED_COMPUTE_UNIFORM_COMPONENTS = 0x8266
+	MAX_COMPUTE_ATOMIC_COUNTERS = 0x8265
+	MAX_COMPUTE_ATOMIC_COUNTER_BUFFERS = 0x8264
+	MAX_COMPUTE_IMAGE_UNIFORMS = 0x91BD
+	MAX_COMPUTE_LOCAL_INVOCATIONS = 0x90EB
+	MAX_COMPUTE_SHARED_MEMORY_SIZE = 0x8262
+	MAX_COMPUTE_TEXTURE_IMAGE_UNITS = 0x91BC
+	MAX_COMPUTE_UNIFORM_BLOCKS = 0x91BB
+	MAX_COMPUTE_UNIFORM_COMPONENTS = 0x8263
+	MAX_COMPUTE_WORK_GROUP_COUNT = 0x91BE
+	MAX_COMPUTE_WORK_GROUP_SIZE = 0x91BF
+	UNIFORM_BLOCK_REFERENCED_BY_COMPUTE_SHADER = 0x90EC
+)
 // ARB_conservative_depth
 const (
 )
@@ -3980,6 +4058,9 @@ const (
 	COPY_READ_BUFFER_BINDING = 0x8F36
 	COPY_WRITE_BUFFER = 0x8F37
 	COPY_WRITE_BUFFER_BINDING = 0x8F37
+)
+// ARB_copy_image
+const (
 )
 // ARB_debug_output
 const (
@@ -4061,7 +4142,14 @@ const (
 // ARB_explicit_attrib_location
 const (
 )
+// ARB_explicit_uniform_location
+const (
+	MAX_UNIFORM_LOCATIONS = 0x826E
+)
 // ARB_fragment_coord_conventions
+const (
+)
+// ARB_fragment_layer_viewport
 const (
 )
 // ARB_fragment_program
@@ -4090,6 +4178,18 @@ const (
 	FRAGMENT_SHADER_ARB = 0x8B30
 	FRAGMENT_SHADER_DERIVATIVE_HINT_ARB = 0x8B8B
 	MAX_FRAGMENT_UNIFORM_COMPONENTS_ARB = 0x8B49
+)
+// ARB_framebuffer_no_attachments
+const (
+	FRAMEBUFFER_DEFAULT_FIXED_SAMPLE_LOCATIONS = 0x9314
+	FRAMEBUFFER_DEFAULT_HEIGHT = 0x9311
+	FRAMEBUFFER_DEFAULT_LAYERS = 0x9312
+	FRAMEBUFFER_DEFAULT_SAMPLES = 0x9313
+	FRAMEBUFFER_DEFAULT_WIDTH = 0x9310
+	MAX_FRAMEBUFFER_HEIGHT = 0x9316
+	MAX_FRAMEBUFFER_LAYERS = 0x9317
+	MAX_FRAMEBUFFER_SAMPLES = 0x9318
+	MAX_FRAMEBUFFER_WIDTH = 0x9315
 )
 // ARB_framebuffer_object
 const (
@@ -4138,13 +4238,13 @@ const (
 	FRAMEBUFFER_INCOMPLETE_READ_BUFFER = 0x8CDC
 	FRAMEBUFFER_UNDEFINED = 0x8219
 	FRAMEBUFFER_UNSUPPORTED = 0x8CDD
+	INDEX = 0x8222
 	INVALID_FRAMEBUFFER_OPERATION = 0x0506
 	MAX_COLOR_ATTACHMENTS = 0x8CDF
 	MAX_RENDERBUFFER_SIZE = 0x84E8
 	MAX_SAMPLES = 0x8D57
 	READ_FRAMEBUFFER = 0x8CA8
 	READ_FRAMEBUFFER_BINDING = 0x8CAA
-	RENDERBUFFER = 0x8D41
 	RENDERBUFFER_ALPHA_SIZE = 0x8D53
 	RENDERBUFFER_BINDING = 0x8CA7
 	RENDERBUFFER_BLUE_SIZE = 0x8D52
@@ -4165,16 +4265,12 @@ const (
 	TEXTURE_BLUE_TYPE = 0x8C12
 	TEXTURE_DEPTH_TYPE = 0x8C16
 	TEXTURE_GREEN_TYPE = 0x8C11
+	TEXTURE_INTENSITY_TYPE = 0x8C15
+	TEXTURE_LUMINANCE_TYPE = 0x8C14
 	TEXTURE_RED_TYPE = 0x8C10
 	TEXTURE_STENCIL_SIZE = 0x88F1
 	UNSIGNED_INT_24_8 = 0x84FA
 	UNSIGNED_NORMALIZED = 0x8C17
-)
-// ARB_framebuffer_object_DEPRECATED
-const (
-	INDEX = 0x8222
-	TEXTURE_INTENSITY_TYPE = 0x8C15
-	TEXTURE_LUMINANCE_TYPE = 0x8C14
 )
 // ARB_framebuffer_sRGB
 const (
@@ -4233,18 +4329,6 @@ const (
 const (
 	BLEND_COLOR = 0x8005
 	BLEND_EQUATION = 0x8009
-	CONSTANT_ALPHA = 0x8003
-	CONSTANT_COLOR = 0x8001
-	FUNC_ADD = 0x8006
-	FUNC_REVERSE_SUBTRACT = 0x800B
-	FUNC_SUBTRACT = 0x800A
-	MAX = 0x8008
-	MIN = 0x8007
-	ONE_MINUS_CONSTANT_ALPHA = 0x8004
-	ONE_MINUS_CONSTANT_COLOR = 0x8002
-)
-// ARB_imaging_DEPRECATED
-const (
 	COLOR_MATRIX = 0x80B1
 	COLOR_MATRIX_STACK_DEPTH = 0x80B2
 	COLOR_TABLE = 0x80D0
@@ -4258,7 +4342,9 @@ const (
 	COLOR_TABLE_RED_SIZE = 0x80DA
 	COLOR_TABLE_SCALE = 0x80D6
 	COLOR_TABLE_WIDTH = 0x80D9
+	CONSTANT_ALPHA = 0x8003
 	CONSTANT_BORDER = 0x8151
+	CONSTANT_COLOR = 0x8001
 	CONVOLUTION_1D = 0x8010
 	CONVOLUTION_2D = 0x8011
 	CONVOLUTION_BORDER_COLOR = 0x8154
@@ -4268,6 +4354,9 @@ const (
 	CONVOLUTION_FORMAT = 0x8017
 	CONVOLUTION_HEIGHT = 0x8019
 	CONVOLUTION_WIDTH = 0x8018
+	FUNC_ADD = 0x8006
+	FUNC_REVERSE_SUBTRACT = 0x800B
+	FUNC_SUBTRACT = 0x800A
 	HISTOGRAM = 0x8024
 	HISTOGRAM_ALPHA_SIZE = 0x802B
 	HISTOGRAM_BLUE_SIZE = 0x802A
@@ -4277,12 +4366,16 @@ const (
 	HISTOGRAM_RED_SIZE = 0x8028
 	HISTOGRAM_SINK = 0x802D
 	HISTOGRAM_WIDTH = 0x8026
+	MAX = 0x8008
 	MAX_COLOR_MATRIX_STACK_DEPTH = 0x80B3
 	MAX_CONVOLUTION_HEIGHT = 0x801B
 	MAX_CONVOLUTION_WIDTH = 0x801A
+	MIN = 0x8007
 	MINMAX = 0x802E
 	MINMAX_FORMAT = 0x802F
 	MINMAX_SINK = 0x8030
+	ONE_MINUS_CONSTANT_ALPHA = 0x8004
+	ONE_MINUS_CONSTANT_COLOR = 0x8002
 	POST_COLOR_MATRIX_ALPHA_BIAS = 0x80BB
 	POST_COLOR_MATRIX_ALPHA_SCALE = 0x80B7
 	POST_COLOR_MATRIX_BLUE_BIAS = 0x80BA
@@ -4316,7 +4409,119 @@ const (
 )
 // ARB_internalformat_query
 const (
-	NUM_SAMPLE_COUNTS = 0x9380
+)
+// ARB_internalformat_query2
+const (
+	AUTO_GENERATE_MIPMAP = 0x8295
+	CAVEAT_SUPPORT = 0x82B8
+	CLEAR_BUFFER = 0x82B4
+	COLOR_COMPONENTS = 0x8283
+	COLOR_ENCODING = 0x8296
+	COLOR_RENDERABLE = 0x8286
+	COMPUTE_TEXTURE = 0x82A0
+	DEPTH_COMPONENTS = 0x8284
+	DEPTH_RENDERABLE = 0x8287
+	FILTER = 0x829A
+	FRAGMENT_TEXTURE = 0x829F
+	FRAMEBUFFER_BLEND = 0x828B
+	FRAMEBUFFER_RENDERABLE = 0x8289
+	FRAMEBUFFER_RENDERABLE_LAYERED = 0x828A
+	FULL_SUPPORT = 0x82B7
+	GEOMETRY_TEXTURE = 0x829E
+	GET_TEXTURE_IMAGE_FORMAT = 0x8291
+	GET_TEXTURE_IMAGE_TYPE = 0x8292
+	IMAGE_CLASS_10_10_10_2 = 0x82C3
+	IMAGE_CLASS_11_11_10 = 0x82C2
+	IMAGE_CLASS_1_X_16 = 0x82BE
+	IMAGE_CLASS_1_X_32 = 0x82BB
+	IMAGE_CLASS_1_X_8 = 0x82C1
+	IMAGE_CLASS_2_X_16 = 0x82BD
+	IMAGE_CLASS_2_X_32 = 0x82BA
+	IMAGE_CLASS_2_X_8 = 0x82C0
+	IMAGE_CLASS_4_X_16 = 0x82BC
+	IMAGE_CLASS_4_X_32 = 0x82B9
+	IMAGE_CLASS_4_X_8 = 0x82BF
+	IMAGE_COMPATIBILITY_CLASS = 0x82A8
+	IMAGE_PIXEL_FORMAT = 0x82A9
+	IMAGE_PIXEL_TYPE = 0x82AA
+	IMAGE_TEXEL_SIZE = 0x82A7
+	INTERNALFORMAT_ALPHA_SIZE = 0x8274
+	INTERNALFORMAT_ALPHA_TYPE = 0x827B
+	INTERNALFORMAT_BLUE_SIZE = 0x8273
+	INTERNALFORMAT_BLUE_TYPE = 0x827A
+	INTERNALFORMAT_DEPTH_SIZE = 0x8275
+	INTERNALFORMAT_DEPTH_TYPE = 0x827C
+	INTERNALFORMAT_GREEN_SIZE = 0x8272
+	INTERNALFORMAT_GREEN_TYPE = 0x8279
+	INTERNALFORMAT_PREFERRED = 0x8270
+	INTERNALFORMAT_RED_SIZE = 0x8271
+	INTERNALFORMAT_RED_TYPE = 0x8278
+	INTERNALFORMAT_SHARED_SIZE = 0x8277
+	INTERNALFORMAT_STENCIL_SIZE = 0x8276
+	INTERNALFORMAT_STENCIL_TYPE = 0x827D
+	INTERNALFORMAT_SUPPORTED = 0x826F
+	MANUAL_GENERATE_MIPMAP = 0x8294
+	MAX_COMBINED_DIMENSIONS = 0x8282
+	MAX_DEPTH = 0x8280
+	MAX_HEIGHT = 0x827F
+	MAX_LAYERS = 0x8281
+	MAX_WIDTH = 0x827E
+	MIPMAP = 0x8293
+	READ_PIXELS = 0x828C
+	READ_PIXELS_FORMAT = 0x828D
+	READ_PIXELS_TYPE = 0x828E
+	SAMPLES = 0x80A9
+	SHADER_IMAGE_ATOMIC = 0x82A6
+	SHADER_IMAGE_LOAD = 0x82A4
+	SHADER_IMAGE_STORE = 0x82A5
+	SIMULTANEOUS_TEXTURE_AND_DEPTH_TEST = 0x82AC
+	SIMULTANEOUS_TEXTURE_AND_DEPTH_WRITE = 0x82AE
+	SIMULTANEOUS_TEXTURE_AND_STENCIL_TEST = 0x82AD
+	SIMULTANEOUS_TEXTURE_AND_STENCIL_WRITE = 0x82AF
+	SRGB_DECODE_ARB = 0x8299
+	SRGB_READ = 0x8297
+	SRGB_WRITE = 0x8298
+	STENCIL_COMPONENTS = 0x8285
+	STENCIL_RENDERABLE = 0x8288
+	TESS_CONTROL_TEXTURE = 0x829C
+	TESS_EVALUATION_TEXTURE = 0x829D
+	TEXTURE_1D_ARRAY = 0x8C18
+	TEXTURE_2D_ARRAY = 0x8C1A
+	TEXTURE_3D = 0x806F
+	TEXTURE_BUFFER = 0x8C2A
+	TEXTURE_COMPRESSED = 0x86A1
+	TEXTURE_COMPRESSED_BLOCK_HEIGHT = 0x82B2
+	TEXTURE_COMPRESSED_BLOCK_SIZE = 0x82B3
+	TEXTURE_COMPRESSED_BLOCK_WIDTH = 0x82B1
+	TEXTURE_CUBE_MAP = 0x8513
+	TEXTURE_GATHER = 0x82A2
+	TEXTURE_GATHER_SHADOW = 0x82A3
+	TEXTURE_IMAGE_FORMAT = 0x828F
+	TEXTURE_IMAGE_TYPE = 0x8290
+	TEXTURE_RECTANGLE = 0x84F5
+	TEXTURE_SHADOW = 0x82A1
+	TEXTURE_VIEW = 0x82B5
+	VERTEX_TEXTURE = 0x829B
+	VIEW_CLASS_128_BITS = 0x82C4
+	VIEW_CLASS_16_BITS = 0x82CA
+	VIEW_CLASS_24_BITS = 0x82C9
+	VIEW_CLASS_32_BITS = 0x82C8
+	VIEW_CLASS_48_BITS = 0x82C7
+	VIEW_CLASS_64_BITS = 0x82C6
+	VIEW_CLASS_8_BITS = 0x82CB
+	VIEW_CLASS_96_BITS = 0x82C5
+	VIEW_CLASS_BPTC_FLOAT = 0x82D3
+	VIEW_CLASS_BPTC_UNORM = 0x82D2
+	VIEW_CLASS_RGTC1_RED = 0x82D0
+	VIEW_CLASS_RGTC2_RG = 0x82D1
+	VIEW_CLASS_S3TC_DXT1_RGB = 0x82CC
+	VIEW_CLASS_S3TC_DXT1_RGBA = 0x82CD
+	VIEW_CLASS_S3TC_DXT3_RGBA = 0x82CE
+	VIEW_CLASS_S3TC_DXT5_RGBA = 0x82CF
+	VIEW_COMPATIBILITY_CLASS = 0x82B6
+)
+// ARB_invalidate_subdata
+const (
 )
 // ARB_map_buffer_alignment
 const (
@@ -4343,6 +4548,9 @@ const (
 	MATRIX_PALETTE_ARB = 0x8840
 	MAX_MATRIX_PALETTE_STACK_DEPTH_ARB = 0x8841
 	MAX_PALETTE_MATRICES_ARB = 0x8842
+)
+// ARB_multi_draw_indirect
+const (
 )
 // ARB_multisample
 const (
@@ -4425,9 +4633,62 @@ const (
 	COORD_REPLACE_ARB = 0x8862
 	POINT_SPRITE_ARB = 0x8861
 )
+// ARB_program_interface_query
+const (
+	ACTIVE_RESOURCES = 0x92F5
+	ACTIVE_VARIABLES = 0x9305
+	ARRAY_SIZE = 0x92FB
+	ARRAY_STRIDE = 0x92FE
+	ATOMIC_COUNTER_BUFFER_INDEX = 0x9301
+	BLOCK_INDEX = 0x92FD
+	BUFFER_BINDING = 0x9302
+	BUFFER_DATA_SIZE = 0x9303
+	BUFFER_VARIABLE = 0x92E5
+	COMPUTE_SUBROUTINE = 0x92ED
+	COMPUTE_SUBROUTINE_UNIFORM = 0x92F3
+	FRAGMENT_SUBROUTINE = 0x92EC
+	FRAGMENT_SUBROUTINE_UNIFORM = 0x92F2
+	GEOMETRY_SUBROUTINE = 0x92EB
+	GEOMETRY_SUBROUTINE_UNIFORM = 0x92F1
+	IS_PER_PATCH = 0x92E7
+	IS_ROW_MAJOR = 0x9300
+	LOCATION = 0x930E
+	LOCATION_INDEX = 0x930F
+	MATRIX_STRIDE = 0x92FF
+	MAX_NAME_LENGTH = 0x92F6
+	MAX_NUM_ACTIVE_VARIABLES = 0x92F7
+	MAX_NUM_COMPATIBLE_SUBROUTINES = 0x92F8
+	NAME_LENGTH = 0x92F9
+	NUM_ACTIVE_VARIABLES = 0x9304
+	OFFSET = 0x92FC
+	PROGRAM_INPUT = 0x92E3
+	PROGRAM_OUTPUT = 0x92E4
+	REFERENCED_BY_COMPUTE_SHADER = 0x930B
+	REFERENCED_BY_FRAGMENT_SHADER = 0x930A
+	REFERENCED_BY_GEOMETRY_SHADER = 0x9309
+	REFERENCED_BY_TESS_CONTROL_SHADER = 0x9307
+	REFERENCED_BY_TESS_EVALUATION_SHADER = 0x9308
+	REFERENCED_BY_VERTEX_SHADER = 0x9306
+	SHADER_STORAGE_BLOCK = 0x92E6
+	TESS_CONTROL_SUBROUTINE = 0x92E9
+	TESS_CONTROL_SUBROUTINE_UNIFORM = 0x92EF
+	TESS_EVALUATION_SUBROUTINE = 0x92EA
+	TESS_EVALUATION_SUBROUTINE_UNIFORM = 0x92F0
+	TOP_LEVEL_ARRAY_SIZE = 0x930C
+	TOP_LEVEL_ARRAY_STRIDE = 0x930D
+	TRANSFORM_FEEDBACK_VARYING = 0x92F4
+	TYPE = 0x92FA
+	UNIFORM = 0x92E1
+	UNIFORM_BLOCK = 0x92E2
+	VERTEX_SUBROUTINE = 0x92E8
+	VERTEX_SUBROUTINE_UNIFORM = 0x92EE
+)
 // ARB_provoking_vertex
 const (
 	QUADS_FOLLOW_PROVOKING_VERTEX_CONVENTION = 0x8E4C
+)
+// ARB_robust_buffer_access_behavior
+const (
 )
 // ARB_robustness
 const (
@@ -4439,6 +4700,9 @@ const (
 	NO_RESET_NOTIFICATION_ARB = 0x8261
 	RESET_NOTIFICATION_STRATEGY_ARB = 0x8256
 	UNKNOWN_CONTEXT_RESET_ARB = 0x8255
+)
+// ARB_robustness_isolation
+const (
 )
 // ARB_sample_shading
 const (
@@ -4468,7 +4732,6 @@ const (
 // ARB_shader_atomic_counters
 const (
 	ACTIVE_ATOMIC_COUNTER_BUFFERS = 0x92D9
-	ATOMIC_COUNTER_BUFFER = 0x92C0
 	ATOMIC_COUNTER_BUFFER_ACTIVE_ATOMIC_COUNTERS = 0x92C5
 	ATOMIC_COUNTER_BUFFER_ACTIVE_ATOMIC_COUNTER_INDICES = 0x92C6
 	ATOMIC_COUNTER_BUFFER_BINDING = 0x92C1
@@ -4527,7 +4790,6 @@ const (
 	IMAGE_CUBE_MAP_ARRAY = 0x9054
 	IMAGE_FORMAT_COMPATIBILITY_BY_CLASS = 0x90C9
 	IMAGE_FORMAT_COMPATIBILITY_BY_SIZE = 0x90C8
-	IMAGE_FORMAT_COMPATIBILITY_TYPE = 0x90C7
 	INT_IMAGE_1D = 0x9057
 	INT_IMAGE_1D_ARRAY = 0x905D
 	INT_IMAGE_2D = 0x9058
@@ -4540,7 +4802,6 @@ const (
 	INT_IMAGE_CUBE = 0x905B
 	INT_IMAGE_CUBE_MAP_ARRAY = 0x905F
 	MAX_COMBINED_IMAGE_UNIFORMS = 0x90CF
-	MAX_COMBINED_IMAGE_UNITS_AND_FRAGMENT_OUTPUTS = 0x8F39
 	MAX_FRAGMENT_IMAGE_UNIFORMS = 0x90CE
 	MAX_GEOMETRY_IMAGE_UNIFORMS = 0x90CD
 	MAX_IMAGE_SAMPLES = 0x906D
@@ -4566,6 +4827,9 @@ const (
 	UNSIGNED_INT_IMAGE_CUBE = 0x9066
 	UNSIGNED_INT_IMAGE_CUBE_MAP_ARRAY = 0x906A
 	VERTEX_ATTRIB_ARRAY_BARRIER_BIT = 0x00000001
+)
+// ARB_shader_image_size
+const (
 )
 // ARB_shader_objects
 const (
@@ -4610,6 +4874,25 @@ const (
 // ARB_shader_stencil_export
 const (
 )
+// ARB_shader_storage_buffer_object
+const (
+	MAX_COMBINED_SHADER_OUTPUT_RESOURCES = 0x8F39
+	MAX_COMBINED_SHADER_STORAGE_BLOCKS = 0x90DC
+	MAX_COMPUTE_SHADER_STORAGE_BLOCKS = 0x90DB
+	MAX_FRAGMENT_SHADER_STORAGE_BLOCKS = 0x90DA
+	MAX_GEOMETRY_SHADER_STORAGE_BLOCKS = 0x90D7
+	MAX_SHADER_STORAGE_BLOCK_SIZE = 0x90DE
+	MAX_SHADER_STORAGE_BUFFER_BINDINGS = 0x90DD
+	MAX_TESS_CONTROL_SHADER_STORAGE_BLOCKS = 0x90D8
+	MAX_TESS_EVALUATION_SHADER_STORAGE_BLOCKS = 0x90D9
+	MAX_VERTEX_SHADER_STORAGE_BLOCKS = 0x90D6
+	SHADER_STORAGE_BARRIER_BIT = 0x2000
+	SHADER_STORAGE_BUFFER = 0x90D2
+	SHADER_STORAGE_BUFFER_BINDING = 0x90D3
+	SHADER_STORAGE_BUFFER_OFFSET_ALIGNMENT = 0x90DF
+	SHADER_STORAGE_BUFFER_SIZE = 0x90D5
+	SHADER_STORAGE_BUFFER_START = 0x90D4
+)
 // ARB_shader_subroutine
 const (
 	ACTIVE_SUBROUTINES = 0x8DE5
@@ -4617,10 +4900,8 @@ const (
 	ACTIVE_SUBROUTINE_UNIFORMS = 0x8DE6
 	ACTIVE_SUBROUTINE_UNIFORM_LOCATIONS = 0x8E47
 	ACTIVE_SUBROUTINE_UNIFORM_MAX_LENGTH = 0x8E49
-	COMPATIBLE_SUBROUTINES = 0x8E4B
 	MAX_SUBROUTINES = 0x8DE7
 	MAX_SUBROUTINE_UNIFORM_LOCATIONS = 0x8DE8
-	NUM_COMPATIBLE_SUBROUTINES = 0x8E4A
 )
 // ARB_shader_texture_lod
 const (
@@ -4650,6 +4931,10 @@ const (
 // ARB_shadow_ambient
 const (
 	TEXTURE_COMPARE_FAIL_VALUE_ARB = 0x80BF
+)
+// ARB_stencil_texturing
+const (
+	DEPTH_STENCIL_TEXTURE_MODE = 0x90EA
 )
 // ARB_sync
 const (
@@ -4725,6 +5010,12 @@ const (
 const (
 	RGB32F = 0x8815
 	RGB32UI = 0x8D71
+)
+// ARB_texture_buffer_range
+const (
+	TEXTURE_BUFFER_OFFSET = 0x919D
+	TEXTURE_BUFFER_OFFSET_ALIGNMENT = 0x919F
+	TEXTURE_BUFFER_SIZE = 0x919E
 )
 // ARB_texture_compression
 const (
@@ -4863,8 +5154,6 @@ const (
 	SAMPLE_MASK = 0x8E51
 	SAMPLE_MASK_VALUE = 0x8E52
 	SAMPLE_POSITION = 0x8E50
-	TEXTURE_2D_MULTISAMPLE = 0x9100
-	TEXTURE_2D_MULTISAMPLE_ARRAY = 0x9102
 	TEXTURE_BINDING_2D_MULTISAMPLE = 0x9104
 	TEXTURE_BINDING_2D_MULTISAMPLE_ARRAY = 0x9105
 	TEXTURE_FIXED_SAMPLE_LOCATIONS = 0x9107
@@ -4873,6 +5162,9 @@ const (
 	UNSIGNED_INT_SAMPLER_2D_MULTISAMPLE_ARRAY = 0x910D
 )
 // ARB_texture_non_power_of_two
+const (
+)
+// ARB_texture_query_levels
 const (
 )
 // ARB_texture_query_lod
@@ -4918,6 +5210,9 @@ const (
 const (
 	TEXTURE_IMMUTABLE_FORMAT = 0x912F
 )
+// ARB_texture_storage_multisample
+const (
+)
 // ARB_texture_swizzle
 const (
 	TEXTURE_SWIZZLE_A = 0x8E45
@@ -4925,6 +5220,14 @@ const (
 	TEXTURE_SWIZZLE_G = 0x8E43
 	TEXTURE_SWIZZLE_R = 0x8E42
 	TEXTURE_SWIZZLE_RGBA = 0x8E46
+)
+// ARB_texture_view
+const (
+	TEXTURE_IMMUTABLE_LEVELS = 0x82DF
+	TEXTURE_VIEW_MIN_LAYER = 0x82DD
+	TEXTURE_VIEW_MIN_LEVEL = 0x82DB
+	TEXTURE_VIEW_NUM_LAYERS = 0x82DE
+	TEXTURE_VIEW_NUM_LEVELS = 0x82DC
 )
 // ARB_timer_query
 const (
@@ -4999,6 +5302,16 @@ const (
 )
 // ARB_vertex_attrib_64bit
 const (
+)
+// ARB_vertex_attrib_binding
+const (
+	MAX_VERTEX_ATTRIB_BINDINGS = 0x82DA
+	MAX_VERTEX_ATTRIB_RELATIVE_OFFSET = 0x82D9
+	VERTEX_ATTRIB_BINDING = 0x82D4
+	VERTEX_ATTRIB_RELATIVE_OFFSET = 0x82D5
+	VERTEX_BINDING_DIVISOR = 0x82D6
+	VERTEX_BINDING_OFFSET = 0x82D7
+	VERTEX_BINDING_STRIDE = 0x82D8
 )
 // ARB_vertex_blend
 const (
@@ -5211,14 +5524,14 @@ func ClearDepthf(d Float)  {
 }
 // ARB_base_instance
 
-func DrawArraysInstancedBaseInstance(mode Enum, first Int, count Sizei, primcount Sizei, baseinstance Uint)  {
-	C.goglDrawArraysInstancedBaseInstance((C.GLenum)(mode), (C.GLint)(first), (C.GLsizei)(count), (C.GLsizei)(primcount), (C.GLuint)(baseinstance))
+func DrawArraysInstancedBaseInstance(mode Enum, first Int, count Sizei, instancecount Sizei, baseinstance Uint)  {
+	C.goglDrawArraysInstancedBaseInstance((C.GLenum)(mode), (C.GLint)(first), (C.GLsizei)(count), (C.GLsizei)(instancecount), (C.GLuint)(baseinstance))
 }
-func DrawElementsInstancedBaseInstance(mode Enum, count Sizei, type_ Enum, indices Pointer, primcount Sizei, baseinstance Uint)  {
-	C.goglDrawElementsInstancedBaseInstance((C.GLenum)(mode), (C.GLsizei)(count), (C.GLenum)(type_), (unsafe.Pointer)(indices), (C.GLsizei)(primcount), (C.GLuint)(baseinstance))
+func DrawElementsInstancedBaseInstance(mode Enum, count Sizei, type_ Enum, indices Pointer, instancecount Sizei, baseinstance Uint)  {
+	C.goglDrawElementsInstancedBaseInstance((C.GLenum)(mode), (C.GLsizei)(count), (C.GLenum)(type_), (unsafe.Pointer)(indices), (C.GLsizei)(instancecount), (C.GLuint)(baseinstance))
 }
-func DrawElementsInstancedBaseVertexBaseInstance(mode Enum, count Sizei, type_ Enum, indices Pointer, primcount Sizei, basevertex Int, baseinstance Uint)  {
-	C.goglDrawElementsInstancedBaseVertexBaseInstance((C.GLenum)(mode), (C.GLsizei)(count), (C.GLenum)(type_), (unsafe.Pointer)(indices), (C.GLsizei)(primcount), (C.GLint)(basevertex), (C.GLuint)(baseinstance))
+func DrawElementsInstancedBaseVertexBaseInstance(mode Enum, count Sizei, type_ Enum, indices Pointer, instancecount Sizei, basevertex Int, baseinstance Uint)  {
+	C.goglDrawElementsInstancedBaseVertexBaseInstance((C.GLenum)(mode), (C.GLsizei)(count), (C.GLenum)(type_), (unsafe.Pointer)(indices), (C.GLsizei)(instancecount), (C.GLint)(basevertex), (C.GLuint)(baseinstance))
 }
 // ARB_blend_func_extended
 
@@ -5233,21 +5546,42 @@ func GetFragDataIndex(program Uint, name *Char) Int {
 func CreateSyncFromCLeventARB(context Pointer, event Pointer, flags Bitfield) Sync {
 	return (Sync)(C.goglCreateSyncFromCLeventARB((*[0]byte)(context), (*[0]byte)(event), (C.GLbitfield)(flags)))
 }
+// ARB_clear_buffer_object
+
+func ClearBufferData(target Enum, internalformat Enum, format Enum, type_ Enum, data Pointer)  {
+	C.goglClearBufferData((C.GLenum)(target), (C.GLenum)(internalformat), (C.GLenum)(format), (C.GLenum)(type_), (unsafe.Pointer)(data))
+}
+func ClearBufferSubData(target Enum, internalformat Enum, offset Intptr, size Sizeiptr, format Enum, type_ Enum, data Pointer)  {
+	C.goglClearBufferSubData((C.GLenum)(target), (C.GLenum)(internalformat), (C.GLintptr)(offset), (C.GLsizeiptr)(size), (C.GLenum)(format), (C.GLenum)(type_), (unsafe.Pointer)(data))
+}
+func ClearNamedBufferDataEXT(buffer Uint, internalformat Enum, format Enum, type_ Enum, data Pointer)  {
+	C.goglClearNamedBufferDataEXT((C.GLuint)(buffer), (C.GLenum)(internalformat), (C.GLenum)(format), (C.GLenum)(type_), (unsafe.Pointer)(data))
+}
+func ClearNamedBufferSubDataEXT(buffer Uint, internalformat Enum, offset Sizeiptr, size Sizeiptr, format Enum, type_ Enum, data Pointer)  {
+	C.goglClearNamedBufferSubDataEXT((C.GLuint)(buffer), (C.GLenum)(internalformat), (C.GLsizeiptr)(offset), (C.GLsizeiptr)(size), (C.GLenum)(format), (C.GLenum)(type_), (unsafe.Pointer)(data))
+}
 // ARB_color_buffer_float
 
 func ClampColorARB(target Enum, clamp Enum)  {
 	C.goglClampColorARB((C.GLenum)(target), (C.GLenum)(clamp))
 }
-// ARB_compatibility
+// ARB_compute_shader
 
-// ARB_compressed_texture_pixel_storage
-
-// ARB_conservative_depth
-
+func DispatchCompute(num_groups_x Uint, num_groups_y Uint, num_groups_z Uint)  {
+	C.goglDispatchCompute((C.GLuint)(num_groups_x), (C.GLuint)(num_groups_y), (C.GLuint)(num_groups_z))
+}
+func DispatchComputeIndirect(indirect Intptr)  {
+	C.goglDispatchComputeIndirect((C.GLintptr)(indirect))
+}
 // ARB_copy_buffer
 
 func CopyBufferSubData(readTarget Enum, writeTarget Enum, readOffset Intptr, writeOffset Intptr, size Sizeiptr)  {
 	C.goglCopyBufferSubData((C.GLenum)(readTarget), (C.GLenum)(writeTarget), (C.GLintptr)(readOffset), (C.GLintptr)(writeOffset), (C.GLsizeiptr)(size))
+}
+// ARB_copy_image
+
+func CopyImageSubData(srcName Uint, srcTarget Enum, srcLevel Int, srcX Int, srcY Int, srcZ Int, dstName Uint, dstTarget Enum, dstLevel Int, dstX Int, dstY Int, dstZ Int, srcWidth Sizei, srcHeight Sizei, srcDepth Sizei)  {
+	C.goglCopyImageSubData((C.GLuint)(srcName), (C.GLenum)(srcTarget), (C.GLint)(srcLevel), (C.GLint)(srcX), (C.GLint)(srcY), (C.GLint)(srcZ), (C.GLuint)(dstName), (C.GLenum)(dstTarget), (C.GLint)(dstLevel), (C.GLint)(dstX), (C.GLint)(dstY), (C.GLint)(dstZ), (C.GLsizei)(srcWidth), (C.GLsizei)(srcHeight), (C.GLsizei)(srcDepth))
 }
 // ARB_debug_output
 
@@ -5263,12 +5597,6 @@ func DebugMessageCallbackARB(callback Pointer, userParam Pointer)  {
 func GetDebugMessageLogARB(count Uint, bufsize Sizei, sources *Enum, types *Enum, ids *Uint, severities *Enum, lengths *Sizei, messageLog *Char) Uint {
 	return (Uint)(C.goglGetDebugMessageLogARB((C.GLuint)(count), (C.GLsizei)(bufsize), (*C.GLenum)(sources), (*C.GLenum)(types), (*C.GLuint)(ids), (*C.GLenum)(severities), (*C.GLsizei)(lengths), (*C.GLchar)(messageLog)))
 }
-// ARB_depth_buffer_float
-
-// ARB_depth_clamp
-
-// ARB_depth_texture
-
 // ARB_draw_buffers
 
 func DrawBuffersARB(n Sizei, bufs *Enum)  {
@@ -5296,11 +5624,11 @@ func DrawElementsBaseVertex(mode Enum, count Sizei, type_ Enum, indices Pointer,
 func DrawRangeElementsBaseVertex(mode Enum, start Uint, end Uint, count Sizei, type_ Enum, indices Pointer, basevertex Int)  {
 	C.goglDrawRangeElementsBaseVertex((C.GLenum)(mode), (C.GLuint)(start), (C.GLuint)(end), (C.GLsizei)(count), (C.GLenum)(type_), (unsafe.Pointer)(indices), (C.GLint)(basevertex))
 }
-func DrawElementsInstancedBaseVertex(mode Enum, count Sizei, type_ Enum, indices Pointer, primcount Sizei, basevertex Int)  {
-	C.goglDrawElementsInstancedBaseVertex((C.GLenum)(mode), (C.GLsizei)(count), (C.GLenum)(type_), (unsafe.Pointer)(indices), (C.GLsizei)(primcount), (C.GLint)(basevertex))
+func DrawElementsInstancedBaseVertex(mode Enum, count Sizei, type_ Enum, indices Pointer, instancecount Sizei, basevertex Int)  {
+	C.goglDrawElementsInstancedBaseVertex((C.GLenum)(mode), (C.GLsizei)(count), (C.GLenum)(type_), (unsafe.Pointer)(indices), (C.GLsizei)(instancecount), (C.GLint)(basevertex))
 }
-func MultiDrawElementsBaseVertex(mode Enum, count *Sizei, type_ Enum, indices *Pointer, primcount Sizei, basevertex *Int)  {
-	C.goglMultiDrawElementsBaseVertex((C.GLenum)(mode), (*C.GLsizei)(count), (C.GLenum)(type_), (*unsafe.Pointer)(indices), (C.GLsizei)(primcount), (*C.GLint)(basevertex))
+func MultiDrawElementsBaseVertex(mode Enum, count *Sizei, type_ Enum, indices *Pointer, drawcount Sizei, basevertex *Int)  {
+	C.goglMultiDrawElementsBaseVertex((C.GLenum)(mode), (*C.GLsizei)(count), (C.GLenum)(type_), (*unsafe.Pointer)(indices), (C.GLsizei)(drawcount), (*C.GLint)(basevertex))
 }
 // ARB_draw_indirect
 
@@ -5318,16 +5646,20 @@ func DrawArraysInstancedARB(mode Enum, first Int, count Sizei, primcount Sizei) 
 func DrawElementsInstancedARB(mode Enum, count Sizei, type_ Enum, indices Pointer, primcount Sizei)  {
 	C.goglDrawElementsInstancedARB((C.GLenum)(mode), (C.GLsizei)(count), (C.GLenum)(type_), (unsafe.Pointer)(indices), (C.GLsizei)(primcount))
 }
-// ARB_explicit_attrib_location
+// ARB_framebuffer_no_attachments
 
-// ARB_fragment_coord_conventions
-
-// ARB_fragment_program
-
-// ARB_fragment_program_shadow
-
-// ARB_fragment_shader
-
+func FramebufferParameteri(target Enum, pname Enum, param Int)  {
+	C.goglFramebufferParameteri((C.GLenum)(target), (C.GLenum)(pname), (C.GLint)(param))
+}
+func GetFramebufferParameteriv(target Enum, pname Enum, params *Int)  {
+	C.goglGetFramebufferParameteriv((C.GLenum)(target), (C.GLenum)(pname), (*C.GLint)(params))
+}
+func NamedFramebufferParameteriEXT(framebuffer Uint, pname Enum, param Int)  {
+	C.goglNamedFramebufferParameteriEXT((C.GLuint)(framebuffer), (C.GLenum)(pname), (C.GLint)(param))
+}
+func GetNamedFramebufferParameterivEXT(framebuffer Uint, pname Enum, params *Int)  {
+	C.goglGetNamedFramebufferParameterivEXT((C.GLuint)(framebuffer), (C.GLenum)(pname), (*C.GLint)(params))
+}
 // ARB_framebuffer_object
 
 func IsRenderbuffer(renderbuffer Uint) Boolean {
@@ -5390,8 +5722,6 @@ func RenderbufferStorageMultisample(target Enum, samples Sizei, internalformat E
 func FramebufferTextureLayer(target Enum, attachment Enum, texture Uint, level Int, layer Int)  {
 	C.goglFramebufferTextureLayer((C.GLenum)(target), (C.GLenum)(attachment), (C.GLuint)(texture), (C.GLint)(level), (C.GLint)(layer))
 }
-// ARB_framebuffer_sRGB
-
 // ARB_geometry_shader4
 
 func ProgramParameteriARB(program Uint, pname Enum, value Int)  {
@@ -5417,8 +5747,6 @@ func ProgramBinary(program Uint, binaryFormat Enum, binary Pointer, length Sizei
 func ProgramParameteri(program Uint, pname Enum, value Int)  {
 	C.goglProgramParameteri((C.GLuint)(program), (C.GLenum)(pname), (C.GLint)(value))
 }
-// ARB_gpu_shader5
-
 // ARB_gpu_shader_fp64
 
 func Uniform1d(location Int, x Double)  {
@@ -5475,10 +5803,6 @@ func UniformMatrix4x3dv(location Int, count Sizei, transpose Boolean, value *Dou
 func GetUniformdv(program Uint, location Int, params *Double)  {
 	C.goglGetUniformdv((C.GLuint)(program), (C.GLint)(location), (*C.GLdouble)(params))
 }
-// ARB_half_float_pixel
-
-// ARB_half_float_vertex
-
 // ARB_instanced_arrays
 
 func VertexAttribDivisorARB(index Uint, divisor Uint)  {
@@ -5489,8 +5813,31 @@ func VertexAttribDivisorARB(index Uint, divisor Uint)  {
 func GetInternalformativ(target Enum, internalformat Enum, pname Enum, bufSize Sizei, params *Int)  {
 	C.goglGetInternalformativ((C.GLenum)(target), (C.GLenum)(internalformat), (C.GLenum)(pname), (C.GLsizei)(bufSize), (*C.GLint)(params))
 }
-// ARB_map_buffer_alignment
+// ARB_internalformat_query2
 
+func GetInternalformati64v(target Enum, internalformat Enum, pname Enum, bufSize Sizei, params *Int64)  {
+	C.goglGetInternalformati64v((C.GLenum)(target), (C.GLenum)(internalformat), (C.GLenum)(pname), (C.GLsizei)(bufSize), (*C.GLint64)(params))
+}
+// ARB_invalidate_subdata
+
+func InvalidateTexSubImage(texture Uint, level Int, xoffset Int, yoffset Int, zoffset Int, width Sizei, height Sizei, depth Sizei)  {
+	C.goglInvalidateTexSubImage((C.GLuint)(texture), (C.GLint)(level), (C.GLint)(xoffset), (C.GLint)(yoffset), (C.GLint)(zoffset), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLsizei)(depth))
+}
+func InvalidateTexImage(texture Uint, level Int)  {
+	C.goglInvalidateTexImage((C.GLuint)(texture), (C.GLint)(level))
+}
+func InvalidateBufferSubData(buffer Uint, offset Intptr, length Sizeiptr)  {
+	C.goglInvalidateBufferSubData((C.GLuint)(buffer), (C.GLintptr)(offset), (C.GLsizeiptr)(length))
+}
+func InvalidateBufferData(buffer Uint)  {
+	C.goglInvalidateBufferData((C.GLuint)(buffer))
+}
+func InvalidateFramebuffer(target Enum, numAttachments Sizei, attachments *Enum)  {
+	C.goglInvalidateFramebuffer((C.GLenum)(target), (C.GLsizei)(numAttachments), (*C.GLenum)(attachments))
+}
+func InvalidateSubFramebuffer(target Enum, numAttachments Sizei, attachments *Enum, x Int, y Int, width Sizei, height Sizei)  {
+	C.goglInvalidateSubFramebuffer((C.GLenum)(target), (C.GLsizei)(numAttachments), (*C.GLenum)(attachments), (C.GLint)(x), (C.GLint)(y), (C.GLsizei)(width), (C.GLsizei)(height))
+}
 // ARB_map_buffer_range
 
 func MapBufferRange(target Enum, offset Intptr, length Sizeiptr, access Bitfield) Pointer {
@@ -5515,6 +5862,14 @@ func MatrixIndexuivARB(size Int, indices *Uint)  {
 }
 func MatrixIndexPointerARB(size Int, type_ Enum, stride Sizei, pointer Pointer)  {
 	C.goglMatrixIndexPointerARB((C.GLint)(size), (C.GLenum)(type_), (C.GLsizei)(stride), (unsafe.Pointer)(pointer))
+}
+// ARB_multi_draw_indirect
+
+func MultiDrawArraysIndirect(mode Enum, indirect Pointer, drawcount Sizei, stride Sizei)  {
+	C.goglMultiDrawArraysIndirect((C.GLenum)(mode), (unsafe.Pointer)(indirect), (C.GLsizei)(drawcount), (C.GLsizei)(stride))
+}
+func MultiDrawElementsIndirect(mode Enum, type_ Enum, indirect Pointer, drawcount Sizei, stride Sizei)  {
+	C.goglMultiDrawElementsIndirect((C.GLenum)(mode), (C.GLenum)(type_), (unsafe.Pointer)(indirect), (C.GLsizei)(drawcount), (C.GLsizei)(stride))
 }
 // ARB_multisample
 
@@ -5651,10 +6006,6 @@ func GetQueryObjectivARB(id Uint, pname Enum, params *Int)  {
 func GetQueryObjectuivARB(id Uint, pname Enum, params *Uint)  {
 	C.goglGetQueryObjectuivARB((C.GLuint)(id), (C.GLenum)(pname), (*C.GLuint)(params))
 }
-// ARB_occlusion_query2
-
-// ARB_pixel_buffer_object
-
 // ARB_point_parameters
 
 func PointParameterfARB(pname Enum, param Float)  {
@@ -5663,8 +6014,26 @@ func PointParameterfARB(pname Enum, param Float)  {
 func PointParameterfvARB(pname Enum, params *Float)  {
 	C.goglPointParameterfvARB((C.GLenum)(pname), (*C.GLfloat)(params))
 }
-// ARB_point_sprite
+// ARB_program_interface_query
 
+func GetProgramInterfaceiv(program Uint, programInterface Enum, pname Enum, params *Int)  {
+	C.goglGetProgramInterfaceiv((C.GLuint)(program), (C.GLenum)(programInterface), (C.GLenum)(pname), (*C.GLint)(params))
+}
+func GetProgramResourceIndex(program Uint, programInterface Enum, name *Char) Uint {
+	return (Uint)(C.goglGetProgramResourceIndex((C.GLuint)(program), (C.GLenum)(programInterface), (*C.GLchar)(name)))
+}
+func GetProgramResourceName(program Uint, programInterface Enum, index Uint, bufSize Sizei, length *Sizei, name *Char)  {
+	C.goglGetProgramResourceName((C.GLuint)(program), (C.GLenum)(programInterface), (C.GLuint)(index), (C.GLsizei)(bufSize), (*C.GLsizei)(length), (*C.GLchar)(name))
+}
+func GetProgramResourceiv(program Uint, programInterface Enum, index Uint, propCount Sizei, props *Enum, bufSize Sizei, length *Sizei, params *Int)  {
+	C.goglGetProgramResourceiv((C.GLuint)(program), (C.GLenum)(programInterface), (C.GLuint)(index), (C.GLsizei)(propCount), (*C.GLenum)(props), (C.GLsizei)(bufSize), (*C.GLsizei)(length), (*C.GLint)(params))
+}
+func GetProgramResourceLocation(program Uint, programInterface Enum, name *Char) Int {
+	return (Int)(C.goglGetProgramResourceLocation((C.GLuint)(program), (C.GLenum)(programInterface), (*C.GLchar)(name)))
+}
+func GetProgramResourceLocationIndex(program Uint, programInterface Enum, name *Char) Int {
+	return (Int)(C.goglGetProgramResourceLocationIndex((C.GLuint)(program), (C.GLenum)(programInterface), (*C.GLchar)(name)))
+}
 // ARB_provoking_vertex
 
 func ProvokingVertex(mode Enum)  {
@@ -5781,8 +6150,6 @@ func GetSamplerParameterfv(sampler Uint, pname Enum, params *Float)  {
 func GetSamplerParameterIuiv(sampler Uint, pname Enum, params *Uint)  {
 	C.goglGetSamplerParameterIuiv((C.GLuint)(sampler), (C.GLenum)(pname), (*C.GLuint)(params))
 }
-// ARB_seamless_cube_map
-
 // ARB_separate_shader_objects
 
 func UseProgramStages(pipeline Uint, stages Bitfield, program Uint)  {
@@ -5970,8 +6337,6 @@ func GetProgramPipelineInfoLog(pipeline Uint, bufSize Sizei, length *Sizei, info
 func GetActiveAtomicCounterBufferiv(program Uint, bufferIndex Uint, pname Enum, params *Int)  {
 	C.goglGetActiveAtomicCounterBufferiv((C.GLuint)(program), (C.GLuint)(bufferIndex), (C.GLenum)(pname), (*C.GLint)(params))
 }
-// ARB_shader_bit_encoding
-
 // ARB_shader_image_load_store
 
 func BindImageTexture(unit Uint, texture Uint, level Int, layered Boolean, layer Int, access Enum, format Enum)  {
@@ -6099,8 +6464,11 @@ func GetUniformivARB(programObj Uint, location Int, params *Int)  {
 func GetShaderSourceARB(obj Uint, maxLength Sizei, length *Sizei, source *Char)  {
 	C.goglGetShaderSourceARB((C.GLhandleARB)(obj), (C.GLsizei)(maxLength), (*C.GLsizei)(length), (*C.GLcharARB)(source))
 }
-// ARB_shader_stencil_export
+// ARB_shader_storage_buffer_object
 
+func ShaderStorageBlockBinding(program Uint, storageBlockIndex Uint, storageBlockBinding Uint)  {
+	C.goglShaderStorageBlockBinding((C.GLuint)(program), (C.GLuint)(storageBlockIndex), (C.GLuint)(storageBlockBinding))
+}
 // ARB_shader_subroutine
 
 func GetSubroutineUniformLocation(program Uint, shadertype Enum, name *Char) Int {
@@ -6127,12 +6495,6 @@ func GetUniformSubroutineuiv(shadertype Enum, location Int, params *Uint)  {
 func GetProgramStageiv(program Uint, shadertype Enum, pname Enum, values *Int)  {
 	C.goglGetProgramStageiv((C.GLuint)(program), (C.GLenum)(shadertype), (C.GLenum)(pname), (*C.GLint)(values))
 }
-// ARB_shader_texture_lod
-
-// ARB_shading_language_100
-
-// ARB_shading_language_420pack
-
 // ARB_shading_language_include
 
 func NamedStringARB(type_ Enum, namelen Int, name *Char, stringlen Int, string_ *Char)  {
@@ -6153,12 +6515,6 @@ func GetNamedStringARB(namelen Int, name *Char, bufSize Sizei, stringlen *Int, s
 func GetNamedStringivARB(namelen Int, name *Char, pname Enum, params *Int)  {
 	C.goglGetNamedStringivARB((C.GLint)(namelen), (*C.GLchar)(name), (C.GLenum)(pname), (*C.GLint)(params))
 }
-// ARB_shading_language_packing
-
-// ARB_shadow
-
-// ARB_shadow_ambient
-
 // ARB_sync
 
 func FenceSync(condition Enum, flags Bitfield) Sync {
@@ -6190,15 +6546,19 @@ func PatchParameteri(pname Enum, value Int)  {
 func PatchParameterfv(pname Enum, values *Float)  {
 	C.goglPatchParameterfv((C.GLenum)(pname), (*C.GLfloat)(values))
 }
-// ARB_texture_border_clamp
-
 // ARB_texture_buffer_object
 
 func TexBufferARB(target Enum, internalformat Enum, buffer Uint)  {
 	C.goglTexBufferARB((C.GLenum)(target), (C.GLenum)(internalformat), (C.GLuint)(buffer))
 }
-// ARB_texture_buffer_object_rgb32
+// ARB_texture_buffer_range
 
+func TexBufferRange(target Enum, internalformat Enum, buffer Uint, offset Intptr, size Sizeiptr)  {
+	C.goglTexBufferRange((C.GLenum)(target), (C.GLenum)(internalformat), (C.GLuint)(buffer), (C.GLintptr)(offset), (C.GLsizeiptr)(size))
+}
+func TextureBufferRangeEXT(texture Uint, target Enum, internalformat Enum, buffer Uint, offset Intptr, size Sizeiptr)  {
+	C.goglTextureBufferRangeEXT((C.GLuint)(texture), (C.GLenum)(target), (C.GLenum)(internalformat), (C.GLuint)(buffer), (C.GLintptr)(offset), (C.GLsizeiptr)(size))
+}
 // ARB_texture_compression
 
 func CompressedTexImage3DARB(target Enum, level Int, internalformat Enum, width Sizei, height Sizei, depth Sizei, border Int, imageSize Sizei, data Pointer)  {
@@ -6222,28 +6582,6 @@ func CompressedTexSubImage1DARB(target Enum, level Int, xoffset Int, width Sizei
 func GetCompressedTexImageARB(target Enum, level Int, img Pointer)  {
 	C.goglGetCompressedTexImageARB((C.GLenum)(target), (C.GLint)(level), (unsafe.Pointer)(img))
 }
-// ARB_texture_compression_bptc
-
-// ARB_texture_compression_rgtc
-
-// ARB_texture_cube_map
-
-// ARB_texture_cube_map_array
-
-// ARB_texture_env_add
-
-// ARB_texture_env_combine
-
-// ARB_texture_env_crossbar
-
-// ARB_texture_env_dot3
-
-// ARB_texture_float
-
-// ARB_texture_gather
-
-// ARB_texture_mirrored_repeat
-
 // ARB_texture_multisample
 
 func TexImage2DMultisample(target Enum, samples Sizei, internalformat Int, width Sizei, height Sizei, fixedsamplelocations Boolean)  {
@@ -6258,16 +6596,6 @@ func GetMultisamplefv(pname Enum, index Uint, val *Float)  {
 func SampleMaski(index Uint, mask Bitfield)  {
 	C.goglSampleMaski((C.GLuint)(index), (C.GLbitfield)(mask))
 }
-// ARB_texture_non_power_of_two
-
-// ARB_texture_query_lod
-
-// ARB_texture_rectangle
-
-// ARB_texture_rg
-
-// ARB_texture_rgb10_a2ui
-
 // ARB_texture_storage
 
 func TexStorage1D(target Enum, levels Sizei, internalformat Enum, width Sizei)  {
@@ -6288,8 +6616,25 @@ func TextureStorage2DEXT(texture Uint, target Enum, levels Sizei, internalformat
 func TextureStorage3DEXT(texture Uint, target Enum, levels Sizei, internalformat Enum, width Sizei, height Sizei, depth Sizei)  {
 	C.goglTextureStorage3DEXT((C.GLuint)(texture), (C.GLenum)(target), (C.GLsizei)(levels), (C.GLenum)(internalformat), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLsizei)(depth))
 }
-// ARB_texture_swizzle
+// ARB_texture_storage_multisample
 
+func TexStorage2DMultisample(target Enum, samples Sizei, internalformat Enum, width Sizei, height Sizei, fixedsamplelocations Boolean)  {
+	C.goglTexStorage2DMultisample((C.GLenum)(target), (C.GLsizei)(samples), (C.GLenum)(internalformat), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLboolean)(fixedsamplelocations))
+}
+func TexStorage3DMultisample(target Enum, samples Sizei, internalformat Enum, width Sizei, height Sizei, depth Sizei, fixedsamplelocations Boolean)  {
+	C.goglTexStorage3DMultisample((C.GLenum)(target), (C.GLsizei)(samples), (C.GLenum)(internalformat), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLsizei)(depth), (C.GLboolean)(fixedsamplelocations))
+}
+func TextureStorage2DMultisampleEXT(texture Uint, target Enum, samples Sizei, internalformat Enum, width Sizei, height Sizei, fixedsamplelocations Boolean)  {
+	C.goglTextureStorage2DMultisampleEXT((C.GLuint)(texture), (C.GLenum)(target), (C.GLsizei)(samples), (C.GLenum)(internalformat), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLboolean)(fixedsamplelocations))
+}
+func TextureStorage3DMultisampleEXT(texture Uint, target Enum, samples Sizei, internalformat Enum, width Sizei, height Sizei, depth Sizei, fixedsamplelocations Boolean)  {
+	C.goglTextureStorage3DMultisampleEXT((C.GLuint)(texture), (C.GLenum)(target), (C.GLsizei)(samples), (C.GLenum)(internalformat), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLsizei)(depth), (C.GLboolean)(fixedsamplelocations))
+}
+// ARB_texture_view
+
+func TextureView(texture Uint, target Enum, origtexture Uint, internalformat Enum, minlevel Uint, numlevels Uint, minlayer Uint, numlayers Uint)  {
+	C.goglTextureView((C.GLuint)(texture), (C.GLenum)(target), (C.GLuint)(origtexture), (C.GLenum)(internalformat), (C.GLuint)(minlevel), (C.GLuint)(numlevels), (C.GLuint)(minlayer), (C.GLuint)(numlayers))
+}
 // ARB_timer_query
 
 func QueryCounter(id Uint, target Enum)  {
@@ -6340,11 +6685,11 @@ func GetQueryIndexediv(target Enum, index Uint, pname Enum, params *Int)  {
 }
 // ARB_transform_feedback_instanced
 
-func DrawTransformFeedbackInstanced(mode Enum, id Uint, primcount Sizei)  {
-	C.goglDrawTransformFeedbackInstanced((C.GLenum)(mode), (C.GLuint)(id), (C.GLsizei)(primcount))
+func DrawTransformFeedbackInstanced(mode Enum, id Uint, instancecount Sizei)  {
+	C.goglDrawTransformFeedbackInstanced((C.GLenum)(mode), (C.GLuint)(id), (C.GLsizei)(instancecount))
 }
-func DrawTransformFeedbackStreamInstanced(mode Enum, id Uint, stream Uint, primcount Sizei)  {
-	C.goglDrawTransformFeedbackStreamInstanced((C.GLenum)(mode), (C.GLuint)(id), (C.GLuint)(stream), (C.GLsizei)(primcount))
+func DrawTransformFeedbackStreamInstanced(mode Enum, id Uint, stream Uint, instancecount Sizei)  {
+	C.goglDrawTransformFeedbackStreamInstanced((C.GLenum)(mode), (C.GLuint)(id), (C.GLuint)(stream), (C.GLsizei)(instancecount))
 }
 // ARB_transpose_matrix
 
@@ -6383,8 +6728,6 @@ func GetActiveUniformBlockName(program Uint, uniformBlockIndex Uint, bufSize Siz
 func UniformBlockBinding(program Uint, uniformBlockIndex Uint, uniformBlockBinding Uint)  {
 	C.goglUniformBlockBinding((C.GLuint)(program), (C.GLuint)(uniformBlockIndex), (C.GLuint)(uniformBlockBinding))
 }
-// ARB_vertex_array_bgra
-
 // ARB_vertex_array_object
 
 func BindVertexArray(array Uint)  {
@@ -6430,6 +6773,44 @@ func VertexAttribLPointer(index Uint, size Int, type_ Enum, stride Sizei, pointe
 }
 func GetVertexAttribLdv(index Uint, pname Enum, params *Double)  {
 	C.goglGetVertexAttribLdv((C.GLuint)(index), (C.GLenum)(pname), (*C.GLdouble)(params))
+}
+// ARB_vertex_attrib_binding
+
+func BindVertexBuffer(bindingindex Uint, buffer Uint, offset Intptr, stride Sizei)  {
+	C.goglBindVertexBuffer((C.GLuint)(bindingindex), (C.GLuint)(buffer), (C.GLintptr)(offset), (C.GLsizei)(stride))
+}
+func VertexAttribFormat(attribindex Uint, size Int, type_ Enum, normalized Boolean, relativeoffset Uint)  {
+	C.goglVertexAttribFormat((C.GLuint)(attribindex), (C.GLint)(size), (C.GLenum)(type_), (C.GLboolean)(normalized), (C.GLuint)(relativeoffset))
+}
+func VertexAttribIFormat(attribindex Uint, size Int, type_ Enum, relativeoffset Uint)  {
+	C.goglVertexAttribIFormat((C.GLuint)(attribindex), (C.GLint)(size), (C.GLenum)(type_), (C.GLuint)(relativeoffset))
+}
+func VertexAttribLFormat(attribindex Uint, size Int, type_ Enum, relativeoffset Uint)  {
+	C.goglVertexAttribLFormat((C.GLuint)(attribindex), (C.GLint)(size), (C.GLenum)(type_), (C.GLuint)(relativeoffset))
+}
+func VertexAttribBinding(attribindex Uint, bindingindex Uint)  {
+	C.goglVertexAttribBinding((C.GLuint)(attribindex), (C.GLuint)(bindingindex))
+}
+func VertexBindingDivisor(bindingindex Uint, divisor Uint)  {
+	C.goglVertexBindingDivisor((C.GLuint)(bindingindex), (C.GLuint)(divisor))
+}
+func VertexArrayBindVertexBufferEXT(vaobj Uint, bindingindex Uint, buffer Uint, offset Intptr, stride Sizei)  {
+	C.goglVertexArrayBindVertexBufferEXT((C.GLuint)(vaobj), (C.GLuint)(bindingindex), (C.GLuint)(buffer), (C.GLintptr)(offset), (C.GLsizei)(stride))
+}
+func VertexArrayVertexAttribFormatEXT(vaobj Uint, attribindex Uint, size Int, type_ Enum, normalized Boolean, relativeoffset Uint)  {
+	C.goglVertexArrayVertexAttribFormatEXT((C.GLuint)(vaobj), (C.GLuint)(attribindex), (C.GLint)(size), (C.GLenum)(type_), (C.GLboolean)(normalized), (C.GLuint)(relativeoffset))
+}
+func VertexArrayVertexAttribIFormatEXT(vaobj Uint, attribindex Uint, size Int, type_ Enum, relativeoffset Uint)  {
+	C.goglVertexArrayVertexAttribIFormatEXT((C.GLuint)(vaobj), (C.GLuint)(attribindex), (C.GLint)(size), (C.GLenum)(type_), (C.GLuint)(relativeoffset))
+}
+func VertexArrayVertexAttribLFormatEXT(vaobj Uint, attribindex Uint, size Int, type_ Enum, relativeoffset Uint)  {
+	C.goglVertexArrayVertexAttribLFormatEXT((C.GLuint)(vaobj), (C.GLuint)(attribindex), (C.GLint)(size), (C.GLenum)(type_), (C.GLuint)(relativeoffset))
+}
+func VertexArrayVertexAttribBindingEXT(vaobj Uint, attribindex Uint, bindingindex Uint)  {
+	C.goglVertexArrayVertexAttribBindingEXT((C.GLuint)(vaobj), (C.GLuint)(attribindex), (C.GLuint)(bindingindex))
+}
+func VertexArrayVertexBindingDivisorEXT(vaobj Uint, bindingindex Uint, divisor Uint)  {
+	C.goglVertexArrayVertexBindingDivisorEXT((C.GLuint)(vaobj), (C.GLuint)(bindingindex), (C.GLuint)(divisor))
 }
 // ARB_vertex_blend
 
@@ -6923,6 +7304,13 @@ func InitArbClEvent() error {
 	}
 	return nil
 }
+func InitArbClearBufferObject() error {
+	var ret C.int
+	if ret = C.init_ARB_clear_buffer_object(); ret != 0 {
+		return errors.New("unable to initialize ARB_clear_buffer_object")
+	}
+	return nil
+}
 func InitArbColorBufferFloat() error {
 	var ret C.int
 	if ret = C.init_ARB_color_buffer_float(); ret != 0 {
@@ -6930,24 +7318,10 @@ func InitArbColorBufferFloat() error {
 	}
 	return nil
 }
-func InitArbCompatibility() error {
+func InitArbComputeShader() error {
 	var ret C.int
-	if ret = C.init_ARB_compatibility(); ret != 0 {
-		return errors.New("unable to initialize ARB_compatibility")
-	}
-	return nil
-}
-func InitArbCompressedTexturePixelStorage() error {
-	var ret C.int
-	if ret = C.init_ARB_compressed_texture_pixel_storage(); ret != 0 {
-		return errors.New("unable to initialize ARB_compressed_texture_pixel_storage")
-	}
-	return nil
-}
-func InitArbConservativeDepth() error {
-	var ret C.int
-	if ret = C.init_ARB_conservative_depth(); ret != 0 {
-		return errors.New("unable to initialize ARB_conservative_depth")
+	if ret = C.init_ARB_compute_shader(); ret != 0 {
+		return errors.New("unable to initialize ARB_compute_shader")
 	}
 	return nil
 }
@@ -6958,31 +7332,17 @@ func InitArbCopyBuffer() error {
 	}
 	return nil
 }
+func InitArbCopyImage() error {
+	var ret C.int
+	if ret = C.init_ARB_copy_image(); ret != 0 {
+		return errors.New("unable to initialize ARB_copy_image")
+	}
+	return nil
+}
 func InitArbDebugOutput() error {
 	var ret C.int
 	if ret = C.init_ARB_debug_output(); ret != 0 {
 		return errors.New("unable to initialize ARB_debug_output")
-	}
-	return nil
-}
-func InitArbDepthBufferFloat() error {
-	var ret C.int
-	if ret = C.init_ARB_depth_buffer_float(); ret != 0 {
-		return errors.New("unable to initialize ARB_depth_buffer_float")
-	}
-	return nil
-}
-func InitArbDepthClamp() error {
-	var ret C.int
-	if ret = C.init_ARB_depth_clamp(); ret != 0 {
-		return errors.New("unable to initialize ARB_depth_clamp")
-	}
-	return nil
-}
-func InitArbDepthTexture() error {
-	var ret C.int
-	if ret = C.init_ARB_depth_texture(); ret != 0 {
-		return errors.New("unable to initialize ARB_depth_texture")
 	}
 	return nil
 }
@@ -7021,38 +7381,10 @@ func InitArbDrawInstanced() error {
 	}
 	return nil
 }
-func InitArbExplicitAttribLocation() error {
+func InitArbFramebufferNoAttachments() error {
 	var ret C.int
-	if ret = C.init_ARB_explicit_attrib_location(); ret != 0 {
-		return errors.New("unable to initialize ARB_explicit_attrib_location")
-	}
-	return nil
-}
-func InitArbFragmentCoordConventions() error {
-	var ret C.int
-	if ret = C.init_ARB_fragment_coord_conventions(); ret != 0 {
-		return errors.New("unable to initialize ARB_fragment_coord_conventions")
-	}
-	return nil
-}
-func InitArbFragmentProgram() error {
-	var ret C.int
-	if ret = C.init_ARB_fragment_program(); ret != 0 {
-		return errors.New("unable to initialize ARB_fragment_program")
-	}
-	return nil
-}
-func InitArbFragmentProgramShadow() error {
-	var ret C.int
-	if ret = C.init_ARB_fragment_program_shadow(); ret != 0 {
-		return errors.New("unable to initialize ARB_fragment_program_shadow")
-	}
-	return nil
-}
-func InitArbFragmentShader() error {
-	var ret C.int
-	if ret = C.init_ARB_fragment_shader(); ret != 0 {
-		return errors.New("unable to initialize ARB_fragment_shader")
+	if ret = C.init_ARB_framebuffer_no_attachments(); ret != 0 {
+		return errors.New("unable to initialize ARB_framebuffer_no_attachments")
 	}
 	return nil
 }
@@ -7060,13 +7392,6 @@ func InitArbFramebufferObject() error {
 	var ret C.int
 	if ret = C.init_ARB_framebuffer_object(); ret != 0 {
 		return errors.New("unable to initialize ARB_framebuffer_object")
-	}
-	return nil
-}
-func InitArbFramebufferSrgb() error {
-	var ret C.int
-	if ret = C.init_ARB_framebuffer_sRGB(); ret != 0 {
-		return errors.New("unable to initialize ARB_framebuffer_sRGB")
 	}
 	return nil
 }
@@ -7084,31 +7409,10 @@ func InitArbGetProgramBinary() error {
 	}
 	return nil
 }
-func InitArbGpuShader5() error {
-	var ret C.int
-	if ret = C.init_ARB_gpu_shader5(); ret != 0 {
-		return errors.New("unable to initialize ARB_gpu_shader5")
-	}
-	return nil
-}
 func InitArbGpuShaderFp64() error {
 	var ret C.int
 	if ret = C.init_ARB_gpu_shader_fp64(); ret != 0 {
 		return errors.New("unable to initialize ARB_gpu_shader_fp64")
-	}
-	return nil
-}
-func InitArbHalfFloatPixel() error {
-	var ret C.int
-	if ret = C.init_ARB_half_float_pixel(); ret != 0 {
-		return errors.New("unable to initialize ARB_half_float_pixel")
-	}
-	return nil
-}
-func InitArbHalfFloatVertex() error {
-	var ret C.int
-	if ret = C.init_ARB_half_float_vertex(); ret != 0 {
-		return errors.New("unable to initialize ARB_half_float_vertex")
 	}
 	return nil
 }
@@ -7126,10 +7430,17 @@ func InitArbInternalformatQuery() error {
 	}
 	return nil
 }
-func InitArbMapBufferAlignment() error {
+func InitArbInternalformatQuery2() error {
 	var ret C.int
-	if ret = C.init_ARB_map_buffer_alignment(); ret != 0 {
-		return errors.New("unable to initialize ARB_map_buffer_alignment")
+	if ret = C.init_ARB_internalformat_query2(); ret != 0 {
+		return errors.New("unable to initialize ARB_internalformat_query2")
+	}
+	return nil
+}
+func InitArbInvalidateSubdata() error {
+	var ret C.int
+	if ret = C.init_ARB_invalidate_subdata(); ret != 0 {
+		return errors.New("unable to initialize ARB_invalidate_subdata")
 	}
 	return nil
 }
@@ -7144,6 +7455,13 @@ func InitArbMatrixPalette() error {
 	var ret C.int
 	if ret = C.init_ARB_matrix_palette(); ret != 0 {
 		return errors.New("unable to initialize ARB_matrix_palette")
+	}
+	return nil
+}
+func InitArbMultiDrawIndirect() error {
+	var ret C.int
+	if ret = C.init_ARB_multi_draw_indirect(); ret != 0 {
+		return errors.New("unable to initialize ARB_multi_draw_indirect")
 	}
 	return nil
 }
@@ -7168,20 +7486,6 @@ func InitArbOcclusionQuery() error {
 	}
 	return nil
 }
-func InitArbOcclusionQuery2() error {
-	var ret C.int
-	if ret = C.init_ARB_occlusion_query2(); ret != 0 {
-		return errors.New("unable to initialize ARB_occlusion_query2")
-	}
-	return nil
-}
-func InitArbPixelBufferObject() error {
-	var ret C.int
-	if ret = C.init_ARB_pixel_buffer_object(); ret != 0 {
-		return errors.New("unable to initialize ARB_pixel_buffer_object")
-	}
-	return nil
-}
 func InitArbPointParameters() error {
 	var ret C.int
 	if ret = C.init_ARB_point_parameters(); ret != 0 {
@@ -7189,10 +7493,10 @@ func InitArbPointParameters() error {
 	}
 	return nil
 }
-func InitArbPointSprite() error {
+func InitArbProgramInterfaceQuery() error {
 	var ret C.int
-	if ret = C.init_ARB_point_sprite(); ret != 0 {
-		return errors.New("unable to initialize ARB_point_sprite")
+	if ret = C.init_ARB_program_interface_query(); ret != 0 {
+		return errors.New("unable to initialize ARB_program_interface_query")
 	}
 	return nil
 }
@@ -7224,13 +7528,6 @@ func InitArbSamplerObjects() error {
 	}
 	return nil
 }
-func InitArbSeamlessCubeMap() error {
-	var ret C.int
-	if ret = C.init_ARB_seamless_cube_map(); ret != 0 {
-		return errors.New("unable to initialize ARB_seamless_cube_map")
-	}
-	return nil
-}
 func InitArbSeparateShaderObjects() error {
 	var ret C.int
 	if ret = C.init_ARB_separate_shader_objects(); ret != 0 {
@@ -7242,13 +7539,6 @@ func InitArbShaderAtomicCounters() error {
 	var ret C.int
 	if ret = C.init_ARB_shader_atomic_counters(); ret != 0 {
 		return errors.New("unable to initialize ARB_shader_atomic_counters")
-	}
-	return nil
-}
-func InitArbShaderBitEncoding() error {
-	var ret C.int
-	if ret = C.init_ARB_shader_bit_encoding(); ret != 0 {
-		return errors.New("unable to initialize ARB_shader_bit_encoding")
 	}
 	return nil
 }
@@ -7266,10 +7556,10 @@ func InitArbShaderObjects() error {
 	}
 	return nil
 }
-func InitArbShaderStencilExport() error {
+func InitArbShaderStorageBufferObject() error {
 	var ret C.int
-	if ret = C.init_ARB_shader_stencil_export(); ret != 0 {
-		return errors.New("unable to initialize ARB_shader_stencil_export")
+	if ret = C.init_ARB_shader_storage_buffer_object(); ret != 0 {
+		return errors.New("unable to initialize ARB_shader_storage_buffer_object")
 	}
 	return nil
 }
@@ -7280,52 +7570,10 @@ func InitArbShaderSubroutine() error {
 	}
 	return nil
 }
-func InitArbShaderTextureLod() error {
-	var ret C.int
-	if ret = C.init_ARB_shader_texture_lod(); ret != 0 {
-		return errors.New("unable to initialize ARB_shader_texture_lod")
-	}
-	return nil
-}
-func InitArbShadingLanguage100() error {
-	var ret C.int
-	if ret = C.init_ARB_shading_language_100(); ret != 0 {
-		return errors.New("unable to initialize ARB_shading_language_100")
-	}
-	return nil
-}
-func InitArbShadingLanguage420pack() error {
-	var ret C.int
-	if ret = C.init_ARB_shading_language_420pack(); ret != 0 {
-		return errors.New("unable to initialize ARB_shading_language_420pack")
-	}
-	return nil
-}
 func InitArbShadingLanguageInclude() error {
 	var ret C.int
 	if ret = C.init_ARB_shading_language_include(); ret != 0 {
 		return errors.New("unable to initialize ARB_shading_language_include")
-	}
-	return nil
-}
-func InitArbShadingLanguagePacking() error {
-	var ret C.int
-	if ret = C.init_ARB_shading_language_packing(); ret != 0 {
-		return errors.New("unable to initialize ARB_shading_language_packing")
-	}
-	return nil
-}
-func InitArbShadow() error {
-	var ret C.int
-	if ret = C.init_ARB_shadow(); ret != 0 {
-		return errors.New("unable to initialize ARB_shadow")
-	}
-	return nil
-}
-func InitArbShadowAmbient() error {
-	var ret C.int
-	if ret = C.init_ARB_shadow_ambient(); ret != 0 {
-		return errors.New("unable to initialize ARB_shadow_ambient")
 	}
 	return nil
 }
@@ -7343,13 +7591,6 @@ func InitArbTessellationShader() error {
 	}
 	return nil
 }
-func InitArbTextureBorderClamp() error {
-	var ret C.int
-	if ret = C.init_ARB_texture_border_clamp(); ret != 0 {
-		return errors.New("unable to initialize ARB_texture_border_clamp")
-	}
-	return nil
-}
 func InitArbTextureBufferObject() error {
 	var ret C.int
 	if ret = C.init_ARB_texture_buffer_object(); ret != 0 {
@@ -7357,10 +7598,10 @@ func InitArbTextureBufferObject() error {
 	}
 	return nil
 }
-func InitArbTextureBufferObjectRgb32() error {
+func InitArbTextureBufferRange() error {
 	var ret C.int
-	if ret = C.init_ARB_texture_buffer_object_rgb32(); ret != 0 {
-		return errors.New("unable to initialize ARB_texture_buffer_object_rgb32")
+	if ret = C.init_ARB_texture_buffer_range(); ret != 0 {
+		return errors.New("unable to initialize ARB_texture_buffer_range")
 	}
 	return nil
 }
@@ -7371,122 +7612,10 @@ func InitArbTextureCompression() error {
 	}
 	return nil
 }
-func InitArbTextureCompressionBptc() error {
-	var ret C.int
-	if ret = C.init_ARB_texture_compression_bptc(); ret != 0 {
-		return errors.New("unable to initialize ARB_texture_compression_bptc")
-	}
-	return nil
-}
-func InitArbTextureCompressionRgtc() error {
-	var ret C.int
-	if ret = C.init_ARB_texture_compression_rgtc(); ret != 0 {
-		return errors.New("unable to initialize ARB_texture_compression_rgtc")
-	}
-	return nil
-}
-func InitArbTextureCubeMap() error {
-	var ret C.int
-	if ret = C.init_ARB_texture_cube_map(); ret != 0 {
-		return errors.New("unable to initialize ARB_texture_cube_map")
-	}
-	return nil
-}
-func InitArbTextureCubeMapArray() error {
-	var ret C.int
-	if ret = C.init_ARB_texture_cube_map_array(); ret != 0 {
-		return errors.New("unable to initialize ARB_texture_cube_map_array")
-	}
-	return nil
-}
-func InitArbTextureEnvAdd() error {
-	var ret C.int
-	if ret = C.init_ARB_texture_env_add(); ret != 0 {
-		return errors.New("unable to initialize ARB_texture_env_add")
-	}
-	return nil
-}
-func InitArbTextureEnvCombine() error {
-	var ret C.int
-	if ret = C.init_ARB_texture_env_combine(); ret != 0 {
-		return errors.New("unable to initialize ARB_texture_env_combine")
-	}
-	return nil
-}
-func InitArbTextureEnvCrossbar() error {
-	var ret C.int
-	if ret = C.init_ARB_texture_env_crossbar(); ret != 0 {
-		return errors.New("unable to initialize ARB_texture_env_crossbar")
-	}
-	return nil
-}
-func InitArbTextureEnvDot3() error {
-	var ret C.int
-	if ret = C.init_ARB_texture_env_dot3(); ret != 0 {
-		return errors.New("unable to initialize ARB_texture_env_dot3")
-	}
-	return nil
-}
-func InitArbTextureFloat() error {
-	var ret C.int
-	if ret = C.init_ARB_texture_float(); ret != 0 {
-		return errors.New("unable to initialize ARB_texture_float")
-	}
-	return nil
-}
-func InitArbTextureGather() error {
-	var ret C.int
-	if ret = C.init_ARB_texture_gather(); ret != 0 {
-		return errors.New("unable to initialize ARB_texture_gather")
-	}
-	return nil
-}
-func InitArbTextureMirroredRepeat() error {
-	var ret C.int
-	if ret = C.init_ARB_texture_mirrored_repeat(); ret != 0 {
-		return errors.New("unable to initialize ARB_texture_mirrored_repeat")
-	}
-	return nil
-}
 func InitArbTextureMultisample() error {
 	var ret C.int
 	if ret = C.init_ARB_texture_multisample(); ret != 0 {
 		return errors.New("unable to initialize ARB_texture_multisample")
-	}
-	return nil
-}
-func InitArbTextureNonPowerOfTwo() error {
-	var ret C.int
-	if ret = C.init_ARB_texture_non_power_of_two(); ret != 0 {
-		return errors.New("unable to initialize ARB_texture_non_power_of_two")
-	}
-	return nil
-}
-func InitArbTextureQueryLod() error {
-	var ret C.int
-	if ret = C.init_ARB_texture_query_lod(); ret != 0 {
-		return errors.New("unable to initialize ARB_texture_query_lod")
-	}
-	return nil
-}
-func InitArbTextureRectangle() error {
-	var ret C.int
-	if ret = C.init_ARB_texture_rectangle(); ret != 0 {
-		return errors.New("unable to initialize ARB_texture_rectangle")
-	}
-	return nil
-}
-func InitArbTextureRg() error {
-	var ret C.int
-	if ret = C.init_ARB_texture_rg(); ret != 0 {
-		return errors.New("unable to initialize ARB_texture_rg")
-	}
-	return nil
-}
-func InitArbTextureRgb10A2ui() error {
-	var ret C.int
-	if ret = C.init_ARB_texture_rgb10_a2ui(); ret != 0 {
-		return errors.New("unable to initialize ARB_texture_rgb10_a2ui")
 	}
 	return nil
 }
@@ -7497,10 +7626,17 @@ func InitArbTextureStorage() error {
 	}
 	return nil
 }
-func InitArbTextureSwizzle() error {
+func InitArbTextureStorageMultisample() error {
 	var ret C.int
-	if ret = C.init_ARB_texture_swizzle(); ret != 0 {
-		return errors.New("unable to initialize ARB_texture_swizzle")
+	if ret = C.init_ARB_texture_storage_multisample(); ret != 0 {
+		return errors.New("unable to initialize ARB_texture_storage_multisample")
+	}
+	return nil
+}
+func InitArbTextureView() error {
+	var ret C.int
+	if ret = C.init_ARB_texture_view(); ret != 0 {
+		return errors.New("unable to initialize ARB_texture_view")
 	}
 	return nil
 }
@@ -7546,13 +7682,6 @@ func InitArbUniformBufferObject() error {
 	}
 	return nil
 }
-func InitArbVertexArrayBgra() error {
-	var ret C.int
-	if ret = C.init_ARB_vertex_array_bgra(); ret != 0 {
-		return errors.New("unable to initialize ARB_vertex_array_bgra")
-	}
-	return nil
-}
 func InitArbVertexArrayObject() error {
 	var ret C.int
 	if ret = C.init_ARB_vertex_array_object(); ret != 0 {
@@ -7564,6 +7693,13 @@ func InitArbVertexAttrib64bit() error {
 	var ret C.int
 	if ret = C.init_ARB_vertex_attrib_64bit(); ret != 0 {
 		return errors.New("unable to initialize ARB_vertex_attrib_64bit")
+	}
+	return nil
+}
+func InitArbVertexAttribBinding() error {
+	var ret C.int
+	if ret = C.init_ARB_vertex_attrib_binding(); ret != 0 {
+		return errors.New("unable to initialize ARB_vertex_attrib_binding")
 	}
 	return nil
 }

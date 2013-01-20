@@ -4,35 +4,13 @@
 // 
 // ARB_create_context: http://www.opengl.org/registry/specs/ARB/create_context.txt
 // 
-// ARB_create_context_profile: http://www.opengl.org/registry/specs/ARB/create_context_profile.txt
-// 
-// ARB_create_context_robustness: http://www.opengl.org/registry/specs/ARB/create_context_robustness.txt
-// 
-// ARB_fbconfig_float: http://www.opengl.org/registry/specs/ARB/fbconfig_float.txt
-// 
-// ARB_framebuffer_sRGB: http://www.opengl.org/registry/specs/ARB/framebuffer_sRGB.txt
-// 
 // ARB_get_proc_address: http://www.opengl.org/registry/specs/ARB/get_proc_address.txt
-// 
-// ARB_multisample: http://www.opengl.org/registry/specs/ARB/multisample.txt
-// 
-// EXT_fbconfig_packed_float: http://www.opengl.org/registry/specs/EXT/fbconfig_packed_float.txt
-// 
-// EXT_framebuffer_sRGB: http://www.opengl.org/registry/specs/EXT/framebuffer_sRGB.txt
 // 
 // EXT_import_context: http://www.opengl.org/registry/specs/EXT/import_context.txt
 // 
 // EXT_swap_control: http://www.opengl.org/registry/specs/EXT/swap_control.txt
 // 
-// EXT_swap_control_tear: http://www.opengl.org/registry/specs/EXT/swap_control_tear.txt
-// 
 // EXT_texture_from_pixmap: http://www.opengl.org/registry/specs/EXT/texture_from_pixmap.txt
-// 
-// EXT_visual_info: http://www.opengl.org/registry/specs/EXT/visual_info.txt
-// 
-// EXT_visual_rating: http://www.opengl.org/registry/specs/EXT/visual_rating.txt
-// 
-// INTEL_swap_event: http://www.opengl.org/registry/specs/INTEL/swap_event.txt
 // 
 // MESA_agp_offset: http://www.opengl.org/registry/specs/MESA/agp_offset.txt
 // 
@@ -46,10 +24,6 @@
 // 
 // NV_copy_image: http://www.opengl.org/registry/specs/NV/copy_image.txt
 // 
-// NV_float_buffer: http://www.opengl.org/registry/specs/NV/float_buffer.txt
-// 
-// NV_multisample_coverage: http://www.opengl.org/registry/specs/NV/multisample_coverage.txt
-// 
 // NV_present_video: http://www.opengl.org/registry/specs/NV/present_video.txt
 // 
 // NV_swap_group: http://www.opengl.org/registry/specs/NV/swap_group.txt
@@ -58,11 +32,7 @@
 // 
 // NV_video_output: http://www.opengl.org/registry/specs/NV/video_output.txt
 // 
-// OML_swap_method: http://www.opengl.org/registry/specs/OML/swap_method.txt
-// 
 // OML_sync_control: http://www.opengl.org/registry/specs/OML/sync_control.txt
-// 
-// SGIS_multisample: http://www.opengl.org/registry/specs/SGIS/multisample.txt
 // 
 // SGIX_dmbuffer: http://www.opengl.org/registry/specs/SGIX/dmbuffer.txt
 // 
@@ -79,8 +49,6 @@
 // SGIX_video_resize: http://www.opengl.org/registry/specs/SGIX/video_resize.txt
 // 
 // SGIX_video_source: http://www.opengl.org/registry/specs/SGIX/video_source.txt
-// 
-// SGIX_visual_select_group: http://www.opengl.org/registry/specs/SGIX/visual_select_group.txt
 // 
 // SGI_cushion: http://www.opengl.org/registry/specs/SGI/cushion.txt
 // 
@@ -242,15 +210,8 @@ package glx
 // 
 // //  ARB_create_context
 // GLXContext (APIENTRYP ptrglxCreateContextAttribsARB)(Display* dpy, GLXFBConfig config, GLXContext share_context, Bool direct, int* attrib_list);
-// //  ARB_create_context_profile
-// //  ARB_create_context_robustness
-// //  ARB_fbconfig_float
-// //  ARB_framebuffer_sRGB
 // //  ARB_get_proc_address
 // __GLXextFuncPtr (APIENTRYP ptrglxGetProcAddressARB)(GLubyte* procName);
-// //  ARB_multisample
-// //  EXT_fbconfig_packed_float
-// //  EXT_framebuffer_sRGB
 // //  EXT_import_context
 // Display * (APIENTRYP ptrglxGetCurrentDisplayEXT)();
 // int (APIENTRYP ptrglxQueryContextInfoEXT)(Display* dpy, GLXContext context, int attribute, int* value);
@@ -259,13 +220,9 @@ package glx
 // void (APIENTRYP ptrglxFreeContextEXT)(Display* dpy, GLXContext context);
 // //  EXT_swap_control
 // void (APIENTRYP ptrglxSwapIntervalEXT)(Display* dpy, GLXDrawable drawable, int interval);
-// //  EXT_swap_control_tear
 // //  EXT_texture_from_pixmap
 // void (APIENTRYP ptrglxBindTexImageEXT)(Display* dpy, GLXDrawable drawable, int buffer, int* attrib_list);
 // void (APIENTRYP ptrglxReleaseTexImageEXT)(Display* dpy, GLXDrawable drawable, int buffer);
-// //  EXT_visual_info
-// //  EXT_visual_rating
-// //  INTEL_swap_event
 // //  MESA_agp_offset
 // unsigned int (APIENTRYP ptrglxGetAGPOffsetMESA)(void* pointer);
 // //  MESA_copy_sub_buffer
@@ -278,8 +235,6 @@ package glx
 // Bool (APIENTRYP ptrglxSet3DfxModeMESA)(int mode);
 // //  NV_copy_image
 // void (APIENTRYP ptrglxCopyImageSubDataNV)(Display* dpy, GLXContext srcCtx, GLuint srcName, GLenum srcTarget, GLint srcLevel, GLint srcX, GLint srcY, GLint srcZ, GLXContext dstCtx, GLuint dstName, GLenum dstTarget, GLint dstLevel, GLint dstX, GLint dstY, GLint dstZ, GLsizei width, GLsizei height, GLsizei depth);
-// //  NV_float_buffer
-// //  NV_multisample_coverage
 // //  NV_present_video
 // unsigned int * (APIENTRYP ptrglxEnumerateVideoDevicesNV)(Display* dpy, int screen, int* nelements);
 // int (APIENTRYP ptrglxBindVideoDeviceNV)(Display* dpy, unsigned int video_slot, unsigned int video_device, int* attrib_list);
@@ -303,14 +258,12 @@ package glx
 // int (APIENTRYP ptrglxReleaseVideoImageNV)(Display* dpy, GLXPbuffer pbuf);
 // int (APIENTRYP ptrglxSendPbufferToVideoNV)(Display* dpy, GLXPbuffer pbuf, int iBufferType, unsigned long* pulCounterPbuffer, GLboolean bBlock);
 // int (APIENTRYP ptrglxGetVideoInfoNV)(Display* dpy, int screen, GLXVideoDeviceNV VideoDevice, unsigned long* pulCounterOutputPbuffer, unsigned long* pulCounterOutputVideo);
-// //  OML_swap_method
 // //  OML_sync_control
 // Bool (APIENTRYP ptrglxGetSyncValuesOML)(Display* dpy, GLXDrawable drawable, int64_t* ust, int64_t* msc, int64_t* sbc);
 // Bool (APIENTRYP ptrglxGetMscRateOML)(Display* dpy, GLXDrawable drawable, int32_t* numerator, int32_t* denominator);
 // int64_t (APIENTRYP ptrglxSwapBuffersMscOML)(Display* dpy, GLXDrawable drawable, int64_t target_msc, int64_t divisor, int64_t remainder);
 // Bool (APIENTRYP ptrglxWaitForMscOML)(Display* dpy, GLXDrawable drawable, int64_t target_msc, int64_t divisor, int64_t remainder, int64_t* ust, int64_t* msc, int64_t* sbc);
 // Bool (APIENTRYP ptrglxWaitForSbcOML)(Display* dpy, GLXDrawable drawable, int64_t target_sbc, int64_t* ust, int64_t* msc, int64_t* sbc);
-// //  SGIS_multisample
 // //  SGIX_dmbuffer
 // Bool (APIENTRYP ptrglxAssociateDMPbufferSGIX)(Display* dpy, GLXPbufferSGIX pbuffer, DMparams* params, DMbuffer dmbuffer);
 // //  SGIX_fbconfig
@@ -349,7 +302,6 @@ package glx
 // //  SGIX_video_source
 // GLXVideoSourceSGIX (APIENTRYP ptrglxCreateGLXVideoSourceSGIX)(Display* display, int screen, VLServer server, VLPath path, int nodeClass, VLNode drainNode);
 // void (APIENTRYP ptrglxDestroyGLXVideoSourceSGIX)(Display* dpy, GLXVideoSourceSGIX glxvideosource);
-// //  SGIX_visual_select_group
 // //  SGI_cushion
 // void (APIENTRYP ptrglxCushionSGI)(Display* dpy, Window window, float cushion);
 // //  SGI_make_current_read
@@ -444,17 +396,10 @@ package glx
 // GLXContext goglxCreateContextAttribsARB(Display* dpy, GLXFBConfig config, GLXContext share_context, Bool direct, int* attrib_list) {
 // 	return (*ptrglxCreateContextAttribsARB)(dpy, config, share_context, direct, attrib_list);
 // }
-// //  ARB_create_context_profile
-// //  ARB_create_context_robustness
-// //  ARB_fbconfig_float
-// //  ARB_framebuffer_sRGB
 // //  ARB_get_proc_address
 // __GLXextFuncPtr goglxGetProcAddressARB(GLubyte* procName) {
 // 	return (*ptrglxGetProcAddressARB)(procName);
 // }
-// //  ARB_multisample
-// //  EXT_fbconfig_packed_float
-// //  EXT_framebuffer_sRGB
 // //  EXT_import_context
 // Display * goglxGetCurrentDisplayEXT() {
 // 	return (*ptrglxGetCurrentDisplayEXT)();
@@ -475,7 +420,6 @@ package glx
 // void goglxSwapIntervalEXT(Display* dpy, GLXDrawable drawable, int interval) {
 // 	(*ptrglxSwapIntervalEXT)(dpy, drawable, interval);
 // }
-// //  EXT_swap_control_tear
 // //  EXT_texture_from_pixmap
 // void goglxBindTexImageEXT(Display* dpy, GLXDrawable drawable, int buffer, int* attrib_list) {
 // 	(*ptrglxBindTexImageEXT)(dpy, drawable, buffer, attrib_list);
@@ -483,9 +427,6 @@ package glx
 // void goglxReleaseTexImageEXT(Display* dpy, GLXDrawable drawable, int buffer) {
 // 	(*ptrglxReleaseTexImageEXT)(dpy, drawable, buffer);
 // }
-// //  EXT_visual_info
-// //  EXT_visual_rating
-// //  INTEL_swap_event
 // //  MESA_agp_offset
 // unsigned int goglxGetAGPOffsetMESA(void* pointer) {
 // 	return (*ptrglxGetAGPOffsetMESA)(pointer);
@@ -510,8 +451,6 @@ package glx
 // void goglxCopyImageSubDataNV(Display* dpy, GLXContext srcCtx, GLuint srcName, GLenum srcTarget, GLint srcLevel, GLint srcX, GLint srcY, GLint srcZ, GLXContext dstCtx, GLuint dstName, GLenum dstTarget, GLint dstLevel, GLint dstX, GLint dstY, GLint dstZ, GLsizei width, GLsizei height, GLsizei depth) {
 // 	(*ptrglxCopyImageSubDataNV)(dpy, srcCtx, srcName, srcTarget, srcLevel, srcX, srcY, srcZ, dstCtx, dstName, dstTarget, dstLevel, dstX, dstY, dstZ, width, height, depth);
 // }
-// //  NV_float_buffer
-// //  NV_multisample_coverage
 // //  NV_present_video
 // unsigned int * goglxEnumerateVideoDevicesNV(Display* dpy, int screen, int* nelements) {
 // 	return (*ptrglxEnumerateVideoDevicesNV)(dpy, screen, nelements);
@@ -573,7 +512,6 @@ package glx
 // int goglxGetVideoInfoNV(Display* dpy, int screen, GLXVideoDeviceNV VideoDevice, unsigned long* pulCounterOutputPbuffer, unsigned long* pulCounterOutputVideo) {
 // 	return (*ptrglxGetVideoInfoNV)(dpy, screen, VideoDevice, pulCounterOutputPbuffer, pulCounterOutputVideo);
 // }
-// //  OML_swap_method
 // //  OML_sync_control
 // Bool goglxGetSyncValuesOML(Display* dpy, GLXDrawable drawable, int64_t* ust, int64_t* msc, int64_t* sbc) {
 // 	return (*ptrglxGetSyncValuesOML)(dpy, drawable, ust, msc, sbc);
@@ -590,7 +528,6 @@ package glx
 // Bool goglxWaitForSbcOML(Display* dpy, GLXDrawable drawable, int64_t target_sbc, int64_t* ust, int64_t* msc, int64_t* sbc) {
 // 	return (*ptrglxWaitForSbcOML)(dpy, drawable, target_sbc, ust, msc, sbc);
 // }
-// //  SGIS_multisample
 // //  SGIX_dmbuffer
 // Bool goglxAssociateDMPbufferSGIX(Display* dpy, GLXPbufferSGIX pbuffer, DMparams* params, DMbuffer dmbuffer) {
 // 	return (*ptrglxAssociateDMPbufferSGIX)(dpy, pbuffer, params, dmbuffer);
@@ -689,7 +626,6 @@ package glx
 // void goglxDestroyGLXVideoSourceSGIX(Display* dpy, GLXVideoSourceSGIX glxvideosource) {
 // 	(*ptrglxDestroyGLXVideoSourceSGIX)(dpy, glxvideosource);
 // }
-// //  SGIX_visual_select_group
 // //  SGI_cushion
 // void goglxCushionSGI(Display* dpy, Window window, float cushion) {
 // 	(*ptrglxCushionSGI)(dpy, window, cushion);
@@ -947,30 +883,9 @@ package glx
 // 	if(ptrglxCreateContextAttribsARB == NULL) return 1;
 // 	return 0;
 // }
-// int init_ARB_create_context_profile() {
-// 	return 0;
-// }
-// int init_ARB_create_context_robustness() {
-// 	return 0;
-// }
-// int init_ARB_fbconfig_float() {
-// 	return 0;
-// }
-// int init_ARB_framebuffer_sRGB() {
-// 	return 0;
-// }
 // int init_ARB_get_proc_address() {
 // 	ptrglxGetProcAddressARB = goglxGetProcAddress("glxGetProcAddressARB");
 // 	if(ptrglxGetProcAddressARB == NULL) return 1;
-// 	return 0;
-// }
-// int init_ARB_multisample() {
-// 	return 0;
-// }
-// int init_EXT_fbconfig_packed_float() {
-// 	return 0;
-// }
-// int init_EXT_framebuffer_sRGB() {
 // 	return 0;
 // }
 // int init_EXT_import_context() {
@@ -991,23 +906,11 @@ package glx
 // 	if(ptrglxSwapIntervalEXT == NULL) return 1;
 // 	return 0;
 // }
-// int init_EXT_swap_control_tear() {
-// 	return 0;
-// }
 // int init_EXT_texture_from_pixmap() {
 // 	ptrglxBindTexImageEXT = goglxGetProcAddress("glxBindTexImageEXT");
 // 	if(ptrglxBindTexImageEXT == NULL) return 1;
 // 	ptrglxReleaseTexImageEXT = goglxGetProcAddress("glxReleaseTexImageEXT");
 // 	if(ptrglxReleaseTexImageEXT == NULL) return 1;
-// 	return 0;
-// }
-// int init_EXT_visual_info() {
-// 	return 0;
-// }
-// int init_EXT_visual_rating() {
-// 	return 0;
-// }
-// int init_INTEL_swap_event() {
 // 	return 0;
 // }
 // int init_MESA_agp_offset() {
@@ -1038,12 +941,6 @@ package glx
 // int init_NV_copy_image() {
 // 	ptrglxCopyImageSubDataNV = goglxGetProcAddress("glxCopyImageSubDataNV");
 // 	if(ptrglxCopyImageSubDataNV == NULL) return 1;
-// 	return 0;
-// }
-// int init_NV_float_buffer() {
-// 	return 0;
-// }
-// int init_NV_multisample_coverage() {
 // 	return 0;
 // }
 // int init_NV_present_video() {
@@ -1096,9 +993,6 @@ package glx
 // 	if(ptrglxGetVideoInfoNV == NULL) return 1;
 // 	return 0;
 // }
-// int init_OML_swap_method() {
-// 	return 0;
-// }
 // int init_OML_sync_control() {
 // 	ptrglxGetSyncValuesOML = goglxGetProcAddress("glxGetSyncValuesOML");
 // 	if(ptrglxGetSyncValuesOML == NULL) return 1;
@@ -1110,9 +1004,6 @@ package glx
 // 	if(ptrglxWaitForMscOML == NULL) return 1;
 // 	ptrglxWaitForSbcOML = goglxGetProcAddress("glxWaitForSbcOML");
 // 	if(ptrglxWaitForSbcOML == NULL) return 1;
-// 	return 0;
-// }
-// int init_SGIS_multisample() {
 // 	return 0;
 // }
 // int init_SGIX_dmbuffer() {
@@ -1197,9 +1088,6 @@ package glx
 // 	if(ptrglxCreateGLXVideoSourceSGIX == NULL) return 1;
 // 	ptrglxDestroyGLXVideoSourceSGIX = goglxGetProcAddress("glxDestroyGLXVideoSourceSGIX");
 // 	if(ptrglxDestroyGLXVideoSourceSGIX == NULL) return 1;
-// 	return 0;
-// }
-// int init_SGIX_visual_select_group() {
 // 	return 0;
 // }
 // int init_SGI_cushion() {
@@ -1477,6 +1365,10 @@ const (
 // ARB_vertex_buffer_object
 const (
 	CONTEXT_ALLOW_BUFFER_BYTE_ORDER_MISMATCH_ARB = 0x2095
+)
+// EXT_buffer_age
+const (
+	BACK_BUFFER_AGE_EXT = 0x20F4
 )
 // EXT_create_context_es2_profile
 const (
@@ -1812,26 +1704,12 @@ const (
 func CreateContextAttribsARB(dpy Pointer, config Pointer, share_context Pointer, direct int, attrib_list *Int) Pointer {
 	return (Pointer)(C.goglxCreateContextAttribsARB((*C.Display)(dpy), (C.GLXFBConfig)(config), (C.GLXContext)(share_context), (C.int)(direct), (*C.int)(attrib_list)))
 }
-// ARB_create_context_profile
-
-// ARB_create_context_robustness
-
-// ARB_fbconfig_float
-
-// ARB_framebuffer_sRGB
-
 // ARB_get_proc_address
 
 // http://www.opengl.org/sdk/docs/man/xhtml/glGetProcAddressARB.xml
 func GetProcAddressARB(procName *Ubyte) Pointer {
 	return (Pointer)(C.goglxGetProcAddressARB((*C.GLubyte)(procName)))
 }
-// ARB_multisample
-
-// EXT_fbconfig_packed_float
-
-// EXT_framebuffer_sRGB
-
 // EXT_import_context
 
 // http://www.opengl.org/sdk/docs/man/xhtml/glGetCurrentDisplayEXT.xml
@@ -1860,8 +1738,6 @@ func FreeContextEXT(dpy Pointer, context Pointer)  {
 func SwapIntervalEXT(dpy Pointer, drawable Pointer, interval Int)  {
 	C.goglxSwapIntervalEXT((*C.Display)(dpy), (C.GLXDrawable)(drawable), (C.int)(interval))
 }
-// EXT_swap_control_tear
-
 // EXT_texture_from_pixmap
 
 // http://www.opengl.org/sdk/docs/man/xhtml/glBindTexImageEXT.xml
@@ -1872,12 +1748,6 @@ func BindTexImageEXT(dpy Pointer, drawable Pointer, buffer Int, attrib_list *Int
 func ReleaseTexImageEXT(dpy Pointer, drawable Pointer, buffer Int)  {
 	C.goglxReleaseTexImageEXT((*C.Display)(dpy), (C.GLXDrawable)(drawable), (C.int)(buffer))
 }
-// EXT_visual_info
-
-// EXT_visual_rating
-
-// INTEL_swap_event
-
 // MESA_agp_offset
 
 // http://www.opengl.org/sdk/docs/man/xhtml/glGetAGPOffsetMESA.xml
@@ -1914,10 +1784,6 @@ func Set3DfxModeMESA(mode Int) int {
 func CopyImageSubDataNV(dpy Pointer, srcCtx Pointer, srcName Uint, srcTarget Enum, srcLevel Int, srcX Int, srcY Int, srcZ Int, dstCtx Pointer, dstName Uint, dstTarget Enum, dstLevel Int, dstX Int, dstY Int, dstZ Int, width Sizei, height Sizei, depth Sizei)  {
 	C.goglxCopyImageSubDataNV((*C.Display)(dpy), (C.GLXContext)(srcCtx), (C.GLuint)(srcName), (C.GLenum)(srcTarget), (C.GLint)(srcLevel), (C.GLint)(srcX), (C.GLint)(srcY), (C.GLint)(srcZ), (C.GLXContext)(dstCtx), (C.GLuint)(dstName), (C.GLenum)(dstTarget), (C.GLint)(dstLevel), (C.GLint)(dstX), (C.GLint)(dstY), (C.GLint)(dstZ), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLsizei)(depth))
 }
-// NV_float_buffer
-
-// NV_multisample_coverage
-
 // NV_present_video
 
 // http://www.opengl.org/sdk/docs/man/xhtml/glEnumerateVideoDevicesNV.xml
@@ -2002,8 +1868,6 @@ func SendPbufferToVideoNV(dpy Pointer, pbuf Pointer, iBufferType Int, pulCounter
 func GetVideoInfoNV(dpy Pointer, screen Int, VideoDevice Pointer, pulCounterOutputPbuffer *uint32, pulCounterOutputVideo *uint32) Int {
 	return (Int)(C.goglxGetVideoInfoNV((*C.Display)(dpy), (C.int)(screen), (C.GLXVideoDeviceNV)(VideoDevice), (*C.unsigned_long)(pulCounterOutputPbuffer), (*C.unsigned_long)(pulCounterOutputVideo)))
 }
-// OML_swap_method
-
 // OML_sync_control
 
 // http://www.opengl.org/sdk/docs/man/xhtml/glGetSyncValuesOML.xml
@@ -2026,8 +1890,6 @@ func WaitForMscOML(dpy Pointer, drawable Pointer, target_msc int64, divisor int6
 func WaitForSbcOML(dpy Pointer, drawable Pointer, target_sbc int64, ust *int64, msc *int64, sbc *int64) int {
 	return (int)(C.goglxWaitForSbcOML((*C.Display)(dpy), (C.GLXDrawable)(drawable), (C.int64_t)(target_sbc), (*C.int64_t)(ust), (*C.int64_t)(msc), (*C.int64_t)(sbc)))
 }
-// SGIS_multisample
-
 // SGIX_dmbuffer
 
 // http://www.opengl.org/sdk/docs/man/xhtml/glAssociateDMPbufferSGIX.xml
@@ -2164,8 +2026,6 @@ func CreateGLXVideoSourceSGIX(display Pointer, screen Int, server Pointer, path 
 func DestroyGLXVideoSourceSGIX(dpy Pointer, glxvideosource Pointer)  {
 	C.goglxDestroyGLXVideoSourceSGIX((*C.Display)(dpy), (*C.GGLXVideoSourceSGIX)(glxvideosource))
 }
-// SGIX_visual_select_group
-
 // SGI_cushion
 
 // http://www.opengl.org/sdk/docs/man/xhtml/glCushionSGI.xml
@@ -2513,59 +2373,10 @@ func InitArbCreateContext() error {
 	}
 	return nil
 }
-func InitArbCreateContextProfile() error {
-	var ret C.int
-	if ret = C.init_ARB_create_context_profile(); ret != 0 {
-		return errors.New("unable to initialize ARB_create_context_profile")
-	}
-	return nil
-}
-func InitArbCreateContextRobustness() error {
-	var ret C.int
-	if ret = C.init_ARB_create_context_robustness(); ret != 0 {
-		return errors.New("unable to initialize ARB_create_context_robustness")
-	}
-	return nil
-}
-func InitArbFbconfigFloat() error {
-	var ret C.int
-	if ret = C.init_ARB_fbconfig_float(); ret != 0 {
-		return errors.New("unable to initialize ARB_fbconfig_float")
-	}
-	return nil
-}
-func InitArbFramebufferSrgb() error {
-	var ret C.int
-	if ret = C.init_ARB_framebuffer_sRGB(); ret != 0 {
-		return errors.New("unable to initialize ARB_framebuffer_sRGB")
-	}
-	return nil
-}
 func InitArbGetProcAddress() error {
 	var ret C.int
 	if ret = C.init_ARB_get_proc_address(); ret != 0 {
 		return errors.New("unable to initialize ARB_get_proc_address")
-	}
-	return nil
-}
-func InitArbMultisample() error {
-	var ret C.int
-	if ret = C.init_ARB_multisample(); ret != 0 {
-		return errors.New("unable to initialize ARB_multisample")
-	}
-	return nil
-}
-func InitExtFbconfigPackedFloat() error {
-	var ret C.int
-	if ret = C.init_EXT_fbconfig_packed_float(); ret != 0 {
-		return errors.New("unable to initialize EXT_fbconfig_packed_float")
-	}
-	return nil
-}
-func InitExtFramebufferSrgb() error {
-	var ret C.int
-	if ret = C.init_EXT_framebuffer_sRGB(); ret != 0 {
-		return errors.New("unable to initialize EXT_framebuffer_sRGB")
 	}
 	return nil
 }
@@ -2583,38 +2394,10 @@ func InitExtSwapControl() error {
 	}
 	return nil
 }
-func InitExtSwapControlTear() error {
-	var ret C.int
-	if ret = C.init_EXT_swap_control_tear(); ret != 0 {
-		return errors.New("unable to initialize EXT_swap_control_tear")
-	}
-	return nil
-}
 func InitExtTextureFromPixmap() error {
 	var ret C.int
 	if ret = C.init_EXT_texture_from_pixmap(); ret != 0 {
 		return errors.New("unable to initialize EXT_texture_from_pixmap")
-	}
-	return nil
-}
-func InitExtVisualInfo() error {
-	var ret C.int
-	if ret = C.init_EXT_visual_info(); ret != 0 {
-		return errors.New("unable to initialize EXT_visual_info")
-	}
-	return nil
-}
-func InitExtVisualRating() error {
-	var ret C.int
-	if ret = C.init_EXT_visual_rating(); ret != 0 {
-		return errors.New("unable to initialize EXT_visual_rating")
-	}
-	return nil
-}
-func InitIntelSwapEvent() error {
-	var ret C.int
-	if ret = C.init_INTEL_swap_event(); ret != 0 {
-		return errors.New("unable to initialize INTEL_swap_event")
 	}
 	return nil
 }
@@ -2660,20 +2443,6 @@ func InitNvCopyImage() error {
 	}
 	return nil
 }
-func InitNvFloatBuffer() error {
-	var ret C.int
-	if ret = C.init_NV_float_buffer(); ret != 0 {
-		return errors.New("unable to initialize NV_float_buffer")
-	}
-	return nil
-}
-func InitNvMultisampleCoverage() error {
-	var ret C.int
-	if ret = C.init_NV_multisample_coverage(); ret != 0 {
-		return errors.New("unable to initialize NV_multisample_coverage")
-	}
-	return nil
-}
 func InitNvPresentVideo() error {
 	var ret C.int
 	if ret = C.init_NV_present_video(); ret != 0 {
@@ -2702,24 +2471,10 @@ func InitNvVideoOutput() error {
 	}
 	return nil
 }
-func InitOmlSwapMethod() error {
-	var ret C.int
-	if ret = C.init_OML_swap_method(); ret != 0 {
-		return errors.New("unable to initialize OML_swap_method")
-	}
-	return nil
-}
 func InitOmlSyncControl() error {
 	var ret C.int
 	if ret = C.init_OML_sync_control(); ret != 0 {
 		return errors.New("unable to initialize OML_sync_control")
-	}
-	return nil
-}
-func InitSgisMultisample() error {
-	var ret C.int
-	if ret = C.init_SGIS_multisample(); ret != 0 {
-		return errors.New("unable to initialize SGIS_multisample")
 	}
 	return nil
 }
@@ -2776,13 +2531,6 @@ func InitSgixVideoSource() error {
 	var ret C.int
 	if ret = C.init_SGIX_video_source(); ret != 0 {
 		return errors.New("unable to initialize SGIX_video_source")
-	}
-	return nil
-}
-func InitSgixVisualSelectGroup() error {
-	var ret C.int
-	if ret = C.init_SGIX_visual_select_group(); ret != 0 {
-		return errors.New("unable to initialize SGIX_visual_select_group")
 	}
 	return nil
 }

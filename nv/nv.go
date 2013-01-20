@@ -4,17 +4,11 @@
 // 
 // NV_bindless_texture: http://www.opengl.org/registry/specs/NV/bindless_texture.txt
 // 
-// NV_blend_square: http://www.opengl.org/registry/specs/NV/blend_square.txt
-// 
 // NV_conditional_render: http://www.opengl.org/registry/specs/NV/conditional_render.txt
-// 
-// NV_copy_depth_to_color: http://www.opengl.org/registry/specs/NV/copy_depth_to_color.txt
 // 
 // NV_copy_image: http://www.opengl.org/registry/specs/NV/copy_image.txt
 // 
 // NV_depth_buffer_float: http://www.opengl.org/registry/specs/NV/depth_buffer_float.txt
-// 
-// NV_depth_clamp: http://www.opengl.org/registry/specs/NV/depth_clamp.txt
 // 
 // NV_evaluators: http://www.opengl.org/registry/specs/NV/evaluators.txt
 // 
@@ -22,23 +16,11 @@
 // 
 // NV_fence: http://www.opengl.org/registry/specs/NV/fence.txt
 // 
-// NV_float_buffer: http://www.opengl.org/registry/specs/NV/float_buffer.txt
-// 
-// NV_fog_distance: http://www.opengl.org/registry/specs/NV/fog_distance.txt
-// 
 // NV_fragment_program: http://www.opengl.org/registry/specs/NV/fragment_program.txt
-// 
-// NV_fragment_program2: http://www.opengl.org/registry/specs/NV/fragment_program2.txt
-// 
-// NV_fragment_program4: http://www.opengl.org/registry/specs/NV/fragment_program4.txt
-// 
-// NV_fragment_program_option: http://www.opengl.org/registry/specs/NV/fragment_program_option.txt
 // 
 // NV_framebuffer_multisample_coverage: http://www.opengl.org/registry/specs/NV/framebuffer_multisample_coverage.txt
 // 
 // NV_geometry_program4: http://www.opengl.org/registry/specs/NV/geometry_program4.txt
-// 
-// NV_geometry_shader4: http://www.opengl.org/registry/specs/NV/geometry_shader4.txt
 // 
 // NV_gpu_program4: http://www.opengl.org/registry/specs/NV/gpu_program4.txt
 // 
@@ -48,19 +30,9 @@
 // 
 // NV_half_float: http://www.opengl.org/registry/specs/NV/half_float.txt
 // 
-// NV_light_max_exponent: http://www.opengl.org/registry/specs/NV/light_max_exponent.txt
-// 
-// NV_multisample_coverage: http://www.opengl.org/registry/specs/NV/multisample_coverage.txt
-// 
-// NV_multisample_filter_hint: http://www.opengl.org/registry/specs/NV/multisample_filter_hint.txt
-// 
 // NV_occlusion_query: http://www.opengl.org/registry/specs/NV/occlusion_query.txt
 // 
-// NV_packed_depth_stencil: http://www.opengl.org/registry/specs/NV/packed_depth_stencil.txt
-// 
 // NV_parameter_buffer_object: http://www.opengl.org/registry/specs/NV/parameter_buffer_object.txt
-// 
-// NV_parameter_buffer_object2: http://www.opengl.org/registry/specs/NV/parameter_buffer_object2.txt
 // 
 // NV_path_rendering: http://www.opengl.org/registry/specs/NV/path_rendering.txt
 // 
@@ -76,35 +48,11 @@
 // 
 // NV_register_combiners2: http://www.opengl.org/registry/specs/NV/register_combiners2.txt
 // 
-// NV_shader_atomic_float: http://www.opengl.org/registry/specs/NV/shader_atomic_float.txt
-// 
 // NV_shader_buffer_load: http://www.opengl.org/registry/specs/NV/shader_buffer_load.txt
-// 
-// NV_shader_buffer_store: http://www.opengl.org/registry/specs/NV/shader_buffer_store.txt
-// 
-// NV_tessellation_program5: http://www.opengl.org/registry/specs/NV/tessellation_program5.txt
-// 
-// NV_texgen_emboss: http://www.opengl.org/registry/specs/NV/texgen_emboss.txt
-// 
-// NV_texgen_reflection: http://www.opengl.org/registry/specs/NV/texgen_reflection.txt
 // 
 // NV_texture_barrier: http://www.opengl.org/registry/specs/NV/texture_barrier.txt
 // 
-// NV_texture_compression_vtc: http://www.opengl.org/registry/specs/NV/texture_compression_vtc.txt
-// 
-// NV_texture_env_combine4: http://www.opengl.org/registry/specs/NV/texture_env_combine4.txt
-// 
-// NV_texture_expand_normal: http://www.opengl.org/registry/specs/NV/texture_expand_normal.txt
-// 
 // NV_texture_multisample: http://www.opengl.org/registry/specs/NV/texture_multisample.txt
-// 
-// NV_texture_rectangle: http://www.opengl.org/registry/specs/NV/texture_rectangle.txt
-// 
-// NV_texture_shader: http://www.opengl.org/registry/specs/NV/texture_shader.txt
-// 
-// NV_texture_shader2: http://www.opengl.org/registry/specs/NV/texture_shader2.txt
-// 
-// NV_texture_shader3: http://www.opengl.org/registry/specs/NV/texture_shader3.txt
 // 
 // NV_transform_feedback: http://www.opengl.org/registry/specs/NV/transform_feedback.txt
 // 
@@ -114,21 +62,11 @@
 // 
 // NV_vertex_array_range: http://www.opengl.org/registry/specs/NV/vertex_array_range.txt
 // 
-// NV_vertex_array_range2: http://www.opengl.org/registry/specs/NV/vertex_array_range2.txt
-// 
 // NV_vertex_attrib_integer_64bit: http://www.opengl.org/registry/specs/NV/vertex_attrib_integer_64bit.txt
 // 
 // NV_vertex_buffer_unified_memory: http://www.opengl.org/registry/specs/NV/vertex_buffer_unified_memory.txt
 // 
 // NV_vertex_program: http://www.opengl.org/registry/specs/NV/vertex_program.txt
-// 
-// NV_vertex_program1_1: http://www.opengl.org/registry/specs/NV/vertex_program1_1.txt
-// 
-// NV_vertex_program2: http://www.opengl.org/registry/specs/NV/vertex_program2.txt
-// 
-// NV_vertex_program2_option: http://www.opengl.org/registry/specs/NV/vertex_program2_option.txt
-// 
-// NV_vertex_program3: http://www.opengl.org/registry/specs/NV/vertex_program3.txt
 // 
 // NV_vertex_program4: http://www.opengl.org/registry/specs/NV/vertex_program4.txt
 // 
@@ -274,6 +212,10 @@ package nv
 // typedef void (APIENTRY *GLDEBUGPROCAMD)(GLuint id,GLenum category,GLenum severity,GLsizei length,const GLchar *message,GLvoid *userParam);
 // #endif
 // 
+// #ifndef GL_KHR_debug
+// typedef void (APIENTRY *GLDEBUGPROC)(GLenum source,GLenum type,GLuint id,GLenum severity,GLsizei length,const GLchar *message,GLvoid *userParam);
+// #endif
+// 
 // #ifndef GL_NV_vdpau_interop
 // typedef GLintptr GLvdpauSurfaceNV;
 // #endif
@@ -313,18 +255,15 @@ package nv
 // void (APIENTRYP ptrglProgramUniformHandleui64vNV)(GLuint program, GLint location, GLsizei count, GLuint64* values);
 // GLboolean (APIENTRYP ptrglIsTextureHandleResidentNV)(GLuint64 handle);
 // GLboolean (APIENTRYP ptrglIsImageHandleResidentNV)(GLuint64 handle);
-// //  NV_blend_square
 // //  NV_conditional_render
 // void (APIENTRYP ptrglBeginConditionalRenderNV)(GLuint id, GLenum mode);
 // void (APIENTRYP ptrglEndConditionalRenderNV)();
-// //  NV_copy_depth_to_color
 // //  NV_copy_image
 // void (APIENTRYP ptrglCopyImageSubDataNV)(GLuint srcName, GLenum srcTarget, GLint srcLevel, GLint srcX, GLint srcY, GLint srcZ, GLuint dstName, GLenum dstTarget, GLint dstLevel, GLint dstX, GLint dstY, GLint dstZ, GLsizei width, GLsizei height, GLsizei depth);
 // //  NV_depth_buffer_float
 // void (APIENTRYP ptrglDepthRangedNV)(GLdouble zNear, GLdouble zFar);
 // void (APIENTRYP ptrglClearDepthdNV)(GLdouble depth);
 // void (APIENTRYP ptrglDepthBoundsdNV)(GLdouble zmin, GLdouble zmax);
-// //  NV_depth_clamp
 // //  NV_evaluators
 // void (APIENTRYP ptrglMapControlPointsNV)(GLenum target, GLuint index, GLenum type, GLsizei ustride, GLsizei vstride, GLint uorder, GLint vorder, GLboolean packed, GLvoid* points);
 // void (APIENTRYP ptrglMapParameterivNV)(GLenum target, GLenum pname, GLint* params);
@@ -347,8 +286,6 @@ package nv
 // void (APIENTRYP ptrglGetFenceivNV)(GLuint fence, GLenum pname, GLint* params);
 // void (APIENTRYP ptrglFinishFenceNV)(GLuint fence);
 // void (APIENTRYP ptrglSetFenceNV)(GLuint fence, GLenum condition);
-// //  NV_float_buffer
-// //  NV_fog_distance
 // //  NV_fragment_program
 // void (APIENTRYP ptrglProgramNamedParameter4fNV)(GLuint id, GLsizei len, GLubyte* name, GLfloat x, GLfloat y, GLfloat z, GLfloat w);
 // void (APIENTRYP ptrglProgramNamedParameter4dNV)(GLuint id, GLsizei len, GLubyte* name, GLdouble x, GLdouble y, GLdouble z, GLdouble w);
@@ -356,9 +293,6 @@ package nv
 // void (APIENTRYP ptrglProgramNamedParameter4dvNV)(GLuint id, GLsizei len, GLubyte* name, GLdouble* v);
 // void (APIENTRYP ptrglGetProgramNamedParameterfvNV)(GLuint id, GLsizei len, GLubyte* name, GLfloat* params);
 // void (APIENTRYP ptrglGetProgramNamedParameterdvNV)(GLuint id, GLsizei len, GLubyte* name, GLdouble* params);
-// //  NV_fragment_program2
-// //  NV_fragment_program4
-// //  NV_fragment_program_option
 // //  NV_framebuffer_multisample_coverage
 // void (APIENTRYP ptrglRenderbufferStorageMultisampleCoverageNV)(GLenum target, GLsizei coverageSamples, GLsizei colorSamples, GLenum internalformat, GLsizei width, GLsizei height);
 // //  NV_geometry_program4
@@ -366,7 +300,6 @@ package nv
 // void (APIENTRYP ptrglFramebufferTextureEXT)(GLenum target, GLenum attachment, GLuint texture, GLint level);
 // void (APIENTRYP ptrglFramebufferTextureLayerEXT)(GLenum target, GLenum attachment, GLuint texture, GLint level, GLint layer);
 // void (APIENTRYP ptrglFramebufferTextureFaceEXT)(GLenum target, GLenum attachment, GLuint texture, GLint level, GLenum face);
-// //  NV_geometry_shader4
 // //  NV_gpu_program4
 // void (APIENTRYP ptrglProgramLocalParameterI4iNV)(GLenum target, GLuint index, GLint x, GLint y, GLint z, GLint w);
 // void (APIENTRYP ptrglProgramLocalParameterI4ivNV)(GLenum target, GLuint index, GLint* params);
@@ -468,9 +401,6 @@ package nv
 // void (APIENTRYP ptrglVertexAttribs2hvNV)(GLuint index, GLsizei n, GLhalfNV* v);
 // void (APIENTRYP ptrglVertexAttribs3hvNV)(GLuint index, GLsizei n, GLhalfNV* v);
 // void (APIENTRYP ptrglVertexAttribs4hvNV)(GLuint index, GLsizei n, GLhalfNV* v);
-// //  NV_light_max_exponent
-// //  NV_multisample_coverage
-// //  NV_multisample_filter_hint
 // //  NV_occlusion_query
 // void (APIENTRYP ptrglGenOcclusionQueriesNV)(GLsizei n, GLuint* ids);
 // void (APIENTRYP ptrglDeleteOcclusionQueriesNV)(GLsizei n, GLuint* ids);
@@ -479,12 +409,10 @@ package nv
 // void (APIENTRYP ptrglEndOcclusionQueryNV)();
 // void (APIENTRYP ptrglGetOcclusionQueryivNV)(GLuint id, GLenum pname, GLint* params);
 // void (APIENTRYP ptrglGetOcclusionQueryuivNV)(GLuint id, GLenum pname, GLuint* params);
-// //  NV_packed_depth_stencil
 // //  NV_parameter_buffer_object
 // void (APIENTRYP ptrglProgramBufferParametersfvNV)(GLenum target, GLuint buffer, GLuint index, GLsizei count, GLfloat* params);
 // void (APIENTRYP ptrglProgramBufferParametersIivNV)(GLenum target, GLuint buffer, GLuint index, GLsizei count, GLint* params);
 // void (APIENTRYP ptrglProgramBufferParametersIuivNV)(GLenum target, GLuint buffer, GLuint index, GLsizei count, GLuint* params);
-// //  NV_parameter_buffer_object2
 // //  NV_path_rendering
 // GLuint (APIENTRYP ptrglGenPathsNV)(GLsizei range);
 // void (APIENTRYP ptrglDeletePathsNV)(GLuint path, GLsizei range);
@@ -568,7 +496,6 @@ package nv
 // //  NV_register_combiners2
 // void (APIENTRYP ptrglCombinerStageParameterfvNV)(GLenum stage, GLenum pname, GLfloat* params);
 // void (APIENTRYP ptrglGetCombinerStageParameterfvNV)(GLenum stage, GLenum pname, GLfloat* params);
-// //  NV_shader_atomic_float
 // //  NV_shader_buffer_load
 // void (APIENTRYP ptrglMakeBufferResidentNV)(GLenum target, GLenum access);
 // void (APIENTRYP ptrglMakeBufferNonResidentNV)(GLenum target);
@@ -584,15 +511,8 @@ package nv
 // void (APIENTRYP ptrglGetUniformui64vNV)(GLuint program, GLint location, GLuint64EXT* params);
 // void (APIENTRYP ptrglProgramUniformui64NV)(GLuint program, GLint location, GLuint64EXT value);
 // void (APIENTRYP ptrglProgramUniformui64vNV)(GLuint program, GLint location, GLsizei count, GLuint64EXT* value);
-// //  NV_shader_buffer_store
-// //  NV_tessellation_program5
-// //  NV_texgen_emboss
-// //  NV_texgen_reflection
 // //  NV_texture_barrier
 // void (APIENTRYP ptrglTextureBarrierNV)();
-// //  NV_texture_compression_vtc
-// //  NV_texture_env_combine4
-// //  NV_texture_expand_normal
 // //  NV_texture_multisample
 // void (APIENTRYP ptrglTexImage2DMultisampleCoverageNV)(GLenum target, GLsizei coverageSamples, GLsizei colorSamples, GLint internalFormat, GLsizei width, GLsizei height, GLboolean fixedSampleLocations);
 // void (APIENTRYP ptrglTexImage3DMultisampleCoverageNV)(GLenum target, GLsizei coverageSamples, GLsizei colorSamples, GLint internalFormat, GLsizei width, GLsizei height, GLsizei depth, GLboolean fixedSampleLocations);
@@ -600,10 +520,6 @@ package nv
 // void (APIENTRYP ptrglTextureImage3DMultisampleNV)(GLuint texture, GLenum target, GLsizei samples, GLint internalFormat, GLsizei width, GLsizei height, GLsizei depth, GLboolean fixedSampleLocations);
 // void (APIENTRYP ptrglTextureImage2DMultisampleCoverageNV)(GLuint texture, GLenum target, GLsizei coverageSamples, GLsizei colorSamples, GLint internalFormat, GLsizei width, GLsizei height, GLboolean fixedSampleLocations);
 // void (APIENTRYP ptrglTextureImage3DMultisampleCoverageNV)(GLuint texture, GLenum target, GLsizei coverageSamples, GLsizei colorSamples, GLint internalFormat, GLsizei width, GLsizei height, GLsizei depth, GLboolean fixedSampleLocations);
-// //  NV_texture_rectangle
-// //  NV_texture_shader
-// //  NV_texture_shader2
-// //  NV_texture_shader3
 // //  NV_transform_feedback
 // void (APIENTRYP ptrglBeginTransformFeedbackNV)(GLenum primitiveMode);
 // void (APIENTRYP ptrglEndTransformFeedbackNV)();
@@ -639,7 +555,6 @@ package nv
 // //  NV_vertex_array_range
 // void (APIENTRYP ptrglFlushVertexArrayRangeNV)();
 // void (APIENTRYP ptrglVertexArrayRangeNV)(GLsizei length, GLvoid* pointer);
-// //  NV_vertex_array_range2
 // //  NV_vertex_attrib_integer_64bit
 // void (APIENTRYP ptrglVertexAttribL1i64NV)(GLuint index, GLint64EXT x);
 // void (APIENTRYP ptrglVertexAttribL2i64NV)(GLuint index, GLint64EXT x, GLint64EXT y);
@@ -738,10 +653,6 @@ package nv
 // void (APIENTRYP ptrglVertexAttribs4fvNV)(GLuint index, GLsizei count, GLfloat* v);
 // void (APIENTRYP ptrglVertexAttribs4svNV)(GLuint index, GLsizei count, GLshort* v);
 // void (APIENTRYP ptrglVertexAttribs4ubvNV)(GLuint index, GLsizei count, GLubyte* v);
-// //  NV_vertex_program1_1
-// //  NV_vertex_program2
-// //  NV_vertex_program2_option
-// //  NV_vertex_program3
 // //  NV_vertex_program4
 // void (APIENTRYP ptrglVertexAttribI1iEXT)(GLuint index, GLint x);
 // void (APIENTRYP ptrglVertexAttribI2iEXT)(GLuint index, GLint x, GLint y);
@@ -820,7 +731,6 @@ package nv
 // GLboolean goglIsImageHandleResidentNV(GLuint64 handle) {
 // 	return (*ptrglIsImageHandleResidentNV)(handle);
 // }
-// //  NV_blend_square
 // //  NV_conditional_render
 // void goglBeginConditionalRenderNV(GLuint id, GLenum mode) {
 // 	(*ptrglBeginConditionalRenderNV)(id, mode);
@@ -828,7 +738,6 @@ package nv
 // void goglEndConditionalRenderNV() {
 // 	(*ptrglEndConditionalRenderNV)();
 // }
-// //  NV_copy_depth_to_color
 // //  NV_copy_image
 // void goglCopyImageSubDataNV(GLuint srcName, GLenum srcTarget, GLint srcLevel, GLint srcX, GLint srcY, GLint srcZ, GLuint dstName, GLenum dstTarget, GLint dstLevel, GLint dstX, GLint dstY, GLint dstZ, GLsizei width, GLsizei height, GLsizei depth) {
 // 	(*ptrglCopyImageSubDataNV)(srcName, srcTarget, srcLevel, srcX, srcY, srcZ, dstName, dstTarget, dstLevel, dstX, dstY, dstZ, width, height, depth);
@@ -843,7 +752,6 @@ package nv
 // void goglDepthBoundsdNV(GLdouble zmin, GLdouble zmax) {
 // 	(*ptrglDepthBoundsdNV)(zmin, zmax);
 // }
-// //  NV_depth_clamp
 // //  NV_evaluators
 // void goglMapControlPointsNV(GLenum target, GLuint index, GLenum type_, GLsizei ustride, GLsizei vstride, GLint uorder, GLint vorder, GLboolean packed, GLvoid* points) {
 // 	(*ptrglMapControlPointsNV)(target, index, type_, ustride, vstride, uorder, vorder, packed, points);
@@ -904,8 +812,6 @@ package nv
 // void goglSetFenceNV(GLuint fence, GLenum condition) {
 // 	(*ptrglSetFenceNV)(fence, condition);
 // }
-// //  NV_float_buffer
-// //  NV_fog_distance
 // //  NV_fragment_program
 // void goglProgramNamedParameter4fNV(GLuint id, GLsizei len, GLubyte* name, GLfloat x, GLfloat y, GLfloat z, GLfloat w) {
 // 	(*ptrglProgramNamedParameter4fNV)(id, len, name, x, y, z, w);
@@ -925,9 +831,6 @@ package nv
 // void goglGetProgramNamedParameterdvNV(GLuint id, GLsizei len, GLubyte* name, GLdouble* params) {
 // 	(*ptrglGetProgramNamedParameterdvNV)(id, len, name, params);
 // }
-// //  NV_fragment_program2
-// //  NV_fragment_program4
-// //  NV_fragment_program_option
 // //  NV_framebuffer_multisample_coverage
 // void goglRenderbufferStorageMultisampleCoverageNV(GLenum target, GLsizei coverageSamples, GLsizei colorSamples, GLenum internalformat, GLsizei width, GLsizei height) {
 // 	(*ptrglRenderbufferStorageMultisampleCoverageNV)(target, coverageSamples, colorSamples, internalformat, width, height);
@@ -945,7 +848,6 @@ package nv
 // void goglFramebufferTextureFaceEXT(GLenum target, GLenum attachment, GLuint texture, GLint level, GLenum face) {
 // 	(*ptrglFramebufferTextureFaceEXT)(target, attachment, texture, level, face);
 // }
-// //  NV_geometry_shader4
 // //  NV_gpu_program4
 // void goglProgramLocalParameterI4iNV(GLenum target, GLuint index, GLint x, GLint y, GLint z, GLint w) {
 // 	(*ptrglProgramLocalParameterI4iNV)(target, index, x, y, z, w);
@@ -1241,9 +1143,6 @@ package nv
 // void goglVertexAttribs4hvNV(GLuint index, GLsizei n, GLhalfNV* v) {
 // 	(*ptrglVertexAttribs4hvNV)(index, n, v);
 // }
-// //  NV_light_max_exponent
-// //  NV_multisample_coverage
-// //  NV_multisample_filter_hint
 // //  NV_occlusion_query
 // void goglGenOcclusionQueriesNV(GLsizei n, GLuint* ids) {
 // 	(*ptrglGenOcclusionQueriesNV)(n, ids);
@@ -1266,7 +1165,6 @@ package nv
 // void goglGetOcclusionQueryuivNV(GLuint id, GLenum pname, GLuint* params) {
 // 	(*ptrglGetOcclusionQueryuivNV)(id, pname, params);
 // }
-// //  NV_packed_depth_stencil
 // //  NV_parameter_buffer_object
 // void goglProgramBufferParametersfvNV(GLenum target, GLuint buffer, GLuint index, GLsizei count, GLfloat* params) {
 // 	(*ptrglProgramBufferParametersfvNV)(target, buffer, index, count, params);
@@ -1277,7 +1175,6 @@ package nv
 // void goglProgramBufferParametersIuivNV(GLenum target, GLuint buffer, GLuint index, GLsizei count, GLuint* params) {
 // 	(*ptrglProgramBufferParametersIuivNV)(target, buffer, index, count, params);
 // }
-// //  NV_parameter_buffer_object2
 // //  NV_path_rendering
 // GLuint goglGenPathsNV(GLsizei range_) {
 // 	return (*ptrglGenPathsNV)(range_);
@@ -1513,7 +1410,6 @@ package nv
 // void goglGetCombinerStageParameterfvNV(GLenum stage, GLenum pname, GLfloat* params) {
 // 	(*ptrglGetCombinerStageParameterfvNV)(stage, pname, params);
 // }
-// //  NV_shader_atomic_float
 // //  NV_shader_buffer_load
 // void goglMakeBufferResidentNV(GLenum target, GLenum access) {
 // 	(*ptrglMakeBufferResidentNV)(target, access);
@@ -1557,17 +1453,10 @@ package nv
 // void goglProgramUniformui64vNV(GLuint program, GLint location, GLsizei count, GLuint64EXT* value) {
 // 	(*ptrglProgramUniformui64vNV)(program, location, count, value);
 // }
-// //  NV_shader_buffer_store
-// //  NV_tessellation_program5
-// //  NV_texgen_emboss
-// //  NV_texgen_reflection
 // //  NV_texture_barrier
 // void goglTextureBarrierNV() {
 // 	(*ptrglTextureBarrierNV)();
 // }
-// //  NV_texture_compression_vtc
-// //  NV_texture_env_combine4
-// //  NV_texture_expand_normal
 // //  NV_texture_multisample
 // void goglTexImage2DMultisampleCoverageNV(GLenum target, GLsizei coverageSamples, GLsizei colorSamples, GLint internalFormat, GLsizei width, GLsizei height, GLboolean fixedSampleLocations) {
 // 	(*ptrglTexImage2DMultisampleCoverageNV)(target, coverageSamples, colorSamples, internalFormat, width, height, fixedSampleLocations);
@@ -1587,10 +1476,6 @@ package nv
 // void goglTextureImage3DMultisampleCoverageNV(GLuint texture, GLenum target, GLsizei coverageSamples, GLsizei colorSamples, GLint internalFormat, GLsizei width, GLsizei height, GLsizei depth, GLboolean fixedSampleLocations) {
 // 	(*ptrglTextureImage3DMultisampleCoverageNV)(texture, target, coverageSamples, colorSamples, internalFormat, width, height, depth, fixedSampleLocations);
 // }
-// //  NV_texture_rectangle
-// //  NV_texture_shader
-// //  NV_texture_shader2
-// //  NV_texture_shader3
 // //  NV_transform_feedback
 // void goglBeginTransformFeedbackNV(GLenum primitiveMode) {
 // 	(*ptrglBeginTransformFeedbackNV)(primitiveMode);
@@ -1688,7 +1573,6 @@ package nv
 // void goglVertexArrayRangeNV(GLsizei length, GLvoid* pointer) {
 // 	(*ptrglVertexArrayRangeNV)(length, pointer);
 // }
-// //  NV_vertex_array_range2
 // //  NV_vertex_attrib_integer_64bit
 // void goglVertexAttribL1i64NV(GLuint index, GLint64EXT x) {
 // 	(*ptrglVertexAttribL1i64NV)(index, x);
@@ -1977,10 +1861,6 @@ package nv
 // void goglVertexAttribs4ubvNV(GLuint index, GLsizei count, GLubyte* v) {
 // 	(*ptrglVertexAttribs4ubvNV)(index, count, v);
 // }
-// //  NV_vertex_program1_1
-// //  NV_vertex_program2
-// //  NV_vertex_program2_option
-// //  NV_vertex_program3
 // //  NV_vertex_program4
 // void goglVertexAttribI1iEXT(GLuint index, GLint x) {
 // 	(*ptrglVertexAttribI1iEXT)(index, x);
@@ -2118,17 +1998,11 @@ package nv
 // 	if(ptrglIsImageHandleResidentNV == NULL) return 1;
 // 	return 0;
 // }
-// int init_NV_blend_square() {
-// 	return 0;
-// }
 // int init_NV_conditional_render() {
 // 	ptrglBeginConditionalRenderNV = goglGetProcAddress("glBeginConditionalRenderNV");
 // 	if(ptrglBeginConditionalRenderNV == NULL) return 1;
 // 	ptrglEndConditionalRenderNV = goglGetProcAddress("glEndConditionalRenderNV");
 // 	if(ptrglEndConditionalRenderNV == NULL) return 1;
-// 	return 0;
-// }
-// int init_NV_copy_depth_to_color() {
 // 	return 0;
 // }
 // int init_NV_copy_image() {
@@ -2143,9 +2017,6 @@ package nv
 // 	if(ptrglClearDepthdNV == NULL) return 1;
 // 	ptrglDepthBoundsdNV = goglGetProcAddress("glDepthBoundsdNV");
 // 	if(ptrglDepthBoundsdNV == NULL) return 1;
-// 	return 0;
-// }
-// int init_NV_depth_clamp() {
 // 	return 0;
 // }
 // int init_NV_evaluators() {
@@ -2195,12 +2066,6 @@ package nv
 // 	if(ptrglSetFenceNV == NULL) return 1;
 // 	return 0;
 // }
-// int init_NV_float_buffer() {
-// 	return 0;
-// }
-// int init_NV_fog_distance() {
-// 	return 0;
-// }
 // int init_NV_fragment_program() {
 // 	ptrglProgramNamedParameter4fNV = goglGetProcAddress("glProgramNamedParameter4fNV");
 // 	if(ptrglProgramNamedParameter4fNV == NULL) return 1;
@@ -2214,15 +2079,6 @@ package nv
 // 	if(ptrglGetProgramNamedParameterfvNV == NULL) return 1;
 // 	ptrglGetProgramNamedParameterdvNV = goglGetProcAddress("glGetProgramNamedParameterdvNV");
 // 	if(ptrglGetProgramNamedParameterdvNV == NULL) return 1;
-// 	return 0;
-// }
-// int init_NV_fragment_program2() {
-// 	return 0;
-// }
-// int init_NV_fragment_program4() {
-// 	return 0;
-// }
-// int init_NV_fragment_program_option() {
 // 	return 0;
 // }
 // int init_NV_framebuffer_multisample_coverage() {
@@ -2239,9 +2095,6 @@ package nv
 // 	if(ptrglFramebufferTextureLayerEXT == NULL) return 1;
 // 	ptrglFramebufferTextureFaceEXT = goglGetProcAddress("glFramebufferTextureFaceEXT");
 // 	if(ptrglFramebufferTextureFaceEXT == NULL) return 1;
-// 	return 0;
-// }
-// int init_NV_geometry_shader4() {
 // 	return 0;
 // }
 // int init_NV_gpu_program4() {
@@ -2450,15 +2303,6 @@ package nv
 // 	if(ptrglVertexAttribs4hvNV == NULL) return 1;
 // 	return 0;
 // }
-// int init_NV_light_max_exponent() {
-// 	return 0;
-// }
-// int init_NV_multisample_coverage() {
-// 	return 0;
-// }
-// int init_NV_multisample_filter_hint() {
-// 	return 0;
-// }
 // int init_NV_occlusion_query() {
 // 	ptrglGenOcclusionQueriesNV = goglGetProcAddress("glGenOcclusionQueriesNV");
 // 	if(ptrglGenOcclusionQueriesNV == NULL) return 1;
@@ -2476,9 +2320,6 @@ package nv
 // 	if(ptrglGetOcclusionQueryuivNV == NULL) return 1;
 // 	return 0;
 // }
-// int init_NV_packed_depth_stencil() {
-// 	return 0;
-// }
 // int init_NV_parameter_buffer_object() {
 // 	ptrglProgramBufferParametersfvNV = goglGetProcAddress("glProgramBufferParametersfvNV");
 // 	if(ptrglProgramBufferParametersfvNV == NULL) return 1;
@@ -2486,9 +2327,6 @@ package nv
 // 	if(ptrglProgramBufferParametersIivNV == NULL) return 1;
 // 	ptrglProgramBufferParametersIuivNV = goglGetProcAddress("glProgramBufferParametersIuivNV");
 // 	if(ptrglProgramBufferParametersIuivNV == NULL) return 1;
-// 	return 0;
-// }
-// int init_NV_parameter_buffer_object2() {
 // 	return 0;
 // }
 // int init_NV_path_rendering() {
@@ -2664,9 +2502,6 @@ package nv
 // 	if(ptrglGetCombinerStageParameterfvNV == NULL) return 1;
 // 	return 0;
 // }
-// int init_NV_shader_atomic_float() {
-// 	return 0;
-// }
 // int init_NV_shader_buffer_load() {
 // 	ptrglMakeBufferResidentNV = goglGetProcAddress("glMakeBufferResidentNV");
 // 	if(ptrglMakeBufferResidentNV == NULL) return 1;
@@ -2698,30 +2533,9 @@ package nv
 // 	if(ptrglProgramUniformui64vNV == NULL) return 1;
 // 	return 0;
 // }
-// int init_NV_shader_buffer_store() {
-// 	return 0;
-// }
-// int init_NV_tessellation_program5() {
-// 	return 0;
-// }
-// int init_NV_texgen_emboss() {
-// 	return 0;
-// }
-// int init_NV_texgen_reflection() {
-// 	return 0;
-// }
 // int init_NV_texture_barrier() {
 // 	ptrglTextureBarrierNV = goglGetProcAddress("glTextureBarrierNV");
 // 	if(ptrglTextureBarrierNV == NULL) return 1;
-// 	return 0;
-// }
-// int init_NV_texture_compression_vtc() {
-// 	return 0;
-// }
-// int init_NV_texture_env_combine4() {
-// 	return 0;
-// }
-// int init_NV_texture_expand_normal() {
 // 	return 0;
 // }
 // int init_NV_texture_multisample() {
@@ -2737,18 +2551,6 @@ package nv
 // 	if(ptrglTextureImage2DMultisampleCoverageNV == NULL) return 1;
 // 	ptrglTextureImage3DMultisampleCoverageNV = goglGetProcAddress("glTextureImage3DMultisampleCoverageNV");
 // 	if(ptrglTextureImage3DMultisampleCoverageNV == NULL) return 1;
-// 	return 0;
-// }
-// int init_NV_texture_rectangle() {
-// 	return 0;
-// }
-// int init_NV_texture_shader() {
-// 	return 0;
-// }
-// int init_NV_texture_shader2() {
-// 	return 0;
-// }
-// int init_NV_texture_shader3() {
 // 	return 0;
 // }
 // int init_NV_transform_feedback() {
@@ -2823,9 +2625,6 @@ package nv
 // 	if(ptrglFlushVertexArrayRangeNV == NULL) return 1;
 // 	ptrglVertexArrayRangeNV = goglGetProcAddress("glVertexArrayRangeNV");
 // 	if(ptrglVertexArrayRangeNV == NULL) return 1;
-// 	return 0;
-// }
-// int init_NV_vertex_array_range2() {
 // 	return 0;
 // }
 // int init_NV_vertex_attrib_integer_64bit() {
@@ -3025,18 +2824,6 @@ package nv
 // 	if(ptrglVertexAttribs4svNV == NULL) return 1;
 // 	ptrglVertexAttribs4ubvNV = goglGetProcAddress("glVertexAttribs4ubvNV");
 // 	if(ptrglVertexAttribs4ubvNV == NULL) return 1;
-// 	return 0;
-// }
-// int init_NV_vertex_program1_1() {
-// 	return 0;
-// }
-// int init_NV_vertex_program2() {
-// 	return 0;
-// }
-// int init_NV_vertex_program2_option() {
-// 	return 0;
-// }
-// int init_NV_vertex_program3() {
 // 	return 0;
 // }
 // int init_NV_vertex_program4() {
@@ -4048,8 +3835,6 @@ func IsTextureHandleResidentNV(handle Uint64) Boolean {
 func IsImageHandleResidentNV(handle Uint64) Boolean {
 	return (Boolean)(C.goglIsImageHandleResidentNV((C.GLuint64)(handle)))
 }
-// NV_blend_square
-
 // NV_conditional_render
 
 func BeginConditionalRenderNV(id Uint, mode Enum)  {
@@ -4058,8 +3843,6 @@ func BeginConditionalRenderNV(id Uint, mode Enum)  {
 func EndConditionalRenderNV()  {
 	C.goglEndConditionalRenderNV()
 }
-// NV_copy_depth_to_color
-
 // NV_copy_image
 
 func CopyImageSubDataNV(srcName Uint, srcTarget Enum, srcLevel Int, srcX Int, srcY Int, srcZ Int, dstName Uint, dstTarget Enum, dstLevel Int, dstX Int, dstY Int, dstZ Int, width Sizei, height Sizei, depth Sizei)  {
@@ -4076,8 +3859,6 @@ func ClearDepthdNV(depth Double)  {
 func DepthBoundsdNV(zmin Double, zmax Double)  {
 	C.goglDepthBoundsdNV((C.GLdouble)(zmin), (C.GLdouble)(zmax))
 }
-// NV_depth_clamp
-
 // NV_evaluators
 
 func MapControlPointsNV(target Enum, index Uint, type_ Enum, ustride Sizei, vstride Sizei, uorder Int, vorder Int, packed Boolean, points Pointer)  {
@@ -4141,10 +3922,6 @@ func FinishFenceNV(fence Uint)  {
 func SetFenceNV(fence Uint, condition Enum)  {
 	C.goglSetFenceNV((C.GLuint)(fence), (C.GLenum)(condition))
 }
-// NV_float_buffer
-
-// NV_fog_distance
-
 // NV_fragment_program
 
 func ProgramNamedParameter4fNV(id Uint, len Sizei, name *Ubyte, x Float, y Float, z Float, w Float)  {
@@ -4165,12 +3942,6 @@ func GetProgramNamedParameterfvNV(id Uint, len Sizei, name *Ubyte, params *Float
 func GetProgramNamedParameterdvNV(id Uint, len Sizei, name *Ubyte, params *Double)  {
 	C.goglGetProgramNamedParameterdvNV((C.GLuint)(id), (C.GLsizei)(len), (*C.GLubyte)(name), (*C.GLdouble)(params))
 }
-// NV_fragment_program2
-
-// NV_fragment_program4
-
-// NV_fragment_program_option
-
 // NV_framebuffer_multisample_coverage
 
 func RenderbufferStorageMultisampleCoverageNV(target Enum, coverageSamples Sizei, colorSamples Sizei, internalformat Enum, width Sizei, height Sizei)  {
@@ -4190,8 +3961,6 @@ func FramebufferTextureLayerEXT(target Enum, attachment Enum, texture Uint, leve
 func FramebufferTextureFaceEXT(target Enum, attachment Enum, texture Uint, level Int, face Enum)  {
 	C.goglFramebufferTextureFaceEXT((C.GLenum)(target), (C.GLenum)(attachment), (C.GLuint)(texture), (C.GLint)(level), (C.GLenum)(face))
 }
-// NV_geometry_shader4
-
 // NV_gpu_program4
 
 func ProgramLocalParameterI4iNV(target Enum, index Uint, x Int, y Int, z Int, w Int)  {
@@ -4491,12 +4260,6 @@ func VertexAttribs3hvNV(index Uint, n Sizei, v *Half)  {
 func VertexAttribs4hvNV(index Uint, n Sizei, v *Half)  {
 	C.goglVertexAttribs4hvNV((C.GLuint)(index), (C.GLsizei)(n), (*C.GLhalfNV)(v))
 }
-// NV_light_max_exponent
-
-// NV_multisample_coverage
-
-// NV_multisample_filter_hint
-
 // NV_occlusion_query
 
 func GenOcclusionQueriesNV(n Sizei, ids *Uint)  {
@@ -4520,8 +4283,6 @@ func GetOcclusionQueryivNV(id Uint, pname Enum, params *Int)  {
 func GetOcclusionQueryuivNV(id Uint, pname Enum, params *Uint)  {
 	C.goglGetOcclusionQueryuivNV((C.GLuint)(id), (C.GLenum)(pname), (*C.GLuint)(params))
 }
-// NV_packed_depth_stencil
-
 // NV_parameter_buffer_object
 
 func ProgramBufferParametersfvNV(target Enum, buffer Uint, index Uint, count Sizei, params *Float)  {
@@ -4533,8 +4294,6 @@ func ProgramBufferParametersIivNV(target Enum, buffer Uint, index Uint, count Si
 func ProgramBufferParametersIuivNV(target Enum, buffer Uint, index Uint, count Sizei, params *Uint)  {
 	C.goglProgramBufferParametersIuivNV((C.GLenum)(target), (C.GLuint)(buffer), (C.GLuint)(index), (C.GLsizei)(count), (*C.GLuint)(params))
 }
-// NV_parameter_buffer_object2
-
 // NV_path_rendering
 
 func GenPathsNV(range_ Sizei) Uint {
@@ -4777,8 +4536,6 @@ func CombinerStageParameterfvNV(stage Enum, pname Enum, params *Float)  {
 func GetCombinerStageParameterfvNV(stage Enum, pname Enum, params *Float)  {
 	C.goglGetCombinerStageParameterfvNV((C.GLenum)(stage), (C.GLenum)(pname), (*C.GLfloat)(params))
 }
-// NV_shader_atomic_float
-
 // NV_shader_buffer_load
 
 func MakeBufferResidentNV(target Enum, access Enum)  {
@@ -4823,25 +4580,11 @@ func ProgramUniformui64NV(program Uint, location Int, value Uint64)  {
 func ProgramUniformui64vNV(program Uint, location Int, count Sizei, value *Uint64)  {
 	C.goglProgramUniformui64vNV((C.GLuint)(program), (C.GLint)(location), (C.GLsizei)(count), (*C.GLuint64EXT)(value))
 }
-// NV_shader_buffer_store
-
-// NV_tessellation_program5
-
-// NV_texgen_emboss
-
-// NV_texgen_reflection
-
 // NV_texture_barrier
 
 func TextureBarrierNV()  {
 	C.goglTextureBarrierNV()
 }
-// NV_texture_compression_vtc
-
-// NV_texture_env_combine4
-
-// NV_texture_expand_normal
-
 // NV_texture_multisample
 
 func TexImage2DMultisampleCoverageNV(target Enum, coverageSamples Sizei, colorSamples Sizei, internalFormat Int, width Sizei, height Sizei, fixedSampleLocations Boolean)  {
@@ -4862,14 +4605,6 @@ func TextureImage2DMultisampleCoverageNV(texture Uint, target Enum, coverageSamp
 func TextureImage3DMultisampleCoverageNV(texture Uint, target Enum, coverageSamples Sizei, colorSamples Sizei, internalFormat Int, width Sizei, height Sizei, depth Sizei, fixedSampleLocations Boolean)  {
 	C.goglTextureImage3DMultisampleCoverageNV((C.GLuint)(texture), (C.GLenum)(target), (C.GLsizei)(coverageSamples), (C.GLsizei)(colorSamples), (C.GLint)(internalFormat), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLsizei)(depth), (C.GLboolean)(fixedSampleLocations))
 }
-// NV_texture_rectangle
-
-// NV_texture_shader
-
-// NV_texture_shader2
-
-// NV_texture_shader3
-
 // NV_transform_feedback
 
 func BeginTransformFeedbackNV(primitiveMode Enum)  {
@@ -4971,8 +4706,6 @@ func FlushVertexArrayRangeNV()  {
 func VertexArrayRangeNV(length Sizei, pointer Pointer)  {
 	C.goglVertexArrayRangeNV((C.GLsizei)(length), (unsafe.Pointer)(pointer))
 }
-// NV_vertex_array_range2
-
 // NV_vertex_attrib_integer_64bit
 
 func VertexAttribL1i64NV(index Uint, x Int64)  {
@@ -5264,14 +4997,6 @@ func VertexAttribs4svNV(index Uint, count Sizei, v *Short)  {
 func VertexAttribs4ubvNV(index Uint, count Sizei, v *Ubyte)  {
 	C.goglVertexAttribs4ubvNV((C.GLuint)(index), (C.GLsizei)(count), (*C.GLubyte)(v))
 }
-// NV_vertex_program1_1
-
-// NV_vertex_program2
-
-// NV_vertex_program2_option
-
-// NV_vertex_program3
-
 // NV_vertex_program4
 
 func VertexAttribI1iEXT(index Uint, x Int)  {
@@ -5388,24 +5113,10 @@ func InitNvBindlessTexture() error {
 	}
 	return nil
 }
-func InitNvBlendSquare() error {
-	var ret C.int
-	if ret = C.init_NV_blend_square(); ret != 0 {
-		return errors.New("unable to initialize NV_blend_square")
-	}
-	return nil
-}
 func InitNvConditionalRender() error {
 	var ret C.int
 	if ret = C.init_NV_conditional_render(); ret != 0 {
 		return errors.New("unable to initialize NV_conditional_render")
-	}
-	return nil
-}
-func InitNvCopyDepthToColor() error {
-	var ret C.int
-	if ret = C.init_NV_copy_depth_to_color(); ret != 0 {
-		return errors.New("unable to initialize NV_copy_depth_to_color")
 	}
 	return nil
 }
@@ -5420,13 +5131,6 @@ func InitNvDepthBufferFloat() error {
 	var ret C.int
 	if ret = C.init_NV_depth_buffer_float(); ret != 0 {
 		return errors.New("unable to initialize NV_depth_buffer_float")
-	}
-	return nil
-}
-func InitNvDepthClamp() error {
-	var ret C.int
-	if ret = C.init_NV_depth_clamp(); ret != 0 {
-		return errors.New("unable to initialize NV_depth_clamp")
 	}
 	return nil
 }
@@ -5451,45 +5155,10 @@ func InitNvFence() error {
 	}
 	return nil
 }
-func InitNvFloatBuffer() error {
-	var ret C.int
-	if ret = C.init_NV_float_buffer(); ret != 0 {
-		return errors.New("unable to initialize NV_float_buffer")
-	}
-	return nil
-}
-func InitNvFogDistance() error {
-	var ret C.int
-	if ret = C.init_NV_fog_distance(); ret != 0 {
-		return errors.New("unable to initialize NV_fog_distance")
-	}
-	return nil
-}
 func InitNvFragmentProgram() error {
 	var ret C.int
 	if ret = C.init_NV_fragment_program(); ret != 0 {
 		return errors.New("unable to initialize NV_fragment_program")
-	}
-	return nil
-}
-func InitNvFragmentProgram2() error {
-	var ret C.int
-	if ret = C.init_NV_fragment_program2(); ret != 0 {
-		return errors.New("unable to initialize NV_fragment_program2")
-	}
-	return nil
-}
-func InitNvFragmentProgram4() error {
-	var ret C.int
-	if ret = C.init_NV_fragment_program4(); ret != 0 {
-		return errors.New("unable to initialize NV_fragment_program4")
-	}
-	return nil
-}
-func InitNvFragmentProgramOption() error {
-	var ret C.int
-	if ret = C.init_NV_fragment_program_option(); ret != 0 {
-		return errors.New("unable to initialize NV_fragment_program_option")
 	}
 	return nil
 }
@@ -5504,13 +5173,6 @@ func InitNvGeometryProgram4() error {
 	var ret C.int
 	if ret = C.init_NV_geometry_program4(); ret != 0 {
 		return errors.New("unable to initialize NV_geometry_program4")
-	}
-	return nil
-}
-func InitNvGeometryShader4() error {
-	var ret C.int
-	if ret = C.init_NV_geometry_shader4(); ret != 0 {
-		return errors.New("unable to initialize NV_geometry_shader4")
 	}
 	return nil
 }
@@ -5542,27 +5204,6 @@ func InitNvHalfFloat() error {
 	}
 	return nil
 }
-func InitNvLightMaxExponent() error {
-	var ret C.int
-	if ret = C.init_NV_light_max_exponent(); ret != 0 {
-		return errors.New("unable to initialize NV_light_max_exponent")
-	}
-	return nil
-}
-func InitNvMultisampleCoverage() error {
-	var ret C.int
-	if ret = C.init_NV_multisample_coverage(); ret != 0 {
-		return errors.New("unable to initialize NV_multisample_coverage")
-	}
-	return nil
-}
-func InitNvMultisampleFilterHint() error {
-	var ret C.int
-	if ret = C.init_NV_multisample_filter_hint(); ret != 0 {
-		return errors.New("unable to initialize NV_multisample_filter_hint")
-	}
-	return nil
-}
 func InitNvOcclusionQuery() error {
 	var ret C.int
 	if ret = C.init_NV_occlusion_query(); ret != 0 {
@@ -5570,24 +5211,10 @@ func InitNvOcclusionQuery() error {
 	}
 	return nil
 }
-func InitNvPackedDepthStencil() error {
-	var ret C.int
-	if ret = C.init_NV_packed_depth_stencil(); ret != 0 {
-		return errors.New("unable to initialize NV_packed_depth_stencil")
-	}
-	return nil
-}
 func InitNvParameterBufferObject() error {
 	var ret C.int
 	if ret = C.init_NV_parameter_buffer_object(); ret != 0 {
 		return errors.New("unable to initialize NV_parameter_buffer_object")
-	}
-	return nil
-}
-func InitNvParameterBufferObject2() error {
-	var ret C.int
-	if ret = C.init_NV_parameter_buffer_object2(); ret != 0 {
-		return errors.New("unable to initialize NV_parameter_buffer_object2")
 	}
 	return nil
 }
@@ -5640,45 +5267,10 @@ func InitNvRegisterCombiners2() error {
 	}
 	return nil
 }
-func InitNvShaderAtomicFloat() error {
-	var ret C.int
-	if ret = C.init_NV_shader_atomic_float(); ret != 0 {
-		return errors.New("unable to initialize NV_shader_atomic_float")
-	}
-	return nil
-}
 func InitNvShaderBufferLoad() error {
 	var ret C.int
 	if ret = C.init_NV_shader_buffer_load(); ret != 0 {
 		return errors.New("unable to initialize NV_shader_buffer_load")
-	}
-	return nil
-}
-func InitNvShaderBufferStore() error {
-	var ret C.int
-	if ret = C.init_NV_shader_buffer_store(); ret != 0 {
-		return errors.New("unable to initialize NV_shader_buffer_store")
-	}
-	return nil
-}
-func InitNvTessellationProgram5() error {
-	var ret C.int
-	if ret = C.init_NV_tessellation_program5(); ret != 0 {
-		return errors.New("unable to initialize NV_tessellation_program5")
-	}
-	return nil
-}
-func InitNvTexgenEmboss() error {
-	var ret C.int
-	if ret = C.init_NV_texgen_emboss(); ret != 0 {
-		return errors.New("unable to initialize NV_texgen_emboss")
-	}
-	return nil
-}
-func InitNvTexgenReflection() error {
-	var ret C.int
-	if ret = C.init_NV_texgen_reflection(); ret != 0 {
-		return errors.New("unable to initialize NV_texgen_reflection")
 	}
 	return nil
 }
@@ -5689,59 +5281,10 @@ func InitNvTextureBarrier() error {
 	}
 	return nil
 }
-func InitNvTextureCompressionVtc() error {
-	var ret C.int
-	if ret = C.init_NV_texture_compression_vtc(); ret != 0 {
-		return errors.New("unable to initialize NV_texture_compression_vtc")
-	}
-	return nil
-}
-func InitNvTextureEnvCombine4() error {
-	var ret C.int
-	if ret = C.init_NV_texture_env_combine4(); ret != 0 {
-		return errors.New("unable to initialize NV_texture_env_combine4")
-	}
-	return nil
-}
-func InitNvTextureExpandNormal() error {
-	var ret C.int
-	if ret = C.init_NV_texture_expand_normal(); ret != 0 {
-		return errors.New("unable to initialize NV_texture_expand_normal")
-	}
-	return nil
-}
 func InitNvTextureMultisample() error {
 	var ret C.int
 	if ret = C.init_NV_texture_multisample(); ret != 0 {
 		return errors.New("unable to initialize NV_texture_multisample")
-	}
-	return nil
-}
-func InitNvTextureRectangle() error {
-	var ret C.int
-	if ret = C.init_NV_texture_rectangle(); ret != 0 {
-		return errors.New("unable to initialize NV_texture_rectangle")
-	}
-	return nil
-}
-func InitNvTextureShader() error {
-	var ret C.int
-	if ret = C.init_NV_texture_shader(); ret != 0 {
-		return errors.New("unable to initialize NV_texture_shader")
-	}
-	return nil
-}
-func InitNvTextureShader2() error {
-	var ret C.int
-	if ret = C.init_NV_texture_shader2(); ret != 0 {
-		return errors.New("unable to initialize NV_texture_shader2")
-	}
-	return nil
-}
-func InitNvTextureShader3() error {
-	var ret C.int
-	if ret = C.init_NV_texture_shader3(); ret != 0 {
-		return errors.New("unable to initialize NV_texture_shader3")
 	}
 	return nil
 }
@@ -5773,13 +5316,6 @@ func InitNvVertexArrayRange() error {
 	}
 	return nil
 }
-func InitNvVertexArrayRange2() error {
-	var ret C.int
-	if ret = C.init_NV_vertex_array_range2(); ret != 0 {
-		return errors.New("unable to initialize NV_vertex_array_range2")
-	}
-	return nil
-}
 func InitNvVertexAttribInteger64bit() error {
 	var ret C.int
 	if ret = C.init_NV_vertex_attrib_integer_64bit(); ret != 0 {
@@ -5798,34 +5334,6 @@ func InitNvVertexProgram() error {
 	var ret C.int
 	if ret = C.init_NV_vertex_program(); ret != 0 {
 		return errors.New("unable to initialize NV_vertex_program")
-	}
-	return nil
-}
-func InitNvVertexProgram11() error {
-	var ret C.int
-	if ret = C.init_NV_vertex_program1_1(); ret != 0 {
-		return errors.New("unable to initialize NV_vertex_program1_1")
-	}
-	return nil
-}
-func InitNvVertexProgram2() error {
-	var ret C.int
-	if ret = C.init_NV_vertex_program2(); ret != 0 {
-		return errors.New("unable to initialize NV_vertex_program2")
-	}
-	return nil
-}
-func InitNvVertexProgram2Option() error {
-	var ret C.int
-	if ret = C.init_NV_vertex_program2_option(); ret != 0 {
-		return errors.New("unable to initialize NV_vertex_program2_option")
-	}
-	return nil
-}
-func InitNvVertexProgram3() error {
-	var ret C.int
-	if ret = C.init_NV_vertex_program3(); ret != 0 {
-		return errors.New("unable to initialize NV_vertex_program3")
 	}
 	return nil
 }

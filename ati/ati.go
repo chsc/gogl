@@ -12,21 +12,9 @@
 // 
 // ATI_map_object_buffer: http://www.opengl.org/registry/specs/ATI/map_object_buffer.txt
 // 
-// ATI_meminfo: http://www.opengl.org/registry/specs/ATI/meminfo.txt
-// 
-// ATI_pixel_format_float: http://www.opengl.org/registry/specs/ATI/pixel_format_float.txt
-// 
 // ATI_pn_triangles: http://www.opengl.org/registry/specs/ATI/pn_triangles.txt
 // 
 // ATI_separate_stencil: http://www.opengl.org/registry/specs/ATI/separate_stencil.txt
-// 
-// ATI_text_fragment_shader: http://www.opengl.org/registry/specs/ATI/text_fragment_shader.txt
-// 
-// ATI_texture_env_combine3: http://www.opengl.org/registry/specs/ATI/texture_env_combine3.txt
-// 
-// ATI_texture_float: http://www.opengl.org/registry/specs/ATI/texture_float.txt
-// 
-// ATI_texture_mirror_once: http://www.opengl.org/registry/specs/ATI/texture_mirror_once.txt
 // 
 // ATI_vertex_array_object: http://www.opengl.org/registry/specs/ATI/vertex_array_object.txt
 // 
@@ -174,6 +162,10 @@ package ati
 // typedef void (APIENTRY *GLDEBUGPROCAMD)(GLuint id,GLenum category,GLenum severity,GLsizei length,const GLchar *message,GLvoid *userParam);
 // #endif
 // 
+// #ifndef GL_KHR_debug
+// typedef void (APIENTRY *GLDEBUGPROC)(GLenum source,GLenum type,GLuint id,GLenum severity,GLsizei length,const GLchar *message,GLvoid *userParam);
+// #endif
+// 
 // #ifndef GL_NV_vdpau_interop
 // typedef GLintptr GLvdpauSurfaceNV;
 // #endif
@@ -228,18 +220,12 @@ package ati
 // //  ATI_map_object_buffer
 // GLvoid* (APIENTRYP ptrglMapObjectBufferATI)(GLuint buffer);
 // void (APIENTRYP ptrglUnmapObjectBufferATI)(GLuint buffer);
-// //  ATI_meminfo
-// //  ATI_pixel_format_float
 // //  ATI_pn_triangles
 // void (APIENTRYP ptrglPNTrianglesiATI)(GLenum pname, GLint param);
 // void (APIENTRYP ptrglPNTrianglesfATI)(GLenum pname, GLfloat param);
 // //  ATI_separate_stencil
 // void (APIENTRYP ptrglStencilOpSeparateATI)(GLenum face, GLenum sfail, GLenum dpfail, GLenum dppass);
 // void (APIENTRYP ptrglStencilFuncSeparateATI)(GLenum frontfunc, GLenum backfunc, GLint ref, GLuint mask);
-// //  ATI_text_fragment_shader
-// //  ATI_texture_env_combine3
-// //  ATI_texture_float
-// //  ATI_texture_mirror_once
 // //  ATI_vertex_array_object
 // GLuint (APIENTRYP ptrglNewObjectBufferATI)(GLsizei size, GLvoid* pointer, GLenum usage);
 // GLboolean (APIENTRYP ptrglIsObjectBufferATI)(GLuint buffer);
@@ -381,8 +367,6 @@ package ati
 // void goglUnmapObjectBufferATI(GLuint buffer) {
 // 	(*ptrglUnmapObjectBufferATI)(buffer);
 // }
-// //  ATI_meminfo
-// //  ATI_pixel_format_float
 // //  ATI_pn_triangles
 // void goglPNTrianglesiATI(GLenum pname, GLint param) {
 // 	(*ptrglPNTrianglesiATI)(pname, param);
@@ -397,10 +381,6 @@ package ati
 // void goglStencilFuncSeparateATI(GLenum frontfunc, GLenum backfunc, GLint ref, GLuint mask) {
 // 	(*ptrglStencilFuncSeparateATI)(frontfunc, backfunc, ref, mask);
 // }
-// //  ATI_text_fragment_shader
-// //  ATI_texture_env_combine3
-// //  ATI_texture_float
-// //  ATI_texture_mirror_once
 // //  ATI_vertex_array_object
 // GLuint goglNewObjectBufferATI(GLsizei size, GLvoid* pointer, GLenum usage) {
 // 	return (*ptrglNewObjectBufferATI)(size, pointer, usage);
@@ -648,12 +628,6 @@ package ati
 // 	if(ptrglUnmapObjectBufferATI == NULL) return 1;
 // 	return 0;
 // }
-// int init_ATI_meminfo() {
-// 	return 0;
-// }
-// int init_ATI_pixel_format_float() {
-// 	return 0;
-// }
 // int init_ATI_pn_triangles() {
 // 	ptrglPNTrianglesiATI = goglGetProcAddress("glPNTrianglesiATI");
 // 	if(ptrglPNTrianglesiATI == NULL) return 1;
@@ -666,18 +640,6 @@ package ati
 // 	if(ptrglStencilOpSeparateATI == NULL) return 1;
 // 	ptrglStencilFuncSeparateATI = goglGetProcAddress("glStencilFuncSeparateATI");
 // 	if(ptrglStencilFuncSeparateATI == NULL) return 1;
-// 	return 0;
-// }
-// int init_ATI_text_fragment_shader() {
-// 	return 0;
-// }
-// int init_ATI_texture_env_combine3() {
-// 	return 0;
-// }
-// int init_ATI_texture_float() {
-// 	return 0;
-// }
-// int init_ATI_texture_mirror_once() {
 // 	return 0;
 // }
 // int init_ATI_vertex_array_object() {
@@ -1155,10 +1117,6 @@ func MapObjectBufferATI(buffer Uint) Pointer {
 func UnmapObjectBufferATI(buffer Uint)  {
 	C.goglUnmapObjectBufferATI((C.GLuint)(buffer))
 }
-// ATI_meminfo
-
-// ATI_pixel_format_float
-
 // ATI_pn_triangles
 
 func PNTrianglesiATI(pname Enum, param Int)  {
@@ -1175,14 +1133,6 @@ func StencilOpSeparateATI(face Enum, sfail Enum, dpfail Enum, dppass Enum)  {
 func StencilFuncSeparateATI(frontfunc Enum, backfunc Enum, ref Int, mask Uint)  {
 	C.goglStencilFuncSeparateATI((C.GLenum)(frontfunc), (C.GLenum)(backfunc), (C.GLint)(ref), (C.GLuint)(mask))
 }
-// ATI_text_fragment_shader
-
-// ATI_texture_env_combine3
-
-// ATI_texture_float
-
-// ATI_texture_mirror_once
-
 // ATI_vertex_array_object
 
 func NewObjectBufferATI(size Sizei, pointer Pointer, usage Enum) Uint {
@@ -1404,20 +1354,6 @@ func InitAtiMapObjectBuffer() error {
 	}
 	return nil
 }
-func InitAtiMeminfo() error {
-	var ret C.int
-	if ret = C.init_ATI_meminfo(); ret != 0 {
-		return errors.New("unable to initialize ATI_meminfo")
-	}
-	return nil
-}
-func InitAtiPixelFormatFloat() error {
-	var ret C.int
-	if ret = C.init_ATI_pixel_format_float(); ret != 0 {
-		return errors.New("unable to initialize ATI_pixel_format_float")
-	}
-	return nil
-}
 func InitAtiPnTriangles() error {
 	var ret C.int
 	if ret = C.init_ATI_pn_triangles(); ret != 0 {
@@ -1429,34 +1365,6 @@ func InitAtiSeparateStencil() error {
 	var ret C.int
 	if ret = C.init_ATI_separate_stencil(); ret != 0 {
 		return errors.New("unable to initialize ATI_separate_stencil")
-	}
-	return nil
-}
-func InitAtiTextFragmentShader() error {
-	var ret C.int
-	if ret = C.init_ATI_text_fragment_shader(); ret != 0 {
-		return errors.New("unable to initialize ATI_text_fragment_shader")
-	}
-	return nil
-}
-func InitAtiTextureEnvCombine3() error {
-	var ret C.int
-	if ret = C.init_ATI_texture_env_combine3(); ret != 0 {
-		return errors.New("unable to initialize ATI_texture_env_combine3")
-	}
-	return nil
-}
-func InitAtiTextureFloat() error {
-	var ret C.int
-	if ret = C.init_ATI_texture_float(); ret != 0 {
-		return errors.New("unable to initialize ATI_texture_float")
-	}
-	return nil
-}
-func InitAtiTextureMirrorOnce() error {
-	var ret C.int
-	if ret = C.init_ATI_texture_mirror_once(); ret != 0 {
-		return errors.New("unable to initialize ATI_texture_mirror_once")
 	}
 	return nil
 }

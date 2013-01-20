@@ -210,14 +210,21 @@ func ReadFunctions(r io.Reader) (FunctionCategories, *FunctionsInfo, error) {
 	// HACK: This is really ugly:
 	// Some ARB extensions are now part of the GL core (starting from version 3.0).
 	// Parse the passthru C comments for every "VERSION_*" category.
-	// If we found an extension in the comment add them to a version category.
+	// If we found an extension in the comment -> add them to a version category.
 	for cat, pts := range finfo.Passthru {
 		if strings.HasPrefix(cat, "VERSION") {
 			for _, pt := range pts {
 				strippedCat := strings.Trim(pt, "\t */")
 				if foundFuncts, ok := functions[strippedCat]; ok {
 					fmt.Printf("Adding extension %s to %s\n", strippedCat, cat)
-					functions[cat] = append(functions[cat], foundFuncts...)
+					newFuncts := make([]*Function, 0, len(foundFuncts))
+					for _, f := range foundFuncts {
+						// copy function and set the new category
+						nf := *f
+						nf.Category = cat
+						newFuncts = append(newFuncts, &nf)
+					}
+					functions[cat] = append(functions[cat], newFuncts...)
 				}
 			}
 		}
