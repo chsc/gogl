@@ -26,6 +26,10 @@ Package documentation:
 * [OpenGL 3.3](http://gopkgdoc.appspot.com/pkg/github.com/chsc/gogl/gl33)
 * [OpenGL 4.2](http://gopkgdoc.appspot.com/pkg/github.com/chsc/gogl/gl42)
 
+GoGL specific docs and usage examples:
+
+* [Wiki](https://github.com/chsc/gogl/wiki)
+
 Examples
 --------
 
@@ -69,17 +73,16 @@ To generate the bindings, simply type:
 
 Or with gomake:
 
-	gomake download_khronos
-	gomake gen_khronos
+	make download_khronos
+	make gen_khronos
 
 If you want to use Jason McKesson corrected spec files (recommended), type the following to your command line:
 
-	gomake download_alfonse
-	gomake gen_alfonse
+	make download_alfonse
+	make gen_alfonse
 
 TODO
 ----
 
 * Complete spec parser
-* MacOS, Windows support
 * ...
