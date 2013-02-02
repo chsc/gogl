@@ -1374,6 +1374,10 @@ const (
 const (
 	CONTEXT_ES2_PROFILE_BIT_EXT = 0x00000004
 )
+// EXT_create_context_es_profile
+const (
+	CONTEXT_ES_PROFILE_BIT_EXT = 0x00000004
+)
 // EXT_fbconfig_packed_float
 const (
 	RGBA_UNSIGNED_FLOAT_BIT_EXT = 0x00000008

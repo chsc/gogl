@@ -267,6 +267,7 @@ package gl33
 // void (APIENTRYP ptrglBlendColor)(GLfloat red, GLfloat green, GLfloat blue, GLfloat alpha);
 // void (APIENTRYP ptrglBlendEquation)(GLenum mode);
 // void (APIENTRYP ptrglDrawRangeElements)(GLenum mode, GLuint start, GLuint end, GLsizei count, GLenum type, GLvoid* indices);
+// void (APIENTRYP ptrglTexImage3D)(GLenum target, GLint level, GLint internalformat, GLsizei width, GLsizei height, GLsizei depth, GLint border, GLenum format, GLenum type, GLvoid* pixels);
 // void (APIENTRYP ptrglTexSubImage3D)(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLenum format, GLenum type, GLvoid* pixels);
 // void (APIENTRYP ptrglCopyTexSubImage3D)(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLint x, GLint y, GLsizei width, GLsizei height);
 // //  VERSION_1_3
@@ -753,6 +754,9 @@ package gl33
 // }
 // void goglDrawRangeElements(GLenum mode, GLuint start, GLuint end, GLsizei count, GLenum type_, GLvoid* indices) {
 // 	(*ptrglDrawRangeElements)(mode, start, end, count, type_, indices);
+// }
+// void goglTexImage3D(GLenum target, GLint level, GLint internalformat, GLsizei width, GLsizei height, GLsizei depth, GLint border, GLenum format, GLenum type_, GLvoid* pixels) {
+// 	(*ptrglTexImage3D)(target, level, internalformat, width, height, depth, border, format, type_, pixels);
 // }
 // void goglTexSubImage3D(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLenum format, GLenum type_, GLvoid* pixels) {
 // 	(*ptrglTexSubImage3D)(target, level, xoffset, yoffset, zoffset, width, height, depth, format, type_, pixels);
@@ -1724,6 +1728,8 @@ package gl33
 // 	if(ptrglBlendEquation == NULL) return 1;
 // 	ptrglDrawRangeElements = goglGetProcAddress("glDrawRangeElements");
 // 	if(ptrglDrawRangeElements == NULL) return 1;
+// 	ptrglTexImage3D = goglGetProcAddress("glTexImage3D");
+// 	if(ptrglTexImage3D == NULL) return 1;
 // 	ptrglTexSubImage3D = goglGetProcAddress("glTexSubImage3D");
 // 	if(ptrglTexSubImage3D == NULL) return 1;
 // 	ptrglCopyTexSubImage3D = goglGetProcAddress("glCopyTexSubImage3D");
@@ -3278,6 +3284,7 @@ const (
 	FRAMEBUFFER_ATTACHMENT_RED_SIZE = 0x8212
 	FRAMEBUFFER_ATTACHMENT_STENCIL_SIZE = 0x8217
 	FRAMEBUFFER_ATTACHMENT_TEXTURE_CUBE_MAP_FACE = 0x8CD3
+	FRAMEBUFFER_ATTACHMENT_TEXTURE_LAYER = 0x8CD4
 	FRAMEBUFFER_ATTACHMENT_TEXTURE_LEVEL = 0x8CD2
 	FRAMEBUFFER_BINDING = 0x8CA6
 	FRAMEBUFFER_COMPLETE = 0x8CD5
@@ -3317,6 +3324,7 @@ const (
 	MAX_TRANSFORM_FEEDBACK_INTERLEAVED_COMPONENTS = 0x8C8A
 	MAX_TRANSFORM_FEEDBACK_SEPARATE_ATTRIBS = 0x8C8B
 	MAX_TRANSFORM_FEEDBACK_SEPARATE_COMPONENTS = 0x8C80
+	MAX_VARYING_COMPONENTS = 0x8B4B
 	MINOR_VERSION = 0x821C
 	MIN_PROGRAM_TEXEL_OFFSET = 0x8904
 	NUM_EXTENSIONS = 0x821D
@@ -3857,6 +3865,10 @@ func BlendEquation(mode Enum)  {
 // https://www.opengl.org/sdk/docs/man3/xhtml/glDrawRangeElements.xml
 func DrawRangeElements(mode Enum, start Uint, end Uint, count Sizei, type_ Enum, indices Pointer)  {
 	C.goglDrawRangeElements((C.GLenum)(mode), (C.GLuint)(start), (C.GLuint)(end), (C.GLsizei)(count), (C.GLenum)(type_), (unsafe.Pointer)(indices))
+}
+// https://www.opengl.org/sdk/docs/man3/xhtml/glTexImage3D.xml
+func TexImage3D(target Enum, level Int, internalformat Int, width Sizei, height Sizei, depth Sizei, border Int, format Enum, type_ Enum, pixels Pointer)  {
+	C.goglTexImage3D((C.GLenum)(target), (C.GLint)(level), (C.GLint)(internalformat), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLsizei)(depth), (C.GLint)(border), (C.GLenum)(format), (C.GLenum)(type_), (unsafe.Pointer)(pixels))
 }
 // https://www.opengl.org/sdk/docs/man3/xhtml/glTexSubImage3D.xml
 func TexSubImage3D(target Enum, level Int, xoffset Int, yoffset Int, zoffset Int, width Sizei, height Sizei, depth Sizei, format Enum, type_ Enum, pixels Pointer)  {

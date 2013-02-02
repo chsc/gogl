@@ -68,8 +68,9 @@ func GroupEnumsByVendorAndVersion(category string, supportedVersions []Version) 
 	case CategoryVersion:
 		for _, ver := range supportedVersions {
 			if ver.Compare(pc.Version) >= 0 {
-				fmt.Println("++", ver, pc)
+				//fmt.Println("++", ver, pc)
 				packages = append(packages, fmt.Sprintf("gl%d%d", ver.Major, ver.Minor))
+				packages = append(packages, fmt.Sprintf("gl%d%dc", ver.Major, ver.Minor))
 			}
 		}
 	case CategoryDepVersion:
@@ -103,6 +104,7 @@ func GroupFunctionsByVendorAndVersion(function *Function, supportedVersions []Ve
 			for _, ver := range supportedVersions {
 				if ver.Compare(pc.Version) >= 0 {
 					packages = append(packages, fmt.Sprintf("gl%d%d", ver.Major, ver.Minor))
+					packages = append(packages, fmt.Sprintf("gl%d%dc", ver.Major, ver.Minor))
 				}
 			}
 

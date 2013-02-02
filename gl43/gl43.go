@@ -32,9 +32,11 @@
 // 
 // VERSION_4_2
 // 
+// VERSION_4_3
+// 
 // https://www.opengl.org/sdk/docs/man4
 // 
-package gl42
+package gl43
 
 // #cgo darwin  LDFLAGS: -framework OpenGL
 // #cgo linux   LDFLAGS: -lGL
@@ -708,6 +710,53 @@ package gl42
 // void (APIENTRYP ptrglTextureStorage1DEXT)(GLuint texture, GLenum target, GLsizei levels, GLenum internalformat, GLsizei width);
 // void (APIENTRYP ptrglTextureStorage2DEXT)(GLuint texture, GLenum target, GLsizei levels, GLenum internalformat, GLsizei width, GLsizei height);
 // void (APIENTRYP ptrglTextureStorage3DEXT)(GLuint texture, GLenum target, GLsizei levels, GLenum internalformat, GLsizei width, GLsizei height, GLsizei depth);
+// //  VERSION_4_3
+// void (APIENTRYP ptrglClearBufferData)(GLenum target, GLenum internalformat, GLenum format, GLenum type, void* data);
+// void (APIENTRYP ptrglClearBufferSubData)(GLenum target, GLenum internalformat, GLintptr offset, GLsizeiptr size, GLenum format, GLenum type, void* data);
+// void (APIENTRYP ptrglClearNamedBufferDataEXT)(GLuint buffer, GLenum internalformat, GLenum format, GLenum type, void* data);
+// void (APIENTRYP ptrglClearNamedBufferSubDataEXT)(GLuint buffer, GLenum internalformat, GLsizeiptr offset, GLsizeiptr size, GLenum format, GLenum type, void* data);
+// void (APIENTRYP ptrglDispatchCompute)(GLuint num_groups_x, GLuint num_groups_y, GLuint num_groups_z);
+// void (APIENTRYP ptrglDispatchComputeIndirect)(GLintptr indirect);
+// void (APIENTRYP ptrglCopyImageSubData)(GLuint srcName, GLenum srcTarget, GLint srcLevel, GLint srcX, GLint srcY, GLint srcZ, GLuint dstName, GLenum dstTarget, GLint dstLevel, GLint dstX, GLint dstY, GLint dstZ, GLsizei srcWidth, GLsizei srcHeight, GLsizei srcDepth);
+// void (APIENTRYP ptrglFramebufferParameteri)(GLenum target, GLenum pname, GLint param);
+// void (APIENTRYP ptrglGetFramebufferParameteriv)(GLenum target, GLenum pname, GLint* params);
+// void (APIENTRYP ptrglNamedFramebufferParameteriEXT)(GLuint framebuffer, GLenum pname, GLint param);
+// void (APIENTRYP ptrglGetNamedFramebufferParameterivEXT)(GLuint framebuffer, GLenum pname, GLint* params);
+// void (APIENTRYP ptrglGetInternalformati64v)(GLenum target, GLenum internalformat, GLenum pname, GLsizei bufSize, GLint64* params);
+// void (APIENTRYP ptrglInvalidateTexSubImage)(GLuint texture, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth);
+// void (APIENTRYP ptrglInvalidateTexImage)(GLuint texture, GLint level);
+// void (APIENTRYP ptrglInvalidateBufferSubData)(GLuint buffer, GLintptr offset, GLsizeiptr length);
+// void (APIENTRYP ptrglInvalidateBufferData)(GLuint buffer);
+// void (APIENTRYP ptrglInvalidateFramebuffer)(GLenum target, GLsizei numAttachments, GLenum* attachments);
+// void (APIENTRYP ptrglInvalidateSubFramebuffer)(GLenum target, GLsizei numAttachments, GLenum* attachments, GLint x, GLint y, GLsizei width, GLsizei height);
+// void (APIENTRYP ptrglMultiDrawArraysIndirect)(GLenum mode, void* indirect, GLsizei drawcount, GLsizei stride);
+// void (APIENTRYP ptrglMultiDrawElementsIndirect)(GLenum mode, GLenum type, void* indirect, GLsizei drawcount, GLsizei stride);
+// void (APIENTRYP ptrglGetProgramInterfaceiv)(GLuint program, GLenum programInterface, GLenum pname, GLint* params);
+// GLuint (APIENTRYP ptrglGetProgramResourceIndex)(GLuint program, GLenum programInterface, GLchar* name);
+// void (APIENTRYP ptrglGetProgramResourceName)(GLuint program, GLenum programInterface, GLuint index, GLsizei bufSize, GLsizei* length, GLchar* name);
+// void (APIENTRYP ptrglGetProgramResourceiv)(GLuint program, GLenum programInterface, GLuint index, GLsizei propCount, GLenum* props, GLsizei bufSize, GLsizei* length, GLint* params);
+// GLint (APIENTRYP ptrglGetProgramResourceLocation)(GLuint program, GLenum programInterface, GLchar* name);
+// GLint (APIENTRYP ptrglGetProgramResourceLocationIndex)(GLuint program, GLenum programInterface, GLchar* name);
+// void (APIENTRYP ptrglShaderStorageBlockBinding)(GLuint program, GLuint storageBlockIndex, GLuint storageBlockBinding);
+// void (APIENTRYP ptrglTexBufferRange)(GLenum target, GLenum internalformat, GLuint buffer, GLintptr offset, GLsizeiptr size);
+// void (APIENTRYP ptrglTextureBufferRangeEXT)(GLuint texture, GLenum target, GLenum internalformat, GLuint buffer, GLintptr offset, GLsizeiptr size);
+// void (APIENTRYP ptrglTexStorage2DMultisample)(GLenum target, GLsizei samples, GLenum internalformat, GLsizei width, GLsizei height, GLboolean fixedsamplelocations);
+// void (APIENTRYP ptrglTexStorage3DMultisample)(GLenum target, GLsizei samples, GLenum internalformat, GLsizei width, GLsizei height, GLsizei depth, GLboolean fixedsamplelocations);
+// void (APIENTRYP ptrglTextureStorage2DMultisampleEXT)(GLuint texture, GLenum target, GLsizei samples, GLenum internalformat, GLsizei width, GLsizei height, GLboolean fixedsamplelocations);
+// void (APIENTRYP ptrglTextureStorage3DMultisampleEXT)(GLuint texture, GLenum target, GLsizei samples, GLenum internalformat, GLsizei width, GLsizei height, GLsizei depth, GLboolean fixedsamplelocations);
+// void (APIENTRYP ptrglTextureView)(GLuint texture, GLenum target, GLuint origtexture, GLenum internalformat, GLuint minlevel, GLuint numlevels, GLuint minlayer, GLuint numlayers);
+// void (APIENTRYP ptrglBindVertexBuffer)(GLuint bindingindex, GLuint buffer, GLintptr offset, GLsizei stride);
+// void (APIENTRYP ptrglVertexAttribFormat)(GLuint attribindex, GLint size, GLenum type, GLboolean normalized, GLuint relativeoffset);
+// void (APIENTRYP ptrglVertexAttribIFormat)(GLuint attribindex, GLint size, GLenum type, GLuint relativeoffset);
+// void (APIENTRYP ptrglVertexAttribLFormat)(GLuint attribindex, GLint size, GLenum type, GLuint relativeoffset);
+// void (APIENTRYP ptrglVertexAttribBinding)(GLuint attribindex, GLuint bindingindex);
+// void (APIENTRYP ptrglVertexBindingDivisor)(GLuint bindingindex, GLuint divisor);
+// void (APIENTRYP ptrglVertexArrayBindVertexBufferEXT)(GLuint vaobj, GLuint bindingindex, GLuint buffer, GLintptr offset, GLsizei stride);
+// void (APIENTRYP ptrglVertexArrayVertexAttribFormatEXT)(GLuint vaobj, GLuint attribindex, GLint size, GLenum type, GLboolean normalized, GLuint relativeoffset);
+// void (APIENTRYP ptrglVertexArrayVertexAttribIFormatEXT)(GLuint vaobj, GLuint attribindex, GLint size, GLenum type, GLuint relativeoffset);
+// void (APIENTRYP ptrglVertexArrayVertexAttribLFormatEXT)(GLuint vaobj, GLuint attribindex, GLint size, GLenum type, GLuint relativeoffset);
+// void (APIENTRYP ptrglVertexArrayVertexAttribBindingEXT)(GLuint vaobj, GLuint attribindex, GLuint bindingindex);
+// void (APIENTRYP ptrglVertexArrayVertexBindingDivisorEXT)(GLuint vaobj, GLuint bindingindex, GLuint divisor);
 // 
 // //  VERSION_1_0
 // void goglCullFace(GLenum mode) {
@@ -2194,6 +2243,145 @@ package gl42
 // void goglTextureStorage3DEXT(GLuint texture, GLenum target, GLsizei levels, GLenum internalformat, GLsizei width, GLsizei height, GLsizei depth) {
 // 	(*ptrglTextureStorage3DEXT)(texture, target, levels, internalformat, width, height, depth);
 // }
+// //  VERSION_4_3
+// void goglClearBufferData(GLenum target, GLenum internalformat, GLenum format, GLenum type_, void* data) {
+// 	(*ptrglClearBufferData)(target, internalformat, format, type_, data);
+// }
+// void goglClearBufferSubData(GLenum target, GLenum internalformat, GLintptr offset, GLsizeiptr size, GLenum format, GLenum type_, void* data) {
+// 	(*ptrglClearBufferSubData)(target, internalformat, offset, size, format, type_, data);
+// }
+// void goglClearNamedBufferDataEXT(GLuint buffer, GLenum internalformat, GLenum format, GLenum type_, void* data) {
+// 	(*ptrglClearNamedBufferDataEXT)(buffer, internalformat, format, type_, data);
+// }
+// void goglClearNamedBufferSubDataEXT(GLuint buffer, GLenum internalformat, GLsizeiptr offset, GLsizeiptr size, GLenum format, GLenum type_, void* data) {
+// 	(*ptrglClearNamedBufferSubDataEXT)(buffer, internalformat, offset, size, format, type_, data);
+// }
+// void goglDispatchCompute(GLuint num_groups_x, GLuint num_groups_y, GLuint num_groups_z) {
+// 	(*ptrglDispatchCompute)(num_groups_x, num_groups_y, num_groups_z);
+// }
+// void goglDispatchComputeIndirect(GLintptr indirect) {
+// 	(*ptrglDispatchComputeIndirect)(indirect);
+// }
+// void goglCopyImageSubData(GLuint srcName, GLenum srcTarget, GLint srcLevel, GLint srcX, GLint srcY, GLint srcZ, GLuint dstName, GLenum dstTarget, GLint dstLevel, GLint dstX, GLint dstY, GLint dstZ, GLsizei srcWidth, GLsizei srcHeight, GLsizei srcDepth) {
+// 	(*ptrglCopyImageSubData)(srcName, srcTarget, srcLevel, srcX, srcY, srcZ, dstName, dstTarget, dstLevel, dstX, dstY, dstZ, srcWidth, srcHeight, srcDepth);
+// }
+// void goglFramebufferParameteri(GLenum target, GLenum pname, GLint param) {
+// 	(*ptrglFramebufferParameteri)(target, pname, param);
+// }
+// void goglGetFramebufferParameteriv(GLenum target, GLenum pname, GLint* params) {
+// 	(*ptrglGetFramebufferParameteriv)(target, pname, params);
+// }
+// void goglNamedFramebufferParameteriEXT(GLuint framebuffer, GLenum pname, GLint param) {
+// 	(*ptrglNamedFramebufferParameteriEXT)(framebuffer, pname, param);
+// }
+// void goglGetNamedFramebufferParameterivEXT(GLuint framebuffer, GLenum pname, GLint* params) {
+// 	(*ptrglGetNamedFramebufferParameterivEXT)(framebuffer, pname, params);
+// }
+// void goglGetInternalformati64v(GLenum target, GLenum internalformat, GLenum pname, GLsizei bufSize, GLint64* params) {
+// 	(*ptrglGetInternalformati64v)(target, internalformat, pname, bufSize, params);
+// }
+// void goglInvalidateTexSubImage(GLuint texture, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth) {
+// 	(*ptrglInvalidateTexSubImage)(texture, level, xoffset, yoffset, zoffset, width, height, depth);
+// }
+// void goglInvalidateTexImage(GLuint texture, GLint level) {
+// 	(*ptrglInvalidateTexImage)(texture, level);
+// }
+// void goglInvalidateBufferSubData(GLuint buffer, GLintptr offset, GLsizeiptr length) {
+// 	(*ptrglInvalidateBufferSubData)(buffer, offset, length);
+// }
+// void goglInvalidateBufferData(GLuint buffer) {
+// 	(*ptrglInvalidateBufferData)(buffer);
+// }
+// void goglInvalidateFramebuffer(GLenum target, GLsizei numAttachments, GLenum* attachments) {
+// 	(*ptrglInvalidateFramebuffer)(target, numAttachments, attachments);
+// }
+// void goglInvalidateSubFramebuffer(GLenum target, GLsizei numAttachments, GLenum* attachments, GLint x, GLint y, GLsizei width, GLsizei height) {
+// 	(*ptrglInvalidateSubFramebuffer)(target, numAttachments, attachments, x, y, width, height);
+// }
+// void goglMultiDrawArraysIndirect(GLenum mode, void* indirect, GLsizei drawcount, GLsizei stride) {
+// 	(*ptrglMultiDrawArraysIndirect)(mode, indirect, drawcount, stride);
+// }
+// void goglMultiDrawElementsIndirect(GLenum mode, GLenum type_, void* indirect, GLsizei drawcount, GLsizei stride) {
+// 	(*ptrglMultiDrawElementsIndirect)(mode, type_, indirect, drawcount, stride);
+// }
+// void goglGetProgramInterfaceiv(GLuint program, GLenum programInterface, GLenum pname, GLint* params) {
+// 	(*ptrglGetProgramInterfaceiv)(program, programInterface, pname, params);
+// }
+// GLuint goglGetProgramResourceIndex(GLuint program, GLenum programInterface, GLchar* name) {
+// 	return (*ptrglGetProgramResourceIndex)(program, programInterface, name);
+// }
+// void goglGetProgramResourceName(GLuint program, GLenum programInterface, GLuint index, GLsizei bufSize, GLsizei* length, GLchar* name) {
+// 	(*ptrglGetProgramResourceName)(program, programInterface, index, bufSize, length, name);
+// }
+// void goglGetProgramResourceiv(GLuint program, GLenum programInterface, GLuint index, GLsizei propCount, GLenum* props, GLsizei bufSize, GLsizei* length, GLint* params) {
+// 	(*ptrglGetProgramResourceiv)(program, programInterface, index, propCount, props, bufSize, length, params);
+// }
+// GLint goglGetProgramResourceLocation(GLuint program, GLenum programInterface, GLchar* name) {
+// 	return (*ptrglGetProgramResourceLocation)(program, programInterface, name);
+// }
+// GLint goglGetProgramResourceLocationIndex(GLuint program, GLenum programInterface, GLchar* name) {
+// 	return (*ptrglGetProgramResourceLocationIndex)(program, programInterface, name);
+// }
+// void goglShaderStorageBlockBinding(GLuint program, GLuint storageBlockIndex, GLuint storageBlockBinding) {
+// 	(*ptrglShaderStorageBlockBinding)(program, storageBlockIndex, storageBlockBinding);
+// }
+// void goglTexBufferRange(GLenum target, GLenum internalformat, GLuint buffer, GLintptr offset, GLsizeiptr size) {
+// 	(*ptrglTexBufferRange)(target, internalformat, buffer, offset, size);
+// }
+// void goglTextureBufferRangeEXT(GLuint texture, GLenum target, GLenum internalformat, GLuint buffer, GLintptr offset, GLsizeiptr size) {
+// 	(*ptrglTextureBufferRangeEXT)(texture, target, internalformat, buffer, offset, size);
+// }
+// void goglTexStorage2DMultisample(GLenum target, GLsizei samples, GLenum internalformat, GLsizei width, GLsizei height, GLboolean fixedsamplelocations) {
+// 	(*ptrglTexStorage2DMultisample)(target, samples, internalformat, width, height, fixedsamplelocations);
+// }
+// void goglTexStorage3DMultisample(GLenum target, GLsizei samples, GLenum internalformat, GLsizei width, GLsizei height, GLsizei depth, GLboolean fixedsamplelocations) {
+// 	(*ptrglTexStorage3DMultisample)(target, samples, internalformat, width, height, depth, fixedsamplelocations);
+// }
+// void goglTextureStorage2DMultisampleEXT(GLuint texture, GLenum target, GLsizei samples, GLenum internalformat, GLsizei width, GLsizei height, GLboolean fixedsamplelocations) {
+// 	(*ptrglTextureStorage2DMultisampleEXT)(texture, target, samples, internalformat, width, height, fixedsamplelocations);
+// }
+// void goglTextureStorage3DMultisampleEXT(GLuint texture, GLenum target, GLsizei samples, GLenum internalformat, GLsizei width, GLsizei height, GLsizei depth, GLboolean fixedsamplelocations) {
+// 	(*ptrglTextureStorage3DMultisampleEXT)(texture, target, samples, internalformat, width, height, depth, fixedsamplelocations);
+// }
+// void goglTextureView(GLuint texture, GLenum target, GLuint origtexture, GLenum internalformat, GLuint minlevel, GLuint numlevels, GLuint minlayer, GLuint numlayers) {
+// 	(*ptrglTextureView)(texture, target, origtexture, internalformat, minlevel, numlevels, minlayer, numlayers);
+// }
+// void goglBindVertexBuffer(GLuint bindingindex, GLuint buffer, GLintptr offset, GLsizei stride) {
+// 	(*ptrglBindVertexBuffer)(bindingindex, buffer, offset, stride);
+// }
+// void goglVertexAttribFormat(GLuint attribindex, GLint size, GLenum type_, GLboolean normalized, GLuint relativeoffset) {
+// 	(*ptrglVertexAttribFormat)(attribindex, size, type_, normalized, relativeoffset);
+// }
+// void goglVertexAttribIFormat(GLuint attribindex, GLint size, GLenum type_, GLuint relativeoffset) {
+// 	(*ptrglVertexAttribIFormat)(attribindex, size, type_, relativeoffset);
+// }
+// void goglVertexAttribLFormat(GLuint attribindex, GLint size, GLenum type_, GLuint relativeoffset) {
+// 	(*ptrglVertexAttribLFormat)(attribindex, size, type_, relativeoffset);
+// }
+// void goglVertexAttribBinding(GLuint attribindex, GLuint bindingindex) {
+// 	(*ptrglVertexAttribBinding)(attribindex, bindingindex);
+// }
+// void goglVertexBindingDivisor(GLuint bindingindex, GLuint divisor) {
+// 	(*ptrglVertexBindingDivisor)(bindingindex, divisor);
+// }
+// void goglVertexArrayBindVertexBufferEXT(GLuint vaobj, GLuint bindingindex, GLuint buffer, GLintptr offset, GLsizei stride) {
+// 	(*ptrglVertexArrayBindVertexBufferEXT)(vaobj, bindingindex, buffer, offset, stride);
+// }
+// void goglVertexArrayVertexAttribFormatEXT(GLuint vaobj, GLuint attribindex, GLint size, GLenum type_, GLboolean normalized, GLuint relativeoffset) {
+// 	(*ptrglVertexArrayVertexAttribFormatEXT)(vaobj, attribindex, size, type_, normalized, relativeoffset);
+// }
+// void goglVertexArrayVertexAttribIFormatEXT(GLuint vaobj, GLuint attribindex, GLint size, GLenum type_, GLuint relativeoffset) {
+// 	(*ptrglVertexArrayVertexAttribIFormatEXT)(vaobj, attribindex, size, type_, relativeoffset);
+// }
+// void goglVertexArrayVertexAttribLFormatEXT(GLuint vaobj, GLuint attribindex, GLint size, GLenum type_, GLuint relativeoffset) {
+// 	(*ptrglVertexArrayVertexAttribLFormatEXT)(vaobj, attribindex, size, type_, relativeoffset);
+// }
+// void goglVertexArrayVertexAttribBindingEXT(GLuint vaobj, GLuint attribindex, GLuint bindingindex) {
+// 	(*ptrglVertexArrayVertexAttribBindingEXT)(vaobj, attribindex, bindingindex);
+// }
+// void goglVertexArrayVertexBindingDivisorEXT(GLuint vaobj, GLuint bindingindex, GLuint divisor) {
+// 	(*ptrglVertexArrayVertexBindingDivisorEXT)(vaobj, bindingindex, divisor);
+// }
 // 
 // int init_VERSION_1_0() {
 // 	ptrglCullFace = goglGetProcAddress("glCullFace");
@@ -3218,6 +3406,101 @@ package gl42
 // 	if(ptrglTextureStorage2DEXT == NULL) return 1;
 // 	ptrglTextureStorage3DEXT = goglGetProcAddress("glTextureStorage3DEXT");
 // 	if(ptrglTextureStorage3DEXT == NULL) return 1;
+// 	return 0;
+// }
+// int init_VERSION_4_3() {
+// 	ptrglClearBufferData = goglGetProcAddress("glClearBufferData");
+// 	if(ptrglClearBufferData == NULL) return 1;
+// 	ptrglClearBufferSubData = goglGetProcAddress("glClearBufferSubData");
+// 	if(ptrglClearBufferSubData == NULL) return 1;
+// 	ptrglClearNamedBufferDataEXT = goglGetProcAddress("glClearNamedBufferDataEXT");
+// 	if(ptrglClearNamedBufferDataEXT == NULL) return 1;
+// 	ptrglClearNamedBufferSubDataEXT = goglGetProcAddress("glClearNamedBufferSubDataEXT");
+// 	if(ptrglClearNamedBufferSubDataEXT == NULL) return 1;
+// 	ptrglDispatchCompute = goglGetProcAddress("glDispatchCompute");
+// 	if(ptrglDispatchCompute == NULL) return 1;
+// 	ptrglDispatchComputeIndirect = goglGetProcAddress("glDispatchComputeIndirect");
+// 	if(ptrglDispatchComputeIndirect == NULL) return 1;
+// 	ptrglCopyImageSubData = goglGetProcAddress("glCopyImageSubData");
+// 	if(ptrglCopyImageSubData == NULL) return 1;
+// 	ptrglFramebufferParameteri = goglGetProcAddress("glFramebufferParameteri");
+// 	if(ptrglFramebufferParameteri == NULL) return 1;
+// 	ptrglGetFramebufferParameteriv = goglGetProcAddress("glGetFramebufferParameteriv");
+// 	if(ptrglGetFramebufferParameteriv == NULL) return 1;
+// 	ptrglNamedFramebufferParameteriEXT = goglGetProcAddress("glNamedFramebufferParameteriEXT");
+// 	if(ptrglNamedFramebufferParameteriEXT == NULL) return 1;
+// 	ptrglGetNamedFramebufferParameterivEXT = goglGetProcAddress("glGetNamedFramebufferParameterivEXT");
+// 	if(ptrglGetNamedFramebufferParameterivEXT == NULL) return 1;
+// 	ptrglGetInternalformati64v = goglGetProcAddress("glGetInternalformati64v");
+// 	if(ptrglGetInternalformati64v == NULL) return 1;
+// 	ptrglInvalidateTexSubImage = goglGetProcAddress("glInvalidateTexSubImage");
+// 	if(ptrglInvalidateTexSubImage == NULL) return 1;
+// 	ptrglInvalidateTexImage = goglGetProcAddress("glInvalidateTexImage");
+// 	if(ptrglInvalidateTexImage == NULL) return 1;
+// 	ptrglInvalidateBufferSubData = goglGetProcAddress("glInvalidateBufferSubData");
+// 	if(ptrglInvalidateBufferSubData == NULL) return 1;
+// 	ptrglInvalidateBufferData = goglGetProcAddress("glInvalidateBufferData");
+// 	if(ptrglInvalidateBufferData == NULL) return 1;
+// 	ptrglInvalidateFramebuffer = goglGetProcAddress("glInvalidateFramebuffer");
+// 	if(ptrglInvalidateFramebuffer == NULL) return 1;
+// 	ptrglInvalidateSubFramebuffer = goglGetProcAddress("glInvalidateSubFramebuffer");
+// 	if(ptrglInvalidateSubFramebuffer == NULL) return 1;
+// 	ptrglMultiDrawArraysIndirect = goglGetProcAddress("glMultiDrawArraysIndirect");
+// 	if(ptrglMultiDrawArraysIndirect == NULL) return 1;
+// 	ptrglMultiDrawElementsIndirect = goglGetProcAddress("glMultiDrawElementsIndirect");
+// 	if(ptrglMultiDrawElementsIndirect == NULL) return 1;
+// 	ptrglGetProgramInterfaceiv = goglGetProcAddress("glGetProgramInterfaceiv");
+// 	if(ptrglGetProgramInterfaceiv == NULL) return 1;
+// 	ptrglGetProgramResourceIndex = goglGetProcAddress("glGetProgramResourceIndex");
+// 	if(ptrglGetProgramResourceIndex == NULL) return 1;
+// 	ptrglGetProgramResourceName = goglGetProcAddress("glGetProgramResourceName");
+// 	if(ptrglGetProgramResourceName == NULL) return 1;
+// 	ptrglGetProgramResourceiv = goglGetProcAddress("glGetProgramResourceiv");
+// 	if(ptrglGetProgramResourceiv == NULL) return 1;
+// 	ptrglGetProgramResourceLocation = goglGetProcAddress("glGetProgramResourceLocation");
+// 	if(ptrglGetProgramResourceLocation == NULL) return 1;
+// 	ptrglGetProgramResourceLocationIndex = goglGetProcAddress("glGetProgramResourceLocationIndex");
+// 	if(ptrglGetProgramResourceLocationIndex == NULL) return 1;
+// 	ptrglShaderStorageBlockBinding = goglGetProcAddress("glShaderStorageBlockBinding");
+// 	if(ptrglShaderStorageBlockBinding == NULL) return 1;
+// 	ptrglTexBufferRange = goglGetProcAddress("glTexBufferRange");
+// 	if(ptrglTexBufferRange == NULL) return 1;
+// 	ptrglTextureBufferRangeEXT = goglGetProcAddress("glTextureBufferRangeEXT");
+// 	if(ptrglTextureBufferRangeEXT == NULL) return 1;
+// 	ptrglTexStorage2DMultisample = goglGetProcAddress("glTexStorage2DMultisample");
+// 	if(ptrglTexStorage2DMultisample == NULL) return 1;
+// 	ptrglTexStorage3DMultisample = goglGetProcAddress("glTexStorage3DMultisample");
+// 	if(ptrglTexStorage3DMultisample == NULL) return 1;
+// 	ptrglTextureStorage2DMultisampleEXT = goglGetProcAddress("glTextureStorage2DMultisampleEXT");
+// 	if(ptrglTextureStorage2DMultisampleEXT == NULL) return 1;
+// 	ptrglTextureStorage3DMultisampleEXT = goglGetProcAddress("glTextureStorage3DMultisampleEXT");
+// 	if(ptrglTextureStorage3DMultisampleEXT == NULL) return 1;
+// 	ptrglTextureView = goglGetProcAddress("glTextureView");
+// 	if(ptrglTextureView == NULL) return 1;
+// 	ptrglBindVertexBuffer = goglGetProcAddress("glBindVertexBuffer");
+// 	if(ptrglBindVertexBuffer == NULL) return 1;
+// 	ptrglVertexAttribFormat = goglGetProcAddress("glVertexAttribFormat");
+// 	if(ptrglVertexAttribFormat == NULL) return 1;
+// 	ptrglVertexAttribIFormat = goglGetProcAddress("glVertexAttribIFormat");
+// 	if(ptrglVertexAttribIFormat == NULL) return 1;
+// 	ptrglVertexAttribLFormat = goglGetProcAddress("glVertexAttribLFormat");
+// 	if(ptrglVertexAttribLFormat == NULL) return 1;
+// 	ptrglVertexAttribBinding = goglGetProcAddress("glVertexAttribBinding");
+// 	if(ptrglVertexAttribBinding == NULL) return 1;
+// 	ptrglVertexBindingDivisor = goglGetProcAddress("glVertexBindingDivisor");
+// 	if(ptrglVertexBindingDivisor == NULL) return 1;
+// 	ptrglVertexArrayBindVertexBufferEXT = goglGetProcAddress("glVertexArrayBindVertexBufferEXT");
+// 	if(ptrglVertexArrayBindVertexBufferEXT == NULL) return 1;
+// 	ptrglVertexArrayVertexAttribFormatEXT = goglGetProcAddress("glVertexArrayVertexAttribFormatEXT");
+// 	if(ptrglVertexArrayVertexAttribFormatEXT == NULL) return 1;
+// 	ptrglVertexArrayVertexAttribIFormatEXT = goglGetProcAddress("glVertexArrayVertexAttribIFormatEXT");
+// 	if(ptrglVertexArrayVertexAttribIFormatEXT == NULL) return 1;
+// 	ptrglVertexArrayVertexAttribLFormatEXT = goglGetProcAddress("glVertexArrayVertexAttribLFormatEXT");
+// 	if(ptrglVertexArrayVertexAttribLFormatEXT == NULL) return 1;
+// 	ptrglVertexArrayVertexAttribBindingEXT = goglGetProcAddress("glVertexArrayVertexAttribBindingEXT");
+// 	if(ptrglVertexArrayVertexAttribBindingEXT == NULL) return 1;
+// 	ptrglVertexArrayVertexBindingDivisorEXT = goglGetProcAddress("glVertexArrayVertexBindingDivisorEXT");
+// 	if(ptrglVertexArrayVertexBindingDivisorEXT == NULL) return 1;
 // 	return 0;
 // }
 // 
@@ -4726,6 +5009,266 @@ const (
 	UNSIGNED_INT_IMAGE_CUBE = 0x9066
 	UNSIGNED_INT_IMAGE_CUBE_MAP_ARRAY = 0x906A
 	VERTEX_ATTRIB_ARRAY_BARRIER_BIT = 0x00000001
+)
+// VERSION_4_3
+const (
+	ACTIVE_RESOURCES = 0x92F5
+	ACTIVE_VARIABLES = 0x9305
+	ANY_SAMPLES_PASSED_CONSERVATIVE = 0x8D6A
+	ARRAY_SIZE = 0x92FB
+	ARRAY_STRIDE = 0x92FE
+	ATOMIC_COUNTER_BUFFER_INDEX = 0x9301
+	ATOMIC_COUNTER_BUFFER_REFERENCED_BY_COMPUTE_SHADER = 0x90ED
+	AUTO_GENERATE_MIPMAP = 0x8295
+	BLOCK_INDEX = 0x92FD
+	BUFFER = 0x82E0
+	BUFFER_BINDING = 0x9302
+	BUFFER_DATA_SIZE = 0x9303
+	BUFFER_VARIABLE = 0x92E5
+	CAVEAT_SUPPORT = 0x82B8
+	CLEAR_BUFFER = 0x82B4
+	COLOR_COMPONENTS = 0x8283
+	COLOR_ENCODING = 0x8296
+	COLOR_RENDERABLE = 0x8286
+	COMPRESSED_R11_EAC = 0x9270
+	COMPRESSED_RG11_EAC = 0x9272
+	COMPRESSED_RGB8_ETC2 = 0x9274
+	COMPRESSED_RGB8_PUNCHTHROUGH_ALPHA1_ETC2 = 0x9276
+	COMPRESSED_RGBA8_ETC2_EAC = 0x9278
+	COMPRESSED_SIGNED_R11_EAC = 0x9271
+	COMPRESSED_SIGNED_RG11_EAC = 0x9273
+	COMPRESSED_SRGB8_ALPHA8_ETC2_EAC = 0x9279
+	COMPRESSED_SRGB8_ETC2 = 0x9275
+	COMPRESSED_SRGB8_PUNCHTHROUGH_ALPHA1_ETC2 = 0x9277
+	COMPUTE_LOCAL_WORK_SIZE = 0x8267
+	COMPUTE_SHADER = 0x91B9
+	COMPUTE_SUBROUTINE = 0x92ED
+	COMPUTE_SUBROUTINE_UNIFORM = 0x92F3
+	COMPUTE_TEXTURE = 0x82A0
+	CONTEXT_FLAG_DEBUG_BIT = 0x00000002
+	DEBUG_CALLBACK_FUNCTION = 0x8244
+	DEBUG_CALLBACK_USER_PARAM = 0x8245
+	DEBUG_GROUP_STACK_DEPTH = 0x826D
+	DEBUG_LOGGED_MESSAGES = 0x9145
+	DEBUG_NEXT_LOGGED_MESSAGE_LENGTH = 0x8243
+	DEBUG_OUTPUT = 0x92E0
+	DEBUG_OUTPUT_SYNCHRONOUS = 0x8242
+	DEBUG_SEVERITY_HIGH = 0x9146
+	DEBUG_SEVERITY_LOW = 0x9148
+	DEBUG_SEVERITY_MEDIUM = 0x9147
+	DEBUG_SEVERITY_NOTIFICATION = 0x826B
+	DEBUG_SOURCE_API = 0x8246
+	DEBUG_SOURCE_APPLICATION = 0x824A
+	DEBUG_SOURCE_OTHER = 0x824B
+	DEBUG_SOURCE_SHADER_COMPILER = 0x8248
+	DEBUG_SOURCE_THIRD_PARTY = 0x8249
+	DEBUG_SOURCE_WINDOW_SYSTEM = 0x8247
+	DEBUG_TYPE_DEPRECATED_BEHAVIOR = 0x824D
+	DEBUG_TYPE_ERROR = 0x824C
+	DEBUG_TYPE_MARKER = 0x8268
+	DEBUG_TYPE_OTHER = 0x8251
+	DEBUG_TYPE_PERFORMANCE = 0x8250
+	DEBUG_TYPE_POP_GROUP = 0x826A
+	DEBUG_TYPE_PORTABILITY = 0x824F
+	DEBUG_TYPE_PUSH_GROUP = 0x8269
+	DEBUG_TYPE_UNDEFINED_BEHAVIOR = 0x824E
+	DEPTH_COMPONENTS = 0x8284
+	DEPTH_RENDERABLE = 0x8287
+	DEPTH_STENCIL_TEXTURE_MODE = 0x90EA
+	DISPATCH_INDIRECT_BUFFER = 0x90EE
+	DISPATCH_INDIRECT_BUFFER_BINDING = 0x90EF
+	DISPLAY_LIST = 0x82E7
+	FILTER = 0x829A
+	FRAGMENT_SUBROUTINE = 0x92EC
+	FRAGMENT_SUBROUTINE_UNIFORM = 0x92F2
+	FRAGMENT_TEXTURE = 0x829F
+	FRAMEBUFFER_BLEND = 0x828B
+	FRAMEBUFFER_DEFAULT_FIXED_SAMPLE_LOCATIONS = 0x9314
+	FRAMEBUFFER_DEFAULT_HEIGHT = 0x9311
+	FRAMEBUFFER_DEFAULT_LAYERS = 0x9312
+	FRAMEBUFFER_DEFAULT_SAMPLES = 0x9313
+	FRAMEBUFFER_DEFAULT_WIDTH = 0x9310
+	FRAMEBUFFER_RENDERABLE = 0x8289
+	FRAMEBUFFER_RENDERABLE_LAYERED = 0x828A
+	FULL_SUPPORT = 0x82B7
+	GEOMETRY_SUBROUTINE = 0x92EB
+	GEOMETRY_SUBROUTINE_UNIFORM = 0x92F1
+	GEOMETRY_TEXTURE = 0x829E
+	GET_TEXTURE_IMAGE_FORMAT = 0x8291
+	GET_TEXTURE_IMAGE_TYPE = 0x8292
+	IMAGE_CLASS_10_10_10_2 = 0x82C3
+	IMAGE_CLASS_11_11_10 = 0x82C2
+	IMAGE_CLASS_1_X_16 = 0x82BE
+	IMAGE_CLASS_1_X_32 = 0x82BB
+	IMAGE_CLASS_1_X_8 = 0x82C1
+	IMAGE_CLASS_2_X_16 = 0x82BD
+	IMAGE_CLASS_2_X_32 = 0x82BA
+	IMAGE_CLASS_2_X_8 = 0x82C0
+	IMAGE_CLASS_4_X_16 = 0x82BC
+	IMAGE_CLASS_4_X_32 = 0x82B9
+	IMAGE_CLASS_4_X_8 = 0x82BF
+	IMAGE_COMPATIBILITY_CLASS = 0x82A8
+	IMAGE_PIXEL_FORMAT = 0x82A9
+	IMAGE_PIXEL_TYPE = 0x82AA
+	IMAGE_TEXEL_SIZE = 0x82A7
+	INTERNALFORMAT_ALPHA_SIZE = 0x8274
+	INTERNALFORMAT_ALPHA_TYPE = 0x827B
+	INTERNALFORMAT_BLUE_SIZE = 0x8273
+	INTERNALFORMAT_BLUE_TYPE = 0x827A
+	INTERNALFORMAT_DEPTH_SIZE = 0x8275
+	INTERNALFORMAT_DEPTH_TYPE = 0x827C
+	INTERNALFORMAT_GREEN_SIZE = 0x8272
+	INTERNALFORMAT_GREEN_TYPE = 0x8279
+	INTERNALFORMAT_PREFERRED = 0x8270
+	INTERNALFORMAT_RED_SIZE = 0x8271
+	INTERNALFORMAT_RED_TYPE = 0x8278
+	INTERNALFORMAT_SHARED_SIZE = 0x8277
+	INTERNALFORMAT_STENCIL_SIZE = 0x8276
+	INTERNALFORMAT_STENCIL_TYPE = 0x827D
+	INTERNALFORMAT_SUPPORTED = 0x826F
+	IS_PER_PATCH = 0x92E7
+	IS_ROW_MAJOR = 0x9300
+	LOCATION = 0x930E
+	LOCATION_INDEX = 0x930F
+	MANUAL_GENERATE_MIPMAP = 0x8294
+	MATRIX_STRIDE = 0x92FF
+	MAX_COMBINED_COMPUTE_UNIFORM_COMPONENTS = 0x8266
+	MAX_COMBINED_DIMENSIONS = 0x8282
+	MAX_COMBINED_SHADER_OUTPUT_RESOURCES = 0x8F39
+	MAX_COMBINED_SHADER_STORAGE_BLOCKS = 0x90DC
+	MAX_COMPUTE_ATOMIC_COUNTERS = 0x8265
+	MAX_COMPUTE_ATOMIC_COUNTER_BUFFERS = 0x8264
+	MAX_COMPUTE_IMAGE_UNIFORMS = 0x91BD
+	MAX_COMPUTE_LOCAL_INVOCATIONS = 0x90EB
+	MAX_COMPUTE_SHADER_STORAGE_BLOCKS = 0x90DB
+	MAX_COMPUTE_SHARED_MEMORY_SIZE = 0x8262
+	MAX_COMPUTE_TEXTURE_IMAGE_UNITS = 0x91BC
+	MAX_COMPUTE_UNIFORM_BLOCKS = 0x91BB
+	MAX_COMPUTE_UNIFORM_COMPONENTS = 0x8263
+	MAX_COMPUTE_WORK_GROUP_COUNT = 0x91BE
+	MAX_COMPUTE_WORK_GROUP_SIZE = 0x91BF
+	MAX_DEBUG_GROUP_STACK_DEPTH = 0x826C
+	MAX_DEBUG_LOGGED_MESSAGES = 0x9144
+	MAX_DEBUG_MESSAGE_LENGTH = 0x9143
+	MAX_DEPTH = 0x8280
+	MAX_ELEMENT_INDEX = 0x8D6B
+	MAX_FRAGMENT_SHADER_STORAGE_BLOCKS = 0x90DA
+	MAX_FRAMEBUFFER_HEIGHT = 0x9316
+	MAX_FRAMEBUFFER_LAYERS = 0x9317
+	MAX_FRAMEBUFFER_SAMPLES = 0x9318
+	MAX_FRAMEBUFFER_WIDTH = 0x9315
+	MAX_GEOMETRY_SHADER_STORAGE_BLOCKS = 0x90D7
+	MAX_HEIGHT = 0x827F
+	MAX_LABEL_LENGTH = 0x82E8
+	MAX_LAYERS = 0x8281
+	MAX_NAME_LENGTH = 0x92F6
+	MAX_NUM_ACTIVE_VARIABLES = 0x92F7
+	MAX_NUM_COMPATIBLE_SUBROUTINES = 0x92F8
+	MAX_SHADER_STORAGE_BLOCK_SIZE = 0x90DE
+	MAX_SHADER_STORAGE_BUFFER_BINDINGS = 0x90DD
+	MAX_TESS_CONTROL_SHADER_STORAGE_BLOCKS = 0x90D8
+	MAX_TESS_EVALUATION_SHADER_STORAGE_BLOCKS = 0x90D9
+	MAX_UNIFORM_LOCATIONS = 0x826E
+	MAX_VERTEX_ATTRIB_BINDINGS = 0x82DA
+	MAX_VERTEX_ATTRIB_RELATIVE_OFFSET = 0x82D9
+	MAX_VERTEX_SHADER_STORAGE_BLOCKS = 0x90D6
+	MAX_WIDTH = 0x827E
+	MIPMAP = 0x8293
+	NAME_LENGTH = 0x92F9
+	NUM_ACTIVE_VARIABLES = 0x9304
+	NUM_SHADING_LANGUAGE_VERSIONS = 0x82E9
+	OFFSET = 0x92FC
+	PRIMITIVE_RESTART_FIXED_INDEX = 0x8D69
+	PROGRAM = 0x82E2
+	PROGRAM_INPUT = 0x92E3
+	PROGRAM_OUTPUT = 0x92E4
+	PROGRAM_PIPELINE = 0x82E4
+	QUERY = 0x82E3
+	READ_PIXELS = 0x828C
+	READ_PIXELS_FORMAT = 0x828D
+	READ_PIXELS_TYPE = 0x828E
+	REFERENCED_BY_COMPUTE_SHADER = 0x930B
+	REFERENCED_BY_FRAGMENT_SHADER = 0x930A
+	REFERENCED_BY_GEOMETRY_SHADER = 0x9309
+	REFERENCED_BY_TESS_CONTROL_SHADER = 0x9307
+	REFERENCED_BY_TESS_EVALUATION_SHADER = 0x9308
+	REFERENCED_BY_VERTEX_SHADER = 0x9306
+	SAMPLER = 0x82E6
+	SHADER = 0x82E1
+	SHADER_IMAGE_ATOMIC = 0x82A6
+	SHADER_IMAGE_LOAD = 0x82A4
+	SHADER_IMAGE_STORE = 0x82A5
+	SHADER_STORAGE_BARRIER_BIT = 0x2000
+	SHADER_STORAGE_BLOCK = 0x92E6
+	SHADER_STORAGE_BUFFER = 0x90D2
+	SHADER_STORAGE_BUFFER_BINDING = 0x90D3
+	SHADER_STORAGE_BUFFER_OFFSET_ALIGNMENT = 0x90DF
+	SHADER_STORAGE_BUFFER_SIZE = 0x90D5
+	SHADER_STORAGE_BUFFER_START = 0x90D4
+	SIMULTANEOUS_TEXTURE_AND_DEPTH_TEST = 0x82AC
+	SIMULTANEOUS_TEXTURE_AND_DEPTH_WRITE = 0x82AE
+	SIMULTANEOUS_TEXTURE_AND_STENCIL_TEST = 0x82AD
+	SIMULTANEOUS_TEXTURE_AND_STENCIL_WRITE = 0x82AF
+	SRGB_READ = 0x8297
+	SRGB_WRITE = 0x8298
+	STENCIL_COMPONENTS = 0x8285
+	STENCIL_RENDERABLE = 0x8288
+	TESS_CONTROL_SUBROUTINE = 0x92E9
+	TESS_CONTROL_SUBROUTINE_UNIFORM = 0x92EF
+	TESS_CONTROL_TEXTURE = 0x829C
+	TESS_EVALUATION_SUBROUTINE = 0x92EA
+	TESS_EVALUATION_SUBROUTINE_UNIFORM = 0x92F0
+	TESS_EVALUATION_TEXTURE = 0x829D
+	TEXTURE_BUFFER_OFFSET = 0x919D
+	TEXTURE_BUFFER_OFFSET_ALIGNMENT = 0x919F
+	TEXTURE_BUFFER_SIZE = 0x919E
+	TEXTURE_COMPRESSED_BLOCK_HEIGHT = 0x82B2
+	TEXTURE_COMPRESSED_BLOCK_SIZE = 0x82B3
+	TEXTURE_COMPRESSED_BLOCK_WIDTH = 0x82B1
+	TEXTURE_GATHER = 0x82A2
+	TEXTURE_GATHER_SHADOW = 0x82A3
+	TEXTURE_IMAGE_FORMAT = 0x828F
+	TEXTURE_IMAGE_TYPE = 0x8290
+	TEXTURE_IMMUTABLE_LEVELS = 0x82DF
+	TEXTURE_SHADOW = 0x82A1
+	TEXTURE_VIEW = 0x82B5
+	TEXTURE_VIEW_MIN_LAYER = 0x82DD
+	TEXTURE_VIEW_MIN_LEVEL = 0x82DB
+	TEXTURE_VIEW_NUM_LAYERS = 0x82DE
+	TEXTURE_VIEW_NUM_LEVELS = 0x82DC
+	TOP_LEVEL_ARRAY_SIZE = 0x930C
+	TOP_LEVEL_ARRAY_STRIDE = 0x930D
+	TRANSFORM_FEEDBACK_VARYING = 0x92F4
+	TYPE = 0x92FA
+	UNIFORM = 0x92E1
+	UNIFORM_BLOCK = 0x92E2
+	UNIFORM_BLOCK_REFERENCED_BY_COMPUTE_SHADER = 0x90EC
+	VERTEX_ATTRIB_ARRAY_LONG = 0x874E
+	VERTEX_ATTRIB_BINDING = 0x82D4
+	VERTEX_ATTRIB_RELATIVE_OFFSET = 0x82D5
+	VERTEX_BINDING_DIVISOR = 0x82D6
+	VERTEX_BINDING_OFFSET = 0x82D7
+	VERTEX_BINDING_STRIDE = 0x82D8
+	VERTEX_SUBROUTINE = 0x92E8
+	VERTEX_SUBROUTINE_UNIFORM = 0x92EE
+	VERTEX_TEXTURE = 0x829B
+	VIEW_CLASS_128_BITS = 0x82C4
+	VIEW_CLASS_16_BITS = 0x82CA
+	VIEW_CLASS_24_BITS = 0x82C9
+	VIEW_CLASS_32_BITS = 0x82C8
+	VIEW_CLASS_48_BITS = 0x82C7
+	VIEW_CLASS_64_BITS = 0x82C6
+	VIEW_CLASS_8_BITS = 0x82CB
+	VIEW_CLASS_96_BITS = 0x82C5
+	VIEW_CLASS_BPTC_FLOAT = 0x82D3
+	VIEW_CLASS_BPTC_UNORM = 0x82D2
+	VIEW_CLASS_RGTC1_RED = 0x82D0
+	VIEW_CLASS_RGTC2_RG = 0x82D1
+	VIEW_CLASS_S3TC_DXT1_RGB = 0x82CC
+	VIEW_CLASS_S3TC_DXT1_RGBA = 0x82CD
+	VIEW_CLASS_S3TC_DXT3_RGBA = 0x82CE
+	VIEW_CLASS_S3TC_DXT5_RGBA = 0x82CF
+	VIEW_COMPATIBILITY_CLASS = 0x82B6
 )
 // VERSION_1_0
 
@@ -6717,6 +7260,192 @@ func TextureStorage2DEXT(texture Uint, target Enum, levels Sizei, internalformat
 func TextureStorage3DEXT(texture Uint, target Enum, levels Sizei, internalformat Enum, width Sizei, height Sizei, depth Sizei)  {
 	C.goglTextureStorage3DEXT((C.GLuint)(texture), (C.GLenum)(target), (C.GLsizei)(levels), (C.GLenum)(internalformat), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLsizei)(depth))
 }
+// VERSION_4_3
+
+// https://www.opengl.org/sdk/docs/man4/xhtml/glClearBufferData.xml
+func ClearBufferData(target Enum, internalformat Enum, format Enum, type_ Enum, data Pointer)  {
+	C.goglClearBufferData((C.GLenum)(target), (C.GLenum)(internalformat), (C.GLenum)(format), (C.GLenum)(type_), (unsafe.Pointer)(data))
+}
+// https://www.opengl.org/sdk/docs/man4/xhtml/glClearBufferSubData.xml
+func ClearBufferSubData(target Enum, internalformat Enum, offset Intptr, size Sizeiptr, format Enum, type_ Enum, data Pointer)  {
+	C.goglClearBufferSubData((C.GLenum)(target), (C.GLenum)(internalformat), (C.GLintptr)(offset), (C.GLsizeiptr)(size), (C.GLenum)(format), (C.GLenum)(type_), (unsafe.Pointer)(data))
+}
+// https://www.opengl.org/sdk/docs/man4/xhtml/glClearNamedBufferDataEXT.xml
+func ClearNamedBufferDataEXT(buffer Uint, internalformat Enum, format Enum, type_ Enum, data Pointer)  {
+	C.goglClearNamedBufferDataEXT((C.GLuint)(buffer), (C.GLenum)(internalformat), (C.GLenum)(format), (C.GLenum)(type_), (unsafe.Pointer)(data))
+}
+// https://www.opengl.org/sdk/docs/man4/xhtml/glClearNamedBufferSubDataEXT.xml
+func ClearNamedBufferSubDataEXT(buffer Uint, internalformat Enum, offset Sizeiptr, size Sizeiptr, format Enum, type_ Enum, data Pointer)  {
+	C.goglClearNamedBufferSubDataEXT((C.GLuint)(buffer), (C.GLenum)(internalformat), (C.GLsizeiptr)(offset), (C.GLsizeiptr)(size), (C.GLenum)(format), (C.GLenum)(type_), (unsafe.Pointer)(data))
+}
+// https://www.opengl.org/sdk/docs/man4/xhtml/glDispatchCompute.xml
+func DispatchCompute(num_groups_x Uint, num_groups_y Uint, num_groups_z Uint)  {
+	C.goglDispatchCompute((C.GLuint)(num_groups_x), (C.GLuint)(num_groups_y), (C.GLuint)(num_groups_z))
+}
+// https://www.opengl.org/sdk/docs/man4/xhtml/glDispatchComputeIndirect.xml
+func DispatchComputeIndirect(indirect Intptr)  {
+	C.goglDispatchComputeIndirect((C.GLintptr)(indirect))
+}
+// https://www.opengl.org/sdk/docs/man4/xhtml/glCopyImageSubData.xml
+func CopyImageSubData(srcName Uint, srcTarget Enum, srcLevel Int, srcX Int, srcY Int, srcZ Int, dstName Uint, dstTarget Enum, dstLevel Int, dstX Int, dstY Int, dstZ Int, srcWidth Sizei, srcHeight Sizei, srcDepth Sizei)  {
+	C.goglCopyImageSubData((C.GLuint)(srcName), (C.GLenum)(srcTarget), (C.GLint)(srcLevel), (C.GLint)(srcX), (C.GLint)(srcY), (C.GLint)(srcZ), (C.GLuint)(dstName), (C.GLenum)(dstTarget), (C.GLint)(dstLevel), (C.GLint)(dstX), (C.GLint)(dstY), (C.GLint)(dstZ), (C.GLsizei)(srcWidth), (C.GLsizei)(srcHeight), (C.GLsizei)(srcDepth))
+}
+// https://www.opengl.org/sdk/docs/man4/xhtml/glFramebufferParameteri.xml
+func FramebufferParameteri(target Enum, pname Enum, param Int)  {
+	C.goglFramebufferParameteri((C.GLenum)(target), (C.GLenum)(pname), (C.GLint)(param))
+}
+// https://www.opengl.org/sdk/docs/man4/xhtml/glGetFramebufferParameteriv.xml
+func GetFramebufferParameteriv(target Enum, pname Enum, params *Int)  {
+	C.goglGetFramebufferParameteriv((C.GLenum)(target), (C.GLenum)(pname), (*C.GLint)(params))
+}
+// https://www.opengl.org/sdk/docs/man4/xhtml/glNamedFramebufferParameteriEXT.xml
+func NamedFramebufferParameteriEXT(framebuffer Uint, pname Enum, param Int)  {
+	C.goglNamedFramebufferParameteriEXT((C.GLuint)(framebuffer), (C.GLenum)(pname), (C.GLint)(param))
+}
+// https://www.opengl.org/sdk/docs/man4/xhtml/glGetNamedFramebufferParameterivEXT.xml
+func GetNamedFramebufferParameterivEXT(framebuffer Uint, pname Enum, params *Int)  {
+	C.goglGetNamedFramebufferParameterivEXT((C.GLuint)(framebuffer), (C.GLenum)(pname), (*C.GLint)(params))
+}
+// https://www.opengl.org/sdk/docs/man4/xhtml/glGetInternalformati64v.xml
+func GetInternalformati64v(target Enum, internalformat Enum, pname Enum, bufSize Sizei, params *Int64)  {
+	C.goglGetInternalformati64v((C.GLenum)(target), (C.GLenum)(internalformat), (C.GLenum)(pname), (C.GLsizei)(bufSize), (*C.GLint64)(params))
+}
+// https://www.opengl.org/sdk/docs/man4/xhtml/glInvalidateTexSubImage.xml
+func InvalidateTexSubImage(texture Uint, level Int, xoffset Int, yoffset Int, zoffset Int, width Sizei, height Sizei, depth Sizei)  {
+	C.goglInvalidateTexSubImage((C.GLuint)(texture), (C.GLint)(level), (C.GLint)(xoffset), (C.GLint)(yoffset), (C.GLint)(zoffset), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLsizei)(depth))
+}
+// https://www.opengl.org/sdk/docs/man4/xhtml/glInvalidateTexImage.xml
+func InvalidateTexImage(texture Uint, level Int)  {
+	C.goglInvalidateTexImage((C.GLuint)(texture), (C.GLint)(level))
+}
+// https://www.opengl.org/sdk/docs/man4/xhtml/glInvalidateBufferSubData.xml
+func InvalidateBufferSubData(buffer Uint, offset Intptr, length Sizeiptr)  {
+	C.goglInvalidateBufferSubData((C.GLuint)(buffer), (C.GLintptr)(offset), (C.GLsizeiptr)(length))
+}
+// https://www.opengl.org/sdk/docs/man4/xhtml/glInvalidateBufferData.xml
+func InvalidateBufferData(buffer Uint)  {
+	C.goglInvalidateBufferData((C.GLuint)(buffer))
+}
+// https://www.opengl.org/sdk/docs/man4/xhtml/glInvalidateFramebuffer.xml
+func InvalidateFramebuffer(target Enum, numAttachments Sizei, attachments *Enum)  {
+	C.goglInvalidateFramebuffer((C.GLenum)(target), (C.GLsizei)(numAttachments), (*C.GLenum)(attachments))
+}
+// https://www.opengl.org/sdk/docs/man4/xhtml/glInvalidateSubFramebuffer.xml
+func InvalidateSubFramebuffer(target Enum, numAttachments Sizei, attachments *Enum, x Int, y Int, width Sizei, height Sizei)  {
+	C.goglInvalidateSubFramebuffer((C.GLenum)(target), (C.GLsizei)(numAttachments), (*C.GLenum)(attachments), (C.GLint)(x), (C.GLint)(y), (C.GLsizei)(width), (C.GLsizei)(height))
+}
+// https://www.opengl.org/sdk/docs/man4/xhtml/glMultiDrawArraysIndirect.xml
+func MultiDrawArraysIndirect(mode Enum, indirect Pointer, drawcount Sizei, stride Sizei)  {
+	C.goglMultiDrawArraysIndirect((C.GLenum)(mode), (unsafe.Pointer)(indirect), (C.GLsizei)(drawcount), (C.GLsizei)(stride))
+}
+// https://www.opengl.org/sdk/docs/man4/xhtml/glMultiDrawElementsIndirect.xml
+func MultiDrawElementsIndirect(mode Enum, type_ Enum, indirect Pointer, drawcount Sizei, stride Sizei)  {
+	C.goglMultiDrawElementsIndirect((C.GLenum)(mode), (C.GLenum)(type_), (unsafe.Pointer)(indirect), (C.GLsizei)(drawcount), (C.GLsizei)(stride))
+}
+// https://www.opengl.org/sdk/docs/man4/xhtml/glGetProgramInterfaceiv.xml
+func GetProgramInterfaceiv(program Uint, programInterface Enum, pname Enum, params *Int)  {
+	C.goglGetProgramInterfaceiv((C.GLuint)(program), (C.GLenum)(programInterface), (C.GLenum)(pname), (*C.GLint)(params))
+}
+// https://www.opengl.org/sdk/docs/man4/xhtml/glGetProgramResourceIndex.xml
+func GetProgramResourceIndex(program Uint, programInterface Enum, name *Char) Uint {
+	return (Uint)(C.goglGetProgramResourceIndex((C.GLuint)(program), (C.GLenum)(programInterface), (*C.GLchar)(name)))
+}
+// https://www.opengl.org/sdk/docs/man4/xhtml/glGetProgramResourceName.xml
+func GetProgramResourceName(program Uint, programInterface Enum, index Uint, bufSize Sizei, length *Sizei, name *Char)  {
+	C.goglGetProgramResourceName((C.GLuint)(program), (C.GLenum)(programInterface), (C.GLuint)(index), (C.GLsizei)(bufSize), (*C.GLsizei)(length), (*C.GLchar)(name))
+}
+// https://www.opengl.org/sdk/docs/man4/xhtml/glGetProgramResourceiv.xml
+func GetProgramResourceiv(program Uint, programInterface Enum, index Uint, propCount Sizei, props *Enum, bufSize Sizei, length *Sizei, params *Int)  {
+	C.goglGetProgramResourceiv((C.GLuint)(program), (C.GLenum)(programInterface), (C.GLuint)(index), (C.GLsizei)(propCount), (*C.GLenum)(props), (C.GLsizei)(bufSize), (*C.GLsizei)(length), (*C.GLint)(params))
+}
+// https://www.opengl.org/sdk/docs/man4/xhtml/glGetProgramResourceLocation.xml
+func GetProgramResourceLocation(program Uint, programInterface Enum, name *Char) Int {
+	return (Int)(C.goglGetProgramResourceLocation((C.GLuint)(program), (C.GLenum)(programInterface), (*C.GLchar)(name)))
+}
+// https://www.opengl.org/sdk/docs/man4/xhtml/glGetProgramResourceLocationIndex.xml
+func GetProgramResourceLocationIndex(program Uint, programInterface Enum, name *Char) Int {
+	return (Int)(C.goglGetProgramResourceLocationIndex((C.GLuint)(program), (C.GLenum)(programInterface), (*C.GLchar)(name)))
+}
+// https://www.opengl.org/sdk/docs/man4/xhtml/glShaderStorageBlockBinding.xml
+func ShaderStorageBlockBinding(program Uint, storageBlockIndex Uint, storageBlockBinding Uint)  {
+	C.goglShaderStorageBlockBinding((C.GLuint)(program), (C.GLuint)(storageBlockIndex), (C.GLuint)(storageBlockBinding))
+}
+// https://www.opengl.org/sdk/docs/man4/xhtml/glTexBufferRange.xml
+func TexBufferRange(target Enum, internalformat Enum, buffer Uint, offset Intptr, size Sizeiptr)  {
+	C.goglTexBufferRange((C.GLenum)(target), (C.GLenum)(internalformat), (C.GLuint)(buffer), (C.GLintptr)(offset), (C.GLsizeiptr)(size))
+}
+// https://www.opengl.org/sdk/docs/man4/xhtml/glTextureBufferRangeEXT.xml
+func TextureBufferRangeEXT(texture Uint, target Enum, internalformat Enum, buffer Uint, offset Intptr, size Sizeiptr)  {
+	C.goglTextureBufferRangeEXT((C.GLuint)(texture), (C.GLenum)(target), (C.GLenum)(internalformat), (C.GLuint)(buffer), (C.GLintptr)(offset), (C.GLsizeiptr)(size))
+}
+// https://www.opengl.org/sdk/docs/man4/xhtml/glTexStorage2DMultisample.xml
+func TexStorage2DMultisample(target Enum, samples Sizei, internalformat Enum, width Sizei, height Sizei, fixedsamplelocations Boolean)  {
+	C.goglTexStorage2DMultisample((C.GLenum)(target), (C.GLsizei)(samples), (C.GLenum)(internalformat), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLboolean)(fixedsamplelocations))
+}
+// https://www.opengl.org/sdk/docs/man4/xhtml/glTexStorage3DMultisample.xml
+func TexStorage3DMultisample(target Enum, samples Sizei, internalformat Enum, width Sizei, height Sizei, depth Sizei, fixedsamplelocations Boolean)  {
+	C.goglTexStorage3DMultisample((C.GLenum)(target), (C.GLsizei)(samples), (C.GLenum)(internalformat), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLsizei)(depth), (C.GLboolean)(fixedsamplelocations))
+}
+// https://www.opengl.org/sdk/docs/man4/xhtml/glTextureStorage2DMultisampleEXT.xml
+func TextureStorage2DMultisampleEXT(texture Uint, target Enum, samples Sizei, internalformat Enum, width Sizei, height Sizei, fixedsamplelocations Boolean)  {
+	C.goglTextureStorage2DMultisampleEXT((C.GLuint)(texture), (C.GLenum)(target), (C.GLsizei)(samples), (C.GLenum)(internalformat), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLboolean)(fixedsamplelocations))
+}
+// https://www.opengl.org/sdk/docs/man4/xhtml/glTextureStorage3DMultisampleEXT.xml
+func TextureStorage3DMultisampleEXT(texture Uint, target Enum, samples Sizei, internalformat Enum, width Sizei, height Sizei, depth Sizei, fixedsamplelocations Boolean)  {
+	C.goglTextureStorage3DMultisampleEXT((C.GLuint)(texture), (C.GLenum)(target), (C.GLsizei)(samples), (C.GLenum)(internalformat), (C.GLsizei)(width), (C.GLsizei)(height), (C.GLsizei)(depth), (C.GLboolean)(fixedsamplelocations))
+}
+// https://www.opengl.org/sdk/docs/man4/xhtml/glTextureView.xml
+func TextureView(texture Uint, target Enum, origtexture Uint, internalformat Enum, minlevel Uint, numlevels Uint, minlayer Uint, numlayers Uint)  {
+	C.goglTextureView((C.GLuint)(texture), (C.GLenum)(target), (C.GLuint)(origtexture), (C.GLenum)(internalformat), (C.GLuint)(minlevel), (C.GLuint)(numlevels), (C.GLuint)(minlayer), (C.GLuint)(numlayers))
+}
+// https://www.opengl.org/sdk/docs/man4/xhtml/glBindVertexBuffer.xml
+func BindVertexBuffer(bindingindex Uint, buffer Uint, offset Intptr, stride Sizei)  {
+	C.goglBindVertexBuffer((C.GLuint)(bindingindex), (C.GLuint)(buffer), (C.GLintptr)(offset), (C.GLsizei)(stride))
+}
+// https://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttribFormat.xml
+func VertexAttribFormat(attribindex Uint, size Int, type_ Enum, normalized Boolean, relativeoffset Uint)  {
+	C.goglVertexAttribFormat((C.GLuint)(attribindex), (C.GLint)(size), (C.GLenum)(type_), (C.GLboolean)(normalized), (C.GLuint)(relativeoffset))
+}
+// https://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttribIFormat.xml
+func VertexAttribIFormat(attribindex Uint, size Int, type_ Enum, relativeoffset Uint)  {
+	C.goglVertexAttribIFormat((C.GLuint)(attribindex), (C.GLint)(size), (C.GLenum)(type_), (C.GLuint)(relativeoffset))
+}
+// https://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttribLFormat.xml
+func VertexAttribLFormat(attribindex Uint, size Int, type_ Enum, relativeoffset Uint)  {
+	C.goglVertexAttribLFormat((C.GLuint)(attribindex), (C.GLint)(size), (C.GLenum)(type_), (C.GLuint)(relativeoffset))
+}
+// https://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttribBinding.xml
+func VertexAttribBinding(attribindex Uint, bindingindex Uint)  {
+	C.goglVertexAttribBinding((C.GLuint)(attribindex), (C.GLuint)(bindingindex))
+}
+// https://www.opengl.org/sdk/docs/man4/xhtml/glVertexBindingDivisor.xml
+func VertexBindingDivisor(bindingindex Uint, divisor Uint)  {
+	C.goglVertexBindingDivisor((C.GLuint)(bindingindex), (C.GLuint)(divisor))
+}
+// https://www.opengl.org/sdk/docs/man4/xhtml/glVertexArrayBindVertexBufferEXT.xml
+func VertexArrayBindVertexBufferEXT(vaobj Uint, bindingindex Uint, buffer Uint, offset Intptr, stride Sizei)  {
+	C.goglVertexArrayBindVertexBufferEXT((C.GLuint)(vaobj), (C.GLuint)(bindingindex), (C.GLuint)(buffer), (C.GLintptr)(offset), (C.GLsizei)(stride))
+}
+// https://www.opengl.org/sdk/docs/man4/xhtml/glVertexArrayVertexAttribFormatEXT.xml
+func VertexArrayVertexAttribFormatEXT(vaobj Uint, attribindex Uint, size Int, type_ Enum, normalized Boolean, relativeoffset Uint)  {
+	C.goglVertexArrayVertexAttribFormatEXT((C.GLuint)(vaobj), (C.GLuint)(attribindex), (C.GLint)(size), (C.GLenum)(type_), (C.GLboolean)(normalized), (C.GLuint)(relativeoffset))
+}
+// https://www.opengl.org/sdk/docs/man4/xhtml/glVertexArrayVertexAttribIFormatEXT.xml
+func VertexArrayVertexAttribIFormatEXT(vaobj Uint, attribindex Uint, size Int, type_ Enum, relativeoffset Uint)  {
+	C.goglVertexArrayVertexAttribIFormatEXT((C.GLuint)(vaobj), (C.GLuint)(attribindex), (C.GLint)(size), (C.GLenum)(type_), (C.GLuint)(relativeoffset))
+}
+// https://www.opengl.org/sdk/docs/man4/xhtml/glVertexArrayVertexAttribLFormatEXT.xml
+func VertexArrayVertexAttribLFormatEXT(vaobj Uint, attribindex Uint, size Int, type_ Enum, relativeoffset Uint)  {
+	C.goglVertexArrayVertexAttribLFormatEXT((C.GLuint)(vaobj), (C.GLuint)(attribindex), (C.GLint)(size), (C.GLenum)(type_), (C.GLuint)(relativeoffset))
+}
+// https://www.opengl.org/sdk/docs/man4/xhtml/glVertexArrayVertexAttribBindingEXT.xml
+func VertexArrayVertexAttribBindingEXT(vaobj Uint, attribindex Uint, bindingindex Uint)  {
+	C.goglVertexArrayVertexAttribBindingEXT((C.GLuint)(vaobj), (C.GLuint)(attribindex), (C.GLuint)(bindingindex))
+}
+// https://www.opengl.org/sdk/docs/man4/xhtml/glVertexArrayVertexBindingDivisorEXT.xml
+func VertexArrayVertexBindingDivisorEXT(vaobj Uint, bindingindex Uint, divisor Uint)  {
+	C.goglVertexArrayVertexBindingDivisorEXT((C.GLuint)(vaobj), (C.GLuint)(bindingindex), (C.GLuint)(divisor))
+}
 func InitVersion10() error {
 	var ret C.int
 	if ret = C.init_VERSION_1_0(); ret != 0 {
@@ -6822,6 +7551,13 @@ func InitVersion42() error {
 	}
 	return nil
 }
+func InitVersion43() error {
+	var ret C.int
+	if ret = C.init_VERSION_4_3(); ret != 0 {
+		return errors.New("unable to initialize VERSION_4_3")
+	}
+	return nil
+}
 func Init() error {
 	var err error
 	if err = InitVersion10(); err != nil {
@@ -6867,6 +7603,9 @@ func Init() error {
 		return err
 	}
 	if err = InitVersion42(); err != nil {
+		return err
+	}
+	if err = InitVersion43(); err != nil {
 		return err
 	}
 	return nil
