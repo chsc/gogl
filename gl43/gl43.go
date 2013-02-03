@@ -718,6 +718,16 @@ package gl43
 // void (APIENTRYP ptrglDispatchCompute)(GLuint num_groups_x, GLuint num_groups_y, GLuint num_groups_z);
 // void (APIENTRYP ptrglDispatchComputeIndirect)(GLintptr indirect);
 // void (APIENTRYP ptrglCopyImageSubData)(GLuint srcName, GLenum srcTarget, GLint srcLevel, GLint srcX, GLint srcY, GLint srcZ, GLuint dstName, GLenum dstTarget, GLint dstLevel, GLint dstX, GLint dstY, GLint dstZ, GLsizei srcWidth, GLsizei srcHeight, GLsizei srcDepth);
+// void (APIENTRYP ptrglDebugMessageControl)(GLenum source, GLenum type, GLenum severity, GLsizei count, GLuint* ids, GLboolean enabled);
+// void (APIENTRYP ptrglDebugMessageInsert)(GLenum source, GLenum type, GLuint id, GLenum severity, GLsizei length, GLchar* buf);
+// void (APIENTRYP ptrglDebugMessageCallback)(GLDEBUGPROC callback, void* userParam);
+// GLuint (APIENTRYP ptrglGetDebugMessageLog)(GLuint count, GLsizei bufsize, GLenum* sources, GLenum* types, GLuint* ids, GLenum* severities, GLsizei* lengths, GLchar* messageLog);
+// void (APIENTRYP ptrglPushDebugGroup)(GLenum source, GLuint id, GLsizei length, GLchar* message);
+// void (APIENTRYP ptrglPopDebugGroup)();
+// void (APIENTRYP ptrglObjectLabel)(GLenum identifier, GLuint name, GLsizei length, GLchar* label);
+// void (APIENTRYP ptrglGetObjectLabel)(GLenum identifier, GLuint name, GLsizei bufSize, GLsizei* length, GLchar* label);
+// void (APIENTRYP ptrglObjectPtrLabel)(void* ptr, GLsizei length, GLchar* label);
+// void (APIENTRYP ptrglGetObjectPtrLabel)(void* ptr, GLsizei bufSize, GLsizei* length, GLchar* label);
 // void (APIENTRYP ptrglFramebufferParameteri)(GLenum target, GLenum pname, GLint param);
 // void (APIENTRYP ptrglGetFramebufferParameteriv)(GLenum target, GLenum pname, GLint* params);
 // void (APIENTRYP ptrglNamedFramebufferParameteriEXT)(GLuint framebuffer, GLenum pname, GLint param);
@@ -2265,6 +2275,36 @@ package gl43
 // void goglCopyImageSubData(GLuint srcName, GLenum srcTarget, GLint srcLevel, GLint srcX, GLint srcY, GLint srcZ, GLuint dstName, GLenum dstTarget, GLint dstLevel, GLint dstX, GLint dstY, GLint dstZ, GLsizei srcWidth, GLsizei srcHeight, GLsizei srcDepth) {
 // 	(*ptrglCopyImageSubData)(srcName, srcTarget, srcLevel, srcX, srcY, srcZ, dstName, dstTarget, dstLevel, dstX, dstY, dstZ, srcWidth, srcHeight, srcDepth);
 // }
+// void goglDebugMessageControl(GLenum source, GLenum type_, GLenum severity, GLsizei count, GLuint* ids, GLboolean enabled) {
+// 	(*ptrglDebugMessageControl)(source, type_, severity, count, ids, enabled);
+// }
+// void goglDebugMessageInsert(GLenum source, GLenum type_, GLuint id, GLenum severity, GLsizei length, GLchar* buf) {
+// 	(*ptrglDebugMessageInsert)(source, type_, id, severity, length, buf);
+// }
+// void goglDebugMessageCallback(GLDEBUGPROC callback, void* userParam) {
+// 	(*ptrglDebugMessageCallback)(callback, userParam);
+// }
+// GLuint goglGetDebugMessageLog(GLuint count, GLsizei bufsize, GLenum* sources, GLenum* types, GLuint* ids, GLenum* severities, GLsizei* lengths, GLchar* messageLog) {
+// 	return (*ptrglGetDebugMessageLog)(count, bufsize, sources, types, ids, severities, lengths, messageLog);
+// }
+// void goglPushDebugGroup(GLenum source, GLuint id, GLsizei length, GLchar* message) {
+// 	(*ptrglPushDebugGroup)(source, id, length, message);
+// }
+// void goglPopDebugGroup() {
+// 	(*ptrglPopDebugGroup)();
+// }
+// void goglObjectLabel(GLenum identifier, GLuint name, GLsizei length, GLchar* label) {
+// 	(*ptrglObjectLabel)(identifier, name, length, label);
+// }
+// void goglGetObjectLabel(GLenum identifier, GLuint name, GLsizei bufSize, GLsizei* length, GLchar* label) {
+// 	(*ptrglGetObjectLabel)(identifier, name, bufSize, length, label);
+// }
+// void goglObjectPtrLabel(void* ptr, GLsizei length, GLchar* label) {
+// 	(*ptrglObjectPtrLabel)(ptr, length, label);
+// }
+// void goglGetObjectPtrLabel(void* ptr, GLsizei bufSize, GLsizei* length, GLchar* label) {
+// 	(*ptrglGetObjectPtrLabel)(ptr, bufSize, length, label);
+// }
 // void goglFramebufferParameteri(GLenum target, GLenum pname, GLint param) {
 // 	(*ptrglFramebufferParameteri)(target, pname, param);
 // }
@@ -3423,6 +3463,26 @@ package gl43
 // 	if(ptrglDispatchComputeIndirect == NULL) return 1;
 // 	ptrglCopyImageSubData = goglGetProcAddress("glCopyImageSubData");
 // 	if(ptrglCopyImageSubData == NULL) return 1;
+// 	ptrglDebugMessageControl = goglGetProcAddress("glDebugMessageControl");
+// 	if(ptrglDebugMessageControl == NULL) return 1;
+// 	ptrglDebugMessageInsert = goglGetProcAddress("glDebugMessageInsert");
+// 	if(ptrglDebugMessageInsert == NULL) return 1;
+// 	ptrglDebugMessageCallback = goglGetProcAddress("glDebugMessageCallback");
+// 	if(ptrglDebugMessageCallback == NULL) return 1;
+// 	ptrglGetDebugMessageLog = goglGetProcAddress("glGetDebugMessageLog");
+// 	if(ptrglGetDebugMessageLog == NULL) return 1;
+// 	ptrglPushDebugGroup = goglGetProcAddress("glPushDebugGroup");
+// 	if(ptrglPushDebugGroup == NULL) return 1;
+// 	ptrglPopDebugGroup = goglGetProcAddress("glPopDebugGroup");
+// 	if(ptrglPopDebugGroup == NULL) return 1;
+// 	ptrglObjectLabel = goglGetProcAddress("glObjectLabel");
+// 	if(ptrglObjectLabel == NULL) return 1;
+// 	ptrglGetObjectLabel = goglGetProcAddress("glGetObjectLabel");
+// 	if(ptrglGetObjectLabel == NULL) return 1;
+// 	ptrglObjectPtrLabel = goglGetProcAddress("glObjectPtrLabel");
+// 	if(ptrglObjectPtrLabel == NULL) return 1;
+// 	ptrglGetObjectPtrLabel = goglGetProcAddress("glGetObjectPtrLabel");
+// 	if(ptrglGetObjectPtrLabel == NULL) return 1;
 // 	ptrglFramebufferParameteri = goglGetProcAddress("glFramebufferParameteri");
 // 	if(ptrglFramebufferParameteri == NULL) return 1;
 // 	ptrglGetFramebufferParameteriv = goglGetProcAddress("glGetFramebufferParameteriv");
@@ -7289,6 +7349,46 @@ func DispatchComputeIndirect(indirect Intptr)  {
 // https://www.opengl.org/sdk/docs/man4/xhtml/glCopyImageSubData.xml
 func CopyImageSubData(srcName Uint, srcTarget Enum, srcLevel Int, srcX Int, srcY Int, srcZ Int, dstName Uint, dstTarget Enum, dstLevel Int, dstX Int, dstY Int, dstZ Int, srcWidth Sizei, srcHeight Sizei, srcDepth Sizei)  {
 	C.goglCopyImageSubData((C.GLuint)(srcName), (C.GLenum)(srcTarget), (C.GLint)(srcLevel), (C.GLint)(srcX), (C.GLint)(srcY), (C.GLint)(srcZ), (C.GLuint)(dstName), (C.GLenum)(dstTarget), (C.GLint)(dstLevel), (C.GLint)(dstX), (C.GLint)(dstY), (C.GLint)(dstZ), (C.GLsizei)(srcWidth), (C.GLsizei)(srcHeight), (C.GLsizei)(srcDepth))
+}
+// https://www.opengl.org/sdk/docs/man4/xhtml/glDebugMessageControl.xml
+func DebugMessageControl(source Enum, type_ Enum, severity Enum, count Sizei, ids *Uint, enabled Boolean)  {
+	C.goglDebugMessageControl((C.GLenum)(source), (C.GLenum)(type_), (C.GLenum)(severity), (C.GLsizei)(count), (*C.GLuint)(ids), (C.GLboolean)(enabled))
+}
+// https://www.opengl.org/sdk/docs/man4/xhtml/glDebugMessageInsert.xml
+func DebugMessageInsert(source Enum, type_ Enum, id Uint, severity Enum, length Sizei, buf *Char)  {
+	C.goglDebugMessageInsert((C.GLenum)(source), (C.GLenum)(type_), (C.GLuint)(id), (C.GLenum)(severity), (C.GLsizei)(length), (*C.GLchar)(buf))
+}
+// https://www.opengl.org/sdk/docs/man4/xhtml/glDebugMessageCallback.xml
+func DebugMessageCallback(callback Pointer, userParam Pointer)  {
+	C.goglDebugMessageCallback((*[0]byte)(callback), (unsafe.Pointer)(userParam))
+}
+// https://www.opengl.org/sdk/docs/man4/xhtml/glGetDebugMessageLog.xml
+func GetDebugMessageLog(count Uint, bufsize Sizei, sources *Enum, types *Enum, ids *Uint, severities *Enum, lengths *Sizei, messageLog *Char) Uint {
+	return (Uint)(C.goglGetDebugMessageLog((C.GLuint)(count), (C.GLsizei)(bufsize), (*C.GLenum)(sources), (*C.GLenum)(types), (*C.GLuint)(ids), (*C.GLenum)(severities), (*C.GLsizei)(lengths), (*C.GLchar)(messageLog)))
+}
+// https://www.opengl.org/sdk/docs/man4/xhtml/glPushDebugGroup.xml
+func PushDebugGroup(source Enum, id Uint, length Sizei, message *Char)  {
+	C.goglPushDebugGroup((C.GLenum)(source), (C.GLuint)(id), (C.GLsizei)(length), (*C.GLchar)(message))
+}
+// https://www.opengl.org/sdk/docs/man4/xhtml/glPopDebugGroup.xml
+func PopDebugGroup()  {
+	C.goglPopDebugGroup()
+}
+// https://www.opengl.org/sdk/docs/man4/xhtml/glObjectLabel.xml
+func ObjectLabel(identifier Enum, name Uint, length Sizei, label *Char)  {
+	C.goglObjectLabel((C.GLenum)(identifier), (C.GLuint)(name), (C.GLsizei)(length), (*C.GLchar)(label))
+}
+// https://www.opengl.org/sdk/docs/man4/xhtml/glGetObjectLabel.xml
+func GetObjectLabel(identifier Enum, name Uint, bufSize Sizei, length *Sizei, label *Char)  {
+	C.goglGetObjectLabel((C.GLenum)(identifier), (C.GLuint)(name), (C.GLsizei)(bufSize), (*C.GLsizei)(length), (*C.GLchar)(label))
+}
+// https://www.opengl.org/sdk/docs/man4/xhtml/glObjectPtrLabel.xml
+func ObjectPtrLabel(ptr Pointer, length Sizei, label *Char)  {
+	C.goglObjectPtrLabel((unsafe.Pointer)(ptr), (C.GLsizei)(length), (*C.GLchar)(label))
+}
+// https://www.opengl.org/sdk/docs/man4/xhtml/glGetObjectPtrLabel.xml
+func GetObjectPtrLabel(ptr Pointer, bufSize Sizei, length *Sizei, label *Char)  {
+	C.goglGetObjectPtrLabel((unsafe.Pointer)(ptr), (C.GLsizei)(bufSize), (*C.GLsizei)(length), (*C.GLchar)(label))
 }
 // https://www.opengl.org/sdk/docs/man4/xhtml/glFramebufferParameteri.xml
 func FramebufferParameteri(target Enum, pname Enum, param Int)  {

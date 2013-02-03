@@ -214,7 +214,7 @@ func ReadFunctions(r io.Reader) (FunctionCategories, *FunctionsInfo, error) {
 	for cat, pts := range finfo.Passthru {
 		if strings.HasPrefix(cat, "VERSION") {
 			for _, pt := range pts {
-				strippedCat := strings.Trim(pt, "\t */")
+				strippedCat := strings.Split(strings.Trim(pt, "\t */"), " ")[0]
 				if foundFuncts, ok := functions[strippedCat]; ok {
 					fmt.Printf("Adding extension %s to %s\n", strippedCat, cat)
 					newFuncts := make([]*Function, 0, len(foundFuncts))
