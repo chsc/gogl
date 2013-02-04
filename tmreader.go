@@ -18,7 +18,6 @@ var (
 	tmTypePairRE       = regexp.MustCompile("^([_A-Za-z0-9]+),\\*,\\*,[\\t ]*([A-Za-z0-9\\*_ ]+),\\*,\\*")
 )
 
-
 func ReadTypeMapFromFiles(files []string) (TypeMap, error) {
 	allTypes := make(TypeMap)
 	for _, file := range files {

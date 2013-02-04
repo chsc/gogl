@@ -44,7 +44,6 @@ var (
 	//funcIgnoreRE          = regexp.MustCompile("^[a-z\\-]+:.*")
 )
 
-
 func ReadFunctionsFromFiles(files []string) (FunctionCategories, *FunctionsInfo, error) {
 	var finfo *FunctionsInfo = nil
 	allFuncts := make(FunctionCategories)
@@ -65,7 +64,7 @@ func ReadFunctionsFromFiles(files []string) (FunctionCategories, *FunctionsInfo,
 			for k, v := range info.Passthru {
 				finfo.Passthru[k] = append(finfo.Passthru[k], v...)
 			}
-		
+
 		}
 	}
 	return allFuncts, finfo, nil

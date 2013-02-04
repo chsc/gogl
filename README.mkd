@@ -32,7 +32,6 @@ Package documentation:
 * [EXT](http://gopkgdoc.appspot.com/pkg/github.com/chsc/gogl/ext)
 * [NV](http://gopkgdoc.appspot.com/pkg/github.com/chsc/gogl/nv)
 
-
 GoGL specific docs and usage examples:
 
 * [Wiki](https://github.com/chsc/gogl/wiki)
@@ -40,14 +39,14 @@ GoGL specific docs and usage examples:
 Examples
 --------
 
-To test the package, build and install the "spinning gopher" example:
+To test the installed bindings, build and install the "spinning gopher" example:
 
 	go get github.com/chsc/gogl/examples/gopher
 
 and run it from your command line.
 
-Build & install the binding generator
--------------------------------------
+Manually build & install the binding generator
+----------------------------------------------
 
 If you want to create your own bindings:
 
@@ -59,37 +58,27 @@ or use the go command:
 
 	go get github.com/chsc/gogl
 
-Spec files
-----------
+To generate the bindings (the fast way), simply type:
+
+	make bindings
+
+This will download, build and install the latest OpenGL bindings.
+
+Use 
+
+	gogl -help
+
+for more information about GoGL's command line arguments.
+
+Corrected spec files
+--------------------
 
 The original spec files from Khronos have errors in them.
-Jason McKesson maintains corrected spec files in his bitbucket repository.
+Jason McKesson (alfonse) maintains corrected spec files in his bitbucket repository.
 You can find them here: [GL XML Specs](https://bitbucket.org/alfonse/gl-xml-specs).
-
-Usage examples
---------------
-
-If you want to download the latest spec files from Khronos (this is the default behavior), type
-
-	gogl -download
-
-to your command prompt.
-To generate the bindings, simply type:
-	
-	gogl
-
-Or with gomake:
-
-	make download_khronos
-	make gen_khronos
-
-If you want to use Jason McKesson corrected spec files (recommended), type the following to your command line:
-
-	make download_alfonse
-	make gen_alfonse
 
 TODO
 ----
 
-* Complete spec parser
+* Better spec parser
 * ...

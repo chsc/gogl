@@ -14,6 +14,7 @@ import (
 
 const (
 	KhronosRegistryBaseURL = "https://www.opengl.org/registry/api"
+	AlfonseSpecsBaseURL    = "https://bitbucket.org/alfonse/gl-xml-specs/raw/tip/glspecs"
 	OpenGLEnumSpecFile     = "enum.spec"
 	OpenGLEnumExtSpecFile  = "enumext.spec"
 	OpenGLSpecFile         = "gl.spec"

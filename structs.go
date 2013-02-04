@@ -190,19 +190,19 @@ func (tm TypeMap) Resolve(t string) (string, error) {
 	if t == "void" {
 		return t, nil
 	}
-	if t == "PIXELFORMATDESCRIPTOR" { 
+	if t == "PIXELFORMATDESCRIPTOR" {
 		return t, nil
 	}
-	if t == "LPCSTR" { 
+	if t == "LPCSTR" {
 		return t, nil
 	}
-	if t == "LAYERPLANEDESCRIPTOR" { 
+	if t == "LAYERPLANEDESCRIPTOR" {
 		return t, nil
 	}
-	if t == "COLORREF" { 
+	if t == "COLORREF" {
 		return t, nil
 	}
-	if t == "HDC" { 
+	if t == "HDC" {
 		return t, nil
 	}
 	if rt, ok := tm[t]; ok {

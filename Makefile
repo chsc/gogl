@@ -1,20 +1,10 @@
-format:
-	go fmt *.go
+bindings:
+	go build
+	./gogl dlspec
+	./gogl gen
+	make install_bindings
 
-download_khronos:
-	./gogl -download
-
-download_alfonse:
-	./gogl -download -url=https://bitbucket.org/alfonse/gl-xml-specs/raw/tip/glspecs -dir=alfonse_specs 
-
-gen_khronos:
-	./gogl
-
-gen_alfonse: 
-	./gogl -dir=alfonse_specs
-
-# Just test go install
-install_all:
+install_bindings:
 	go install ./gl21
 #	go install ./gl30
 	go install ./gl31
