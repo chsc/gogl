@@ -16,15 +16,22 @@ Documentation
 
 Khronos documentation:
 
-* [OpenGL 2.1](http://www.opengl.org/sdk/docs/man)
-* [OpenGL 3.3](http://www.opengl.org/sdk/docs/man3)
-* [OpenGL 4.2](http://www.opengl.org/sdk/docs/man4)
+* [OpenGL 1.X - 2.X](http://www.opengl.org/sdk/docs/man)
+* [OpenGL 3.X](http://www.opengl.org/sdk/docs/man3)
+* [OpenGL 4.X](http://www.opengl.org/sdk/docs/man4)
 
 Package documentation:
 
 * [OpenGL 2.1](http://gopkgdoc.appspot.com/pkg/github.com/chsc/gogl/gl21)
 * [OpenGL 3.3](http://gopkgdoc.appspot.com/pkg/github.com/chsc/gogl/gl33)
 * [OpenGL 4.2](http://gopkgdoc.appspot.com/pkg/github.com/chsc/gogl/gl42)
+* [OpenGL 4.3](http://gopkgdoc.appspot.com/pkg/github.com/chsc/gogl/gl43)
+
+* [AMD](http://gopkgdoc.appspot.com/pkg/github.com/chsc/gogl/amd)
+* [ATI](http://gopkgdoc.appspot.com/pkg/github.com/chsc/gogl/ati)
+* [EXT](http://gopkgdoc.appspot.com/pkg/github.com/chsc/gogl/ext)
+* [NV](http://gopkgdoc.appspot.com/pkg/github.com/chsc/gogl/nv)
+
 
 GoGL specific docs and usage examples:
 
