@@ -22,16 +22,16 @@ Khronos documentation:
 
 Package documentation:
 
-* [OpenGL 2.1](http://gopkgdoc.appspot.com/pkg/github.com/chsc/gogl/gl21)
-* [OpenGL 3.3](http://gopkgdoc.appspot.com/pkg/github.com/chsc/gogl/gl33)
-* [OpenGL 4.2](http://gopkgdoc.appspot.com/pkg/github.com/chsc/gogl/gl42)
-* [OpenGL 4.3](http://gopkgdoc.appspot.com/pkg/github.com/chsc/gogl/gl43)
+* [OpenGL 2.1](http://godoc.org/github.com/chsc/gogl/gl21)
+* [OpenGL 3.3](http://godoc.org/github.com/chsc/gogl/gl33)
+* [OpenGL 4.2](http://godoc.org/github.com/chsc/gogl/gl42)
+* [OpenGL 4.3](http://godoc.org/github.com/chsc/gogl/gl43)
 
-* [AMD](http://gopkgdoc.appspot.com/pkg/github.com/chsc/gogl/amd),
-  [ATI](http://gopkgdoc.appspot.com/pkg/github.com/chsc/gogl/ati),
-  [ARB](http://gopkgdoc.appspot.com/pkg/github.com/chsc/gogl/arb),
-  [EXT](http://gopkgdoc.appspot.com/pkg/github.com/chsc/gogl/ext),
-  [NV](http://gopkgdoc.appspot.com/pkg/github.com/chsc/gogl/nv)
+* [AMD](http://godoc.org/github.com/chsc/gogl/amd),
+  [ATI](http://godoc.org/github.com/chsc/gogl/ati),
+  [ARB](http://godoc.org/github.com/chsc/gogl/arb),
+  [EXT](http://godoc.org/github.com/chsc/gogl/ext),
+  [NV](http://godoc.org/github.com/chsc/gogl/nv)
 
 GoGL specific docs and usage examples:
 
