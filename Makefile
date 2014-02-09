@@ -7,7 +7,7 @@ bindings:
 install_bindings:
 	go install ./gl21
 #	go install ./gl30
-	go install ./gl31
+#	go install ./gl31
 #	go install ./gl31c
 #	go install ./gl32
 #	go install ./gl32c
